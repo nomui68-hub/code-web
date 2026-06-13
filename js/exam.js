@@ -24,9 +24,15 @@ function escapeHtml(str){
 }
 
 async function loadQuestions(){
-  const res = await fetch('data/questions.json');
+  const examId = localStorage.getItem('examId') || 'DE_MAU';
+  const url = `exams/${examId}/questions.json?_=${Date.now()}`;
+  let res = await fetch(url);
+  if(!res.ok){
+    res = await fetch('data/questions.json?_=' + Date.now());
+  }
   examData = await res.json();
   questions = examData.questions || examData;
+  localStorage.setItem('examTitle', examData.title || localStorage.getItem('examTitle') || examId);
   return questions;
 }
 
@@ -81,7 +87,7 @@ function renderShort(q){
 
 function renderExam(){
   document.getElementById('studentBox').textContent = studentLabel();
-  document.getElementById('examTitle').textContent = examData?.title || 'Đề thi trực tuyến';
+  document.getElementById('examTitle').textContent = examData?.title || localStorage.getItem('examTitle') || 'Đề thi trực tuyến';
   const box = document.getElementById('questions');
   box.innerHTML = questions.map(q => {
     let body = '';
@@ -219,6 +225,7 @@ async function submitExam(){
     studentName: localStorage.getItem('studentName') || '',
     className: localStorage.getItem('className') || '',
     examId: localStorage.getItem('examId') || examData?.examId || 'DE_MAU',
+    examTitle: examData?.title || localStorage.getItem('examTitle') || '',
     score: result.score10,
     maxScore: result.maxScore,
     correct: result.correct,

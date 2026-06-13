@@ -16,6 +16,7 @@ if(!result){
     <p><strong>Họ tên:</strong> ${result.studentName || ''}</p>
     <p><strong>Lớp:</strong> ${result.className || ''}</p>
     <p><strong>Mã đề:</strong> ${result.examId || ''}</p>
+    <p><strong>Tên đề:</strong> ${result.examTitle || ''}</p>
     <div class="score">${fmt(result.score)}/${fmt(result.maxScore || 10)}</div>
     <p><strong>Quy tắc điểm:</strong> Trắc nghiệm 0,25 điểm/câu; Đúng/Sai: 1 ý 0,10; 2 ý 0,25; 3 ý 0,50; 4 ý 1,00; Trả lời ngắn 0,50 điểm/câu.</p>
     <ul>

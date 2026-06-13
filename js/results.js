@@ -1,69 +1,47 @@
-let currentResults = [];
-
-function fmtDate(s){
+function getLocalResults(){
+  try{return JSON.parse(localStorage.getItem('examResults') || '[]');}catch(e){return []}
+}
+function fmtTime(s){
   if(!s) return '';
-  try{ return new Date(s).toLocaleString('vi-VN'); }catch(e){ return s; }
+  try{return new Date(s).toLocaleString('vi-VN');}catch(e){return s}
 }
-
-function escapeHtml(str){
-  return String(str ?? '').replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));
+function downloadCSV(rows){
+  const header = ['Ma HS','Ho ten','Lop','Ma de','Ten de','Diem','TN','DungSai','TLN','Dung/Tong','Thoi gian nop'];
+  const lines = [header.join(',')].concat(rows.map(r => [
+    r.studentId, r.studentName, r.className, r.examId, r.examTitle,
+    r.score, r.partScores?.choice, r.partScores?.truefalse, r.partScores?.short,
+    `${r.correct}/${r.total}`, fmtTime(r.submitTime)
+  ].map(v => '"' + String(v ?? '').replace(/"/g,'""') + '"').join(',')));
+  const blob = new Blob([lines.join('\n')], {type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='ket_qua_thi.csv'; a.click();
 }
-
-async function loadResults(){
-  const online = await loadOnlineResults();
-  if(online.length){
-    currentResults = online;
-    document.getElementById('sourceNote').textContent = 'Đang hiển thị dữ liệu từ Google Sheets.';
-  }else{
-    currentResults = getLocalResults();
-    document.getElementById('sourceNote').textContent = 'Đang hiển thị dữ liệu cục bộ trên trình duyệt này. Muốn xem mọi học sinh trên nhiều máy, hãy cấu hình Google Sheets trong js/api.js.';
-  }
-  renderTable();
+function render(rows){
+  const examFilter=document.getElementById('examFilter')?.value || '';
+  const classFilter=(document.getElementById('classFilter')?.value || '').trim().toLowerCase();
+  let data=rows;
+  if(examFilter) data=data.filter(r=>String(r.examId||'')===examFilter);
+  if(classFilter) data=data.filter(r=>String(r.className||'').toLowerCase().includes(classFilter));
+  document.getElementById('summary').textContent = `Có ${data.length} lượt nộp bài.`;
+  document.getElementById('resultsBody').innerHTML = data.map((r,i)=>`<tr>
+    <td>${i+1}</td><td>${r.studentId||''}</td><td>${r.studentName||''}</td><td>${r.className||''}</td>
+    <td>${r.examTitle || r.examId || ''}</td><td><b>${r.score ?? ''}</b></td>
+    <td>${r.partScores?.choice ?? ''}</td><td>${r.partScores?.truefalse ?? ''}</td><td>${r.partScores?.short ?? ''}</td>
+    <td>${r.correct ?? ''}/${r.total ?? ''}</td><td>${fmtTime(r.submitTime)}</td>
+  </tr>`).join('');
+  document.getElementById('exportBtn').onclick=()=>downloadCSV(data);
 }
-
-function renderTable(){
-  const tbody = document.querySelector('#resultTable tbody');
-  if(!currentResults.length){
-    tbody.innerHTML = '<tr><td colspan="9">Chưa có kết quả.</td></tr>';
-    return;
-  }
-  tbody.innerHTML = currentResults.map((r, idx) => {
-    const detail = JSON.stringify(r, null, 2);
-    return `<tr>
-      <td>${idx+1}</td>
-      <td>${escapeHtml(r.studentId)}</td>
-      <td>${escapeHtml(r.studentName || '')}</td>
-      <td>${escapeHtml(r.className)}</td>
-      <td>${escapeHtml(r.examId)}</td>
-      <td><strong>${escapeHtml(r.score)}</strong></td>
-      <td>${escapeHtml(r.correct)}/${escapeHtml(r.total)}<br><small>TN: ${escapeHtml((r.partScores&&r.partScores.choice) ?? '')}; ĐS: ${escapeHtml((r.partScores&&r.partScores.truefalse) ?? '')}; TLN: ${escapeHtml((r.partScores&&r.partScores.short) ?? '')}</small></td>
-      <td>${fmtDate(r.submitTime)}</td>
-      <td><details><summary>Xem</summary><pre class="prebox small">${escapeHtml(detail)}</pre></details></td>
-    </tr>`;
-  }).join('');
+async function init(){
+  const rows=getLocalResults();
+  const select=document.getElementById('examFilter');
+  try{
+    const res=await fetch('exams/index.json?_=' + Date.now());
+    const idx=await res.json();
+    select.innerHTML='<option value="">Tất cả đề</option>' + (idx.exams||[]).map(e=>`<option value="${e.id}">${e.title||e.id}</option>`).join('');
+  }catch(e){select.innerHTML='<option value="">Tất cả đề</option>';}
+  select.onchange=()=>render(rows);
+  document.getElementById('classFilter').oninput=()=>render(rows);
+  document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa kết quả lưu trên trình duyệt này?')){localStorage.removeItem('examResults'); location.reload();}};
+  render(rows);
 }
-
-function downloadCSV(){
-  const header = ['STT','MaHS','HoTen','Lop','MaDe','Diem','DiemTN','DiemDS','DiemTLN','SoCauDungHoanToan','TongSoCau','ThoiGianNop','BaiLamJSON'];
-  const rows = currentResults.map((r, i) => [
-    i+1, r.studentId||'', r.studentName||'', r.className||'', r.examId||'', r.score??'', (r.partScores&&r.partScores.choice)||'', (r.partScores&&r.partScores.truefalse)||'', (r.partScores&&r.partScores.short)||'', r.correct??'', r.total??'', fmtDate(r.submitTime), JSON.stringify(r)
-  ]);
-  const csv = [header, ...rows].map(row => row.map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',')).join('\n');
-  const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8;'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'ket-qua-thi.csv';
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-
-document.getElementById('reloadBtn').addEventListener('click', loadResults);
-document.getElementById('csvBtn').addEventListener('click', downloadCSV);
-document.getElementById('clearBtn').addEventListener('click', () => {
-  if(confirm('Xóa toàn bộ kết quả lưu cục bộ trên trình duyệt này?')){
-    clearLocalResults();
-    loadResults();
-  }
-});
-
-loadResults();
+document.addEventListener('DOMContentLoaded', init);

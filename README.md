@@ -1,19 +1,65 @@
-# math-exam-v5
+# Math Exam V6-V7
 
-Bản V5 đã sửa quy tắc chấm điểm theo cấu trúc thầy yêu cầu:
+Bản V6 kết hợp V7: hỗ trợ nhiều đề thi trong cùng một website.
 
-- 12 câu trắc nghiệm: mỗi câu đúng 0,25 điểm, tổng 3 điểm.
-- 4 câu Đúng/Sai: đúng 1 ý được 0,10 điểm; đúng 2 ý được 0,25 điểm; đúng 3 ý được 0,50 điểm; đúng 4 ý được 1,00 điểm, tổng 4 điểm.
-- 6 câu trả lời ngắn: mỗi câu đúng 0,50 điểm, tổng 3 điểm.
-- Tổng điểm tối đa: 10 điểm.
+## 1. Cấu trúc đề
 
-## Chạy tạo đề mới từ file LaTeX
+- Đề LaTeX đặt trong thư mục `tex/`.
+- Mỗi file `.tex` sẽ sinh ra một đề riêng.
 
-Thay file `tex/de.tex`, sau đó chạy:
+Ví dụ:
+
+```text
+tex/
+  DE01.tex
+  DE02.tex
+  THI_THU_01.tex
+```
+
+Sau khi build, website có:
+
+```text
+exams/DE01/questions.json
+exams/DE02/questions.json
+images/DE01/q1.png
+images/DE02/q1.png
+```
+
+Học sinh sẽ chọn đề ở trang đăng nhập.
+
+## 2. Tạo tất cả đề tự động
+
+Mở CMD tại thư mục dự án:
 
 ```cmd
-python parser\parser_v4.py tex\de.tex data\questions.json DE_MAU
-python parser\render_visuals_v2.py data\questions.json images
+cd D:\A-tao-web\math-exam-v6
+```
+
+Chạy:
+
+```cmd
+python parser\build_all.py
+```
+
+Lệnh này sẽ quét tất cả file `.tex` trong thư mục `tex/` và tự tạo:
+
+```text
+exams/index.json
+exams/<MA_DE>/questions.json
+images/<MA_DE>/q*.png
+```
+
+## 3. Tạo một đề riêng
+
+Ví dụ tạo đề `DE01` từ file `tex\DE01.tex`:
+
+```cmd
+python parser\build_one.py tex\DE01.tex DE01 "Đề kiểm tra 01"
+```
+
+## 4. Chạy thử trên máy
+
+```cmd
 python -m http.server 8000
 ```
 
@@ -23,14 +69,45 @@ Mở:
 http://localhost:8000
 ```
 
-## Lưu kết quả lên Google Sheets
+## 5. Đưa lên GitHub Pages
 
-1. Tạo Google Sheet.
-2. Vào Extensions → Apps Script.
-3. Dán code trong `apps_script/Code.gs`.
-4. Deploy dạng Web App, quyền truy cập Anyone.
-5. Copy URL Web App.
-6. Dán URL đó vào biến `API_URL` trong `js/api.js`.
-7. Upload lại GitHub Pages.
+Sau khi build xong, upload hoặc commit các thư mục/file sau lên GitHub:
 
-Nếu chưa cấu hình Google Sheets, kết quả vẫn lưu cục bộ trong trình duyệt và xem ở `results.html`.
+```text
+index.html
+exam.html
+result.html
+results.html
+admin.html
+css/
+js/
+exams/
+images/
+apps_script/
+```
+
+Nếu chỉ thêm đề mới thì thường chỉ cần upload:
+
+```text
+tex/
+exams/
+images/
+```
+
+## 6. Quy tắc chấm điểm
+
+- Trắc nghiệm: 0,25 điểm/câu.
+- Đúng/Sai:
+  - đúng 1 ý: 0,10 điểm
+  - đúng 2 ý: 0,25 điểm
+  - đúng 3 ý: 0,50 điểm
+  - đúng 4 ý: 1,00 điểm
+- Trả lời ngắn: 0,50 điểm/câu.
+
+Tổng điểm theo cấu trúc 12 TN + 4 Đ/S + 6 TLN là 10 điểm.
+
+## 7. Lưu kết quả
+
+- Khi chưa cấu hình Google Sheets, kết quả lưu tạm trong trình duyệt.
+- Khi cấu hình `js/api.js` với Google Apps Script URL, kết quả sẽ gửi lên Google Sheets.
+

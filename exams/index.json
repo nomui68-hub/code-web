@@ -1,0 +1,11 @@
+{
+  "defaultExamId": "DE_MAU",
+  "exams": [
+    {
+      "id": "DE_MAU",
+      "title": "Đề mẫu",
+      "file": "exams/DE_MAU/questions.json",
+      "active": true
+    }
+  ]
+}
