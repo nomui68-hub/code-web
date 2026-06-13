@@ -36,7 +36,7 @@ function renderTable(){
       <td>${escapeHtml(r.className)}</td>
       <td>${escapeHtml(r.examId)}</td>
       <td><strong>${escapeHtml(r.score)}</strong></td>
-      <td>${escapeHtml(r.correct)}/${escapeHtml(r.total)}</td>
+      <td>${escapeHtml(r.correct)}/${escapeHtml(r.total)}<br><small>TN: ${escapeHtml((r.partScores&&r.partScores.choice) ?? '')}; ĐS: ${escapeHtml((r.partScores&&r.partScores.truefalse) ?? '')}; TLN: ${escapeHtml((r.partScores&&r.partScores.short) ?? '')}</small></td>
       <td>${fmtDate(r.submitTime)}</td>
       <td><details><summary>Xem</summary><pre class="prebox small">${escapeHtml(detail)}</pre></details></td>
     </tr>`;
@@ -44,9 +44,9 @@ function renderTable(){
 }
 
 function downloadCSV(){
-  const header = ['STT','MaHS','HoTen','Lop','MaDe','Diem','SoCauDung','TongSoCau','ThoiGianNop','BaiLamJSON'];
+  const header = ['STT','MaHS','HoTen','Lop','MaDe','Diem','DiemTN','DiemDS','DiemTLN','SoCauDungHoanToan','TongSoCau','ThoiGianNop','BaiLamJSON'];
   const rows = currentResults.map((r, i) => [
-    i+1, r.studentId||'', r.studentName||'', r.className||'', r.examId||'', r.score??'', r.correct??'', r.total??'', fmtDate(r.submitTime), JSON.stringify(r)
+    i+1, r.studentId||'', r.studentName||'', r.className||'', r.examId||'', r.score??'', (r.partScores&&r.partScores.choice)||'', (r.partScores&&r.partScores.truefalse)||'', (r.partScores&&r.partScores.short)||'', r.correct??'', r.total??'', fmtDate(r.submitTime), JSON.stringify(r)
   ]);
   const csv = [header, ...rows].map(row => row.map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',')).join('\n');
   const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8;'});
