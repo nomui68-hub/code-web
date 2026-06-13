@@ -1,0 +1,521 @@
+{
+  "examId": "DE_MAU",
+  "title": "Đề kiểm tra Toán",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ có đồ thị như hình vẽ. Tổng của giá trị lớn nhất và giá trị nhỏ nhất của hàm số đã cho trên đoạn $[-2;2]$ bằng",
+      "options": [
+        "$-5$",
+        "$0$",
+        "$-6$",
+        "$-1$"
+      ],
+      "answer": 2,
+      "id": 1,
+      "solution": "Quan sát đồ thị hàm số trên đoạn $[-2;2]$, ta thấy\n\t\t<br>\n\t\t\t<br>• Giá trị lớn nhất của hàm số là $\\max\\limits_{[-2;2]} f(x) = -1$ (đạt được tại $x = -1$ và $x = 2$).\n\t\t\t<br>• Giá trị nhỏ nhất của hàm số là $\\min\\limits_{[-2;2]} f(x) = -5$ (đạt được tại $x = -2$ và $x = 1$).\n\t\t<br>\n\t\tVậy tổng của giá trị lớn nhất và giá trị nhỏ nhất của hàm số trên đoạn $[-2;2]$ là $-1 + (-5) = -6$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\def \\xmin{-2.5}\n\t\t\t\t\\def \\xmax{2.5}\n\t\t\t\t\\def \\ymin{-6}\n\t\t\t\t\\def \\ymax{2}\n\t\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\t\\draw[dashed] (-2,0) -- (-2,-5) -- (1,-5) -- (1,0);\n\t\t\t\t\\draw[dashed] (-1,0) -- (-1,-1) -- (2,-1) -- (2,0) ;\n\t\t\t\t\\draw[smooth, samples=150, domain=-2.1:2.2] plot (\\x, {(\\x)^3 - 3*(\\x) - 3});\n\t\t\t\t\\fill (0,0) node{\\href{2B30UF}{\\tiny \\phantom{2B30UF}}} circle(1pt) node[shift=(-45:0.25)]{$O$}\n\t\t\t\t\t(-1,0) circle(1pt) node[shift=(90:0.2)]{$-1$}\n\t\t\t\t\t(1,0) circle(1pt) node[shift=(90:0.2)]{$1$}\n\t\t\t\t\t(-2,0) circle(1pt) node[shift=(90:0.2)]{$-2$}\n\t\t\t\t\t(2,0) circle(1pt) node[shift=(90:0.2)]{$2$}\n\t\t\t\t\t(0,-3) circle(1pt) node[shift=(180:0.2)]{$-3$}\n\t\t\t\t\t(0,-5) circle(1pt) node[shift=(220:0.35)]{$-5$}\n\t\t\t\t\t(0,-1) circle(1pt) node[shift=(150:0.27)]{$-1$}\n\t\t\t\t\t(-1,-1) circle(1pt) (2,-1) circle(1pt) \n\t\t\t\t\t(-2,-5) circle(1pt) (1,-5) circle(1pt);\n    \\node at (0,0){\\href{2B30UF}{\\tiny \\phantom{2B30UF}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\def \\xmin{-2.5}\n\t\t\t\t\\def \\xmax{2.5}\n\t\t\t\t\\def \\ymin{-6}\n\t\t\t\t\\def \\ymax{2}\n\t\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\t\\draw[dashed] (-2,0) -- (-2,-5) -- (1,-5) -- (1,0);\n\t\t\t\t\\draw[dashed] (-1,0) -- (-1,-1) -- (2,-1) -- (2,0) ;\n\t\t\t\t\\draw[smooth, samples=150, domain=-2.1:2.2] plot (\\x, {(\\x)^3 - 3*(\\x) - 3});\n\t\t\t\t\\fill (0,0) node{\\href{2B30UF}{\\tiny \\phantom{2B30UF}}} circle(1pt) node[shift=(-45:0.25)]{$O$}\n\t\t\t\t\t(-1,0) circle(1pt) node[shift=(90:0.2)]{$-1$}\n\t\t\t\t\t(1,0) circle(1pt) node[shift=(90:0.2)]{$1$}\n\t\t\t\t\t(-2,0) circle(1pt) node[shift=(90:0.2)]{$-2$}\n\t\t\t\t\t(2,0) circle(1pt) node[shift=(90:0.2)]{$2$}\n\t\t\t\t\t(0,-3) circle(1pt) node[shift=(180:0.2)]{$-3$}\n\t\t\t\t\t(0,-5) circle(1pt) node[shift=(220:0.35)]{$-5$}\n\t\t\t\t\t(0,-1) circle(1pt) node[shift=(150:0.27)]{$-1$}\n\t\t\t\t\t(-1,-1) circle(1pt) (2,-1) circle(1pt) \n\t\t\t\t\t(-2,-5) circle(1pt) (1,-5) circle(1pt);\n    \\node at (0,0){\\href{2B30UF}{\\tiny \\phantom{2B30UF}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/q1.png"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho mặt phẳng $(P)\\colon x-2y+2z-1=0$. Một vectơ pháp tuyến của mặt phẳng $(P)$ có tọa độ là",
+      "options": [
+        "$(-1;1;2)$",
+        "$(1;2;2)$",
+        "$(-1;-2;2)$",
+        "$(1;-2;2)$"
+      ],
+      "answer": 3,
+      "id": 2,
+      "solution": "Mặt phẳng $(P)\\colon x-2y+2z-1=0$ có một vectơ pháp tuyến là $\\overrightarrow{n}=(1;-2;2)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho cấp số nhân $(u_n)$ có số hạng đầu tiên $u_1=3$ và công bội $q=-2$. Số hạng thứ tư của cấp số nhân đã cho là",
+      "options": [
+        "$u_4=48$",
+        "$u_4=-48$",
+        "$u_4=-4$",
+        "$u_4=-24$"
+      ],
+      "answer": 3,
+      "id": 3,
+      "solution": "Số hạng thứ tư của cấp số nhân là $u_4=u_1 \\cdot q^3 = 3\\cdot (-2)^3 = 3\\cdot (-8) = -24$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Tập xác định của hàm số $y=\\tan x$ là",
+      "options": [
+        "$\\mathbb{R} \\setminus \\big\\{k2\\pi \\mid k\\in \\mathbb{Z}\\big\\}$",
+        "$\\mathbb{R} \\setminus \\left\\{\\dfrac{\\pi}{2}+k\\pi \\mid k\\in \\mathbb{Z}\\right\\}$",
+        "$\\mathbb{R} \\setminus \\left\\{\\dfrac{\\pi}{2}+k2\\pi \\mid k\\in \\mathbb{Z}\\right\\}$",
+        "$\\mathbb{R} \\setminus \\big\\{k\\pi \\mid k\\in \\mathbb{Z}\\big\\}$"
+      ],
+      "answer": 1,
+      "id": 4,
+      "solution": "Hàm số $y=\\tan x$ xác định khi $\\cos x \\ne 0 \\Leftrightarrow x \\ne \\dfrac{\\pi}{2}+k\\pi$ ($k\\in\\mathbb{Z}$).<br>\n\t\tVậy tập xác định của hàm số là $\\mathscr{D} = \\mathbb{R} \\setminus \\left\\{\\dfrac{\\pi}{2}+k\\pi \\mid k\\in \\mathbb{Z}\\right\\}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Tập nghiệm của bất phương trình $\\log_2 (x-1) \\le 3$ là",
+      "options": [
+        "$(1;9)$",
+        "$(-\\infty;9]$",
+        "$(1;9]$",
+        "$[1;9]$"
+      ],
+      "answer": 2,
+      "id": 5,
+      "solution": "Điều kiện xác định $x-1 > 0 \\Leftrightarrow x > 1$.<br>\n\t\tTa có $\\log_2 (x-1) \\le 3 \\Leftrightarrow x-1 \\le 2^3\\Leftrightarrow x \\le 9$.<br>\n\t\tKết hợp với điều kiện, ta được $1 < x \\le 9$.<br>\n\t\tVậy tập nghiệm của bất phương trình là $S=(1;9]$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Kết quả kiểm tra Toán của $40$ học sinh lớp 12A được cho bởi bảng sau:\n\n\tMốt của mẫu số liệu ghép nhóm trên thuộc khoảng điểm nào sau đây?",
+      "options": [
+        "$[6;8)$",
+        "$[8;10]$",
+        "$[4;6)$",
+        "$[2;4)$"
+      ],
+      "answer": 2,
+      "id": 6,
+      "solution": "Dựa vào bảng số liệu, ta thấy nhóm $[4;6)$ có tần số lớn nhất (tần số bằng $15$).<br>\n\t\tDo đó, mốt của mẫu số liệu ghép nhóm trên thuộc khoảng điểm $[4;6)$.",
+      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\t\\textbf{Khoảng điểm} & $[0;2)$ & $[2;4)$ & $[4;6)$ & $[6;8)$ & $[8;10]$\\\\\n\t\t\t\\hline\n\t\t\t\\textbf{Số học sinh} & $0$ & $8$ & $15$ & $10$ & $7$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\t\\textbf{Khoảng điểm} & $[0;2)$ & $[2;4)$ & $[4;6)$ & $[6;8)$ & $[8;10]$\\\\\n\t\t\t\\hline\n\t\t\t\\textbf{Số học sinh} & $0$ & $8$ & $15$ & $10$ & $7$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/q6.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình chóp $O.ABC$ có $OA$, $OB$, $OC$ đôi một vuông góc với nhau và $OA=a$, $OB=b$, $OC=c$. Thể tích của khối chóp $O.ABC$ bằng",
+      "options": [
+        "$abc$",
+        "$\\dfrac{abc}{6}$",
+        "$\\dfrac{abc}{3}$",
+        "$\\dfrac{abc}{2}$"
+      ],
+      "answer": 1,
+      "id": 7,
+      "solution": "Do $OA$, $OB$, $OC$ đôi một vuông góc với nhau nên $OC \\perp (OAB)$ và tam giác $OAB$ vuông tại $O$.<br>\n\t\tDiện tích đáy là $S_{\\triangle OAB} = \\dfrac{1}{2} OA \\cdot OB =\\dfrac{1}{2}ab$.<br>\n\t\tChiều cao của khối chóp là $h = OC = c$.<br>\n\t\tThể tích của khối chóp $O.ABC$ là\n\t\t\\[V = \\dfrac{1}{3} S_{\\triangle OAB} \\cdot h = \\dfrac{1}{3} \\cdot \\left(\\dfrac{1}{2}ab\\right) \\cdot c = \\dfrac{abc}{6}.\\]",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\coordinate (O) at (0,0);\n\t\t\t\t\\coordinate (B) at (3.5,0);\n\t\t\t\t\\coordinate (C) at (0,3);\n\t\t\t\t\\coordinate (A) at (1.2,-1.5);\n\t\t\t\t\\draw (C) -- (O) -- (A) -- (B) -- (C) -- (A);\n\t\t\t\t\\draw[dashed] (O) -- (B);\n\t\t\t\t\\draw pic[draw, angle radius=2mm] {right angle=C--O--B};\n\t\t\t\t\\draw pic[draw, angle radius=2mm] {right angle=C--O--A};\n\t\t\t\t\\draw[dashed] pic[draw, angle radius=2mm] {right angle=A--O--B};\n\t\t\t\t\\fill (O) circle (1pt) node[left] {$O$};\n\t\t\t\t\\fill (A) circle (1pt) node[below] {$A$};\n\t\t\t\t\\fill (B) circle (1pt) node[right] {$B$};\n\t\t\t\t\\fill (C) circle (1pt) node[above] {$C$};\n\t\t\t\t\\node[left] at ($ (O)!0.5!(C) $) {$c$};\n\t\t\t\t\\node[below left] at ($ (O)!0.5!(A) $) {$a$};\n\t\t\t\t\\node[above] at ($ (O)!0.5!(B) $) {$b$};\n    \\node at (0,0){\\href{XPMRJC}{\\tiny \\phantom{XPMRJC}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\coordinate (O) at (0,0);\n\t\t\t\t\\coordinate (B) at (3.5,0);\n\t\t\t\t\\coordinate (C) at (0,3);\n\t\t\t\t\\coordinate (A) at (1.2,-1.5);\n\t\t\t\t\\draw (C) -- (O) -- (A) -- (B) -- (C) -- (A);\n\t\t\t\t\\draw[dashed] (O) -- (B);\n\t\t\t\t\\draw pic[draw, angle radius=2mm] {right angle=C--O--B};\n\t\t\t\t\\draw pic[draw, angle radius=2mm] {right angle=C--O--A};\n\t\t\t\t\\draw[dashed] pic[draw, angle radius=2mm] {right angle=A--O--B};\n\t\t\t\t\\fill (O) circle (1pt) node[left] {$O$};\n\t\t\t\t\\fill (A) circle (1pt) node[below] {$A$};\n\t\t\t\t\\fill (B) circle (1pt) node[right] {$B$};\n\t\t\t\t\\fill (C) circle (1pt) node[above] {$C$};\n\t\t\t\t\\node[left] at ($ (O)!0.5!(C) $) {$c$};\n\t\t\t\t\\node[below left] at ($ (O)!0.5!(A) $) {$a$};\n\t\t\t\t\\node[above] at ($ (O)!0.5!(B) $) {$b$};\n    \\node at (0,0){\\href{XPMRJC}{\\tiny \\phantom{XPMRJC}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/q7.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ có đạo hàm trên $\\mathbb{R}$ và có bảng xét dấu của $f'(x)$ như sau:\n\n\tSố điểm cực trị của hàm số $y=f(x)$ là",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$0$"
+      ],
+      "answer": 1,
+      "id": 8,
+      "solution": "Dựa vào bảng xét dấu đạo hàm, ta thấy $f'(x)$ đổi dấu khi qua $x=-3$ và $x=2$ (không đổi dấu khi qua $x=1$).<br>\n\t\tDo đó, hàm số đã cho có $2$ điểm cực trị.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre, lgt=1.2, espcl=2.5, deltacl=0.5]\n\t\t\t{$x$ / 0.7, $f'(x)$ / 0.7}\n\t\t\t{$-\\infty$, $-3$, $1$, $2$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , -, 0, +, 0, +, 0, -, }\n    \\node at (T11){\\href{1EZ324}{\\tiny \\phantom{1EZ324}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre, lgt=1.2, espcl=2.5, deltacl=0.5]\n\t\t\t{$x$ / 0.7, $f'(x)$ / 0.7}\n\t\t\t{$-\\infty$, $-3$, $1$, $2$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , -, 0, +, 0, +, 0, -, }\n    \\node at (T11){\\href{1EZ324}{\\tiny \\phantom{1EZ324}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/q8.png"
+    },
+    {
+      "type": "choice",
+      "question": "Họ nguyên hàm của hàm số $f(x)=x^7$ là",
+      "options": [
+        "$\\dfrac{x^8}{8}+C$",
+        "$7x^6+C$",
+        "$\\dfrac{x^7}{7}+C$",
+        "$8x^8+C$"
+      ],
+      "answer": 0,
+      "id": 9,
+      "solution": "Ta có $\\displaystyle\\int f(x) \\mathrm{\\,d}x = \\displaystyle\\int x^7 \\mathrm{\\,d}x = \\dfrac{x^8}{8} + C$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ liên tục và không âm trên đoạn $[0;2]$. Thể tích khối tròn xoay sinh ra khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị hàm số $y=f(x)$, trục hoành và hai đường thẳng $x=0$, $x=2$ là",
+      "options": [
+        "$\\pi \\displaystyle\\int\\limits_0^2 [f(x)]^2 \\mathrm{\\,d}x$",
+        "$\\pi \\displaystyle\\int\\limits_0^2 f(x) \\mathrm{\\,d}x$",
+        "$\\displaystyle\\int\\limits_0^2 \\big[f(x)\\big]^2 \\mathrm{\\,d}x$",
+        "$\\displaystyle\\int\\limits_0^2 f(x) \\mathrm{\\,d}x$"
+      ],
+      "answer": 0,
+      "id": 10,
+      "solution": "Thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi đồ thị hàm số $y=f(x)$ (liên tục và không âm trên $[a;b]$), trục hoành và hai đường thẳng $x=a$, $x=b$ quanh trục $Ox$ là\n\t\t\\[V = \\pi \\displaystyle\\int\\limits_a^b \\big[f(x)\\big]^2 \\mathrm{\\,d}x.\\]\n\t\tÁp dụng với $a=0$, $b=2$, ta được công thức $V = \\pi \\displaystyle\\int\\limits_0^2 \\big[f(x)\\big]^2 \\mathrm{\\,d}x$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình hộp $ABCD.A'B'C'D'$ (tham khảo hình vẽ). Khi đó, tổng $\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{DD'}$ bằng",
+      "options": [
+        "$\\overrightarrow{AD'}$",
+        "$\\overrightarrow{D'A}$",
+        "$\\overrightarrow{C'A}$",
+        "$\\overrightarrow{AC'}$"
+      ],
+      "answer": 3,
+      "id": 11,
+      "solution": "Vì $ABCD.A'B'C'D'$ là hình hộp nên $\\overrightarrow{DD'} = \\overrightarrow{CC'}$.<br>\n\t\tKhi đó\n\t\t\\[\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{DD'} = \\overrightarrow{AC} + \\overrightarrow{CC'} = \\overrightarrow{AC'}.\\]\n\t\t(Hoặc áp dụng trực tiếp quy tắc hình hộp: $\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AA'} = \\overrightarrow{AC'}$, mà $\\overrightarrow{AA'} = \\overrightarrow{DD'}$).",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\coordinate (A) at (0,0);\n\t\t\t\t\\coordinate (B) at (-1,-1.5);\n\t\t\t\t\\coordinate (D) at (3,0);\n\t\t\t\t\\coordinate (C) at (2,-1.5);\n\t\t\t\t\\coordinate (A') at (0,2);\n\t\t\t\t\\coordinate (B') at (-1,0.5);\n\t\t\t\t\\coordinate (C') at (2,0.5);\n\t\t\t\t\\coordinate (D') at (3,2);\n\t\t\t\t\\draw (B) -- (C) -- (D) -- (D') -- (C') -- (B') -- cycle;\n\t\t\t\t\\draw (B) -- (B');\n\t\t\t\t\\draw (C) -- (C');\n\t\t\t\t\\draw (D') -- (A') -- (B');\n\t\t\t\t\\draw[dashed] (B) -- (A) -- (D);\n\t\t\t\t\\draw[dashed] (A) -- (A');\n\t\t\t\t\\foreach \\i/\\j in {A'/135, B'/150, C'/120, D'/45, A/180, B/-135, C/-45, D/0} \\fill (\\i) node[shift={(\\j:3mm)}]{$\\i$} circle(1pt);\n    \\node at (0,0){\\href{1MLZYD}{\\tiny \\phantom{1MLZYD}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\t\\coordinate (A) at (0,0);\n\t\t\t\t\\coordinate (B) at (-1,-1.5);\n\t\t\t\t\\coordinate (D) at (3,0);\n\t\t\t\t\\coordinate (C) at (2,-1.5);\n\t\t\t\t\\coordinate (A') at (0,2);\n\t\t\t\t\\coordinate (B') at (-1,0.5);\n\t\t\t\t\\coordinate (C') at (2,0.5);\n\t\t\t\t\\coordinate (D') at (3,2);\n\t\t\t\t\\draw (B) -- (C) -- (D) -- (D') -- (C') -- (B') -- cycle;\n\t\t\t\t\\draw (B) -- (B');\n\t\t\t\t\\draw (C) -- (C');\n\t\t\t\t\\draw (D') -- (A') -- (B');\n\t\t\t\t\\draw[dashed] (B) -- (A) -- (D);\n\t\t\t\t\\draw[dashed] (A) -- (A');\n\t\t\t\t\\foreach \\i/\\j in {A'/135, B'/150, C'/120, D'/45, A/180, B/-135, C/-45, D/0} \\fill (\\i) node[shift={(\\j:3mm)}]{$\\i$} circle(1pt);\n    \\node at (0,0){\\href{1MLZYD}{\\tiny \\phantom{1MLZYD}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/q11.png"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho vectơ $\\overrightarrow{u} = 3\\overrightarrow{i} - 2\\overrightarrow{j} + \\overrightarrow{k}$. Tọa độ của vectơ $\\overrightarrow{u}$ là",
+      "options": [
+        "$(3;-2;1)$",
+        "$(3;1;-2)$",
+        "$(1;3;-2)$",
+        "$(-2;3;1)$"
+      ],
+      "answer": 0,
+      "id": 12,
+      "solution": "Trong hệ trục tọa độ $Oxyz$, vectơ $\\overrightarrow{u} = x\\overrightarrow{i} + y\\overrightarrow{j} + z\\overrightarrow{k}$ có tọa độ là $(x;y;z)$.<br>\n\t\tSuy ra vectơ $\\overrightarrow{u} = 3\\overrightarrow{i} - 2\\overrightarrow{j} + \\overrightarrow{k}$ có tọa độ là $(3;-2;1)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Một người đang điều khiển ô tô chạy trên đường cao tốc. Khi cách trạm thu phí $1\\,000$\\,m, tốc độ của ô tô là $90$\\,km/h. Sau đó $20$ giây, người điều khiển ô tô bắt đầu giảm tốc với tốc độ $v(t) = at + b$\\,(m/s), trong đó $t$ là thời gian tính bằng giây kể từ khi bắt đầu giảm tốc và $v(t)>0$ với mọi $t \\in [0;30]$. Sau $30$ giây kể từ khi bắt đầu giảm tốc, ô tô đến trạm thu phí.",
+      "statements": [
+        {
+          "text": "Quãng đường từ vị trí ô tô bắt đầu giảm tốc đến trạm thu phí là $500$\\,m",
+          "answer": true
+        },
+        {
+          "text": "Giá trị của $b$ là $90$",
+          "answer": false
+        },
+        {
+          "text": "Giá trị của $a$ là $-\\dfrac{5}{9}$",
+          "answer": true
+        },
+        {
+          "text": "Tốc độ tối đa cho phép của phương tiện khi qua trạm thu phí là $30$\\,km/h. Người điều khiển ô tô đó đã tuân thủ đúng tốc độ quy định khi đi qua trạm thu phí",
+          "answer": true
+        }
+      ],
+      "id": 13,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Ta có $v_0=90\\,\\text{km/h}=25\\,\\text{m/s}$.<br>\n\t\t\tQuãng đường ô tô đi được trong $20$ giây đầu (lúc chưa giảm tốc) là\n\t\t\t\\[S_1 = v_0 \\cdot t_1 = 25 \\cdot 20 = 500\\,\\text{(m).}\\]\n\t\t\tQuãng đường từ vị trí ô tô bắt đầu giảm tốc đến trạm thu phí là\n\t\t\t\\[S_2= 1\\,000 - 500 = 500\\,\\text{(m).}\\]\n\t\t\t<br>• ch Tại thời điểm bắt đầu giảm tốc ($t=0$), vận tốc của ô tô là $25$\\,m/s, ta có\n\t\t\t\\[v(0) = a \\cdot 0 + b = 25 \\Rightarrow b = 25.\\]\n\t\t\t<br>• ch Quãng đường ô tô đi được trong $30$ giây giảm tốc là\n\t\t\t\\[S_2 = \\displaystyle\\int\\limits_{0}^{30} v(t) \\mathrm{\\,d}t = \\displaystyle\\int\\limits_{0}^{30} (at + 25) \\mathrm{\\,d}t = \\left( \\dfrac{at^2}{2} + 25t \\right) \\bigg|_0^{30} = 450a + 750.\\]\n\t\t\tMặt khác, ta đã biết $S_2 = 500$\\,m, nên ta có phương trình\n\t\t\t\\[450a + 750 = 500 \\Leftrightarrow 450a = -250 \\Leftrightarrow a = -\\dfrac{5}{9}.\\]\n\t\t\tHàm vận tốc trong giai đoạn giảm tốc là $v(t) = -\\dfrac{5}{9}t + 25$.<br>\n\t\t\t<br>• ch Tốc độ của ô tô khi qua trạm thu phí (tại thời điểm $t=30$).\n\t\t\t\\[v(30) = -\\dfrac{5}{9} \\cdot 30 + 25 = \\dfrac{25}{3}~\\text{(m/s).}\\]\n\t\t\tTa có $\\dfrac{25}{3}\\text{ (m/s)}= 30\\text{ (km/h)}$.<br>\n\t\t\tVận tốc thực tế của ô tô khi đi qua trạm thu phí là $30\\text{ km/h}$, bằng đúng với tốc độ tối đa cho phép. Do đó, người lái xe đã tuân thủ đúng quy định về tốc độ.\n\t\t\\end{itemchoice}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Cho hàm số $y = \\dfrac{ax^2+bx+c}{x+d}$ ($a \\neq 0$) có đồ thị là đường cong $(C)$. Các đường thẳng $d_1$, $d_2$ lần lượt là tiệm cận đứng và tiệm cận xiên của đường cong $(C)$ như hình vẽ.",
+      "statements": [
+        {
+          "text": "Đồ thị $(C)$ đi qua điểm có tọa độ là $(0;2)$",
+          "answer": false
+        },
+        {
+          "text": "Đồ thị $(C)$ có tiệm cận đứng là đường thẳng $x = -1$",
+          "answer": true
+        },
+        {
+          "text": "Đồ thị $(C)$ có tiệm cận xiên là đường thẳng $y = x$",
+          "answer": true
+        },
+        {
+          "text": "Giá trị của tổng $a+b+c+d$ là một số âm",
+          "answer": true
+        }
+      ],
+      "id": 14,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Đồ thị $(C)$ không đi qua điểm $(0;2)$.\n\t\t\t<br>• ch Quan sát đồ thị ta thấy tiệm cận đứng $d_1$ là đường thẳng $x = -1$.\n\t\t\t<br>• ch Đường tiệm cận xiên $d_2$ đi qua $O(0;0)$ và $(-1;-1)$ nên có phương trình là $y = x$.\n\t\t\t<br>• ch Ta có $y = \\dfrac{ax^2+bx+c}{x+d} = ax + b - ad + \\dfrac{c - d(b-ad)}{x+d}$.<br> \n\t\t\tSuy ra đồ thị hàm số có tiệm cận đứng là đường thẳng $x = -d$ và tiệm cận xiên là đường thẳng $y = ax + b - ad$.<br> \n\t\t\tDựa vào đồ thị, ta có các dữ kiện sau\n\t\t\t<br>\n\t\t\t\t<br>• Đường tiệm cận đứng $d_1$ có phương trình $x = -1 \\Rightarrow -d = -1 \\Leftrightarrow d = 1$.\n\t\t\t\t<br>• Đường tiệm cận xiên $d_2$ có phương trình là $y = x$.\n\t\t\t\t<br> Đồng nhất hệ số với đường tiệm cận xiên theo tham số, ta được<br> \n\t\t\t\t\\[\\heva{& a = 1 <br> & b - ad = 0} \\Rightarrow \\heva{& a = 1 <br> & b - 1\\cdot 1 = 0} \\Leftrightarrow \\heva{& a = 1 <br> & b = 1.}\\]\n\t\t\t<br>\n\t\t\tKhi đó, hàm số có dạng $y = \\dfrac{x^2+x+c}{x+1} = x + \\dfrac{c}{x+1}$.<br>\n\t\t\tĐồ thị hàm số đi qua điểm $(2;0)$ nên ta có $0=2+\\dfrac{c}{2+1}\\Rightarrow c=-6$.<br>\n\t\t\tVậy tổng $a+b+c+d = 1+1-6+1 = -3 < 0$. \n\t\t\\end{itemchoice}",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize,line join=round, line cap=round, >=stealth, x=0.6cm, y=0.6cm]\n    \n\t\t\t\t\\def\\xt{-6} \\def\\xp{4.5} \\def\\yt{3} \\def\\yd{-5}\n\t\t\t\t\\tikzset{declare function = {f(\\x)= \\x-6/(\\x+1);}}\n\t\t\t\t\\draw[->] (\\xt,0)--(\\xp,0) node [below]{$x$};\n\t\t\t\t\\draw[->] (0,\\yd)--(0,\\yt) node [left]{$y$};\n\t\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (\\xt,\\yd) rectangle (\\xp,\\yt);\n\t\t\t\t\t\\draw[smooth,samples=200,domain=\\xt:-1.1] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[smooth,samples=200,domain=-0.9:\\xp] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[red] (-1,\\yd)--(-1,\\yt);\n\t\t\t\t\t\\draw[red] plot[domain=\\xt:\\xp] (\\x,{\\x}); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(-1,0)/150/-1, (2,0)/120/2, (0,-1)/0/-1} \\fill \\diem node[shift={(\\pos:3mm)}]{$\\name$} circle(1pt);\n\t\t\t\t\\path (3,{f(3)})node[right]{$(C)$}\n\t\t\t\t\t(-1,2) node[shift={(180:2mm)}]{$d_1$}\n\t\t\t\t\t(2,2)  node[above]{$d_2$};\n\t\t\t\t\\draw[dashed] (0,-1)--(-1,-1);\n    \\node at (0,0){\\href{58N0RA}{\\tiny \\phantom{58N0RA}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize,line join=round, line cap=round, >=stealth, x=0.6cm, y=0.6cm]\n    \n\t\t\t\t\\def\\xt{-6} \\def\\xp{4.5} \\def\\yt{3} \\def\\yd{-5}\n\t\t\t\t\\tikzset{declare function = {f(\\x)= \\x-6/(\\x+1);}}\n\t\t\t\t\\draw[->] (\\xt,0)--(\\xp,0) node [below]{$x$};\n\t\t\t\t\\draw[->] (0,\\yd)--(0,\\yt) node [left]{$y$};\n\t\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (\\xt,\\yd) rectangle (\\xp,\\yt);\n\t\t\t\t\t\\draw[smooth,samples=200,domain=\\xt:-1.1] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[smooth,samples=200,domain=-0.9:\\xp] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[red] (-1,\\yd)--(-1,\\yt);\n\t\t\t\t\t\\draw[red] plot[domain=\\xt:\\xp] (\\x,{\\x}); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(-1,0)/150/-1, (2,0)/120/2, (0,-1)/0/-1} \\fill \\diem node[shift={(\\pos:3mm)}]{$\\name$} circle(1pt);\n\t\t\t\t\\path (3,{f(3)})node[right]{$(C)$}\n\t\t\t\t\t(-1,2) node[shift={(180:2mm)}]{$d_1$}\n\t\t\t\t\t(2,2)  node[above]{$d_2$};\n\t\t\t\t\\draw[dashed] (0,-1)--(-1,-1);\n    \\node at (0,0){\\href{58N0RA}{\\tiny \\phantom{58N0RA}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/q14.png"
+    },
+    {
+      "type": "truefalse",
+      "question": "Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 4$, $AD = 3$ và $AA'=12$. Chọn hệ trục tọa độ $Oxyz$ với gốc $O$ trùng với điểm $A'$; các tia $A'B'$, $A'D'$, $A'A$ lần lượt trùng với các tia $Ox$, $Oy$, $Oz$ (như hình vẽ). Gọi $M$ là trung điểm của đoạn thẳng $AB$.",
+      "statements": [
+        {
+          "text": "Tọa độ của điểm $D$ là $(0;3;12)$",
+          "answer": true
+        },
+        {
+          "text": "Tọa độ của vectơ $\\overrightarrow{MD}$ là $(2;-3;0)$",
+          "answer": false
+        },
+        {
+          "text": "Một vectơ pháp tuyến của mặt phẳng $\\left(MDC'\\right)$ có tọa độ là $(3;2;1)$",
+          "answer": true
+        },
+        {
+          "text": "Khoảng cách từ điểm $A'$ đến mặt phẳng $\\left(MDC'\\right)$ lớn hơn $5$",
+          "answer": false
+        }
+      ],
+      "id": 15,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Điểm $D$ nằm trong mặt phẳng $(Oyz)$ có $y_D = AD = 3$ và $z_D = AA' = 12$.<br>\n\t\t\tVậy $D(0;3;12)$.\n\t\t\t<br>• ch Từ hệ trục tọa độ $Oxyz$ đã chọn, ta có tọa độ các điểm\n\t\t\t<div class=\"centered\">\n\t\t\t\t$A'(0;0;0)$, $B'(4;0;0)$, $D'(0;3;0)$, $A(0;0;12)$, $B(4;0;12)$, $D(0;3;12)$, $C'(4;3;0)$.\n\t\t\t</div>\n\t\t\tVì $M$ là trung điểm $AB$ nên $M(2;0;12)$.<br>\n\t\t\tTa có $\\overrightarrow{MD}=(-2;3;0)$.\n\t\t\t<br>• ch Ta có $\\overrightarrow{MD} = (-2;3;0)$ và $\\overrightarrow{MC'}=(2;3;-12)$.<br>\n\t\t\tSuy ra $\\left[\\overrightarrow{MD}, \\overrightarrow{MC'}\\right] =(-36; -24; -12)$ cùng phương với vectơ $\\overrightarrow{n}= (3;2;1)$.<br>\n\t\t\tDo đó, một vectơ pháp tuyến của mặt phẳng $\\left(MDC'\\right)$ là $\\overrightarrow{n}= (3;2;1)$.\n\t\t\t<br>• ch Phương trình mặt phẳng $\\left(MDC'\\right)$ đi qua $M(2;0;12)$, có vectơ pháp tuyến $\\overrightarrow{n}=(3;2;1)$ là\n\t\t\t\\[3(x-2) + 2(y-0) + 1(z-12) = 0 \\Leftrightarrow 3x + 2y + z - 18 = 0.\\]\n\t\t\tKhoảng cách từ $A'(0;0;0)$ đến $\\left(MDC'\\right)$ là\n\t\t\t\\[\\mathrm{d}\\big(A';\\left(MDC'\\right)\\big)=\\dfrac{|-18|}{\\sqrt{3^2 + 2^2 + 1^2}} = \\dfrac{18}{\\sqrt{14}} \\approx 4{,}81 < 5.\\]\n\t\t\\end{itemchoice}",
+      "visualLatex": "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\coordinate (A') at (0,0); \n\t\t\t\\coordinate (D') at (4,0); \n\t\t\t\\coordinate (B') at (-2,-1); \n\t\t\t\\coordinate (C') at ($(B')+(D')-(A')$);\n\t\t\t\\coordinate (A) at ($(A')+(0,4)$);\n\t\t\t\\coordinate (D) at ($(D')+(0,4)$);\n\t\t\t\\coordinate (B) at ($(B')+(0,4)$);\n\t\t\t\\coordinate (C) at ($(C')+(0,4)$);\n\t\t\t\\coordinate (M) at ($(A)!0.5!(B)$);\n\t\t\t\n\t\t\t\\draw (B)--(C)--(D)--(A)--cycle;\n\t\t\t\\draw (B)--(B')--(C')--(C);\n\t\t\t\\draw (C')--(D')--(D);\n\t\t\t\n\t\t\t\\draw[dashed] (A')--(B') (A')--(D') (A')--(A);\n\t\t\t\n\t\t\t\\coordinate (y) at ($(A')!1.2!(D')$);\n\t\t\t\\draw[->] (D')--(y) node[below]{$y$};\n\t\t\t\\coordinate (x) at ($(A')!1.3!(B')$);\n\t\t\t\\draw[->] (B')--(x) node[below]{$x$};\n\t\t\t\\coordinate (z) at ($(A')!1.2!(A)$);\n\t\t\t\\draw[->] (A)--(z) node[right]{$z$};\n\t\t\t\n\t\t\t\\foreach \\t/\\g in {A/135, B/180, C/90, D/90, A'/45, B'/-90, C'/-45, D'/-90, M/120}{\n\t\t\t\\fill (\\t) circle (1pt) node[shift={(\\g:8pt)}]{$\\t$};\n\t\t\t}\n    \\node at (0,0){\\href{UA7UR6}{\\tiny \\phantom{UA7UR6}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\coordinate (A') at (0,0); \n\t\t\t\\coordinate (D') at (4,0); \n\t\t\t\\coordinate (B') at (-2,-1); \n\t\t\t\\coordinate (C') at ($(B')+(D')-(A')$);\n\t\t\t\\coordinate (A) at ($(A')+(0,4)$);\n\t\t\t\\coordinate (D) at ($(D')+(0,4)$);\n\t\t\t\\coordinate (B) at ($(B')+(0,4)$);\n\t\t\t\\coordinate (C) at ($(C')+(0,4)$);\n\t\t\t\\coordinate (M) at ($(A)!0.5!(B)$);\n\t\t\t\n\t\t\t\\draw (B)--(C)--(D)--(A)--cycle;\n\t\t\t\\draw (B)--(B')--(C')--(C);\n\t\t\t\\draw (C')--(D')--(D);\n\t\t\t\n\t\t\t\\draw[dashed] (A')--(B') (A')--(D') (A')--(A);\n\t\t\t\n\t\t\t\\coordinate (y) at ($(A')!1.2!(D')$);\n\t\t\t\\draw[->] (D')--(y) node[below]{$y$};\n\t\t\t\\coordinate (x) at ($(A')!1.3!(B')$);\n\t\t\t\\draw[->] (B')--(x) node[below]{$x$};\n\t\t\t\\coordinate (z) at ($(A')!1.2!(A)$);\n\t\t\t\\draw[->] (A)--(z) node[right]{$z$};\n\t\t\t\n\t\t\t\\foreach \\t/\\g in {A/135, B/180, C/90, D/90, A'/45, B'/-90, C'/-45, D'/-90, M/120}{\n\t\t\t\\fill (\\t) circle (1pt) node[shift={(\\g:8pt)}]{$\\t$};\n\t\t\t}\n    \\node at (0,0){\\href{UA7UR6}{\\tiny \\phantom{UA7UR6}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/q15.png"
+    },
+    {
+      "type": "truefalse",
+      "question": "Trong vòng chung kết của cuộc thi “ Đường đến vinh quang”\\ có $4$ thí sinh An, Bình, Toàn và Phương tham gia thi đấu. Sau khi An, Bình và Toàn hoàn thành phần thi cuối của mình, điểm số của ba bạn đạt được lần lượt là $180$ điểm, $200$ điểm và $170$ điểm. Bạn Phương là thí sinh cuối cùng bước vào phần thi cuối với điểm số hiện có là $190$ điểm. Tại phần thi cuối, mỗi thí sinh phải trả lời $3$ câu hỏi thuộc ba lĩnh vực: Tự nhiên, Xã hội và Tiếng Anh. Mỗi câu trả lời đúng được $20$ điểm, trả lời sai hoặc không trả lời bị trừ $10$ điểm. Thí sinh có quyền sử dụng “ Ngôi sao hy vọng”\\ tối đa một lần cho một trong ba câu hỏi, nếu trả lời đúng nhận được $40$ điểm, trả lời sai hoặc không trả lời bị trừ $20$ điểm. Biết xác suất Phương trả lời đúng câu hỏi thuộc lĩnh vực Tự nhiên, Xã hội và Tiếng Anh lần lượt là $0{,}7$; $0{,}4$ và $0{,}3$. Giả thiết rằng việc trả lời đúng mỗi câu hỏi không làm thay đổi xác suất trả lời đúng hoặc sai các câu hỏi còn lại.",
+      "statements": [
+        {
+          "text": "Xác suất để Phương trả lời sai hoặc không trả lời câu hỏi thuộc lĩnh vực Tự nhiên là $0{,}3$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để Phương trả lời đúng cả ba câu hỏi là $0{,}084$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để Phương trả lời đúng ít nhất một trong ba câu hỏi là $0{,}916$",
+          "answer": false
+        },
+        {
+          "text": "Nếu Phương chọn “ Ngôi sao hy vọng”\\ ở câu hỏi thuộc lĩnh vực Tự nhiên thì xác suất để Phương trở thành quán quân của cuộc thi này là $0{,}736$",
+          "answer": true
+        }
+      ],
+      "id": 16,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Gọi $A$ là biến cố “ Phương trả lời đúng câu hỏi Tự nhiên”.<br>\n\t\t\tTa có $\\mathrm{P}(A)=0{,}7$.<br>\n\t\t\tXác suất để Phương trả lời sai hoặc không trả lời câu hỏi thuộc lĩnh vực Tự nhiên là \\[\\mathrm{P}\\left(\\overline{A}\\right) = 1 - \\mathrm{P}(A) = 1 - 0{,}7 = 0{,}3.\\]\n\t\t\t<br>• ch Gọi $B$ là biến cố “ Phương trả lời đúng câu hỏi Xã hội”; $C$ là biến cố “ Phương trả lời đúng câu hỏi Tiếng Anh”.<br>\n\t\t\tKhi đó, $A$, $B$, $C$ là các biến cố độc lập.<br>\n\t\t\tTa có $\\mathrm{P}(B)=0{,}4 \\Rightarrow \\mathrm{P}\\left(\\overline{B}\\right)=0{,}6$; $\\mathrm{P}(C)=0{,}3 \\Rightarrow \\mathrm{P}\\left(\\overline{C}\\right)=0{,}7$.<br>\n\t\t\tXác suất để Phương trả lời đúng cả ba câu hỏi là \n\t\t\t\\[\\mathrm{P}(A \\cap B \\cap C) =\\mathrm{P}(A)\\cdot\\mathrm{P}(B)\\cdot\\mathrm{P}(C)= 0{,}7 \\cdot 0{,}4 \\cdot 0{,}3 = 0{,}084.\\]\n\t\t\t<br>• ch Xác suất để Phương không trả lời đúng câu nào là \\[\\mathrm{P}\\left(\\overline{A}\\cap\\overline{B}\\cap\\overline{C}\\right)=\\mathrm{P}\\left(\\overline{A}\\right)\\cdot\\mathrm{P}\\left(\\overline{B}\\right)\\cdot\\mathrm{P}\\left(\\overline{C}\\right) = 0{,}3 \\cdot 0{,}6 \\cdot 0{,}7 = 0{,}126.\\]\n\t\t\tXác suất để Phương trả lời đúng ít nhất một câu là $1 - 0{,}126 = 0{,}874$.\n\t\t\t<br>• ch Để trở thành quán quân, điểm của Phương phải lớn hơn người cao nhất hiện tại là Bình được $200$ điểm.<br>\n\t\t\tĐể điểm của Phương lớn hơn $200$, ta xét các trường hợp sau:\n\t\t\t<br>[\\it TH 1:]\n\t\t\t\t<br>• Trả lời đúng câu Tự nhiên được $40$ điểm.<br>\n\t\t\t\tKhi đó số điểm của Phương là $190+40=230$.\n\t\t\t\t<br>\n\t\t\t\t\t<br>• Đúng Tự nhiên, đúng bất kỳ thêm ít nhất $1$ câu.<br>\n\t\t\t\t\tSố điểm của Phương chắc chắn lớn hơn $200$.\n\t\t\t\t\t<br>• Đúng Tự nhiên, sai cả $2$ câu còn lại.<br>\n\t\t\t\t\tSố điểm của Phương là $230-10-10 = 210 > 200$ (thỏa mãn).\n\t\t\t\t<br>\n\t\t\t\tDo đó chỉ cần đúng câu Tự nhiên là Phương thắng.<br>\n\t\t\t\tXác suất là $\\mathrm{P}(A) = 0{,}7$.\n\t\t\t\t<br>• Trả lời sai câu Tự nhiên bị trừ $20$ điểm.<br>\n\t\t\t\tKhi đó số điểm của Phương là $190-20=170$. <br>\n\t\t\t\tĐể Phương thắng, Phương cần thêm ít nhất $40$ điểm, tức là phải đúng cả $2$ câu còn lại (điểm lúc đó là $170+20+20=210$). <br>\n\t\t\t\tXác suất là $\\mathrm{P}\\left(\\overline{A}\\right) \\cdot \\mathrm{P}(B) \\cdot \\mathrm{P}(C) = 0{,}3 \\cdot 0{,}4 \\cdot 0{,}3 = 0{,}036$.\n\t\t\t<br>\n\t\t\tVậy xác suất thắng cuộc của Phương là $0{,}7 + 0{,}036 = 0{,}736$.\n\t\t\\end{itemchoice}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Sau khi một loại thuốc kháng sinh được tiêm vào cơ thể thì nồng độ của thuốc trong máu sẽ giảm dần theo thời gian do quá trình chuyển hóa. Nồng độ thuốc trong máu sau $t$ giờ kể từ khi tiêm được mô hình hóa bởi công thức $C(t) = C_0 \\cdot \\mathrm{e}^{-rt}$\\,(mg/lít).<br>\n\tTrong đó \n\t<br>\n\t\t<br>• $C_0$ là nồng độ thuốc trong máu ngay sau khi tiêm.\n\t\t<br>• $r$ là hằng số dương đo tốc độ phân hủy của thuốc.\n\t\t<br>• $\\mathrm{e}\\approx 2{,}718$.\n\t<br>   \n\tBiết rằng ngay sau khi tiêm, nồng độ thuốc trong máu là $15$\\,mg/lít và sau đó $4$ giờ nồng độ thuốc giảm còn $10$\\,mg/lít. Để đạt hiệu quả điều trị, bác sĩ sẽ tiêm lại một liều mới khi nồng độ thuốc trong máu của bệnh nhân giảm xuống và còn ít nhất $6$\\,mg/lít. Theo mô hình trên, để đạt hiệu quả điều trị thì khoảng thời gian nhiều nhất giữa hai lần tiêm thuốc là bao nhiêu giờ (kết quả làm tròn đến hàng đơn vị)?\n\t<br>",
+      "answer": "9",
+      "id": 17,
+      "solution": "Tại thời điểm $t=0$, $C(0) = C_0 = 15$\\,(mg/lít).<br>\n\t\tTại thời điểm $t=4$, $C(4) = 15 \\cdot \\mathrm{e}^{-4r} = 10 \\Leftrightarrow \\mathrm{e}^{-4r} = \\dfrac{2}{3} \\Leftrightarrow -4r = \\ln\\left(\\dfrac{2}{3}\\right) \\Leftrightarrow r = \\dfrac{\\ln(1{,}5)}{4}$.<br>\n\t\tĐể nồng độ giảm xuống còn $6$\\,mg/lít, ta có phương trình\n\t\t\\[15 \\cdot \\mathrm{e}^{-rt} = 6 \\Leftrightarrow \\mathrm{e}^{-rt} = \\dfrac{2}{5} \\Leftrightarrow -rt = \\ln\\left(\\dfrac{2}{5}\\right) \\Leftrightarrow t = \\dfrac{\\ln(2{,}5)}{r}=\\dfrac{\\ln(2{,}5) \\cdot 4}{\\ln(1{,}5)} \\approx 9{,}0394\\,\\text{\\,(giờ)}.\\]\n\t\tVậy khoảng thời gian nhiều nhất giữa hai lần tiêm là $9$\\,(giờ).",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Anh Tú vay ngân hàng $300$ triệu đồng để mua xe ô tô với lãi suất cố định $7{,}2$\\%/năm theo hình thức trả góp hằng tháng, trong thời hạn $12$ tháng (ứng với $12$ kì trả nợ). Trong thời hạn đó, cuối mỗi kì trả nợ, anh Tú phải trả $25$ triệu đồng tiền gốc (ứng với $300$ triệu đồng chia đều cho $12$ tháng) và một khoản tiền lãi được tính theo số tiền dư nợ còn lại. Sau $12$ tháng, tổng số tiền lãi anh Tú phải trả ngân hàng là bao nhiêu triệu đồng (kết quả làm tròn đến hàng phần mười)?\n\t<br>",
+      "answer": "11{,}7",
+      "id": 18,
+      "solution": "Lãi suất hằng tháng là $r = \\dfrac{7{,}2\\%}{12} = 0{,}6\\%/\\text{tháng} = 0{,}006$.<br>\n\t\tSố tiền gốc anh Tú trả cố định mỗi tháng là $\\,m = \\dfrac{300}{12} = 25$\\,(triệu đồng).<br>\n\t\tGọi $T_n$ là số tiền lãi anh Tú phải trả ở tháng thứ $n$ ($1 \\le n \\le 12$).\n\t\t<br>\n\t\t\t<br>• Tháng thứ $1$: Dư nợ lúc đầu là $300$ triệu đồng. Tiền lãi là\n\t\t\t\\[T_1 = 300 \\cdot r = 300 \\cdot 0{,}006 = 1{,}8 \\text{\\,(triệu đồng)}.\\]\n\t\t\t<br>• Tháng thứ $2$: Sau khi trả $25$ triệu tiền gốc ở tháng thứ 1, dư nợ còn lại là $300 - 25 = 275$ triệu đồng. Tiền lãi là\n\t\t\t\\[T_2 = 275 \\cdot r = 275 \\cdot 0{,}006 = 1{,}65 \\text{\\,(triệu đồng)}.\\]\n\t\t\t<br>• Tháng thứ $3$: Sau khi tiếp tục trả $25$ triệu tiền gốc ở tháng thứ 2, dư nợ còn lại là $275 - 25 = 250$ triệu đồng. Tiền lãi là\n\t\t\t\\[T_3 = 250 \\cdot r = 250 \\cdot 0{,}006 = 1{,}5 \\text{ (triệu đồng)}.\\]\n\t\t\t<br>• ...\n\t\t\t<br>• Tháng thứ $12$: Sau khi đã trả gốc được $11$ tháng, dư nợ còn lại là $300 - 11 \\cdot 25 = 25$ triệu đồng. Tiền lãi là\n\t\t\t\\[T_{12} = 25 \\cdot r = 25 \\cdot 0{,}006 = 0{,}15 \\text{\\,(triệu đồng)}.\\]\n\t\t<br>\n\t\tDãy số lãi suất $(T_n)$ lập thành một cấp số cộng có $12$ số hạng với số hạng đầu $u_1 = 1{,}8$, số hạng cuối $u_{12} = 0{,}15$ và công sai $d = -0{,}15$.<br>\n\t\tTổng số tiền lãi anh Tú phải trả sau $12$ tháng là tổng của cấp số cộng trên:\n\t\t\\allowdisplaybreaks\n\t\t\\begin{align*}\n\t\t\tT = S_{12} &= \\dfrac{12 \\cdot (u_1 + u_{12})}{2} <br>\n\t\t\t&= 6 \\cdot (1{,}8 + 0{,}15) <br>\n\t\t\t&= 6 \\cdot 1{,}95 = 11{,}7 \\text{\\,(triệu đồng)}.\n\t\t\\end{align*}\n\t\tVậy tổng số tiền lãi anh Tú phải trả là $11{,}7$\\,(triệu đồng).",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Người ta trang trí một bảng ô vuông $4 \\times 4$ bởi các ngôi sao và các bông hoa giống nhau. Mỗi ô vuông nhỏ được dán một ngôi sao hoặc một bông hoa, sao cho trong mỗi hàng hoặc mỗi cột của bảng ô vuông có đúng $2$ ngôi sao và $2$ bông hoa. Có tất cả bao nhiêu cách trang trí bảng ô vuông thỏa mãn yêu cầu trên?\n\n\t<br>",
+      "answer": "2\\,502",
+      "id": 19,
+      "solution": "Gọi $A$ là tập hợp các cách trang trí mà mỗi hàng đều có đúng $2$ ngôi sao và $2$ bông hoa. <br>\n\t\tGọi $B$ là tập hợp các cách trang trí mà mỗi cột đều có đúng $2$ ngôi sao và $2$ bông hoa. <br>\n\t\tYêu cầu bài toán là tìm số cách trang trí thuộc tập hợp $A \\cup B$. Ta có\n\t\t\\[n(A\\cup B) = n(A)+n(B)-n(A\\cap B).\\]\n\t\t<br>\n\t\t\t<br>• Số phần tử của $A$ (mỗi hàng đều có đúng $2$ ngôi sao và $2$ bông hoa).<br>\n\t\t\tMỗi hàng có $4$ ô vuông, số cách chọn $2$ ô để dán ngôi sao là $C_4^2 = 6$ cách. <br>\n\t\t\tVì bảng có $4$ hàng động độc lập với nhau, nên số cách trang trí để mỗi hàng đều có $2$ ngôi sao là\n\t\t\t\\[n(A) = 6 \\cdot 6 \\cdot 6 \\cdot 6 = 6^4 = 1\\,296 \\text{ (cách).}\\]\n\t\t\t<br>• Số phần tử của $B$ (mỗi cột đều có đúng $2$ ngôi sao và $2$ bông hoa).\n\t\t\tTương tự như trường hợp hàng, số cách trang trí để mỗi cột đều có đúng $2$ ngôi sao là<br>\n\t\t\t\\[n(B) = 6^4 = 1\\,296 \\text{ (cách).}\\]\n\t\t\t<br>• Số phần tử của  $A \\cap B$ (cả cột và hàng đều có đúng $2$ ngôi sao và $2$ bông hoa). <br>\n\t\t\tĐây là số cách xếp $2$ ngôi sao vào mỗi hàng và mỗi cột. Ta xét các trường hợp cho hàng thứ hai so với hàng thứ nhất ($6$ cách chọn hàng 1):\n\t\t\t<br>[\\it TH1: ]\n\t\t\t\t<br>• Hàng 2 giống hệt hàng 1: Có $1$ cách chọn hàng 2. Khi đó hàng 3 và hàng 4 bắt buộc phải dán ngược lại với hàng 1. Có $6 \\cdot 1 \\cdot 1 = 6$ cách.\n\t\t\t\t<br>• Hàng 2 ngược hoàn toàn hàng 1: Có $1$ cách chọn hàng 2. Khi đó mỗi cột đã có $1$ sao. Hàng 3 có $\\mathrm{C}_4^2=6$ cách chọn, hàng 4 là phần bù của hàng 3. Có $6 \\cdot 1 \\cdot 6 = 36$ cách.\n\t\t\t\t<br>• Hàng 2 có đúng $1$ vị trí sao trùng hàng 1: Có $\\mathrm{C}_2^1 \\cdot \\mathrm{C}_2^1 = 4$ cách chọn hàng 2. Khi đó cặp hàng 3 và hàng 4 có đúng $2$ cách xếp để bổ sung đủ sao cho các cột. Có $6 \\cdot 4 \\cdot 2 = 48$ cách.\n\t\t\t<br>\n\t\t\tSuy ra $n(A \\cap B) = 6 + 36 + 48 = 90$ cách.\n\t\t<br>\n\t\tSố cách trang trí thỏa mãn mỗi hàng hoặc mỗi cột có $2$ sao là\n\t\t$$n(A\\cup B) = n(A)+n(B)-n(A\\cap B) = 1\\,296 + 1\\,296 - 90 = 2\\,502 \\text{ (cách).}$$",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\flower(#1,#2){\n\t\t\t\\begin{scope}[shift={(#1,#2)}, scale=0.15]\n\t\t\t\t\\foreach \\a in {18,90,162,234,306}{\n\t\t\t\t\\draw[rotate=\\a, fill=white] (0,0) .. controls (0.5,1) and (1.5,1) .. (1,0) .. controls (1.5,-1) and (0.5,-1) .. (0,0);\n\t\t\t\t}\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\def\\starS(#1,#2){\n\t\t\t\\begin{scope}[shift={(#1,#2)}, scale=0.2]\n\t\t\t\t\\draw[fill=white] (90:1) -- (234:1) -- (18:1) -- (162:1) -- (306:1) -- cycle;\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\begin{scope}\n\t\t\t\t\\draw (0,0) grid (4,4);\n\t\t\t\t\\node at (2,-0.5) {Hình 1};\n\t\t\t\\end{scope}\t\t\t\n\t\t\t\\begin{scope}[xshift=6cm]\n\t\t\t\t\\draw (0,0) grid (4,4);\n\t\t\t\t\\starS(0.5,3.5); \\flower(1.5,3.5); \\starS(2.5,3.5); \\flower(3.5,3.5);\n\t\t\t\t\\flower(0.5,2.5); \\starS(1.5,2.5); \\flower(2.5,2.5); \\starS(3.5,2.5);\n\t\t\t\t\\starS(0.5,1.5); \\flower(1.5,1.5); \\starS(2.5,1.5); \\flower(3.5,1.5);\n\t\t\t\t\\flower(0.5,0.5); \\starS(1.5,0.5); \\flower(2.5,0.5); \\starS(3.5,0.5);\n\t\t\t\t\\node at (2,-0.5) {Hình 2};\n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{5Y3GA0}{\\tiny \\phantom{5Y3GA0}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\flower(#1,#2){\n\t\t\t\\begin{scope}[shift={(#1,#2)}, scale=0.15]\n\t\t\t\t\\foreach \\a in {18,90,162,234,306}{\n\t\t\t\t\\draw[rotate=\\a, fill=white] (0,0) .. controls (0.5,1) and (1.5,1) .. (1,0) .. controls (1.5,-1) and (0.5,-1) .. (0,0);\n\t\t\t\t}\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\def\\starS(#1,#2){\n\t\t\t\\begin{scope}[shift={(#1,#2)}, scale=0.2]\n\t\t\t\t\\draw[fill=white] (90:1) -- (234:1) -- (18:1) -- (162:1) -- (306:1) -- cycle;\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\begin{scope}\n\t\t\t\t\\draw (0,0) grid (4,4);\n\t\t\t\t\\node at (2,-0.5) {Hình 1};\n\t\t\t\\end{scope}\t\t\t\n\t\t\t\\begin{scope}[xshift=6cm]\n\t\t\t\t\\draw (0,0) grid (4,4);\n\t\t\t\t\\starS(0.5,3.5); \\flower(1.5,3.5); \\starS(2.5,3.5); \\flower(3.5,3.5);\n\t\t\t\t\\flower(0.5,2.5); \\starS(1.5,2.5); \\flower(2.5,2.5); \\starS(3.5,2.5);\n\t\t\t\t\\starS(0.5,1.5); \\flower(1.5,1.5); \\starS(2.5,1.5); \\flower(3.5,1.5);\n\t\t\t\t\\flower(0.5,0.5); \\starS(1.5,0.5); \\flower(2.5,0.5); \\starS(3.5,0.5);\n\t\t\t\t\\node at (2,-0.5) {Hình 2};\n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{5Y3GA0}{\\tiny \\phantom{5Y3GA0}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/q19.png"
+    },
+    {
+      "type": "short",
+      "question": "Cho hình vuông $ABCD$ có độ dài cạnh bằng $1$. Cung $AC$ là một phần tư đường tròn tâm $D$, bán kính $DA$ (tham khảo hình vẽ). Giả sử $P$ là điểm thay đổi trên cung $AC$ ($P$ khác $A$ và $C$). Tiếp tuyến tại điểm $P$ của cung $AC$ cắt các đoạn thẳng $AB$, $BC$ theo thứ tự tại các điểm $M$, $N$. Diện tích lớn nhất của tam giác $BMN$ bằng bao nhiêu (kết quả làm tròn đến hàng phần trăm)?\n\n\t\t<br>",
+      "answer": "0{,}17",
+      "id": 20,
+      "solution": "{\\it Cách 1:}\n\t\tChọn hệ trục tọa độ $Oxy$ sao cho $O\\equiv D(0;0)$, $C(1;0)$, $A(0;1)$. Khi đó $B(1;1)$.<br>\n\t\tDo cung $AC$ thuộc đường tròn tâm $D(0;0)$ bán kính $r=1$ nên thỏa mãn phương trình $x^2+y^2=1$. <br>\n\t\tVì $P(x_0,y_0)$ thuộc cung $AC$ nên $x_0^2+y_0^2=1$ với $0<x_0<1$, $0<y_0<1$.<br>\n\t\tTiếp tuyến tại $P(x_0,y_0)$ của đường tròn $x^2+y^2=1$ có phương trình là $x_0x+y_0y=1$.\n\t\t<br>\n\t\t\t<br>• Đường thẳng $AB$ có phương trình $y=1$, tọa độ điểm $M$ thỏa mãn\n\t\t\t\\[\\heva{&x_0x+y_0y=1<br>&y=1}\\Leftrightarrow \\heva{&x=\\dfrac{1-y_0}{x_0}<br>&y=1.}\n\t\t\t\\]\n\t\t\tSuy ra $M\\left(\\dfrac{1-y_0}{x_0};1\\right) \\Rightarrow BM=1-\\dfrac{1-y_0}{x_0}=\\dfrac{x_0+y_0-1}{x_0}$.\n\t\t\t<br>• Đường thẳng $CB$ có phương trình $x=1$, tọa độ điểm $N$ thỏa mãn\n\t\t\t\\[\\heva{&x_0x+y_0y=1<br>&x=1}\\Leftrightarrow \\heva{&x=1<br>&y=\\dfrac{1-x_0}{y_0}.}\n\t\t\t\\]\n\t\t\tSuy ra $N\\left(1;\\dfrac{1-x_0}{y_0}\\right) \\Rightarrow BN=1-\\dfrac{1-x_0}{y_0}=\\dfrac{x_0+y_0-1}{y_0}$.\n\t\t<br>\n\t\tXét $\\triangle BMN$ vuông tại $B$,\n\t\t\\[\n\t\tS_{BMN}=\\dfrac{1}{2} BM\\cdot BN=\\dfrac{1}{2}\\cdot\\dfrac{(x_0+y_0-1)^2}{x_0y_0}.\n\t\t\\]\n\t\tTa có $x_0y_0=\\dfrac{\\left(x_0+y_0\\right)^2-\\left(x_0^2+y_0^2\\right)}{2}=\\dfrac{\\left(x_0+y_0\\right)^2-1}{2}$ (vì $x_0^2+y_0^2=1$).<br>\n\t\tTừ đây suy ra $\\left(x_0+y_0\\right)^2>1\\Rightarrow x_0+y_0>1$.<br>\n\t\tĐặt $t=x_0+y_0$, ta có\n\t\t$\tS=\\dfrac{1}{2}\\cdot\\dfrac{(t-1)^2}{\\dfrac{t^2-1}{2}}=\\dfrac{(t-1)^2}{t^2-1}=\\dfrac{t-1}{t+1}$ với $t>1$.<br>\n\t\tLại có $\\left(x_0+y_0\\right)^2\\leq 2\\left(x_0^2+y_0^2\\right)=2\\cdot 1=2\\Rightarrow x_0+y_0 \\leq \\sqrt{2}\\Rightarrow t\\leq \\sqrt{2}$ (vì $x_0+y_0>1$).<br>\n\t\tXét hàm số $f(t)=\\dfrac{t-1}{t+1}$ với $1<t\\le\\sqrt2$.<br>\n\t\tTa có $f'(t)=\\dfrac{2}{(t+1)^2}$; $f'(t)>0$,\\,$\\forall x\\in \\left(1;\\sqrt2\\right)$.<br>\n\t\tSuy ra $f(t)$ đồng biến trên $\\left(1;\\sqrt2\\right]\\Rightarrow f(t)\\leq f\\left(\\sqrt2\\right)$.<br>\n\t\tDấu “=”\\ xảy ra khi và chỉ khi $t= \\sqrt2$, lúc đó $x_0=y_0=\\dfrac{1}{\\sqrt{2}}$.<br>\n\t\tVì $f\\left(\\sqrt2\\right)=\\dfrac{\\sqrt2-1}{\\sqrt2+1}=3-2\\sqrt2\\approx0{,}17$\tnên giá trị lớn nhất của hàm số $f(t)$ (cũng là giá trị lớn nhất của $S_{BMN}$) là $3-2\\sqrt2\\approx0{,}17$.<br>\n\t\tVậy diện tích lớn nhất của tam giác $BMN$ (làm tròn đến hàng phần trăm) là $0{,}17$.<br>\n\t\t{\\it Cách 2:}\n\t\tĐặt $BM=x$, $BN=y$, điều kiện $0<x<1$ và $0<y<1$.<br>\n\t\tTa có $MA=1-x$ và $NC=1-y$. <br>\n\t\tTheo tính chất về hai tiếp tuyến xuất phát từ một điểm của đường tròn suy ra $MP=1-x$, $NP=1-y$.<br>\n\t\tNgoài ra, $MN=MP+PN=1-x+1-y=2-x-y$.<br>\n\t\tXét tam giác vuông $BMN$ có\n\t\t\\begin{eqnarray*}\n\t\t\t&&BM^2+BN^2=MN^2<br>\n\t\t\t&\\Leftrightarrow& x^2+y^2=(2-x-y)^2<br>\n\t\t\t&\\Leftrightarrow&x^2+y^2 = 4-4(x+y)+(x+y)^2<br>\n\t\t\t&\\Leftrightarrow& 4-4x-4y+2xy=0<br>\n\t\t\t&\\Leftrightarrow& xy+2=2(x+y).\\qquad (1)\n\t\t\\end{eqnarray*}\n\t\tMặt khác, $(1)\\Leftrightarrow(2-x)(2-y) = 2$.<br>\n\t\tVì $0<x<1$, $0<y<1$ nên $2>2-x>1$, $2>2-y>1$ và $4-x-y>2$. <br>\n\t\tTa có\n\t\t\\begin{eqnarray*}\n\t\t\t&&\\dfrac{(2-x+2-y)^2}{4}\\geq (2-x)(2-y)<br>\n\t\t\t&\\Leftrightarrow &\\dfrac{(4-x-y)^2}{4}\\geq 2<br>\n\t\t\t&\\Leftrightarrow &(4-x-y)^2\\geq 8<br>\n\t\t\t&\\Leftrightarrow &4-x-y\\geq 2\\sqrt{2}<br>\n\t\t\t&\\Leftrightarrow &x+y\\leq 4-2\\sqrt{2}.\\qquad (2)\n\t\t\\end{eqnarray*}\n\t\tMặt khác $\\triangle BMN$ vuông tại $B$ nên $S_{BMN}=\\dfrac{1}{2} BM\\cdot BN=\\dfrac{1}{2}xy$.\\hfill $(3)$<br>\n\t\tTừ $(1)$ và $(3)$, kết hợp với $(2)$ suy ra\n\t\t\\[S_{BMN}=\\dfrac{1}{2}(2x+2y-2)=x+y-1\\leq3-2\\sqrt{2}.\n\t\t\\]\n\t\tDấu “=”\\ xảy ra khi và chỉ khi\n\t\t\\[\\heva{&2-x = 2-y<br>&xy+2=2(x+y)}\\Leftrightarrow\\heva{&x =y<br>&x^2-4x+2=0}\\Leftrightarrow x =y=2-\\sqrt{2}.\n\t\t\\]\n\t\tTa có $3-2\\sqrt{2}\\approx 0{,}17$ (làm tròn đến hàng phần trăm).<br>\n\t\tVậy diện tích lớn nhất của tam giác $BMN$ là $0{,}17$.<br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth]\n    \n\t\t\t\\def\\a{4} \\def\\t{55}\n\t\t\t\\path\n\t\t\t\t(0,0) coordinate (D)\n\t\t\t\t(\\a,0) coordinate (C)\n\t\t\t\t(\\a,\\a) coordinate (B)\n\t\t\t\t(0,\\a) coordinate (A)\n\t\t\t\t(\\t:\\a) coordinate (P)\n\t\t\t\t({\\a*(1-sin(\\t))/cos(\\t)},\\a) coordinate (M)\n\t\t\t\t(\\a,{\\a*(1-cos(\\t))/sin(\\t)}) coordinate (N);\n\t\t\t\\draw (A)--(B)--(C)--(D)--cycle (C)arc(0:90:\\a) (M)--(N);\n\t\t\t\\fill[pattern=north east lines] (M)--(B)--(N)--cycle;\n\t\t\t\\foreach \\p/\\ang in {D/225, C/-45, B/45, A/135, P/-2*\\t, M/90, N/0} {\n\t\t\t\\fill (\\p) circle (1pt);\n\t\t\t\\node at (\\p) [shift={(\\ang:8pt)}] {$\\p$};\n\t\t\t}\n    \\node at (0,0){\\href{1O3C5B}{\\tiny \\phantom{1O3C5B}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth]\n    \n\t\t\t\\def\\a{4} \\def\\t{55}\n\t\t\t\\path\n\t\t\t\t(0,0) coordinate (D)\n\t\t\t\t(\\a,0) coordinate (C)\n\t\t\t\t(\\a,\\a) coordinate (B)\n\t\t\t\t(0,\\a) coordinate (A)\n\t\t\t\t(\\t:\\a) coordinate (P)\n\t\t\t\t({\\a*(1-sin(\\t))/cos(\\t)},\\a) coordinate (M)\n\t\t\t\t(\\a,{\\a*(1-cos(\\t))/sin(\\t)}) coordinate (N);\n\t\t\t\\draw (A)--(B)--(C)--(D)--cycle (C)arc(0:90:\\a) (M)--(N);\n\t\t\t\\fill[pattern=north east lines] (M)--(B)--(N)--cycle;\n\t\t\t\\foreach \\p/\\ang in {D/225, C/-45, B/45, A/135, P/-2*\\t, M/90, N/0} {\n\t\t\t\\fill (\\p) circle (1pt);\n\t\t\t\\node at (\\p) [shift={(\\ang:8pt)}] {$\\p$};\n\t\t\t}\n    \\node at (0,0){\\href{1O3C5B}{\\tiny \\phantom{1O3C5B}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/q20.png"
+    },
+    {
+      "type": "short",
+      "question": "Cho hình chóp tứ giác $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh bằng $2$. Biết rằng $SA$ vuông góc với mặt phẳng $(ABCD)$ và $SA = \\sqrt{6}$ (tham khảo hình vẽ). Góc phẳng nhị diện $[S, BD,C]$ có số đo bằng bao nhiêu độ?\n\n\t\t<br>",
+      "answer": "120",
+      "id": 21,
+      "solution": "Gọi $O=AC\\cap BD$ suy ra $O$ là trung điểm của $AC$ và $BD$. Ta có\n\t\t\\[\\heva{&AC\\perp BD<br>&SA\\perp(ABCD)\\Rightarrow SA\\perp BD}\\Rightarrow (SAC)\\perp BD.\n\t\t\\]\n\t\tCắt nhị diện $[S,BD,C]$ có cạnh $BD$ bởi mặt phẳng $(SAC)$ ta được góc phẳng nhị diện $\\widehat{SOC}$.<br>\n\t\tVì $ABCD$ là hình vuông cạnh bằng $2$ nên $AC=2\\sqrt2$, $AO=OC=\\sqrt2$.<br>\n\t\tTa có\n\t\t\\[SO=\\sqrt{SA^2+AO^2}=\\sqrt{6+2}=2\\sqrt2;\\quad SC=\\sqrt{SA^2+AC^2}=\\sqrt{6+8}=\\sqrt{14}.\n\t\t\\]\n\t\tÁp dụng định lý côsin trong $\\triangle SOC$ ta được\n\t\t\\[\n\t\t\\cos\\widehat{SOC}=\\dfrac{SO^2+OC^2-SC^2}{2SO\\cdot OC}\n\t\t=\\dfrac{8+2-14}{2\\cdot 2\\sqrt2\\cdot\\sqrt2}=-\\dfrac{1}{2}\\Rightarrow \\widehat{SOC}=120^\\circ.\n\t\t\\]\n\t\tVậy góc phẳng nhị diện $[S,BD,C]$ bằng $120^\\circ$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth]\n    \n\t\t\t\\def\\h{3} \\def\\w{4}\n\t\t\t\\path\n\t\t\t\tcoordinate (S) at (0,\\h)\n\t\t\t\tcoordinate (A) at (0,0)\n\t\t\t\tcoordinate (B) at (\\w,0)\n\t\t\t\tcoordinate (D) at (-1.2,-1.5)\n\t\t\t\tcoordinate (C) at (\\w-1.2,-1.5);\n\t\t\t\\draw[dashed] (S)--(A) (D)--(A)--(B);\n\t\t\t\\draw (S)--(D)--(C)--(B)--(S)--(C);\n\t\t\t\\foreach \\p/\\a in {S/90, A/135, B/0, C/-45, D/225}\n\t\t\t\\fill (\\p) circle (1pt) node [shift={(\\a:8pt)}] {$\\p$};\n    \\node at (0,0){\\href{1KCG6H}{\\tiny \\phantom{1KCG6H}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth]\n    \n\t\t\t\\def\\h{3} \\def\\w{4}\n\t\t\t\\path\n\t\t\t\tcoordinate (S) at (0,\\h)\n\t\t\t\tcoordinate (A) at (0,0)\n\t\t\t\tcoordinate (B) at (\\w,0)\n\t\t\t\tcoordinate (D) at (-1.2,-1.5)\n\t\t\t\tcoordinate (C) at (\\w-1.2,-1.5);\n\t\t\t\\draw[dashed] (S)--(A) (D)--(A)--(B);\n\t\t\t\\draw (S)--(D)--(C)--(B)--(S)--(C);\n\t\t\t\\foreach \\p/\\a in {S/90, A/135, B/0, C/-45, D/225}\n\t\t\t\\fill (\\p) circle (1pt) node [shift={(\\a:8pt)}] {$\\p$};\n    \\node at (0,0){\\href{1KCG6H}{\\tiny \\phantom{1KCG6H}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/q21.png"
+    },
+    {
+      "type": "short",
+      "question": "Trong lưới ô vuông có hai đường parabol như hình vẽ. Biết rằng mỗi ô vuông nhỏ có cạnh bằng $1$\\,cm. Diện tích của hình phẳng trong lưới ô vuông được giới hạn bởi hai đường parabol (phần gạch chéo) bằng bao nhiêu centimet vuông (kết quả làm tròn đến hàng phần trăm)?\n\n\t\t<br>",
+      "answer": "9{,}76",
+      "id": 22,
+      "solution": "Chọn hệ trục tọa độ $Oxy$ có gốc $O(0;0)$ tại trung điểm cạnh dưới của lưới ô vuông $8 \\times 8$, trục hoành và trục tung như hình vẽ. Đơn vị mỗi ô vuông nhỏ tương ứng với $1$\\,cm.\n\n\t\tKhi đó\n\t\t<br>\n\t\t\t<br>• Parabol $(P_1)$ đi qua các điểm $O(0;0)$, $A(-4;8)$, $C(4;8)$. <br>\n\t\t\tGọi $(P_1)\\colon y=ax^2+bx+c$, ta có hệ phương trình\n\t\t\t\\[\\heva{&c=0<br>&16a-4b+c=8<br>&16a+4b+c=8}\\Leftrightarrow \\heva{&c=0<br>&b=0<br>&a=\\dfrac{1}{2}}\\Rightarrow (P_1)\\colon y= \\dfrac{1}{2}x^2.\n\t\t\t\\]\n\t\t\t<br>• Parabol $(P_2)$ đi qua các điểm $B(-4;6)$, $D(4;5)$, $E(-2;3)$. <br>\n\t\t\tGọi $(P_2)\\colon y=a'x^2+b'x+c'$, ta có hệ phương trình\n\t\t\t\\[\\heva{&16a'-4b'+c'=6<br>&16a'+4b'+c'=5<br>&4a'-2b'+c'=3}\\Leftrightarrow \\heva{&a'=\\dfrac{11}{48}<br>&b'=-\\dfrac{1}{8}<br>&c'=\\dfrac{11}{6}}\\Rightarrow (P_2)\\colon y = \\dfrac{11}{48}x^2-\\dfrac{1}{8}x+\\dfrac{11}{6}.\n\t\t\t\\]\n\t\t<br>\n\t\tPhương trình hoành độ giao điểm của hai parabol là\n\t\t\\allowdisplaybreaks\n\t\t\\begin{eqnarray*}\n\t\t\t&&\\dfrac{1}{2}x^2=\\dfrac{11}{48}x^2-\\dfrac{1}{8}x+\\dfrac{11}{6}<br>\n\t\t\t&\\Leftrightarrow&\\dfrac{13}{48}x^2+\\dfrac{1}{8}x-\\dfrac{11}{6} = 0<br>\n\t\t\t&\\Leftrightarrow&13x^2+6x-88 = 0<br>\n\t\t\t&\\Leftrightarrow&\\hoac{\n\t\t\t&x = \\dfrac{-3+\\sqrt{1\\,153}}{13}<br>\n\t\t\t&x = \\dfrac{-3-\\sqrt{1\\,153}}{13}.}\n\t\t\\end{eqnarray*}\n\t\tHình phẳng được giới hạn bởi hai parabol trên đoạn $[-4; 4]$ có diện tích là\n\t\t\\begin{align*}\n\t\t\tS &= \\displaystyle\\int\\limits_{-4}^{4} \\left|\\dfrac{1}{2}x^2-\\bigg(\\dfrac{11}{48}x^2-\\dfrac{1}{8}x+\\dfrac{11}{6}\\bigg)\\right| \\mathrm{d}x<br>\n\t\t\t&= \\displaystyle\\int\\limits_{-4}^{4} \\left|\\dfrac{13}{48}x^2+\\dfrac{1}{8}x-\\dfrac{11}{6}\\right| \\mathrm{d}x<br>\n\t\t\t&= \\displaystyle\\int\\limits_{-4}^{x_1} \\big|h(x)\\big| \\mathrm{\\,d}x+\\displaystyle\\int\\limits_{x_1}^{x_2} \\big|h(x)\\big| \\mathrm{\\,d}x+\\displaystyle\\int\\limits_{x_2}^{4} \\big|h(x)\\big| \\mathrm{\\,d}x<br>\n\t\t\t&= \\displaystyle\\int\\limits_{-4}^{x_1} h(x) \\mathrm{\\,d}x+\\displaystyle\\int\\limits_{x_1}^{x_2} \\big(-h(x)\\big) \\mathrm{\\,d}x+\\displaystyle\\int\\limits_{x_2}^{4} h(x) \\mathrm{\\,d}x\\text{,}\n\t\t\\end{align*}\n\t\ttrong đó $x_1=\\dfrac{-3-\\sqrt{1\\,153}}{13}$, $x_2=\\dfrac{-3+\\sqrt{1\\,153}}{13}$ và $h(x) = \\dfrac{13}{48}x^2+\\dfrac{1}{8}x-\\dfrac{11}{6}$.<br>\n\t\tTa có $h(x) =\\dfrac{13}{48}x^2+\\dfrac{1}{8}x-\\dfrac{11}{6}$ có một nguyên hàm là $F(x) = \\dfrac{13}{144}x^3+\\dfrac{1}{16}x^2-\\dfrac{11}{6}x$.<br>\n\t\tKhi đó\n\t\t\\[S = \\big(F(x_1)-F(-4)\\big)-\\big(F(x_2)-F(x_1)\\big)+\\big(F(4)-F(x_2)\\big)\\approx9{,}7554.\n\t\t\\]\n\t\tLàm tròn đến hàng phần trăm, ta được kết quả là $9{,}76$\\,cm$^2$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth,x=0.7cm, y=0.7cm]\n    \n\t\t\t\\def\\mydomain{-4:4}\n\t\t\t\\draw[step=1,dashed,gray!60] (-4,0) grid (4,8);\n\t\t\t\\draw (-4,0) rectangle (4,8);\n\t\t\t\\fill[pattern=north east lines] plot[domain=\\mydomain](\\x,{(11/48)*(\\x)^2-(1/8)*\\x+11/6})--plot[domain=4:-4](\\x,{0.5*(\\x)^2})--cycle;\n\t\t\t\\draw plot[domain=\\mydomain] (\\x,{(11/48)*(\\x)^2-(1/8)*\\x+11/6}) plot[domain=\\mydomain] (\\x,{0.5*(\\x)^2});\n\t\t\t\\fill (-4,8) circle (1pt) (4,8) circle (1pt) (0,0) circle (1pt) (-4,6) circle (1pt) (-2,3) circle (1pt) (4,5) circle (1pt) ;\n\t\t\t\\draw[dashed] (-4,3)-|(-2,0);\n    \\node at (0,0){\\href{3D36QL}{\\tiny \\phantom{3D36QL}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth,x=0.7cm, y=0.7cm]\n    \n\t\t\t\\def\\mydomain{-4:4}\n\t\t\t\\draw[step=1,dashed,gray!60] (-4,0) grid (4,8);\n\t\t\t\\draw (-4,0) rectangle (4,8);\n\t\t\t\\fill[pattern=north east lines] plot[domain=\\mydomain](\\x,{(11/48)*(\\x)^2-(1/8)*\\x+11/6})--plot[domain=4:-4](\\x,{0.5*(\\x)^2})--cycle;\n\t\t\t\\draw plot[domain=\\mydomain] (\\x,{(11/48)*(\\x)^2-(1/8)*\\x+11/6}) plot[domain=\\mydomain] (\\x,{0.5*(\\x)^2});\n\t\t\t\\fill (-4,8) circle (1pt) (4,8) circle (1pt) (0,0) circle (1pt) (-4,6) circle (1pt) (-2,3) circle (1pt) (4,5) circle (1pt) ;\n\t\t\t\\draw[dashed] (-4,3)-|(-2,0);\n    \\node at (0,0){\\href{3D36QL}{\\tiny \\phantom{3D36QL}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/q22.png"
+    }
+  ],
+  "errors": []
+}
