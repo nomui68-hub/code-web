@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách kết quả</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Danh sách kết quả</h1>
+      <p>Theo dõi học sinh đã nộp bài</p>
+    </div>
+  </header>
+  <main class="container wide">
+    <section class="card">
+      <div class="toolbar">
+        <button class="btn" id="reloadBtn">Tải lại</button>
+        <button class="btn" id="csvBtn">Tải CSV</button>
+        <button class="btn danger" id="clearBtn">Xóa kết quả cục bộ</button>
+        <a class="btn" href="index.html">Về trang chủ</a>
+      </div>
+      <p class="muted" id="sourceNote"></p>
+      <div class="table-wrap">
+        <table class="result-table" id="resultTable">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã HS</th>
+              <th>Họ tên</th>
+              <th>Lớp</th>
+              <th>Mã đề</th>
+              <th>Điểm</th>
+              <th>Đúng</th>
+              <th>Thời gian nộp</th>
+              <th>Chi tiết</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/results.js"></script>
+</body>
+</html>

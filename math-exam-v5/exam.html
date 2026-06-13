@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Làm bài thi</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="exam-topbar">
+    <div>
+      <strong>Thầy Đoàn Văn Mùi</strong>
+      <span id="studentBox"></span>
+    </div>
+    <div id="timer" class="timer">90:00</div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 id="examTitle">Đề thi trực tuyến</h1>
+      <p class="muted">Chọn đáp án, đánh dấu đúng/sai hoặc nhập trả lời ngắn. Hết giờ hệ thống tự nộp bài.</p>
+      <div class="toolbar">
+        <button id="shuffleBtn" class="btn">Trộn câu hỏi</button>
+        <button id="submitBtn" class="btn primary">Nộp bài</button>
+      </div>
+    </section>
+
+    <section id="questions"></section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/exam.js"></script>
+</body>
+</html>

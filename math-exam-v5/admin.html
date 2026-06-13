@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý đề thi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Quản lý đề thi</h1>
+      <p class="muted">Bản V1 dùng <code>parser_v2.py</code> để chuyển file LaTeX thành <code>data/questions.json</code>. Trang này dùng để xem nhanh dữ liệu JSON đã tạo.</p>
+      <div class="toolbar">
+        <button id="loadJsonBtn" class="btn primary">Đọc questions.json</button>
+        <a href="index.html" class="btn">Trang chủ</a>
+      </div>
+      <div id="adminSummary"></div>
+      <pre id="jsonPreview" class="prebox"></pre>
+    </section>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>
