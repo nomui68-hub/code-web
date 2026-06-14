@@ -239,9 +239,10 @@ async function submitExam(){
     submitTime: new Date().toISOString(),
     scoringRule: 'TN: 0.25/câu; ĐS: 1 ý=0.10, 2 ý=0.25, 3 ý=0.50, 4 ý=1.00; TLN: 0.50/câu'
   };
-  localStorage.setItem('lastResult', JSON.stringify(payload));
   saveResultLocal(payload);
-  await saveResultOnline(payload);
+  const onlineStatus = await saveResultOnline(payload);
+  payload.onlineStatus = onlineStatus;
+  localStorage.setItem('lastResult', JSON.stringify(payload));
   window.location.href = 'result.html';
 }
 

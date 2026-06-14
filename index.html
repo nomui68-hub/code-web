@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hệ thống thi Toán</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thầy Đoàn Văn Mùi - Thi trực tuyến</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="hero"><h1>THẦY ĐOÀN VĂN MÙI</h1><p>Hệ thống thi trực tuyến môn Toán</p></header>
-<main class="container">
-  <section class="card">
-    <h2>Đăng nhập làm bài</h2>
-    <p class="muted">Học sinh nhập thông tin, chọn đề rồi bắt đầu làm bài.</p>
-    <form id="loginForm">
-      <label>Mã học sinh</label>
-      <input id="studentId" required placeholder="Ví dụ: 1205">
-      <label>Họ và tên</label>
-      <input id="studentName" required placeholder="Ví dụ: Nguyễn Văn An">
-      <label>Lớp</label>
-      <input id="className" required placeholder="Ví dụ: 12A3">
-      <label>Chọn đề thi</label>
-      <select id="examSelect" class="input-select"></select>
-      <input id="examId" type="hidden" value="DE_MAU">
-      <button type="submit">Bắt đầu làm bài</button>
-    </form>
-    <p id="examLoadStatus" class="muted"></p>
-  </section>
-  <section class="card grid2">
-    <a class="biglink" href="exam.html">Vào phòng thi</a>
-    <a class="biglink" href="results.html">Danh sách kết quả</a>
-  </section>
-</main>
-<script src="js/login.js"></script>
+  <header class="site-header">
+    <div>
+      <h1>Thầy Đoàn Văn Mùi</h1>
+      <p>Hệ thống thi trực tuyến môn Toán</p>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <section class="card">
+      <h2>Đăng nhập làm bài</h2>
+      <p class="muted">Học sinh nhập thông tin để bắt đầu. Dữ liệu sẽ được lưu để thầy xem lại.</p>
+      <form id="loginForm" class="form">
+        <label for="studentId">Mã học sinh</label>
+        <input id="studentId" name="studentId" type="text" placeholder="Ví dụ: 1205" required />
+
+        <label for="studentName">Họ và tên</label>
+        <input id="studentName" name="studentName" type="text" placeholder="Ví dụ: Nguyễn Văn An" />
+
+        <label for="className">Lớp</label>
+        <input id="className" name="className" type="text" placeholder="Ví dụ: 12A3" required />
+
+        <label for="examId">Mã đề</label>
+        <input id="examId" name="examId" type="text" value="DE_MAU" />
+
+        <button type="submit" class="btn primary">Bắt đầu làm bài</button>
+      </form>
+    </section>
+
+    <section class="card grid2">
+      <a class="link-card" href="exam.html">Vào phòng thi</a>
+      <a class="link-card" href="results.html">Dashboard kết quả</a>
+      <a class="link-card" href="admin.html">Trang quản lý đề</a>
+    </section>
+  </main>
+
+  <script src="js/login.js"></script>
 </body>
 </html>

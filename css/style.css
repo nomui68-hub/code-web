@@ -39,3 +39,7 @@ button.secondary{background:#fff;color:var(--danger);border-color:#f3b7b7;width:
 .biglink{display:block;padding:18px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--primary);font-weight:700;background:#f8fbff;text-align:center}.biglink.small{padding:10px 12px}
 .question-image{max-width:100%;height:auto;display:block;margin:12px auto}
 .results-table{width:100%;border-collapse:collapse;font-size:14px}.results-table th,.results-table td{border:1px solid #dbe6f7;padding:8px}.results-table th{background:#eff6ff;text-align:left}
+
+/* V7 dashboard */
+.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.filters label{font-weight:700}.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.stat{background:#f8fbff;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}.stat b{display:block;font-size:28px;color:var(--primary)}.stat span{color:var(--muted)}.detail-list{font-size:13px;max-height:240px;overflow:auto}.result-table details summary{cursor:pointer;color:var(--primary);font-weight:700}
+@media(max-width:800px){.filters,.stat-grid{grid-template-columns:1fr}.result-table{font-size:12px}}

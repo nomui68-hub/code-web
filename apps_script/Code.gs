@@ -1,70 +1,29 @@
-function setupSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  let sheet = ss.getSheetByName('KETQUA');
-  if (!sheet) sheet = ss.insertSheet('KETQUA');
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow([
-      'Mã HS', 'Họ tên', 'Lớp', 'Mã đề', 'Điểm', 'Điểm TN', 'Điểm ĐS', 'Điểm TLN',
-      'Số câu đúng hoàn toàn', 'Tổng số câu', 'Điểm tối đa', 'Quy tắc điểm',
-      'Bài làm JSON', 'Chi tiết JSON', 'Thời gian bắt đầu', 'Thời gian nộp'
-    ]);
-  }
-  return sheet;
-}
 
-function doPost(e) {
-  const sheet = setupSheet_();
-  const data = JSON.parse(e.postData.contents);
-  const ps = data.partScores || {};
-  sheet.appendRow([
-    data.studentId || '',
-    data.studentName || '',
-    data.className || '',
-    data.examId || '',
-    data.score || 0,
-    ps.choice || 0,
-    ps.truefalse || 0,
-    ps.short || 0,
-    data.correct || 0,
-    data.total || 0,
-    data.maxScore || 10,
-    data.scoringRule || '',
-    JSON.stringify(data.answers || {}),
-    JSON.stringify(data.detail || []),
-    data.startTime || '',
-    data.submitTime || new Date().toISOString()
-  ]);
-  return ContentService
-    .createTextOutput(JSON.stringify({ success: true }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
-
-function doGet(e) {
-  const action = e && e.parameter && e.parameter.action;
-  if (action !== 'list') {
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: true, message: 'Online exam API is running.' }))
-      .setMimeType(ContentService.MimeType.JSON);
+function setupSheet_(){
+  const ss=SpreadsheetApp.getActiveSpreadsheet();
+  let sh=ss.getSheetByName('KETQUA');
+  if(!sh) sh=ss.insertSheet('KETQUA');
+  if(sh.getLastRow()===0){
+    sh.appendRow(['Mã HS','Họ tên','Lớp','Mã đề','Tên đề','Điểm','Điểm tối đa','Điểm TN','Điểm ĐS','Điểm TLN','Đúng hoàn toàn','Tổng câu','Quy tắc điểm','Bài làm JSON','Chi tiết JSON','Thời gian bắt đầu','Thời gian nộp','UserAgent']);
   }
-  const sheet = setupSheet_();
-  const values = sheet.getDataRange().getValues();
-  const rows = values.slice(1).map(r => ({
-    studentId: r[0],
-    studentName: r[1],
-    className: r[2],
-    examId: r[3],
-    score: r[4],
-    partScores: { choice: r[5], truefalse: r[6], short: r[7] },
-    correct: r[8],
-    total: r[9],
-    maxScore: r[10],
-    scoringRule: r[11],
-    answers: r[12],
-    detail: r[13],
-    startTime: r[14],
-    submitTime: r[15]
+  return sh;
+}
+function json_(obj){return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);}
+function doPost(e){
+  const sh=setupSheet_();
+  const data=JSON.parse(e.postData.contents||'{}');
+  const ps=data.partScores||{};
+  sh.appendRow([data.studentId||'',data.studentName||'',data.className||'',data.examId||'',data.examTitle||'',data.score||0,data.maxScore||10,ps.choice||0,ps.truefalse||0,ps.short||0,data.correct||0,data.total||0,data.scoringRule||'',JSON.stringify(data.answers||{}),JSON.stringify(data.detail||[]),data.startTime||'',data.submitTime||new Date().toISOString(),data.userAgent||'']);
+  return json_({success:true,message:'Đã lưu Google Sheets'});
+}
+function doGet(e){
+  const action=(e&&e.parameter&&e.parameter.action)||'ping';
+  if(action==='ping') return json_({success:true,message:'API đang hoạt động'});
+  if(action!=='list') return json_({success:false,message:'Action không hợp lệ'});
+  const sh=setupSheet_();
+  const values=sh.getDataRange().getValues();
+  const rows=values.slice(1).map(r=>({
+    studentId:r[0],studentName:r[1],className:r[2],examId:r[3],examTitle:r[4],score:r[5],maxScore:r[6],partScores:{choice:r[7],truefalse:r[8],short:r[9]},correct:r[10],total:r[11],scoringRule:r[12],answers:r[13],detail:r[14],startTime:r[15],submitTime:r[16]
   }));
-  return ContentService
-    .createTextOutput(JSON.stringify({ success: true, results: rows }))
-    .setMimeType(ContentService.MimeType.JSON);
+  return json_({success:true,results:rows});
 }

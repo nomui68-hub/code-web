@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danh sách kết quả</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="hero"><h1>DANH SÁCH KẾT QUẢ</h1><p>Thầy Đoàn Văn Mùi</p></header>
-<main class="container wide">
-  <section class="card">
-    <div class="toolbar">
-      <select id="examFilter" class="input-select"><option value="">Tất cả đề</option></select>
-      <input id="classFilter" placeholder="Lọc theo lớp">
-      <button id="exportBtn">Xuất CSV</button>
-      <button id="clearBtn" class="secondary">Xóa dữ liệu cục bộ</button>
-      <a class="biglink small" href="index.html">Về trang chủ</a>
-    </div>
-    <p id="summary" class="muted"></p>
-    <div class="table-wrap">
-      <table class="results-table">
-        <thead><tr><th>STT</th><th>Mã HS</th><th>Họ tên</th><th>Lớp</th><th>Đề</th><th>Điểm</th><th>TN</th><th>Đ/S</th><th>TLN</th><th>Đúng</th><th>Thời gian</th></tr></thead>
-        <tbody id="resultsBody"></tbody>
-      </table>
-    </div>
-  </section>
-</main>
-<script src="js/results.js"></script>
+  <header class="site-header"><div><h1>Danh sách kết quả</h1><p>Theo dõi học sinh đã nộp bài</p></div></header>
+  <main class="container wide">
+    <section class="card">
+      <div class="toolbar">
+        <button class="btn" id="reloadBtn">Tải lại</button>
+        <button class="btn" id="csvBtn">Tải CSV</button>
+        <button class="btn" id="onlineBtn">Lấy từ Google Sheets</button>
+        <button class="btn danger" id="clearBtn">Xóa kết quả cục bộ</button>
+        <a class="btn" href="index.html">Về trang chủ</a>
+      </div>
+      <p class="muted" id="sourceNote"></p>
+      <div class="filters">
+        <label>Đề thi<select id="examFilter"><option value="">Tất cả đề</option></select></label>
+        <label>Lớp<input id="classFilter" placeholder="Ví dụ: 12A3"></label>
+        <label>Tìm học sinh<input id="studentFilter" placeholder="Mã hoặc họ tên"></label>
+      </div>
+    </section>
+    <section class="card stat-grid" id="statsBox"></section>
+    <section class="card">
+      <h2>Bảng điểm</h2>
+      <div class="table-wrap"><table class="result-table" id="resultTable"><thead><tr>
+        <th>STT</th><th>Mã HS</th><th>Họ tên</th><th>Lớp</th><th>Đề</th><th>Điểm</th><th>TN</th><th>ĐS</th><th>TLN</th><th>Đúng</th><th>Nộp lúc</th><th>Chi tiết</th>
+      </tr></thead><tbody></tbody></table></div>
+    </section>
+    <section class="card">
+      <h2>Thống kê theo câu</h2>
+      <p class="muted">Tính từ dữ liệu đang lọc. Với câu Đúng/Sai, cột đúng tính là đúng đủ 4 ý.</p>
+      <div class="table-wrap"><table class="result-table" id="questionTable"><thead><tr><th>Câu</th><th>Dạng</th><th>Số HS đúng đủ</th><th>Tỉ lệ</th><th>Điểm TB</th></tr></thead><tbody></tbody></table></div>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/results.js"></script>
 </body>
 </html>
