@@ -4,7 +4,7 @@ const result = JSON.parse(localStorage.getItem('lastResult') || 'null');
 function fmt(n){const x=Number(n||0); return Number.isInteger(x)?String(x):x.toFixed(2).replace(/0+$/,'').replace(/\.$/,'');}
 function saveBadge(r){
   const st = r?.onlineStatus;
-  if(st?.success) return '<p class="ok"><strong>Đã lưu Google Sheets.</strong></p>';
+  if(st?.success) return '<p class="ok"><strong>Đã lưu Google Sheets.</strong> Thầy có thể xem trên trang Dashboard hoặc Google Sheet.</p>';
   if(st?.localOnly) return '<p class="muted"><strong>Đã lưu cục bộ.</strong> Chưa cấu hình Google Sheets.</p>';
   if(st?.error) return `<p class="bad"><strong>Chưa lưu online:</strong> ${st.error}</p>`;
   return '<p class="muted">Kết quả đã lưu trên trình duyệt này.</p>';

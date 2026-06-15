@@ -3,22 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quản lý đề thi</title>
+  <title>Quản lý hệ thống thi</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main class="container">
+  <header class="site-header"><div><h1>Trang quản lý</h1><p>Cấu hình đề thi và Google Sheets</p></div></header>
+  <main class="container wide">
     <section class="card">
-      <h1>Quản lý đề thi</h1>
-      <p class="muted">Bản V1 dùng <code>parser_v2.py</code> để chuyển file LaTeX thành <code>data/questions.json</code>. Trang này dùng để xem nhanh dữ liệu JSON đã tạo.</p>
+      <h2>1. Kiểm tra danh sách đề</h2>
+      <p class="muted">Trang này đọc các đề đã sinh trong thư mục <code>exams/</code>.</p>
       <div class="toolbar">
-        <button id="loadJsonBtn" class="btn primary">Đọc questions.json</button>
+        <button id="loadJsonBtn" class="btn primary">Đọc danh sách đề</button>
         <a href="index.html" class="btn">Trang chủ</a>
+        <a href="results.html" class="btn">Dashboard kết quả</a>
       </div>
       <div id="adminSummary"></div>
       <pre id="jsonPreview" class="prebox"></pre>
     </section>
+
+    <section class="card">
+      <h2>2. Kết nối Google Sheets</h2>
+      <p class="muted">Dán Web App URL của Apps Script vào đây để thử trên trình duyệt này. Muốn học sinh nộp bài lưu online trên mọi máy, thầy cần dán URL đó vào file <code>js/config.js</code> rồi upload lại GitHub.</p>
+      <label>Web App URL</label>
+      <input id="apiUrlInput" placeholder="https://script.google.com/macros/s/....../exec" />
+      <div class="toolbar">
+        <button id="saveApiBtn" class="btn primary">Lưu URL trên máy này</button>
+        <button id="testApiBtn" class="btn">Kiểm tra kết nối</button>
+        <button id="clearApiBtn" class="btn danger">Xóa URL thử</button>
+      </div>
+      <div id="apiStatus" class="muted"></div>
+    </section>
+
+    <section class="card">
+      <h2>3. Code Apps Script</h2>
+      <p class="muted">File cần dán vào Google Apps Script nằm trong <code>apps_script/Code.gs</code>. Code này tạo sheet <code>KETQUA</code> và lưu toàn bộ bài làm học sinh.</p>
+      <details><summary>Xem nhanh các cột sẽ lưu</summary>
+        <pre class="prebox">Thời gian | Mã HS | Họ tên | Lớp | Mã đề | Tên đề | Điểm | Điểm TN | Điểm ĐS | Điểm TLN | Đúng/Tổng | Bài làm JSON | Chi tiết JSON</pre>
+      </details>
+    </section>
   </main>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>
