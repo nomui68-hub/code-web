@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.getElementById('loginForm').addEventListener('submit', function(e){
     e.preventDefault();
+
+    localStorage.clear();
+
     const select = document.getElementById('examSelect');
     localStorage.setItem('studentId', document.getElementById('studentId').value.trim());
     localStorage.setItem('studentName', document.getElementById('studentName').value.trim());
@@ -35,5 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || select.value || 'DE_MAU');
     localStorage.setItem('startTime', new Date().toISOString());
     window.location.href = 'exam.html';
-  });
 });
