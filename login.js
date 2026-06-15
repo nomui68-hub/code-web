@@ -28,10 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loginForm').addEventListener('submit', function(e){
     e.preventDefault();
 
-    localStorage.removeItem('examResult');
-    localStorage.removeItem('lastResult');
-    localStorage.removeItem('answers');
-    localStorage.removeItem('currentResult');
+    localStorage.clear();
 
     const select = document.getElementById('examSelect');
     localStorage.setItem('studentId', document.getElementById('studentId').value.trim());
