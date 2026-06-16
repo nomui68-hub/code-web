@@ -9,7 +9,7 @@ def safe_id(s):
     s=re.sub(r'[^A-Z0-9_-]+','_',s)
     return s or 'DE_MOI'
 
-def build(tex_file, exam_id, title):
+def build(tex_file, exam_id, title, settings=None):
     root=Path(__file__).resolve().parents[1]
     tex_file=Path(tex_file)
     if not tex_file.is_absolute(): tex_file=root/tex_file
@@ -19,6 +19,8 @@ def build(tex_file, exam_id, title):
     exam_dir.mkdir(parents=True,exist_ok=True); img_dir.mkdir(parents=True,exist_ok=True)
     data=parser_v4.parse(parser_v4.read_text(tex_file), exam_id)
     data['title']=title or exam_id
+    if settings:
+        data['settings'] = settings
     for q in data.get('questions',[]):
         if q.get('image'):
             q['image']=f'images/{exam_id}/q{q["id"]}.png'
@@ -34,7 +36,9 @@ def build(tex_file, exam_id, title):
     else:
         index={'defaultExamId':exam_id,'exams':[]}
     exams=[e for e in index.get('exams',[]) if e.get('id')!=exam_id]
-    exams.append({'id':exam_id,'title':title or exam_id,'file':f'exams/{exam_id}/questions.json','active':True})
+    item={'id':exam_id,'title':title or exam_id,'file':f'exams/{exam_id}/questions.json','active':True}
+    if settings: item['settings']=settings
+    exams.append(item)
     index['exams']=exams
     if not index.get('defaultExamId'): index['defaultExamId']=exam_id
     index_path.write_text(json.dumps(index,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -48,6 +52,11 @@ def main():
     if len(sys.argv)<3:
         print('Cach chay: python parser\\build_one.py tex\\DE01.tex DE01 "De kiem tra 01"')
         return
-    tex=sys.argv[1]; exam_id=sys.argv[2]; title=sys.argv[3] if len(sys.argv)>3 else exam_id
-    build(tex,exam_id,title)
+    tex=sys.argv[1]; exam_id=sys.argv[2]; title=sys.argv[3] if len(sys.argv)>3 and not sys.argv[3].startswith('--') else exam_id
+    settings=None
+    if '--config' in sys.argv:
+        import json
+        cfg=sys.argv[sys.argv.index('--config')+1]
+        settings=json.loads(Path(cfg).read_text(encoding='utf-8'))
+    build(tex,exam_id,title,settings)
 if __name__=='__main__': main()

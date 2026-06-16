@@ -1,3 +1,24 @@
+
+
+# V9.1-Python313
+
+Bản này sửa lỗi `ModuleNotFoundError: No module named cgi` khi chạy bằng Python 3.13.
+
+Cách chạy công cụ giáo viên:
+
+```cmd
+cd D:\A-tao-web\math-exam-v9.1-python313
+python teacher_manager.py
+```
+
+Sau đó mở:
+
+```text
+http://localhost:8123
+```
+
+Nếu dùng file `chay_quan_ly_de.bat` thì chỉ cần nhấp đúp file đó.
+
 # Math Exam V8 - Lưu kết quả online Google Sheets
 
 ## 1. Chạy thử trên máy
