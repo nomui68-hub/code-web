@@ -123,3 +123,30 @@ Nếu một hình quá nặng vẫn không hiện, mở file `.tex` và:
 - giảm `oreach \i in {1,...,500}` xuống khoảng `80` hoặc `100`.
 
 V10 đã tự xử lý một phần, nhưng hình quá phức tạp vẫn nên tối ưu lại.
+
+
+# V11 - Ghi chú nâng cấp
+
+V11 sửa các điểm sau:
+
+- Parser LaTeX nhận tốt hơn các lệnh chữ: `\textbf{...}`, `\textit{...}`, `\emph{...}`, `{\it{...}}`, `{\it ...}`.
+- Sửa lỗi mất dấu ngoặc hoặc dính chữ khi dùng `{\it{(đơn vị trên trục tính bằng mét)}}`.
+- Hỗ trợ render thêm môi trường `array` ngoài `tabular`, `tikzpicture`.
+- Dashboard kết quả có 3 lựa chọn xóa: xóa dòng đã chọn, xóa theo bộ lọc, hoặc xóa toàn bộ cục bộ.
+- Công cụ giáo viên có nút quét toàn bộ file `.tex` trong thư mục `tex/` để tạo nhiều đề cùng lúc.
+- Render TikZ tự bỏ các mã `\href{...}{...}` và giảm vòng lặp ngẫu nhiên quá nặng để hạn chế lỗi hình.
+
+## Chạy V11
+
+```cmd
+cd D:\A-tao-web\math-exam-v11
+python teacher_manager.py
+```
+
+Trang học sinh:
+
+```cmd
+python -m http.server 8000
+```
+
+Mở `http://localhost:8000`.

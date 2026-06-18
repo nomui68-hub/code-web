@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header"><div><h1>Danh sách kết quả V10</h1><p>Chỉ dành cho giáo viên</p></div></header>
+  <header class="site-header"><div><h1>Danh sách kết quả V11</h1><p>Chỉ dành cho giáo viên</p></div></header>
   <main class="container wide">
     <section class="card" id="loginBox">
       <h2>Đăng nhập giáo viên</h2>
@@ -21,7 +21,9 @@
         <button class="btn" id="reloadBtn">Tải lại</button>
         <button class="btn" id="csvBtn">Tải CSV</button>
         <button class="btn" id="onlineBtn">Lấy từ Google Sheets</button>
-        <button class="btn danger" id="clearBtn">Xóa kết quả cục bộ</button>
+        <button class="btn danger" id="deleteSelectedBtn">Xóa dòng đã chọn</button>
+        <button class="btn danger" id="deleteFilteredBtn">Xóa theo bộ lọc</button>
+        <button class="btn danger" id="clearBtn">Xóa toàn bộ</button>
         <a class="btn" href="teacher.html">Trang giáo viên</a>
       </div>
       <p class="muted" id="sourceNote"></p>
@@ -35,7 +37,7 @@
     <section class="card">
       <h2>Bảng điểm</h2>
       <div class="table-wrap"><table class="result-table" id="resultTable"><thead><tr>
-        <th>STT</th><th>Mã HS</th><th>Họ tên</th><th>Lớp</th><th>Đề</th><th>Điểm</th><th>TN</th><th>ĐS</th><th>TLN</th><th>Đúng</th><th>Nộp lúc</th><th>Chi tiết</th>
+        <th><input type="checkbox" id="checkAllRows" title="Chọn tất cả"></th><th>STT</th><th>Mã HS</th><th>Họ tên</th><th>Lớp</th><th>Đề</th><th>Điểm</th><th>TN</th><th>ĐS</th><th>TLN</th><th>Đúng</th><th>Nộp lúc</th><th>Chi tiết</th>
       </tr></thead><tbody></tbody></table></div>
     </section>
     <section class="card">

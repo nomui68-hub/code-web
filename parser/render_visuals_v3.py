@@ -6,14 +6,14 @@ from pathlib import Path
 def sanitize(s):
     s = s or ''
     # Bỏ mã rác do một số nguồn đề chèn \href{...}{\tiny\phantom{...}} làm lỗi render.
-    s=re.sub(r'\\href\{[^{}]*\}\{\\tiny\s*\\phantom\{[^{}]*\}\}','',s)
+    s=re.sub(r'\\href\{[^{}]*\}\{\s*\\tiny\s*\\phantom\{[^{}]*\}\s*\}','',s)
     s=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',s)
-    s=re.sub(r'\\phantom\{[A-Za-z0-9]+\}','',s)
+    s=re.sub(r'\\phantom\{[^{}]*\}','',s)
     s=re.sub(r'\\node\s+at\s*\([^;]*?\)\s*\{\s*\}\s*;','',s)
     # Giảm các vòng lặp quá nặng, ví dụ \foreach \i in {1,...,500} gây chậm hoặc lỗi render.
     def _cap_loop(m):
         var=m.group(1); n=int(m.group(2));
-        return f'\\foreach {var} in {{1,...,{min(n,120)}}}'
+        return f'\\foreach {var} in {{1,...,{min(n,80)}}}'
     s=re.sub(r'\\foreach\s+(\\\w+)\s+in\s*\{1,\.\.\.,(\d+)\}', _cap_loop, s)
     return s
 

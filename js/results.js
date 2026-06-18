@@ -1,6 +1,7 @@
 
 let allRows = [];
-function getLocalRows(){try{return JSON.parse(localStorage.getItem('examResults')||'[]')}catch(e){return []}}
+function getLocalRows(){try{return JSON.parse(localStorage.getItem('examResults')||'[]').map((r,i)=>({...r,_localIndex:i,_source:'local'}))}catch(e){return []}}
+function setLocalRows(rows){localStorage.setItem('examResults', JSON.stringify(rows.map(({_localIndex,_source,...r})=>r)));}
 function fmtTime(s){ if(!s) return ''; try{return new Date(s).toLocaleString('vi-VN')}catch(e){return s} }
 function fmt(n){ const x=Number(n||0); return Number.isInteger(x)?String(x):x.toFixed(2).replace(/0+$/,'').replace(/\.$/,''); }
 function parseMaybeJson(x){ if(Array.isArray(x) || typeof x==='object') return x; try{return JSON.parse(x||'[]')}catch(e){return []} }
@@ -45,7 +46,7 @@ function detailHtml(r){
 }
 function renderTable(rows){
   document.querySelector('#resultTable tbody').innerHTML=rows.map((r,i)=>`<tr>
-    <td>${i+1}</td><td>${r.studentId||''}</td><td>${r.studentName||''}</td><td>${r.className||''}</td><td>${r.examTitle||r.examId||''}</td>
+    <td><input type="checkbox" class="rowCheck" value="${r._localIndex ?? ''}" ${r._source==='local'?'':'disabled title="Chỉ xóa được dữ liệu cục bộ"'}></td><td>${i+1}</td><td>${r.studentId||''}</td><td>${r.studentName||''}</td><td>${r.className||''}</td><td>${r.examTitle||r.examId||''}</td>
     <td><b>${fmt(r.score)}</b></td><td>${fmt(r.partScores?.choice)}</td><td>${fmt(r.partScores?.truefalse)}</td><td>${fmt(r.partScores?.short)}</td>
     <td>${r.correct??''}/${r.total??''}</td><td>${fmtTime(r.submitTime)}</td><td>${detailHtml(r)}</td></tr>`).join('');
 }
@@ -60,7 +61,7 @@ function renderQuestionStats(rows){
   const arr=[...map.values()].sort((a,b)=>Number(a.id)-Number(b.id));
   document.querySelector('#questionTable tbody').innerHTML=arr.map(x=>`<tr><td>${x.id}</td><td>${x.type}</td><td>${x.correct}/${x.n}</td><td>${x.n?Math.round(x.correct*100/x.n):0}%</td><td>${fmt(x.n?x.totalPoint/x.n:0)}</td></tr>`).join('');
 }
-function render(){ const rows=filteredRows(); document.getElementById('sourceNote').textContent=`Đang hiển thị ${rows.length}/${allRows.length} lượt nộp.`; renderStats(rows); renderTable(rows); renderQuestionStats(rows); }
+function render(){ const rows=filteredRows(); document.getElementById('sourceNote').textContent=`Đang hiển thị ${rows.length}/${allRows.length} lượt nộp.`; renderStats(rows); renderTable(rows); renderQuestionStats(rows); const ca=document.getElementById('checkAllRows'); if(ca) ca.checked=false; }
 async function fillExamFilter(){
   const sel=document.getElementById('examFilter');
   try{ const res=await fetch('exams/index.json?_='+Date.now()); const idx=await res.json(); sel.innerHTML='<option value="">Tất cả đề</option>'+(idx.exams||[]).map(e=>`<option value="${e.id}">${e.title||e.id}</option>`).join(''); }catch(e){}
@@ -71,11 +72,37 @@ async function loadOnline(){
   if(rows.length){ allRows=rows; document.getElementById('sourceNote').textContent='Dữ liệu lấy từ Google Sheets.'; render(); }
   else { alert('Chưa lấy được dữ liệu Google Sheets. Kiểm tra js/config.js đã dán Web App URL chưa.'); }
 }
+
+function deleteLocalByIndices(indices){
+  const raw=JSON.parse(localStorage.getItem('examResults')||'[]');
+  const set=new Set(indices.map(Number));
+  const kept=raw.filter((_,i)=>!set.has(i));
+  localStorage.setItem('examResults', JSON.stringify(kept));
+  loadLocal();
+}
+function selectedLocalIndices(){
+  return [...document.querySelectorAll('.rowCheck:checked')].map(x=>Number(x.value)).filter(x=>Number.isInteger(x));
+}
+function deleteSelectedRows(){
+  const ids=selectedLocalIndices();
+  if(!ids.length){alert('Chưa chọn dòng nào để xóa.'); return;}
+  if(confirm(`Xóa ${ids.length} dòng kết quả đã chọn trên trình duyệt này?`)) deleteLocalByIndices(ids);
+}
+function deleteFilteredRows(){
+  const ids=filteredRows().map(r=>r._localIndex).filter(x=>Number.isInteger(x));
+  if(!ids.length){alert('Không có dòng cục bộ nào trong bộ lọc hiện tại.'); return;}
+  const label=[document.getElementById('examFilter').value, document.getElementById('classFilter').value, document.getElementById('studentFilter').value].filter(Boolean).join(' / ') || 'bộ lọc hiện tại';
+  if(confirm(`Xóa ${ids.length} dòng kết quả theo ${label}?`)) deleteLocalByIndices(ids);
+}
+
 document.addEventListener('DOMContentLoaded', async()=>{
   await fillExamFilter(); await loadLocal();
   ['examFilter','classFilter','studentFilter'].forEach(id=>document.getElementById(id).addEventListener('input', render));
   document.getElementById('reloadBtn').onclick=loadLocal;
   document.getElementById('onlineBtn').onclick=loadOnline;
   document.getElementById('csvBtn').onclick=()=>csv(filteredRows());
-  document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa kết quả cục bộ trên trình duyệt này?')){localStorage.removeItem('examResults'); loadLocal();}};
+  document.getElementById('deleteSelectedBtn').onclick=deleteSelectedRows;
+  document.getElementById('deleteFilteredBtn').onclick=deleteFilteredRows;
+  document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa TOÀN BỘ kết quả cục bộ trên trình duyệt này? Thao tác này không xóa Google Sheets.')){localStorage.removeItem('examResults'); loadLocal();}};
+  document.getElementById('checkAllRows')?.addEventListener('change',e=>document.querySelectorAll('.rowCheck:not(:disabled)').forEach(x=>x.checked=e.target.checked));
 });

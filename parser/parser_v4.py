@@ -66,30 +66,78 @@ def envs(text,env): return re.findall(r'\\begin\{'+re.escape(env)+r'\}[\s\S]*?\\
 
 def visual(block):
     parts=[]
-    for e in ('tikzpicture','tabular','tikzcd'): parts += envs(block,e)
+    for e in ('tikzpicture','tabular','tikzcd','array'):
+        for part in envs(block,e):
+            if e=='array':
+                # Array thường nằm trong toán, khi render riêng cần bọc lại bằng \[...\]
+                part='\\[\n'+part+'\n\\]'
+            parts.append(part)
     uniq=[]
     for p in parts:
         if p not in uniq: uniq.append(p)
     return '\n\n'.join(uniq).strip()
 
 def remove_visual(text):
-    text=re.sub(r'\\begin\{center\}([\s\S]*?(tikzpicture|tabular|tkzTab)[\s\S]*?)\\end\{center\}','\n',text)
-    for e in ('tikzpicture','tabular','tikzcd'):
+    # Bỏ nguyên khối hình/bảng khỏi phần chữ câu hỏi, tránh sót \centerline{} rỗng.
+    text=re.sub(r'\\begin\{center\}([\s\S]*?(tikzpicture|tabular|array|tkzTab)[\s\S]*?)\\end\{center\}','\n',text)
+    text=re.sub(r'\\centerline\s*\{\s*(\\begin\{(?:tikzpicture|tabular|array)\}[\s\S]*?\\end\{(?:tikzpicture|tabular|array)\})\s*\}','\n',text)
+    for e in ('tikzpicture','tabular','tikzcd','array'):
         text=re.sub(r'\\begin\{'+e+r'\}[\s\S]*?\\end\{'+e+r'\}','\n',text)
+    text=re.sub(r'\\centerline\s*\{\s*\}','\n',text)
     return text
+
+def split_math_segments(text):
+    # Tách phần toán để không phá cú pháp MathJax khi xử lý lệnh định dạng chữ.
+    pattern=r'(\$\$[\s\S]*?\$\$|\$[^$]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))'
+    return re.split(pattern, text)
+
+def unwrap_text_commands_plain(t):
+    # Các lệnh định dạng chữ ngoài môi trường toán.
+    # Sửa lỗi hiện nguyên \textbf{...}, \textit{...}, {\it{...}} và lỗi dính chữ.
+    for _ in range(12):
+        old=t
+        t=re.sub(r'\{\s*\\it\s*\{([^{}]*)\}\s*\}', r'<em>\1</em>', t)
+        t=re.sub(r'\\textbf\s*\{([^{}]*)\}', r'<strong>\1</strong>', t)
+        t=re.sub(r'\\(?:textit|emph)\s*\{([^{}]*)\}', r'<em>\1</em>', t)
+        t=re.sub(r'\\(?:it|itshape)\s*\{([^{}]*)\}', r'<em>\1</em>', t)
+        t=re.sub(r'\{\s*\\(?:it|itshape)\s+([^{}]+?)\s*\}', r'<em>\1</em>', t)
+        t=re.sub(r'\\underline\s*\{([^{}]*)\}', r'<u>\1</u>', t)
+        t=re.sub(r'\\text\s*\{([^{}]*)\}', r'\1', t)
+        if t==old: break
+    # Xóa ngoặc nhóm LaTeX chỉ dùng để định dạng chữ, không xóa ngoặc trong math vì math đã được tách.
+    t=re.sub(r'\{\s*([^{}\\]*?)\s*\}', r'\1', t)
+    return t
+
+def clean_text_commands(text):
+    parts=split_math_segments(text)
+    out=[]
+    for i,part in enumerate(parts):
+        if i%2==1:
+            out.append(part)
+        else:
+            out.append(unwrap_text_commands_plain(part))
+    return ''.join(out)
 
 def clean(text):
     text=remove_visual(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
     text=re.sub(r'\\phantom\{[^{}]*\}','',text)
+    text=clean_text_commands(text)
     repl={r'\begin{itemize}':'<br>',r'\end{itemize}':'<br>',r'\begin{enumerate}':'<br>',r'\end{enumerate}':'<br>',r'\begin{center}':'<div class="centered">',r'\end{center}':'</div>',r'\par':'<br>'}
     for a,b in repl.items(): text=text.replace(a,b)
     text=re.sub(r'\\item\s*','<br>• ',text)
     text=text.replace('\\\\','<br>')
     text=text.replace(r'\lq\lq','“').replace(r'\rq\rq','”').replace(r'\lq','‘').replace(r'\rq','’')
+    text=text.replace('~',' ')
+    text=re.sub(r'\\[,;:! ]',' ',text)
+    text=re.sub(r'\\(quad|qquad)\b',' ',text)
+    text=re.sub(r'\\(noindent|smallskip|medskip|bigskip)\b',' ',text)
+    # Bảo toàn khoảng trắng quanh tag HTML để tránh dính chữ.
+    text=re.sub(r'(?<=>)(?=\S)', ' ', text)
+    text=re.sub(r'(?<=\S)(?=<)', ' ', text)
+    text=re.sub(r'[ \t]+',' ',text)
     text=re.sub(r'\n\s*\n\s*\n+','\n\n',text)
     return text.strip()
-
 def qtype(block):
     if '\\choiceTF' in block: return 'truefalse'
     if '\\choice' in block: return 'choice'
