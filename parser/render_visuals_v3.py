@@ -4,12 +4,17 @@ import json,re,shutil,subprocess,sys,tempfile
 from pathlib import Path
 
 def sanitize(s):
-    s=re.sub(r'\\href\{[^{}]*\}\{\\tiny\s*\\phantom\{[^{}]*\}\}','',s or '')
+    s = s or ''
+    # Bỏ mã rác do một số nguồn đề chèn \href{...}{\tiny\phantom{...}} làm lỗi render.
+    s=re.sub(r'\\href\{[^{}]*\}\{\\tiny\s*\\phantom\{[^{}]*\}\}','',s)
     s=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',s)
     s=re.sub(r'\\phantom\{[A-Za-z0-9]+\}','',s)
     s=re.sub(r'\\node\s+at\s*\([^;]*?\)\s*\{\s*\}\s*;','',s)
-    # bỏ một số mã rác do đề có \href{ABC}{\tiny\phantom{ABC}}
-    s=re.sub(r'\b[A-Z0-9]{5,8}\b','',s)
+    # Giảm các vòng lặp quá nặng, ví dụ \foreach \i in {1,...,500} gây chậm hoặc lỗi render.
+    def _cap_loop(m):
+        var=m.group(1); n=int(m.group(2));
+        return f'\\foreach {var} in {{1,...,{min(n,120)}}}'
+    s=re.sub(r'\\foreach\s+(\\\w+)\s+in\s*\{1,\.\.\.,(\d+)\}', _cap_loop, s)
     return s
 
 def doc(body):

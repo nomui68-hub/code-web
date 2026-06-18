@@ -6,7 +6,7 @@
   <title>Làm bài thi</title>
   <link rel="stylesheet" href="css/style.css" />
   <script>
-    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] } };
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\(', '\)']], displayMath: [['$$','$$'], ['\[','\]']] } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -22,9 +22,10 @@
   <main class="container">
     <section class="card">
       <h1 id="examTitle">Đề thi trực tuyến</h1>
-      <p class="muted">Chọn đáp án, đánh dấu đúng/sai hoặc nhập trả lời ngắn. Hết giờ hệ thống tự nộp bài.</p>
+      <p id="examInfo" class="muted">Đang tải cấu hình đề...</p>
+      <p class="muted">Hết giờ hệ thống tự nộp bài. Học sinh chỉ xem tổng điểm sau khi nộp.</p>
       <div class="toolbar">
-        <button id="shuffleBtn" class="btn">Trộn câu hỏi</button>
+        <button id="shuffleBtn" class="btn" style="display:none">Trộn câu hỏi</button>
         <button id="submitBtn" class="btn primary">Nộp bài</button>
       </div>
     </section>

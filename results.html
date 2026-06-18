@@ -7,15 +7,22 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header"><div><h1>Danh sách kết quả</h1><p>Theo dõi học sinh đã nộp bài</p></div></header>
+  <header class="site-header"><div><h1>Danh sách kết quả V10</h1><p>Chỉ dành cho giáo viên</p></div></header>
   <main class="container wide">
+    <section class="card" id="loginBox">
+      <h2>Đăng nhập giáo viên</h2>
+      <input id="teacherPass" type="password" placeholder="Nhập mật khẩu giáo viên">
+      <button class="btn primary" id="teacherLoginBtn">Vào xem kết quả</button>
+      <p class="bad" id="teacherMsg"></p>
+    </section>
+    <div id="teacherPanel" style="display:none">
     <section class="card">
       <div class="toolbar">
         <button class="btn" id="reloadBtn">Tải lại</button>
         <button class="btn" id="csvBtn">Tải CSV</button>
         <button class="btn" id="onlineBtn">Lấy từ Google Sheets</button>
         <button class="btn danger" id="clearBtn">Xóa kết quả cục bộ</button>
-        <a class="btn" href="index.html">Về trang chủ</a>
+        <a class="btn" href="teacher.html">Trang giáo viên</a>
       </div>
       <p class="muted" id="sourceNote"></p>
       <div class="filters">
@@ -36,9 +43,11 @@
       <p class="muted">Tính từ dữ liệu đang lọc. Với câu Đúng/Sai, cột đúng tính là đúng đủ 4 ý.</p>
       <div class="table-wrap"><table class="result-table" id="questionTable"><thead><tr><th>Câu</th><th>Dạng</th><th>Số HS đúng đủ</th><th>Tỉ lệ</th><th>Điểm TB</th></tr></thead><tbody></tbody></table></div>
     </section>
+    </div>
   </main>
   <script src="js/config.js"></script>
   <script src="js/api.js"></script>
+  <script src="js/teacher.js"></script>
   <script src="js/results.js"></script>
 </body>
 </html>

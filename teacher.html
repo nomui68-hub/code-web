@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Giáo viên quản lý</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="site-header"><div><h1>Trang giáo viên V10</h1><p>Quản lý đề thi, cấu hình hệ thống và xem kết quả</p></div></header>
+<main class="container wide">
+  <section class="card" id="loginBox">
+    <h2>Đăng nhập giáo viên</h2>
+    <p class="muted">Mật khẩu mặc định: <b>123456</b>. Có thể đổi trong file <code>js/teacher.js</code>.</p>
+    <input id="teacherPass" type="password" placeholder="Nhập mật khẩu giáo viên">
+    <button class="btn primary" id="teacherLoginBtn">Vào quản lý</button>
+    <p class="bad" id="teacherMsg"></p>
+  </section>
+  <section class="card" id="teacherPanel" style="display:none">
+    <h2>Bảng điều khiển giáo viên</h2>
+    <div class="grid2">
+      <a class="link-card" href="admin.html">Cấu hình đề và Google Sheets</a>
+      <a class="link-card" href="results.html">Danh sách lớp và kết quả</a>
+      <a class="link-card" href="index.html">Trang học sinh</a>
+      <a class="link-card" href="exams/index.json">Xem danh sách đề JSON</a>
+    </div>
+    <hr>
+    <h3>Tạo và giao đề mới trên máy giáo viên</h3>
+    <p class="muted">GitHub Pages là web tĩnh nên phần đọc file TEX, render TikZ/tabular/array chạy bằng công cụ giáo viên trên máy thầy.</p>
+    <pre class="prebox">cd D:\A-tao-web\math-exam-v10
+python teacher_manager.py</pre>
+    <p>Sau đó mở <b>http://localhost:8123</b>, chọn file TEX hoặc dán code LaTeX, cấu hình điểm và bấm <b>Lưu bài và giao bài</b>.</p>
+  </section>
+</main>
+<script src="js/teacher.js"></script>
+</body></html>

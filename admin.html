@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header"><div><h1>Trang quản lý</h1><p>Cấu hình đề thi và Google Sheets</p></div></header>
+  <header class="site-header"><div><h1>Trang quản lý V10</h1><p>Cấu hình đề thi và Google Sheets</p></div></header>
   <main class="container wide">
+    <section class="card" id="loginBox">
+      <h2>Đăng nhập giáo viên</h2>
+      <input id="teacherPass" type="password" placeholder="Nhập mật khẩu giáo viên">
+      <button class="btn primary" id="teacherLoginBtn">Vào quản lý</button>
+      <p class="bad" id="teacherMsg"></p>
+    </section>
+    <div id="teacherPanel" style="display:none">
     <section class="card">
       <h2>1. Kiểm tra danh sách đề</h2>
       <p class="muted">Trang này đọc các đề đã sinh trong thư mục <code>exams/</code>.</p>
       <div class="toolbar">
         <button id="loadJsonBtn" class="btn primary">Đọc danh sách đề</button>
-        <a href="index.html" class="btn">Trang chủ</a>
+        <a href="teacher.html" class="btn">Trang giáo viên</a>
         <a href="results.html" class="btn">Dashboard kết quả</a>
       </div>
       <div id="adminSummary"></div>
@@ -41,9 +48,11 @@
         <pre class="prebox">Thời gian | Mã HS | Họ tên | Lớp | Mã đề | Tên đề | Điểm | Điểm TN | Điểm ĐS | Điểm TLN | Đúng/Tổng | Bài làm JSON | Chi tiết JSON</pre>
       </details>
     </section>
+    </div>
   </main>
   <script src="js/config.js"></script>
   <script src="js/api.js"></script>
+  <script src="js/teacher.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>

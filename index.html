@@ -17,28 +17,31 @@
   <main class="container narrow">
     <section class="card">
       <h2>Đăng nhập làm bài</h2>
-      <p class="muted">Học sinh nhập thông tin để bắt đầu. Dữ liệu sẽ được lưu để thầy xem lại.</p>
+      <p class="muted">Học sinh nhập thông tin và chọn đề được giao để bắt đầu.</p>
       <form id="loginForm" class="form">
         <label for="studentId">Mã học sinh</label>
         <input id="studentId" name="studentId" type="text" placeholder="Ví dụ: 1205" required />
 
         <label for="studentName">Họ và tên</label>
-        <input id="studentName" name="studentName" type="text" placeholder="Ví dụ: Nguyễn Văn An" />
+        <input id="studentName" name="studentName" type="text" placeholder="Ví dụ: Nguyễn Văn An" required />
 
         <label for="className">Lớp</label>
         <input id="className" name="className" type="text" placeholder="Ví dụ: 12A3" required />
 
-        <label for="examId">Mã đề</label>
-        <input id="examId" name="examId" type="text" value="DE_MAU" />
+        <label for="examSelect">Chọn đề thi</label>
+        <select id="examSelect" name="examSelect" required>
+          <option value="DE_MAU">Đang tải danh sách đề...</option>
+        </select>
+        <input id="examId" name="examId" type="hidden" value="DE_MAU" />
+        <p id="examLoadStatus" class="muted">Đang tải danh sách đề...</p>
 
         <button type="submit" class="btn primary">Bắt đầu làm bài</button>
       </form>
     </section>
 
-    <section class="card grid2">
-      <a class="link-card" href="exam.html">Vào phòng thi</a>
-      <a class="link-card" href="results.html">Dashboard kết quả</a>
-      <a class="link-card" href="admin.html">Trang quản lý đề</a>
+    <section class="card">
+      <p class="muted">Sau khi nộp bài, học sinh chỉ xem tổng điểm. Bảng điểm và chi tiết bài làm chỉ dành cho giáo viên.</p>
+      <a class="btn" href="teacher.html">Trang giáo viên</a>
     </section>
   </main>
 
