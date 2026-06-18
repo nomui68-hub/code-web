@@ -1,0 +1,527 @@
+{
+  "examId": "1202",
+  "title": "2-KS-15-SoHue-L1",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y = f(x)$ có bảng biến thiên như hình sau:\n\n\tHàm số đồng biến trên khoảng nào trong các khoảng dưới đây?",
+      "options": [
+        "$(-1;2)$",
+        "$(3;4)$",
+        "$(0;3)$",
+        "$(2;3)$"
+      ],
+      "answer": 3,
+      "id": 1,
+      "solution": "Dựa vào bảng biến thiên, ta thấy $y'>0$ trên các khoảng $(-\\infty;1)$ và $(1;3)$.<br>\n\t\tSuy ra hàm số đồng biến trên các khoảng $(-\\infty;1)$ và $(1;3)$.<br>\n\t\tVì $(2;3)\\subset (1;3)$ nên hàm số cũng đồng biến trên khoảng $(2;3)$.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true,lgt=1,espcl=3,deltacl=0.5]\n\t\t\t{$x$ / 0.7, $y'$ / 0.7, $y$ / 2}\n\t\t\t{$-\\infty$, $1$, $3$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , +, d, +, 0, -, }\n\t\t\t\\tkzTabVar{-/ $-1$ , +D-/ $+\\infty$ / $-\\infty$ , +/ $2$ , -/ $-\\infty$}\n    \\node at (T11){\\href{2J60HW}{\\tiny \\phantom{2J60HW}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true,lgt=1,espcl=3,deltacl=0.5]\n\t\t\t{$x$ / 0.7, $y'$ / 0.7, $y$ / 2}\n\t\t\t{$-\\infty$, $1$, $3$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , +, d, +, 0, -, }\n\t\t\t\\tkzTabVar{-/ $-1$ , +D-/ $+\\infty$ / $-\\infty$ , +/ $2$ , -/ $-\\infty$}\n    \\node at (T11){\\href{2J60HW}{\\tiny \\phantom{2J60HW}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/1202/q1.png"
+    },
+    {
+      "type": "choice",
+      "question": "Tập nghiệm của bất phương trình $\\log_2(x-2)>2$ là",
+      "options": [
+        "$(4;+\\infty)$",
+        "$(6;+\\infty)$",
+        "$(2;4)$",
+        "$(2;+\\infty)$"
+      ],
+      "answer": 1,
+      "id": 2,
+      "solution": "Điều kiện xác định: $x-2>0\\Leftrightarrow x>2$.<br>\n\t\tTa có\n\t\t\\allowdisplaybreaks\n\t\t\\begin{eqnarray*}\n\t\t\t\\log_2(x-2)>2 &\\Leftrightarrow& x-2>2^2<br>\n\t\t\t&\\Leftrightarrow& x-2>4<br>\n\t\t\t&\\Leftrightarrow& x>6.\n\t\t\\end{eqnarray*}\n\t\tKết hợp điều kiện, ta được tập nghiệm của bất phương trình là $S=(6;+\\infty)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Mỗi ngày bác Bình đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: km) của bác Bình trong $20$ ngày được thống kê ở bảng sau:\n\n\tKhoảng biến thiên của mẫu số liệu ghép nhóm trên bằng",
+      "options": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$1$"
+      ],
+      "answer": 0,
+      "id": 3,
+      "solution": "Khoảng biến thiên của mẫu số liệu ghép nhóm trên là $R=7-2=5$.",
+      "visualLatex": "\\begin{tabular}{|l|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tQuãng đường & $[2;3)$ & $[3;4)$ & $[4;5)$ & $[5;6)$ & $[6;7)$ \\\\\n\t\t\t\\hline\n\t\t\tSố ngày & $3$ & $6$ & $5$ & $4$ & $2$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|l|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tQuãng đường & $[2;3)$ & $[3;4)$ & $[4;5)$ & $[5;6)$ & $[6;7)$ \\\\\n\t\t\t\\hline\n\t\t\tSố ngày & $3$ & $6$ & $5$ & $4$ & $2$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/1202/q3.png"
+    },
+    {
+      "type": "choice",
+      "question": "Xác định tập nghiệm của phương trình $\\cos x=1$.",
+      "options": [
+        "$S=\\{\\pi+k2\\pi\\mid k\\in\\mathbb{Z}\\}$",
+        "$S=\\{\\pi+k\\pi\\mid k\\in\\mathbb{Z}\\}$",
+        "$S=\\{k2\\pi\\mid k\\in\\mathbb{Z}\\}$",
+        "$S=\\{k\\pi\\mid k\\in\\mathbb{Z}\\}$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "Ta có $\\cos x=1\\Leftrightarrow x=k2\\pi$ ($k\\in \\mathbb{Z}$).<br>\n\t\tVậy tập nghiệm của phương trình là $S=\\{k2\\pi\\mid k\\in\\mathbb{Z}\\}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho mặt phẳng $(P)$ có phương trình $x-3y+5=0$. Xác định một vectơ pháp tuyến của mặt phẳng $(P)$.",
+      "options": [
+        "$\\overrightarrow{n}=(1;0;5)$",
+        "$\\overrightarrow{n}=(1;0;-3)$",
+        "$\\overrightarrow{n}=(1;-3;0)$",
+        "$\\overrightarrow{n}=(1;-3;5)$"
+      ],
+      "answer": 2,
+      "id": 5,
+      "solution": "Mặt phẳng $(P)\\colon x-3y+5=0$ có một vectơ pháp tuyến là $\\overrightarrow{n}=(1;-3;0)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho cấp số nhân $\\left(u_n\\right)$ có $u_3=4$ và $u_4=2$. Tìm công bội $q$ của cấp số nhân đó.",
+      "options": [
+        "$q=\\dfrac{1}{2}$",
+        "$q=2$",
+        "$q=\\sqrt{2}$",
+        "$q=4$"
+      ],
+      "answer": 0,
+      "id": 6,
+      "solution": "Vì $\\left(u_n\\right)$ là một cấp số nhân có công bội $q$ nên ta có $u_{4}=u_{3}\\cdot q$.<br> \t\t\t\n\t\tSuy ra $q=\\dfrac{u_4}{u_3}=\\dfrac{2}{4}=\\dfrac{1}{2}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ liên tục trên $\\mathbb{R}$ và có đồ thị là đường cong như hình vẽ bên. Xác định giá trị nhỏ nhất trên đoạn $[-1;1]$ của hàm số $y=f(x)$.",
+      "options": [
+        "$-2$",
+        "$-1$",
+        "$-4$",
+        "$0$"
+      ],
+      "answer": 2,
+      "id": 7,
+      "solution": "Dựa vào đồ thị hàm số, ta thấy giá trị nhỏ nhất của hàm số trên đoạn $[-1;1]$ bằng $-4$ và đạt được khi $x=-1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def \\xmin{-3.5}\\def \\xmax{3}\\def \\ymin{-5}\\def \\ymax{1.2} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{4Z41NS}{\\tiny \\phantom{4Z41NS}}} circle(1pt) node[shift=(-135:0.25)]{$O$};\n\t\t\t\\fill (-2,0) circle(1pt) node[shift=(-150:0.35)]{$-2$};\n\t\t\t\\fill (-1,0) circle(1pt) node[shift=(90:0.2)]{$-1$};\n\t\t\t\\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$};\n\t\t\t\\fill (0,-4) circle(1pt) node[shift=(0:0.25)]{$-4$};\n\t\t\t\\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$};\n\t\t\t\\fill (-1,-4) circle (1pt) (0,-4) circle (1pt) (-1,0) circle (1pt);\n\t\t\t\\draw[dashed] (-1,0)-- (-1,-4) -- (0,-4);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot({\\x}, {-\\x*\\x*\\x + 3*\\x - 2});\n    \\node at (0,0){\\href{4Z41NS}{\\tiny \\phantom{4Z41NS}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def \\xmin{-3.5}\\def \\xmax{3}\\def \\ymin{-5}\\def \\ymax{1.2} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{4Z41NS}{\\tiny \\phantom{4Z41NS}}} circle(1pt) node[shift=(-135:0.25)]{$O$};\n\t\t\t\\fill (-2,0) circle(1pt) node[shift=(-150:0.35)]{$-2$};\n\t\t\t\\fill (-1,0) circle(1pt) node[shift=(90:0.2)]{$-1$};\n\t\t\t\\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$};\n\t\t\t\\fill (0,-4) circle(1pt) node[shift=(0:0.25)]{$-4$};\n\t\t\t\\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$};\n\t\t\t\\fill (-1,-4) circle (1pt) (0,-4) circle (1pt) (-1,0) circle (1pt);\n\t\t\t\\draw[dashed] (-1,0)-- (-1,-4) -- (0,-4);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot({\\x}, {-\\x*\\x*\\x + 3*\\x - 2});\n    \\node at (0,0){\\href{4Z41NS}{\\tiny \\phantom{4Z41NS}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/1202/q7.png"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho điểm $A(2;1;-2)$ và điểm $B(-4;3;4)$. Tọa độ trung điểm $M$ của đoạn $AB$ là",
+      "options": [
+        "$(3;2;3)$",
+        "$(-2;2;2)$",
+        "$(-2;-2;2)$",
+        "$(-1;2;1)$"
+      ],
+      "answer": 3,
+      "id": 8,
+      "solution": "Vì $M$ là trung điểm của đoạn thẳng $AB$ nên tọa độ của điểm $M$ là $\\left(\\dfrac{2+(-4)}{2}; \\dfrac{1+3}{2};\\dfrac{-2+4}{2}\\right)$, suy ra $M(-1;2;1)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Tính xác suất để xúc xắc xuất hiện mặt có số chấm là một số chia hết cho $3$.",
+      "options": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{6}$"
+      ],
+      "answer": 2,
+      "id": 9,
+      "solution": "Không gian mẫu của phép thử gieo xúc xắc một lần là $\\Omega=\\{1;2;3;4;5;6\\}$.<br>\n\t\tSuy ra $n(\\Omega)=6$.<br>\n\t\tGọi $A$ là biến cố: “ Xúc xắc xuất hiện mặt có số chấm chia hết cho $3$”.<br>\n\t\tCác kết quả thuận lợi cho $A$ là $A=\\{3;6\\}$.<br>\n\t\tSuy ra $n(A)=2$.<br>\n\t\tVậy xác suất của biến cố $A$ là $\\mathrm{P}(A)=\\dfrac{n(A)}{n(\\Omega)}=\\dfrac{2}{6}=\\dfrac{1}{3}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Xác định họ các nguyên hàm của hàm số $f(x)=2x^2$.",
+      "options": [
+        "$6x^3+C$",
+        "$\\dfrac{x^3}{3}+C$",
+        "$x^3+C$",
+        "$\\dfrac{2x^3}{3}+C$"
+      ],
+      "answer": 3,
+      "id": 10,
+      "solution": "Họ các nguyên hàm của hàm số $f(x)=2x^2$ là\n\t\t\\[\\displaystyle\\int f(x) \\mathrm{\\,d}x=\\displaystyle\\int 2x^2\\mathrm{\\,d}x=2\\cdot \\dfrac{x^3}{3}+C=\\dfrac{2x^3}{3}+C.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật và $SA \\perp (ABCD)$. Đường thẳng $SA$ \\textbf{không} vuông góc với đường thẳng nào trong các đường thẳng dưới đây?",
+      "options": [
+        "$AC$",
+        "$AB$",
+        "$BD$",
+        "$SC$"
+      ],
+      "answer": 3,
+      "id": 11,
+      "solution": "Vì $SA\\perp (ABCD)$ và $AC$, $AB$, $BD$ đều nằm trong $(ABCD)$ nên $SA \\perp AC$, $SA\\perp AB$, $SA \\perp BD$.<br>\n\t\tVì $\\triangle SAC$ vuông tại $A$ nên $\\widehat{ASC}$ là góc nhọn.<br>\n\t\tSuy ra $SA$ không vuông góc với $SC$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={a=3; b=1.8; h=3;}}\n\t\t\t\\path (0,0) coordinate (A)\n\t\t\t\t(a,0) coordinate (D)\n\t\t\t\t(-150:b) coordinate (B)\n\t\t\t\t($(B)+(D)$) coordinate (C)\n\t\t\t\t(0,h) coordinate (S);\n\t\t\t\\path pic[draw,angle radius=5pt]{right angle=B--A--S};\n\t\t\t\\path pic[draw,angle radius=5pt]{right angle=D--A--S};\n\t\t\t\\draw[dashed] (B)--(A)--(D)\n\t\t\t\t(A)--(C)\n\t\t\t\t(A)--(S);\n\t\t\t\\draw (S)--(B)--(C)--(D)--cycle (S)--(C);\n\t\t\t\\foreach \\t/\\g in {A/145,B/-90,C/-90,D/90,S/90}{\n\t\t\t\\fill (\\t) circle (1pt) node[shift={(\\g:9pt)},font=\\scriptsize]{$\\t$};\n\t\t\t}\n    \\node at (0,0){\\href{37M4HT}{\\tiny \\phantom{37M4HT}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={a=3; b=1.8; h=3;}}\n\t\t\t\\path (0,0) coordinate (A)\n\t\t\t\t(a,0) coordinate (D)\n\t\t\t\t(-150:b) coordinate (B)\n\t\t\t\t($(B)+(D)$) coordinate (C)\n\t\t\t\t(0,h) coordinate (S);\n\t\t\t\\path pic[draw,angle radius=5pt]{right angle=B--A--S};\n\t\t\t\\path pic[draw,angle radius=5pt]{right angle=D--A--S};\n\t\t\t\\draw[dashed] (B)--(A)--(D)\n\t\t\t\t(A)--(C)\n\t\t\t\t(A)--(S);\n\t\t\t\\draw (S)--(B)--(C)--(D)--cycle (S)--(C);\n\t\t\t\\foreach \\t/\\g in {A/145,B/-90,C/-90,D/90,S/90}{\n\t\t\t\\fill (\\t) circle (1pt) node[shift={(\\g:9pt)},font=\\scriptsize]{$\\t$};\n\t\t\t}\n    \\node at (0,0){\\href{37M4HT}{\\tiny \\phantom{37M4HT}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/1202/q11.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=\\dfrac{ax+b}{cx+d}$ có đồ thị như hình vẽ bên. Xác định tiệm cận đứng của đồ thị hàm số hàm số đã cho.",
+      "options": [
+        "$x = 1$",
+        "$y = -1$",
+        "$x = -1$",
+        "$y = 1$"
+      ],
+      "answer": 2,
+      "id": 12,
+      "solution": "Dựa vào đồ thị hàm số, ta có $\\lim\\limits_{x\\to-1^+}y=+\\infty$ và $\\lim\\limits_{x\\to-1^-}y=-\\infty$.<br>\n\t\tDo đó, đồ thị hàm số có tiệm cận đứng là đường thẳng $x=-1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def \\xmin{-5.5}\\def \\xmax{3.5}\\def \\ymin{-5}\\def \\ymax{3} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-30:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{1LTN51}{\\tiny \\phantom{1LTN51}}} circle(1pt) node[shift=(-45:0.25)]{$O$}; \n\t\t\t\\fill (-3,0) circle(1pt) node[shift=(90:0.2)]{$-3$}; \n\t\t\t\\fill (-1,0) circle(1pt) node[shift=(150:0.35)]{$-1$}; \n\t\t\t\\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$}; \n\t\t\t\\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$}; \n\t\t\t\\fill (0,-1) circle(1pt) node[shift=(-30:0.35)]{$-1$}; \n\t\t\t\\fill (0,1) circle(1pt) node[shift=(0:0.2)]{$1$}; \n\t\t\t\\fill (-3,-2) circle (1pt);\n\t\t\t\\draw[dashed] (-3,0) -- (-3,-2) -- (0,-2);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax);\n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:-1.1] plot (\\x, {(-\\x+1)/(\\x+1)});\n\t\t\t\\draw[smooth,samples=100,domain=-0.9:\\xmax] plot(\\x, {(-\\x+1)/(\\x+1)});\n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot(\\x,{-1}); \n\t\t\t\\draw[smooth,samples=100,domain=\\ymin:\\ymax] plot({-1},\\x);  \n    \\node at (0,0){\\href{1LTN51}{\\tiny \\phantom{1LTN51}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def \\xmin{-5.5}\\def \\xmax{3.5}\\def \\ymin{-5}\\def \\ymax{3} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-30:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{1LTN51}{\\tiny \\phantom{1LTN51}}} circle(1pt) node[shift=(-45:0.25)]{$O$}; \n\t\t\t\\fill (-3,0) circle(1pt) node[shift=(90:0.2)]{$-3$}; \n\t\t\t\\fill (-1,0) circle(1pt) node[shift=(150:0.35)]{$-1$}; \n\t\t\t\\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$}; \n\t\t\t\\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$}; \n\t\t\t\\fill (0,-1) circle(1pt) node[shift=(-30:0.35)]{$-1$}; \n\t\t\t\\fill (0,1) circle(1pt) node[shift=(0:0.2)]{$1$}; \n\t\t\t\\fill (-3,-2) circle (1pt);\n\t\t\t\\draw[dashed] (-3,0) -- (-3,-2) -- (0,-2);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax);\n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:-1.1] plot (\\x, {(-\\x+1)/(\\x+1)});\n\t\t\t\\draw[smooth,samples=100,domain=-0.9:\\xmax] plot(\\x, {(-\\x+1)/(\\x+1)});\n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot(\\x,{-1}); \n\t\t\t\\draw[smooth,samples=100,domain=\\ymin:\\ymax] plot({-1},\\x);  \n    \\node at (0,0){\\href{1LTN51}{\\tiny \\phantom{1LTN51}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/1202/q12.png"
+    },
+    {
+      "type": "truefalse",
+      "question": "Người ta muốn tạo một giá đỡ bằng sắt bên cạnh một bức tường có hình dạng là đoạn cong $BDN$ như hình vẽ bên, giá đỡ được gắn với tường bằng ba thanh sắt $AB$, $CD$, $MN$ cùng vuông góc với tường ($A$, $C$, $M$ thẳng hàng). Giá đỡ được xem như một phần của đồ thị hàm số $y=\\log x$ trong mặt phẳng tọa độ $(Oxy)$ với trục tung trùng với hình chiếu vuông góc của giá đỡ lên mặt tường (đơn vị trên trục tính bằng mét). Biết $AB=10$\\,cm, $AM=1{,}4$\\,m và độ dài phần đồ thị của hàm số $y=f(x)$ liên tục trên đoạn $[a; b]$ được tính theo công thức $L = \\displaystyle \\int\\limits_{a}^{b} \\sqrt{1 + [f'(x)]^2} \\mathrm{\\,d}x$.",
+      "statements": [
+        {
+          "text": "Đạo hàm của hàm số $y=\\log x$ là $y' = \\dfrac{1}{x \\ln 10}$",
+          "answer": true
+        },
+        {
+          "text": "Trong mặt phẳng tọa độ $(Oxy)$, điểm $B$ có hoành độ bằng $0{,}1$",
+          "answer": true
+        },
+        {
+          "text": "Trong mặt phẳng tọa độ $(Oxy)$, điểm $N$ có tung độ bằng $1{,}4$",
+          "answer": false
+        },
+        {
+          "text": "Độ dài giá đỡ bằng $2{,}97$ mét (kết quả được làm tròn đến hàng phần trăm)",
+          "answer": true
+        }
+      ],
+      "id": 13,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Ta có $y' = (\\log x)' = \\dfrac{1}{x \\ln 10}$. \n\t\t\t<br>• ch Do $AB=10$\\,cm $=0{,}1$\\,m nên hoành độ của điểm $B$ là $0{,}1$. \n\t\t\t<br>• ch Do $B$ thuộc đồ thị hàm số $y=\\log x$ nên ta có \n\t\t\t\\[\n\t\t\ty_B = \\log 0{,}1 \\Leftrightarrow y_B =-1. \n\t\t\t\\]\n\t\t\tSuy ra, điểm $A$ cách gốc tọa độ $O$ một khoảng bằng $1$\\,m. <br>\n\t\t\tDo $AM=1{,}4$\\,m nên tung độ của điểm $M$ bằng $0{,}4$. <br>\n\t\t\tSuy ra tung độ của điểm $N$ là $0{,}4$.  \n\t\t\t<br>• ch Do điểm $N$ thuộc đồ thị hàm số $y=\\log x$ và tung độ của $N$ bằng $0{,}4$ nên ta có \n\t\t\t\\[\n\t\t\t\\log x_N = 0{,}4 \\Leftrightarrow x_N = 10^{0{,}4}. \n\t\t\t\\]\n\t\t\tVậy độ dài $L$ của giá đỡ là \n\t\t\t\\[\n\t\t\tL = \\displaystyle \\int\\limits_{0{,}1}^{10^{0{,}4}} \\sqrt{1 + \\left(\\dfrac{1}{x \\ln 10}\\right)^2} \\mathrm{d}x \\approx 2{,}97 \\text{ (m)}. \n\t\t\t\\]\n\t\t\\end{itemchoice}",
+      "visualLatex": "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.65]\n    \n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\coordinate (A) at (0,0);\n\t\t\t\\coordinate (B) at (0.4,0);\n\t\t\t\\coordinate (C) at (0,3);\n\t\t\t\\coordinate (M) at (0,6);\n\t\t\t\\coordinate (D) at (1.6,3);\n\t\t\t\\coordinate (N) at (5,6);\n\t\t\t\n\t\t\t\\fill[pattern=north east lines,opacity=.5] (A)--(M)--($(M)-(1,0)$)--($(A)-(1,0)$)--cycle;\n\t\t\t\\draw (A)--(C) -- (M) (M) -- (N) (C) -- (D) (A) -- (B);\n\t\t\t\n\t\t\t\\foreach \\x/\\pos in {A/-90,M/90,C/45,B/0,D/0,N/0} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\n\t\t\t\n\t\t\t\\draw (B) .. controls (0.61,1.29) and (1.29,2.45) .. (D);\n\t\t\t\\draw (D) .. controls (2.61,4.31) and (3.77,5.49) .. (N);\n\t\t\t\n    \\node at (0,0){\\href{4RCOGW}{\\tiny \\phantom{4RCOGW}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.65]\n    \n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\coordinate (A) at (0,0);\n\t\t\t\\coordinate (B) at (0.4,0);\n\t\t\t\\coordinate (C) at (0,3);\n\t\t\t\\coordinate (M) at (0,6);\n\t\t\t\\coordinate (D) at (1.6,3);\n\t\t\t\\coordinate (N) at (5,6);\n\t\t\t\n\t\t\t\\fill[pattern=north east lines,opacity=.5] (A)--(M)--($(M)-(1,0)$)--($(A)-(1,0)$)--cycle;\n\t\t\t\\draw (A)--(C) -- (M) (M) -- (N) (C) -- (D) (A) -- (B);\n\t\t\t\n\t\t\t\\foreach \\x/\\pos in {A/-90,M/90,C/45,B/0,D/0,N/0} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\n\t\t\t\n\t\t\t\\draw (B) .. controls (0.61,1.29) and (1.29,2.45) .. (D);\n\t\t\t\\draw (D) .. controls (2.61,4.31) and (3.77,5.49) .. (N);\n\t\t\t\n    \\node at (0,0){\\href{4RCOGW}{\\tiny \\phantom{4RCOGW}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/1202/q13.png"
+    },
+    {
+      "type": "truefalse",
+      "question": "Một hộp có $12$ viên bi gồm $5$ bi xanh, $6$ bi đỏ và $1$ bi vàng. Hai bạn tên Xanh và Đỏ được trọng tài mời chơi trò chơi bốc bi ngẫu nhiên từ hộp (bi đã lấy ra không bỏ lại vào hộp). Đầu tiên trọng tài bốc một viên bi, nếu là bi xanh hoặc bi đỏ thì dừng bốc, nếu là bi vàng thì trọng tài bốc thêm một viên nữa rồi dừng bốc. Sau khi trọng tài dừng bốc, viên bi trọng tài bốc màu nào thì bạn có tên màu đó sẽ được bốc một viên và ngay sau đó trò chơi dừng lại. Người chơi bốc được viên bi có màu trùng với tên của mình sẽ là người thắng cuộc, còn nếu bốc được viên bi có màu khác với tên mình sẽ bị thua cuộc.",
+      "statements": [
+        {
+          "text": "Xác suất để trọng tài bốc được bi vàng trong lần bốc đầu tiên là $\\dfrac{1}{12}$",
+          "answer": true
+        },
+        {
+          "text": "Giả sử rằng ở lần bốc đầu tiên trọng tài bốc được bi xanh. Khi đó xác suất để bạn Xanh thắng là $\\dfrac{5}{11}$",
+          "answer": false
+        },
+        {
+          "text": "Giả sử rằng ở lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ. Khi đó xác suất để bạn Xanh thắng là $\\dfrac{1}{2}$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để bạn Đỏ thắng là $\\dfrac{6}{11}$",
+          "answer": false
+        }
+      ],
+      "id": 14,
+      "solution": "\\begin{itemchoice} \n\t\t\t<br>• ch Xác suất để trọng tài bốc được bi vàng trong lần đầu tiên là $\\dfrac{1}{12}$.\n\t\t\t<br>• ch Nếu lần bốc đầu tiên trọng tài bốc được bi xanh. Khi đó trong hộp còn $4$ bi xanh, $6$ bi đỏ và $1$ bi vàng xác suất để bạn Xanh thắng (bốc được bi xanh) là $\\dfrac{4}{11}$.\n\t\t\t<br>• ch Nếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ. Khi đó trong hộp còn $5$ bi xanh, $5$ bi đỏ xác suất để bạn Xanh thắng (bạn Đỏ bốc được bi xanh) là $\\dfrac{5}{10}=\\dfrac{1}{2}$.\n\t\t\t<br>• ch Theo luật chơi như trên, sẽ luôn có bạn thắng, bạn còn lại thua và không có kết quả cả hai cùng thua hoặc hòa.<br>\n\t\t\tĐể tính xác suất của Đỏ thắng, ta tính xác suất của Xanh thắng và xét các trường hợp sau:\n\t\t\t<br>[\\it TH 1:]\n\t\t\t\t<br>• Lần đầu tiên trọng tài bốc được bi xanh, xác suất là $\\dfrac{5}{12}$.<br>\n\t\t\t\tNếu lần bốc đầu tiên trọng tài bốc được bi xanh, xác suất để bạn Xanh thắng là $\\dfrac{4}{11}$.<br>\n\t\t\t\tSuy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi xanh và bạn Xanh thắng là $\\dfrac{5}{12}\\cdot\\dfrac{4}{11}=\\dfrac{5}{33}$.\n\t\t\t\t<br>• Lần đầu tiên trọng tài bốc được bi đỏ, xác suất là $\\dfrac{6}{12}=\\dfrac{1}{2}$.<br>\n\t\t\t\tNếu lần bốc đầu tiên trọng tài bốc được bi đỏ, xác suất để bạn Xanh thắng là $\\dfrac{6}{11}$.<br>\n\t\t\t\tSuy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi đỏ và bạn Xanh thắng là \\[\\dfrac{1}{2}\\cdot\\dfrac{6}{11}=\\dfrac{3}{11}.\\]\n\t\t\t\t<br>• Lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ, xác suất là \\[\\dfrac{1}{12}\\cdot\\dfrac{6}{11}=\\dfrac{1}{22}.\\]\n\t\t\t\tNếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ, xác suất để bạn Xanh thắng là $\\dfrac{5}{10}=\\dfrac{1}{2}$.<br>\n\t\t\t\tSuy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi vàng, bốc tiếp được bi đỏ và Xanh thắng là $\\dfrac{1}{22}\\cdot\\dfrac{1}{2}=\\dfrac{1}{44}$.\n\t\t\t\t<br>• Lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi xanh, xác suất là $\\dfrac{1}{12}\\cdot\\dfrac{5}{11}=\\dfrac{5}{132}$.<br>\n\t\t\t\tNếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi xanh, xác suất để bạn Xanh thắng là $\\dfrac{4}{10}=\\dfrac{2}{5}$.<br>\n\t\t\t\tSuy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi vàng, bốc tiếp được bi xanh và Xanh thắng là $\\dfrac{5}{132}\\cdot\\dfrac{2}{5}=\\dfrac{1}{66}$.\n\t\t\t<br>\n\t\t\tDo đó xác xuất để Xanh thắng là $\\dfrac{5}{33}+\\dfrac{3}{11}+\\dfrac{1}{44}+\\dfrac{1}{66}=\\dfrac{61}{132}$.<br>\n\t\t\tVậy xác suất để Đỏ thắng (Xanh thua) là $1-\\dfrac{61}{132}=\\dfrac{71}{132}$.\n\t\t\\end{itemchoice}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Cho hàm số $y=f(x)=\\dfrac{x^2-5x+4}{x-5}$ với $x\\neq 5$.",
+      "statements": [
+        {
+          "text": "$f'(x)=1-\\dfrac{4}{(x-5)^2}$ với mọi $x\\neq 5$",
+          "answer": true
+        },
+        {
+          "text": "Đồ thị hàm số cắt trục hoành tại hai điểm phân biệt",
+          "answer": true
+        },
+        {
+          "text": "Hàm số đạt cực đại tại $x=3$",
+          "answer": true
+        },
+        {
+          "text": "Giá trị cực tiểu bằng $3$",
+          "answer": false
+        }
+      ],
+      "id": 15,
+      "solution": "\\begin{itemchoice} \n\t\t\t<br>• ch Với $x\\neq 5$, ta có $y=f(x)=x+\\dfrac{4}{x-5}\\Rightarrow f'(x)=1-\\dfrac{4}{(x-5)^2}$.\n\t\t\t<br>• ch Với $x\\neq 5$, xét phương trình hoành độ giao điểm của đồ thị hàm số với trục hoành, ta được\n\t\t\t\\[\n\t\t\t\\dfrac{x^2-5x+4}{x-5}=0\\Leftrightarrow x^2-5x+4=0\\Leftrightarrow\\hoac{&x=1<br>&x=4.}\n\t\t\t\\]\n\t\t\tCả hai giá trị $x=1$; $x=4$ đều thỏa điều kiện.<br>\n\t\t\tVì phương trình có $2$ nghiệm phân biệt nên đồ thị hàm số cắt trục hoành tại hai điểm phân biệt.\n\t\t\t<br>• ch Ta có $y'=f'(x)=1-\\dfrac{4}{(x-5)^2}=\\dfrac{x^2-10x+21}{(x-5)^2}$.<br>\n\t\t\tXét $f'(x)=0\\Leftrightarrow \\dfrac{x^2-10x+21}{(x-5)^2}=0\\Leftrightarrow\\hoac{&x=7 <br>&x=3.}$<br>\n\t\t\tBảng biến thiên của hàm số $y=f(x)$ như sau:\n\n\t\t\tDựa vào bảng biến thiên, hàm số đạt cực đại tại $x=3$.\n\t\t\t<br>• ch Dựa vào bảng biến thiên, giá trị cực tiểu của hàm số là $9$.\n\t\t\\end{itemchoice}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Trong không gian $Oxyz$, cho điểm $A (1; 2; 3)$ và điểm $B (2; 3; 4)$. Gọi $M$ là giao điểm của đường thẳng đi qua hai điểm $A$, $B$ với mặt phẳng $(Oxy)$, $N$ thuộc trục $Oz$ sao cho $AN$ vuông góc với $AB$.",
+      "statements": [
+        {
+          "text": "$\\overrightarrow{AB} = (1; 1; 1)$",
+          "answer": true
+        },
+        {
+          "text": "Hoành độ của điểm $M$ bằng $-1$",
+          "answer": false
+        },
+        {
+          "text": "$MA = - 3 AB$",
+          "answer": false
+        },
+        {
+          "text": "$\\tan \\widehat{NMB} = \\dfrac{\\sqrt{42}}{9}$",
+          "answer": true
+        }
+      ],
+      "id": 16,
+      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Ta có $\\overrightarrow{AB} = (1; 1; 1)$. \n\t\t\t<br>• ch Đường thẳng $AB$ đi qua điểm $A (1; 2; 3)$, nhận $\\overrightarrow{AB}$ làm một vectơ chỉ phương có phương trình tham số là $\\heva{& x = 1 + t <br> & y = 2 + t <br> & z = 3 + t}$ với $t \\in \\mathbb{R}$. <br>\n\t\t\tPhương trình mặt phẳng $(Oxy)$ là $z=0$. <br> \n\t\t\tGọi $M$ là giao điểm của $AB$ và mặt phẳng $(Oxy)$. <br> \n\t\t\tDo $M \\in AB$ nên $M (1+t; 2+t; 3+t)$. <br> \n\t\t\tDo $M \\in (Oxy)$ nên $t+3=0 \\Leftrightarrow t=-3$. <br>\n\t\t\tSuy ra, $M (-2; -1; 0)$. <br>\n\t\t\tVậy hoành độ của điểm $M$ bằng $-2$. \n\t\t\t<br>• ch $\\overrightarrow{MA} = (3; 3; 3) \\Rightarrow MA = 3 \\sqrt{3}$. <br>\n\t\t\t$\\overrightarrow{AB} = (1; 1; 1) \\Rightarrow AB = \\sqrt{3}$. <br>\n\t\t\tVậy suy ra $MA = 3 AB$. \n\t\t\t<br>• ch Do $N \\in Oz \\Rightarrow N (0; 0; z)$. <br>\n\t\t\tTa có $\\overrightarrow{AN} = (-1; -2; z-3)$. <br>\n\t\t\tDo $AN \\perp AB \\Rightarrow \\overrightarrow{AN} \\cdot \\overrightarrow{AB} = 0 \\Leftrightarrow -1 -2 + (z-3) =0 \\Leftrightarrow z = 6$. <br>\n\t\t\tVậy $N (0; 0; 6)$. <br>\n\t\t\tTa có $\\overrightarrow{MN} = (2; 1; 6)$, $\\overrightarrow{MB} = (4; 4; 4)$. <br>\n\t\t\tSuy ra $\\cos \\widehat{NMB} = \\cos \\left(\\overrightarrow{MN}, \\overrightarrow{MB}\\right) = \\dfrac{2 \\cdot 4 + 1 \\cdot 4 + 6 \\cdot 4}{\\sqrt{2^2 + 1^2 + 6^2} \\cdot \\sqrt{4^2 + 4^2 + 4^2}} = \\dfrac{3 \\sqrt{123}}{41}$. <br>\n\t\t\tDo $\\cos \\widehat{NMB} >0$ nên $\\widehat{NMB}$ là góc nhọn và $\\tan \\widehat{NMB} >0$. <br>\n\t\t\tTa có \n\t\t\t\\[\n\t\t\t1 + \\tan^2 \\widehat{NMB} = \\dfrac{1}{\\cos^2 \\widehat{NMB}} \\Rightarrow \\tan^2 \\widehat{NMB} = \\dfrac{1}{\\cos^2 \\widehat{NMB}} - 1 = \\dfrac{14}{27} \\Rightarrow \\tan \\widehat{NMB} = \\dfrac{\\sqrt{42}}{9}. \n\t\t\t\\]\n\t\t\\end{itemchoice}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một hộ sản xuất và kinh doanh một mặt hàng A, biết rằng chi phí để sản xuất $x$ kg ($x > 0$) mặt hàng A là $\\dfrac{2x^2+x}{x+1}$ (đơn vị triệu đồng), trong lúc đó bán ra mỗi kg là $3$ triệu đồng. Hỏi cần sản xuất bao nhiêu kg mặt hàng A để lợi nhuận đạt $15$ triệu đồng {\\it(kết quả làm tròn đến hàng phần chục)}.\n\t<br>",
+      "answer": "14{,}1",
+      "id": 17,
+      "solution": "Giá bán mỗi kg là $3$ triệu đồng, nên doanh thu khi bán $x$ kg là $R(x) = 3x$ (triệu đồng). <br>\n\t\tChi phí để sản xuất $x$ kg mặt hàng A là $C(x) = \\dfrac{2x^2+x}{x+1}$ (triệu đồng). <br>\n\t\tLợi nhuận thu được khi sản xuất và kinh doanh $x$ kg mặt hàng A là\n\t\t\\begin{align*}\n\t\t\tP(x) &= R(x) - C(x) <br>\n\t\t\t&= 3x - \\dfrac{2x^2+x}{x+1}<br>\n\t\t\t&= \\dfrac{x^2+2x}{x+1}.\n\t\t\\end{align*}\n\t\tĐể lợi nhuận đạt $15$ triệu đồng, thì\n\t\t\\begin{eqnarray*}\n\t\t\t&&P(x)=15<br>\n\t\t\t&\\Leftrightarrow&\\dfrac{x^2+2x}{x+1} = 15<br>\n\t\t\t&\\Rightarrow&x^2 - 13x - 15 = 0<br>\n\t\t\t&\\Rightarrow&\\hoac{&x=\\dfrac{13 + \\sqrt{229}}{2}<br>&x=\\dfrac{13 - \\sqrt{229}}{2}.}\n\t\t\\end{eqnarray*}\n\t\tVì $x > 0$, ta chọn $x = \\dfrac{13 + \\sqrt{229}}{2}\\approx 14{,}1$\\,(kg). <br>\n\t\tVậy cần sản xuất khoảng $14{,}1$ kg mặt hàng A để lợi nhuận đạt $15$ triệu đồng.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Cho hình chóp cụt tam giác đều $ABC.MNP$ có đáy lớn là tam giác $ABC$ với độ dài cạnh bằng $6$, chiều cao của hình chóp cụt bằng $8$. Gọi $G$ là trọng tâm tam giác $MNP$. Tính khoảng cách giữa hai đường thẳng $AG$ và $BC$ \\textit{(kết quả làm tròn đến hàng phần trăm)}.\n\t<br>",
+      "answer": "4{,}77",
+      "id": 18,
+      "solution": "Gọi $I$ và $I'$ lần lượt là trung điểm của $BC$ và $NP$. <br>\n\t\tKhi đó $\\heva{&BC \\perp AI<br> &BC \\perp II'} \\Rightarrow BC \\perp (AMI'I)$.<br>\n\t\tGọi $H$ thuộc $AG$ sao cho $IH \\perp AG$.<br>\n\t\tKhi đó $\\heva{&IH \\perp AG, IH \\cap AG = H <br>\n\t\t&IH \\perp BC, IH \\cap BC = I.}$<br>\n\t\tSuy ra $IH$ là đoạn vuông góc chung của $AG$ và $BC$. <br>\n\t\tVậy $\\mathrm{d}(AG,BC)=IH$.<br>\n\t\tGọi $O$ là trọng tâm tam giác $ABC$, khi đó $GO \\perp (ABC)$, suy ra $GO=8$.<br>\n\t\tLại có $AI=\\dfrac{AB\\sqrt{3}}{2}=\\dfrac{6\\sqrt{3}}{2}=3\\sqrt{3}$ và $AO=\\dfrac{2}{3}\\cdot AI=2\\sqrt{3}$.<br>\n\t\tTa có $AG=\\sqrt{GO^2+AO^2}=\\sqrt{8^2+\\left(2\\sqrt{3}\\right)^2}=2\\sqrt{19}$.<br>\n\t\tXét tam giác $AGI$ ta có\n\t\t\\allowdisplaybreaks\n\t\t\\begin{eqnarray*}\n\t\t\tS_{AGI}&=&\\dfrac{1}{2}\\cdot IH \\cdot AG = \\dfrac{1}{2}\\cdot GO \\cdot AI <br>\n\t\t\t&\\Leftrightarrow& IH=\\dfrac{GO \\cdot AI}{AG}=\\dfrac{8 \\cdot 3\\sqrt{3}}{2\\sqrt{19}}=\\dfrac{12\\sqrt{57}}{19}\\approx 4{,}77.\n\t\t\\end{eqnarray*}",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "An và Bình rất giỏi Toán, cùng tham gia một trò chơi, đầu tiên An bốc ngẫu nhiên một thẻ từ hộp thứ nhất chứa sáu thẻ giống nhau được đánh số từ $1$ đến $6$, tiếp theo Bình bốc ngẫu nhiên một thẻ từ hộp thứ hai chứa bốn thẻ giống nhau được đánh số từ $1$ đến $4$. Gọi số An bốc được là $a$ và số của Bình là $b$, sau đó hai người cùng tính giá trị của tích phân $I = \\displaystyle\\int\\limits_{0}^{a} x^b \\mathrm{\\,d}x$. Nếu kết quả $I$ là một số nguyên thì An thắng, ngược lại Bình thắng. Tính xác suất An thắng cuộc {\\it (kết quả làm tròn đến hàng phần trăm)}.\n\t<br>",
+      "answer": "0{,}38",
+      "id": 19,
+      "solution": "An bốc một thẻ từ hộp thứ nhất có các số $a \\in \\{1, 2, 3, 4, 5, 6\\}$. Có $6$ khả năng. <br>\n\t\tBình bốc một thẻ từ hộp thứ hai có các số $b \\in \\{1, 2, 3, 4\\}$. Có $4$ khả năng. <br>\n\t\tTổng số cặp $(a,b)$ có thể xảy ra là $n\\left(\\Omega\\right)=6 \\cdot 4 = 24$.<br>\n\t\tVì $b \\ge 1$, ta có\n\t\t\\[I = \\displaystyle\\int\\limits_{0}^{a} x^b \\mathrm{\\,d}x=\\dfrac{a^{b+1}}{b+1}.\\]\n\t\tGọi $A$ là biến cố bạn An thắng cuộc.<br>\n\t\tTa cần tìm các cặp $(a,b)$ sao cho $I=\\dfrac{a^{b+1}}{b+1}$ là một số nguyên.<br>\n\t\tLiệt kê tất cả các khả năng có thể xảy ra\n\n\t\tCác cặp $(a,b)$ thỏa mãn $I\\in\\mathbb{Z}$ là $(2,1)$, $(2,3)$, $(3,2)$, $(4,1)$, $(4,3)$, $(5,4)$, $(6,1)$, $(6,2)$, $(6,3)$.<br> Suy ra $n(A)=9$.<br>\n\t\tVậy $\\mathrm{P}(A)=\\dfrac{n(A)}{n\\left(\\Omega\\right)}=\\dfrac{9}{24}\\approx 0{,}38$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Dòng Hương hiền hòa trong xanh, lững lờ trôi giữa lòng thành phố Huế cổ kính và mộng mơ. Nhìn từ trên cao, hai bờ sông trải dài như hai đường thẳng song song. Cột cờ Phu Văn Lâu sừng sững cao $54{,}5$\\,mét như là một chứng tích hào hùng của lịch sử. Biết rằng hai bờ sông cách nhau $400$\\,mét và chân cột cờ (hình chiếu vuông góc của đỉnh cột cờ xuống mặt đất) nằm cách mép sông gần nhất một khoảng $200$\\,mét. Có hai bạn học sinh đứng ở hai bờ sông, bạn học sinh A ở cùng bờ với cột cờ nhìn đỉnh cột cờ so với mặt đất một góc $\\alpha$ với $\\tan \\alpha = 0{,}1$ và bạn học sinh B đứng ở bờ bên kia nhìn đỉnh cột cờ so với mặt đất một góc $\\beta$ với $\\tan \\beta = 0{,}07$. Hỏi hai bạn học sinh cách nhau xa nhất là bao nhiêu mét? {\\it (Giả sử rằng mặt đất là bằng phẳng và tầm mắt hai bạn học sinh ngang với mặt đất, kết quả làm tròn đến hàng đơn vị)}.\n\n\t<br>",
+      "answer": "1\\,080",
+      "id": 20,
+      "solution": "Tam giác $SHA$ vuông tại $H$ có $HA = \\dfrac{HK}{\\tan \\alpha} = \\dfrac{54{,}5}{0{,}1} = 545$\\,mét.<br>\n\t\tTam giác $SHB$ vuông tại $H$ có $HB = \\dfrac{HK}{\\tan \\beta} = \\dfrac{54{,}5}{0{,}07} \\approx 778{,}57$\\,mét.<br>\n\t\tTrên bờ sông có cột cờ, tồn tại hai điểm $A$ và $A'$ sao cho $HA=HA'$.<br> Gọi $M$ là trung điểm của $AA'$ suy ra $HM=200$\\,mét.<br>\n\t\tTrên bờ sông còn lại, tồn tại hai điểm $B$ và $B'$ sao cho $HB=HB'$.<br> Gọi $N$ là trung điểm của $BB'$ suy ra $MN=400$\\,mét.<br>\n\t\tTham khảo hình vẽ\n\n\t\tNhư vậy, hai bạn học sinh A và B cách xa nhau nhất khi học sinh A ở điểm $A'$ và học sinh B ở điểm $B$ hoặc ngược lại.<br>\n\t\tGọi $K$ là hình chiếu vuông góc của điểm $A'$ trên đường thẳng $BB'$.<br>\n\t\tTam giác $HMA'$ vuông tại $M$ có $KN=MA'=\\sqrt{HA'^2-HM^2}=\\sqrt{545^2-200^2}\\approx 507$\\,m.<br>\n\t\tTam giác $HNB$ vuông tại $N$ có $NB=\\sqrt{HB^2-HN^2}=\\sqrt{(778{,}57)^2-(200+400)^2}\\approx 496{,}2$\\,mét\n\t\tTam giác $A'KB$ vuông tại $K$ có\n\t\t\\[A'B=\\sqrt{A'K^2+KB^2}=\\sqrt{400^2+(507+496{,}2)^2}\\approx 1\\,080\\text{( mét)}.\\]",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={h=3;goca=-10;gocb=-25;ds=-3*h;}}\n\t\t\t\\path\n\t\t\t\t(0,0) coordinate (H)\n\t\t\t\t(0,h) coordinate (S)\n\t\t\t\t(goca:2*h) coordinate (A)++(-goca+10:ds)coordinate (bA)\n\t\t\t\t(gocb:3*h) coordinate (B)++(-goca+10:ds)coordinate (bB)\n\t\t\t\t($(bA)!1.2!(A)$)coordinate (Aa) ($(bB)!1.2!(B)$)coordinate (Bb);\n\t\t\t\\pic[angle eccentricity=1.3,draw,angle radius=15pt]{angle= S--A--H}\n\t\t\tpic[angle eccentricity=1.2,draw,angle radius=28pt]{angle= S--B--H}\n\t\t\tpic[angle eccentricity=1.2,draw,angle radius=30pt]{angle= S--B--H};\n\t\t\t\\fill[cyan!30,opacity=0.5] (bA)--(Aa)--(Bb)--(bB)--cycle;\n\t\t\t\\draw[dashed] (A)--(H)--(B);\n\t\t\t\\draw (H)--(S)node[left,midway]{Cột cờ}--(A) (S)--(B) (bA)--(Aa) (bB)--(Bb);\n\t\t\t\\foreach \\x/\\pos in {A/90,B/-60,S/90,H/180} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\\node[shift=(156:0.7)] at (A) {$\\alpha$};\n\t\t\t\\node[shift=(146.8:1.5)] at (B) {$\\beta$};\n    \\node at (0,0){\\href{20Y0IT}{\\tiny \\phantom{20Y0IT}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={h=3;goca=-10;gocb=-25;ds=-3*h;}}\n\t\t\t\\path\n\t\t\t\t(0,0) coordinate (H)\n\t\t\t\t(0,h) coordinate (S)\n\t\t\t\t(goca:2*h) coordinate (A)++(-goca+10:ds)coordinate (bA)\n\t\t\t\t(gocb:3*h) coordinate (B)++(-goca+10:ds)coordinate (bB)\n\t\t\t\t($(bA)!1.2!(A)$)coordinate (Aa) ($(bB)!1.2!(B)$)coordinate (Bb);\n\t\t\t\\pic[angle eccentricity=1.3,draw,angle radius=15pt]{angle= S--A--H}\n\t\t\tpic[angle eccentricity=1.2,draw,angle radius=28pt]{angle= S--B--H}\n\t\t\tpic[angle eccentricity=1.2,draw,angle radius=30pt]{angle= S--B--H};\n\t\t\t\\fill[cyan!30,opacity=0.5] (bA)--(Aa)--(Bb)--(bB)--cycle;\n\t\t\t\\draw[dashed] (A)--(H)--(B);\n\t\t\t\\draw (H)--(S)node[left,midway]{Cột cờ}--(A) (S)--(B) (bA)--(Aa) (bB)--(Bb);\n\t\t\t\\foreach \\x/\\pos in {A/90,B/-60,S/90,H/180} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\\node[shift=(156:0.7)] at (A) {$\\alpha$};\n\t\t\t\\node[shift=(146.8:1.5)] at (B) {$\\beta$};\n    \\node at (0,0){\\href{20Y0IT}{\\tiny \\phantom{20Y0IT}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/1202/q20.png"
+    },
+    {
+      "type": "short",
+      "question": "Đất sét là một dạng vật chất đặc và mềm, có thể tạo thành nhiều hình dạng khác nhau nhưng thể tích không đổi. Đầu tiên ta có một cục đất sét với thể tích $1\\,000$\\,cm$^3$, người ta nặn thành một khối lập phương đặc, sau đó khoét phần đất sét ở giữa để tạo thành một chậu không nắp (phần trong của chậu có dạng hình hộp chữ nhật) có độ dày bốn mặt bên và độ dày đáy bằng nhau và bằng $\\dfrac{1}{10}$ độ dài cạnh của khối lập phương. Phần đất sét còn dư cũng được nặn thành một khối lập phương đặc và cũng khoét phần đất sét ở giữa để tạo thành một chậu không nắp với tỉ lệ giữa độ dày của các mặt và cạnh khối lập phương như trên. Cứ tiếp tục như vậy cho đến khi được $5$ cái chậu. Tính tổng thể tích nước mà $5$ chậu đó có thể chứa \\textit{(đơn vị là cm$^3$, kết quả làm tròn đến hàng đơn vị)}.\n\t<br>",
+      "answer": "1\\,272",
+      "id": 21,
+      "solution": "Gọi $V_n$ là thể tích của khối đất sét đặc (khối lập phương) ở bước thứ $n$. Ban đầu ta có $V_1 = 1\\,000$.<br>\n\t\tGiả sử khối lập phương ở bước $n$ có cạnh là $a$, khi đó $V_n = a^3$.<br>\n\t\tChậu không nắp được khoét ra có độ dày các mặt bên và đáy bằng $\\dfrac{a}{10}$.<br>\n\t\tPhần rỗng bên trong chậu (chính là lượng nước mà chậu chứa được) có dạng hình hộp chữ nhật với\n\t\t<br>\n\t\t\t<br>• Độ dài cạnh đáy: $a - 2 \\cdot \\dfrac{a}{10} = \\dfrac{4a}{5}$\n\t\t\t<br>• Chiều cao: $a - \\dfrac{a}{10} = \\dfrac{9a}{10}$\n\t\t<br>\n\t\tThể tích phần rỗng (thể tích nước chậu thứ $n$ chứa được) là\n\t\t$W_n = \\left(\\dfrac{4a}{5}\\right)^2 \\cdot \\dfrac{9a}{10} = \\dfrac{72a^3}{125} = \\dfrac{72}{125}V_n$.<br>\n\t\tPhần đất sét được khoét ra (có thể tích đúng bằng phần rỗng) sẽ là lượng đất sét dư để nặn thành khối lập phương cho bước tiếp theo. Do đó, ta có\n\t\t$V_{n+1} = W_n = \\dfrac{72}{125}V_n$.<br>\n\t\tVới $V_1 = 1\\,000$, thể tích nước chậu đầu tiên chứa được là\n\t\t$W_1 = \\dfrac{72}{125} \\cdot 1000 = 576$.<br>\n\t\tThể tích nước chậu thứ $n+1$ chứa được là\n\t\t$W_{n+1} = \\dfrac{72}{125}V_{n+1} = \\dfrac{72}{125}W_n$.<br>\n\t\tNhư vậy, dãy các thể tích nước $W_1$, $W_2$, $W_3$, $\\dots$, $W_5$ lập thành một cấp số nhân có số hạng đầu $u_1 = W_1 = 576$ và công bội $q = \\dfrac{72}{125}$.<br>\n\t\tTổng thể tích nước mà $5$ chậu có thể chứa chính là tổng $5$ số hạng đầu tiên của cấp số nhân này, khi đó\n\t\t\\[\n\t\tW = 576 \\cdot \\dfrac{1 - \\left(\\dfrac{72}{125}\\right)^5}{1 - \\dfrac{72}{125}} \\approx 1\\,272 \\text{ (cm}^3\\text{)}.\n\t\t\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Hằng năm trước ngày Khai giảng năm học mới. Ủy ban nhân dân thành phố Huế giao Sở Giáo dục và Đào tạo tổ chức Lễ Tuyên dương học sinh dạt danh hiệu “ Học sinh danh dự toàn trường”\\ dành cho những học sinh xuất sắc nhất của mỗi trường phổ thông trên địa bàn thành phố. Trong Lễ Tuyên dương. Ban tổ chức vinh danh các học sinh theo lượt nhận, mỗi lượt có $10$ học sinh, với những lượt có $5$ học sinh nam và $5$ học sinh nữ thì Ban tổ chức muốn các học sinh này đứng thành một hàng mà nam nữ xen kẽ. Tuy nhiên khi xếp hàng với lượt có $5$ học sinh nam và $5$ học sinh nữ thì Ban tổ chức nhận thấy các học sinh này không đứng xen kẽ nhưng chỉ cần đổi chỗ hai học sinh nào đó thì được hàng có nam nữ đứng xen kẽ, cách xếp này gọi là “ cách xếp lỗi”. Gọi $D$ là số “ cách xếp lỗi”\\ như trên, xác định giá trị của $\\dfrac{D}{100}$.\n\t<br>",
+      "answer": "7\\,200",
+      "id": 22,
+      "solution": "Số cách xếp $5$ nam và $5$ nữ đứng xen kẽ (gọi là cách xếp chuẩn) là: $2 \\cdot 5! \\cdot 5!$ cách (do có $2$ trường hợp nam hoặc nữ đứng đầu hàng).<br>\n\t\tMột “ cách xếp lỗi”\\ là hàng có đúng $2$ vị trí sai giới tính. Để tạo ra một cách xếp lỗi, ta lấy một hàng chuẩn và đổi chỗ đúng $1$ học sinh nam với $1$ học sinh nữ. Khi đó, số cách chọn $1$ nam và $1$ nữ từ hàng chuẩn để đổi chỗ là $\\mathrm{C}_5^1 \\cdot \\mathrm{C}_5^1 = 25$ cách.<br>\n\t\tVì mỗi “ cách xếp lỗi”\\ chỉ được tạo ra từ duy nhất một hàng chuẩn và một cặp đổi chỗ, áp dụng quy tắc nhân, ta có số cách xếp lỗi là\n\t\t\\[ D = (2 \\cdot 5! \\cdot 5!) \\cdot 25 = 720\\,000. \\]\n\t\tVậy $\\dfrac{D}{100} = 7\\,200$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 1.0,
+    "maxAttempts": 1,
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "truefalseMode": "progressive"
+    }
+  }
+}

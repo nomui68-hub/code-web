@@ -6,6 +6,26 @@
       "title": "Đề mẫu",
       "file": "exams/DE_MAU/questions.json",
       "active": true
+    },
+    {
+      "id": "1202",
+      "title": "2-KS-15-SoHue-L1",
+      "file": "exams/1202/questions.json",
+      "active": true,
+      "settings": {
+        "durationMinutes": 90.0,
+        "submitAfterMinutes": 1.0,
+        "maxAttempts": 1,
+        "scoring": {
+          "choiceTotal": 3.0,
+          "choiceCount": 12,
+          "truefalseTotal": 4.0,
+          "truefalseCount": 4,
+          "shortTotal": 3.0,
+          "shortCount": 6,
+          "truefalseMode": "progressive"
+        }
+      }
     }
   ]
 }
