@@ -28,7 +28,7 @@ def safe_id(s):
 
 def page(msg=''):
     return f'''<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V11 - Quản lý đề thi</title><style>
+<title>V11.3 - Quản lý đề thi</title><style>
 body{{font-family:Arial, sans-serif;background:#f3f6fb;margin:0;color:#07142b}} .wrap{{max-width:1100px;margin:30px auto;padding:0 18px}}
 .card{{background:white;border:1px solid #dbe5f3;border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 8px 24px #0001}}
 h1{{margin-top:0}} label{{font-weight:700;display:block;margin:12px 0 6px}} input,textarea,select{{width:100%;box-sizing:border-box;padding:12px;border:1px solid #cbd7ea;border-radius:10px;font-size:16px}} textarea{{min-height:260px;font-family:Consolas,monospace}}
@@ -38,7 +38,7 @@ h1{{margin-top:0}} label{{font-weight:700;display:block;margin:12px 0 6px}} inpu
 .panel{{display:none}} .panel.active{{display:block}}
 @media(max-width:800px){{.grid,.grid2{{grid-template-columns:1fr}}}}
 </style></head><body><div class="wrap">
-<div class="card"><h1>V11 - Quản lý đề thi Toán</h1><p class="muted">Công cụ này chạy trên máy giáo viên. Sau khi tạo đề, hệ thống tự cập nhật <b>exams/index.json</b>, sinh hình trong <b>images/</b> và cấu hình điểm/thời gian cho từng đề.</p></div>
+<div class="card"><h1>V11.3 - Quản lý đề thi Toán</h1><p class="muted">Công cụ này chạy trên máy giáo viên. Sau khi tạo đề, hệ thống tự cập nhật <b>exams/index.json</b>, sinh hình trong <b>images/</b> và cấu hình điểm/thời gian cho từng đề.</p></div>
 {msg}
 <form class="card" method="post" action="/build" enctype="multipart/form-data">
 <h2>1. Chọn file đề hoặc dán code LaTeX</h2>
@@ -182,7 +182,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     url=f'http://localhost:{PORT}'
-    print('Cong cu quan ly de V11-Python313 dang chay tai:', url)
+    print('Cong cu quan ly de V11.3-Python313 dang chay tai:', url)
     try:
         webbrowser.open(url)
     except Exception:

@@ -1,109 +1,507 @@
 {
   "examId": "2-KS-18",
   "title": "SoQuangNinh",
-  "questions": [],
-  "errors": [
+  "questions": [
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho các điểm $A(1;1;2)$, $B(3;2;-3)$. Phương trình mặt cầu $(S)$ có tâm $A$ và đi qua điểm $B$ là",
+      "options": [
+        "$(x+1)^2+(y+1)^2+(z+2)^2 = \\sqrt{30}$",
+        "$(x-1)^2+(y-1)^2+(z-2)^2 = 30$",
+        "$(x+1)^2+(y+1)^2+(z+2)^2 = 30$",
+        "$(x-1)^2+(y-1)^2+(z-2)^2 = \\sqrt{30}$"
+      ],
+      "answer": 1,
       "id": 1,
-      "error": "nothing to repeat at position 58"
+      "solution": "Bán kính mặt cầu là $R = AB = \\sqrt{2^2 + 1^2 + (-5)^2} = \\sqrt{30}$. <br>\n Phương trình mặt cầu tâm $A(1;1;2)$ và bán kính $R = \\sqrt{30}$ là \\[(x-1)^2 + (y-1)^2 + (z-2)^2 = 30.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Nghiệm của phương trình $\\log_3(x+1)=2$ là",
+      "options": [
+        "$x=10$",
+        "$x=6$",
+        "$x=8$",
+        "$x=5$"
+      ],
+      "answer": 2,
       "id": 2,
-      "error": "nothing to repeat at position 58"
+      "solution": "Điều kiện $x+1> 0 \\Leftrightarrow x> -1$. <br>\n Ta có $\\log_3(x+1)=2 \\Leftrightarrow x+1 = 3^2 \\Leftrightarrow x = 8$ (nhận). <br>\n Vậy phương trình đã cho có nghiệm duy nhất $x=8$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Họ các nguyên hàm của hàm số $f(x) = x - \\dfrac{1}{x^2}$ là",
+      "options": [
+        "$\\dfrac{1}{2}x^2 - \\dfrac{1}{x} + C$",
+        "$\\dfrac{1}{2}x^2 + \\dfrac{1}{x} + C$",
+        "$x + \\dfrac{1}{x} + C$",
+        "$1 + \\dfrac{1}{x} + C$"
+      ],
+      "answer": 1,
       "id": 3,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có $\\int \\left(x - \\dfrac{1}{x^2}\\right) \\mathrm{d}x = \\dfrac{1}{2}x^2 + \\dfrac{1}{x} + C$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, một vật thể nằm giữa hai mặt phẳng $x=a$; $x=b$ với $a < b$, thiết diện của vật thể bị cắt bởi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ $x$ ($a \\leq x \\leq b$) là một hình phẳng có diện tích bằng $S(x)$, $S(x)$ là một hàm liên tục trên $[a;b]$. Thể tích vật thể được tính bằng công thức",
+      "options": [
+        "$\\pi \\int\\limits_a^b \\left(S(x)\\right)^2 \\mathrm{ d}x$",
+        "$\\int\\limits_a^b S(x) \\mathrm{ d}x$",
+        "$\\int\\limits_a^b \\left(S(x)\\right)^2 \\mathrm{ d}x$",
+        "$\\pi \\int\\limits_a^b S(x) \\mathrm{ d}x$"
+      ],
+      "answer": 1,
       "id": 4,
-      "error": "nothing to repeat at position 58"
+      "solution": "Theo công thức tính thể tích vật thể khi biết diện tích thiết diện $S(x)$, thể tích $V$ được tính bởi công thức $V = \\int\\limits_a^b S(x) \\mathrm{ d}x$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho tứ diện $ABCD$. Gọi $M$, $N$ lần lượt là trung điểm của $AD$ và $BC$. Tổng $\\overrightarrow{AB} + \\overrightarrow{DC}$ bằng",
+      "options": [
+        "$\\vec{0}$",
+        "$2\\overrightarrow{MN}$",
+        "$2\\overrightarrow{NM}$",
+        "$2\\overrightarrow{AD}$"
+      ],
+      "answer": 1,
       "id": 5,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có $\\overrightarrow{AB} = \\overrightarrow{AM} + \\overrightarrow{MN} + \\overrightarrow{NB}$ và $\\overrightarrow{DC} = \\overrightarrow{DM} + \\overrightarrow{MN} + \\overrightarrow{NC}$. <br>\n Cộng hai vế, ta được $\\overrightarrow{AB} + \\overrightarrow{DC} = \\left(\\overrightarrow{AM} + \\overrightarrow{DM}\\right) + 2\\overrightarrow{MN} + \\left(\\overrightarrow{NB} + \\overrightarrow{NC}\\right)$. <br>\n Vì $M$ là trung điểm $AD$ nên $\\overrightarrow{AM} + \\overrightarrow{DM} = \\vec{0}$. <br>\n Vì $N$ là trung điểm $BC$ nên $\\overrightarrow{NB} + \\overrightarrow{NC} = \\vec{0}$. <br>\n Vậy $\\overrightarrow{AB} + \\overrightarrow{DC} = 2\\overrightarrow{MN}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hình chóp tứ giác đều $S.ABCD$ có độ dài cạnh đáy là $\\sqrt{2}$ và tam giác $SAC$ đều. Độ dài cạnh bên của hình chóp đã cho bằng",
+      "options": [
+        "$\\sqrt{3}$",
+        "$2$",
+        "$1$",
+        "$\\sqrt{2}$"
+      ],
+      "answer": 1,
       "id": 6,
-      "error": "nothing to repeat at position 58"
+      "solution": "Vì $ABCD$ là hình vuông cạnh $\\sqrt{2}$ nên đường chéo $AC = \\sqrt{2} \\cdot \\sqrt{2} = 2$. <br>\n Tam giác $SAC$ đều nên các cạnh $SA = SC = AC = 2$. <br>\n Vậy độ dài cạnh bên của hình chóp bằng $2$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Doanh thu bán hàng trong $20$ ngày (đơn vị: triệu đồng) của một cửa hàng được ghi lại ở bảng sau:\n\n Tứ phân vị thứ ba của mẫu số liệu trên gần nhất với giá trị nào trong các giá trị sau?",
+      "options": [
+        "$12$",
+        "$11$",
+        "$13$",
+        "$10$"
+      ],
+      "answer": 1,
       "id": 7,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có cỡ mẫu $n=20$. <br>\n Nhóm chứa tứ phân vị thứ ba là nhóm đầu tiên có tần số tích lũy lớn hơn hoặc bằng $\\dfrac{3n}{4}=15$. <br>\n Do đó, tứ phân vị $Q_3$ thuộc nhóm $[9;11)$. <br>\n Suy ra\n \\[\n Q_3=9+\\dfrac{\\dfrac{3n}{4}-(2+7)}{7}\\cdot (11-9)=\\dfrac{75}{7}\\approx 10{,}71.\n \\]\n Giá trị $10{,}71$ gần nhất với phương án $11$.",
+      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline Doanh thu &{$[5; 7)$} &{$[7; 9)$} &{$[9; 11)$} &{$[11; 13)$} &{$[13; 15)$} \\\\\n\t\t\t\\hline Số ngày & $2$ & $7$ & $7$ & $3$ & $1$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline Doanh thu &{$[5; 7)$} &{$[7; 9)$} &{$[9; 11)$} &{$[11; 13)$} &{$[13; 15)$} \\\\\n\t\t\t\\hline Số ngày & $2$ & $7$ & $7$ & $3$ & $1$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-18/q7.png"
     },
     {
+      "type": "choice",
+      "question": "Cho cấp số nhân $\\left(u_n\\right)$ với $u_1=2$ và $u_5=162$. Giá trị của công bội $q$ bằng",
+      "options": [
+        "$q=3$",
+        "$q=\\pm 3$",
+        "$q=\\pm \\dfrac{1}{3}$",
+        "$q=\\dfrac{1}{3}$"
+      ],
+      "answer": 1,
       "id": 8,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có $u_5 = u_1 \\cdot q^4$. <br>\n Suy ra $q^4=\\dfrac{u_5}{u_1}=\\dfrac{162}{2}=81$. <br>\n Vậy $q^2=9$ hay $q=\\pm 3$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có tất cả các cạnh bằng $1$. Góc tạo bởi đường thẳng $A'C$ và mặt phẳng $(ABC)$ bằng",
+      "options": [
+        "$60^\\circ$",
+        "$90^\\circ$",
+        "$30^\\circ$",
+        "$45^\\circ$"
+      ],
+      "answer": 3,
       "id": 9,
-      "error": "nothing to repeat at position 58"
+      "solution": "Vì lăng trụ đứng nên $AA' \\perp (ABC)$. Do đó, hình chiếu của $A'C$ lên $(ABC)$ là $AC$. <br>\n Suy ra $\\left(A'C,(ABC)\\right)=(A'C,AC)$. <br>\n Xét tam giác $A'AC$ vuông tại $A$, có $AC=AA'=1$ nên tam giác $A'AC$ vuông cân tại $A$. <br>\n Do đó $\\widehat{A'CA}=45^\\circ$. <br>\n Vậy $\\left(A'C,(ABC)\\right)=(A'C,AC)=\\widehat{A'CA}=45^\\circ$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, mặt phẳng đi qua điểm $M(1;2;-4)$ và vuông góc với trục $Oz$ có phương trình là",
+      "options": [
+        "$x+2y-4z-21=0$",
+        "$z=4$",
+        "$x+2y+4z-21=0$",
+        "$z=-4$"
+      ],
+      "answer": 3,
       "id": 10,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gọi $(P)$ là mặt phẳng đi qua điểm $M(1;2;-4)$ và vuông góc với trục $Oz$. <br>\n Vì $(P)$ vuông góc với trục $Oz$ nên nhận $\\overrightarrow{k} = (0;0;1)$ làm một vectơ pháp tuyến. <br>\n Lại có $(P)$ đi qua điểm $M(1;2;-4)$ nên có phương trình là $1(z+4)=0 \\Leftrightarrow z=-4$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Tập giá trị của hàm số $y=3\\cos 2x$ là",
+      "options": [
+        "$T=[-2;2]$",
+        "$T=[-3;3]$",
+        "$T=\\mathbb{R}$",
+        "$T=[-6;6]$"
+      ],
+      "answer": 1,
       "id": 11,
-      "error": "nothing to repeat at position 58"
+      "solution": "Với mọi $x \\in \\mathbb{R}$, ta có $-1 \\le \\cos 2x \\le 1 \\Leftrightarrow -3 \\le 3\\cos 2x \\le 3$. <br>\n Vậy tập giá trị của hàm số là $T = [-3;3]$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu của $f'(x)$ như sau:\n\n Số điểm cực đại của hàm số $y=f(x)$ là",
+      "options": [
+        "$3$",
+        "$4$",
+        "$2$",
+        "$1$"
+      ],
+      "answer": 2,
       "id": 12,
-      "error": "nothing to repeat at position 58"
+      "solution": "Dựa vào bảng xét dấu và tính chất liên tục trên $\\mathbb{R}$, ta có bảng biến thiên như sau:\n\n Dựa vào bảng biến thiên, hàm số $y=f(x)$ có $2$ điểm cực đại.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.5, espcl=1.5]\n\t\t\t{$x$ / 0.8, $f'(x)$ / 0.8}\n\t\t\t{$-\\infty$, $-1$, $0$, $1$, $2$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , +, $0$, -, $0$, +, d, -, $0$, - }\n    \\node at (T11){\\href{3PEPC8}{\\tiny \\phantom{3PEPC8}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.5, espcl=1.5]\n\t\t\t{$x$ / 0.8, $f'(x)$ / 0.8}\n\t\t\t{$-\\infty$, $-1$, $0$, $1$, $2$, $+\\infty$}\n\t\t\t\\tkzTabLine{ , +, $0$, -, $0$, +, d, -, $0$, - }\n    \\node at (T11){\\href{3PEPC8}{\\tiny \\phantom{3PEPC8}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-18/q12.png"
     },
     {
+      "type": "truefalse",
+      "question": "Trong một cuộc thi Olympic môn Toán dành cho học sinh THPT, trường THPT A có $51$ học sinh và trường THPT B có $24$ học sinh tham dự. Giả sử xác suất giành huy chương vàng của mỗi học sinh của trường A và B lần lượt là $0{,}08$ và $0{,}06$. Chọn ngẫu nhiên một học sinh trong số các học sinh tham dự của hai trường A và B.",
+      "statements": [
+        {
+          "text": "Xác suất để học sinh được chọn thuộc trường A là $\\dfrac{17}{25}$",
+          "answer": true
+        },
+        {
+          "text": "Biết rằng học sinh được chọn thuộc trường B, xác suất để học sinh đó không giành được huy chương vàng là $0{,}92$",
+          "answer": false
+        },
+        {
+          "text": "Xác suất để học sinh được chọn giành huy chương vàng là $\\dfrac{48}{625}$",
+          "answer": false
+        },
+        {
+          "text": "Biết rằng học sinh được chọn giành huy chương vàng, xác suất để học sinh đó thuộc trường A là $\\dfrac{17}{23}$",
+          "answer": true
+        }
+      ],
       "id": 13,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta gọi các biến cố sau:\n <br>\n <br> • $A$: “ Học sinh được chọn thuộc trường THPT A”;\n <br> • $B$: “ Học sinh được chọn thuộc trường THPT B”;\n <br> • $V$: “ Học sinh được chọn giành được huy chương vàng”.\n <br>\n Tổng số học sinh tham dự của cả hai trường là $51+24=75$ (học sinh). <br>\n Từ giả thiết, ta có các xác suất sau:\n <br>\n <br> • Xác suất chọn được học sinh trường A là $\\mathrm{P}(A)=\\dfrac{51}{75}=0{,}68$.\n <br> • Xác suất chọn được học sinh trường B là $\\mathrm{P}(B)=\\dfrac{24}{75}=0{,}32$.\n <br> • Xác suất học sinh giành huy chương vàng với điều kiện học sinh đó thuộc trường A là $\\mathrm{P}(V\\mid A)=0{,}08$.\n <br> • Xác suất học sinh giành huy chương vàng với điều kiện học sinh đó thuộc trường B là $\\mathrm{P}(V\\mid B)=0{,}06$.\n <br>\n Ta có sơ đồ cây sau\n\n <br>\n <br> • Xác suất để học sinh được chọn thuộc trường A là $\\mathrm{P}(A)=\\dfrac{51}{75}=\\dfrac{17}{25}$.\n <br> • Biết rằng học sinh được chọn thuộc trường B, xác suất để học sinh đó không giành được huy chương vàng chính là $\\mathrm{P}\\left(\\overline{V}\\mid B\\right)=1-\\mathrm{P}(V\\mid B)=1-0{,}06=0{,}94$.\n <br> • Xác suất để học sinh được chọn giành huy chương vàng được tính theo công thức xác suất toàn phần\n <br> \\[\n \\mathrm{P}(V)&=\\mathrm{P}(A)\\cdot\\mathrm{P}(V\\mid A)+\\mathrm{P}(B)\\cdot\\mathrm{P}(V\\mid B) <br>\n &=0{,}68\\cdot 0{,}08+0{,}32\\cdot 0{,}06 <br>\n &=0{,}0736=\\dfrac{46}{625}.\n \\] <br>\n <br> • Xác suất để học sinh được chọn thuộc trường A biết rằng học sinh đó đã giành huy chương vàng được tính theo công thức Bayes\n \\[\\mathrm{P}(A\\mid V)=\\dfrac{\\mathrm{P}(A)\\cdot\\mathrm{P}(V\\mid A)}{\\mathrm{P}(V)} = \\dfrac{0{,}68\\cdot0{,}08}{0{,}0736}=\\dfrac{17}{23}.\\]\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "truefalse",
+      "question": "Trong không gian $Oxyz$, cho các điểm $A(-2;0;0)$, $B(0;-2;0)$, $C(0;0;-2)$. Điểm $D$ khác gốc tọa độ sao cho $DA$, $DB$, $DC$ đôi một vuông góc.",
+      "statements": [
+        {
+          "text": "Mặt phẳng $(ABC)$ có phương trình $\\dfrac{x}{2}+\\dfrac{y}{2}+\\dfrac{z}{2} = -1$",
+          "answer": true
+        },
+        {
+          "text": "Côsin góc giữa hai mặt phẳng $(ABC)$ và $(Oxy)$ bằng $\\dfrac{1}{\\sqrt{3}}$",
+          "answer": true
+        },
+        {
+          "text": "Tọa độ điểm $D$ là $\\left(\\dfrac{4}{3};\\dfrac{4}{3};\\dfrac{4}{3}\\right)$",
+          "answer": false
+        },
+        {
+          "text": "Gọi $I(a;b;c)$ là tâm mặt cầu ngoại tiếp tứ diện $ABCD$, khi đó $a+b+c = -1$",
+          "answer": true
+        }
+      ],
       "id": 14,
-      "error": "nothing to repeat at position 58"
+      "solution": "<br>\n <br> • Phương trình mặt phẳng $(ABC)$ theo đoạn chắn là\n \\[\\dfrac{x}{-2}+\\dfrac{y}{-2}+\\dfrac{z}{-2}=1\\Leftrightarrow\\dfrac{x}{2}+\\dfrac{y}{2}+\\dfrac{z}{2}=-1.\\]\n <br> • Mặt phẳng $(ABC)$ có phương trình tổng quát là $x+y+z+2=0$. <br>\n Do đó, $(ABC)$ có một vectơ pháp tuyến là $\\overrightarrow{n}=(1;1;1)$. <br>\n Mặt phẳng $(Oxy)$ có phương trình $z=0$ nên có một vectơ pháp tuyến là $\\overrightarrow{k}=(0;0;1)$. <br>\n Gọi $\\alpha$ là góc giữa hai mặt phẳng $(ABC)$ và $(Oxy)$. Khi đó, ta có\n \\[\\cos \\alpha=\\dfrac{\\left|\\overrightarrow{n}\\cdot\\overrightarrow{k}\\right|}{\\left|\\overrightarrow{n}\\right|\\cdot\\left|\\overrightarrow{k}\\right|}=\\dfrac{|1\\cdot 0+1\\cdot 0+1\\cdot 1|}{\\sqrt{1^2+1^2+1^2}\\cdot\\sqrt{0^2+0^2+1^2}}=\\dfrac{1}{\\sqrt{3}}. \\]\n <br> • Gọi $D(x;y;z)$ là điểm khác gốc tọa độ và thỏa mãn $DA$, $DB$, $DC$ đôi một vuông góc. <br>\n Ta có $\\overrightarrow{DA}=(-2-x;-y;-z)$, $\\overrightarrow{DB}=(-x;-2-y;-z)$, $\\overrightarrow{DC}=(-x;-y;-2-z)$. <br>\n Vì $DA$, $DB$, $DC$ đôi một vuông góc nên ta có hệ phương trình\n \\[\\heva{\n &\\overrightarrow{DA}\\cdot \\overrightarrow{DB}=0 <br>\n &\\overrightarrow{DB}\\cdot \\overrightarrow{DC}=0 <br>\n &\\overrightarrow{DC}\\cdot \\overrightarrow{DA}=0} \\Leftrightarrow \\heva{\n &x(x+2)+y(y+2)+z^2=0 <br>\n &x^2+y(y+2)+z(z+2)=0 <br>\n &x(x+2)+y^2+z(z+2)=0.}\\]\n Trừ vế theo vế các phương trình, ta dễ dàng suy ra $x=y=z$. <br>\n Thế lại vào phương trình đầu ta được\n \\[3x^2+4x=0\\Leftrightarrow \\hoac{&x=0 <br> &x=-\\dfrac{4}{3}.}\\]\n Vì $D$ khác gốc tọa độ $O$ nên ta được $D\\left(-\\dfrac{4}{3};-\\dfrac{4}{3};-\\dfrac{4}{3}\\right)$.\n <br> • Tứ diện $ABCD$ có $DA$, $DB$, $DC$ đôi một vuông góc tại $D$ nên tâm $I$ của mặt cầu ngoại tiếp tứ diện chính là trung điểm của đoạn nối $D$ với đỉnh đối diện $D'$ trong hình hộp chữ nhật dựng trên $3$ cạnh $DA$, $DB$, $DC$.\n\n Với $A(-2;0;0)$, $B(0;-2;0)$, $C(0;0;-2)$ và $D\\left(-\\dfrac{4}{3};-\\dfrac{4}{3};-\\dfrac{4}{3}\\right)$, ta có\n $\\heva{&\\overrightarrow{DA}=\\left(-\\dfrac{2}{3};\\dfrac{4}{3};\\dfrac{4}{3}\\right) <br> &\\overrightarrow{DB}=\\left(\\dfrac{4}{3};-\\dfrac{2}{3};\\dfrac{4}{3}\\right) <br> &\\overrightarrow{DC}=\\left(\\dfrac{4}{3};\\dfrac{4}{3};-\\dfrac{2}{3}\\right).}$ <br>\n Theo quy tắc hình hộp, ta có $\\overrightarrow{DD'}=\\overrightarrow{DA}+\\overrightarrow{DB}+\\overrightarrow{DC}$. <br>\n Suy ra $\\overrightarrow{DD'}=\\left(\\dfrac{6}{3};\\dfrac{6}{3};\\dfrac{6}{3}\\right)=(2;2;2)$. <br>\n Vì $I$ là trung điểm của $DD'$ nên $\\overrightarrow{DI}=\\dfrac{1}{2}\\overrightarrow{DD'}=(1;1;1)$. <br>\n Khi đó\n \\[\\heva{&x_I-x_D=1 <br> &y_I-y_D=1 <br> &z_I-z_D=1}\\Rightarrow\\heva{&x_I=x_D+1=-\\dfrac{1}{3} <br> &y_I=y_D+1=-\\dfrac{1}{3} <br> &z_I=z_D+1=-\\dfrac{1}{3}}\\Rightarrow I\\left(-\\dfrac{1}{3};-\\dfrac{1}{3};-\\dfrac{1}{3}\\right). \\]\n Vậy $a+b+c=-\\dfrac{1}{3}-\\dfrac{1}{3}-\\dfrac{1}{3}=-1$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "truefalse",
+      "question": "Bút viết của một bảng vẽ điện tử được để trong một chiếc giá là một khối tròn xoay có mặt cắt qua trục là một hình phẳng có hình dạng và các kích thước gắn với hệ trục tọa độ $Oxy$ như hình vẽ dưới đây:\n\n Biết biên của mặt cắt gồm hai nửa đường tròn đường kính $AB$, $CD$ và một cung của parabol đỉnh $O$, nhận $Ox$ là trục đối xứng; cho $AB=CD=3$ cm, $OI=1$ cm, $AD=3$ cm, $MN=2$ cm, đơn vị trên hệ trục là $1$ cm.",
+      "statements": [
+        {
+          "text": "Phương trình của parabol là $y^2=\\dfrac{1}{2}x$",
+          "answer": true
+        },
+        {
+          "text": "Diện tích mặt cắt ( <em> làm tròn tới hàng đơn vị </em> ) là $14$ cm$^2$",
+          "answer": false
+        },
+        {
+          "text": "Thể tích phần lõm của giá để bút được tính bằng công thức $\\pi \\int\\limits_{0}^{2} \\dfrac{1}{2}x \\mathrm{ d}x$",
+          "answer": true
+        },
+        {
+          "text": "Thể tích của toàn bộ giá để bút ( <em> làm tròn tới hàng phần chục </em> ) bằng $65{,}4$ cm$^3$",
+          "answer": false
+        }
+      ],
       "id": 15,
-      "error": "nothing to repeat at position 58"
+      "solution": "Từ giả thiết bài toán, ta có tọa độ các điểm sau: <br>\n \\centerline{$I(-1;0)$, $A\\left(-1;\\dfrac{3}{2}\\right)$, $B\\left(2;\\dfrac{3}{2}\\right)$, $C\\left(2;-\\dfrac{3}{2}\\right)$, $D(-1;-\\dfrac{3}{2})$, $M(2;1)$ và $N(2;-1)$.}\n <br>\n <br> • Parabol đỉnh $O(0;0)$ và nhận $Ox$ làm trục đối xứng nên phương trình có dạng $y^2=2px$. <br>\n Mặt khác, parabol đi qua đểm $M(2;1)$ nên ta có $1^2=2p\\cdot 2 \\Rightarrow 2p=\\dfrac{1}{2}$. <br>\n Suy ra phương trình parabol là $y^2=\\dfrac{1}{2}x$.\n <br> • Ta thấy mặt cắt gồm hình vuông $ABCD$ cạnh bằng $3$ (bỏ đi miền giới hạn bởi parabol và đường thẳng $x=2$) và hai nửa hình tròn bán kính $R=\\dfrac{3}{2}$. <br>\n Suy ra diện tích mặt cắt là\n <br> \\[\n S&=3\\cdot 3+\\pi\\cdot\\left(\\dfrac{3}{2}\\right)^2-\\int\\limits_0^2 2\\sqrt{\\dfrac{x}{2}} \\mathrm{ d}x <br>\n &=9+\\dfrac{9}{4}\\pi-\\left( \\sqrt{2}\\cdot\\dfrac{2}{3} x^{\\frac{3}{2}} \\right)\\Bigg|_0^2 <br>\n &=9+\\dfrac{9}{4}\\pi-\\dfrac{8}{3}\\approx 13 \\left(cm^2\\right).\n \\] <br>\n <br> • Phần lõm được tạo thành khi quay miền giới hạn bởi parabol và đường thẳng $x=2$ quanh trục hoành $Ox$. <br>\n Suy ra thể tích phần lõm là $V_{lõm}=\\pi \\int\\limits_0^2 y^2 \\mathrm{ d}x=\\pi \\int\\limits_0^2 \\dfrac{1}{2}x\\mathrm{ d}x$.\n <br> • Đường tròn đường kính $AB$ nhận trung điểm $E\\left(\\dfrac{1}{2};\\dfrac{3}{2}\\right)$ làm tâm và bán kính\\break $R=\\dfrac{1}{2}AB=\\dfrac{3}{2}$ nên có phương trình là $\\left(x-\\dfrac{1}{2}\\right)^2+\\left(y-\\dfrac{3}{2}\\right)^2=\\dfrac{9}{4}$. <br>\n Suy ra nửa trên đường tròn đường kính $AB$ có phương trình là $y=\\dfrac{3}{2}+\\sqrt{\\dfrac{9}{4}-\\left(x-\\dfrac{1}{2}\\right)^2}$. <br>\n Vậy thể tích giá để bút là \n \\[V= \\pi\n \\int\\limits_{-1}^{2}\\left(\\dfrac{3}{2}+\\sqrt{\\dfrac{9}{4}-\\left(x-\\dfrac{1}{2}\\right)^2}\\right)^2\\mathrm{d}x-\\pi \\int\\limits_0^2 \\dfrac{1}{2}x\\mathrm{ d}x \\approx 65{,}5 \\left(cm^3\\right).\\]\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\t\n    \n\t\t\t\\begin{scope}[scale=0.4, font=\\footnotesize, line join=round, line cap=round, >=stealth, transform shape]\n\t\t\t\t\\tikzset{pen/.pic={\n\t\t\t\t\\fill[gray] (0,0.2) ellipse ({0.1} and {0.02});\n\t\t\t\t\\draw[line join=round, line width=2pt] (0,0)--++(90:1);\n\t\t\t\t\\fill[left color=black!65, right color=black] (0.1,0.2) arc (0:180:{0.1} and {0.02}) --++ (110:0.9) .. controls +(112:0.1) and +(90:0.1) .. (-0.4,1.2) arc (180:360:{0.4} and {0.1}) .. controls +(90:0.1) and +(78:0.1) .. ($(0.1,0.2)+(70:0.9)$) -- (0.1,0.2);\n\t\t\t\t\\fill[left color=black!65, right color=black, smooth] (-0.4,1.2) --(-0.39,2.2) ..controls (-0.35,5).. (-0.34,10) arc (180:0:{0.34} and {0.2}) ..controls (0.35,5) .. (0.39,2.2) -- (0.4,1.2) arc (360:180:{0.4} and {0.1});\n\t\t\t\t\\fill[draw=black, fill=gray, line width=1pt, rounded corners=2pt] (-0.05,3.5) -- (-0.35,3.5) -- (-0.35,2.65) -- (-0.3,2.5) -- (-0.1,2.5) -- (-0.05,2.65) --cycle\n\t\t\t\t\t(-0.05,3.5) -- (-0.35,3.5) -- (-0.35,4.35) -- (-0.3,4.5) -- (-0.1,4.5) -- (-0.05,4.35) --cycle;\n\t\t\t\t}}\n\t\t\t\t\\def\\a{3} \\def\\b{0.5*\\a}\n\t\t\t\t\\def\\k{0.4}\n\t\t\t\t\\shade[top color=cyan,bottom color=blue] (0,1.2) ellipse ({\\a} and {0.8*\\a});\n\t\t\t\t\\fill[white] (0,2.4) ellipse({\\b} and {\\k*\\b});\t\n\t\t\t\t\\fill[gray!40!black] (0,2.4) ellipse({1} and {\\k});\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-1,2.4) arc (180:360:{1} and {\\k}) --++(75:13.2) --++(165:2) -- cycle;\n\t\t\t\t\t\\path (-0.25,0.5) pic[scale=1.5, rotate=-15]{pen};\n\t\t\t\t\\end{scope}\n\t\t\t\\end{scope}\t\n\t\t\t\\begin{scope}[shift={(5.5,0.75)}]\n\t\t\t\t\\draw[fill=gray!30] plot[smooth, samples=200, domain=1:-1] (\\x,{2*(\\x)^2})--(-1.5,2) arc (90:270:{1.5}) -- (1.5,-1) arc (-90:90:{1.5}) -- (1,2) --cycle;\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}[shift={(11,2.5)}]\n\t\t\t\t\\draw[smooth, samples=200, domain=-1:1] plot({2*(\\x)^2},{\\x});\n\t\t\t\t\\draw (2,1) coordinate(M)--(2,1.5) coordinate(B) arc (0:180:{1.5}) coordinate(A) -- (-1,0) coordinate(I) -- (-1,-1.5) coordinate(D) arc (180:360:{1.5}) coordinate(C) -- (2,-1) coordinate(N);\n\t\t\t\t\\foreach \\x/\\pos in {M/0, B/0, A/180, D/180, C/0, N/0, I/-135} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\t\\draw[dashed] (A)--(B) (C)--(D);\n\t\t\t\t\\draw[->] (-1.5,0)--(2.75,0) node[below]{$x$};\n\t\t\t\t\\draw[->] (0,-3.5)--(0,3.7) node[left]{$y$};\n\t\t\t\t\\fill (0,0) node{\\href{2EV6DC}{\\tiny \\phantom{2EV6DC}}} circle(1pt) node[shift=(-135:0.25)]{$O$}; \n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{2EV6DC}{\\tiny \\phantom{2EV6DC}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\t\n    \n\t\t\t\\begin{scope}[scale=0.4, font=\\footnotesize, line join=round, line cap=round, >=stealth, transform shape]\n\t\t\t\t\\tikzset{pen/.pic={\n\t\t\t\t\\fill[gray] (0,0.2) ellipse ({0.1} and {0.02});\n\t\t\t\t\\draw[line join=round, line width=2pt] (0,0)--++(90:1);\n\t\t\t\t\\fill[left color=black!65, right color=black] (0.1,0.2) arc (0:180:{0.1} and {0.02}) --++ (110:0.9) .. controls +(112:0.1) and +(90:0.1) .. (-0.4,1.2) arc (180:360:{0.4} and {0.1}) .. controls +(90:0.1) and +(78:0.1) .. ($(0.1,0.2)+(70:0.9)$) -- (0.1,0.2);\n\t\t\t\t\\fill[left color=black!65, right color=black, smooth] (-0.4,1.2) --(-0.39,2.2) ..controls (-0.35,5).. (-0.34,10) arc (180:0:{0.34} and {0.2}) ..controls (0.35,5) .. (0.39,2.2) -- (0.4,1.2) arc (360:180:{0.4} and {0.1});\n\t\t\t\t\\fill[draw=black, fill=gray, line width=1pt, rounded corners=2pt] (-0.05,3.5) -- (-0.35,3.5) -- (-0.35,2.65) -- (-0.3,2.5) -- (-0.1,2.5) -- (-0.05,2.65) --cycle\n\t\t\t\t\t(-0.05,3.5) -- (-0.35,3.5) -- (-0.35,4.35) -- (-0.3,4.5) -- (-0.1,4.5) -- (-0.05,4.35) --cycle;\n\t\t\t\t}}\n\t\t\t\t\\def\\a{3} \\def\\b{0.5*\\a}\n\t\t\t\t\\def\\k{0.4}\n\t\t\t\t\\shade[top color=cyan,bottom color=blue] (0,1.2) ellipse ({\\a} and {0.8*\\a});\n\t\t\t\t\\fill[white] (0,2.4) ellipse({\\b} and {\\k*\\b});\t\n\t\t\t\t\\fill[gray!40!black] (0,2.4) ellipse({1} and {\\k});\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-1,2.4) arc (180:360:{1} and {\\k}) --++(75:13.2) --++(165:2) -- cycle;\n\t\t\t\t\t\\path (-0.25,0.5) pic[scale=1.5, rotate=-15]{pen};\n\t\t\t\t\\end{scope}\n\t\t\t\\end{scope}\t\n\t\t\t\\begin{scope}[shift={(5.5,0.75)}]\n\t\t\t\t\\draw[fill=gray!30] plot[smooth, samples=200, domain=1:-1] (\\x,{2*(\\x)^2})--(-1.5,2) arc (90:270:{1.5}) -- (1.5,-1) arc (-90:90:{1.5}) -- (1,2) --cycle;\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}[shift={(11,2.5)}]\n\t\t\t\t\\draw[smooth, samples=200, domain=-1:1] plot({2*(\\x)^2},{\\x});\n\t\t\t\t\\draw (2,1) coordinate(M)--(2,1.5) coordinate(B) arc (0:180:{1.5}) coordinate(A) -- (-1,0) coordinate(I) -- (-1,-1.5) coordinate(D) arc (180:360:{1.5}) coordinate(C) -- (2,-1) coordinate(N);\n\t\t\t\t\\foreach \\x/\\pos in {M/0, B/0, A/180, D/180, C/0, N/0, I/-135} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n\t\t\t\t\\draw[dashed] (A)--(B) (C)--(D);\n\t\t\t\t\\draw[->] (-1.5,0)--(2.75,0) node[below]{$x$};\n\t\t\t\t\\draw[->] (0,-3.5)--(0,3.7) node[left]{$y$};\n\t\t\t\t\\fill (0,0) node{\\href{2EV6DC}{\\tiny \\phantom{2EV6DC}}} circle(1pt) node[shift=(-135:0.25)]{$O$}; \n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{2EV6DC}{\\tiny \\phantom{2EV6DC}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-18/q15.png"
     },
     {
+      "type": "truefalse",
+      "question": "Cho hàm số $y=\\dfrac{ax^2+bx+c}{x-d}$ có đồ thị như hình vẽ bên.",
+      "statements": [
+        {
+          "text": "Hàm số đã cho đồng biến trên $\\mathbb{R}$",
+          "answer": false
+        },
+        {
+          "text": "Đồ thị hàm số có tiệm cận xiên là đường thẳng $y=x+2$",
+          "answer": true
+        },
+        {
+          "text": "Giá trị lớn nhất của hàm số trên đoạn $[-2;1]$ là $5$",
+          "answer": false
+        },
+        {
+          "text": "Các hệ số $a$, $b$, $c$, $d$ thỏa mãn $a^2+b^2+c^2+d^2=30$",
+          "answer": true
+        }
+      ],
       "id": 16,
-      "error": "nothing to repeat at position 58"
+      "solution": "Dựa vào đồ thị hàm số, ta thấy:\n <br>\n <br> • Đồ thị có tiệm cận đứng là đường thẳng $x=2\\Rightarrow d=2$.\n <br> • Đồ thị có tiệm cận xiên đi qua hai điểm $(-2;0)$ và $(0;2)$ nên phương trình tiệm cận xiên là $y=x+2$.\n <br> • Đồ thị cắt trục tung tại điểm có tung độ nằm giữa $2$ và $3$ (cụ thể là đi qua điểm $(0; 2{,}5)$).\n <br>\n Từ các dữ kiện trên, hàm số có dạng\n \\[y=x+2+\\dfrac{k}{x-2}=\\dfrac{x^2-4+k}{x-2}. \\]\n Mặt khác, đồ thị đi qua điểm $(0; 2{,}5)$ nên $2{,}5=\\dfrac{0^2-4+k}{0-2}\\Rightarrow -5=-4+k\\Rightarrow k=-1$. <br>\n Do đó, hàm số đã cho là $y=\\dfrac{x^2-5}{x-2}$. <br> \n Suy ra $a=1$, $b=0$, $c=-5$, $d=2$. <br> \n Khảo sát sự biến thiên của hàm số $y=\\dfrac{x^2-5}{x-2}$:\n <br>\n <br> • Tập xác định $\\mathscr{D}=\\mathbb{R}\\setminus\\{2\\}$.\n <br> • Ta có $y'=1+\\dfrac{1}{(x-2)^2}> 0$, $\\forall x\\neq 2$.\n <br> • Bảng biến thiên\n\n <br>\n Dựa vào bảng biến thiên, ta xét các mệnh đề sau:\n <br>\n <br> • Hàm số đồng biến trên các khoảng $(-\\infty; 2)$ và $(2; +\\infty)$, hàm số không đồng biến trên $\\mathbb{R}$.\n <br> • Tiệm cận xiên của đồ thị là đường thẳng $y=x+2$.\n <br> • Hàm số liên tục và đồng biến trên đoạn $[-2;1]$. <br> \n Do đó giá trị lớn nhất của hàm số trên đoạn $[-2;1]$ đạt tại $x=1$. <br>\n Khi đó $\\max\\limits_{[-2;1]} y=y(1)=\\dfrac{1^2-5}{1-2}=4$.\n <br> • Ta có $a^2+b^2+c^2+d^2=1^2+0^2+(-5)^2+2^2=30$.\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[font=\\footnotesize,line join=round, line cap=round, >=stealth,scale=0.6] \n    \n\t\t\t\\def \\xmin{-3.5}\\def \\xmax{6}\\def \\ymin{-1}\\def \\ymax{7} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{36W3LT}{\\tiny \\phantom{36W3LT}}} circle(1pt) node[shift=(-135:0.25)]{$O$};\n\t\t\t\\fill (-2,0) circle(1pt) node[shift=(-45:0.25)]{$-2$};\n\t\t\t\\fill (2,0) circle(1pt) node[shift=(-135:0.25)]{$2$};\n\t\t\t\\fill (0,2) circle(1pt) node[shift=(-15:0.2)]{$2$};\n\t\t\t\\fill (0,2.5) circle(1pt) node[shift=(150:0.25)]{$\\tfrac{5}{2}$};\n\t\t\t\\fill (0,4) circle(1pt) node[shift=(180:0.2)]{$4$};\n\t\t\t\\fill (2,4) circle(1pt);\n\t\t\t\\draw[dashed] (0,4)--(2,4);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:1.9] plot(\\x,{((\\x)^2-5)/((\\x)-2)}); \n\t\t\t\\draw[smooth,samples=100,domain=2.1:\\xmax] plot(\\x,{((\\x)^2-5)/((\\x)-2)}); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot(\\x,{(\\x)+2}); \n\t\t\t\\draw[smooth,samples=100,domain=\\ymin:\\ymax] plot({2},\\x);  \n    \\node at (0,0){\\href{36W3LT}{\\tiny \\phantom{36W3LT}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[font=\\footnotesize,line join=round, line cap=round, >=stealth,scale=0.6] \n    \n\t\t\t\\def \\xmin{-3.5}\\def \\xmax{6}\\def \\ymin{-1}\\def \\ymax{7} \n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\\fill (0,0) node{\\href{36W3LT}{\\tiny \\phantom{36W3LT}}} circle(1pt) node[shift=(-135:0.25)]{$O$};\n\t\t\t\\fill (-2,0) circle(1pt) node[shift=(-45:0.25)]{$-2$};\n\t\t\t\\fill (2,0) circle(1pt) node[shift=(-135:0.25)]{$2$};\n\t\t\t\\fill (0,2) circle(1pt) node[shift=(-15:0.2)]{$2$};\n\t\t\t\\fill (0,2.5) circle(1pt) node[shift=(150:0.25)]{$\\tfrac{5}{2}$};\n\t\t\t\\fill (0,4) circle(1pt) node[shift=(180:0.2)]{$4$};\n\t\t\t\\fill (2,4) circle(1pt);\n\t\t\t\\draw[dashed] (0,4)--(2,4);\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:1.9] plot(\\x,{((\\x)^2-5)/((\\x)-2)}); \n\t\t\t\\draw[smooth,samples=100,domain=2.1:\\xmax] plot(\\x,{((\\x)^2-5)/((\\x)-2)}); \n\t\t\t\\draw[smooth,samples=100,domain=\\xmin:\\xmax] plot(\\x,{(\\x)+2}); \n\t\t\t\\draw[smooth,samples=100,domain=\\ymin:\\ymax] plot({2},\\x);  \n    \\node at (0,0){\\href{36W3LT}{\\tiny \\phantom{36W3LT}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-18/q16.png"
     },
     {
+      "type": "short",
+      "question": "Trong một cuộc thi có $7$ thí sinh đã được xếp ngồi cố định quanh một bàn tròn và giám thị có $3$ mã đề khác nhau (giả sử số lượng đề thi của mỗi mã là nhiều tùy ý). Hỏi có bao nhiêu cách phát đề cho các thí sinh, mỗi thí sinh $1$ đề sao cho hai thí sinh ngồi cạnh nhau thì khác mã đề? \n <br>",
+      "answer": "126",
       "id": 17,
-      "error": "nothing to repeat at position 58"
+      "solution": "Giả sử $7$ học sinh được xếp vào các vị trí từ $A_1$ đến $A_7$ như hình vẽ bên dưới. \n\n Giả sử ba mã đề khác nhau là $A$, $B$, $C$. <br>\n Do vai trò của các mã đề như nhau nên ta xét với mã đề $A$. <br>\n Gọi $a$ là số mã đề $A$ được phát. <br>\n Nếu $a=0$ thì ta phát các đề $B$, $C$ cho bảy học sinh. Do số học sinh là lẻ nên chắc chắn có hai bạn ngồi gần nhau được phát trùng đề (kiểu $BB$ hoặc $CC$). Do vậy trường hợp này không thỏa mãn. <br> \n Tương tự với $a=4$ cũng không thỏa mãn. <br>\n Khi đó $1 \\leq a \\leq 3$. \n <br>\n <br> • Với $a=1$, ta có $7$ cách phát mã $A$. Giả sử phát mã đề $A$ vào vị trí $A_1$, khi đó ta có hai cách phát mã đề $B$, $C$ như sau \n\n Do ta có $7$ cách phát mã đề $A$ và với mỗi cách phát đề $A$ có hai cách phát các mã $B$, $C$ nên số cách phát đề trong trường hợp này là $14$ cách. \n <br> • Với $a=2$, ta có $\\mathrm{C}^{2}_{7}$ cách phát mã $A$, nhưng có $7$ trường hợp hai mã $A$ nằm cạnh nhau nên số cách phát mã $A$ thỏa mãn yêu cầu là $\\mathrm{C}^{2}_{7} - 7 = 14$ cách. <br>\n Giả sử ta phát mã $A$ vào vị trí $A_1$ và $A_3$, khi đó ta có các cách phát mã $B$, $C$ như sau \n\n Với mỗi cách phát mã $A$, ta có $4$ cách phát mã $B$, $C$. <br>\n Vậy số cách trong trường hợp này là $56$ (cách). \n <br> • Với $a=3$, ta có $\\mathrm{C}^{3}_{7}$ cách phát mã $A$. Tuy nhiên trong đó có $7$ trường hợp ba mã $A$ được phát cạnh nhau. \n\n và $7 \\cdot 3 =21$ cách phát có $2$ mã $A$ cạnh nhau (dạng tam giác). <br>\n Do vậy số cách phát mã $A$ thỏa mãn yêu cầu là $\\mathrm{C}^{3}_{7} - 7 \\cdot 3 - 7 =7$ cách. <br>\n Với mỗi cách phát mã $A$, ta có $2^3$ cách phát mã $B$, $C$. <br>\n Vậy số cách trong trường hợp này là $56$ (cách). \n <br>\n Vậy số cách phát đề là $14 + 56 + 56 = 126$ (cách).",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Trong không gian $Oxyz$, cho hai điểm $A(6; 0; 4)$, $B(-3; -2; 1)$ và mặt phẳng $(P)$ có phương trình $x + y + 5z +1 =0$. Biết điểm $M$ là điểm thuộc mặt phẳng $(P)$ sao cho $MA + MB$ đạt giá trị nhỏ nhất, tính độ dài đoạn $OM$ ( <em> không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm </em> ). \n <br>",
+      "answer": "3{,}48",
       "id": 18,
-      "error": "nothing to repeat at position 58"
+      "solution": "Vì $6 + 0 + 5 \\cdot 4 + 1 = 27> 0$ và $-3 + (-2) + 5 \\cdot 1 + 1 =1 > 0$ nên $A$ và $B$ nằm về cùng một phía đối với mặt phẳng $(P)$. <br>\n Gọi $H$ là hình chiếu của điểm $A$ xuống mặt phẳng $(P)$. <br>\n Đường thẳng $AH$ đi qua điểm $A$ và vuông góc mặt phẳng $(P)$ nên có phương trình là $\\heva{& x = 6 + t <br> & y = t <br> & z = 4 + 5t}$ với $t \\in \\mathbb{R}$. <br> \n Do đó, tọa độ $H$ có dạng $H(6+t; t; 4+5t)$. <br>\n Vì $H \\in (P)$ nên $6+t + t + 5 \\cdot (4 +5t) + 1 =0 \\Leftrightarrow t =-1 \\Rightarrow H (5; -1; -1)$. <br>\n Gọi $A'$ là điểm đối xứng của điểm $A$ qua mặt phẳng $(P)$. Ta được $A' (4; -2; -6)$. <br>\n Ta có $MA + MB = MA' + MB \\geq A'B$. <br>\n Suy ra $MA + MB$ nhỏ nhất khi và chỉ khi $M$ là giao điểm của $A'B$ với $(P)$. <br>\n Ta có $\\overrightarrow{A'B} = (-7; 0; 7)$. Suy ra $\\overrightarrow{u} = (1; 0; -1)$ là một vectơ chỉ phương của đường thẳng $A'B$. <br>\n Suy ra phương trình đường thẳng $A'B$ là $\\heva{& x = 4 + t <br> & y=-2 <br> & z = -6 - t}$ với $t \\in \\mathbb{R}$. <br>\n Tọa độ điểm $M$ là nghiệm của hệ $\\heva{& x = 4 + t <br> & y=-2 <br> & z = -6 - t <br> & x + y + 5z + 1 =0} \\Leftrightarrow \\heva{& t = - \\dfrac{27}{4} <br> & x = - \\dfrac{11}{4} <br> & y =-2 <br> & z = \\dfrac{3}{4}.}$ <br>\n Vậy $M \\left(-\\dfrac{11}{4}; -2; \\dfrac{3}{4}\\right) \\Rightarrow OM = \\sqrt{\\left(- \\dfrac{11}{4} \\right)^2 + (-2)^2 + \\left(\\dfrac{3}{4} \\right)^2} = \\dfrac{\\sqrt{194}}{4} \\approx 3{,}48$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Vệ tinh Van Allen Probes được phóng lên không gian để nghiên cứu các vành đai bức xạ bao quanh Trái Đất. Vệ tinh này bay theo một quỹ đạo có chu kỳ $10$ giờ - nghĩa là mỗi vòng bay quanh trái đất kéo dài đúng $10$ giờ. Cứ mỗi vòng bay, vệ tinh lại xuyên qua vùng bức xạ mạnh và tích lũy thêm <em> liều bức xạ </em> . Biết rằng đơn vị của bức xạ là Gray (Gy), và khi tổng <em> liều bức xạ </em> chiếu vào vệ tinh đạt $1 000$ Gray, thì vệ tinh hỏng hoàn toàn. Khoảng cách từ tâm trái đất đến vệ tinh được mô hình hóa bằng hàm số $R (T) = 7 000 + 3 000T$ (km), trong đó $T$ là thời gian tính bằng giờ, $0 \\leq T \\leq 10$, kể từ đầu vòng bay. Công thức <em> suất liều bức xạ </em> - tức là lượng bức xạ vệ tinh nhận trong $1$ giờ, phụ thuộc vào khoảng cách $R$ (km) từ vệ tinh đến Trái Đất, là $D (R) = 60 \\cdot \\left(\\dfrac{R}{25 000}\\right)^2$ milligray/giờ. Biết rằng do tính đối xứng và chu kỳ của quỹ đạo bay, tổng liều bức xạ vệ tinh nhận được trong một vòng bay $10$ giờ được tính bằng công thức $L = 2 \\cdot \\int\\limits_{0}^{5} D (R(T)) \\mathrm{d}T$, và $1$ Gray $=1 000$ milligray. Tính số năm hoạt động của vệ tinh từ lúc bắt đầu hoạt động tới khi hỏng hoàn toàn <em> (không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng đến hai chữ số thập phân sau dấu phẩy, coi một năm có $365$ ngày, mỗi ngày có $24$ giờ </em> ). \n <br>",
+      "answer": "5{,}19",
       "id": 19,
-      "error": "nothing to repeat at position 58"
+      "solution": "Tổng liều bức xạ vệ tinh nhận được trong một vòng bay $10$ giờ là \n \\[\n L = 2 \\cdot \\int\\limits_{0}^{5} 60 \\cdot \\left(\\dfrac{7 000 + 3 000T}{25 000}\\right)^2 \\mathrm{d}T=219{,}84 (milligray). \n \\]\n Vậy sau $1$ giờ, vệ tinh nhận được $21{,}984$ milligray bức xạ. <br>\n Vậy tuổi thọ của vệ tinh là $\\dfrac{10^6}{21{,}984 \\cdot 365 \\cdot 24} \\approx 5{,}19$ (năm).",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Trong âm nhạc, một <em> quãng tám </em> (octave) là khoảng cách âm thanh từ nốt Đô tới nốt Đô tiếp theo, theo thứ tự từ thấp đến cao là\n <div class=\"centered\">\n Đô - Đô \\# - Rê - Rê \\# - Mi (E$4$) - Pha - Pha \\# - Sol - Sol \\# - La (A$4$) - La \\# - Si - Đô\n </div>\n trong đó khoảng cách giữa hai nốt liên tiếp gọi là một nửa cung (semitone). Hai nốt cách nhau $n$ nửa cung thì tỉ lệ tần số nốt cao $f_{nc}$ và tần số nốt thấp $f_{nt}$ là $\\dfrac{f_{nc}}{f_{nt}}=2^{\\tfrac{n}{12}}$; cho biết tần số của nốt La (A$4$) là $440$ Hz. Trên đàn guitar, dây số $1$ là nốt Mi (E$4$) đang bị chùng do thời tiết, tần số đo được hiện tại đang là $300$ Hz. Để căng lại dây đàn cho chuẩn, ta dùng núm xoay và cứ vặn núm xoay $90^\\circ$ thì nốt nhạc được tăng lên một nửa cung. Hỏi phải xoay núm dây số $1$ một góc bao nhiêu độ để dây số $1$ trở về âm chuẩn ( <em> không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng tới hàng đơn vị </em> )?\n <br>",
+      "answer": "147",
       "id": 20,
-      "error": "nothing to repeat at position 58"
+      "solution": "Nốt La (A$4$) cách nốt Mi (E$4$) đúng $5$ nửa cung nên tần số của nốt Mi (E$4$) bằng $\\dfrac{440}{2^{\\tfrac{5}{12}}}$ (Hz). <br>\n Để căng lại dây đàn số $1$ cho chuẩn, ta cần xoay núm xoay $n$ nửa cung thỏa mãn\n \\[\\dfrac{\\dfrac{440}{2^{\\tfrac{5}{12}}}}{300}=2^{\\tfrac{n}{12}}\\Leftrightarrow n=12\\log_2\\left(\\dfrac{22}{15\\cdot 2^{\\tfrac{5}{12}}}\\right).\\]\n Do đó phải xoay núm dây số $1$ một góc \n \\[\n 90\\cdot12\\log_2\\left(\\dfrac{22}{15\\cdot 2^{\\tfrac{5}{12}}}\\right)\\approx147^\\circ.\n \\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Mô hình <em> EOQ </em> (Economic Order Quantity) được công bố năm $1913$ là một công cụ quản trị vận hành dùng để xác định lượng hàng nhập kho tối ưu. Giả sử một cửa hàng thức ăn cho mèo có nhu cầu tiêu thụ hàng hóa đều đặn với tốc độ bán hàng $d=100$ hộp/ngày. các thông số chi phí được xác định như sau:\n <br> \n <br> • $K=1 000 000$ đồng là chi phí cố định cho mỗi lần đặt hàng (phí vận chuyển, nhân công,...);\n <br> • $c$ đồng/hộp là giá nhập mỗi hộp hàng (giả định không đổi và không có chiết khấu);\n <br> • $h=500$ đồng/hộp/ngày là đơn giá lưu kho (chi phí lưu giữ một hộp hàng trong kho trong một ngày).\n <br>\n Gọi $Q$ (hộp) là số lượng hàng mà người bán nhập vào trong kho mỗi lần đặt hàng. Thời gian tiêu thụ hết lượng hàng là $\\dfrac{Q}{d}$ (ngày). Tổng chi phí cho một chu kì đặt hàng và tiêu thụ hết hàng là $f=K+cQ+\\dfrac{hQ^2}{2d}$. Hỏi cửa hàng nên nhập bao nhiêu hộp trong mỗi lần đặt hàng để chi phí trung bình mỗi ngày là nhỏ nhất ( <em> không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng tới hàng đơn vị </em> )?\n <br>",
+      "answer": "632",
       "id": 21,
-      "error": "nothing to repeat at position 58"
+      "solution": "Chi phí trung bình mỗi ngày là \n \\[\n T=\\dfrac{f}{\\dfrac{Q}{d}}=\\dfrac{K+cQ+\\dfrac{hQ^2}{2d}}{\\dfrac{Q}{d}}=\\dfrac{Kd}{Q}+cd+\\dfrac{hQ}{2}.\n \\]\n Xét hàm số $T(Q)=\\dfrac{Kd}{Q}+cd+\\dfrac{hQ}{2}$, với $Q> 0$. <br>\n Vì $K$, $d$, $c$, $h$ là hằng số nên ta có $T'(Q)=\\dfrac{-Kd}{Q^2}+\\dfrac{h}{2}$. <br>\n Xét $T'(Q)=0\\Rightarrow Q=\\sqrt{\\dfrac{2Kd}{h}}=200\\sqrt{10}$. <br>\n Bảng biến thiên \n\n Dựa vào bảng biến thiên, $T$ đạt giá trị nhỏ nhất khi $Q=200\\sqrt{10}\\approx 632$. <br>\n Vậy cửa hàng nên nhập khoảng $632$ hộp trong mỗi lần đặt hàng để chi phí trung bình mỗi ngày là nhỏ nhất.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Cho hình lăng trụ $ABC.A'B'C'$ có đáy $ABC$ là tam giác đều cạnh bằng $2$, hình chiếu của $A'$ trên $(ABC)$ trùng với trung điểm $M$ của $AB$; góc giữa cạnh bên và mặt đáy bằng $60^\\circ$. Gọi $N$ là trung điểm của $CC'$. Tính khoảng cách từ $B'$ tới mặt phẳng $\\left(A'MN\\right)$ ( <em> không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng tới hàng phần trăm </em> )?\n <br>",
+      "answer": "1{,}92",
       "id": 22,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có $AM$ là hình chiếu vuông góc của $AA'$ lên mặt phẳng $(ABC)$. <br>\n Suy ra $\\big(AA',(ABC)\\big)=\\left(AA',AM\\right)=\\widehat{A'AM}=60^\\circ\\Rightarrow A'M=AM\\cdot \\tan 60^\\circ=\\sqrt{3}$. <br>\n Trong mặt phẳng $\\left(ACC'A'\\right)$ gọi $P$ là giao điểm của $A'N$ và $AC$, suy ra $AP=2AC=4$. <br>\n Trong mặt phẳng $\\left(ABB'A'\\right)$ gọi $E$ là giao điểm của $A'M$ và $AB'$, suy ra $\\dfrac{B'E}{AE}=\\dfrac{A'B'}{AM}=2$. <br>\n Ta có $\\mathrm{d}\\left(B',\\left(A'MP\\right)\\right)=\\dfrac{B'E}{AE}\\cdot\\mathrm{d}\\left(A,\\left(A'MP\\right)\\right)=2\\mathrm{d}\\left(A,\\left(A'MP\\right)\\right)$. <br>\n Mặt phẳng $\\left(A'MP\\right)$ chứa $A'M$ vuông góc với mặt phẳng $(ABC)$ nên $\\left(A'MP\\right)\\perp (ABC)$. <br>\n Suy ra \n \\allowdisplaybreaks\n <br> \\[ \n \\mathrm{d}\\left(A,\\left(A'MP\\right)\\right)&=\\mathrm{d}(A,MP) <br> \n &=\\dfrac{2S_{\\triangle AMP}}{MP} <br> \n &=\\dfrac{AM\\cdot AP\\cdot \\sin\\widehat{MAP}}{\\sqrt{AM^2+AP^2-2AM\\cdot AP\\cdot\\cos\\widehat{MAP}}} <br> \n &=\\dfrac{1 \\cdot 4\\cdot \\sin 60^\\circ}{\\sqrt{1^2+4^2-2\\cdot 1\\cdot 4\\cdot\\cos 60^\\circ}} <br> \n &=\\dfrac{2\\sqrt{39}}{13}.\n \\] <br>\n Do đó, $\\mathrm{d}\\left(B',\\left(A'MN\\right)\\right)=\\mathrm{d}\\left(B',\\left(A'MP\\right)\\right)=\\dfrac{4\\sqrt{39}}{13}\\approx 1{,}92$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     }
   ],
-  "settings": {
-    "durationMinutes": 90.0,
-    "submitAfterMinutes": 1.0,
-    "maxAttempts": 1,
-    "scoring": {
-      "choiceTotal": 3.0,
-      "choiceCount": 12,
-      "truefalseTotal": 4.0,
-      "truefalseCount": 4,
-      "shortTotal": 3.0,
-      "shortCount": 6,
-      "truefalseMode": "progressive"
-    }
-  }
+  "errors": []
 }

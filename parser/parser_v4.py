@@ -91,6 +91,44 @@ def split_math_segments(text):
     pattern=r'(\$\$[\s\S]*?\$\$|\$[^$]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))'
     return re.split(pattern, text)
 
+
+def unwrap_format_commands_deep(text):
+    r"""Gỡ \textbf, \textit, \emph... kể cả khi bên trong có công thức $...$.
+    Dùng bộ đọc ngoặc brace() thay vì regex đơn giản để tránh sót lệnh.
+    """
+    cmds = {
+        'textbf': ('strong','strong'), 'bf': ('strong','strong'),
+        'textit': ('em','em'), 'emph': ('em','em'), 'it': ('em','em'), 'itshape': ('em','em'),
+        'underline': ('u','u'), 'text': ('','')
+    }
+    out=[]; i=0
+    n=len(text)
+    while i<n:
+        if text[i]=='\\':
+            m=re.match(r'\\([A-Za-z]+)', text[i:])
+            if m:
+                name=m.group(1)
+                if name in cmds:
+                    j=i+len(name)+1
+                    j=skip_opt(text,j)
+                    k=j
+                    while k<n and text[k].isspace(): k+=1
+                    if k<n and text[k]=='{':
+                        body,end=brace(text,k)
+                        a,b=cmds[name]
+                        out.append((f'<{a}>' if a else '') + body + (f'</{b}>' if b else ''))
+                        i=end
+                        continue
+        out.append(text[i]); i+=1
+    text=''.join(out)
+    # Dạng nhóm chữ: {\it nội dung} hoặc {\bf nội dung}
+    for _ in range(6):
+        old=text
+        text=re.sub(r'\{\s*\\(?:it|itshape)\s+([^{}]+?)\s*\}', r'<em>\1</em>', text)
+        text=re.sub(r'\{\s*\\bf\s+([^{}]+?)\s*\}', r'<strong>\1</strong>', text)
+        if text==old: break
+    return text
+
 def unwrap_text_commands_plain(t):
     # Các lệnh định dạng chữ ngoài môi trường toán.
     # Sửa lỗi hiện nguyên \textbf{...}, \textit{...}, {\it{...}} và lỗi dính chữ.
@@ -118,13 +156,48 @@ def clean_text_commands(text):
             out.append(unwrap_text_commands_plain(part))
     return ''.join(out)
 
+def normalize_text_envs(text):
+    """Chuyển các môi trường LaTeX văn bản sang HTML trước khi dọn ngoặc.
+    Làm sớm để không bị biến \begin{center} thành \begincenter.
+    """
+    # center / flushleft / flushright: giữ nội dung, bỏ lệnh môi trường
+    for env, cls in [('center','centered'), ('flushleft',''), ('flushright','')]:
+        text = re.sub(r'\\begin\s*\{\s*'+env+r'\s*\}', '<div class="%s">' % cls if cls else '<br>', text)
+        text = re.sub(r'\\end\s*\{\s*'+env+r'\s*\}', '</div>' if cls else '<br>', text)
+    # itemize/enumerate/itimize: giữ nội dung, đổi \item thành bullet
+    for env in ('itemize','enumerate','itimize','itemchoice'):
+        text = re.sub(r'\\begin\s*\{\s*'+env+r'\s*\}', '<br>', text)
+        text = re.sub(r'\\end\s*\{\s*'+env+r'\s*\}', '<br>', text)
+    # eqnarray/align chỉ nên giữ phần toán gốc, tránh hiện begin/end ở text
+    for env in (r'eqnarray\*?', r'align\*?', r'gather\*?'):
+        text = re.sub(r'\\begin\s*\{\s*'+env+r'\s*\}', '<br>\\[', text)
+        text = re.sub(r'\\end\s*\{\s*'+env+r'\s*\}', '\\]<br>', text)
+    return text
+
+def cleanup_latex_residue(text):
+    # Dọn các vết sót do một số đề hoặc bản parser cũ có thể để lại.
+    residues = {
+        r'\\begincenter':'<div class="centered">', r'\\endcenter':'</div>',
+        r'\\beginitemize':'<br>', r'\\enditemize':'<br>',
+        r'\\beginenumerate':'<br>', r'\\endenumerate':'<br>',
+        r'\\beginitimize':'<br>', r'\\enditimize':'<br>',
+        r'\\beginitemchoice':'<br>', r'\\enditemchoice':'<br>',
+    }
+    for a,b in residues.items(): text=text.replace(a,b)
+    text=re.sub(r'\\begin\s*\{\s*(center|itemize|enumerate|itimize|itemchoice|flushleft|flushright)\s*\}','<br>',text)
+    text=re.sub(r'\\end\s*\{\s*(center|itemize|enumerate|itimize|itemchoice|flushleft|flushright)\s*\}','<br>',text)
+    return text
+
 def clean(text):
     text=remove_visual(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
     text=re.sub(r'\\phantom\{[^{}]*\}','',text)
+    text=normalize_text_envs(text)
+    text=unwrap_format_commands_deep(text)
     text=clean_text_commands(text)
-    repl={r'\begin{itemize}':'<br>',r'\end{itemize}':'<br>',r'\begin{enumerate}':'<br>',r'\end{enumerate}':'<br>',r'\begin{center}':'<div class="centered">',r'\end{center}':'</div>',r'\par':'<br>'}
-    for a,b in repl.items(): text=text.replace(a,b)
+    text=cleanup_latex_residue(text)
+    text=text.replace(r'\par','<br>')
+    text=re.sub(r'\\itemch\s*','<br>• ',text)
     text=re.sub(r'\\item\s*','<br>• ',text)
     text=text.replace('\\\\','<br>')
     text=text.replace(r'\lq\lq','“').replace(r'\rq\rq','”').replace(r'\lq','‘').replace(r'\rq','’')
@@ -132,6 +205,8 @@ def clean(text):
     text=re.sub(r'\\[,;:! ]',' ',text)
     text=re.sub(r'\\(quad|qquad)\b',' ',text)
     text=re.sub(r'\\(noindent|smallskip|medskip|bigskip)\b',' ',text)
+    # Dọn lệnh kiểu \displaystyle, \limits ngoài math nếu bị sót ở text thường
+    text=re.sub(r'\\(displaystyle|textstyle|scriptstyle|scriptscriptstyle)\b','',text)
     # Bảo toàn khoảng trắng quanh tag HTML để tránh dính chữ.
     text=re.sub(r'(?<=>)(?=\S)', ' ', text)
     text=re.sub(r'(?<=\S)(?=<)', ' ', text)

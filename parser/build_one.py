@@ -19,6 +19,8 @@ def build(tex_file, exam_id, title, settings=None):
     exam_dir.mkdir(parents=True,exist_ok=True); img_dir.mkdir(parents=True,exist_ok=True)
     data=parser_v4.parse(parser_v4.read_text(tex_file), exam_id)
     data['title']=title or exam_id
+    if len(data.get('questions', [])) == 0:
+        raise RuntimeError('LỖI PARSER: Không tạo được câu hỏi nào. Vui lòng kiểm tra file TEX hoặc gửi log cho ChatGPT. Lỗi: ' + json.dumps(data.get('errors', []), ensure_ascii=False))
     if settings:
         data['settings'] = settings
     for q in data.get('questions',[]):

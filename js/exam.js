@@ -54,34 +54,7 @@ function studentLabel(){
   const cls = localStorage.getItem('className') || 'Chưa nhập lớp';
   return `${sid}${name ? ' - ' + name : ''} - ${cls}`;
 }
-
-function latexTextClientClean(s){
-  s = String(s ?? '');
-  // Dọn các môi trường văn bản còn sót trong JSON cũ.
-  s = s.replace(/\\begin\s*\{\s*center\s*\}|\\begincenter\b/g, '<div class="centered">');
-  s = s.replace(/\\end\s*\{\s*center\s*\}|\\endcenter\b/g, '</div>');
-  s = s.replace(/\\begin\s*\{\s*(itemize|itimize|enumerate|itemchoice)\s*\}|\\begin(itemize|itimize|enumerate|itemchoice)\b/g, '<br>');
-  s = s.replace(/\\end\s*\{\s*(itemize|itimize|enumerate|itemchoice)\s*\}|\\end(itemize|itimize|enumerate|itemchoice)\b/g, '<br>');
-  s = s.replace(/\\item\s*(\[[^\]]*\])?/g, '<br>• ');
-  // Các lệnh định dạng văn bản cơ bản.
-  for(let k=0;k<6;k++){
-    const old=s;
-    s = s.replace(/\{\s*\\it\s*\{([^{}]*)\}\s*\}/g, '<em>$1</em>');
-    s = s.replace(/\{\s*\\it\s+([^{}]+?)\s*\}/g, '<em>$1</em>');
-    s = s.replace(/\\textit\s*\{([^{}]*)\}/g, '<em>$1</em>');
-    s = s.replace(/\\emph\s*\{([^{}]*)\}/g, '<em>$1</em>');
-    s = s.replace(/\\textbf\s*\{([^{}]*)\}/g, '<strong>$1</strong>');
-    s = s.replace(/\\text\s*\{([^{}]*)\}/g, '$1');
-    if(s===old) break;
-  }
-  s = s.replace(/\\(it|itshape|textit|emph|textbf|bf|bfseries)\b\s*/g, '');
-  s = s.replace(/\\(begin|end)\s*\{[^{}]*\}/g, ' ');
-  s = s.replace(/\\(begin|end)[A-Za-z]+\b/g, ' ');
-  s = s.replace(/(?<=>)(?=\S)/g,' ').replace(/(?<=\S)(?=<)/g,' ');
-  return s;
-}
-
-function renderLatex(text){return `<div class="latex-content">${latexTextClientClean(text || '')}</div>`;}
+function renderLatex(text){return `<div class="latex-content">${text || ''}</div>`;}
 function visualBlock(q){
   if(q.image) return `<img class="question-image" src="${q.image}" alt="Hình câu ${q.id}">`;
   if(q.hasTikz || q.hasImmini || q.hasTable){
@@ -91,11 +64,11 @@ function visualBlock(q){
   return '';
 }
 function renderChoice(q){
-  const opts=(q.options||[]).map((opt,i)=>`<label class="option"><input type="radio" name="q${q.id}" value="${i}"><span>${String.fromCharCode(65+i)}. ${latexTextClientClean(opt)}</span></label>`).join('');
+  const opts=(q.options||[]).map((opt,i)=>`<label class="option"><input type="radio" name="q${q.id}" value="${i}"><span>${String.fromCharCode(65+i)}. ${opt}</span></label>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${opts}`;
 }
 function renderTrueFalse(q){
-  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${latexTextClientClean(st.text)}</div><label><input type="radio" name="q${q.id}_${i}" value="true"> Đúng</label><label><input type="radio" name="q${q.id}_${i}" value="false"> Sai</label></div>`).join('');
+  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${st.text}</div><label><input type="radio" name="q${q.id}_${i}" value="true"> Đúng</label><label><input type="radio" name="q${q.id}_${i}" value="false"> Sai</label></div>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${rows}`;
 }
 function renderShort(q){return `${renderLatex(q.question)}${visualBlock(q)}<input class="short-input" id="q${q.id}" placeholder="Nhập đáp án">`;}
