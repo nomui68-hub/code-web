@@ -9,12 +9,12 @@
     },
     {
       "id": "2-KS-18",
-      "title": "SoQuangNinh-L1",
+      "title": "SoQuangNinh",
       "file": "exams/2-KS-18/questions.json",
       "active": true,
       "settings": {
         "durationMinutes": 90.0,
-        "submitAfterMinutes": 2.0,
+        "submitAfterMinutes": 1.0,
         "maxAttempts": 1,
         "scoring": {
           "choiceTotal": 3.0,
@@ -29,12 +29,12 @@
     },
     {
       "id": "2-KS-19",
-      "title": "CumHungYen",
+      "title": "CumHungYen-L-1",
       "file": "exams/2-KS-19/questions.json",
       "active": true,
       "settings": {
         "durationMinutes": 90.0,
-        "submitAfterMinutes": 0.0,
+        "submitAfterMinutes": 1.0,
         "maxAttempts": 1,
         "scoring": {
           "choiceTotal": 3.0,
