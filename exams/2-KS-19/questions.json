@@ -1,101 +1,517 @@
 {
   "examId": "2-KS-19",
-  "title": "CumHungYen-L-1",
-  "questions": [],
-  "errors": [
+  "title": "CumHungYen",
+  "questions": [
     {
+      "type": "choice",
+      "question": "Hằng ngày, mực nước của một con kênh lên xuống theo thuỷ triều. Độ sâu $h$ (m) của mực nước trong kênh tính theo thời gian $t$ (giờ) trong một ngày ($0\\le t\\le 24$) được cho bởi công thức $h(t) = 2\\cos \\left(\\pi+\\dfrac{\\pi t}{6}\\right)+12$. Độ sâu của mực nước tại thời điểm $t=3$ giờ bằng",
+      "options": [
+        "$13$ m",
+        "$14$ m",
+        "$12$ m",
+        "$11$ m"
+      ],
+      "answer": 2,
       "id": 1,
-      "error": "nothing to repeat at position 58"
+      "solution": "Tại thời điểm $t=3$ giờ, ta có $h(3)=2\\cos\\left(\\pi+\\dfrac{\\pi\\cdot3}{6}\\right)+12 = 12$ (m).",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Hàm số nào sau đây <strong> không </strong> là một nguyên hàm của hàm số $f(x)=3x^2+2x-1$?",
+      "options": [
+        "$F_1(x)=x^3+x^2-x$",
+        "$F_2(x)=x^3+x^2-x+2 026$",
+        "$F_3(x)=x^3+x^2-1$",
+        "$F_4(x)=x^3+x^2-x-1$"
+      ],
+      "answer": 2,
       "id": 2,
-      "error": "nothing to repeat at position 58"
+      "solution": "Họ nguyên hàm của hàm số $f(x)$ là\n \\[\\int f(x)\\mathrm{ d}x\n =\\int\\left(3x^2+2x-1\\right)\\mathrm{d}x\n =x^3+x^2-x+C, với $C$ là hằng số.\\]\n Do đó $F_3(x)=x^3+x^2-1$ <strong> không </strong> là một nguyên hàm của hàm số $f(x)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hàm số $f(x)$ liên tục trên $\\mathbb{R}$ và hàm số $F(x)$ là nguyên hàm của hàm số $f(x)$. Biết $\\int\\limits_0^9 f(x)\\mathrm{ d}x=9$ và $F(0)=3$. Giá trị của $F(9)$ là",
+      "options": [
+        "$F(9)=-6$",
+        "$F(9)=-12$",
+        "$F(9)=6$",
+        "$F(9)=12$"
+      ],
+      "answer": 3,
       "id": 3,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta có $\\int\\limits_0^9 f(x)\\mathrm{ d}x=9\n \\Leftrightarrow F(9)-F(0)=9\n \\Rightarrow F(9)=9+F(0)=9+3=12$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hình chóp $S.ABC$. Khẳng định nào sau đây là đúng?",
+      "options": [
+        "$SA$ và $BC$ cắt và vuông góc với nhau",
+        "$SA$ và $BC$ cắt nhau",
+        "$SA$ và $BC$ song song với nhau",
+        "$SA$ và $BC$ chéo nhau"
+      ],
+      "answer": 3,
       "id": 4,
-      "error": "nothing to repeat at position 58"
+      "solution": "Xét hình chóp $S.ABC$, ta có $SA$ và $BC$ không cùng nằm trong một mặt phẳng nên chúng chéo nhau.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho mặt phẳng $(\\alpha)\\colon 2x+4y-z+3=0$. Vectơ nào sau đây là một vectơ pháp tuyến của mặt phẳng $(\\alpha)$?",
+      "options": [
+        "$\\vec{n}_1=(2;4;-1)$",
+        "$\\vec{n}_3=(-2;4;1)$",
+        "$\\vec{n}_4=(2;4;1)$",
+        "$\\vec{n}_2=(2;-4;1)$"
+      ],
+      "answer": 0,
       "id": 5,
-      "error": "nothing to repeat at position 58"
+      "solution": "Từ phương trình mặt phẳng $(\\alpha)\\colon 2x+4y-z+3=0$, ta có một vectơ pháp tuyến của mặt phẳng $(\\alpha)$ là $\\vec{n}_1=(2;4;-1)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Phương trình $\\log_3(x-1)=1$ có nghiệm là",
+      "options": [
+        "$x=4$",
+        "$x=1$",
+        "$x=2$",
+        "$x=3$"
+      ],
+      "answer": 0,
       "id": 6,
-      "error": "nothing to repeat at position 58"
+      "solution": "Điều kiện xác định $x-1> 0\\Leftrightarrow x> 1$. <br>\n Ta có $\\log_3(x-1)=1\\Leftrightarrow x-1=3\\Leftrightarrow x=4$ (thoả mãn). <br>\n Vậy phương trình $\\log_3(x-1)=1$ có nghiệm là $x=4$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho ba điểm $A(1;1;1)$, $B(0;2;1)$ và $C(1;-1;2)$. Mặt phẳng đi qua điểm $A$ và vuông góc với đường thẳng $BC$ có phương trình là",
+      "options": [
+        "$x-3y+z+1=0$",
+        "$x+3y+z-1=0$",
+        "$x-3y+z-1=0$",
+        "$x+3y-z+1=0$"
+      ],
+      "answer": 0,
       "id": 7,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gọi $(P)$ là mặt phẳng đi qua điểm $A$ và vuông góc với đường thẳng $BC$. <br>\n Khi đó, mặt phẳng $(P)$ là mặt phẳng đi qua điểm $A(1;1;1)$ và nhận $\\overrightarrow{BC}=(1;-3;1)$ làm một vectơ pháp tuyến. <br>\n Do đó, phương trình của mặt phẳng $(P)$ là \n \\[1(x-1)-3(y-1)+1(z-1)=0\\Leftrightarrow x-3y+x+1=0.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Khảo sát thời gian tập thể dục của một số học sinh khối $11$ thu được mẫu số liệu ghép nhóm sau:\n\n Mốt của mẫu số liệu ghép nhóm trên bằng",
+      "options": [
+        "$53$",
+        "$52$",
+        "$54$",
+        "$42$"
+      ],
+      "answer": 1,
       "id": 8,
-      "error": "nothing to repeat at position 58"
+      "solution": "Tần số lớn nhất là $12$ nên nhóm chứa mốt là nhóm $[40;60)$. <br>\n Ta có $j=2$, $a_2=40$, $m_2=12$, $m_1=9$, $m_3=10$, $h=60-40=20$. Do đó\n \\[M_{o}=40+\\dfrac{12-9}{(12-9)+(12-10)}\\cdot20=52.\\]",
+      "visualLatex": "\\begin{tabular}{|l|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tThời gian (phút) & $[0;20)$ & $[20;40)$ & $[40;60)$ & $[60;80)$ & $[80;100)$\\\\\n\t\t\t\\hline\n\t\t\tSố học sinh & $5$ & $9$ & $12$ & $10$ & $6$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|l|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tThời gian (phút) & $[0;20)$ & $[20;40)$ & $[40;60)$ & $[60;80)$ & $[80;100)$\\\\\n\t\t\t\\hline\n\t\t\tSố học sinh & $5$ & $9$ & $12$ & $10$ & $6$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-19/q8.png"
     },
     {
+      "type": "choice",
+      "question": "Giá của một chiếc xe ô tô lúc mới mua là $470$ triệu đồng. Trong $8$ năm đầu, cứ sau mỗi năm sử dụng, giá trị của chiếc xe ô tô giảm $40$ triệu đồng. Giá trị còn lại của xe sau $5$ năm sử dụng bằng",
+      "options": [
+        "$350$ triệu đồng",
+        "$310$ triệu đồng",
+        "$270$ triệu đồng",
+        "$230$ triệu đồng"
+      ],
+      "answer": 2,
       "id": 9,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gọi $(u_n)$ là giá trị của chiếc xe ô tô sau năm sử dụng thứ $n$ ($1\\le n\\le8$) thì $(u_n)$ là một cấp số cộng có số hạng đầu $u_1=470-40=430$ và công sai $d=-40$. <br>\n Giá trị còn lại của chiếc xe sau $5$ năm sử dụng ($n=5$) là \n \\[u_5=u_1+(5-1)\\cdot d=430+4\\cdot(-40)=270 (triệu đồng).\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, mặt phẳng $(P)$ cắt các trục $Ox$, $Oy$, $Oz$ lần lượt tại $A\\left(\\dfrac{14}{3};0;0\\right)$, $B(0;7;0)$, $C(0;0;14)$. Phương trình mặt phẳng $(P)$ là",
+      "options": [
+        "$2x+y+3z+9=0$",
+        "$3x+2y+z-14=0$",
+        "$2x+y+z-9=0$",
+        "$3x+2y+z+14=0$"
+      ],
+      "answer": 1,
       "id": 10,
-      "error": "nothing to repeat at position 58"
+      "solution": "Mặt phẳng $(P)$ cắt các trục $Ox$, $Oy$, $Oz$ lần lượt tại $A\\left(\\dfrac{14}{3};0;0\\right)$, $B(0;7;0)$, $C(0;0;14)$ nên có phương trình là \n \\[\\dfrac{x}{\\dfrac{14}{3}}+\\dfrac{y}{7}+\\dfrac{z}{14}=1\\Leftrightarrow3x+2y+z-14=0.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ biết $AA'=4$, $AB=4$, $BC=6$. Thể tích khối chóp $A'.ABCD$ bằng",
+      "options": [
+        "$32$",
+        "$16$",
+        "$96$",
+        "$48$"
+      ],
+      "answer": 0,
       "id": 11,
-      "error": "nothing to repeat at position 58"
+      "solution": "Vì $ABCD.A'B'C'D'$ là hình hộp chữ nhật nên $AA'\\perp (ABCD)$ và $S_{ABCD}=AB\\cdot BC=4\\cdot6=24$. <br>\n Do đó, thể tích của khối chóp $A'.ABCD$ là $V=\\dfrac{1}{3}\\cdot S_{ABCD}\\cdot AA'\n =\\dfrac{1}{3}\\cdot 24\\cdot 4=32$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ xác định trên $\\mathbb{R}$ và có bảng biến thiên sau:\n\n Điểm cực đại của hàm số $y=f(x)$ là",
+      "options": [
+        "$x=-3$",
+        "$x=-4$",
+        "$x=-7$",
+        "$x=-6$"
+      ],
+      "answer": 1,
       "id": 12,
-      "error": "nothing to repeat at position 58"
+      "solution": "Từ bảng biến thiên, ta có điểm cực đại của hàm số $y=f(x)$ là $x=-4$.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=3.5, deltacl=0.5]\n\t\t\t{$x$/0.7,$y’$/0.7,$y$/2}\n\t\t\t{$-\\infty$,$-7$,$-4$,$+\\infty$}\n\t\t\t\\tkzTabLine{,-,0,+,0,-,}\n\t\t\t\\tkzTabVar{+/$+\\infty$,-/$-6$,+/$-3$,-/$-\\infty$}\n    \\node at (T11){\\href{1SUFTC}{\\tiny \\phantom{1SUFTC}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=3.5, deltacl=0.5]\n\t\t\t{$x$/0.7,$y’$/0.7,$y$/2}\n\t\t\t{$-\\infty$,$-7$,$-4$,$+\\infty$}\n\t\t\t\\tkzTabLine{,-,0,+,0,-,}\n\t\t\t\\tkzTabVar{+/$+\\infty$,-/$-6$,+/$-3$,-/$-\\infty$}\n    \\node at (T11){\\href{1SUFTC}{\\tiny \\phantom{1SUFTC}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-19/q12.png"
     },
     {
+      "type": "truefalse",
+      "question": "Một kho chứa hàng có dạng hình lăng trụ đứng $OAFPE.CBGQH$ với $OAFE$ là hình chữ nhật và $EPF$ là tam giác cân tại $P$. \n Biết $OA=4$ m; $AB=6$ m; $HC=5$ m; độ dốc của mái nhà, tức là số đo góc phẳng nhị diện $[Q,FG,H]$ bằng $45^\\circ$. Người ta mô hình hóa nhà kho bằng cách chọn hệ trục toạ độ tương ứng như hình vẽ sau đây (đơn vị trên mỗi trục là $1$ m).",
+      "statements": [
+        {
+          "text": "Tọa độ của điểm $G$ là $(6;4;5)$",
+          "answer": false
+        },
+        {
+          "text": "Tọa độ của $\\overrightarrow{PQ}$ là $(0;6;0)$",
+          "answer": true
+        },
+        {
+          "text": "Chiều cao kho hàng tức là khoảng cách từ nóc nhà (điểm cao nhất của nóc nhà) và sàn nhà bằng $7$ (m)",
+          "answer": true
+        },
+        {
+          "text": "Người ta muốn lắp camera quan sát trong nhà kho tại vị trí trung điểm $M$ của đoạn thẳng $GQ$ và đầu thu dữ liệu đặt tại vị trí $O$. Người ta thiết kế đường dây cáp nối từ đầu thu dữ liệu $O$ đến camera. Biết rằng đường dây cáp đi qua điểm $E$ và điểm $H$. Độ dài đoạn cáp nối tối thiểu để kết nối đầu thu với camera bằng $11+\\sqrt{10}$ (m)",
+          "answer": true
+        }
+      ],
       "id": 13,
-      "error": "nothing to repeat at position 58"
+      "solution": "<br>\n <br> • Ta có $A(4;0;0)$, $B(4;6;0)$, $C(0;6;0)$, $H(0;6;5)$. <br>\n Suy ra $G(4;6;5)$.\n <br> • Do nhà kho $OAFPE.CBGQH$ có dạng hình lăng trụ đứng nên $\\overrightarrow{PQ}=\\overrightarrow{OC}=(0;6;0)$.\n <br> • Gọi $I$ là trung điểm của $EF$. <br>\n Khi đó $PI$ là đường trung tuyến trong $\\triangle EPF$ vuông cân tại $P$ nên \\[PI = \\dfrac{1}{2} EF = \\dfrac{1}{2} \\cdot 4 = 2 (m).\\]\n Suy ra $PI + FA = 2 + 5 = 7$ (m). <br>\n Vậy khoảng cách giữa nóc nhà và sàn nhà là $7$ m.\n <br> • Ta có $FG \\perp (CBGQH)$ (vì $OAFPE.CBGQH$ là hình lăng trụ đứng). <br>\n Suy ra $QG \\perp FG$, $HG \\perp FG$ nên số đo góc phẳng nhị diện $[Q,FG,H]$ là \n $\\widehat{QGH} = 45^\\circ$. <br>\n Do đó $\\triangle EPF$ là tam giác vuông cân tại $P$, suy ra $\\triangle HQG$ cũng là tam giác vuông cân tại $Q$. <br>\n Khi đó, ta có $QH=QG=\\dfrac{HG}{\\sqrt{2}}=\\dfrac{4}{\\sqrt{2}}=2\\sqrt{2}$ (m). <br>\n Gọi $M$ là trung điểm của $QG$ suy ra $QM=\\sqrt{2}$ (m). <br>\n Xét $\\triangle QHM$ vuông tại $Q$ có $HM^2=QM^2+QH^2$. <br>\n Suy ra $HM=\\sqrt{\\left(\\sqrt{2}\\right)^2+\\left(2\\sqrt{2}\\right)^2}=\\sqrt{10}$ (m). <br>\n Vậy độ dài đoạn cáp nối tối thiểu là $OE+EH+HM=5+6+\\sqrt{10}=11+\\sqrt{10}$ (m).\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (O) node[below left]{$O$}\n\t\t\t\t(4,0) coordinate (A) node[below]{$A$}\n\t\t\t\t(0,3) coordinate (E) node[left]{$E$}\n\t\t\t\t($(A)+(E)-(O)$) coordinate (F)node[right]{$F$}\n\t\t\t\t(A)+(1,2) coordinate (B) node[right]{$B$}\n\t\t\t\t($(O)+(B)-(A)$) coordinate (C) node[left]{$C$}\n\t\t\t\t($(C)+(E)-(O)$) coordinate (H) node[left]{$H$}\n\t\t\t\t($(H)+(B)-(C)$) coordinate (G) node [right]{$G$}\n\t\t\t\t($(O)!.5!(A)$) coordinate (x)\n\t\t\t\t(x)+(0,4.5) coordinate (P) node[below]{$P$}\n\t\t\t\t($(P)+(H)-(E)$) coordinate (Q) node[above]{$Q$}\n\t\t\t\t;\n\t\t\t\\draw[->] (O)--(E)--($(E)+(90:1)$)node[left]{$z$};\n\t\t\t\\draw[->] (O)--(A)--($(A)+(0:1)$) node[below]{$x$};\n\t\t\t\\draw[dashed,->] (O)--(C)--($(O)!1.3!(C)$) node[right]{$y$};\n\t\t\t\\draw (A)--(B)--(G)--(Q)--(H)--(E)--(F)--cycle (E)--(P)--(F) (P)--(Q) (F)--(G);\n\t\t\t\\draw[dashed] (C)--(B) (C)--(H)--(G);\n\t\t\t\\foreach \\t in {A,B,C,O,E,F,G,H,P,Q}{\n\t\t\t\\fill (\\t) circle (1pt);\n\t\t\t}\n    \\node at (0,0){\\href{2OXG48}{\\tiny \\phantom{2OXG48}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (O) node[below left]{$O$}\n\t\t\t\t(4,0) coordinate (A) node[below]{$A$}\n\t\t\t\t(0,3) coordinate (E) node[left]{$E$}\n\t\t\t\t($(A)+(E)-(O)$) coordinate (F)node[right]{$F$}\n\t\t\t\t(A)+(1,2) coordinate (B) node[right]{$B$}\n\t\t\t\t($(O)+(B)-(A)$) coordinate (C) node[left]{$C$}\n\t\t\t\t($(C)+(E)-(O)$) coordinate (H) node[left]{$H$}\n\t\t\t\t($(H)+(B)-(C)$) coordinate (G) node [right]{$G$}\n\t\t\t\t($(O)!.5!(A)$) coordinate (x)\n\t\t\t\t(x)+(0,4.5) coordinate (P) node[below]{$P$}\n\t\t\t\t($(P)+(H)-(E)$) coordinate (Q) node[above]{$Q$}\n\t\t\t\t;\n\t\t\t\\draw[->] (O)--(E)--($(E)+(90:1)$)node[left]{$z$};\n\t\t\t\\draw[->] (O)--(A)--($(A)+(0:1)$) node[below]{$x$};\n\t\t\t\\draw[dashed,->] (O)--(C)--($(O)!1.3!(C)$) node[right]{$y$};\n\t\t\t\\draw (A)--(B)--(G)--(Q)--(H)--(E)--(F)--cycle (E)--(P)--(F) (P)--(Q) (F)--(G);\n\t\t\t\\draw[dashed] (C)--(B) (C)--(H)--(G);\n\t\t\t\\foreach \\t in {A,B,C,O,E,F,G,H,P,Q}{\n\t\t\t\\fill (\\t) circle (1pt);\n\t\t\t}\n    \\node at (0,0){\\href{2OXG48}{\\tiny \\phantom{2OXG48}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-19/q13.png"
     },
     {
+      "type": "truefalse",
+      "question": "Điểm trung bình môn Toán cuối năm của các học sinh lớp $12$A và $12$B được thống kê ở bảng sau.",
+      "statements": [
+        {
+          "text": "Lớp $12$A có $28$ học sinh có điểm trung bình môn Toán cuối năm từ $8$ trở lên",
+          "answer": true
+        },
+        {
+          "text": "Số trung bình của mẫu số liệu lớp $12$A lớn hơn số trung bình của mẫu số liệu lớp $12$B",
+          "answer": false
+        },
+        {
+          "text": "Độ lệch chuẩn của mẫu số liệu lớp $12$A (làm tròn kết quả đến hàng phần trăm) là $0{,}72$",
+          "answer": false
+        },
+        {
+          "text": "Nếu so sánh theo độ lệch chuẩn thì học sinh lớp $12$A có điểm trung bình môn Toán cuối năm ít phân tán hơn lớp $12$B",
+          "answer": true
+        }
+      ],
       "id": 14,
-      "error": "nothing to repeat at position 58"
+      "solution": "<br>\n <br> • Từ bảng thống kê ta thấy số học sinh có số điểm trung bình môn Toán từ $8$ trở lên của lớp $12$A là $22+6=28$ học sinh.\n <br> • Số trung bình môn Toán của lớp $12$A là\n \\[\\overline{x}_A=\\dfrac{1\\cdot5{,}5+0\\cdot6{,}5+11\\cdot7{,}5+22\\cdot8{,}5+6\\cdot 9{,}5}{40}=8{,}3.\\]\n Số trung bình môn Toán của lớp $12$B là\n \\[\\overline{x}_B=\\dfrac{0\\cdot5{,}5+6\\cdot6{,}5+8\\cdot7{,}5+14\\cdot8{,}5+12\\cdot 9{,}5}{40}=8{,}3.\\]\n Vậy số trung bình của mẫu số liệu lớp $12$A bằng số trung bình của mẫu số liệu lớp $12$B.\n <br> • Phương sai của mẫu số liệu ghép nhóm điểm môn Toán của lớp $12$A là\n \\[s_A^2=\\dfrac{1\\cdot5{,}5^2+0\\cdot6{,}5^2+11\\cdot7{,}5^2+22\\cdot8{,}5^2+6\\cdot 9{,}5^2}{40}-8{,}3^2=0{,}61.\\]\n Do đó độ lệch chuẩn $s_A\\approx0{,}78$.\n <br> • Phương sai của mẫu số liệu ghép nhóm điểm môn Toán của lớp $12$B là\n \\[s_B^2=\\dfrac{0\\cdot5{,}5^2+6\\cdot6{,}5^2+8\\cdot7{,}5^2+14\\cdot8{,}5^2+12\\cdot 9{,}5^2}{40}-8{,}3^2=1{,}06.\\]\n Do đó, ta được độ lệch chuẩn $s_B\\approx1{,}03$. <br>\n Vì $s_A <s_B$ nên học sinh lớp $12$A có điểm trung bình môn Toán cuối năm ít phân tán hơn lớp $12$B.\n <br>",
+      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tĐiểm trung bình & $[5;6)$ & $[6;7)$ & $[7;8)$ & $[8;9)$ &$[9;10)$\\\\\n\t\t\t\\hline\n\t\t\t$12$A & $1$ & $0$ & $11$ & $22$ &$6$\\\\\n\t\t\t\\hline\n\t\t\t$12$B & $0$ & $6$ & $8$ & $14$ & $12$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tĐiểm trung bình & $[5;6)$ & $[6;7)$ & $[7;8)$ & $[8;9)$ &$[9;10)$\\\\\n\t\t\t\\hline\n\t\t\t$12$A & $1$ & $0$ & $11$ & $22$ &$6$\\\\\n\t\t\t\\hline\n\t\t\t$12$B & $0$ & $6$ & $8$ & $14$ & $12$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-19/q14.png"
     },
     {
+      "type": "truefalse",
+      "question": "Cho hàm số $y = f(x) = \\left(x^2 - 5x + 7\\right)\\mathrm{e}^x$.",
+      "statements": [
+        {
+          "text": "$f(0) = 7$",
+          "answer": true
+        },
+        {
+          "text": "Đạo hàm của hàm số đã cho là $f'(x) = (2x - 5)\\mathrm{e}^x$",
+          "answer": false
+        },
+        {
+          "text": "Giá trị nhỏ nhất và lớn nhất của hàm số $y = f(x)$ trên đoạn $[0; 2]$ lần lượt là $7$ và $3\\mathrm{e}$",
+          "answer": true
+        },
+        {
+          "text": "Hàm số $y = f(x)$ nghịch biến trên khoảng $\\left(-\\infty; \\dfrac{5}{2}\\right)$ và đồng biến trên khoảng $\\left(\\dfrac{5}{2}; +\\infty\\right)$",
+          "answer": false
+        }
+      ],
       "id": 15,
-      "error": "nothing to repeat at position 58"
+      "solution": "Xét hàm số $y = f(x) = (x^2 - 5x + 7)\\mathrm{e}^x$.\n <br>\n <br> • Ta có \n $f(0) = \\left(0^2-5\\cdot 0+7\\right)\\mathrm{e}^0=7$.\n <br> • Ta có \n $f'(x) = (2x - 5)\\mathrm{e}^x + (x^2 - 5x + 7)\\mathrm{e}^x = (x^2 - 3x + 2)\\mathrm{e}^x$.\n <br> • Phương trình $f'(x) = 0 \\Leftrightarrow (x^2 - 3x + 2)\\mathrm{e}^x =0 \\Leftrightarrow x^2 - 3x + 2=0 \\Leftrightarrow \\hoac{&x=1\\in [0;2] <br> &x=2\\in [0;2].}$ <br>\n Ta có $f(0) = 7$; $f(1) = 3\\mathrm{e}$; $f(2) = \\mathrm{e}^2$. <br>\n So sánh các giá trị, ta được $7 < \\mathrm{e}^2 < 3\\mathrm{e}$. <br>\n Vậy trên đoạn $[0; 2]$, hàm số $y=f(x)$ có giá trị nhỏ nhất là $7$ và có giá trị lớn nhất là $3\\mathrm{e}$.\n <br> • Bảng biến thiên\n\n Dựa vào bảng biến thiên, ta thấy hàm số đồng biến trên các khoảng $(-\\infty; 1)$ và $(2; +\\infty)$, nghịch biến trên khoảng $(1; 2)$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "truefalse",
+      "question": "Cho hàm số $y = f(x)$ xác định trên $\\mathbb{R}$, có nguyên hàm trên $\\mathbb{R}$ là hàm số $y = F(x)$. Hàm số $y = f(x)$ có đồ thị như hình vẽ bên. Biết $F(4) = 7$ và diện tích hai phần gạch chéo $S_1$; $S_2$ lần lượt là $8$; $20$.",
+      "statements": [
+        {
+          "text": "$ \\int \\limits_{-1}^{1} f(x) \\mathrm{ d}x = 8$",
+          "answer": true
+        },
+        {
+          "text": "$ \\int \\limits_{-1}^{4} \\big|f(x)\\big| \\mathrm{d}x = 28$",
+          "answer": true
+        },
+        {
+          "text": "$ \\int \\limits_{-1}^{4} f(x) \\mathrm{ d}x = 28$",
+          "answer": false
+        },
+        {
+          "text": "$3F(1) - 7F(-1) = -52$",
+          "answer": true
+        }
+      ],
       "id": 16,
-      "error": "nothing to repeat at position 58"
+      "solution": "<br>\n <br> • Dựa vào đồ thị, ta thấy hàm số $f(x) \\ge 0$, $\\forall x \\in [-1; 1]$ nên \\[ \\int \\limits_{-1}^{1} \\big|f(x)\\big| \\mathrm{d}x\n = \\int \\limits_{-1}^{1} f(x) \\mathrm{ d}x = S_1 = 8.\\]\n <br> • Ta có $ \\int \\limits_{-1}^{4} \\big|f(x)\\big| \\mathrm{d}x = \\int \\limits_{-1}^{1} \\big|f(x)\\big| \\mathrm{d}x+ \\int \\limits_{1}^{4} \\big|f(x)\\big| \\mathrm{d}x = S_1 + S_2 = 8 + 20 = 28$.\n <br> • Dựa vào đồ thị, ta thấy hàm số $f(x) \\le 0$, $\\forall x \\in [1; 4]$ nên \\[ \\int \\limits_{1}^{4} \\big|f(x)\\big| \\mathrm{d}x = - \\int \\limits_{1}^{4} f(x) \\mathrm{ d}x = S_2 = 20 \\Rightarrow \\int \\limits_{1}^{4} f(x) \\mathrm{ d}x = -20.\\]\n Do đó $ \\int \\limits_{-1}^{4} f(x) \\mathrm{ d}x = \\int \\limits_{-1}^{1} f(x) \\mathrm{ d}x + \\int \\limits_{1}^{4} f(x) \\mathrm{ d}x = 8 + (-20) = -12$.\n <br> • Ta có $ \\int \\limits_{1}^{4} f(x) \\mathrm{ d}x = F(4) - F(1) = -20$. <br>\n Mà $F(4) = 7$ nên $7 - F(1) = -20 \\Leftrightarrow F(1) = 27$. <br>\n Lại có $ \\int \\limits_{-1}^{1} f(x) \\mathrm{ d}x = F(1) - F(-1) = 8$. <br>\n Suy ra $27 - F(-1) = 8 \\Leftrightarrow F(-1) = 19$. <br>\n Do đó $3F(1) - 7F(-1) = 3 \\cdot 27 - 7 \\cdot 19 = -52$.\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round,\n    \n\t\t\t\tline cap=round, >=stealth]\n\t\t\t\t\\def\\f{0.5*(\\x+1)*(\\x-1)*(\\x-4)}\n\t\t\t\t\\fill[pattern=north east lines, pattern color=violet!70,opacity=0.4] (-1,0) -- plot[domain=-1:1, smooth] (\\x,{\\f}) -- (1,0) -- cycle;\n\t\t\t\t\\fill[pattern=north east lines, pattern color=violet!70,opacity=0.4] (1,0) -- plot[domain=1:4, smooth] (\\x,{\\f}) -- (4,0) -- cycle;\n\t\t\t\t\\draw[->] (-2.5,0) -- (5.5,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,-4.5) -- (0,3) node[left] {$y$};\n\t\t\t\t\\draw[domain=-1.61:4.33, smooth, samples=100] plot (\\x,{\\f});\n\t\t\t\t\\node[below left] at (-1,0) {$-1$};\n\t\t\t\t\\node[below left] at (1,0) {$1$};\n\t\t\t\t\\node[below right] at (4,0) {$4$};\n\t\t\t\t\\node at (-0.3, 0.7) {$S_1$};\n\t\t\t\t\\node at (2.5, -1.5) {$S_2$};\n\t\t\t\t\\fill (-1,0) circle(1pt) (1,0) circle(1pt) (4,0) circle(1pt) (0,0) node[below left]{$O$} circle(1pt);\n    \\node at (0,0){\\href{5TZ03X}{\\tiny \\phantom{5TZ03X}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round,\n    \n\t\t\t\tline cap=round, >=stealth]\n\t\t\t\t\\def\\f{0.5*(\\x+1)*(\\x-1)*(\\x-4)}\n\t\t\t\t\\fill[pattern=north east lines, pattern color=violet!70,opacity=0.4] (-1,0) -- plot[domain=-1:1, smooth] (\\x,{\\f}) -- (1,0) -- cycle;\n\t\t\t\t\\fill[pattern=north east lines, pattern color=violet!70,opacity=0.4] (1,0) -- plot[domain=1:4, smooth] (\\x,{\\f}) -- (4,0) -- cycle;\n\t\t\t\t\\draw[->] (-2.5,0) -- (5.5,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,-4.5) -- (0,3) node[left] {$y$};\n\t\t\t\t\\draw[domain=-1.61:4.33, smooth, samples=100] plot (\\x,{\\f});\n\t\t\t\t\\node[below left] at (-1,0) {$-1$};\n\t\t\t\t\\node[below left] at (1,0) {$1$};\n\t\t\t\t\\node[below right] at (4,0) {$4$};\n\t\t\t\t\\node at (-0.3, 0.7) {$S_1$};\n\t\t\t\t\\node at (2.5, -1.5) {$S_2$};\n\t\t\t\t\\fill (-1,0) circle(1pt) (1,0) circle(1pt) (4,0) circle(1pt) (0,0) node[below left]{$O$} circle(1pt);\n    \\node at (0,0){\\href{5TZ03X}{\\tiny \\phantom{5TZ03X}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-19/q16.png"
     },
     {
+      "type": "short",
+      "question": "Sau khi phát hiện một bệnh dịch, các chuyên gia y tế ước tính số người nhiễm bệnh kể từ ngày xuất hiện bệnh nhân đầu tiên đến ngày thứ $t$ là $f(t) = 45t^2 - t^3$, $t=0$, $1$, $2$, $\\ldots$, $25$. Nếu coi $f(t)$ là hàm số xác định trên đoạn $[0;25]$ thì đạo hàm $f'(t)$ được xem là tốc độ truyền bệnh (người/ngày) tại thời điểm $t$. Giả sử khoảng thời gian mà tốc độ truyền bệnh giảm là từ ngày thứ $m$ đến ngày thứ $n$. Khi đó, giá trị $n - m$ bằng bao nhiêu?\n <br>",
+      "answer": "10",
       "id": 17,
-      "error": "nothing to repeat at position 58"
+      "solution": "Tốc độ truyền bệnh tại thời điểm $t$ là\n \\[v(t)=f'(t)=90t-3t^2, với t\\in[0;25].\\]\n Đạo hàm $v'(t)=90-6t=0\\Leftrightarrow t=15$. <br>\n Bảng biến thiên\n\n Dựa vào bảng biến thiên, ta thấy hàm số $v(t)$ nghịch biến trong khoảng $(15;25)$, tức là tốc độ truyền bệnh giảm từ ngày thứ $15$ đến ngày thứ $25$. <br>\n Do đó $ m = 15$ và $n = 25$. <br>\n Vậy $n - m = 25 - 15 = 10$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Một công ty tiến hành khai thác $15$ giếng dầu trong khu vực được chỉ định. Trung bình mỗi giếng dầu chiết xuất được $231$ thùng dầu mỗi ngày. Công ty có thể khai thác nhiều hơn $15$ giếng dầu nhưng cứ khai thác thêm một giếng thì lượng dầu mỗi giếng chiết xuất được hằng ngày sẽ giảm $7$ thùng. Để giám đốc công ty có thể quyết định số giếng cần thêm cho phù hợp, hãy chỉ ra số giếng công ty khai thác thêm để sản lượng dầu chiết xuất được là lớn nhất.\n <br>",
+      "answer": "9",
       "id": 18,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gọi $x$ là số giếng dầu công ty khai thác thêm ($x\\in\\mathbb{N}^*$). <br>\n Khi đó, tổng số giếng dầu khai thác là $15+x$ (giếng). <br>\n Sản lượng dầu chiết xuất được của mỗi giếng trong một ngày là $231 - 7x$ (thùng). <br>\n Điều kiện $231-7x> 0\\Leftrightarrow x <33$ hay $x\\in(0;33)$. <br>\n Tổng sản lượng dầu chiết xuất được mỗi ngày của công ty là\n \\[P(x)=(15+x)(231-7x)=-7x^2+126x+3 465.\\]\n Xét hàm số $P(x)=-7x^2+126x+3 465$, $\\forall x\\in(0;33)$. <br>\n Ta có $P'(x)=-14x+126$. <br>\n Phương trình $P'(x)=0\\Leftrightarrow-14x+126=0\\Leftrightarrow x=9\\in(0;33)$. <br>\n Bảng biến thiên\n\n Vậy công ty cần khai thác thêm $9$ giếng dầu để tổng sản lượng dầu chiết xuất được là lớn nhất.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Một thùng làm kem có dạng khối tròn xoay, có mặt cắt qua trục là dạng parabol như hình vẽ. Biết phương trình nửa đường biên parabol bên trái có dạng $f(x) = a\\sqrt{x}$. Hỏi dung tích của thùng làm kem bằng bao nhiêu lít (làm tròn kết quả đến hàng phần mười)?\n\n <br>",
+      "answer": "28{,}3",
       "id": 19,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gắn hệ trục toạ độ $Oxy$ như hình vẽ sau:\n\n Đường biên parabol bên trái $f(x)=a\\sqrt{x}$ đi qua điểm có toạ độ $(20;30)$ nên\n \\[a\\sqrt{20} = 30 \\Rightarrow a = 3\\sqrt{5}.\\]\n Suy ra $f(x)=3\\sqrt{5}\\cdot\\sqrt{x}$. <br>\n Dung tích của thùng làm kem chính là thể tích khối tròn xoay được sinh ra khi quay hình phẳng giới hạn bởi đồ thị hàm số $y=f(x)=3\\sqrt{5}\\cdot\\sqrt{x}$, $y=0$ và hai đường thẳng $x=0$, $x=20$ quanh trục $Ox$. Do đó\n \\[V=\\pi\\int\\limits_0^{20}\\left(3\\sqrt{5}\\cdot \\sqrt{x}\\right)^2\\mathrm{d}x\n =9 000\\pi \\left(cm^3\\right)\\approx 28{,}3 (lít).\\]\n Vậy dung tích của thùng làm kem khoảng $28{,}3$ lít.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.15, font=\\footnotesize, line join=round,\n    \n\t\t\tline cap=round, >=stealth]\n\t\t\t\n\t\t\t\\filldraw[fill=orange!10, draw=black] (-30,20) -- (-35,20) -- (-35,-5) -- (35,-5)--(35,20)--(30,20)--(28.5,18)--(-28.5,18)--cycle;\n\t\t\t\\begin{scope}\n\t\t\t\t\n\t\t\t\t\\clip plot[domain=-30:30] (\\x, {(\\x)^2/45}) -- cycle;\n\t\t\t\t\n\t\t\t\t\\fill[orange!30] (-30,0) rectangle (30,18);\n\t\t\t\t\n\t\t\t\t\\draw[orange!70] \n\t\t\t\t\t(-28,18) .. controls (-20,10) and (-10,22) .. (0,15)\n\t\t\t\t\t.. controls (10,8) and (20,20) .. (28,17);\n\t\t\t\t\\draw[orange!70]\n\t\t\t\t\t(-25,12) .. controls (-15,5) and (-5,15) .. (0,10)\n\t\t\t\t\t.. controls (5,5) and (15,18) .. (25,13);\n\t\t\t\t\n\t\t\t\t\\foreach \\p in {(-15,10), (-8,16), (2,7), (12,14), (20,9), (-5,5)}\n\t\t\t\t\\fill[gray!50] \\p circle (0.4);\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\draw[cyan, ultra thick, smooth, samples=100, domain=-30:30] \n\t\t\t\tplot(\\x, {(\\x)^2/45});\n\t\t\t\n\t\t\t\\draw[->] (40,0) -- (-40,0) node[below] {$y$};\n\t\t\t\\draw[->] (0,-5) -- (0,27) node[left] {$x$};\n\t\t\t\n\t\t\t\\draw[dashed, thin] (0,20) -- (-30,20);\n\t\t\t\\draw[<->] (0,20) -- (-30,20);\n\t\t\t\\fill (-15,20.2)  node[shift=(90:0.25)]{$30\\,\\text{cm}$};\n\t\t\t\n\t\t\t\\draw[dashed] (30,20) -- (37,20);\n\t\t\t\\draw[dashed] (30,0) -- (35,0);\n\t\t\t\\draw[<->] (37,0) -- (37,20) ;\n\t\t\t\\fill (39.5,9.5)  node[shift=(0:0.25)]{$20\\,\\text{cm}$};\n\t\t\t\\fill (0,0) node{\\href{QOBXDF}{\\tiny \\phantom{QOBXDF}}} circle (5pt)  node[shift=(130:0.4)]{$O$};\n\t\t\t\n\t\t\t\\node[font=\\Large\\sffamily] at (1.5,-2.7) {P o l y \\quad F r e e z e};\n    \\node at (0,0){\\href{QOBXDF}{\\tiny \\phantom{QOBXDF}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.15, font=\\footnotesize, line join=round,\n    \n\t\t\tline cap=round, >=stealth]\n\t\t\t\n\t\t\t\\filldraw[fill=orange!10, draw=black] (-30,20) -- (-35,20) -- (-35,-5) -- (35,-5)--(35,20)--(30,20)--(28.5,18)--(-28.5,18)--cycle;\n\t\t\t\\begin{scope}\n\t\t\t\t\n\t\t\t\t\\clip plot[domain=-30:30] (\\x, {(\\x)^2/45}) -- cycle;\n\t\t\t\t\n\t\t\t\t\\fill[orange!30] (-30,0) rectangle (30,18);\n\t\t\t\t\n\t\t\t\t\\draw[orange!70] \n\t\t\t\t\t(-28,18) .. controls (-20,10) and (-10,22) .. (0,15)\n\t\t\t\t\t.. controls (10,8) and (20,20) .. (28,17);\n\t\t\t\t\\draw[orange!70]\n\t\t\t\t\t(-25,12) .. controls (-15,5) and (-5,15) .. (0,10)\n\t\t\t\t\t.. controls (5,5) and (15,18) .. (25,13);\n\t\t\t\t\n\t\t\t\t\\foreach \\p in {(-15,10), (-8,16), (2,7), (12,14), (20,9), (-5,5)}\n\t\t\t\t\\fill[gray!50] \\p circle (0.4);\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\draw[cyan, ultra thick, smooth, samples=100, domain=-30:30] \n\t\t\t\tplot(\\x, {(\\x)^2/45});\n\t\t\t\n\t\t\t\\draw[->] (40,0) -- (-40,0) node[below] {$y$};\n\t\t\t\\draw[->] (0,-5) -- (0,27) node[left] {$x$};\n\t\t\t\n\t\t\t\\draw[dashed, thin] (0,20) -- (-30,20);\n\t\t\t\\draw[<->] (0,20) -- (-30,20);\n\t\t\t\\fill (-15,20.2)  node[shift=(90:0.25)]{$30\\,\\text{cm}$};\n\t\t\t\n\t\t\t\\draw[dashed] (30,20) -- (37,20);\n\t\t\t\\draw[dashed] (30,0) -- (35,0);\n\t\t\t\\draw[<->] (37,0) -- (37,20) ;\n\t\t\t\\fill (39.5,9.5)  node[shift=(0:0.25)]{$20\\,\\text{cm}$};\n\t\t\t\\fill (0,0) node{\\href{QOBXDF}{\\tiny \\phantom{QOBXDF}}} circle (5pt)  node[shift=(130:0.4)]{$O$};\n\t\t\t\n\t\t\t\\node[font=\\Large\\sffamily] at (1.5,-2.7) {P o l y \\quad F r e e z e};\n    \\node at (0,0){\\href{QOBXDF}{\\tiny \\phantom{QOBXDF}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/2-KS-19/q19.png"
     },
     {
+      "type": "short",
+      "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$, $SA \\perp (ABCD)$, $SC = a\\sqrt{3}$. Gọi $M$, $N$, $P$, $Q$ lần lượt là trung điểm của $SB$, $SD$, $CD$, $BC$. Thể tích của khối chóp $A.MNPQ$ có dạng $\\dfrac{ma^3}{n}$ (với $m$, $n$ là các số tự nhiên; phân số $\\dfrac{m}{n}$ là phân số tối giản). Tổng $ m + n$ bằng bao nhiêu?\n <br>",
+      "answer": "9",
       "id": 20,
-      "error": "nothing to repeat at position 58"
+      "solution": "Trong mặt phẳng $(ABCD)$, gọi $E$ là giao điểm của $AC$ và $PQ$, suy ra $AE=\\dfrac{3}{4}AC$. <br>\n Vì $M$, $Q$ lần lượt là trung điểm của $SB$ và $BC$ nên $MQ$ là đường trung bình của tam giác $SBC$. <br>\n Suy ra $MQ\\parallel SC$ và $MQ=\\dfrac{1}{2}SC$. $(*)$ <br>\n Trong mặt phẳng $(SAC)$, kẻ $EF\\parallel SC$ $(F\\in SA)$. <br>\n Do $\\heva{&SC\\parallel MQ, MQ\\subset (MNPQ) <br> &E\\in QP, QP\\subset (MNPQ) <br> &EF\\parallel SC}\\Rightarrow EF\\subset (MNPQ)$. <br>\n Trong mặt phẳng $(SAC)$, kẻ $AH\\perp SC$, $(H\\in SC)$ cắt $EF$ tại $K$ $(K\\in EF)$, suy ra $AK\\perp EF$. <br>\n Vì $SA\\perp (ABCD)\\Rightarrow SA\\perp PQ$. <br>\n Ta có $\\heva{&PQ\\perp AC <br> &PQ\\perp SA}\\Rightarrow PQ\\perp (SAC) \\Rightarrow PQ\\perp AK$ và $PQ\\perp SC$. $(**)$ <br>\n Từ $(*)$ và $(**)$ suy ra $QP\\perp MQ$.\\hfill {$(1)$} <br>\n Vì $M$, $N$ lần lượt là trung điểm của $SB$ và $SD$ nên $MN$ là đường trung bình của tam giác $SBD$. <br>\n Suy ra $MN\\parallel BD$ và $MN=\\dfrac{1}{2}BD$.\\hfill {$(2)$} <br>\n Vì $Q$, $P$ lần lượt là trung điểm của $BC$ và $CD$ nên $QP$ là đường trung bình của tam giác $BCD$. <br>\n Suy ra $QP\\parallel BD$ và $QP=\\dfrac{1}{2}BD$.\\hfill {$(3)$} <br>\n Từ $(1)$, $(2)$ và $(3)$ suy ra $MNPQ$ là hình chữ nhật. <br>\n Tam giác $ABC$ vuông tại $B$ nên $AC=BD=\\sqrt{AB^2+BC^2}=\\sqrt{a^2+a^2}=a\\sqrt{2}$. <br>\n Tam giác $SAC$ vuông tại $A$ nên $SA=\\sqrt{SC^2-AC^2}=\\sqrt{\\left(a\\sqrt{3}\\right)^2-\\left(a\\sqrt{2}\\right)^2}=a$. <br>\n Ta có $MN=\\dfrac{1}{2}BD=\\dfrac{a\\sqrt{2}}{2}$, $MQ=\\dfrac{1}{2}SC=\\dfrac{a\\sqrt{3}}{2}$. <br>\n Diện tích hình chữ nhật $MNPQ$ là \n \\[S_{MNPQ}=MN\\cdot MQ=\\dfrac{a\\sqrt{2}}{2}\\cdot\\dfrac{a\\sqrt{3}}{2}=\\dfrac{a^2\\sqrt{6}}{4}.\\]\n Ta có $\\heva{&AK\\perp EF <br> &AK\\perp PQ}\\Rightarrow AK\\perp (MNPQ)$. <br>\n Khi đó $\\mathrm{d}\\big(A,(MNPQ)\\big)=AK$. <br>\n Trong tam giác $AHC$ có $EK\\parallel HC$ nên\n \\[\\dfrac{AK}{AH}=\\dfrac{AE}{AC}=\\dfrac{3}{4}\\Rightarrow AK=\\dfrac{3}{4}AH.\\]\n Tam giác $SAC$ vuông tại $A$ có $AH\\perp SC$ nên\n \\[AH=\\dfrac{SA\\cdot AC}{SC}=\\dfrac{a\\cdot a\\sqrt{2}}{a\\sqrt{3}}=\\dfrac{a\\sqrt{6}}{3}.\\]\n Suy ra $\\mathrm{d}\\big(A,(MNPQ)\\big)=AK=\\dfrac{3}{4}AH=\\dfrac{3}{4}\\cdot \\dfrac{a\\sqrt{6}}{3}=\\dfrac{a\\sqrt{6}}{4}$. <br>\n Thể tích của khối chóp $A.MNPQ$\n \\[V_{A.MNPQ}=\\dfrac{1}{3}\\cdot S_{MNPQ}\\cdot \\mathrm{d}\\big(A,(MNPQ)\\big)=\\dfrac{1}{3}\\cdot \\dfrac{a^2\\sqrt{6}}{4}\\cdot \\dfrac{a\\sqrt{6}}{4}=\\dfrac{a^3}{8}.\\]\n Suy ra $m=1$ và $n=8$. <br>\n Vậy $m+n=9$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Phòng thí nghiệm A được giao làm hai thí nghiệm độc lập. Xác suất thành công trong từng thí nghiệm là $0{,}8$. Phòng thành công ít nhất một thí nghiệm được coi là hoàn thành nhiệm vụ. Xác suất để phòng thí nghiệm A hoàn thành nhiệm vụ bằng bao nhiêu?\n <br>",
+      "answer": "0{,}96",
       "id": 21,
-      "error": "nothing to repeat at position 58"
+      "solution": "Gọi $X$ là biến cố “ Phòng thí nghiệm A hoàn thành nhiệm vụ” (nghĩa là thành công ít nhất một thí nghiệm). <br>\n Biến cố đối $\\overline{X}$ là “ Phòng thí nghiệm A không thành công thí nghiệm nào” (cả $2$ thí nghiệm đều thất bại). <br>\n Xác suất thất bại của mỗi thí nghiệm là $1-0{,}8=0{,}2$. <br>\n Vì hai thí nghiệm là độc lập nên xác suất để thất bại cả $2$ thí nghiệm là\n \\[\\mathrm{P}\\left(\\overline{X}\\right)=0{,}2\\cdot 0{,}2=0{,}04.\\]\n Vậy xác suất để phòng thí nghiệm hoàn thành nhiệm vụ là\n \\[\\mathrm{P}(X)=1-\\mathrm{P}\\left(\\overline{X}\\right)=1-0{,}04=0{,}96.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
+      "type": "short",
+      "question": "Một khối lập phương có độ dài cạnh là $2$ cm được chia thành $8$ khối lập phương cạnh $1$ cm. Hỏi có bao nhiêu tam giác tạo thành từ các đỉnh của các khối lập phương cạnh $1$ cm?\n <br>",
+      "answer": "2\\,876",
       "id": 22,
-      "error": "nothing to repeat at position 58"
+      "solution": "Ta gọi khối lập phương lớn cạnh $2$ cm là $ABCD.A'B'C'D'$.\n\n <br>\n <br> • <strong> Bước 1: </strong> Tổng số điểm (đỉnh của các khối lập phương cạnh $1$ cm) là $3\\cdot 3\\cdot 3=27$ (điểm).\n <br> • <strong> Bước 2: </strong> Tổng số cách chọn $3$ điểm bất kỳ là $\\mathrm{C}_{27}^3=2 925$ (cách).\n <br> • <strong> Bước 3: </strong> Loại trừ các trường hợp $3$ điểm không tạo thành tam giác (ba điểm thẳng hàng). <br>\n Các đường thẳng chứa $3$ điểm được chia thành $3$ trường hợp sau:\n <br> [\\it TH 1:]\n <br> • Các đường thẳng song song với các cạnh của khối lập phương.\n <br>\n <br> • Có $3$ hướng $\\left(AB,AD,AA'\\right)$.\n <br> • Mỗi hướng có $3\\cdot 3=9$ đường thẳng (mỗi đường này gồm ba điểm thẳng hàng).\n <br>\n Số bộ ba điểm thẳng hàng là $3\\cdot 9=27$ (bộ).\n <br> • Các đường thẳng song song với đường chéo của các mặt.\n <br>\n <br> • Khối lập phương có $3$ hướng mặt phẳng $\\left((ABCD),\\left(ABB'A'\\right),\\left(ADD'A'\\right)\\right)$.\n <br> • Mỗi hướng có $3$ lớp mặt phẳng song song.\n <br> • Trên mỗi mặt phẳng có $2$ đường chéo chính chứa $3$ điểm.\n <br>\n Số bộ ba điểm thẳng hàng là $3\\cdot 3\\cdot 2=18$ (bộ).\n <br> • Các đường chéo đi qua tâm của khối lập phương lớn $\\left(AC',BD',CA',DB'\\right)$. <br>\n Mỗi đường này chứa đúng $3$ điểm. <br>\n Số bộ ba điểm thẳng hàng là $4$ (bộ).\n <br>\n Tổng số bộ $3$ điểm thẳng hàng là $27+18+4=49$ (bộ).\n <br> • <strong> Bước 4: </strong> Tính số tam giác <br>\n Số tam giác là $2 925-49=2 876$.\n <br>\n Vậy có $2 876$ tam giác được tạo thành từ các đỉnh của các khối lập phương cạnh $1$ cm.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     }
   ],
+  "errors": [],
   "settings": {
     "durationMinutes": 90.0,
     "submitAfterMinutes": 1.0,
-    "maxAttempts": 1,
+    "maxAttempts": 2,
     "scoring": {
       "choiceTotal": 3.0,
       "choiceCount": 12,

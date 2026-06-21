@@ -31,6 +31,35 @@ function deepMerge(a,b){
   return out;
 }
 function escapeHtml(str){return String(str ?? '').replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));}
+
+function normalizeLatexResidue(str){
+  let t = String(str ?? '');
+  // Dọn lệnh môi trường văn bản còn sót
+  t = t.replace(/\\begin\s*\{\s*(center|flushleft|flushright)\s*\}/g, '<br>')
+       .replace(/\\end\s*\{\s*(center|flushleft|flushright)\s*\}/g, '<br>')
+       .replace(/\\begin\s*\{\s*(itemize|enumerate|itimize|itemchoice)\s*\}/g, '<br>')
+       .replace(/\\end\s*\{\s*(itemize|enumerate|itimize|itemchoice)\s*\}/g, '<br>')
+       .replace(/\\begin(center|itemize|enumerate|itimize|itemchoice)/g, '<br>')
+       .replace(/\\end(center|itemize|enumerate|itimize|itemchoice)/g, '<br>');
+  // Dọn lệnh định dạng chữ ngoài math
+  for(let k=0;k<8;k++){
+    const old=t;
+    t = t.replace(/\{\s*\\it\s*\{([^{}]*)\}\s*\}/g, '<em>$1</em>')
+         .replace(/\\textbf\s*\{([^{}]*)\}/g, '<strong>$1</strong>')
+         .replace(/\\(?:textit|emph)\s*\{([^{}]*)\}/g, '<em>$1</em>')
+         .replace(/\\(?:it|itshape)\s*\{([^{}]*)\}/g, '<em>$1</em>')
+         .replace(/\{\s*\\(?:it|itshape)\s+([^{}]+?)\s*\}/g, '<em>$1</em>')
+         .replace(/\\text\s*\{([^{}]*)\}/g, '$1');
+    if(t===old) break;
+  }
+  // Sửa các escape thường gặp trong văn bản
+  t = t.replace(/\\#/g,'#').replace(/\\%/g,'%').replace(/\\&/g,'&').replace(/\\_/g,'_');
+  // Sửa lỗi parser cũ biến \parallel thành <br>allel
+  t = t.replace(/<br>\s*allel/g, '\\parallel');
+  // Nếu còn cặp $...$ chỉ chứa chữ/số rất đơn giản trong văn bản nốt nhạc, bỏ $ để khỏi hiện E$4$ khi MathJax chưa chạy.
+  t = t.replace(/\$([A-Za-zÀ-ỹ0-9]{1,4})\$/g, '$1');
+  return t;
+}
 function attemptKey(){return `attempts_${localStorage.getItem('examId') || 'DE_MAU'}_${localStorage.getItem('studentId') || 'NOID'}`;}
 function getAttemptCount(){return Number(localStorage.getItem(attemptKey()) || '0');}
 function addAttempt(){localStorage.setItem(attemptKey(), String(getAttemptCount()+1));}
@@ -54,7 +83,7 @@ function studentLabel(){
   const cls = localStorage.getItem('className') || 'Chưa nhập lớp';
   return `${sid}${name ? ' - ' + name : ''} - ${cls}`;
 }
-function renderLatex(text){return `<div class="latex-content">${text || ''}</div>`;}
+function renderLatex(text){return `<div class="latex-content">${normalizeLatexResidue(text || '')}</div>`;}
 function visualBlock(q){
   if(q.image) return `<img class="question-image" src="${q.image}" alt="Hình câu ${q.id}">`;
   if(q.hasTikz || q.hasImmini || q.hasTable){
@@ -64,11 +93,11 @@ function visualBlock(q){
   return '';
 }
 function renderChoice(q){
-  const opts=(q.options||[]).map((opt,i)=>`<label class="option"><input type="radio" name="q${q.id}" value="${i}"><span>${String.fromCharCode(65+i)}. ${opt}</span></label>`).join('');
+  const opts=(q.options||[]).map((opt,i)=>`<label class="option"><input type="radio" name="q${q.id}" value="${i}"><span>${String.fromCharCode(65+i)}. ${normalizeLatexResidue(opt)}</span></label>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${opts}`;
 }
 function renderTrueFalse(q){
-  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${st.text}</div><label><input type="radio" name="q${q.id}_${i}" value="true"> Đúng</label><label><input type="radio" name="q${q.id}_${i}" value="false"> Sai</label></div>`).join('');
+  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${normalizeLatexResidue(st.text)}</div><label><input type="radio" name="q${q.id}_${i}" value="true"> Đúng</label><label><input type="radio" name="q${q.id}_${i}" value="false"> Sai</label></div>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${rows}`;
 }
 function renderShort(q){return `${renderLatex(q.question)}${visualBlock(q)}<input class="short-input" id="q${q.id}" placeholder="Nhập đáp án">`;}

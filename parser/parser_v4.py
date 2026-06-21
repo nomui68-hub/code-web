@@ -188,19 +188,59 @@ def cleanup_latex_residue(text):
     text=re.sub(r'\\end\s*\{\s*(center|itemize|enumerate|itimize|itemchoice|flushleft|flushright)\s*\}','<br>',text)
     return text
 
+
+def clean_math_inside_format(text):
+    r"""Sửa các lệnh chữ nằm trong math mode như $\textit{...}$, ${\it ...}$.
+    MathJax coi chữ trong math là chuỗi biến nên thường làm mất khoảng trắng; đổi sang \text{...} để giữ chữ và dấu cách.
+    """
+    def fix_segment(seg):
+        # seg gồm cả dấu $...$ hoặc \[...\]
+        for _ in range(8):
+            old=seg
+            seg=re.sub(r'\\textbf\s*\{([^{}]*)\}', r'\\mathbf{\\text{\1}}', seg)
+            seg=re.sub(r'\\(?:textit|emph)\s*\{([^{}]*)\}', r'\\text{\1}', seg)
+            seg=re.sub(r'\{\s*\\(?:it|itshape)\s*\{([^{}]*)\}\s*\}', r'\\text{\1}', seg)
+            seg=re.sub(r'\\(?:it|itshape)\s*\{([^{}]*)\}', r'\\text{\1}', seg)
+            seg=re.sub(r'\{\s*\\(?:it|itshape)\s+([^{}]+?)\s*\}', r'\\text{\1}', seg)
+            if seg==old: break
+        return seg
+    parts=split_math_segments(text)
+    out=[]
+    for i,part in enumerate(parts):
+        out.append(fix_segment(part) if i%2==1 else part)
+    return ''.join(out)
+
+def fix_latex_symbols(text):
+    # Ký tự escape thường dùng trong văn bản
+    repl={r'\#':'#', r'\%':'%', r'\&':'&', r'\_':'_', r'\{':'{', r'\}':'}'}
+    for a,b in repl.items(): text=text.replace(a,b)
+    # \$ thường dùng trong nốt nhạc như E\$4\$ nếu bị escape; giữ dấu $ thật nếu là công thức.
+    text=text.replace(r'\$','$')
+    # Một số đề viết nốt nhạc kiểu E$4$, A$4$; đây là chữ, không phải công thức.
+    text=re.sub(r'(?<=[A-Za-zÀ-ỹ])\$(\d+)\$', r'\1', text)
+    return text
+
+def normalize_inline_math_delimiters(text):
+    # Sửa cặp $$...$$ ngắn trong dòng thành \[...\] để MathJax ổn định hơn.
+    text=re.sub(r'\$\$\s*([\s\S]*?)\s*\$\$', r'\\[\1\\]', text)
+    return text
+
 def clean(text):
     text=remove_visual(text)
+    text=normalize_inline_math_delimiters(text)
+    text=clean_math_inside_format(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
     text=re.sub(r'\\phantom\{[^{}]*\}','',text)
     text=normalize_text_envs(text)
     text=unwrap_format_commands_deep(text)
     text=clean_text_commands(text)
     text=cleanup_latex_residue(text)
-    text=text.replace(r'\par','<br>')
+    text=re.sub(r'\\par\b','<br>',text)
     text=re.sub(r'\\itemch\s*','<br>• ',text)
     text=re.sub(r'\\item\s*','<br>• ',text)
     text=text.replace('\\\\','<br>')
     text=text.replace(r'\lq\lq','“').replace(r'\rq\rq','”').replace(r'\lq','‘').replace(r'\rq','’')
+    text=fix_latex_symbols(text)
     text=text.replace('~',' ')
     text=re.sub(r'\\[,;:! ]',' ',text)
     text=re.sub(r'\\(quad|qquad)\b',' ',text)

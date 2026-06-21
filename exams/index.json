@@ -11,7 +11,41 @@
       "id": "2-KS-18",
       "title": "SoQuangNinh",
       "file": "exams/2-KS-18/questions.json",
-      "active": true
+      "active": true,
+      "settings": {
+        "durationMinutes": 90.0,
+        "submitAfterMinutes": 0.0,
+        "maxAttempts": 2,
+        "scoring": {
+          "choiceTotal": 3.0,
+          "choiceCount": 12,
+          "truefalseTotal": 4.0,
+          "truefalseCount": 4,
+          "shortTotal": 3.0,
+          "shortCount": 6,
+          "truefalseMode": "progressive"
+        }
+      }
+    },
+    {
+      "id": "2-KS-19",
+      "title": "CumHungYen",
+      "file": "exams/2-KS-19/questions.json",
+      "active": true,
+      "settings": {
+        "durationMinutes": 90.0,
+        "submitAfterMinutes": 1.0,
+        "maxAttempts": 2,
+        "scoring": {
+          "choiceTotal": 3.0,
+          "choiceCount": 12,
+          "truefalseTotal": 4.0,
+          "truefalseCount": 4,
+          "shortTotal": 3.0,
+          "shortCount": 6,
+          "truefalseMode": "progressive"
+        }
+      }
     }
   ]
 }
