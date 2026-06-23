@@ -62,12 +62,73 @@ def solution(block):
     if p<0: return '',block
     s,e=brace(block,p); return s.strip(), block[:p]+block[e:]
 
-def envs(text,env): return re.findall(r'\\begin\{'+re.escape(env)+r'\}[\s\S]*?\\end\{'+re.escape(env)+r'\}', text)
+def envs(text, env):
+    """Tách môi trường LaTeX bằng bộ đếm begin/end thay vì regex.
+    Cách này an toàn hơn với TikZ dài, nhiều ngoặc, nhiều \foreach, \def, \path.
+    """
+    res=[]
+    begin_pat='\\begin{'+env+'}'
+    end_pat='\\end{'+env+'}'
+    i=0
+    while True:
+        start=text.find(begin_pat,i)
+        if start<0: break
+        pos=start+len(begin_pat); depth=1
+        while pos<len(text) and depth>0:
+            nb=text.find(begin_pat,pos)
+            ne=text.find(end_pat,pos)
+            if ne<0:
+                # không đủ end: bỏ block hỏng thay vì cắt cụt gây lỗi render
+                pos=len(text); break
+            if nb!=-1 and nb<ne:
+                depth+=1; pos=nb+len(begin_pat)
+            else:
+                depth-=1; pos=ne+len(end_pat)
+        if depth==0:
+            res.append(text[start:pos])
+            i=pos
+        else:
+            i=start+len(begin_pat)
+    return res
+
+def compact_tikz_options(s):
+    key='\\begin{tikzpicture}'
+    out=[]; i=0; n=len(s)
+    while True:
+        p=s.find(key,i)
+        if p<0:
+            out.append(s[i:]); break
+        out.append(s[i:p]); out.append(key)
+        j=p+len(key); k=j
+        while k<n and s[k].isspace(): k+=1
+        if k<n and s[k]=='[':
+            lev=0; buf=[]; t=k
+            while t<n:
+                ch=s[t]
+                if ch=='[':
+                    lev+=1
+                    if lev>1: buf.append(ch)
+                elif ch==']':
+                    lev-=1
+                    if lev==0:
+                        t+=1; break
+                    buf.append(ch)
+                else:
+                    buf.append(ch)
+                t+=1
+            opt=' '.join(''.join(buf).split())
+            out.append('['+opt+']')
+            i=t
+        else:
+            i=j
+    return ''.join(out)
 
 def visual(block):
     parts=[]
     for e in ('tikzpicture','tabular','tikzcd','array'):
         for part in envs(block,e):
+            if e=='tikzpicture':
+                part=compact_tikz_options(part)
             if e=='array':
                 # Array thường nằm trong toán, khi render riêng cần bọc lại bằng \[...\]
                 part='\\[\n'+part+'\n\\]'
@@ -189,6 +250,46 @@ def cleanup_latex_residue(text):
     return text
 
 
+
+def normalize_system_body(body):
+    """Dọn phần thân của \heva{...}, \hoac{...} để MathJax không báo Misplaced &.
+    ex_test thường viết \heva{&x=1\\&y=2}. MathJax cases không thích dấu & ở đầu dòng.
+    """
+    b = body.strip()
+    # chuyển xuống dòng trong hệ, xóa & ở đầu mỗi dòng
+    b = re.sub(r'\\\\\s*&', r'\\\\ ', b)
+    b = re.sub(r'^\s*&', '', b)
+    b = re.sub(r'\{\s*&', '{', b)
+    b = re.sub(r'\\\s*&', r'\\ ', b)
+    b = re.sub(r'\s*&\s*', ' ', b)
+    b = re.sub(r'\s+', ' ', b)
+    return b.strip()
+
+def convert_heva_hoac(text):
+    """Đổi \heva, \hoac của ex_test sang môi trường MathJax chuẩn.
+    Dùng brace() để không hỏng khi trong thân có ngoặc lồng nhau.
+    """
+    out=[]; i=0; n=len(text)
+    while i<n:
+        if text.startswith('\\heva', i) or text.startswith('\\hoac', i):
+            name = 'heva' if text.startswith('\\heva', i) else 'hoac'
+            j = i + 1 + len(name)
+            j = skip_opt(text, j)
+            k=j
+            while k<n and text[k].isspace(): k+=1
+            if k<n and text[k]=='{':
+                body,end = brace(text,k)
+                body = normalize_system_body(body)
+                if name == 'heva':
+                    out.append('\\begin{cases}' + body + '\\end{cases}')
+                else:
+                    # hoac là hệ lựa chọn; dùng array một cột cho gọn, tránh dấu ngoặc nhọn dư.
+                    out.append('\\begin{array}{l}' + body + '\\end{array}')
+                i=end
+                continue
+        out.append(text[i]); i+=1
+    return ''.join(out)
+
 def clean_math_inside_format(text):
     r"""Sửa các lệnh chữ nằm trong math mode như $\textit{...}$, ${\it ...}$.
     MathJax coi chữ trong math là chuỗi biến nên thường làm mất khoảng trắng; đổi sang \text{...} để giữ chữ và dấu cách.
@@ -228,6 +329,7 @@ def normalize_inline_math_delimiters(text):
 def clean(text):
     text=remove_visual(text)
     text=normalize_inline_math_delimiters(text)
+    text=convert_heva_hoac(text)
     text=clean_math_inside_format(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
     text=re.sub(r'\\phantom\{[^{}]*\}','',text)

@@ -32,8 +32,50 @@ function deepMerge(a,b){
 }
 function escapeHtml(str){return String(str ?? '').replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));}
 
+
+function convertHevaHoacInText(t){
+  function findBraceEnd(str, open){
+    let level=0;
+    for(let i=open;i<str.length;i++){
+      if(str[i]==='{') level++;
+      else if(str[i]==='}'){
+        level--;
+        if(level===0) return i;
+      }
+    }
+    return -1;
+  }
+  function cleanSystemBody(b){
+    return String(b||'')
+      .replace(/\\\\\s*&/g, '\\\\ ')
+      .replace(/^\s*&/g, '')
+      .replace(/\\\s*&/g, '\\\\ ')
+      .replace(/\s*&\s*/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  let out='', i=0;
+  while(i<t.length){
+    if(t.startsWith('\\heva', i) || t.startsWith('\\hoac', i)){
+      const isHeva=t.startsWith('\\heva', i);
+      let j=i+(isHeva?5:5);
+      while(j<t.length && /\s/.test(t[j])) j++;
+      if(t[j]==='{'){
+        const end=findBraceEnd(t,j);
+        if(end>j){
+          const body=cleanSystemBody(t.slice(j+1,end));
+          out += isHeva ? `\\begin{cases}${body}\\end{cases}` : `\\begin{array}{l}${body}\\end{array}`;
+          i=end+1; continue;
+        }
+      }
+    }
+    out+=t[i++];
+  }
+  return out;
+}
+
 function normalizeLatexResidue(str){
-  let t = String(str ?? '');
+  let t = convertHevaHoacInText(String(str ?? ''));
   // Dọn lệnh môi trường văn bản còn sót
   t = t.replace(/\\begin\s*\{\s*(center|flushleft|flushright)\s*\}/g, '<br>')
        .replace(/\\end\s*\{\s*(center|flushleft|flushright)\s*\}/g, '<br>')
