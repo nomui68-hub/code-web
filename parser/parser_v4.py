@@ -152,6 +152,14 @@ def split_math_segments(text):
     pattern=r'(\$\$[\s\S]*?\$\$|\$[^$]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))'
     return re.split(pattern, text)
 
+def apply_outside_math(text, func):
+    """Chỉ xử lý phần ngoài công thức toán, tránh phá \{...\}, \heva, \\ trong cases."""
+    parts=split_math_segments(text)
+    out=[]
+    for i,part in enumerate(parts):
+        out.append(part if i%2==1 else func(part))
+    return ''.join(out)
+
 
 def unwrap_format_commands_deep(text):
     r"""Gỡ \textbf, \textit, \emph... kể cả khi bên trong có công thức $...$.
@@ -252,17 +260,20 @@ def cleanup_latex_residue(text):
 
 
 def normalize_system_body(body):
-    """Dọn phần thân của \heva{...}, \hoac{...} để MathJax không báo Misplaced &.
-    ex_test thường viết \heva{&x=1\\&y=2}. MathJax cases không thích dấu & ở đầu dòng.
+    """Dọn phần thân của \heva{...}, \hoac{...} để MathJax hiển thị xuống dòng.
+    Ví dụ ex_test: \heva{&x=1\\&y=2} -> x=1\\y=2.
+    Không được đổi \\\\ thành <br> trong math.
     """
     b = body.strip()
-    # chuyển xuống dòng trong hệ, xóa & ở đầu mỗi dòng
-    b = re.sub(r'\\\\\s*&', r'\\\\ ', b)
+    # Xóa dấu & căn dòng ở đầu mỗi dòng trong hệ
     b = re.sub(r'^\s*&', '', b)
-    b = re.sub(r'\{\s*&', '{', b)
-    b = re.sub(r'\\\s*&', r'\\ ', b)
+    b = re.sub(r'\\\\\s*&', r'\\\\', b)
+    b = re.sub(r'(?<=\{)\s*&', '', b)
+    # Các dấu & còn lại chỉ dùng để căn cột, bỏ đi
     b = re.sub(r'\s*&\s*', ' ', b)
-    b = re.sub(r'\s+', ' ', b)
+    # Giữ \\ để MathJax xuống dòng, nhưng dọn khoảng trắng quanh nó
+    b = re.sub(r'\s*\\\\\s*', r'\\\\', b)
+    b = re.sub(r'[ \t\r\n]+', ' ', b)
     return b.strip()
 
 def convert_heva_hoac(text):
@@ -312,11 +323,14 @@ def clean_math_inside_format(text):
     return ''.join(out)
 
 def fix_latex_symbols(text):
-    # Ký tự escape thường dùng trong văn bản
-    repl={r'\#':'#', r'\%':'%', r'\&':'&', r'\_':'_', r'\{':'{', r'\}':'}'}
-    for a,b in repl.items(): text=text.replace(a,b)
-    # \$ thường dùng trong nốt nhạc như E\$4\$ nếu bị escape; giữ dấu $ thật nếu là công thức.
-    text=text.replace(r'\$','$')
+    # Chỉ đổi ký tự escape ở ngoài math. Trong math phải giữ \{ \} để hiện ngoặc tập hợp.
+    def repl_out(t):
+        repl={r'\#':'#', r'\%':'%', r'\&':'&', r'\_':'_'}
+        for a,b in repl.items():
+            t=t.replace(a,b)
+        t=t.replace(r'\$','$')
+        return t
+    text=apply_outside_math(text, repl_out)
     # Một số đề viết nốt nhạc kiểu E$4$, A$4$; đây là chữ, không phải công thức.
     text=re.sub(r'(?<=[A-Za-zÀ-ỹ])\$(\d+)\$', r'\1', text)
     return text
@@ -340,7 +354,7 @@ def clean(text):
     text=re.sub(r'\\par\b','<br>',text)
     text=re.sub(r'\\itemch\s*','<br>• ',text)
     text=re.sub(r'\\item\s*','<br>• ',text)
-    text=text.replace('\\\\','<br>')
+    text=apply_outside_math(text, lambda u: u.replace('\\\\','<br>'))
     text=text.replace(r'\lq\lq','“').replace(r'\rq\rq','”').replace(r'\lq','‘').replace(r'\rq','’')
     text=fix_latex_symbols(text)
     text=text.replace('~',' ')

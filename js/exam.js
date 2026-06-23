@@ -47,13 +47,15 @@ function convertHevaHoacInText(t){
   }
   function cleanSystemBody(b){
     return String(b||'')
-      .replace(/\\\\\s*&/g, '\\\\ ')
+      .trim()
       .replace(/^\s*&/g, '')
-      .replace(/\\\s*&/g, '\\\\ ')
+      .replace(/\\\\\s*&/g, '\\\\')
       .replace(/\s*&\s*/g, ' ')
-      .replace(/\s+/g, ' ')
+      .replace(/\s*\\\\\s*/g, '\\\\')
+      .replace(/[ \t\r\n]+/g, ' ')
       .trim();
   }
+
   let out='', i=0;
   while(i<t.length){
     if(t.startsWith('\\heva', i) || t.startsWith('\\hoac', i)){
