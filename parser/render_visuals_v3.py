@@ -66,9 +66,10 @@ def sanitize(s):
 
 def doc(body):
     return r'''
-\documentclass[tikz,border=3mm]{standalone}
+\documentclass[tikz,border=6mm]{standalone}
 \usepackage[utf8]{vietnam}
 \usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{array,tabularx,multirow,makecell}
 \usepackage{tikz,tkz-euclide,tkz-tab,tabvar,pgfplots}
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{arrows,arrows.meta,calc,intersections,angles,quotes,patterns,decorations.markings,decorations.pathmorphing,decorations.text,backgrounds,positioning,shapes.geometric}

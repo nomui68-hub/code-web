@@ -260,21 +260,20 @@ def cleanup_latex_residue(text):
 
 
 def normalize_system_body(body):
-    """Dọn phần thân của \heva{...}, \hoac{...} để MathJax hiển thị xuống dòng.
-    Ví dụ ex_test: \heva{&x=1\\&y=2} -> x=1\\y=2.
-    Không được đổi \\\\ thành <br> trong math.
+    """Dọn phần thân của \heva{...}, \hoac{...}.
+    Tách các dòng bởi \\ rồi bỏ dấu & căn cột để MathJax xuống dòng thật.
     """
-    b = body.strip()
-    # Xóa dấu & căn dòng ở đầu mỗi dòng trong hệ
-    b = re.sub(r'^\s*&', '', b)
-    b = re.sub(r'\\\\\s*&', r'\\\\', b)
-    b = re.sub(r'(?<=\{)\s*&', '', b)
-    # Các dấu & còn lại chỉ dùng để căn cột, bỏ đi
-    b = re.sub(r'\s*&\s*', ' ', b)
-    # Giữ \\ để MathJax xuống dòng, nhưng dọn khoảng trắng quanh nó
-    b = re.sub(r'\s*\\\\\s*', r'\\\\', b)
-    b = re.sub(r'[ \t\r\n]+', ' ', b)
-    return b.strip()
+    b = (body or '').strip()
+    b = re.sub(r'\s*\\\\\s*', '§BR§', b)
+    rows = []
+    for row in b.split('§BR§'):
+        row = row.strip()
+        row = re.sub(r'^\s*&+', '', row)
+        row = re.sub(r'&+', ' ', row)
+        row = re.sub(r'[ \t\r\n]+', ' ', row).strip()
+        if row:
+            rows.append(row)
+    return r'\\'.join(rows)
 
 def convert_heva_hoac(text):
     """Đổi \heva, \hoac của ex_test sang môi trường MathJax chuẩn.
@@ -292,10 +291,9 @@ def convert_heva_hoac(text):
                 body,end = brace(text,k)
                 body = normalize_system_body(body)
                 if name == 'heva':
-                    out.append('\\begin{cases}' + body + '\\end{cases}')
+                    out.append('\\left\\{\\begin{array}{l}' + body + '\\end{array}\\right.')
                 else:
-                    # hoac là hệ lựa chọn; dùng array một cột cho gọn, tránh dấu ngoặc nhọn dư.
-                    out.append('\\begin{array}{l}' + body + '\\end{array}')
+                    out.append('\\left[\\begin{array}{l}' + body + '\\end{array}\\right.')
                 i=end
                 continue
         out.append(text[i]); i+=1
@@ -325,7 +323,7 @@ def clean_math_inside_format(text):
 def fix_latex_symbols(text):
     # Chỉ đổi ký tự escape ở ngoài math. Trong math phải giữ \{ \} để hiện ngoặc tập hợp.
     def repl_out(t):
-        repl={r'\#':'#', r'\%':'%', r'\&':'&', r'\_':'_'}
+        repl={r'\#':'#', r'\%':'%', r'\&':'&', r'\_':'_', r'\{':'{', r'\}':'}'}
         for a,b in repl.items():
             t=t.replace(a,b)
         t=t.replace(r'\$','$')
@@ -343,6 +341,7 @@ def normalize_inline_math_delimiters(text):
 def clean(text):
     text=remove_visual(text)
     text=normalize_inline_math_delimiters(text)
+    text=re.sub(r'\\break\b\s*', ' ', text)
     text=convert_heva_hoac(text)
     text=clean_math_inside_format(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
