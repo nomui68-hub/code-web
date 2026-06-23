@@ -46,14 +46,14 @@ function convertHevaHoacInText(t){
     return -1;
   }
   function cleanSystemBody(b){
-    return String(b||'')
+    const raw = String(b||'').trim().replace(/\s*\\\\\s*/g, '§BR§');
+    return raw.split('§BR§').map(row => row
       .trim()
-      .replace(/^\s*&/g, '')
-      .replace(/\\\\\s*&/g, '\\\\')
-      .replace(/\s*&\s*/g, ' ')
-      .replace(/\s*\\\\\s*/g, '\\\\')
+      .replace(/^\s*&+/g, '')
+      .replace(/&+/g, ' ')
       .replace(/[ \t\r\n]+/g, ' ')
-      .trim();
+      .trim()
+    ).filter(Boolean).join('\\\\');
   }
 
   let out='', i=0;
@@ -66,7 +66,7 @@ function convertHevaHoacInText(t){
         const end=findBraceEnd(t,j);
         if(end>j){
           const body=cleanSystemBody(t.slice(j+1,end));
-          out += isHeva ? `\\begin{cases}${body}\\end{cases}` : `\\begin{array}{l}${body}\\end{array}`;
+          out += isHeva ? `\\left\\{\\begin{array}{l}${body}\\end{array}\\right.` : `\\left[\\begin{array}{l}${body}\\end{array}\\right.`;
           i=end+1; continue;
         }
       }
@@ -97,7 +97,7 @@ function normalizeLatexResidue(str){
     if(t===old) break;
   }
   // Sửa các escape thường gặp trong văn bản
-  t = t.replace(/\\#/g,'#').replace(/\\%/g,'%').replace(/\\&/g,'&').replace(/\\_/g,'_');
+  t = t.replace(/\\break\b\s*/g,' ').replace(/\\#/g,'#').replace(/\\%/g,'%').replace(/\\&/g,'&').replace(/\\_/g,'_').replace(/\\\{/g,'{').replace(/\\\}/g,'}');
   // Sửa lỗi parser cũ biến \parallel thành <br>allel
   t = t.replace(/<br>\s*allel/g, '\\parallel');
   // Nếu còn cặp $...$ chỉ chứa chữ/số rất đơn giản trong văn bản nốt nhạc, bỏ $ để khỏi hiện E$4$ khi MathJax chưa chạy.
