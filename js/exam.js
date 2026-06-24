@@ -179,7 +179,7 @@ function visualBlock(q){
   if(q.image) return `<img class="question-image" src="${q.image}" alt="Hình câu ${q.id}">`;
   if(q.hasTikz || q.hasImmini || q.hasTable){
     let flags=[]; if(q.hasTikz) flags.push('TikZ'); if(q.hasImmini) flags.push('immini'); if(q.hasTable) flags.push('bảng');
-    return `<div class="visual-warning">Câu này có ${flags.join(', ')}. Giáo viên cần chạy công cụ quản lý đề V9 để xuất hình.</div>`;
+    return `<div class="visual-warning"><b>Hình chưa hiển thị.</b> Câu này có ${flags.join(', ')}. Giáo viên có thể mở trang quản lý V12 và dùng mục <b>Sửa hình nhanh</b> để tải ảnh cho câu ${q.id}.</div>`;
   }
   return '';
 }

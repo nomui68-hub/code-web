@@ -95,22 +95,22 @@ def render_one(q,outdir,url_prefix):
         if p.returncode or not (td/'visual.pdf').exists():
             (outdir/f'q{q["id"]}_error.log').write_text(p.stdout,encoding='utf-8',errors='ignore')
             save_debug_tex(outdir, q['id'], tex_content)
-            return {'id':q['id'],'status':'latex_error'}
+            q['renderStatus']='latex_error'; q['renderErrorLog']=f'{url_prefix}/q{q["id"]}_error.log'; return {'id':q['id'],'status':'latex_error','log':str(outdir/f'q{q["id"]}_error.log')}
         pdf=outdir/f'q{q["id"]}.pdf'; png=outdir/f'q{q["id"]}.png'; shutil.copy(td/'visual.pdf',pdf)
         pp=shutil.which('pdftoppm')
         if pp:
             p2=run([pp,'-png','-singlefile','-r','200',str(pdf),str(outdir/f'q{q["id"]}')],Path.cwd())
             if p2.returncode==0 and png.exists():
                 q['image']=f'{url_prefix}/q{q["id"]}.png'
-                return {'id':q['id'],'status':'ok'}
+                q['renderStatus']='ok'; return {'id':q['id'],'status':'ok'}
         mg=shutil.which('magick')
         if mg:
             p3=run([mg,'-density','200',str(pdf),'-quality','95',str(png)],Path.cwd())
             if p3.returncode==0 and png.exists():
                 q['image']=f'{url_prefix}/q{q["id"]}.png'
-                return {'id':q['id'],'status':'ok'}
+                q['renderStatus']='ok'; return {'id':q['id'],'status':'ok'}
         q['image']=f'{url_prefix}/q{q["id"]}.pdf'
-        return {'id':q['id'],'status':'pdf_only'}
+        q['renderStatus']='pdf_only'; return {'id':q['id'],'status':'pdf_only'}
 
 def main():
     if len(sys.argv)<3:
@@ -123,6 +123,12 @@ def main():
         if q.get('visualLatex') or q.get('visualBlocks'):
             res.append(render_one(q,out,url_prefix))
     jp.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+    
+    report={'json':str(jp),'outdir':str(out),'items':[r for r in res if r]}
+    try:
+        (out/'render_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    except Exception: pass
     for r in res: print(r)
     print('Da cap nhat',jp)
+    print('Bao cao hinh:', out/'render_report.json')
 if __name__=='__main__': main()
