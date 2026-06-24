@@ -112,6 +112,16 @@ function convertHevaHoacInText(t){
   return out;
 }
 
+
+function escapeAnglesInsideMathJS(text){
+  return splitMathSegmentsJS(String(text ?? '')).map(p => {
+    if(!p.math) return p.text;
+    return p.text
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }).join('');
+}
+
 function normalizeLatexResidue(str){
   let t = convertHevaHoacInText(String(str ?? ''));
   // Dọn lệnh môi trường văn bản còn sót
@@ -138,6 +148,7 @@ function normalizeLatexResidue(str){
   t = t.replace(/<br>\s*allel/g, '\\parallel');
   // Nếu còn cặp $...$ chỉ chứa chữ/số rất đơn giản trong văn bản nốt nhạc, bỏ $ để khỏi hiện E$4$ khi MathJax chưa chạy.
   t = t.replace(/\$([A-Za-zÀ-ỹ0-9]{1,4})\$/g, '$1');
+  t = escapeAnglesInsideMathJS(t);
   return t;
 }
 function attemptKey(){return `attempts_${localStorage.getItem('examId') || 'DE_MAU'}_${localStorage.getItem('studentId') || 'NOID'}`;}

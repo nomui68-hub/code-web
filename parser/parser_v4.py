@@ -338,6 +338,21 @@ def normalize_inline_math_delimiters(text):
     text=re.sub(r'\$\$\s*([\s\S]*?)\s*\$\$', r'\\[\1\\]', text)
     return text
 
+
+def escape_html_angles_in_math(text):
+    """Đổi dấu < > trong các đoạn toán thành entity HTML.
+    Khi đưa vào innerHTML, dấu < trong $0\le a<b\le 12$ có thể bị hiểu là thẻ HTML
+    và làm mất phần sau. Dùng &lt; &gt; để MathJax vẫn nhận đúng dấu < >.
+    """
+    parts = split_math_segments(text)
+    out=[]
+    for i,part in enumerate(parts):
+        if i%2==1:
+            part = part.replace('&lt;', '<').replace('&gt;', '>')
+            part = part.replace('<', '&lt;').replace('>', '&gt;')
+        out.append(part)
+    return ''.join(out)
+
 def clean(text):
     text=remove_visual(text)
     text=normalize_inline_math_delimiters(text)
@@ -356,6 +371,7 @@ def clean(text):
     text=apply_outside_math(text, lambda u: u.replace('\\\\','<br>'))
     text=text.replace(r'\lq\lq','“').replace(r'\rq\rq','”').replace(r'\lq','‘').replace(r'\rq','’')
     text=fix_latex_symbols(text)
+    text=escape_html_angles_in_math(text)
     text=text.replace('~',' ')
     text=re.sub(r'\\[,;:! ]',' ',text)
     text=re.sub(r'\\(quad|qquad)\b',' ',text)
