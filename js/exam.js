@@ -33,6 +33,42 @@ function deepMerge(a,b){
 function escapeHtml(str){return String(str ?? '').replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));}
 
 
+
+function splitMathSegmentsJS(text){
+  const s = String(text ?? '');
+  const parts = [];
+  let i = 0, start = 0;
+  while(i < s.length){
+    if(s.startsWith('$$', i)){
+      if(i > start) parts.push({math:false, text:s.slice(start,i)});
+      const j = s.indexOf('$$', i+2);
+      if(j >= 0){parts.push({math:true, text:s.slice(i,j+2)}); i = j+2; start = i; continue;}
+    }
+    if(s[i] === '$'){
+      if(i > start) parts.push({math:false, text:s.slice(start,i)});
+      let j = i+1;
+      while(j < s.length){ if(s[j] === '$' && s[j-1] !== '\\') break; j++; }
+      if(j < s.length){parts.push({math:true, text:s.slice(i,j+1)}); i = j+1; start = i; continue;}
+    }
+    if(s.startsWith('\\[', i)){
+      if(i > start) parts.push({math:false, text:s.slice(start,i)});
+      const j = s.indexOf('\\]', i+2);
+      if(j >= 0){parts.push({math:true, text:s.slice(i,j+2)}); i = j+2; start = i; continue;}
+    }
+    if(s.startsWith('\\(', i)){
+      if(i > start) parts.push({math:false, text:s.slice(start,i)});
+      const j = s.indexOf('\\)', i+2);
+      if(j >= 0){parts.push({math:true, text:s.slice(i,j+2)}); i = j+2; start = i; continue;}
+    }
+    i++;
+  }
+  if(start < s.length) parts.push({math:false, text:s.slice(start)});
+  return parts;
+}
+function applyOutsideMathJS(text, fn){
+  return splitMathSegmentsJS(text).map(p => p.math ? p.text : fn(p.text)).join('');
+}
+
 function convertHevaHoacInText(t){
   function findBraceEnd(str, open){
     let level=0;
@@ -66,7 +102,7 @@ function convertHevaHoacInText(t){
         const end=findBraceEnd(t,j);
         if(end>j){
           const body=cleanSystemBody(t.slice(j+1,end));
-          out += isHeva ? `\\left\\{\\begin{array}{l}${body}\\end{array}\\right.` : `\\left[\\begin{array}{l}${body}\\end{array}\\right.`;
+          out += `\\begin{cases}${body}\\end{cases}`;
           i=end+1; continue;
         }
       }
@@ -97,7 +133,7 @@ function normalizeLatexResidue(str){
     if(t===old) break;
   }
   // Sửa các escape thường gặp trong văn bản
-  t = t.replace(/\\break\b\s*/g,' ').replace(/\\#/g,'#').replace(/\\%/g,'%').replace(/\\&/g,'&').replace(/\\_/g,'_').replace(/\\\{/g,'{').replace(/\\\}/g,'}');
+  t = applyOutsideMathJS(t, u => u.replace(/\\(?:break|newline|linebreak)\b\s*/g,' ').replace(/\\#/g,'#').replace(/\\%/g,'%').replace(/\\&/g,'&').replace(/\\_/g,'_').replace(/\\\{/g,'{').replace(/\\\}/g,'}'));
   // Sửa lỗi parser cũ biến \parallel thành <br>allel
   t = t.replace(/<br>\s*allel/g, '\\parallel');
   // Nếu còn cặp $...$ chỉ chứa chữ/số rất đơn giản trong văn bản nốt nhạc, bỏ $ để khỏi hiện E$4$ khi MathJax chưa chạy.
