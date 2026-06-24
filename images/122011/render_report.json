@@ -1,0 +1,30 @@
+{
+  "json": "D:\\A-tao-web\\math-exam-v12\\exams\\122011\\questions.json",
+  "outdir": "D:\\A-tao-web\\math-exam-v12\\images\\122011",
+  "items": [
+    {
+      "id": 5,
+      "status": "ok"
+    },
+    {
+      "id": 9,
+      "status": "ok"
+    },
+    {
+      "id": 10,
+      "status": "ok"
+    },
+    {
+      "id": 12,
+      "status": "ok"
+    },
+    {
+      "id": 13,
+      "status": "ok"
+    },
+    {
+      "id": 20,
+      "status": "ok"
+    }
+  ]
+}
