@@ -1,0 +1,41 @@
+
+\documentclass[tikz,border=6mm]{standalone}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{array,tabularx,multirow,makecell}
+\usepackage{tikz,tkz-euclide,tkz-tab,tabvar,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows,arrows.meta,calc,intersections,angles,quotes,patterns,decorations.markings,decorations.pathmorphing,decorations.text,backgrounds,positioning,shapes.geometric}
+\begin{document}
+\begin{minipage}{0.98\linewidth}
+\centering
+\begin{tikzpicture}[tdplot_main_coords, scale=0.5, line join=round, line cap=round]
+    
+			
+			\pgfmathsetmacro{\R}{5}    
+			\pgfmathsetmacro{\H}{12}   
+			\pgfmathsetmacro{\Sx}{-12} 
+			\pgfmathsetmacro{\Ycut}{\R/2} 
+			
+			\foreach \ang in {90, 300}
+			\draw[thick] ({\R*cos(\ang)}, 0, {\R*sin(\ang)}) -- (0,\Sx,0);
+			
+			\draw[thick] plot[domain=0:360, samples=100] ({\R*cos(\x)}, 0, {\R*sin(\x)});
+			\pgfmathsetmacro{\xBase}{sqrt(\R^2 - \Ycut^2)}
+			\draw[blue] ({\xBase}, 0, \Ycut)--({-\xBase}, 0, \Ycut);
+			
+			\fill[pattern=north east lines]
+				plot [samples=100, domain={\Sx/2}:0] ({sqrt(max(0, (\R*(1-abs(\x)/\H))^2 - (\Ycut)^2))}, {\x}, {\Ycut}) --
+				({-sqrt(max(0, (\R^2 - \Ycut^2)))}, 0, {\Ycut}) -- 
+				plot [samples=100, domain=0:{\Sx/2}] ({-sqrt(max(0, (\R*(1-abs(\x)/\H))^2 - (\Ycut)^2))}, {\x}, {\Ycut}) -- cycle;
+			\draw[blue] plot [samples=100, domain={\Sx/2}:0] ({sqrt(max(0, (\R*(1-abs(\x)/\H))^2 - (\Ycut)^2))}, {\x}, {\Ycut});
+			\draw[dashed,blue] 
+				plot [samples=100, domain={\Sx/2}:0] ({-sqrt(max(0, (\R*(1-abs(\x)/\H))^2 - (\Ycut)^2))}, {\x}, {\Ycut});
+			
+			\draw[dashed] (0,0,0) -- (0,\Sx,0)node[above] {$S$};
+			\draw (0,0,0) -- (0,0,\R) node[above] {$A$};
+			\fill (0,0,0) circle (1pt) node[below] {$O$};
+    
+		\end{tikzpicture}
+\end{minipage}
+\end{document}
