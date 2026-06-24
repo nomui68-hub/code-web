@@ -291,9 +291,9 @@ def convert_heva_hoac(text):
                 body,end = brace(text,k)
                 body = normalize_system_body(body)
                 if name == 'heva':
-                    out.append('\\left\\{\\begin{array}{l}' + body + '\\end{array}\\right.')
+                    out.append('\\begin{cases}' + body + '\\end{cases}')
                 else:
-                    out.append('\\left[\\begin{array}{l}' + body + '\\end{array}\\right.')
+                    out.append('\\begin{cases}' + body + '\\end{cases}')
                 i=end
                 continue
         out.append(text[i]); i+=1
@@ -341,7 +341,7 @@ def normalize_inline_math_delimiters(text):
 def clean(text):
     text=remove_visual(text)
     text=normalize_inline_math_delimiters(text)
-    text=re.sub(r'\\break\b\s*', ' ', text)
+    text=re.sub(r'\\(?:break|newline|linebreak)\b\s*', ' ', text)
     text=convert_heva_hoac(text)
     text=clean_math_inside_format(text)
     text=re.sub(r'\\href\{[^{}]*\}\{[^{}]*\}','',text)
