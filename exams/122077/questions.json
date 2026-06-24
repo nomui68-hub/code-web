@@ -1,0 +1,527 @@
+{
+  "examId": "122077",
+  "title": "TNTHPT-BGD",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Nghiệm của phương trình $\\log_3 (x-1)=1$ là",
+      "options": [
+        "$x=5$",
+        "$x=3$",
+        "$x=2$",
+        "$x=4$"
+      ],
+      "answer": 3,
+      "id": 1,
+      "solution": "Ta có \n \\[\\log_3 (x-1)=1 \\Leftrightarrow x-1 =3 \\Leftrightarrow x=4.\\]\n Vậy phương trình đã cho có nghiệm duy nhất là $x=4$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình lập phương $ABCD.A'B'C'D'$ (xem hình bên). Vectơ nào dưới đây bằng vectơ $\\overrightarrow{AB}$?",
+      "options": [
+        "$\\overrightarrow{CD}$",
+        "$\\overrightarrow{D'C'}$",
+        "$\\overrightarrow{AA'}$",
+        "$\\overrightarrow{AD}$"
+      ],
+      "answer": 1,
+      "id": 2,
+      "solution": "Vì $ABCD.A'B'C'D'$ là hình lập phương nên ta có $\\overrightarrow{AB} = \\overrightarrow{D'C'}$.",
+      "visualLatex": "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.8]\n    \n\t\t\t\t\\foreach \\x/\\y/\\pos in {0/0/A, 3/0/B, -1/-1.2/D} \\path ($(\\x,\\y)$) coordinate (\\pos) ($(\\x,\\y)+(0,3)$) coordinate (\\pos'); \n\t\t\t\t\\path ($(B)+(D)-(A)$) coordinate (C) ($(C)+(0,3)$) coordinate (C'); \n\t\t\t\t\\draw (A') -- (D') -- (D) -- (C) -- (B) -- (B') -- (C') -- (D') (A') -- (B') (C) -- (C');\n\t\t\t\t\\draw[dashed] (A') -- (A) -- (B) (A) -- (D);\n\t\t\t\t\\foreach \\x/\\pos in {A/165,B/0,C/-30,D/-150,A'/150,B'/30,C'/-15,D'/180} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n    \\node at (0,0){\\href{FXOM72}{\\tiny \\phantom{FXOM72}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.8]\n    \n\t\t\t\t\\foreach \\x/\\y/\\pos in {0/0/A, 3/0/B, -1/-1.2/D} \\path ($(\\x,\\y)$) coordinate (\\pos) ($(\\x,\\y)+(0,3)$) coordinate (\\pos'); \n\t\t\t\t\\path ($(B)+(D)-(A)$) coordinate (C) ($(C)+(0,3)$) coordinate (C'); \n\t\t\t\t\\draw (A') -- (D') -- (D) -- (C) -- (B) -- (B') -- (C') -- (D') (A') -- (B') (C) -- (C');\n\t\t\t\t\\draw[dashed] (A') -- (A) -- (B) (A) -- (D);\n\t\t\t\t\\foreach \\x/\\pos in {A/165,B/0,C/-30,D/-150,A'/150,B'/30,C'/-15,D'/180} \\fill (\\x) circle(1pt) node[{shift=(\\pos:0.25)}]{$\\x$}; \n    \\node at (0,0){\\href{FXOM72}{\\tiny \\phantom{FXOM72}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/122077/q2.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hai biến cố độc lập $A$ và $B$ có xác suất thỏa mãn $\\mathrm{P} (A) =0{,}5$ và $\\mathrm{P}(B)=0{,}4$. Giá trị của $\\mathrm{P}(AB)$ bằng",
+      "options": [
+        "$0{,}9$",
+        "$0{,}1$",
+        "$0{,}2$",
+        "$0{,}8$"
+      ],
+      "answer": 2,
+      "id": 3,
+      "solution": "Do $A$ và $B$ là hai biến cố độc lập nên \n \\[\\mathrm{P}(AB)= \\mathrm{P}(A) \\cdot \\mathrm{P}(B) =0{,}5 \\cdot 0{,}4=0{,}2.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=\\dfrac{ax+b}{cx+d}$ ($c \\ne 0$, $ad-bc \\ne 0$) có bảng biến thiên như hình dưới đây: \n\n Đường tiệm cận ngang của đồ thị hàm số đã cho có phương trình là",
+      "options": [
+        "$x=-2$",
+        "$y=1$",
+        "$y=-2$",
+        "$x=1$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "Dựa vào bảng biến thiên, ta thấy $\\lim\\limits_{x \\to +\\infty} y = -2$ và $\\lim\\limits_{x \\to -\\infty} y = -2$. <br>\n Suy ra đồ thị hàm số $y=\\dfrac{ax+b}{cx+d}$ có một đường tiệm cận ngang là $y=-2$.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=4, deltacl=0.5]\n\t\t\t{$x$/0.7,$y’$/0.7,$y$/2}{$-\\infty$,$1$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,d,+,}\n\t\t\t\\tkzTabVar{-/$-2$,+D-/$+\\infty$/$-\\infty$,+/$-2$}\n    \\node at (T11){\\href{3B0UAP}{\\tiny \\phantom{3B0UAP}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=4, deltacl=0.5]\n\t\t\t{$x$/0.7,$y’$/0.7,$y$/2}{$-\\infty$,$1$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,d,+,}\n\t\t\t\\tkzTabVar{-/$-2$,+D-/$+\\infty$/$-\\infty$,+/$-2$}\n    \\node at (T11){\\href{3B0UAP}{\\tiny \\phantom{3B0UAP}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/122077/q4.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho $\\int f(x) \\mathrm{ d}x = \\sin x +C$. Phát biểu nào sau đây là đúng?",
+      "options": [
+        "$\\int \\big[3 +f(x)\\big] \\mathrm{d}x=3x + \\cos x +C$",
+        "$\\int \\big[3 +f(x)\\big] \\mathrm{d}x=3x + \\sin x +C$",
+        "$\\int \\big[3 +f(x)\\big] \\mathrm{d}x=3x - \\cos x +C$",
+        "$\\int \\big[3 +f(x)\\big] \\mathrm{d}x=3x - \\sin x +C$"
+      ],
+      "answer": 1,
+      "id": 5,
+      "solution": "Ta có \n \\[\\int \\big[3 +f(x)\\big] \\mathrm{d}x = \\int 3 \\mathrm{ d}x + \\int f(x) \\mathrm{ d}x = 3x + \\sin x +C.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Khảo sát thời gian học trực tuyến (đơn vị: phút) trong một ngày của $42$ học sinh, người ta thu được mẫu số liệu ghép nhóm sau: \n\n Trung vị của mẫu số liệu trên thuộc nhóm nào sau đây?",
+      "options": [
+        "$[50; 60)$",
+        "$[60; 70)$",
+        "$[30; 40)$",
+        "$[40; 50)$"
+      ],
+      "answer": 2,
+      "id": 6,
+      "solution": "Gọi $x_1$, $x_2$, ..., $x_{42}$ theo thứ tự không giảm là thời gian học trực tuyến của $42$ học sinh. <br>\n Vì $x_{21}$, $x_{22} \\in [30; 40)$ nên trung vị $M_{\\mathrm{e}} = \\dfrac{x_{21} + x_{22}}{2} \\in [30; 40)$.",
+      "visualLatex": "\\begin{tabular}{| l | c | c | c | c | c | c |}\n\t\t\t\\hline\n\t\t\tThời gian học trực tuyến &$[10; 20)$&$[20; 30)$&$[30; 40)$&$[40; 50)$&$[50; 60)$&$[60; 70)$ \\\\ \n\t\t\t\\hline\n\t\t\tSố học sinh &$4$&$8$&$14$&$7$&$4$&$5$\\\\ \n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{| l | c | c | c | c | c | c |}\n\t\t\t\\hline\n\t\t\tThời gian học trực tuyến &$[10; 20)$&$[20; 30)$&$[30; 40)$&$[40; 50)$&$[50; 60)$&$[60; 70)$ \\\\ \n\t\t\t\\hline\n\t\t\tSố học sinh &$4$&$8$&$14$&$7$&$4$&$5$\\\\ \n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/122077/q6.png"
+    },
+    {
+      "type": "choice",
+      "question": "Cho cấp số cộng $(u_n)$ có $u_1=5$ và công sai $d=-1$. Giá trị của $u_2$ bằng",
+      "options": [
+        "$5$",
+        "$4$",
+        "$-4$",
+        "$-5$"
+      ],
+      "answer": 1,
+      "id": 7,
+      "solution": "Theo công thức số hạng tổng quát của cấp số cộng, ta có\n \\[u_2 = u_1 + d = 5 + (-1) = 4.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho các hàm số $y=f(x)$ và $y=g(x)$ có đạo hàm trên tập số thực $\\mathbb{R}$ thỏa mãn $f'(x)=x$ và $g'(x)=x^2$. Đạo hàm của hàm số $y=f(x)+g(x)$ là",
+      "options": [
+        "$x+x^2$",
+        "$1+2x$",
+        "$1+x^2$",
+        "$3x$"
+      ],
+      "answer": 0,
+      "id": 8,
+      "solution": "Áp dụng quy tắc đạo hàm của một tổng, ta có\n \\[y' = \\big[f(x) + g(x)\\big]' = f'(x) + g'(x) = x + x^2.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $A(1;5;1)$ và $B(3;3;1)$. Vectơ $\\overrightarrow{AB}$ có tọa độ là",
+      "options": [
+        "$(4;8;2)$",
+        "$(2;4;1)$",
+        "$(2;-2;0)$",
+        "$(-2;2;0)$"
+      ],
+      "answer": 2,
+      "id": 9,
+      "solution": "Ta có \n \\[\\overrightarrow{AB} = (x_B - x_A; y_B - y_A; z_B - z_A) = (3 - 1; 3 - 5; 1 - 1) = (2; -2; 0).\\]\n Suy ra tọa độ của vectơ $\\overrightarrow{AB}$ là $(2; -2; 0)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases}x+y-3&lt;0\\\\x-y+1&gt;0\\end{cases}$?",
+      "options": [
+        "$(0;2)$",
+        "$(1;2)$",
+        "$(-1;1)$",
+        "$(1;0)$"
+      ],
+      "answer": 3,
+      "id": 10,
+      "solution": "Thay lần lượt các cặp số ở các phương án vào hệ bất phương trình, ta có\n <br>\n <br> • Với cặp số $(0;2)$ ta có $\\begin{cases}0+2-3&lt;0\\\\0-2+1&gt;0\\end{cases} \\Leftrightarrow \\begin{cases}-1&lt;0 (đúng)\\\\-1&gt;0 (sai);\\end{cases}$\n <br> • Với cặp số $(1;2)$ ta có $\\begin{cases}1+2-3&lt;0\\\\1-2+1&gt;0\\end{cases} \\Leftrightarrow \\begin{cases}0&lt;0 (sai)\\\\0&gt;0 (sai);\\end{cases}$\n <br> • Với cặp số $(-1;1)$ ta có $\\begin{cases}-1+1-3&lt;0\\\\-1-1+1&gt;0\\end{cases} \\Leftrightarrow \\begin{cases}-3&lt;0 (đúng)\\\\-1&gt;0 (sai);\\end{cases}$\n <br> • Với cặp số $(1;0)$ ta có $\\begin{cases}1+0-3&lt;0\\\\1-0+1&gt;0\\end{cases} \\Leftrightarrow \\begin{cases}-2&lt;0 (đúng)\\\\2&gt;0 (đúng).\\end{cases}$\n <br>\n Vậy cặp số $(1;0)$ là nghiệm của hệ bất phương trình đã cho.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Hàm số $F(x)=4x^3$ là một nguyên hàm của hàm số nào sau đây?",
+      "options": [
+        "$f_3(x)=12x^2$",
+        "$f_4(x)=4x^4$",
+        "$f_2(x)=3x^2$",
+        "$f_1(x)=x^4$"
+      ],
+      "answer": 0,
+      "id": 11,
+      "solution": "Vì $F(x)$ là một nguyên hàm của hàm số $f(x)$ nên ta có\n \\[f(x) = F'(x) = \\left(4x^3\\right)' = 12x^2.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1$ và công bội $q$ với $u_1 \\neq 0$, $q&gt;1$. Số hạng $u_4$ là",
+      "options": [
+        "$u_4=u_1\\cdot q^3$",
+        "$u_4=u_1\\cdot q^4$",
+        "$u_4=u_1+3q$",
+        "$u_4=u_1+4q$"
+      ],
+      "answer": 0,
+      "id": 12,
+      "solution": "Công thức số hạng tổng quát của cấp số nhân là $u_n=u_1\\cdot q^{n-1}$ (với $n \\geq 2$, $n \\in \\mathbb{N}^*$). <br>\n Thay $n=4$ vào công thức trên, ta được số hạng thứ tư là\n \\[u_4=u_1\\cdot q^{4-1}=u_1\\cdot q^3.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Trong không gian xét hệ tọa độ $Oxyz$ có một đơn vị dài trên các trục tương ứng với $10$ m trên thực tế. Một mục tiêu cần được bảo vệ có vị trí ở gốc tọa độ $O$. Người ta thiết lập một vành đai bảo vệ quanh mục tiêu theo một đường tròn tâm $O$ có bán kính bằng $7$ đơn vị (tương ứng $70$ m trên thực tế) nằm trong mặt phẳng $(Oxy)$. Một máy bay không người lái (được coi như một hạt) bay theo một đường thẳng từ vị trí $M(5;10;4)$ đến vị trí $N(14;-2;4)$. Tại mỗi vị trí của máy bay, khoảng cách từ máy bay đến vành đai bảo vệ là độ dài ngắn nhất của các đoạn thẳng nối từ vị trí đó đến một điểm bất kì trên vành đai.",
+      "statements": [
+        {
+          "text": "$\\overrightarrow{MN}=(9;-12;0)$",
+          "answer": true
+        },
+        {
+          "text": "Phương trình tham số của đường thẳng $MN$ là $\\begin{cases}x=5+3t\\\\y=10-4t\\\\z=0\\end{cases}$ với $t \\in \\mathbb{R}$",
+          "answer": false
+        },
+        {
+          "text": "Trong quá trình bay từ $M$ đến $N$, khoảng cách ngắn nhất từ máy bay đến vành đai bảo vệ là $50$ m",
+          "answer": true
+        },
+        {
+          "text": "Trong quá trình bay từ $M$ đến $N$, khoảng cách từ máy bay đến vành đai bảo vệ là ngắn nhất khi máy bay ở vị trí có tọa độ là $(8;6;4)$",
+          "answer": true
+        }
+      ],
+      "id": 13,
+      "solution": "<br>\n <br> • Ta có $M(5;10;4)$ và $N(14;-2;4)$. Suy ra $\\overrightarrow{MN}=(14-5;-2-10;4-4)=(9;-12;0)$.\n <br> • Đường thẳng $MN$ đi qua điểm $M(5;10;4)$ và nhận $\\vec{u}=\\dfrac{1}{3}\\overrightarrow{MN}=(3;-4;0)$ làm một vectơ chỉ phương nên có phương trình tham số là $\\begin{cases}x=5+3t\\\\y=10-4t\\\\z=4\\end{cases}$ với $t \\in \\mathbb{R}$.\n <br> • Vành đai bảo vệ là đường tròn $(C)$ nằm trong mặt phẳng $(Oxy)$ có tâm $O(0;0;0)$ và bán kính $R=7$. <br>\n Gọi $H(5+3t;10-4t;4)$ (với $t \\in [0;3]$) là một vị trí bất kỳ của máy bay trên đoạn $MN$. <br>\n Gọi $M'$, $N'$ lần lượt là hình chiếu vuông góc của $M$ và $N$ lên mặt phẳng $(Oxy)$. <br>\n Hình chiếu vuông góc của $H$ lên mặt phẳng $(Oxy)$ là $H'(5+3t; 10-4t; 0)$. <br>\n Gọi $P$ là giao điểm của $OH'$ và đường tròn $(C)$. <br>\n Khoảng cách ngắn nhất từ $H$ đến vành đai $(C)$ được tính theo công thức\n \\[\\mathrm{d}\\big(H, (C)\\big) = HP = \\sqrt{H'P^2+H'H^2} = \\sqrt{(OH' - R)^2 + z_H^2} = \\sqrt{(OH' - 7)^2 + 4^2}.\\]\n Ta có $OH'^2 = (5+3t)^2 + (10-4t)^2 = 25t^2 - 50t + 125 = 25(t-1)^2 + 100$. <br>\n Vì $t \\in [0;3]$ nên $OH'$ đạt giá trị nhỏ nhất bằng $\\sqrt{100} = 10$ khi $t = 1$. <br>\n Khi đó, khoảng cách ngắn nhất từ máy bay đến vành đai bảo vệ là\n \\[\\mathrm{d}\\big(H, (C)\\big)_{\\min} = \\sqrt{(10-7)^2 + 4^2} = 5.\\]\n Đổi sang kích thước thực tế, khoảng cách ngắn nhất đó là $5\\cdot 10 = 50$ m.\n <br> • Khoảng cách ngắn nhất từ máy bay đến vành đai bảo vệ bằng $5$ (tương ứng khoảng cách thực tế là $50$ m) đạt được khi $t=1$. <br>\n Thay $t=1$ vào tọa độ tổng quát của điểm $H$, ta được vị trí của máy bay khi đó là $(8;6;4)$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Nhằm đưa ra cảnh báo sớm về tình trạng sức khỏe của cư dân, người ta sử dụng một ứng dụng trí tuệ nhân tạo để sàng lọc nguy cơ mắc bệnh dựa trên hồ sơ y tế được lưu trữ. Khi phát hiện nguy cơ mắc bệnh, ứng dụng này sẽ gửi cảnh báo để giúp người dân đi khám bệnh kịp thời. Người ta dùng ứng dụng này để tầm soát nguy cơ mắc một loại bệnh. <br>\n Kết quả thu được khi quét thử nghiệm hồ sơ y tế của $10 000$ người như sau: Có $1 000$ người nhận được cảnh báo và $9 000$ người còn lại không nhận được cảnh báo từ ứng dụng. Trong số $1 000$ người nhận được cảnh báo thì có $700$ người có bệnh và $300$ người không có bệnh. Trong số $9 000$ người không nhận được cảnh báo thì có $100$ người có bệnh và $8 900$ người không có bệnh. <br>\n Chọn ngẫu nhiên một người trong số $10 000$ người nói trên.",
+      "statements": [
+        {
+          "text": "Xác suất để người đó không nhận được cảnh báo từ ứng dụng bằng $0{,}9$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để người đó không có bệnh, biết rằng người đó không nhận được cảnh báo từ ứng dụng, lớn hơn $0{,}98$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để người đó không có bệnh bằng $0{,}9$",
+          "answer": false
+        },
+        {
+          "text": "Xác suất để người đó không nhận được cảnh báo từ ứng dụng, biết rằng người đó không có bệnh, nhỏ hơn $0{,}95$",
+          "answer": false
+        }
+      ],
+      "id": 14,
+      "solution": "Gọi các biến cố sau:\n <br> \n <br> • $A$ là biến cố “ Người được chọn nhận được cảnh báo từ ứng dụng”;\n <br> • $B$ là biến cố “ Người được chọn có bệnh”.\n <br>\n Từ giả thiết, ta có các xác suất sau:\n <br> \n <br> • $\\mathrm{P}(A)=\\dfrac{1 000}{10 000}=\\dfrac{1}{10}$ và $\\mathrm{P}\\left(\\overline{A}\\right)=\\dfrac{9 000}{10 000}=\\dfrac{9}{10}$;\n <br> • $\\mathrm{P}(B \\mid A)=\\dfrac{700}{1 000}=\\dfrac{7}{10}$ và $\\mathrm{P}\\left(\\overline{B}\\mid A \\right)=\\dfrac{300}{1 000}=\\dfrac{3}{10}$;\n <br> • $\\mathrm{P}\\left(B\\mid\\overline{A}\\right)=\\dfrac{100}{9 000}=\\dfrac{1}{90}$ và $\\mathrm{P}\\left(\\overline{B}\\mid\\overline{A}\\right)=\\dfrac{8 900}{9 000}=\\dfrac{89}{90}$.\n <br>\n Sơ đồ hình cây:\n\n <br>\n <br> • Xác suất để người được chọn không nhận được cảnh báo từ ứng dụng là $\\mathrm{P}\\left(\\overline{A}\\right)=\\dfrac{9}{10}=0{,}9$.\n <br> • Xác suất để người được chọn không có bệnh, biết rằng người đó không nhận được cảnh báo là \n \\[\n \\mathrm{P}\\left(\\overline{B}\\mid\\overline{A}\\right)=\\dfrac{89}{90}=0{,}9(8)&gt;0{,}98.\n \\]\n <br> • Xác suất để người được chọn không có bệnh là\n \\[\n \\mathrm{P}\\left(\\overline{B}\\right)=\\mathrm{P}(A)\\cdot\\mathrm{P}\\left(\\overline{B}\\mid A\\right)+\\mathrm{P}\\left(\\overline{A}\\right)\\cdot\\mathrm{P}\\left(\\overline{B}\\mid\\overline{A}\\right)=\\dfrac{1}{10}\\cdot \\dfrac{3}{10}+\\dfrac{9}{10}\\cdot\\dfrac{89}{90}=\\dfrac{23}{25}=0{,}92.\n \\]\n <br> • Xác suất để người được chọn không nhận được cảnh báo, biết rằng người đó không có bệnh là\n \\[\n \\mathrm{P}\\left(\\overline{A} \\mid\\overline{B}\\right)=\\dfrac{\\mathrm{P}\\left(\\overline{A}\\right)\\cdot\\mathrm{P}\\left(\\overline{B}\\mid\\overline{A}\\right)}{\\mathrm{P}\\left(\\overline{B}\\right)}=\\dfrac{\\dfrac{9}{10}\\cdot\\dfrac{89}{90}}{\\dfrac{23}{25}}=\\dfrac{89}{92}&gt;0{,}95.\n \\]\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Một hệ thống pin năng lượng mặt trời gồm các tấm pin được kết nối với một bộ lưu trữ điện. Trong thời gian mặt trời chiếu sáng của một ngày, năng lượng điện thu được từ các tấm pin được lưu trong bộ lưu trữ điện. Gọi $F(t)$ là năng lượng điện (kWh) lưu trữ được kể từ thời điểm hệ thống bắt đầu hoạt động đến thời điểm $t$, trong đó $t$ là thời gian tính theo giờ ($0\\le t\\le 12$) và thời điểm hệ thống bắt đầu hoạt động ứng với $t=0$. Biết rằng $F(0)=0$. <br>\n Tốc độ lưu trữ năng lượng điện (kW) của hệ thống này là hàm số $f(t)=F'(t)$ với $0\\le t\\le 12$. Số liệu ghi nhận được ở một ngày cụ thể trong năm cho thấy $f(t)=-0{,}3t^2+3{,}6t$ với $0\\le t\\le 12$.",
+      "statements": [
+        {
+          "text": "$F(t)=-0{,}1t^3+1{,}8t^2$ với $0\\le t\\le 12$",
+          "answer": true
+        },
+        {
+          "text": "Năng lượng điện (kWh) lưu trữ được kể từ thời điểm $t=a$ đến thời điểm $t=b$ ($0\\le a&lt;b\\le 12$) là $\\int\\limits_a^b f(t)\\mathrm{ d}t$",
+          "answer": true
+        },
+        {
+          "text": "Năng lượng điện lưu trữ được kể từ thời điểm $t=1$ đến thời điểm $t=4$ nhỏ hơn $20{,}6$ kWh",
+          "answer": false
+        },
+        {
+          "text": "Năng lượng điện lưu trữ được kể từ thời điểm $t=1$ đến thời điểm $t=7$ gấp hai lần năng lượng điện lưu trữ được kể từ thời điểm $t=1$ đến thời điểm $t=4$",
+          "answer": false
+        }
+      ],
+      "id": 15,
+      "solution": "<br>\n <br> • Ta có\n \\[\\int f(t)\\mathrm{ d}t=\\int \\left(-0{,}3t^2+3{,}6t\\right) \\mathrm{d}t=-0{,}1t^3+1{,}8t^2+C.\\]\n Vì $F(t)$ là một nguyên hàm của $f(t)$ thỏa mãn $F(0)=0$ nên $F(t)=-0{,}1t^3+1{,}8t^2$.\n <br> • Theo định nghĩa tích phân, năng lượng điện lưu trữ được kể từ thời điểm $t=a$ đến $t=b$ là\n \\[F(b)-F(a)=\\int\\limits_a^b F'(t) \\mathrm{ d}t=\\int\\limits_a^b f(t) \\mathrm{ d}t.\\]\n <br> • Năng lượng điện lưu trữ được kể từ $t=1$ đến $t=4$ là\n <br> \\[\n \\Delta F_1\n &=F(4)-F(1)\\\\\n &=\\left(-0{,}1\\cdot 4^3+1{,}8\\cdot 4^2\\right)-\\left(-0{,}1\\cdot 1^3+1{,}8\\cdot 1^2\\right)\\\\\n &=22{,}4-1{,}7=20{,}7 (kWh).\n \\] <br>\n <br> • Năng lượng điện lưu trữ được kể từ $t=1$ đến $t=7$ là\n <br> \\[\n \\Delta F_2&=F(7)-F(1)\\\\\n &=\\left(-0{,}1\\cdot 7^3+1{,}8\\cdot 7^2\\right)-\\left(-0{,}1\\cdot 1^3+1{,}8\\cdot 1^2\\right)\\\\\n &=53{,}9-1{,}7=52{,}2 (kWh).\n \\] <br>\n Ta có $\\dfrac{\\Delta F_2}{\\Delta F_1}=\\dfrac{58}{23}&gt;2$. <br>\n Suy ra năng lượng điện lưu trữ được kể từ thời điểm $t=1$ đến thời điểm $t=7$ nhiều hơn hai lần năng lượng điện lưu trữ được kể từ thời điểm $t=1$ đến thời điểm $t=4$\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Cho hàm số $f(x)=\\dfrac{1}{3}x^3-5x^2+9x+8$.",
+      "statements": [
+        {
+          "text": "Hàm số đã cho có đạo hàm là $f'(x)=x^2-10x+9$",
+          "answer": true
+        },
+        {
+          "text": "Phương trình $f'(x)=0$ có tập nghiệm là $S=\\{1; 9\\}$",
+          "answer": true
+        },
+        {
+          "text": "Hàm số đã cho nghịch biến trên khoảng $(1; 9)$",
+          "answer": true
+        },
+        {
+          "text": "Giá trị cực tiểu của hàm số đã cho bằng $\\dfrac{37}{3}$",
+          "answer": false
+        }
+      ],
+      "id": 16,
+      "solution": "Tập xác định của hàm số là $\\mathscr{D}=\\mathbb{R}$.\n <br>\n <br> • Ta có $f'(x)=\\left(\\dfrac{1}{3}x^3-5x^2+9x+8\\right)'=x^2-10x+9$.\n <br> • Ta có\n \\[f'(x)=0\\Leftrightarrow x^2-10x+9=0\\Leftrightarrow\\begin{cases}x=1\\\\x=9.\\end{cases}\\]\n Suy ra tập nghiệm của phương trình $f'(x)=0$ là $S=\\{1; 9\\}$.\n <br> • Bảng biến thiên của hàm số $f(x)$ như sau:\n\n Dựa vào bảng biến thiên, ta thấy $f'(x)&lt;0$ với mọi $x\\in (1; 9)$ nên hàm số nghịch biến trên khoảng $(1; 9)$.\n <br> • Dựa vào bảng biến thiên, ta có:\n <br>\n <br> • Hàm số đạt cực đại tại $x=1$ và giá trị cực đại là $y_{CĐ}=f(1)=\\dfrac{37}{3}$;\n <br> • Hàm số đạt cực tiểu tại $x=9$ và giá trị cực tiểu là $y_{CT}=f(9)=-73$.\n <br>\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một khung hình trang trí có dạng một đa giác đều $12$ cạnh $A_1A_2\\ldots A_{12}$ (xem hình bên) được gắn cố định trên một trần nhà. Bạn Dũng có $12$ bóng đèn gồm bốn bóng màu đỏ và tám bóng màu xanh, có công suất đôi một khác nhau. Bạn Dũng lắp ngẫu nhiên $12$ bóng đèn trên vào $12$ đỉnh $A_1$, $A_2$, $\\ldots$, $A_{12}$ sao cho mỗi đỉnh có đúng một bóng đèn. Gọi $P$ là xác suất để mỗi hình vuông (có bốn đỉnh là các đỉnh của đa giác đã cho) đều có ít nhất một bóng đèn màu đỏ. Giá trị của $3 190P$ bằng bao nhiêu? \n\n <br>",
+      "answer": "1\\,856",
+      "id": 17,
+      "solution": "Vì các bóng đèn có công suất đôi một khác nhau nên tổng số cách lắp $12$ bóng đèn vào $12$ đỉnh là $12!$. \n Tuy nhiên, biến cố đang xét chỉ phụ thuộc vào vị trí của $4$ bóng màu đỏ. Mỗi cách chọn $4$ vị trí cho bóng đỏ ứng với $4!\\cdot 8!$ cách lắp các bóng cụ thể, do đó ta chỉ cần xét cách chọn $4$ đỉnh đặt bóng đỏ trong $12$ đỉnh. <br>\n Tổng số cách chọn vị trí cho $4$ bóng đỏ là $\\mathrm{C}_{12}^4=495$. <br>\n Trong đa giác đều $12$ cạnh, các hình vuông có bốn đỉnh là đỉnh của đa giác là\n $A_1A_4A_7A_{10}$, $A_2A_5A_8A_{11}$, $A_3A_6A_9A_{12}$. <br>\n Ba hình vuông này chia $12$ đỉnh của đa giác thành $3$ nhóm, mỗi nhóm có $4$ đỉnh. <br>\n Để mỗi hình vuông đều có ít nhất một bóng đỏ, vì có $4$ bóng đỏ và $3$ hình vuông nên số bóng đỏ trên ba hình vuông phải được phân bố $2-1-1$. <br>\n Số cách chọn vị trí thỏa mãn là\n $3 \\cdot \\mathrm{C}_4^2\\cdot \\mathrm{C}_4^1\\cdot \\mathrm{C}_4^1\n =3\\cdot 6\\cdot 4\\cdot 4=288$. <br>\n Suy ra $P=\\dfrac{288}{495}=\\dfrac{32}{55}$. <br>\n Vậy $3 190P=3 190\\cdot \\dfrac{32}{55}=1 856$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\foreach \\i in {1,...,12}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\coordinate (A\\i) at (\\ang:2);\n\t\t\t}\n\t\t\t\\draw (A1) \\foreach \\i in {2,...,12}{--(A\\i)} -- cycle;\n\t\t\t\\foreach \\i in {1,...,9}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\fill (A\\i) circle(1.2pt);\n\t\t\t\\node[shift={(\\ang:0.28)}] at (A\\i) {$A_{\\i}$};\n\t\t\t}\n\t\t\t\\foreach \\i in {10,11,12}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\fill (A\\i) circle(1.2pt);\n\t\t\t\\node[shift={(\\ang:0.35)}] at (A\\i) {$A_{\\i}$};\n\t\t\t}\n    \\node at (0,0){\\href{4ETZRI}{\\tiny \\phantom{4ETZRI}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\foreach \\i in {1,...,12}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\coordinate (A\\i) at (\\ang:2);\n\t\t\t}\n\t\t\t\\draw (A1) \\foreach \\i in {2,...,12}{--(A\\i)} -- cycle;\n\t\t\t\\foreach \\i in {1,...,9}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\fill (A\\i) circle(1.2pt);\n\t\t\t\\node[shift={(\\ang:0.28)}] at (A\\i) {$A_{\\i}$};\n\t\t\t}\n\t\t\t\\foreach \\i in {10,11,12}{\n\t\t\t\\pgfmathsetmacro{\\ang}{90-(\\i-1)*30}\n\t\t\t\\fill (A\\i) circle(1.2pt);\n\t\t\t\\node[shift={(\\ang:0.35)}] at (A\\i) {$A_{\\i}$};\n\t\t\t}\n    \\node at (0,0){\\href{4ETZRI}{\\tiny \\phantom{4ETZRI}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/122077/q17.png"
+    },
+    {
+      "type": "short",
+      "question": "Một nông trại cung cấp rau quả cho siêu thị A với số liệu bán hàng của bốn ngày trong tuần được ghi lại trong bảng sau:\n\n Biết rằng đơn giá theo ki-lô-gam của mỗi loại rau quả trong bảng trên là không đổi. Tổng số tiền nông trại thu được ở ngày thứ Bảy từ ba loại rau quả trên khi cung cấp cho siêu thị A là bao nhiêu nghìn đồng?\n <br>",
+      "answer": "1\\,275",
+      "id": 18,
+      "solution": "Gọi $x$, $y$, $z$ (nghìn đồng) lần lượt là đơn giá của $1$ ki-lô-gam rau muống, bí xanh và cà chua. <br>\n Từ số liệu của ba ngày Thứ Tư, Thứ Năm, Thứ Sáu, ta có hệ phương trình\n \\[\\begin{cases}19x+14y+10z=600\\\\20x+12y+8z=540\\\\25x+12y+7z=570\\end{cases} \n \\Leftrightarrow \\begin{cases}x=10\\\\y=15\\\\z=20.\\end{cases}\\]\n Suy ra tổng số tiền thu được trong ngày Thứ Bảy là\n \\[50x+25y+20z=50\\cdot 10+25\\cdot 15+20\\cdot 20=1 275 (nghìn đồng).\\]\n Vậy tổng số tiền nông trại thu được trong ngày Thứ Bảy là $1 275$ nghìn đồng.",
+      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\t\\multirow{2}{*}{Ngày} & \\multicolumn{3}{c|}{Số ki-lô-gam} & \\multirow{2}{*}{\\makecell{Tổng số tiền \\\\ (nghìn đồng)}} \\\\\n\t\t\t\\cline{2-4}\n\t\t\t& Rau muống & Bí xanh & Cà chua & \\\\\n\t\t\t\\hline\n\t\t\tThứ Tư & $19$ & $14$ & $10$ & $600$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Năm & $20$ & $12$ & $8$ & $540$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Sáu & $25$ & $12$ & $7$ & $570$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Bảy & $50$ & $25$ & $20$ & $?$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\t\\multirow{2}{*}{Ngày} & \\multicolumn{3}{c|}{Số ki-lô-gam} & \\multirow{2}{*}{\\makecell{Tổng số tiền \\\\ (nghìn đồng)}} \\\\\n\t\t\t\\cline{2-4}\n\t\t\t& Rau muống & Bí xanh & Cà chua & \\\\\n\t\t\t\\hline\n\t\t\tThứ Tư & $19$ & $14$ & $10$ & $600$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Năm & $20$ & $12$ & $8$ & $540$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Sáu & $25$ & $12$ & $7$ & $570$ \\\\\n\t\t\t\\hline\n\t\t\tThứ Bảy & $50$ & $25$ & $20$ & $?$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/122077/q18.png"
+    },
+    {
+      "type": "short",
+      "question": "Để chế tác một hạt cườm, người ta lấy một khối vật thể có dạng một khối tròn xoay được tạo thành khi quay hình phẳng giới hạn bởi trục $Ox$ và nửa trên của elip $\\dfrac{x^2}{1{,}5^2} + \\dfrac{y^2}{1^2} = 1$ (một đơn vị dài trên mỗi trục tọa độ tương ứng với một xăng-ti-mét trong thực tế) quanh trục $Ox$; sau đó khoan dọc theo trục xoay như hình vẽ sau:\n\n Lỗ khoan có dạng hình trụ với bán kính $0{,}2$ cm và có trục nằm trên trục xoay. Phần còn lại sau khi khoan là hạt cườm, có dạng một khối tròn xoay. Thể tích của hạt cườm đó bằng bao nhiêu xăng-ti-mét khối {\\it(không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm)}?\n <br>",
+      "answer": "5{,}91",
+      "id": 19,
+      "solution": "Nửa trên của elip có phương trình là $y = \\sqrt{1 - \\dfrac{x^2}{1{,}5^2}} = \\sqrt{1 - \\dfrac{x^2}{2{,}25}}$ với $x \\in [-1,5; 1,5]$. <br>\n Lỗ khoan có dạng hình trụ bán kính $r = 0{,}2$ cm dọc theo trục xoay $Ox$. <br>\n Khi đó, giới hạn của hạt cườm theo trục $Ox$ là phần nằm giữa hai giao điểm của nửa elip với đường thẳng $y = 0{,}2$. <br>\n Phương trình hoành độ giao điểm của $y=\\sqrt{1 - \\dfrac{x^2}{2{,}25}}$ và $y= 0{,}2$ là\n \\allowdisplaybreaks\n <br> \\[\n \\sqrt{1 - \\dfrac{x^2}{2{,}25}} = 0{,}2 &\\Leftrightarrow &1 - \\dfrac{x^2}{2{,}25} = 0{,}04 \\\\\n &\\Leftrightarrow &x^2 = 2{,}16\\\\\n &\\Leftrightarrow &\\begin{cases}x_1=-\\sqrt{2{,}16}\\\\x_2=\\sqrt{2{,}16}.\\end{cases}\n \\] <br>\n Khi đó, phần vật thể hạt cườm là khối tròn xoay được giới hạn bởi các mặt phẳng $x = x_1$, $x = x_2$ và có thiết diện tại mỗi hoành độ $x$ là một hình vành khăn với bán kính ngoài là $y(x)$ và bán kính trong là $r = 0{,}2$. <br>\n Thể tích của hạt cườm là\n \\allowdisplaybreaks\n <br> \\[\n V &=\\pi \\int\\limits_{x_1}^{x_2} \\left(1 - \\dfrac{x^2}{2{{,}}25} - 0{,}04\\right) \\mathrm{d}x\\\\\n &=2\\pi \\int\\limits_{0}^{x_2} \\left(\\dfrac{24}{25} - \\dfrac{4}{9}x^2\\right) \\mathrm{d}x\\\\\n &=2\\pi\\left(\\dfrac{24}{25}x - \\dfrac{4}{27}x^3\\right)\\Bigg|_0^{x_2}\\approx 5{,}91.\n \\] <br>\n Vậy thể tích của hạt cườm gần bằng $5{,}91$ cm$^3$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1.4, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={R=1.5;r=0.2;Rb=1;r1=0.87;goc=asin(r/Rb);x0=R*cos(goc);}}\n\t\t\t\n\t\t\t\\fill[gray] (-Rb,-r)--(-Rb,r)--(2*r,r)--(2.5*r,0)--(2*r,-r)--cycle;\n\t\t\t\\path (-2*r,0)node[shift=(90:0.5)]{Mũi khoan};\n\t\t\t\n\t\t\t\\begin{scope}[xshift=2.2cm]\n\t\t\t\t\\draw[dashed] (0,-Rb)--(0,Rb) (-R,0)--(R,0)(-x0,-r) --++ (2*x0,0) (-x0,r) --++ (2*x0,0) (0,Rb) arc (90:-90:{Rb/4} and {Rb}) (-R/2,r1) arc (90:-90:{r1/4} and {r1}) (R/2,r1) arc (90:-90:{r1/4} and {r1});\n\t\t\t\t\\draw (0,0) node[shift=(-135:6pt)] {$O$} (0,0) ellipse ({R} and {Rb}) (-1.12*R,0)--(-R,0) (0,-1.3*Rb)--(0,-Rb) (0,Rb) arc (90:270:{Rb/4} and {Rb}) (-R/2,r1) arc (90:270:{r1/4} and {r1}) (R/2,r1) arc (90:270:{r1/4} and {r1});\n\t\t\t\t\\draw[->] (R,0) -- (1.2*R,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,Rb) -- (0,1.5*Rb) node[left] {$y$};\n\t\t\t\t\\draw[<-] (-R-0.05,0)--++(225:Rb)node[shift=(-90:0.2)]{Trục xoay};\n\t\t\t\t\\draw[<->](-R+r,0)--++(0,r);\n\t\t\t\t\\draw[<-] (-R+r,r)--++(135:Rb)node[shift=(90:0.2)]{Bán kính lỗ khoan $0{,}2$};\n\t\t\t\t\\path (R/2,r1)node[shift=(90:0.5)]{$\\tfrac{x^2}{1{,}5^2}+\\tfrac{y^2}{1^2}=1$};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[xshift=5.8cm]\n\t\t\t\t\\fill[brown!70] (x0, r) arc (goc:180-goc:{R} and {Rb}) -- (-x0, r) -- cycle;\n\t\t\t\t\\fill[brown!70] (x0, -r) arc (-goc:-180+goc:{R} and {Rb}) -- (-x0, -r) -- cycle;\n\t\t\t\t\\draw[dashed] (-x0,-r) --++ (2*x0,0) (-x0,r) --++ (2*x0,0) (0,Rb) arc (90:-90:{Rb/4} and {Rb}) ;\n\t\t\t\t\\draw  (0,0) ellipse ({R} and {Rb}) (0,Rb) arc (90:270:{Rb/4} and {Rb}) ;\n\t\t\t\t\\draw[fill=white] (x0, 0) ellipse ({r/6} and r);\n\t\t\t\t\\fill[white] (-x0, 0) ellipse ({r/4} and r);\n\t\t\t\t\\draw[dashed](-x0,r) arc (90:-90:{r/6} and {r});\n\t\t\t\t\\draw (-x0,r) arc (90:270:{r/6} and {r});\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[xshift=9.2cm]\n\t\t\t\t\\fill[pattern=north west lines,opacity=.7] (x0, r) arc (goc:180-goc:{R} and {Rb})--cycle;\n\t\t\t\t\\path (R/2,r1)node[shift=(90:0.5)]{$\\tfrac{x^2}{1{,}5^2}+\\tfrac{y^2}{1^2}=1$};\n\t\t\t\t\\draw[->] (-R-r,0) -- (1.3*R,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,-0.35) -- (0,1.5*Rb) node[left] {$y$};\n\t\t\t\t\\draw (-R-r,r) -- (1.3*R,r) node[shift=(90:0.2)]{$y=0{,}2$}\n\t\t\t\t\t(x0, r) arc (goc:180-goc:{R} and {Rb});\n\t\t\t\t\\fill (0,0) node{\\href{ZDBRKQ}{\\tiny \\phantom{ZDBRKQ}}} circle(0.5pt) node[shift=(-135:0.25)]{$O$}; \n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{ZDBRKQ}{\\tiny \\phantom{ZDBRKQ}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1.4, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\tikzset{declare function={R=1.5;r=0.2;Rb=1;r1=0.87;goc=asin(r/Rb);x0=R*cos(goc);}}\n\t\t\t\n\t\t\t\\fill[gray] (-Rb,-r)--(-Rb,r)--(2*r,r)--(2.5*r,0)--(2*r,-r)--cycle;\n\t\t\t\\path (-2*r,0)node[shift=(90:0.5)]{Mũi khoan};\n\t\t\t\n\t\t\t\\begin{scope}[xshift=2.2cm]\n\t\t\t\t\\draw[dashed] (0,-Rb)--(0,Rb) (-R,0)--(R,0)(-x0,-r) --++ (2*x0,0) (-x0,r) --++ (2*x0,0) (0,Rb) arc (90:-90:{Rb/4} and {Rb}) (-R/2,r1) arc (90:-90:{r1/4} and {r1}) (R/2,r1) arc (90:-90:{r1/4} and {r1});\n\t\t\t\t\\draw (0,0) node[shift=(-135:6pt)] {$O$} (0,0) ellipse ({R} and {Rb}) (-1.12*R,0)--(-R,0) (0,-1.3*Rb)--(0,-Rb) (0,Rb) arc (90:270:{Rb/4} and {Rb}) (-R/2,r1) arc (90:270:{r1/4} and {r1}) (R/2,r1) arc (90:270:{r1/4} and {r1});\n\t\t\t\t\\draw[->] (R,0) -- (1.2*R,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,Rb) -- (0,1.5*Rb) node[left] {$y$};\n\t\t\t\t\\draw[<-] (-R-0.05,0)--++(225:Rb)node[shift=(-90:0.2)]{Trục xoay};\n\t\t\t\t\\draw[<->](-R+r,0)--++(0,r);\n\t\t\t\t\\draw[<-] (-R+r,r)--++(135:Rb)node[shift=(90:0.2)]{Bán kính lỗ khoan $0{,}2$};\n\t\t\t\t\\path (R/2,r1)node[shift=(90:0.5)]{$\\tfrac{x^2}{1{,}5^2}+\\tfrac{y^2}{1^2}=1$};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[xshift=5.8cm]\n\t\t\t\t\\fill[brown!70] (x0, r) arc (goc:180-goc:{R} and {Rb}) -- (-x0, r) -- cycle;\n\t\t\t\t\\fill[brown!70] (x0, -r) arc (-goc:-180+goc:{R} and {Rb}) -- (-x0, -r) -- cycle;\n\t\t\t\t\\draw[dashed] (-x0,-r) --++ (2*x0,0) (-x0,r) --++ (2*x0,0) (0,Rb) arc (90:-90:{Rb/4} and {Rb}) ;\n\t\t\t\t\\draw  (0,0) ellipse ({R} and {Rb}) (0,Rb) arc (90:270:{Rb/4} and {Rb}) ;\n\t\t\t\t\\draw[fill=white] (x0, 0) ellipse ({r/6} and r);\n\t\t\t\t\\fill[white] (-x0, 0) ellipse ({r/4} and r);\n\t\t\t\t\\draw[dashed](-x0,r) arc (90:-90:{r/6} and {r});\n\t\t\t\t\\draw (-x0,r) arc (90:270:{r/6} and {r});\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[xshift=9.2cm]\n\t\t\t\t\\fill[pattern=north west lines,opacity=.7] (x0, r) arc (goc:180-goc:{R} and {Rb})--cycle;\n\t\t\t\t\\path (R/2,r1)node[shift=(90:0.5)]{$\\tfrac{x^2}{1{,}5^2}+\\tfrac{y^2}{1^2}=1$};\n\t\t\t\t\\draw[->] (-R-r,0) -- (1.3*R,0) node[below] {$x$};\n\t\t\t\t\\draw[->] (0,-0.35) -- (0,1.5*Rb) node[left] {$y$};\n\t\t\t\t\\draw (-R-r,r) -- (1.3*R,r) node[shift=(90:0.2)]{$y=0{,}2$}\n\t\t\t\t\t(x0, r) arc (goc:180-goc:{R} and {Rb});\n\t\t\t\t\\fill (0,0) node{\\href{ZDBRKQ}{\\tiny \\phantom{ZDBRKQ}}} circle(0.5pt) node[shift=(-135:0.25)]{$O$}; \n\t\t\t\\end{scope}\n    \\node at (0,0){\\href{ZDBRKQ}{\\tiny \\phantom{ZDBRKQ}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/122077/q19.png"
+    },
+    {
+      "type": "short",
+      "question": "Trong một trò chơi bạn Bình cần vượt qua một thử thách. Theo yêu cầu của thử thách, Bình cần điền tất cả $15$ số thuộc tập hợp $\\{0; 1; 2; 3; 4; 5; 6; 7; 8; 10; 11; 12; 15; 16; 20\\}$ vào $15$ ô vuông trong hình dưới thỏa mãn đồng thời ba điều kiện sau:\n <br>\n <br> • Mỗi ô điền đúng một số và mỗi số chỉ được sử dụng một lần;\n <br> • Hiệu hai số ở hai ô bất kì khác nhau trên cùng một hàng không chia hết cho $5$;\n <br> • Hiệu hai số ở hai ô bất kì khác nhau trên cùng một cột không chia hết cho $5$.\n <br>\n Hai cách điền gọi là giống nhau nếu số điền ở mỗi ô tương ứng trong $15$ ô là giống nhau (không tính đến thứ tự điền các số vào $15$ ô vuông). Gọi $H$ là số cách điền khác nhau để bạn Bình vượt qua được thử thách. Giá trị của $\\dfrac{H}{30}$ bằng bao nhiêu?\n\n <br>",
+      "answer": "1\\,152",
+      "id": 20,
+      "solution": "Chia tập hợp đã cho thành các nhóm theo số dư khi chia cho $5$: <br>\n $S_0 = \\big\\{0; 5; 10; 15; 20\\big\\}$, $S_1 = \\big\\{1; 6; 11; 16\\big\\}$, $S_2 = \\big\\{2; 7; 12\\big\\}$, $S_3 = \\big\\{3; 8\\big\\}$, $S_4 = \\big\\{4\\big\\}$. <br>\n Gọi $A_i$ là tập các ô chứa các phần tử thuộc $S_i$ với $i\\in \\big\\{1;2;3;4\\big\\}$. <br>\n Do hiệu hai số trên cùng hàng hoặc cùng cột không chia hết cho $5$ nên các ô thuộc cùng một $A_i$ không được nằm trên cùng hàng hoặc cùng cột. <br>\n Xét $A_0$ gồm $5$ ô. <br>\n Vì bảng có $5$ hàng và $5$ cột nên mỗi hàng và mỗi cột chứa đúng một ô thuộc $A_0$. <br>\n Suy ra các vị trí của $A_0$ được xác định duy nhất trên đường chéo phụ là\n \\[A_0 = \\big\\{(1;5), (2;4), (3;3), (4;2), (5;1)\\big\\}.\\]\n Lập luận tương tự, ta cũng có <br>\n $A_1 = \\big\\{(1;4), (2;3), (3;2), (4;1)\\big\\}$, $A_2 = \\big\\{(1;3), (2;2), (3;1)\\big\\}$, $A_3 = \\big\\{(1;2), (2;1)\\big\\}$, $A_4 = \\big\\{(1;1)\\big\\}$. <br>\n Số cách xếp các phần tử lần lượt là $A_0$ có $5!$ cách, $A_1$ có $4!$ cách, $A_2$ có $3!$ cách, $A_3$ có $2!$ cách và $A_4$: $1!$ cách. <br>\n Suy ra $H = 5! \\cdot 4! \\cdot 3! \\cdot 2! \\cdot 1! = 34 560$. <br>\n Vậy $\\dfrac{H}{30} = \\dfrac{34 560}{30} = 1 152$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1.2, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\foreach \\i in {1,...,5} {\n\t\t\t\\foreach \\j in {1,...,\\i} {\n\t\t\t\\draw (\\j-1, 5-\\i) rectangle (\\j, 6-\\i);\n\t\t\t}\n\t\t\t}\n\t\t\t\\node[left] at (0, 0.5) {Hàng 1};\n\t\t\t\\node[left] at (0, 1.5) {Hàng 2};\n\t\t\t\\node[left] at (0, 2.5) {Hàng 3};\n\t\t\t\\node[left] at (0, 3.5) {Hàng 4};\n\t\t\t\\node[left] at (0, 4.5) {Hàng 5};\n\t\t\t\\node[below] at (0.5, 0) {Cột 1};\n\t\t\t\\node[below] at (1.5, 0) {Cột 2};\n\t\t\t\\node[below] at (2.5, 0) {Cột 3};\n\t\t\t\\node[below] at (3.5, 0) {Cột 4};\n\t\t\t\\node[below] at (4.5, 0) {Cột 5};\n    \\node at (0,0){\\href{49WX93}{\\tiny \\phantom{49WX93}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1.2, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\foreach \\i in {1,...,5} {\n\t\t\t\\foreach \\j in {1,...,\\i} {\n\t\t\t\\draw (\\j-1, 5-\\i) rectangle (\\j, 6-\\i);\n\t\t\t}\n\t\t\t}\n\t\t\t\\node[left] at (0, 0.5) {Hàng 1};\n\t\t\t\\node[left] at (0, 1.5) {Hàng 2};\n\t\t\t\\node[left] at (0, 2.5) {Hàng 3};\n\t\t\t\\node[left] at (0, 3.5) {Hàng 4};\n\t\t\t\\node[left] at (0, 4.5) {Hàng 5};\n\t\t\t\\node[below] at (0.5, 0) {Cột 1};\n\t\t\t\\node[below] at (1.5, 0) {Cột 2};\n\t\t\t\\node[below] at (2.5, 0) {Cột 3};\n\t\t\t\\node[below] at (3.5, 0) {Cột 4};\n\t\t\t\\node[below] at (4.5, 0) {Cột 5};\n    \\node at (0,0){\\href{49WX93}{\\tiny \\phantom{49WX93}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/122077/q20.png"
+    },
+    {
+      "type": "short",
+      "question": "Một công ty nông sản có công suất chế biến không quá $200$ tấn nguyên liệu một tháng. Nếu công ty chế biến $x$ tấn nguyên liệu trong một tháng ($1 \\leq x \\leq 200$) thì chi phí sản xuất và doanh thu lần lượt là $C(x)=0{,}001x^3+30x+10$ (triệu đồng) và $R(x)=60x$ (triệu đồng). Lợi nhuận lớn nhất mà công ty đạt được trong một tháng là bao nhiêu triệu đồng?\n <br>",
+      "answer": "1\\,990",
+      "id": 21,
+      "solution": "Với $x \\in [1; 200]$ thì hàm số biểu thị lợi nhuận của công ty trong một tháng là\n \\[P(x) = R(x) - C(x) = 60x - \\left(0{,}001x^3 + 30x + 10\\right) = -0{,}001x^3 + 30x - 10.\\]\n Ta có $P'(x) = -0{,}003x^2 + 30$. <br>\n Phương trình $P'(x) = 0 \\Leftrightarrow -0{,}003x^2 + 30 = 0 \\Leftrightarrow x^2 = 10 000 \\Rightarrow \\begin{cases}x = 100 \\in [1; 200]\\\\x = -100 \\notin [1; 200].\\end{cases}$ <br>\n Bảng biến thiên của hàm số $P(x)$ trên đoạn $[1; 200]$ là\n\n Từ bảng biến thiên, ta thấy $\\max\\limits_{[1; 200]} P(x) = P(100) = 1 990$. <br>\n Vậy lợi nhuận lớn nhất mà công ty đạt được trong một tháng là $1 990$ triệu đồng.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Cho hình lập phương $ABCD.MNPQ$ có cạnh bằng $6$. Gọi $E$ là trung điểm của đoạn thẳng $AB$. Khoảng cách từ điểm $P$ đến mặt phẳng $(MED)$ bằng bao nhiêu ( <em> không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm </em> )?\n <br>",
+      "answer": "7{,}35",
+      "id": 22,
+      "solution": "<em> <u> Cách 1 </u> : Phương pháp tọa độ hóa. </em>\n\n Chọn hệ trục tọa độ $Oxyz$ sao cho gốc tọa độ $O$ trùng với đỉnh $A$, các tia $Ox$, $Oy$, $Oz$ lần lượt chứa các cạnh $AB$, $AD$, $AM$ như hình vẽ. <br>\n Vì hình lập phương có cạnh bằng $6$ nên ta có tọa độ các đỉnh là\n $A(0;0;0)$, $B(6;0;0)$, $D(0;6;0)$, $M(0;0;6)$. <br>\n Đỉnh $C$ thuộc mặt phẳng $(Oxy)$ sao cho $ABCD$ là hình vuông nên $C(6;6;0)$. <br>\n Đỉnh $P$ nằm trên $C$ một đoạn $6$ đơn vị (cùng phía với tia $Oz$) nên $P(6;6;6)$. <br>\n Vì $E$ là trung điểm của $AB$ nên $E(3;0;0)$. <br>\n Mặt phẳng $(MED)$ đi qua ba điểm $M(0;0;6)$, $E(3;0;0)$, $D(0;6;0)$. <br>\n Áp dụng phương trình mặt phẳng theo đoạn chắn, ta có phương trình mặt phẳng $(MED)$ là\n \\[\\dfrac{x}{3} + \\dfrac{y}{6} + \\dfrac{z}{6} = 1 \\Leftrightarrow 2x + y + z - 6 = 0.\\]\n Khoảng cách từ điểm $P(6;6;6)$ đến mặt phẳng $(MED)$ là\n \\[\\mathrm{d}\\big(P, (MED)\\big) = \\dfrac{|2 \\cdot 6 + 6 + 6 - 6|}{\\sqrt{2^2 + 1^2 + 1^2}} = \\dfrac{18}{\\sqrt{6}} = 3\\sqrt{6} \\approx 7{,}35.\\] \n <em> <u> Cách 2 </u> : Phương pháp hình học thuần túy. </em>\n\n Tứ diện $A.MED$ có $AM \\perp (ABCD)$ nên $AM \\perp AD$ và $AM \\perp AE$, đồng thời $ABCD$ là hình vuông nên $AE \\perp AD$. <br>\n Do đó $A.MED$ là tứ diện vuông tại đỉnh $A$. <br>\n Gọi $h$ là khoảng cách từ $A$ đến mặt phẳng $(MED)$. Ta có\n \\[\\dfrac{1}{h^2} = \\dfrac{1}{AM^2} + \\dfrac{1}{AE^2} + \\dfrac{1}{AD^2} = \\dfrac{1}{6^2} + \\dfrac{1}{3^2} + \\dfrac{1}{6^2} = \\dfrac{6}{36} = \\dfrac{1}{6} \\Rightarrow h = \\sqrt{6}.\\]\n Trong mặt phẳng $(ABCD)$, gọi $K = AC \\cap ED$. <br>\n Vì $AE \\parallel CD$ nên $\\triangle AKE \\backsim \\triangle CKD$. <br>\n Suy ra $\\dfrac{AK}{KC} = \\dfrac{AE}{CD} = \\dfrac{1}{2} \\Rightarrow AK = \\dfrac{1}{3}AC$. <br>\n Trong mặt phẳng $(MAC)$, gọi $I = AP \\cap MK$. <br>\n Vì $MK \\subset (MED)$ nên $I$ chính là giao điểm của $AP$ và mặt phẳng $(MED)$. <br>\n Tứ giác $AMCP$ là hình chữ nhật nên $AK \\parallel MP$. <br>\n Áp dụng định lý Thalès trong tam giác $\\triangle PIM$, ta có\n \\[\\dfrac{IA}{IP} = \\dfrac{AK}{MP} = \\dfrac{\\dfrac{1}{3}AC}{AC} = \\dfrac{1}{3}.\\]\n Do $A$, $I$, $P$ thẳng hàng và $I$ nằm giữa $A$ và $P$ nên ta thiết lập được tỉ số khoảng cách\n \\[\\dfrac{\\mathrm{d}\\big(P, (MED)\\big)}{\\mathrm{d}\\big(A, (MED)\\big)} = \\dfrac{IP}{IA} = 3 \\Rightarrow \\mathrm{d}\\big(P, (MED)\\big) = 3 \\cdot \\mathrm{d}\\big(A, (MED)\\big) = 3\\sqrt{6} \\approx 7{,}35.\\]\n Vậy khoảng cách từ điểm $P$ đến mặt phẳng $(MED)$ bằng $7{,}35$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 1,
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "truefalseMode": "progressive"
+    }
+  }
+}
