@@ -1,0 +1,22 @@
+{
+  "json": "D:\\A-tao-web\\math-exam-v12\\exams\\2-KS-47\\questions.json",
+  "outdir": "D:\\A-tao-web\\math-exam-v12\\images\\2-KS-47",
+  "items": [
+    {
+      "id": 2,
+      "status": "ok"
+    },
+    {
+      "id": 10,
+      "status": "ok"
+    },
+    {
+      "id": 11,
+      "status": "ok"
+    },
+    {
+      "id": 22,
+      "status": "ok"
+    }
+  ]
+}
