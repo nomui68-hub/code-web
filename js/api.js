@@ -53,7 +53,8 @@ function normalizeOnlineRow(r){
   const partScores = r.partScores || {
     choice: Number(r.choiceScore || r.tnScore || r.tn || 0),
     truefalse: Number(r.truefalseScore || r.dsScore || r.ds || 0),
-    short: Number(r.shortScore || r.tlnScore || r.tln || 0)
+    short: Number(r.shortScore || r.tlnScore || r.tln || 0),
+    essay: Number(r.essayScore || r.tuluanScore || r.tlScore || r.tuluan || 0)
   };
   return {
     studentId: r.studentId || r.maHS || r['Mã HS'] || '',

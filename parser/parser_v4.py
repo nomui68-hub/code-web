@@ -62,6 +62,21 @@ def solution(block):
     if p<0: return '',block
     s,e=brace(block,p); return s.strip(), block[:p]+block[e:]
 
+def extract_essay_answer(block):
+    keys=['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer']
+    first=None; key_used=''
+    for key in keys:
+        p=block.find(key)
+        if p>=0 and (first is None or p<first):
+            first=p; key_used=key
+    if first is None:
+        return '', block
+    ans,end=brace(block, first+len(key_used))
+    ans=ans.strip()
+    if ans.startswith('$') and ans.endswith('$'):
+        ans=ans[1:-1].strip()
+    return ans, block[:first]+block[end:]
+
 def envs(text, env):
     """Tách môi trường LaTeX bằng bộ đếm begin/end thay vì regex.
     Cách này an toàn hơn với TikZ dài, nhiều ngoặc, nhiều \foreach, \def, \path.
@@ -388,7 +403,8 @@ def qtype(block):
     if '\\choiceTF' in block: return 'truefalse'
     if '\\choice' in block: return 'choice'
     if '\\shortans' in block: return 'short'
-    return 'unknown'
+    if any(k in block for k in ['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer']): return 'essay'
+    return 'essay'
 
 def parse_choice(block):
     p=block.find('\\choice'); cur=p+7; opts=[]; ans=-1
@@ -411,12 +427,16 @@ def parse_short(block):
     if a.startswith('$') and a.endswith('$'): a=a[1:-1].strip()
     return {'type':'short','question':clean(block[:p]),'answer':a}
 
+def parse_essay(block):
+    ans,b=extract_essay_answer(block)
+    return {'type':'essay','question':clean(b),'answer':ans}
+
 def parse(tex, exam_id='DE_MAU'):
     tex=flatten_immini(rm_comments(tex)); qs=[]; errs=[]
     for idx,orig in enumerate(split_ex(tex),1):
         try:
             sol,b=solution(orig); b=flatten_immini(b); vis=visual(b); typ=qtype(b)
-            item = parse_choice(b) if typ=='choice' else parse_tf(b) if typ=='truefalse' else parse_short(b) if typ=='short' else None
+            item = parse_choice(b) if typ=='choice' else parse_tf(b) if typ=='truefalse' else parse_short(b) if typ=='short' else parse_essay(b) if typ=='essay' else None
             if not item: errs.append({'id':idx,'error':'unknown type'}); continue
             item.update({'id':idx,'solution':clean(sol),'visualLatex':vis,'visualBlocks':[vis] if vis else [],'hasTikz':'\\begin{tikzpicture}' in vis,'hasTable':'\\begin{tabular}' in vis,'hasImmini':'\\immini' in orig,'hasSolutionTikz':'\\begin{tikzpicture}' in sol,'rawType':typ,'needsImage':bool(vis),'image':f'images/q{idx}.png' if vis else None})
             qs.append(item)

@@ -18,6 +18,9 @@ const DEFAULT_SETTINGS = {
     truefalseCount: 4,
     shortTotal: 3,
     shortCount: 6,
+    essayTotal: 0,
+    essayCount: 0,
+    essayPoints: [],
     truefalseMode: 'progressive'
   }
 };
@@ -192,6 +195,7 @@ function renderTrueFalse(q){
   return `${renderLatex(q.question)}${visualBlock(q)}${rows}`;
 }
 function renderShort(q){return `${renderLatex(q.question)}${visualBlock(q)}<input class="short-input" id="q${q.id}" placeholder="Nhập đáp án">`;}
+function renderEssay(q){return `${renderLatex(q.question)}${visualBlock(q)}<textarea class="short-input essay-input" id="q${q.id}" rows=4 placeholder="Nhập bài làm tự luận"></textarea>`;}
 function renderExam(){
   document.getElementById('studentBox').textContent = studentLabel();
   document.getElementById('examTitle').textContent = examData?.title || localStorage.getItem('examTitle') || 'Đề thi trực tuyến';
@@ -205,17 +209,25 @@ function renderExam(){
     if(q.type==='choice'){body=renderChoice(q); typeText='Trắc nghiệm';}
     else if(q.type==='truefalse'){body=renderTrueFalse(q); typeText='Đúng/Sai';}
     else if(q.type==='short'){body=renderShort(q); typeText='Trả lời ngắn';}
+    else if(q.type==='essay'){body=renderEssay(q); typeText='Tự luận';}
     return `<article class="question-card" data-id="${q.id}"><div class="question-head"><h3>Câu ${q.id}</h3><span class="badge">${typeText}</span></div>${body}</article>`;
   }).join('');
   if(window.MathJax) MathJax.typesetPromise?.();
 }
 function normalizeShortAnswer(value){return String(value ?? '').trim().replace(/^\$|\$$/g,'').replace(/\s+/g,'').replace(/,/g,'.').replace(/\{,\}/g,'.').toLowerCase();}
-function typeLabel(type){return type==='choice'?'Trắc nghiệm':type==='truefalse'?'Đúng/Sai':type==='short'?'Trả lời ngắn':type;}
-function getPerQuestionMax(type){
+function typeLabel(type){return type==='choice'?'Trắc nghiệm':type==='truefalse'?'Đúng/Sai':type==='short'?'Trả lời ngắn':type==='essay'?'Tự luận':type;}
+function getEssayPointByOrder(order){
+  const sc=settings.scoring || DEFAULT_SETTINGS.scoring;
+  const pts=Array.isArray(sc.essayPoints)?sc.essayPoints:[];
+  if(pts[order-1]!==undefined && !isNaN(Number(pts[order-1]))) return Number(pts[order-1]);
+  return Number(sc.essayTotal || 0) / Math.max(1, Number(sc.essayCount || questions.filter(q=>q.type==='essay').length || 1));
+}
+function getPerQuestionMax(type, essayOrder=1){
   const sc=settings.scoring || DEFAULT_SETTINGS.scoring;
   if(type==='choice') return Number(sc.choiceTotal || 0) / Math.max(1, Number(sc.choiceCount || questions.filter(q=>q.type==='choice').length || 1));
   if(type==='truefalse') return Number(sc.truefalseTotal || 0) / Math.max(1, Number(sc.truefalseCount || questions.filter(q=>q.type==='truefalse').length || 1));
   if(type==='short') return Number(sc.shortTotal || 0) / Math.max(1, Number(sc.shortCount || questions.filter(q=>q.type==='short').length || 1));
+  if(type==='essay') return getEssayPointByOrder(essayOrder);
   return 0;
 }
 function scoreTrueFalse(correctItems, maxPoint){
@@ -226,11 +238,11 @@ function scoreTrueFalse(correctItems, maxPoint){
 }
 function getAnswersAndScore(){
   let fullCorrect=0, score=0;
-  const partScores={choice:0,truefalse:0,short:0}, maxScores={choice:0,truefalse:0,short:0}, counts={choice:0,truefalse:0,short:0};
+  const partScores={choice:0,truefalse:0,short:0,essay:0}, maxScores={choice:0,truefalse:0,short:0,essay:0}, counts={choice:0,truefalse:0,short:0,essay:0};
   const detail=[], answers={};
   for(const q of questions){
     let isCorrect=false, given=null, point=0, correctItems=null;
-    const maxPoint=getPerQuestionMax(q.type);
+    const maxPoint=getPerQuestionMax(q.type, counts.essay + (q.type==='essay'?1:0));
     if(q.type==='choice'){
       counts.choice++; const selected=document.querySelector(`input[name="q${q.id}"]:checked`); given=selected?Number(selected.value):null; answers[q.id]=given; isCorrect=given===q.answer; point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0;
     }
@@ -240,11 +252,17 @@ function getAnswersAndScore(){
     if(q.type==='short'){
       counts.short++; const input=document.getElementById(`q${q.id}`); given=(input?.value||'').trim(); answers[q.id]=given; isCorrect=normalizeShortAnswer(given)===normalizeShortAnswer(q.answer); point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0;
     }
+    if(q.type==='essay'){
+      counts.essay++; const input=document.getElementById(`q${q.id}`); given=(input?.value||'').trim(); answers[q.id]=given;
+      const key=String(q.answer||'').trim();
+      if(key){ const keys=key.split('|').map(normalizeShortAnswer); isCorrect=keys.includes(normalizeShortAnswer(given)); point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0; }
+      else { isCorrect=false; point=0; correctItems=0; }
+    }
     if(isCorrect) fullCorrect++; score+=point; if(partScores[q.type]!==undefined) partScores[q.type]+=point; if(maxScores[q.type]!==undefined) maxScores[q.type]+=maxPoint;
     detail.push({id:q.id,type:q.type,typeLabel:typeLabel(q.type),given,correctAnswer:q.answer ?? q.statements?.map(s=>s.answer),correctItems,isCorrect,point:Number(point.toFixed(2)),maxPoint:Number(maxPoint.toFixed(2))});
   }
-  const maxScore=Number((maxScores.choice+maxScores.truefalse+maxScores.short).toFixed(2));
-  return {correct:fullCorrect,total:questions.length,score10:Number(score.toFixed(2)),maxScore,partScores:{choice:Number(partScores.choice.toFixed(2)),truefalse:Number(partScores.truefalse.toFixed(2)),short:Number(partScores.short.toFixed(2))},maxScores:{choice:Number(maxScores.choice.toFixed(2)),truefalse:Number(maxScores.truefalse.toFixed(2)),short:Number(maxScores.short.toFixed(2))},counts,answers,detail};
+  const maxScore=Number((maxScores.choice+maxScores.truefalse+maxScores.short+maxScores.essay).toFixed(2));
+  return {correct:fullCorrect,total:questions.length,score10:Number(score.toFixed(2)),maxScore,partScores:{choice:Number(partScores.choice.toFixed(2)),truefalse:Number(partScores.truefalse.toFixed(2)),short:Number(partScores.short.toFixed(2)),essay:Number(partScores.essay.toFixed(2))},maxScores:{choice:Number(maxScores.choice.toFixed(2)),truefalse:Number(maxScores.truefalse.toFixed(2)),short:Number(maxScores.short.toFixed(2)),essay:Number(maxScores.essay.toFixed(2))},counts,answers,detail};
 }
 async function submitExam(auto=false){
   if(examLocked) return;

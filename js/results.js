@@ -18,9 +18,9 @@ function filteredRows(){
   });
 }
 function csv(rows){
-  const header=['Ma HS','Ho ten','Lop','Ma de','Ten de','Diem','TN','DungSai','TLN','Dung/Tong','Thoi gian nop','Bai lam JSON'];
+  const header=['Ma HS','Ho ten','Lop','Ma de','Ten de','Diem','TN','DungSai','TLN','Tu luan','Dung/Tong','Thoi gian nop','Bai lam JSON'];
   const lines=[header.join(',')].concat(rows.map(r=>[
-    r.studentId,r.studentName,r.className,r.examId,r.examTitle,r.score,r.partScores?.choice,r.partScores?.truefalse,r.partScores?.short,`${r.correct}/${r.total}`,fmtTime(r.submitTime),JSON.stringify(r.answers||'')
+    r.studentId,r.studentName,r.className,r.examId,r.examTitle,r.score,r.partScores?.choice,r.partScores?.truefalse,r.partScores?.short,r.partScores?.essay,`${r.correct}/${r.total}`,fmtTime(r.submitTime),JSON.stringify(r.answers||'')
   ].map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')));
   const blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv;charset=utf-8'});
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='ket_qua_thi.csv'; a.click();
@@ -47,7 +47,7 @@ function detailHtml(r){
 function renderTable(rows){
   document.querySelector('#resultTable tbody').innerHTML=rows.map((r,i)=>`<tr>
     <td><input type="checkbox" class="rowCheck" value="${r._localIndex ?? ''}" ${r._source==='local'?'':'disabled title="Chỉ xóa được dữ liệu cục bộ"'}></td><td>${i+1}</td><td>${r.studentId||''}</td><td>${r.studentName||''}</td><td>${r.className||''}</td><td>${r.examTitle||r.examId||''}</td>
-    <td><b>${fmt(r.score)}</b></td><td>${fmt(r.partScores?.choice)}</td><td>${fmt(r.partScores?.truefalse)}</td><td>${fmt(r.partScores?.short)}</td>
+    <td><b>${fmt(r.score)}</b></td><td>${fmt(r.partScores?.choice)}</td><td>${fmt(r.partScores?.truefalse)}</td><td>${fmt(r.partScores?.short)}</td><td>${fmt(r.partScores?.essay)}</td>
     <td>${r.correct??''}/${r.total??''}</td><td>${fmtTime(r.submitTime)}</td><td>${detailHtml(r)}</td></tr>`).join('');
 }
 function renderQuestionStats(rows){
