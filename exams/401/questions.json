@@ -1,0 +1,356 @@
+{
+  "examId": "401",
+  "title": "KTTX",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Đồ thị hình bên là của hàm số nào sau đây?",
+      "options": [
+        "$y=x^4-2x^2+1$",
+        "$y=x^3-3x+1$",
+        "$y=-x^4+2x^2+1$",
+        "$y=-x^3+3x+1$"
+      ],
+      "answer": 3,
+      "id": 1,
+      "solution": "Dựa vào hình vẽ, ta nhận thấy đây là đồ thị của hàm số bậc ba có hệ số $a&lt;0$, có hai cực trị và cắt trục tung tại điểm có tung độ dương. <br>\n Suy ra hàm số thỏa mãn là $y=-x^3+3x+1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n\t\t\t\\def\\a{-1} \\def\\b{0} \\def\\c{3} \\def\\d{1} \n\t\t\t\\def\\xmin{-4} \\def\\xmax{4}\n\t\t\t\\def\\ymin{-2} \\def\\ymax{4} \n\t\t\t\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\\draw[fill=black] (0,0) circle (1pt);\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.5,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300] plot(\\x,{\\a*(\\x)^3+\\b*(\\x)^2+\\c*(\\x)+\\d});\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n\t\t\t\\def\\a{-1} \\def\\b{0} \\def\\c{3} \\def\\d{1} \n\t\t\t\\def\\xmin{-4} \\def\\xmax{4}\n\t\t\t\\def\\ymin{-2} \\def\\ymax{4} \n\t\t\t\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\\draw[fill=black] (0,0) circle (1pt);\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.5,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300] plot(\\x,{\\a*(\\x)^3+\\b*(\\x)^2+\\c*(\\x)+\\d});\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q1.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Đồ thị hình bên là của hàm số nào sau đây?",
+      "options": [
+        "$y=x^3-3x-1$",
+        "$y=-x^3-3x^2-1$",
+        "$y=x^3-3x+1$",
+        "$y=x^3+3x^2+1$"
+      ],
+      "answer": 2,
+      "id": 2,
+      "solution": "Dựa vào hình vẽ, ta nhận thấy đây là đồ thị của hàm số bậc ba có hệ số $a&gt;0$, có hai cực trị và đi qua điểm $(1;-1)$. <br>\n Suy ra hàm số thỏa mãn là $y=x^3-3x+1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round,>=stealth]\n\t\t\t\\tikzset{every node/.style={scale=0.9}}\n\t\t\t\\draw[->] (-2.6,0)--(2.6,0) node[below left] {$x$};\n\t\t\t\\draw[->] (0,-1.6)--(0,3.8) node[below left] {$y$};\n\t\t\t\\draw (0,0) node [below left] {$O$};\n\t\t\t\\draw (1,0) node [above] {$1$};\n\t\t\t\\foreach \\x/\\nx in {-1/-1,2/2}\n\t\t\t\\draw[thin] (\\x,1pt)--(\\x,-1pt) node [below] {$\\nx$};\n\t\t\t\\draw (0,3) node [above left] {$3$};\n\t\t\t\\foreach \\y/\\ny in {-1/-1,1/1}\n\t\t\t\\draw[thin] (1pt,\\y)--(-1pt,\\y) node [left] {$\\ny$};\n\t\t\t\\draw[dashed,thin](-1,0)--(-1,3)--(0,3);\n\t\t\t\\draw[dashed,thin](1,0)--(1,-1)--(0,-1);\n\t\t\t\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (-2.5,-1.5) rectangle (2.5,3.5);\n\t\t\t\t\\draw[samples=200,domain=-2.5:3,smooth,variable=\\x] plot (\\x,{1*((\\x)^3)+0*((\\x)^2)+-3*(\\x)+1});\n\t\t\t\\end{scope}\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round,>=stealth]\n\t\t\t\\tikzset{every node/.style={scale=0.9}}\n\t\t\t\\draw[->] (-2.6,0)--(2.6,0) node[below left] {$x$};\n\t\t\t\\draw[->] (0,-1.6)--(0,3.8) node[below left] {$y$};\n\t\t\t\\draw (0,0) node [below left] {$O$};\n\t\t\t\\draw (1,0) node [above] {$1$};\n\t\t\t\\foreach \\x/\\nx in {-1/-1,2/2}\n\t\t\t\\draw[thin] (\\x,1pt)--(\\x,-1pt) node [below] {$\\nx$};\n\t\t\t\\draw (0,3) node [above left] {$3$};\n\t\t\t\\foreach \\y/\\ny in {-1/-1,1/1}\n\t\t\t\\draw[thin] (1pt,\\y)--(-1pt,\\y) node [left] {$\\ny$};\n\t\t\t\\draw[dashed,thin](-1,0)--(-1,3)--(0,3);\n\t\t\t\\draw[dashed,thin](1,0)--(1,-1)--(0,-1);\n\t\t\t\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (-2.5,-1.5) rectangle (2.5,3.5);\n\t\t\t\t\\draw[samples=200,domain=-2.5:3,smooth,variable=\\x] plot (\\x,{1*((\\x)^3)+0*((\\x)^2)+-3*(\\x)+1});\n\t\t\t\\end{scope}\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q2.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Đồ thị hình bên là của hàm số nào sau đây?",
+      "options": [
+        "$y=-x^3+3x^2-1$",
+        "$y=x^3-3x^2+1$",
+        "$y=-\\dfrac{1}{3}x^3+x+1$",
+        "$y=x^3-2x+1$"
+      ],
+      "answer": 2,
+      "id": 3,
+      "solution": "Dựa vào hình vẽ, ta nhận thấy đây là đồ thị của hàm số bậc ba có hệ số $a&lt;0$, có hai cực trị trái dấu. <br>\n Suy ra hàm số thỏa mãn là $-\\dfrac{1}{3}x^3+x+1$.",
+      "visualLatex": "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.7]\n\t\t\t\\def\\xx{-2}\n\t\t\t\\def\\x{3}\n\t\t\t\\def\\yy{-1}\n\t\t\t\\def\\y{3}\n\t\t\t\\draw[->] (\\xx-0.1,0)--(\\x + 0.1,0) node[below left] {$x$};\n\t\t\t\\draw[->] (0,\\yy-0.1)--(0,\\y+0.1) node[below right] {$y$};\n\t\t\t\\draw (0,0) node [below left] {$O$};\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (\\xx,\\yy) rectangle (\\x,\\y);\n\t\t\t\t\\draw[orange!70!black,samples=200,domain=\\xx:\\x,smooth,variable=\\x] plot (\\x,{-0.33*(\\x)^3+1*(\\x)+1});\n\t\t\t\\end{scope}\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[font=\\footnotesize, line join=round, line cap=round, >=stealth,scale=0.7]\n\t\t\t\\def\\xx{-2}\n\t\t\t\\def\\x{3}\n\t\t\t\\def\\yy{-1}\n\t\t\t\\def\\y{3}\n\t\t\t\\draw[->] (\\xx-0.1,0)--(\\x + 0.1,0) node[below left] {$x$};\n\t\t\t\\draw[->] (0,\\yy-0.1)--(0,\\y+0.1) node[below right] {$y$};\n\t\t\t\\draw (0,0) node [below left] {$O$};\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (\\xx,\\yy) rectangle (\\x,\\y);\n\t\t\t\t\\draw[orange!70!black,samples=200,domain=\\xx:\\x,smooth,variable=\\x] plot (\\x,{-0.33*(\\x)^3+1*(\\x)+1});\n\t\t\t\\end{scope}\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q3.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Đồ thị hình bên là của hàm số nào sau đây?",
+      "options": [
+        "$y=x^3-3x$",
+        "$y=x^3+3x$",
+        "$y=-x^3+3x$",
+        "$y=-x^3-2x$"
+      ],
+      "answer": 0,
+      "id": 4,
+      "solution": "Dựa vào hình vẽ, ta nhận thấy đây là đồ thị của hàm số bậc ba có hệ số $a&gt;0$, có hai cực trị và đi qua điểm $(1;-2)$. <br>\n Suy ra hàm số thỏa mãn là $y=x^3-3x$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round,>=stealth]\n\t\t\t\\clip\n\t\t\t(-2.5,-2.5)rectangle (2.7,3.5);\n\t\t\t\\draw[->] (-2.5,0)--(2.5,0)node[below]{$x$};\n\t\t\t\\draw[->] (0,-3)--(0,3.3)node[right]{$y$};\n\t\t\t\\draw (0,0) node[above right] {$O$};\t\t\t\n\t\t\t\\fill (-1,0)circle(0.03)node[below]{$-1$}\n\t\t\t(0,-2)circle(0.03)node[left]{$-2$}\n\t\t\t(1,0)circle(0.03)node[above]{$1$}\n\t\t\t(3,0)circle(0.03)node[below]{$3$}\n\t\t\t(0,2)circle(0.03)node[ right]{$2$}\n\t\t\t(0,0)circle(0.03);\n\t\t\t\\draw[domain=-2.08:2.1, samples=100] plot (\\x,{(\\x)^3-3*(\\x)});\n\t\t\t\\draw[dashed] (-1,0)|-(0,2) (1,0)|-(0,-2);\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.7, font=\\footnotesize, line join=round, line cap=round,>=stealth]\n\t\t\t\\clip\n\t\t\t(-2.5,-2.5)rectangle (2.7,3.5);\n\t\t\t\\draw[->] (-2.5,0)--(2.5,0)node[below]{$x$};\n\t\t\t\\draw[->] (0,-3)--(0,3.3)node[right]{$y$};\n\t\t\t\\draw (0,0) node[above right] {$O$};\t\t\t\n\t\t\t\\fill (-1,0)circle(0.03)node[below]{$-1$}\n\t\t\t(0,-2)circle(0.03)node[left]{$-2$}\n\t\t\t(1,0)circle(0.03)node[above]{$1$}\n\t\t\t(3,0)circle(0.03)node[below]{$3$}\n\t\t\t(0,2)circle(0.03)node[ right]{$2$}\n\t\t\t(0,0)circle(0.03);\n\t\t\t\\draw[domain=-2.08:2.1, samples=100] plot (\\x,{(\\x)^3-3*(\\x)});\n\t\t\t\\draw[dashed] (-1,0)|-(0,2) (1,0)|-(0,-2);\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q4.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)=\\dfrac{ax+b}{cx+d}$ có đồ thị như Hình 2. Phương trình đường tiệm cận đứng của đồ thị hàm số $y=f(x)$ là:",
+      "options": [
+        "$x=-1$",
+        "$y=2$",
+        "$x=2$",
+        "$y=-1$"
+      ],
+      "answer": 2,
+      "id": 5,
+      "solution": "Từ hình vẽ, ta có $\\lim\\limits_{x \\to 2^+} f(x)=-\\infty$, $\\lim\\limits_{x \\to 2^-} f(x)=+\\infty$ nên suy ra đồ thị hàm số $y=f(x)$ có đường tiệm cận đứng $x=2$.",
+      "visualLatex": "\\begin{tikzpicture}[line cap=butt,line join=miter,>=stealth,scale=0.5,thick]\n\t\t\t\t\\draw[->] (-6,0)--(6,0)\n\t\t\t\tnode[shift={(-100:7pt)},font=\\normalsize]{$x$};\n\t\t\t\t\\draw[->] (0,-7)--(0,7)\n\t\t\t\tnode[shift={(180:7pt)},font=\\normalsize]{$y$};\n\t\t\t\t\\draw (9pt,0) |- (0,9pt) (0,0) node[shift={(143:12pt)},font=\\normalsize]{$O$};\n\t\t\t\t\\tikzset{declare function={f(\\x)=-(\\x)/((\\x)-2);}}\n\t\t\t\t\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-6,-7) rectangle (6,7);\n\t\t\t\t\t\\draw (-6,-1)--(6,-1)\t (2,-8)--(2,8);\n\t\t\t\t\t\\draw[samples=100] plot[domain=-6:1.9] (\\x, {f(\\x)});\n\t\t\t\t\t\\draw[samples=100] plot[domain=2.1:6] (\\x, {f(\\x)});\n\t\t\t\t\\end{scope}\n\t\t\t\t\\path (-0.5,-1.5) node{$-1$}\n\t\t\t\t(2.3,0.5) node{$2$};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[line cap=butt,line join=miter,>=stealth,scale=0.5,thick]\n\t\t\t\t\\draw[->] (-6,0)--(6,0)\n\t\t\t\tnode[shift={(-100:7pt)},font=\\normalsize]{$x$};\n\t\t\t\t\\draw[->] (0,-7)--(0,7)\n\t\t\t\tnode[shift={(180:7pt)},font=\\normalsize]{$y$};\n\t\t\t\t\\draw (9pt,0) |- (0,9pt) (0,0) node[shift={(143:12pt)},font=\\normalsize]{$O$};\n\t\t\t\t\\tikzset{declare function={f(\\x)=-(\\x)/((\\x)-2);}}\n\t\t\t\t\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-6,-7) rectangle (6,7);\n\t\t\t\t\t\\draw (-6,-1)--(6,-1)\t (2,-8)--(2,8);\n\t\t\t\t\t\\draw[samples=100] plot[domain=-6:1.9] (\\x, {f(\\x)});\n\t\t\t\t\t\\draw[samples=100] plot[domain=2.1:6] (\\x, {f(\\x)});\n\t\t\t\t\\end{scope}\n\t\t\t\t\\path (-0.5,-1.5) node{$-1$}\n\t\t\t\t(2.3,0.5) node{$2$};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q5.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=\\dfrac{ax+b}{cx+d}$ có đồ thị là đường cong trong hình vẽ bên. Tọa độ giao điểm của đồ thị hàm số đã cho và trục hoành là",
+      "options": [
+        "$(0 ;-2)$",
+        "$(2 ; 0)$",
+        "$(-2 ; 0)$",
+        "$(0 ; 2)$"
+      ],
+      "answer": 1,
+      "id": 6,
+      "solution": "Dựa vào đồ thị suy ra tọa độ giao điểm của đồ thị hàm số đã cho và trục hoành là $(2 ; 0)$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.5,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n\t\t\t\\def\\a{1} \\def\\b{-2} \\def\\c{1} \\def\\d{1}\n\t\t\t\\def\\xmin{-5} \\def\\xmax{4}\n\t\t\t\\def\\ymin{-3.5} \\def\\ymax{5}\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below left]{$O$};\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.1,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300,domain=\\xmin:(-\\d/\\c-0.1)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[smooth,samples=300,domain=(-\\d/\\c+0.1:\\xmax)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[dashed] (-\\d/\\c,\\ymin)--(-\\d/\\c,\\ymax);\n\t\t\t\\draw[dashed] (\\xmin,\\a/\\c)--(\\xmax,\\a/\\c);\n\t\t\t\\draw[fill] (-1,0)node[below left]{$-1$}circle (1pt)  (2,0)node[below]{$2$}circle (1pt) (0,1)node[below left]{$1$}circle (1pt) (0,-2)node[right]{$-2$}circle (1pt)   ;\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.5,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n\t\t\t\\def\\a{1} \\def\\b{-2} \\def\\c{1} \\def\\d{1}\n\t\t\t\\def\\xmin{-5} \\def\\xmax{4}\n\t\t\t\\def\\ymin{-3.5} \\def\\ymax{5}\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below left]{$O$};\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.1,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300,domain=\\xmin:(-\\d/\\c-0.1)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[smooth,samples=300,domain=(-\\d/\\c+0.1:\\xmax)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[dashed] (-\\d/\\c,\\ymin)--(-\\d/\\c,\\ymax);\n\t\t\t\\draw[dashed] (\\xmin,\\a/\\c)--(\\xmax,\\a/\\c);\n\t\t\t\\draw[fill] (-1,0)node[below left]{$-1$}circle (1pt)  (2,0)node[below]{$2$}circle (1pt) (0,1)node[below left]{$1$}circle (1pt) (0,-2)node[right]{$-2$}circle (1pt)   ;\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q6.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=\\dfrac{ax+b}{cx+d} (a, b, c, d \\in \\mathbb{R})$ có đồ thị là đường cong trong hình vẽ bên. Số giao điểm của đồ thị hàm số đã cho và trục tung là",
+      "options": [
+        "$2$",
+        "$0$",
+        "$1$",
+        "$3$"
+      ],
+      "answer": 2,
+      "id": 7,
+      "solution": "Dựa vào đồ thị suy ra số giao điểm của đồ thị hàm số đã cho và trục tung là $1$.",
+      "visualLatex": "\\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]\n\t\t\t\\def\\a{1} \\def\\b{-1} \\def\\c{1} \\def\\d{1} \n\t\t\t\\def\\xmin{-5} \\def\\xmax{3} \\def\\ymin{-3} \\def\\ymax{3}\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below left]{$O$};\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.1,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300,domain=\\xmin:(-\\d/\\c-0.1)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[smooth,samples=300,domain=(-\\d/\\c+0.1:\\xmax)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[dashed] (-\\d/\\c,\\ymin)--(-\\d/\\c,\\ymax);\n\t\t\t\\draw[dashed] (\\xmin,\\a/\\c)--(\\xmax,\\a/\\c);\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]\n\t\t\t\\def\\a{1} \\def\\b{-1} \\def\\c{1} \\def\\d{1} \n\t\t\t\\def\\xmin{-5} \\def\\xmax{3} \\def\\ymin{-3} \\def\\ymax{3}\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node [below]{$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax) node [left]{$y$};\n\t\t\t\\node at (0,0) [below left]{$O$};\n\t\t\t\\clip (\\xmin+0.1,\\ymin+0.1) rectangle (\\xmax-0.1,\\ymax-0.1);\n\t\t\t\\draw[smooth,samples=300,domain=\\xmin:(-\\d/\\c-0.1)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[smooth,samples=300,domain=(-\\d/\\c+0.1:\\xmax)] plot(\\x,{(\\a*(\\x)+\\b)/(\\c*(\\x)+\\d)});\n\t\t\t\\draw[dashed] (-\\d/\\c,\\ymin)--(-\\d/\\c,\\ymax);\n\t\t\t\\draw[dashed] (\\xmin,\\a/\\c)--(\\xmax,\\a/\\c);\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q7.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=\\dfrac{ax+b}{cx+d}$ có bảng biến thiên như hình vẽ bên. Số giao điểm của đồ thị hàm số đã cho và trục hoành là",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "answer": 1,
+      "id": 8,
+      "solution": "Dựa vào bảng biến thiên suy ra số giao điểm của đồ thị hàm số đã cho và trục hoành là $1$.",
+      "visualLatex": "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=false,lgt=1.2,espcl=2.5,deltacl=0.6]\n\t\t\t{$x$/0.6,$y'$/0.6,$y$/2}\n\t\t\t{$-\\infty$,$2$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,d,+,}\n\t\t\t\\tkzTabVar{-/$1$,+D-/$+\\infty$/$-\\infty$,+/$1$}\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=false,lgt=1.2,espcl=2.5,deltacl=0.6]\n\t\t\t{$x$/0.6,$y'$/0.6,$y$/2}\n\t\t\t{$-\\infty$,$2$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,d,+,}\n\t\t\t\\tkzTabVar{-/$1$,+D-/$+\\infty$/$-\\infty$,+/$1$}\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q8.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Hàm số nào sau đây có đồ thị là đường cong như hình bên?\n \\renewcommand{\\dotEX}",
+      "options": [
+        "$y=-x+\\dfrac{1}{x-1}\\cdot$",
+        "$y=x+\\dfrac{1}{x-1}\\cdot$",
+        "$y=-x-\\dfrac{1}{x-1}\\cdot$",
+        "$y=x-\\dfrac{1}{x-1}\\cdot$"
+      ],
+      "answer": 1,
+      "id": 9,
+      "solution": "Ta có điểm $(2;3)$ thuộc đồ thị hàm số. <br>\n Lần lượt thay $x=2$, $y=3$ vào các phương án, ta có điểm $(2;3)$ chỉ thuộc đồ thị hàm số $y=x+\\dfrac{1}{x-1}$.",
+      "visualLatex": "\\begin{tikzpicture}[line cap=butt,line join=miter,>=stealth,scale=0.7]\n\t\t\t\t\\draw[->] (-3,0)--(5,0)\n\t\t\t\tnode[shift={(-100:7pt)},font=\\normalsize]{$x$};\n\t\t\t\t\\draw[->] (0,-4)--(0,5)\n\t\t\t\tnode[shift={(180:7pt)},font=\\normalsize]{$y$};\n\t\t\t\t\\draw (5pt,0) |- (0,5pt) (0,0) node[shift={(145:11pt)},font=\\normalsize]{$O$};\n\t\t\t\t\\tikzset{declare function={f (\\x)=(\\x)+1/((\\x)-1);}}\n\t\t\t\t\n\t\t\t\t\\foreach \\x in {2}{\n\t\t\t\t\t\\draw[dashed] (\\x,0) |- (0,{f (\\x)});\n\t\t\t\t\t\\fill (\\x,{f (\\x)}) circle (1pt);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-3,-4) rectangle (5,5);\n\t\t\t\t\t\\draw[samples=100] plot[domain=-3:5] (\\x, {f (\\x)});\n\t\t\t\t\t\\draw[samples=50] plot[domain=-3:5] (\\x, {\\x});\n\t\t\t\t\t\\draw (1,-4)--(1,5);\n\t\t\t\t\t\\draw[dashed,fill] (0,1)--(1,1) circle (1pt);\n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\x/\\vt in {1/below right,2/below} \\fill (\\x,0) circle (1pt) node [\\vt] { $\\x$};\n\t\t\t\t\\foreach \\y/\\vt in {-1/below left,1/above left,3/left} \\fill (0,\\y) circle (1pt) node [\\vt] { $\\y$};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[line cap=butt,line join=miter,>=stealth,scale=0.7]\n\t\t\t\t\\draw[->] (-3,0)--(5,0)\n\t\t\t\tnode[shift={(-100:7pt)},font=\\normalsize]{$x$};\n\t\t\t\t\\draw[->] (0,-4)--(0,5)\n\t\t\t\tnode[shift={(180:7pt)},font=\\normalsize]{$y$};\n\t\t\t\t\\draw (5pt,0) |- (0,5pt) (0,0) node[shift={(145:11pt)},font=\\normalsize]{$O$};\n\t\t\t\t\\tikzset{declare function={f (\\x)=(\\x)+1/((\\x)-1);}}\n\t\t\t\t\n\t\t\t\t\\foreach \\x in {2}{\n\t\t\t\t\t\\draw[dashed] (\\x,0) |- (0,{f (\\x)});\n\t\t\t\t\t\\fill (\\x,{f (\\x)}) circle (1pt);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (-3,-4) rectangle (5,5);\n\t\t\t\t\t\\draw[samples=100] plot[domain=-3:5] (\\x, {f (\\x)});\n\t\t\t\t\t\\draw[samples=50] plot[domain=-3:5] (\\x, {\\x});\n\t\t\t\t\t\\draw (1,-4)--(1,5);\n\t\t\t\t\t\\draw[dashed,fill] (0,1)--(1,1) circle (1pt);\n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\x/\\vt in {1/below right,2/below} \\fill (\\x,0) circle (1pt) node [\\vt] { $\\x$};\n\t\t\t\t\\foreach \\y/\\vt in {-1/below left,1/above left,3/left} \\fill (0,\\y) circle (1pt) node [\\vt] { $\\y$};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q9.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Bảng biến thiên bên dưới là của hàm số nào sau đây?",
+      "options": [
+        "$y=\\dfrac{x^2+4x-2}{x-1}$",
+        "$y=\\dfrac{x^2+2x-2}{x-1}$",
+        "$y=\\dfrac{x^2+2x-2}{x+1}$",
+        "$y=\\dfrac{x^2+2}{x-1}$"
+      ],
+      "answer": 1,
+      "id": 10,
+      "solution": "Xét các đáp án\n <br>\n <br> • $y = \\dfrac{x^2 + 4x - 2}{x - 1}$\n $y' = \\dfrac{x^2 - 2x - 2}{(x - 1)^2}$. $y' = 0 \\Leftrightarrow x = 1 \\pm \\sqrt{3}$. (Loại)\n <br> • $y = \\dfrac{x^2 + 2x - 2}{x - 1}$\n $y' = \\dfrac{x(x - 2)}{(x - 1)^2}$. $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 2$.\n $y(0) = 2$ và $y(2) = 6$. (Thỏa mãn)\n <br> • $y = \\dfrac{x^2 + 2x - 2}{x + 1}$. Mẫu số là $x+1$ nên không phù hợp. (Loại)\n <br> • $y = \\dfrac{x^2 + 2}{x - 1}$\n $y' = \\dfrac{x^2 - 2x - 2}{(x - 1)^2}$. $y' = 0 \\Leftrightarrow x = 1 \\pm \\sqrt{3}$. (Loại)\n <br>",
+      "visualLatex": "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=2.2,deltacl=0.4]\n\t\t\t{$x$/0.7, $f'(x)$/0.7, $f(x)$/2}{$-\\infty$,$0$,$1$,$2$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,0,-,,-,0,+,} \n\t\t\t\\path\n\t\t\t(N13)node[shift={(0,0)}](A){$-\\infty$}\n\t\t\t(N22)node[shift={(0,-0.4)}](B){$2$}\n\t\t\t(N33)node[shift={(-0.4,0)}](C){$-\\infty$}\n\t\t\t(N32)node[shift={(0.4,-0.2)}](D){$+\\infty$}\n\t\t\t(N43)node[shift={(0,0.4)}](E){$6$}\n\t\t\t(N52)node[shift={(0,-0.2)}](F){$+\\infty$}\n\t\t\t;\n\t\t\t\\foreach\\X/\\Y in{A/B,B/C,D/E,E/F}\\draw[-stealth](\\X)--(\\Y);\n\t\t\t\\draw[double](N31) --(N33);\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=2.2,deltacl=0.4]\n\t\t\t{$x$/0.7, $f'(x)$/0.7, $f(x)$/2}{$-\\infty$,$0$,$1$,$2$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,0,-,,-,0,+,} \n\t\t\t\\path\n\t\t\t(N13)node[shift={(0,0)}](A){$-\\infty$}\n\t\t\t(N22)node[shift={(0,-0.4)}](B){$2$}\n\t\t\t(N33)node[shift={(-0.4,0)}](C){$-\\infty$}\n\t\t\t(N32)node[shift={(0.4,-0.2)}](D){$+\\infty$}\n\t\t\t(N43)node[shift={(0,0.4)}](E){$6$}\n\t\t\t(N52)node[shift={(0,-0.2)}](F){$+\\infty$}\n\t\t\t;\n\t\t\t\\foreach\\X/\\Y in{A/B,B/C,D/E,E/F}\\draw[-stealth](\\X)--(\\Y);\n\t\t\t\\draw[double](N31) --(N33);\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q10.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Đồ thị hình bên là của hàm số nào sau đây ?",
+      "options": [
+        "$y = \\dfrac{2x^2 - 9x + 10}{-x + 2}$",
+        "$y = \\dfrac{2x^2 - 9x + 10}{x + 2}$",
+        "$y = \\dfrac{x^2 - 5x + 7}{x + 2}$",
+        "$y = \\dfrac{x^2 - 5x + 7}{-x + 2}$"
+      ],
+      "answer": 3,
+      "id": 11,
+      "solution": "Hệ số góc của tiệm cận xiên âm và đồ thị hàm số cắt $Oy$ tại $\\left(0;\\dfrac{7}{2}\\right)$ nên hàm số $y = \\dfrac{x^2 - 5x + 7}{-x + 2}$ thỏa mãn.",
+      "visualLatex": "\\begin{tikzpicture}[scale=.5, font=\\footnotesize, line join=round, line cap=round, >=stealth, declare function={ a=1; b=-5; c=7; m=-1; n=2; f(\\x)= (a*(\\x)^2 + b*(\\x) + c)/(m*(\\x) + n); tcd=-n/m; tcx(\\x) = -1*(\\x)+3; xcd=3; ycd=-1; xct=1; yct=3; }]\n\t\t\t\\def\\xmin{-3}\\def\\xmax{7}\\def\\ymin{-4}\\def\\ymax{6}\n\t\t\t\\pgfmathsetmacro{\\xct}{xct}\n\t\t\t\\pgfmathsetmacro{\\xcd}{xcd}\n\t\t\t\\pgfmathsetmacro{\\yct}{yct}\n\t\t\t\\pgfmathsetmacro{\\ycd}{ycd}\n\t\t\t\\pgfmathsetmacro{\\tcd}{tcd}\n\t\t\t\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax);\n\t\t\t\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[below, xshift=-5pt] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0, \\ymax) node[right, yshift=-5pt] {$y$};\n\t\t\t\n\t\t\t\\draw[dashed] (xct,0)|-(0,yct);\n\t\t\t\\draw[dashed] (xcd,0)|-(0,ycd);\n\t\t\t\n\t\t\t\\foreach \\x in {-3,-2,-1,1,2,3,4,5,6}\n\t\t\t\\draw (\\x,0.05)--(\\x,-0.05);\n\t\t\t\\foreach \\y in {-4,-3,-2,-1,1,2,3,4,5}\n\t\t\t\\draw (0.05,\\y)--(-0.05,\\y);\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0);\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax);\n\t\t\t\n\t\t\t\\foreach \\x/\\g/\\p in {1/-90/10, 2/-45/15, 3/90/10}\n\t\t\t\\path (\\x, 0)+(\\g:\\p pt) node{$\\x$};\n\t\t\t\\foreach \\y/\\g/\\p in {-1/180/15,3/180/10}\n\t\t\t\\path (0, \\y)+(\\g:\\p pt) node{$\\y$};\n\t\t\t\n\t\t\t\\draw[dashed] (tcd,\\ymin) -- (tcd,\\ymax);\n\t\t\t\n\t\t\t\\draw[dashed, domain=\\xmin:\\xmax] plot (\\x,{tcx(\\x)});\n\t\t\t\n\t\t\t\\draw[blue]\n\t\t\tplot [domain=\\xmin:{tcd-0.05}, samples=200, smooth](\\x,{f(\\x)})\n\t\t\tplot [domain={tcd+0.05}:\\xmax, samples=200, smooth](\\x,{f(\\x)});\n\t\t\t\n\t\t\t\\fill[draw, fill=red](0,0)circle(1.5pt)node[above left]{$O$};\n\t\t\t\\foreach \\x/\\y in {0/0, xct/yct, xcd/ycd}\n\t\t\t\\fill[draw, fill=red](\\x,\\y)circle(1.5pt);\n\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.5, font=\\footnotesize, line join=round, line cap=round, >=stealth, declare function={ a=1; b=-5; c=7; m=-1; n=2; f(\\x)= (a*(\\x)^2 + b*(\\x) + c)/(m*(\\x) + n); tcd=-n/m; tcx(\\x) = -1*(\\x)+3; xcd=3; ycd=-1; xct=1; yct=3; }]\n\t\t\t\\def\\xmin{-3}\\def\\xmax{7}\\def\\ymin{-4}\\def\\ymax{6}\n\t\t\t\\pgfmathsetmacro{\\xct}{xct}\n\t\t\t\\pgfmathsetmacro{\\xcd}{xcd}\n\t\t\t\\pgfmathsetmacro{\\yct}{yct}\n\t\t\t\\pgfmathsetmacro{\\ycd}{ycd}\n\t\t\t\\pgfmathsetmacro{\\tcd}{tcd}\n\t\t\t\n\t\t\t\\clip (\\xmin,\\ymin) rectangle (\\xmax,\\ymax);\n\t\t\t\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0) node[below, xshift=-5pt] {$x$};\n\t\t\t\\draw[->] (0,\\ymin)--(0, \\ymax) node[right, yshift=-5pt] {$y$};\n\t\t\t\n\t\t\t\\draw[dashed] (xct,0)|-(0,yct);\n\t\t\t\\draw[dashed] (xcd,0)|-(0,ycd);\n\t\t\t\n\t\t\t\\foreach \\x in {-3,-2,-1,1,2,3,4,5,6}\n\t\t\t\\draw (\\x,0.05)--(\\x,-0.05);\n\t\t\t\\foreach \\y in {-4,-3,-2,-1,1,2,3,4,5}\n\t\t\t\\draw (0.05,\\y)--(-0.05,\\y);\n\t\t\t\\draw[->] (\\xmin,0)--(\\xmax,0);\n\t\t\t\\draw[->] (0,\\ymin)--(0,\\ymax);\n\t\t\t\n\t\t\t\\foreach \\x/\\g/\\p in {1/-90/10, 2/-45/15, 3/90/10}\n\t\t\t\\path (\\x, 0)+(\\g:\\p pt) node{$\\x$};\n\t\t\t\\foreach \\y/\\g/\\p in {-1/180/15,3/180/10}\n\t\t\t\\path (0, \\y)+(\\g:\\p pt) node{$\\y$};\n\t\t\t\n\t\t\t\\draw[dashed] (tcd,\\ymin) -- (tcd,\\ymax);\n\t\t\t\n\t\t\t\\draw[dashed, domain=\\xmin:\\xmax] plot (\\x,{tcx(\\x)});\n\t\t\t\n\t\t\t\\draw[blue]\n\t\t\tplot [domain=\\xmin:{tcd-0.05}, samples=200, smooth](\\x,{f(\\x)})\n\t\t\tplot [domain={tcd+0.05}:\\xmax, samples=200, smooth](\\x,{f(\\x)});\n\t\t\t\n\t\t\t\\fill[draw, fill=red](0,0)circle(1.5pt)node[above left]{$O$};\n\t\t\t\\foreach \\x/\\y in {0/0, xct/yct, xcd/ycd}\n\t\t\t\\fill[draw, fill=red](\\x,\\y)circle(1.5pt);\n\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q11.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Bảng biến thiên bên dưới là của hàm số nào sau đây?",
+      "options": [
+        "$y = \\dfrac{3x^2 - 10x + 4}{x-2}$",
+        "$y = \\dfrac{x^2 - 6x + 4}{x-2}$",
+        "$y = \\dfrac{-x^2 + 6x + 4}{x-2}$",
+        "$y = \\dfrac{x^2 - 2x + 4}{x-2}$"
+      ],
+      "answer": 3,
+      "id": 12,
+      "solution": "Xét các đáp án:\n <br>\n <br> • $y = \\dfrac{3x^2 - 10x + 4}{x - 2}$. Khi $x=0$ thì $y=-2$. Khi $x=4$ thì $y=6$. <br>\n $y' = \\dfrac{3x^2 - 12x + 16}{(x-2)^2}$. $y' = 0$ vô nghiệm. (Loại)\n <br> • $y = \\dfrac{x^2 - 6x + 4}{x - 2}$. Khi $x=0$ thì $y=-2$. Khi $x=4$, $y=-2 \\neq 6$. (Loại)\n <br> • $y = \\dfrac{-x^2 + 6x + 4}{x - 2}$. Khi $x=0$ thì $y=-2$. Khi $x=4$ thì $y=6$. <br>\n $y' = \\dfrac{-x^2 + 4x - 16}{(x-2)^2}$. $y' = 0$ vô nghiệm. (Loại)\n <br> • $y = \\dfrac{x^2 - 2x + 4}{x - 2}$. Khi $x=0$ thì $y=-2$. Khi $x=4$ thì $y=6$. <br>\n $y' = \\dfrac{x(x-4)}{(x-2)^2}$. $y' = 0 \\Leftrightarrow x=0$ hoặc $x=4$. (Thỏa mãn)\n <br>",
+      "visualLatex": "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=2.2,deltacl=0.4]\n\t\t\t{$x$/0.7, $f'(x)$/0.7, $f(x)$/2}{$-\\infty$,$0$,$2$,$4$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,0,-,,-,0,+,} \n\t\t\t\\path\n\t\t\t(N13)node[shift={(0,0)}](A){$-\\infty$}\n\t\t\t(N22)node[shift={(0,-0.4)}](B){$-2$}\n\t\t\t(N33)node[shift={(-0.4,0)}](C){$-\\infty$}\n\t\t\t(N32)node[shift={(0.4,-0.2)}](D){$+\\infty$}\n\t\t\t(N43)node[shift={(0,0.4)}](E){$6$}\n\t\t\t(N52)node[shift={(0,-0.2)}](F){$+\\infty$}\n\t\t\t;\n\t\t\t\\foreach\\X/\\Y in{A/B,B/C,D/E,E/F}\\draw[-stealth](\\X)--(\\Y);\n\t\t\t\\draw[double](N31) --(N33);\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n\t\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=2.2,deltacl=0.4]\n\t\t\t{$x$/0.7, $f'(x)$/0.7, $f(x)$/2}{$-\\infty$,$0$,$2$,$4$,$+\\infty$}\n\t\t\t\\tkzTabLine{,+,0,-,,-,0,+,} \n\t\t\t\\path\n\t\t\t(N13)node[shift={(0,0)}](A){$-\\infty$}\n\t\t\t(N22)node[shift={(0,-0.4)}](B){$-2$}\n\t\t\t(N33)node[shift={(-0.4,0)}](C){$-\\infty$}\n\t\t\t(N32)node[shift={(0.4,-0.2)}](D){$+\\infty$}\n\t\t\t(N43)node[shift={(0,0.4)}](E){$6$}\n\t\t\t(N52)node[shift={(0,-0.2)}](F){$+\\infty$}\n\t\t\t;\n\t\t\t\\foreach\\X/\\Y in{A/B,B/C,D/E,E/F}\\draw[-stealth](\\X)--(\\Y);\n\t\t\t\\draw[double](N31) --(N33);\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/401/q12.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "essay",
+      "question": "Khảo sát và vẽ đồ thị hàm số $y=-x^3+3x^2+2$.",
+      "answer": "",
+      "id": 13,
+      "solution": "",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Tại một nhà máy, gọi $C(x)$ là tổng chi phí(tính theo USD) để sản xuất $x$ sản phẩm A trong một tháng. Khi đó, đạo hàm $C'(x)$ gọi là chi phí cận biên, cho biết tốc độ tăng tổng chi phí theo lượng sản phẩm được sản xuất. Giả sử chi phí cận biên (tính theo USD trên mỗi sản phẩm) của nhà máy được ước lượng bởi công thức $C'(x)=500-3{,}28x+0{,}012x^2$ với $0 \\leq x \\leq 150$. Biết rằng $C(0)=16 000$ USD, gọi là chi phí cố định; $p(x)=1700-7x$ là hàm cầu của $x$ sản phẩm A. Nhà máy cần sản xuất bao nhiêu sản phẩm trong một tháng để lợi nhuận thu được là cao nhất?",
+      "answer": "",
+      "id": 14,
+      "solution": "Ta có hàm tổng chi phí $C(x)=16000+500x-1,64x^2+0,004x^3, 0 \\leq x \\leq 150$. <br>\n Hàm doanh thu $R(x)=x\\cdot p(x)=(1 700-7x)x=-7x^2+1 700x$. <br>\n Lợi nhuận của công ty \\[L(x)=R(x)-C(x)=-0{,}004x^3-5{,}36x^2+1 200x-16 000, 0 \\leq x \\leq 150.\\]\n Khi đó \n $L'(x)=0 \\Leftrightarrow x \\approx 100{,}609 \\in (100; 101)$. <br>\n Ta có $L(100)=46 400$; $L(101)=46 401{,}436$. <br>\n Vậy nhà máy cần sản xuất $101$ sản phẩm để thu được lợi nhuận cao nhất.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 1,
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "essayTotal": 0.0,
+      "essayCount": 0,
+      "essayPoints": [],
+      "truefalseMode": "progressive"
+    }
+  }
+}
