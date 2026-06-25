@@ -1,0 +1,546 @@
+{
+  "examId": "2-KS-12",
+  "title": "SoNgheAn",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Giá trị của $\\lim\\limits_{x\\to 0}\\dfrac{1}{x+1}$ bằng",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$1$",
+        "$+\\infty$",
+        "$0$"
+      ],
+      "answer": 1,
+      "id": 1,
+      "solution": "Ta có $\\lim\\limits_{x\\to 0}\\dfrac{1}{x+1} = \\dfrac{1}{0+1} = 1$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Hàm số nào sau đây có đồ thị như hình vẽ?",
+      "options": [
+        "$f(x)=x^3+3x+1$",
+        "$f(x)=-x^3+3x-1$",
+        "$f(x)=-x^3+3x+1$",
+        "$f(x)=x^3-3x-1$"
+      ],
+      "answer": 2,
+      "id": 2,
+      "solution": "Từ đồ thị, ta thấy $\\lim\\limits_{x\\to +\\infty} f(x) = -\\infty$ nên hệ số $a &lt; 0$, do đó loại phương án $f(x)=x^3+3x+1$ và $f(x)=x^3-3x-1$. <br>\n Đồ thị hàm số cắt trục tung tại điểm có tung độ dương nên $f(0) &gt; 0$, do đó loại phương án $f(x)=-x^3+3x-1$. <br>\n Vậy hàm số cần tìm là $f(x)=-x^3+3x+1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\draw[->] (-2.5,0)--(2.5,0) node[shift={(-110:0.2)}] {$x$};\n\t\t\t\\draw[->] (0,-1)--(0,3.5) node[shift={(-30:0.2)}] {$y$};\n\t\t\t\\clip (-2.5,-2) rectangle (2.5,4);\n\t\t\t\\draw[smooth,samples=100,domain=-2:2] plot(\\x,{-(\\x)^3+3*\\x+1});\n\t\t\t\\foreach \\x/\\y/\\ang/\\dist/\\lbl in {0/0/-45/0.25/O} \\fill (\\x,\\y) circle (1pt) node[shift={(\\ang:\\dist)}] {$\\lbl$};\n    \\node at (0,0){\\href{252CNS}{\\tiny \\phantom{252CNS}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\draw[->] (-2.5,0)--(2.5,0) node[shift={(-110:0.2)}] {$x$};\n\t\t\t\\draw[->] (0,-1)--(0,3.5) node[shift={(-30:0.2)}] {$y$};\n\t\t\t\\clip (-2.5,-2) rectangle (2.5,4);\n\t\t\t\\draw[smooth,samples=100,domain=-2:2] plot(\\x,{-(\\x)^3+3*\\x+1});\n\t\t\t\\foreach \\x/\\y/\\ang/\\dist/\\lbl in {0/0/-45/0.25/O} \\fill (\\x,\\y) circle (1pt) node[shift={(\\ang:\\dist)}] {$\\lbl$};\n    \\node at (0,0){\\href{252CNS}{\\tiny \\phantom{252CNS}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q2.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Thống kê điểm thi tốt nghiệp môn Toán THPT năm $2024$ của lớp 12D tại một trường THPT thu được kết quả như sau:\n\n Khoảng biến thiên của mẫu số liệu thống kê trên bằng",
+      "options": [
+        "$10$",
+        "$7$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 1,
+      "id": 3,
+      "solution": "Khoảng biến thiên của mẫu số liệu ghép nhóm trên là $R = 10 - 3 = 7$.",
+      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tNhóm & $[3;4)$ & $[4;5)$ & $[5;6)$ & $[6;7)$ & $[7;8)$ & $[8;9)$ & $[9;10]$ \\\\\n\t\t\t\\hline\n\t\t\tTần số & $3$ & $4$ & $5$ & $10$ & $15$ & $10$ & $5$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|c|c|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tNhóm & $[3;4)$ & $[4;5)$ & $[5;6)$ & $[6;7)$ & $[7;8)$ & $[8;9)$ & $[9;10]$ \\\\\n\t\t\t\\hline\n\t\t\tTần số & $3$ & $4$ & $5$ & $10$ & $15$ & $10$ & $5$ \\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q3.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian với hệ tọa độ $Oxyz$, cho điểm $M(1;2;3)$. Tọa độ hình chiếu vuông góc của điểm $M$ lên trục $Ox$ là",
+      "options": [
+        "$(2;0;0)$",
+        "$(3;0;0)$",
+        "$(1;0;0)$",
+        "$(1;0;3)$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "Hình chiếu vuông góc của điểm $M(1;2;3)$ lên trục $Ox$ có tọa độ là $(1;0;0)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ có bảng biến thiên như sau:\n\n Điểm cực tiểu của hàm số $y=f(x)$ là",
+      "options": [
+        "$x=1$",
+        "$x=3$",
+        "$x=-1$",
+        "$x=5$"
+      ],
+      "answer": 1,
+      "id": 5,
+      "solution": "Từ bảng biến thiên, ta thấy hàm số đạt cực tiểu tại $x=3$.",
+      "visualLatex": "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=3, deltacl=0.5] {$x$/0.7,$y'$/0.7,$y$/2} {$-\\infty$,$-1$,$3$,$+\\infty$} \n\t\t\t\\tkzTabLine{,+,0,-,0,+,} \n\t\t\t\\tkzTabVar{-/$-\\infty$,+/$5$,-/$1$,+/$+\\infty$} \n    \\node at (T11){\\href{YYD074}{\\tiny \\phantom{YYD074}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n    \n\t\t\t\\tkzTabInit[nocadre=true, lgt=1, espcl=3, deltacl=0.5] {$x$/0.7,$y'$/0.7,$y$/2} {$-\\infty$,$-1$,$3$,$+\\infty$} \n\t\t\t\\tkzTabLine{,+,0,-,0,+,} \n\t\t\t\\tkzTabVar{-/$-\\infty$,+/$5$,-/$1$,+/$+\\infty$} \n    \\node at (T11){\\href{YYD074}{\\tiny \\phantom{YYD074}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q5.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=-x^3+3x-2$ có đồ thị như hình vẽ. Tâm đối xứng của đồ thị hàm số đã cho là",
+      "options": [
+        "$J(0;-2)$",
+        "$O(0;0)$",
+        "$I(-2;0)$",
+        "$K(0;2)$"
+      ],
+      "answer": 0,
+      "id": 6,
+      "solution": "Ta có $y' = -3x^2+3$ và $y'' = -6x$. <br>\n Khi đó, $y'' = 0 \\Leftrightarrow -6x = 0 \\Leftrightarrow x = 0 \\Rightarrow y = -2$. <br>\n Vậy tâm đối xứng của đồ thị hàm số là điểm $J(0;-2)$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\draw[->] (-2.5,0)--(2.5,0) node[below] {$x$};\n\t\t\t\\draw[->] (0,-4.5)--(0,1) node[right] {$y$};\n\t\t\t\\draw[dashed] (-1,0)|-(0,-4);\n\t\t\t\\clip (-2.5,-4.5) rectangle (2.5,1);\n\t\t\t\\draw[smooth,samples=100,domain=-2.5:2.5] plot(\\x,{-(\\x)^3+3*\\x-2});\n\t\t\t\\foreach \\x/\\y/\\ang/\\dist/\\lbl in {0/0/-45/0.3/O, -1/0/-140/0.35/-1, 1/0/-90/0.25/1, 0/-4/0/0.3/-4, 0/-2/0/0.3/-2, 0/2/180/0.2/2} \\fill (\\x,\\y) circle (1pt) node[shift={(\\ang:\\dist)}] {$\\lbl$};\n\t\t\t\\fill (-1,-4) circle (1pt);\n    \\node at (0,0){\\href{RPO7FZ}{\\tiny \\phantom{RPO7FZ}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=.7, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\draw[->] (-2.5,0)--(2.5,0) node[below] {$x$};\n\t\t\t\\draw[->] (0,-4.5)--(0,1) node[right] {$y$};\n\t\t\t\\draw[dashed] (-1,0)|-(0,-4);\n\t\t\t\\clip (-2.5,-4.5) rectangle (2.5,1);\n\t\t\t\\draw[smooth,samples=100,domain=-2.5:2.5] plot(\\x,{-(\\x)^3+3*\\x-2});\n\t\t\t\\foreach \\x/\\y/\\ang/\\dist/\\lbl in {0/0/-45/0.3/O, -1/0/-140/0.35/-1, 1/0/-90/0.25/1, 0/-4/0/0.3/-4, 0/-2/0/0.3/-2, 0/2/180/0.2/2} \\fill (\\x,\\y) circle (1pt) node[shift={(\\ang:\\dist)}] {$\\lbl$};\n\t\t\t\\fill (-1,-4) circle (1pt);\n    \\node at (0,0){\\href{RPO7FZ}{\\tiny \\phantom{RPO7FZ}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q6.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình hộp $ABCD.A'B'C'D'$. Xét phép chiếu song song theo phương $A'A$ lên mặt phẳng $(ABCD)$. Ảnh của đoạn thẳng $A'C'$ qua phép chiếu song song đó là",
+      "options": [
+        "đoạn thẳng $A'C$",
+        "đoạn thẳng $AB$",
+        "đoạn thẳng $BD$",
+        "đoạn thẳng $AC$"
+      ],
+      "answer": 3,
+      "id": 7,
+      "solution": "Qua phép chiếu song song theo phương $A'A$ lên mặt phẳng $(ABCD)$, ta có\n <br>\n <br> • Ảnh của điểm $A'$ là điểm $A$;\n <br> • Ảnh của điểm $C'$ là điểm $C$ (vì $C'C \\parallel A'A$).\n <br>\n Do đó, ảnh của đoạn thẳng $A'C'$ là đoạn thẳng $AC$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\t\\def \\goc{225}  \\def \\gocx{80} \\def \\a{1.35} \\def \\b{3.25} \\def \\h{2}\n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (A)\n\t\t\t\t(\\b,0) coordinate (B)\n\t\t\t\t(\\goc:\\a) coordinate (D)\n\t\t\t\t($(D)+(B)-(A)$) coordinate (C)\n\t\t\t\t(\\gocx:\\h) coordinate (A')\n\t\t\t\t($(\\gocx:\\h)+(B)$) coordinate (B')\n\t\t\t\t($(\\gocx:\\h)+(D)$) coordinate (D')\n\t\t\t\t($(\\gocx:\\h)+(C)$) coordinate (C'); \n\t\t\t\\draw[dashed] (D)--(A)--(B) (A)--(A');\n\t\t\t\\draw (D)--(C)--(B)--(B')--(A')--(D')--(C')--(C) (D)--(D') (B')--(C');\n\t\t\t\\foreach \\x/\\g in {A/150, B/0, C/-60, D/-135, A'/120, B'/45, C'/-15, D'/180 }{\\fill (\\x) circle (1pt) node[shift={(\\g:7pt)}]{$\\x$};}\n    \\node at (0,0){\\href{5I1ZC3}{\\tiny \\phantom{5I1ZC3}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\t\\def \\goc{225}  \\def \\gocx{80} \\def \\a{1.35} \\def \\b{3.25} \\def \\h{2}\n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (A)\n\t\t\t\t(\\b,0) coordinate (B)\n\t\t\t\t(\\goc:\\a) coordinate (D)\n\t\t\t\t($(D)+(B)-(A)$) coordinate (C)\n\t\t\t\t(\\gocx:\\h) coordinate (A')\n\t\t\t\t($(\\gocx:\\h)+(B)$) coordinate (B')\n\t\t\t\t($(\\gocx:\\h)+(D)$) coordinate (D')\n\t\t\t\t($(\\gocx:\\h)+(C)$) coordinate (C'); \n\t\t\t\\draw[dashed] (D)--(A)--(B) (A)--(A');\n\t\t\t\\draw (D)--(C)--(B)--(B')--(A')--(D')--(C')--(C) (D)--(D') (B')--(C');\n\t\t\t\\foreach \\x/\\g in {A/150, B/0, C/-60, D/-135, A'/120, B'/45, C'/-15, D'/180 }{\\fill (\\x) circle (1pt) node[shift={(\\g:7pt)}]{$\\x$};}\n    \\node at (0,0){\\href{5I1ZC3}{\\tiny \\phantom{5I1ZC3}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q7.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Trong các dãy số có số hạng tổng quát sau đây, dãy số nào là dãy số tăng?",
+      "options": [
+        "$\\dfrac{1}{3^n}$",
+        "$n+1$",
+        "$1+\\dfrac{1}{n}$",
+        "$6-2n$"
+      ],
+      "answer": 1,
+      "id": 8,
+      "solution": "Xét dãy số $u_n = n+1$, ta có $u_{n+1} - u_n = (n+1+1) - (n+1) = 1 &gt; 0$, $\\forall n \\in \\mathbb{N}^*$. <br>\n Vậy $u_n = n+1$ là dãy số tăng.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Tập nghiệm của bất phương trình $\\log_2(x-1)&gt;3$ là",
+      "options": [
+        "$(1;+\\infty)$",
+        "$(1;9)$",
+        "$(9;+\\infty)$",
+        "$(-\\infty;9)$"
+      ],
+      "answer": 2,
+      "id": 9,
+      "solution": "Điều kiện xác định $x-1 &gt; 0 \\Leftrightarrow x &gt; 1$. <br>\n Ta có $\\log_2(x-1)&gt;3 \\Leftrightarrow x-1 &gt; 2^3 \\Leftrightarrow x-1 &gt; 8 \\Leftrightarrow x &gt; 9$. <br>\n Kết hợp với điều kiện xác định, ta được $x &gt; 9$. <br>\n Vậy tập nghiệm của bất phương trình là $(9;+\\infty)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $1$. Tích vô hướng của hai vectơ $\\overrightarrow{CC'}$ và $\\overrightarrow{A'A}$ bằng",
+      "options": [
+        "$0$",
+        "$-1$",
+        "$2$",
+        "$1$"
+      ],
+      "answer": 1,
+      "id": 10,
+      "solution": "Do $ABCD.A'B'C'D'$ là hình lập phương nên $\\overrightarrow{A'A} = \\overrightarrow{C'C} = -\\overrightarrow{CC'}$. <br>\n Khi đó $\\overrightarrow{CC'} \\cdot \\overrightarrow{A'A} = \\overrightarrow{CC'} \\cdot \\left(-\\overrightarrow{CC'}\\right) = -\\left|\\overrightarrow{CC'}\\right|^2 = -1^2 = -1$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\t\\def \\goc{225}  \\def \\gocx{90} \\def \\a{1.25} \\def \\b{2.5} \\def \\h{2.25}\n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (A)\n\t\t\t\t(\\b,0) coordinate (B)\n\t\t\t\t(\\goc:\\a) coordinate (D)\n\t\t\t\t($(D)+(B)-(A)$) coordinate (C)\n\t\t\t\t(\\gocx:\\h) coordinate (A')\n\t\t\t\t($(\\gocx:\\h)+(B)$) coordinate (B')\n\t\t\t\t($(\\gocx:\\h)+(D)$) coordinate (D')\n\t\t\t\t($(\\gocx:\\h)+(C)$) coordinate (C'); \n\t\t\t\\draw[dashed] (D)--(A)--(B) (A)--(A');\n\t\t\t\\draw (D)--(C)--(B)--(B')--(A')--(D')--(C')--(C) (D)--(D') (B')--(C');\n\t\t\t\\foreach \\x/\\g in {A/150, B/0, C/-60, D/-135, A'/120, B'/45, C'/-15, D'/180 }{\\fill (\\x) circle (1pt) node[shift={(\\g:7pt)}]{$\\x$};}\n    \\node at (0,0){\\href{3AX3KL}{\\tiny \\phantom{3AX3KL}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\t\\def \\goc{225}  \\def \\gocx{90} \\def \\a{1.25} \\def \\b{2.5} \\def \\h{2.25}\n\t\t\t\\path \n\t\t\t\t(0,0) coordinate (A)\n\t\t\t\t(\\b,0) coordinate (B)\n\t\t\t\t(\\goc:\\a) coordinate (D)\n\t\t\t\t($(D)+(B)-(A)$) coordinate (C)\n\t\t\t\t(\\gocx:\\h) coordinate (A')\n\t\t\t\t($(\\gocx:\\h)+(B)$) coordinate (B')\n\t\t\t\t($(\\gocx:\\h)+(D)$) coordinate (D')\n\t\t\t\t($(\\gocx:\\h)+(C)$) coordinate (C'); \n\t\t\t\\draw[dashed] (D)--(A)--(B) (A)--(A');\n\t\t\t\\draw (D)--(C)--(B)--(B')--(A')--(D')--(C')--(C) (D)--(D') (B')--(C');\n\t\t\t\\foreach \\x/\\g in {A/150, B/0, C/-60, D/-135, A'/120, B'/45, C'/-15, D'/180 }{\\fill (\\x) circle (1pt) node[shift={(\\g:7pt)}]{$\\x$};}\n    \\node at (0,0){\\href{3AX3KL}{\\tiny \\phantom{3AX3KL}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/2-KS-12/q10.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian với hệ tọa độ $Oxyz$, phương trình nào sau đây là phương trình tổng quát của một mặt phẳng?",
+      "options": [
+        "$\\dfrac{x-2}{2}=\\dfrac{y-1}{2}=\\dfrac{z}{1}$",
+        "$x-1=0$",
+        "$x^2+y^2+z^2-4=0$",
+        "$\\dfrac{2}{x}+\\dfrac{1}{y}-\\dfrac{3}{z}=0$"
+      ],
+      "answer": 1,
+      "id": 11,
+      "solution": "Phương trình tổng quát của mặt phẳng có dạng $Ax+By+Cz+D=0$ với $A^2+B^2+C^2&gt;0$. <br>\n Do đó, phương trình $x-1=0$ là phương trình của một mặt phẳng với $A=1$, $B=C=0$, $D=-1$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a}=-3\\vec{i}+5\\vec{j}+\\vec{k}$. Độ dài của vectơ $\\vec{a}$ bằng",
+      "options": [
+        "$\\sqrt{17}$",
+        "$35$",
+        "$17$",
+        "$\\sqrt{35}$"
+      ],
+      "answer": 3,
+      "id": 12,
+      "solution": "Ta có $\\vec{a}=-3\\vec{i}+5\\vec{j}+\\vec{k} \\Rightarrow \\vec{a}=(-3;5;1)$. <br>\n Độ dài của vectơ $\\vec{a}$ là $\\left|\\vec{a}\\right| = \\sqrt{(-3)^2+5^2+1^2} = \\sqrt{9+25+1} = \\sqrt{35}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Một hợp tác xã (viết tắt là HTX) nông nghiệp tại Nghệ An đầu tư dự án trồng dưa lưới nhà màng VietGAP. Xét trong một vụ canh tác, với diện tích $x$ (nghìn m$^2$, $x \\geq 1$), tổng chi phí là $C(x)=x^2+30x+100$ (triệu đồng). Tổng doanh thu dự kiến là $R(x)=x^2+100x$ (triệu đồng).",
+      "statements": [
+        {
+          "text": "Hàm số lợi nhuận của HTX sau một vụ canh tác là $L(x)=70x-100$ (triệu đồng)",
+          "answer": true
+        },
+        {
+          "text": "Nếu HTX muốn đạt mức lợi nhuận là $250$ triệu đồng cho một vụ thì diện tích canh tác cần thiết là $5$ nghìn m$^2$",
+          "answer": true
+        },
+        {
+          "text": "Chi phí trung bình trên mỗi đơn vị diện tích được định nghĩa là $P(x)=\\dfrac{C(x)}{x}$. Khi diện tích canh tác tăng từ $1$ nghìn m$^2$ đến $11$ nghìn m$^2$ thì chi phí trung bình luôn giảm",
+          "answer": false
+        },
+        {
+          "text": "Để đồng vốn đầu tư đạt hiệu quả cao nhất (tỉ lệ lợi nhuận trên tổng chi phí $Q(x)=\\dfrac{L(x)}{C(x)}$ đạt giá trị lớn nhất), HTX cần tính toán để chi phí trung bình trên mỗi đơn vị diện tích $P(x)$ đạt mức thấp nhất",
+          "answer": false
+        }
+      ],
+      "id": 13,
+      "solution": "<br>\n <br> • Hàm số lợi nhuận của HTX sau một vụ canh tác là\n \\allowdisplaybreaks\n <br> \\[\n L(x)&=R(x)-C(x)\\\\\n &=\\left(x^2+100x\\right)-\\left(x^2+30x+100\\right)\\\\\n &=70x-100.\n \\] <br>\n Vậy lợi nhuận của HTX sau một vụ canh tác là $L(x)=70x-100$ (triệu đồng).\n <br> • Vì HTX muốn đạt mức lợi nhuận là $250$ triệu đồng cho một vụ nên ta có\n \\allowdisplaybreaks\n <br> \\[\n L(x)=250&\\Leftrightarrow&70x-100=250\\\\\n &\\Leftrightarrow&70x=350\\\\\n &\\Leftrightarrow&x=5 \\left(nghìn m$^2$\\right).\n \\] <br>\n Vậy HTX muốn đạt mức lợi nhuận là $250$ triệu đồng cho một vụ thì diện tích canh tác cần thiết là $5$ nghìn m$^2$.\n <br> • Ta có $P(x)=\\dfrac{C(x)}{x}=\\dfrac{x^2+30x+100}{x}$. <br>\n Xét \n \\allowdisplaybreaks\n <br> \\[\n P'(x)&=\\left(\\dfrac{x^2+30x+100}{x}\\right)'\\\\\n &=\\dfrac{\\left(x^2+30x+100\\right)'\\cdot x-(x)'\\cdot\\left(x^2+30x+100\\right)}{x^2}\\\\\n &=\\dfrac{(2x+30)\\cdot x-x^2-30x-100}{x^2}\\\\\n &=\\dfrac{2x^2+30x-x^2-30x-100}{x^2}\\\\\n &=\\dfrac{x^2-100}{x^2}.\n \\] <br>\n Suy ra $P'(x)=0\\Leftrightarrow\\dfrac{x^2-100}{x^2}=0\\Leftrightarrow\\begin{cases}x=10 (nhận)\\\\x=-10 (loại).\\end{cases}$ <br>\n Bảng biến thiên\n\n Do đó, diện tích canh tác tăng từ $1$ nghìn m$^2$ đến $10$ nghìn m$^2$ thì chi phí trung bình luôn giảm.\n <br> • Ta có $Q(x)=\\dfrac{L(x)}{C(x)}=\\dfrac{70x-100}{x^2+30x+100}$. <br>\n Xét \n \\allowdisplaybreaks\n <br> \\[\n Q'(x)&=\\left(\\dfrac{70x-100}{x^2+30x+100}\\right)'\\\\\n &=\\dfrac{(70x-100)'\\cdot\\left(x^2+30x+100\\right)-\\left(x^2+30x+100\\right)'\\cdot(70x-100)}{\\left(x^2+30x+100\\right)^2}\\\\\n &=\\dfrac{70\\cdot\\left(x^2+30x+100\\right)-(2x+30)\\cdot(70x-100)}{\\left(x^2+30x+100\\right)^2}\\\\\n &=\\dfrac{70x^2+2 100x+7 000-140x^2+200x-2 100x+3 000}{\\left(x^2+30x+100\\right)^2}\\\\\n &=\\dfrac{-70x^2+200x+10 000}{\\left(x^2+30x+100\\right)^2}.\n \\] <br>\n Suy ra $Q'(x)=0\\Leftrightarrow\\dfrac{-70x^2+200x+10 000}{\\left(x^2+30x+100\\right)^2}=0\\Leftrightarrow\\begin{cases}x=x_0=\\dfrac{10+10\\sqrt{71}}{7} (nhận)\\\\x=\\dfrac{10-10\\sqrt{71}}{7} (loại).\\end{cases}$ <br>\n Bảng biến thiên\n\n Suy ra hàm số $Q(x)$ đạt giá trị lớn nhất tại $x=x_0=\\dfrac{10+10\\sqrt{71}}{7}$ và hàm số $P(x)$ đạt giá trị nhỏ nhất tại $x=10$. <br>\n Vậy hàm số $Q(x)$ đạt giá trị lớn nhất tại $x=x_0=\\dfrac{10+10\\sqrt{71}}{7}$ không trùng với hàm số $P(x)$ đạt giá trị nhỏ nhất tại $x=10$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Cho hàm số $y=f(x)=-x-\\dfrac{1}{x-1}$ có đồ thị là đường cong $(C)$.",
+      "statements": [
+        {
+          "text": "Đường thẳng $x=1$ là tiệm cận đứng của đường cong $(C)$",
+          "answer": true
+        },
+        {
+          "text": "$f'(x)=\\dfrac{-x^2+2x}{x-1}$, $\\forall x\\neq 1$",
+          "answer": false
+        },
+        {
+          "text": "Điểm cực đại của đồ thị hàm số là $N(2; 3)$",
+          "answer": false
+        },
+        {
+          "text": "Đường cong $(C)$ có dạng như hình vẽ",
+          "answer": false
+        }
+      ],
+      "id": 14,
+      "solution": "<br>\n <br> • Tập xác định $\\mathscr{D}=\\mathbb{R}\\setminus\\{1\\}$. <br>\n Ta có\n <br>\n <br> • $\\lim\\limits_{x\\to1^{+}}\\left(-x-\\dfrac{1}{x-1}\\right)=\\lim\\limits_{x\\to1^{+}}\\left(\\dfrac{-x^2+x-1}{x-1}\\right)=-\\infty$.\n <br> • $\\lim\\limits_{x\\to1^{-}}\\left(-x-\\dfrac{1}{x-1}\\right)=\\lim\\limits_{x\\to1^{-}}\\left(\\dfrac{-x^2+x-1}{x-1}\\right)=+\\infty$.\n <br>\n Suy ra đồ thị hàm số $y=-x-\\dfrac{1}{x-1}$ có tiệm cận đứng là đường thẳng $x=1$.\n <br> • Với $x\\ne 1$, ta có \n \\allowdisplaybreaks\n <br> \\[\n y'&=\\left(-x-\\dfrac{1}{x-1}\\right)'\\\\\n &=-1+\\dfrac{1}{(x-1)^2}\\\\\n &=\\dfrac{-(x-1)^2+1}{(x-1)^2}\\\\\n &=\\dfrac{-x^2+2x}{(x-1)^2}.\n \\] <br>\n Vậy $y'=f'(x)=\\dfrac{-x^2+2x}{(x-1)^2}$, $\\forall x\\ne1$.\n <br> • Ta có $y'=0\\Leftrightarrow\\dfrac{-x^2+2x}{(x-1)^2}=0\\Leftrightarrow\\begin{cases}x=0\\\\x=2.\\end{cases}$ <br>\n Bảng biến thiên\n\n Dựa vào bảng biến thiên, ta thấy hàm số $y=f(x)$ đạt cực đại tại $x=2$ và giá trị cực đại là $y=-3$. <br>\n Vậy điểm cực đại của đồ thị hàm số là $N(2;-3)$.\n <br> • Đồ thị của hàm số $y=f(x)=-x-\\dfrac{1}{x-1}$ có\n <br>\n <br> • Tiệm cận đứng là đường thẳng $x=1$.\n <br> • Tiệm cận xiên là đường thẳng $y=-x$.\n <br> • Hai điểm cực trị là điểm cực tiểu $(0;1)$ và điểm cực đại $(2;-3)$.\n <br>\n Vậy đường cong $(C)$ có dạng như hình vẽ sau:\n\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize,line join=round, line cap=round, >=stealth, x=0.6cm, y=0.6cm]\n    \n\t\t\t\t\\def\\xt{-3} \\def\\xp{5} \\def\\yt{5} \\def\\yd{-3}\n\t\t\t\t\\tikzset{declare function = {f(\\x)= \\x+1/(\\x-1);}}\n\t\t\t\t\\draw[->] (\\xt,0)--(\\xp,0) node [below]{$x$};\n\t\t\t\t\\draw[->] (0,\\yd)--(0,\\yt) node [left]{$y$};\n\t\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\t\\fill (0,0) node{\\href{58HE7J}{\\tiny \\phantom{58HE7J}}} circle(1pt);\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (\\xt,\\yd) rectangle (\\xp,\\yt);\n\t\t\t\t\t\\draw[smooth,samples=200,domain=\\xt:0.9] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[smooth,samples=200,domain=1.1:\\xp] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw (1,\\yd)--(1,\\yt);\n\t\t\t\t\t\\draw plot[domain=\\xt:\\xp] (\\x,{\\x}); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(1,0)/-60/1, (2,0)/-90/2, (3,0)/-90/3, (4,0)/-90/4, (0,1)/180/1, (0,2)/180/2, (0,3)/180/3, (0,4)/180/4} \\fill \\diem node[shift={(\\pos:2.5mm)}]{$\\name$} circle(1pt);\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(-2,0)/-110/-2, (-1,0)/-110/-1, (0,-2)/180/-2, (0,-1)/150/-1} \\fill \\diem node[shift={(\\pos:3mm)}]{$\\name$} circle(1pt);\n    \\node at (0,0){\\href{58HE7J}{\\tiny \\phantom{58HE7J}}};\n\t\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize,line join=round, line cap=round, >=stealth, x=0.6cm, y=0.6cm]\n    \n\t\t\t\t\\def\\xt{-3} \\def\\xp{5} \\def\\yt{5} \\def\\yd{-3}\n\t\t\t\t\\tikzset{declare function = {f(\\x)= \\x+1/(\\x-1);}}\n\t\t\t\t\\draw[->] (\\xt,0)--(\\xp,0) node [below]{$x$};\n\t\t\t\t\\draw[->] (0,\\yd)--(0,\\yt) node [left]{$y$};\n\t\t\t\t\\node at (0,0) [below right]{$O$};\n\t\t\t\t\\fill (0,0) node{\\href{58HE7J}{\\tiny \\phantom{58HE7J}}} circle(1pt);\n\t\t\t\t\\begin{scope}\n\t\t\t\t\t\\clip (\\xt,\\yd) rectangle (\\xp,\\yt);\n\t\t\t\t\t\\draw[smooth,samples=200,domain=\\xt:0.9] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw[smooth,samples=200,domain=1.1:\\xp] plot(\\x,{f(\\x});\n\t\t\t\t\t\\draw (1,\\yd)--(1,\\yt);\n\t\t\t\t\t\\draw plot[domain=\\xt:\\xp] (\\x,{\\x}); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(1,0)/-60/1, (2,0)/-90/2, (3,0)/-90/3, (4,0)/-90/4, (0,1)/180/1, (0,2)/180/2, (0,3)/180/3, (0,4)/180/4} \\fill \\diem node[shift={(\\pos:2.5mm)}]{$\\name$} circle(1pt);\n\t\t\t\t\\foreach \\diem/\\pos/\\name in {(-2,0)/-110/-2, (-1,0)/-110/-1, (0,-2)/180/-2, (0,-1)/150/-1} \\fill \\diem node[shift={(\\pos:3mm)}]{$\\name$} circle(1pt);\n    \\node at (0,0){\\href{58HE7J}{\\tiny \\phantom{58HE7J}}};\n\t\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-12/q14.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "truefalse",
+      "question": "Trong một mô hình nông nghiệp công nghệ cao, một tấm pin năng lượng mặt trời phẳng được lắp đặt nghiêng sao cho bề mặt của nó nằm trên mặt phẳng $(P)\\colon 2x+2y+z-6=0$ (xét trong hệ không gian tọa độ $Oxyz$ với đơn vị đo là mét, mặt phẳng $(Oxy)$ được xem là mặt đất phẳng). Người ta lắp đặt một robot cố định ở trên cao để kiểm tra bụi bẩn. Robot có mắt phát tia laser tại điểm $S(1;1;6)$. Robot thực hiện quét tia laser trên bề mặt tấm pin. Tại một thời điểm tia laser được chiếu theo đường thẳng $\\Delta$ có vectơ chỉ phương $\\vec{u}=(1;-2;-2)$ và chạm vào bề mặt tấm pin tại điểm $M$.",
+      "statements": [
+        {
+          "text": "Khoảng cách từ mắt phát tia laser $S$ đến mặt phẳng $(P)$ bằng $\\dfrac{4}{3}$ mét",
+          "answer": true
+        },
+        {
+          "text": "Điểm $M$ có tọa độ là $(1;1;2)$",
+          "answer": false
+        },
+        {
+          "text": "Góc $\\alpha$ hợp bởi tia laser $\\Delta$ và mặt phẳng $(P)$ thỏa mãn hệ thức $\\sin\\alpha = \\dfrac{4}{9}$",
+          "answer": true
+        },
+        {
+          "text": "Khi vệ sinh, nước được phun trúng điểm chạm của tia laser trên tấm pin sẽ tạo thành dòng nước chảy trên bề mặt pin xuống đất theo hướng dốc nhất, quỹ đạo chảy của dòng nước nằm trên một đường thẳng. Đường thẳng đó có một vectơ chỉ phương là $\\vec{v}=(1;1;3)$",
+          "answer": false
+        }
+      ],
+      "id": 15,
+      "solution": "<br>\n <br> • Ta có $\\mathrm{d}\\big(S,(P)\\big) = \\dfrac{|2\\cdot1+2\\cdot1+6-6|}{\\sqrt{2^2+2^2+1^2}} = \\dfrac{4}{3}$ (m). <br>\n Vậy khoảng cách từ mắt phát tia laser $S$ đến mặt phẳng $(P)$ bằng $\\dfrac{4}{3}$ mét.\n <br> • Phương trình đường thẳng (tia laser) $\\Delta$ đi qua $S(1;1;6)$ nhận $\\vec{u}=(1;-2;-2)$ làm một vectơ chỉ phương có dạng là $\\begin{cases}x=1+t\\\\y=1-2t\\\\z=6-2t\\end{cases}$, $t\\in\\mathbb{R}$. <br>\n Vì $M$ thuộc $\\Delta$ nên có toạ độ $M(1+t;1-2t;6-2t)$. <br>\n Mà $M$ thuộc mặt phẳng $(P)$ nên ta có\n \\allowdisplaybreaks\n <br> \\[\n && 2(1+t)+2(1-2t)+(6-2t)-6=0\\\\\n &\\Leftrightarrow& -4t+4=0\\\\\n &\\Leftrightarrow& t=1.\n \\] <br>\n Suy ra $M(2;-1;4)$. \n <br> • Đường thẳng chứa tia laser có một vectơ chỉ phương là $\\vec{u}=(1;-2;-2)$. <br>\n Mặt phẳng $(P)$ có một vectơ pháp tuyến là $\\vec{n}=(2;2;1)$. <br>\n Suy ra\n \\[\\sin\\alpha = \\dfrac{\\left|\\vec{u}\\cdot\\vec{n}\\right|}{\\left|\\vec{u}\\right|\\cdot\\left|\\vec{n}\\right|} = \\dfrac{\\big|1\\cdot 2 + (-2)\\cdot 2 + (-2)\\cdot 1\\big|}{\\sqrt{1^2+(-2)^2+(-2)^2}\\cdot\\sqrt{2^2+2^2+1^2}} = \\dfrac{4}{9}.\\]\n Vậy với $\\alpha$ là góc hợp bởi tia laser $\\Delta$ và mặt phẳng $(P)$ thì $\\sin\\alpha=\\dfrac{4}{9}$.\n <br> • Gọi $d = (P) \\cap (Oxy)$, kẻ $MP \\perp d$ tại $P$ ($P \\in d$), $N$ là điểm bất kỳ thuộc $d$, $H$ là hình chiếu của $M$ lên mặt phẳng $(Oxy)$. <br>\n Ta có $\\sin \\widehat{MNH} = \\dfrac{MH}{MN} \\le \\dfrac{MH}{MP}=\\sin \\widehat{MPH}$ (do $MP \\le MN$). <br> \n Góc nghiêng càng lớn thì đường nước chảy càng dốc, lúc này góc nghiêng lớn nhất khi $\\sin \\widehat{MNH} = \\dfrac{MH}{MP}$. <br>\n Dấu “$=$” xảy ra khi và chỉ khỉ $N \\equiv P$. <br>\n Ta có $\\begin{cases}\\vec{u}_d\\perp \\vec{k}\\\\\\vec{u}_d\\perp \\vec{n}_{(P)}\\end{cases}\\Rightarrow \\vec{u}_d = \\left[\\vec{k}, \\vec{n}\\right]=(-2;2;0)$. <br>\n Lại có $\\begin{cases}\\vec{v}\\perp \\vec{u}_d\\\\\\vec{v}\\perp \\vec{n}_{(P)}\\end{cases}$ nên\n $\\vec{v} = \\left[\\vec{u}_d, \\vec{n}\\right]=(2;2;-8)=2(1;1;-4)$. <br>\n Vậy đường thẳng dốc nhất có một vectơ chỉ phương là $\\vec{v}=(1;1;-4)$. \n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}\n\t\t\t\\fill[bottom color=gray!10,top color=deepskyblue!90, middle color=white] (-3,-4) rectangle (6,3.5);\n\t\t\t\\def \\gx{170} \\def \\gy{15} \n\t\t\t\n\t\t\t\\draw[fill=gray!15] (-1,-2)--(-1,3)--++(-\\gx:0.1)--++(-90:5)--cycle;\n\t\t\t\\draw[fill=gray!30] (-1,-2)--++(-\\gy:0.15)--++(90:5\t)--(-1,3)--cycle;\n\t\t\t\\draw[fill=gray!30] (-0.97,2.4)--++(-\\gy:0.15)--++(90:0.4)--++(180-\\gy:0.15)--cycle;\n\t\t\t\\draw[fill=gray!50!brown!20] (-0.97,2.6)--++(55:0.22)coordinate(C1)--++(-50:0.4)coordinate(C2)--++(-125:0.22)coordinate(C3)--cycle\n\t\t\t\t(C1)--++(-\\gy:0.15)--++(-50:0.4)coordinate(C4)--(C2)--cycle\n\t\t\t\t(C4)--(C2)--(C3)--($(C3)-(C2)+(C4)$)--cycle\n\t\t\t\t;\n\t\t\t\\coordinate (LensBase) at ($(C2)!0.5!($(C3)-(C2)+(C4)$)$);\n\t\t\t\\begin{scope}[shift={(LensBase)}, rotate=-50]\n\t\t\t\t\\fill[black!80] (0, 0.09) -- (0.15, 0.09) -- (0.15, -0.09) -- (0, -0.09) -- cycle;\n\t\t\t\t\\fill[black!80] (0, 0) ellipse [x radius=0.035, y radius=0.09]; \n\t\t\t\t\\draw[] (0, 0.09) -- (0.15, 0.09) (0, -0.09) -- (0.15, -0.09);\n\t\t\t\t\\draw[fill=black!95] (0.15, 0) ellipse [x radius=0.035, y radius=0.09];\n\t\t\t\t\\draw[fill=blue!50!cyan] (0.15, 0) ellipse [x radius=0.025, y radius=0.075];\n\t\t\t\t\\fill[white, opacity=0.7] (0.15, 0.015) ellipse [x radius=0.01, y radius=0.02];\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\def \\gp{45} \n\t\t\t\\path (-2,-2) coordinate (P1)\n\t\t\t\t++(\\gp:3) coordinate (P2)\n\t\t\t\t++(\\gx-177:5) coordinate (P3)\n\t\t\t\t++(\\gp-180:3.3) coordinate (P4)\n\t\t\t\t;\n\t\t\t\\def\\hstand{0.5} \n\t\t\t\n\t\t\t\\path\n\t\t\t\tcoordinate (A_FL) at ($(P1)!0.08!(P4)$)\n\t\t\t\tcoordinate (A_FR) at ($(P4)!0.08!(P1)$)\n\t\t\t\tcoordinate (A_RL) at ($(P1)!0.75!(P2)$)\n\t\t\t\tcoordinate (A_RR) at ($(P4)!0.55!(P3)$)\n\t\t\t\tcoordinate (B1)   at ($(A_FL)+(0,-\\hstand)$)\n\t\t\t\tcoordinate (B4)   at ($(A_FR)+(0,-\\hstand)$)\n\t\t\t\tcoordinate (B2)   at ($(B1)+(25:2)$)\n\t\t\t\tcoordinate (B3)   at ($(B4)+(25:2)$);     \n\t\t\t\\def\\tw{0.15} \n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B1) -- (B2) -- ($(B2)+(-10:\\tw)$) -- ($(B1)+(-10:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!40] ($(B1)+(-10:\\tw)$) -- ($(B2)+(-10:\\tw)$) -- ($(B2)+(-10:\\tw)+(0,-\\tw)$) -- ($(B1)+(-10:\\tw)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B2) -- (B3) -- ($(B3)+(25:\\tw)$) -- ($(B2)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B2) -- (B3) -- ($(B3)+(0,-\\tw)$) -- ($(B2)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!30] (B3) -- (A_RR) -- ($(A_RR)+(-\\tw,0)$) -- ($(B3)+(-\\tw,0)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B3) -- (A_RR) -- ($(A_RR)+(25:\\tw)$) -- ($(B3)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!30] (B3) --($(B3)+(0,-\\tw)$)--($(B3)+(0,-\\tw)+(25:\\tw)$)--($(B3)+(25:\\tw)$)--cycle;\n\t\t\t\\def\\th{0.12} \n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B4) -- (B3) -- ($(B3)+(-\\tw,0)$) -- ($(B4)+(-\\tw,0)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B4) -- (B3) -- ($(B3)+(0,-\\tw)$) -- ($(B4)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B1) -- (B4) -- ($(B4)+(25:\\tw)$) -- ($(B1)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B1) -- (B4) -- ($(B4)+(0,-\\tw)$) -- ($(B1)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\coordinate (Leg1_Top) at ($(A_FR)+(0,-\\th)$);\n\t\t\t\\draw[fill=gray!30] (B4) -- (Leg1_Top) -- ($(Leg1_Top)+(\\gx:\\tw)$) -- ($(B4)+(\\gx:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B4) -- (Leg1_Top) -- ($(Leg1_Top)+(25:\\tw)$) -- ($(B4)+(25:\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\coordinate (Leg2_Top) at ($(A_FL)+(0,-\\th)$);\n\t\t\t\\draw[fill=gray!30] (B1) -- (Leg2_Top) -- ($(Leg2_Top)+(\\gx-180:\\tw)$) -- ($(B1)+(\\gx-180:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] ($(B1)+(\\gx-180:\\tw)$) -- ($(Leg2_Top)+(\\gx-180:\\tw)$) -- ($(Leg2_Top)+(25:\\tw)+(\\gx-180:\\tw)$) -- ($(B1)+(25:\\tw)+(\\gx-180:\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!50] (P3) -- (P4) -- ($(P4)+(0,-\\th)$) -- ($(P3)+(0,-\\th)$) -- cycle;\n\t\t\t\\draw[fill=gray!30] (P1) -- (P4) -- ($(P4)+(0,-\\th)$) -- ($(P1)+(0,-\\th)$) -- cycle;\n\t\t\t\\draw[fill=gray!20] (P1) -- (P2) -- (P3) -- (P4) -- cycle;\n\t\t\t\\coordinate (I1) at ($(P1) + (\\gx-180:0.1) + (\\gp:0.1)$);\n\t\t\t\\coordinate (I2) at ($(P2) + (\\gx-180:0.1) - (\\gp:0.1)$);\n\t\t\t\\coordinate (I3) at ($(P3) - (\\gx-180:0.1) - (\\gp:0.1)$);\n\t\t\t\\coordinate (I4) at ($(P4) - (\\gx-180:0.1) + (\\gp:0.1)$);\n\t\t\t\\draw[fill=blue!50!cyan!50!black] (I1) -- (I2) -- (I3) -- (I4) -- cycle;\n\t\t\t\\foreach \\i in {1,...,5}{\n\t\t\t\\draw[white!70, thin] ($(I1)!\\i/6!(I2)$) -- ($(I4)!\\i/6!(I3)$);\n\t\t\t}\n\t\t\t\\foreach \\j in {1,...,9}{\n\t\t\t\\draw[white!70, thin] ($(I1)!\\j/10!(I4)$) -- ($(I2)!\\j/10!(I3)$);}\n\t\t\t\\path (2.35,-1.5)coordinate (M);\n\t\t\t\\fill[] (M) circle (1.5pt)node[shift=(-50:.25)]{\\everymath{\\color{yellow}}$M$};\n\t\t\t\\draw[->,thick,red] ($(LensBase)!0.15cm!(M)$) --($(LensBase)!1cm!(M)$)node[shift=(60:0.3)]{$\\vec{u}$};\n\t\t\t\\draw[->,thick,red] ($(LensBase)!0.15cm!(M)$) --(M);\n\t\t\t\\path ($(LensBase)!0.15cm!(M)$)node[above right]{$S$ (Robot)} \n\t\t\t\t($(LensBase)!2.65cm!(M)$) node[right]{$\\Delta$ (Tia laser)};\n\t\t\t\\draw (4,-0.5)--(4,1)node[above]{$(P)$ (Mặt phẳng tấm pin)};\n    \\node at (0,0){\\href{3XU9QE}{\\tiny \\phantom{3XU9QE}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}\n\t\t\t\\fill[bottom color=gray!10,top color=deepskyblue!90, middle color=white] (-3,-4) rectangle (6,3.5);\n\t\t\t\\def \\gx{170} \\def \\gy{15} \n\t\t\t\n\t\t\t\\draw[fill=gray!15] (-1,-2)--(-1,3)--++(-\\gx:0.1)--++(-90:5)--cycle;\n\t\t\t\\draw[fill=gray!30] (-1,-2)--++(-\\gy:0.15)--++(90:5\t)--(-1,3)--cycle;\n\t\t\t\\draw[fill=gray!30] (-0.97,2.4)--++(-\\gy:0.15)--++(90:0.4)--++(180-\\gy:0.15)--cycle;\n\t\t\t\\draw[fill=gray!50!brown!20] (-0.97,2.6)--++(55:0.22)coordinate(C1)--++(-50:0.4)coordinate(C2)--++(-125:0.22)coordinate(C3)--cycle\n\t\t\t\t(C1)--++(-\\gy:0.15)--++(-50:0.4)coordinate(C4)--(C2)--cycle\n\t\t\t\t(C4)--(C2)--(C3)--($(C3)-(C2)+(C4)$)--cycle\n\t\t\t\t;\n\t\t\t\\coordinate (LensBase) at ($(C2)!0.5!($(C3)-(C2)+(C4)$)$);\n\t\t\t\\begin{scope}[shift={(LensBase)}, rotate=-50]\n\t\t\t\t\\fill[black!80] (0, 0.09) -- (0.15, 0.09) -- (0.15, -0.09) -- (0, -0.09) -- cycle;\n\t\t\t\t\\fill[black!80] (0, 0) ellipse [x radius=0.035, y radius=0.09]; \n\t\t\t\t\\draw[] (0, 0.09) -- (0.15, 0.09) (0, -0.09) -- (0.15, -0.09);\n\t\t\t\t\\draw[fill=black!95] (0.15, 0) ellipse [x radius=0.035, y radius=0.09];\n\t\t\t\t\\draw[fill=blue!50!cyan] (0.15, 0) ellipse [x radius=0.025, y radius=0.075];\n\t\t\t\t\\fill[white, opacity=0.7] (0.15, 0.015) ellipse [x radius=0.01, y radius=0.02];\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\def \\gp{45} \n\t\t\t\\path (-2,-2) coordinate (P1)\n\t\t\t\t++(\\gp:3) coordinate (P2)\n\t\t\t\t++(\\gx-177:5) coordinate (P3)\n\t\t\t\t++(\\gp-180:3.3) coordinate (P4)\n\t\t\t\t;\n\t\t\t\\def\\hstand{0.5} \n\t\t\t\n\t\t\t\\path\n\t\t\t\tcoordinate (A_FL) at ($(P1)!0.08!(P4)$)\n\t\t\t\tcoordinate (A_FR) at ($(P4)!0.08!(P1)$)\n\t\t\t\tcoordinate (A_RL) at ($(P1)!0.75!(P2)$)\n\t\t\t\tcoordinate (A_RR) at ($(P4)!0.55!(P3)$)\n\t\t\t\tcoordinate (B1)   at ($(A_FL)+(0,-\\hstand)$)\n\t\t\t\tcoordinate (B4)   at ($(A_FR)+(0,-\\hstand)$)\n\t\t\t\tcoordinate (B2)   at ($(B1)+(25:2)$)\n\t\t\t\tcoordinate (B3)   at ($(B4)+(25:2)$);     \n\t\t\t\\def\\tw{0.15} \n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B1) -- (B2) -- ($(B2)+(-10:\\tw)$) -- ($(B1)+(-10:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!40] ($(B1)+(-10:\\tw)$) -- ($(B2)+(-10:\\tw)$) -- ($(B2)+(-10:\\tw)+(0,-\\tw)$) -- ($(B1)+(-10:\\tw)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B2) -- (B3) -- ($(B3)+(25:\\tw)$) -- ($(B2)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B2) -- (B3) -- ($(B3)+(0,-\\tw)$) -- ($(B2)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!30] (B3) -- (A_RR) -- ($(A_RR)+(-\\tw,0)$) -- ($(B3)+(-\\tw,0)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B3) -- (A_RR) -- ($(A_RR)+(25:\\tw)$) -- ($(B3)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!30] (B3) --($(B3)+(0,-\\tw)$)--($(B3)+(0,-\\tw)+(25:\\tw)$)--($(B3)+(25:\\tw)$)--cycle;\n\t\t\t\\def\\th{0.12} \n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B4) -- (B3) -- ($(B3)+(-\\tw,0)$) -- ($(B4)+(-\\tw,0)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B4) -- (B3) -- ($(B3)+(0,-\\tw)$) -- ($(B4)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!20] (B1) -- (B4) -- ($(B4)+(25:\\tw)$) -- ($(B1)+(25:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B1) -- (B4) -- ($(B4)+(0,-\\tw)$) -- ($(B1)+(0,-\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\coordinate (Leg1_Top) at ($(A_FR)+(0,-\\th)$);\n\t\t\t\\draw[fill=gray!30] (B4) -- (Leg1_Top) -- ($(Leg1_Top)+(\\gx:\\tw)$) -- ($(B4)+(\\gx:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] (B4) -- (Leg1_Top) -- ($(Leg1_Top)+(25:\\tw)$) -- ($(B4)+(25:\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\coordinate (Leg2_Top) at ($(A_FL)+(0,-\\th)$);\n\t\t\t\\draw[fill=gray!30] (B1) -- (Leg2_Top) -- ($(Leg2_Top)+(\\gx-180:\\tw)$) -- ($(B1)+(\\gx-180:\\tw)$) -- cycle;\n\t\t\t\\draw[fill=gray!50] ($(B1)+(\\gx-180:\\tw)$) -- ($(Leg2_Top)+(\\gx-180:\\tw)$) -- ($(Leg2_Top)+(25:\\tw)+(\\gx-180:\\tw)$) -- ($(B1)+(25:\\tw)+(\\gx-180:\\tw)$) -- cycle;\n\t\t\t\n\t\t\t\\draw[fill=gray!50] (P3) -- (P4) -- ($(P4)+(0,-\\th)$) -- ($(P3)+(0,-\\th)$) -- cycle;\n\t\t\t\\draw[fill=gray!30] (P1) -- (P4) -- ($(P4)+(0,-\\th)$) -- ($(P1)+(0,-\\th)$) -- cycle;\n\t\t\t\\draw[fill=gray!20] (P1) -- (P2) -- (P3) -- (P4) -- cycle;\n\t\t\t\\coordinate (I1) at ($(P1) + (\\gx-180:0.1) + (\\gp:0.1)$);\n\t\t\t\\coordinate (I2) at ($(P2) + (\\gx-180:0.1) - (\\gp:0.1)$);\n\t\t\t\\coordinate (I3) at ($(P3) - (\\gx-180:0.1) - (\\gp:0.1)$);\n\t\t\t\\coordinate (I4) at ($(P4) - (\\gx-180:0.1) + (\\gp:0.1)$);\n\t\t\t\\draw[fill=blue!50!cyan!50!black] (I1) -- (I2) -- (I3) -- (I4) -- cycle;\n\t\t\t\\foreach \\i in {1,...,5}{\n\t\t\t\\draw[white!70, thin] ($(I1)!\\i/6!(I2)$) -- ($(I4)!\\i/6!(I3)$);\n\t\t\t}\n\t\t\t\\foreach \\j in {1,...,9}{\n\t\t\t\\draw[white!70, thin] ($(I1)!\\j/10!(I4)$) -- ($(I2)!\\j/10!(I3)$);}\n\t\t\t\\path (2.35,-1.5)coordinate (M);\n\t\t\t\\fill[] (M) circle (1.5pt)node[shift=(-50:.25)]{\\everymath{\\color{yellow}}$M$};\n\t\t\t\\draw[->,thick,red] ($(LensBase)!0.15cm!(M)$) --($(LensBase)!1cm!(M)$)node[shift=(60:0.3)]{$\\vec{u}$};\n\t\t\t\\draw[->,thick,red] ($(LensBase)!0.15cm!(M)$) --(M);\n\t\t\t\\path ($(LensBase)!0.15cm!(M)$)node[above right]{$S$ (Robot)} \n\t\t\t\t($(LensBase)!2.65cm!(M)$) node[right]{$\\Delta$ (Tia laser)};\n\t\t\t\\draw (4,-0.5)--(4,1)node[above]{$(P)$ (Mặt phẳng tấm pin)};\n    \\node at (0,0){\\href{3XU9QE}{\\tiny \\phantom{3XU9QE}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-12/q15.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "truefalse",
+      "question": "Để tuyển chọn thành viên cho Câu lạc bộ Toán - Tin, nhà trường tổ chức một bài thi đánh giá năng lực (thang điểm $100$) cho $100$ học sinh. Kết quả điểm thi được thống kê trong bảng số liệu ghép nhóm gồm $6$ nhóm như sau:\n\n An và Bình là hai học sinh tham gia thi, đạt số điểm lần lượt là $82$ điểm và $69{,}5$ điểm. Ban chủ nhiệm Câu lạc bộ đưa ra quy định phân loại dựa trên các chỉ số thống kê của toàn bộ mẫu số liệu như sau:\n <br>\n <br> • Xếp loại “ xuất sắc”: Điểm số lớn hơn hoặc bằng tứ phân vị thứ ba.\n <br> • Xếp loại “ tiềm năng”: Điểm số từ mức điểm trung vị đến dưới tứ phân vị thứ ba.\n <br> • Xếp loại “ chưa đạt”: Điểm số dưới mức điểm trung vị.\n <br>\n Một điều hết sức thú vị là không có học sinh nào có điểm số bằng một trong ba giá trị tứ phân vị.",
+      "statements": [
+        {
+          "text": "Khoảng biến thiên của mẫu số liệu ghép nhóm này là $60$",
+          "answer": true
+        },
+        {
+          "text": "Điểm trung vị của $100$ học sinh tham gia kỳ thi là $71$ điểm",
+          "answer": false
+        },
+        {
+          "text": "Mặc dù Bình xếp loại chưa đạt, nhưng điểm số của Bình vẫn cao hơn mức điểm trung bình",
+          "answer": true
+        },
+        {
+          "text": "Để đánh giá chất lượng đề thi, ban tổ chức chọn ngẫu nhiên $4$ học sinh tham gia kỳ thi để phỏng vấn. Xác suất để trong $4$ học sinh được chọn có đầy đủ đại diện của ba nhóm xếp loại và luôn có mặt An là $\\dfrac{275}{14 259}$",
+          "answer": true
+        }
+      ],
+      "id": 16,
+      "solution": "<br>\n <br> • Khoảng biến thiên của mẫu số liệu ghép nhóm là $R = 100 - 40 = 60$. \n <br> • Cỡ mẫu $n=100$. <br>\n Trung vị $M_e$ của mẫu số liệu gốc là $\\dfrac{x_{50} + x_{51}}{2}$, mà $x_{50}$ thuộc nhóm $[60; 70)$ và $x_{51}$ thuộc nhóm $[70; 80)$. Do đó, trung vị của mẫu số liệu ghép nhóm là $M_e = 70$.\n <br> • Từ bảng thống kê, ta lập được bảng giá trị đại diện sau:\n\n Điểm trung bình của mẫu số liệu ghép nhóm trên là \n \\[\\overline{x} = \\dfrac{10\\cdot 45 + 15\\cdot 55 + 25\\cdot 65 + 30\\cdot 75 + 15\\cdot 85 + 5\\cdot 95}{100} = \\dfrac{6 900}{100} = 69.\\]\n Bình được $69{,}5$ nên có điểm số cao hơn mức điểm trung bình.\n <br> • Tứ phân vị thứ ba $Q_3$ của mẫn số liệu gốc là $x_{75} + x_{76}$, mà $x_{75}$ và $x_{76}$ đều thuộc nhóm $[70; 80)$. Do đó, tứ phân vị thứ ba của mẫu số liệu ghép nhóm là\n \\[Q_3 = 70 + \\dfrac{75 - 50}{30} \\cdot 10=\\dfrac{235}{3}\\approx78{,}3.\\]\n An được $82$ điểm nên thuộc nhóm xếp loại “ xuất sắc”. <br>\n Có $100$ học sinh tham gia thi, không có học sinh nào có điểm số bằng một trong ba tứ phân vị nên ta có\n <br>\n <br> • Số học sinh chưa đạt là $50$;\n <br> • Số học sinh tiềm năng là $25$;\n <br> • Số học sinh xuất sắc là $25$ (trong đó có An).\n <br>\n Chọn ngẫu nhiên $4$ học sinh từ $100$ học sinh là một tổ hợp chập $4$ của $100$. <br>\n Do đó, số phần tử của không gian mẫu là $n(\\Omega)=\\mathrm{C}_{100}^4$. <br>\n Gọi $A$ là biến cố: “ Có đầy đủ đại diện của ba nhóm xếp loại và luôn có mặt An”. <br> \n Các trường hợp chọn $3$ người còn lại (khi đã có An) có thể xảy ra là\n <br> [\\it TH 1:]\n <br> • Chọn $4$ học sinh trong đó có An (xuất sắc), $1$ học sinh chưa đạt, $1$ học sinh tiềm năng và thêm $1$ học sinh xuất sắc (khác An) có số kết quả là $\\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^1 \\cdot \\mathrm{C}_{24}^1$.\n <br> • Chọn $4$ học sinh trong đó có An (xuất sắc), $2$ học sinh chưa đạt và $1$ học sinh tiềm năng có số kết quả là $\\mathrm{C}_{50}^2 \\cdot \\mathrm{C}_{25}^1$.\n <br> • Chọn $4$ học sinh trong đó có An (xuất sắc), $1$ học sinh chưa đạt và $2$ học sinh tiềm năng có số kết quả là $\\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^2$.\n <br>\n Tổng số cách chọn thuận lợi cho biến cố $A$ là $n(A) = \\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^1 \\cdot \\mathrm{C}_{24}^1 + \\mathrm{C}_{50}^2 \\cdot \\mathrm{C}_{25}^1 + \\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^2$. <br>\n Xác suất trong $4$ người được chọn có đầy đủ đại diện của ba nhóm xếp loại và luôn có mặt An là\n \\[\\mathrm{P}(A) = \\dfrac{n(A)}{n(\\Omega)}= \\dfrac{\\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^1 \\cdot \\mathrm{C}_{24}^1 + \\mathrm{C}_{50}^2 \\cdot \\mathrm{C}_{25}^1 + \\mathrm{C}_{50}^1 \\cdot \\mathrm{C}_{25}^2}{\\mathrm{C}_{100}^4} = \\dfrac{275}{14 259}.\\]\n <br>",
+      "visualLatex": "\\begin{tabular}{|l|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tĐiểm số & $[40; 50)$ & $[50; 60)$ & $[60; 70)$ & $[70; 80)$ & $[80; 90)$ & $[90; 100]$ \\\\\n\t\t\t\\hline\n\t\t\tSố học sinh & $10$ & $15$ & $25$ & $30$ & $15$ & $5$ \\\\ \n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|l|c|c|c|c|c|c|}\n\t\t\t\\hline\n\t\t\tĐiểm số & $[40; 50)$ & $[50; 60)$ & $[60; 70)$ & $[70; 80)$ & $[80; 90)$ & $[90; 100]$ \\\\\n\t\t\t\\hline\n\t\t\tSố học sinh & $10$ & $15$ & $25$ & $30$ & $15$ & $5$ \\\\ \n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/2-KS-12/q16.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "short",
+      "question": "Một kiến trúc sư thiết kế một hồ bơi vô cực có mặt trên của bể bơi nằm trong mặt phẳng $Oxy$ (đơn vị trên trục là mét). Một cạnh của hồ bơi dài $12$ m nằm trên trục $Ox$; hai cạnh bên lần lượt nằm trên trục $Oy$ và đường thẳng $x=12$; cạnh còn lại (mặt vô cực) là một phần đồ thị của hàm số $y=-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4$. Đáy hồ bơi không phẳng mà độ sâu tại điểm $(a;b)$ được tính theo công thức $h(a)=\\dfrac{1}{4}a+1$ (mét). Thể tích nước tối đa mà hồ bơi có thể chứa bằng bao nhiêu m$^3$?\n\n <br>",
+      "answer": "160",
+      "id": 17,
+      "solution": "Mặt trên của hồ bơi là một hình phẳng $\\mathscr{D}$ nằm trong mặt phẳng tọa độ $Oxy$, được giới hạn bởi trục hoành $y=0$, trục tung $x=0$; đường thẳng $x=12$ và đồ thị hàm số $y=-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4$. <br>\n Độ sâu của hồ bơi tại điểm có hoành độ $x=a$ chỉ phụ thuộc vào $a$, do đó mặt cắt của hồ bơi khi cắt bởi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ $x \\in [0;12]$ là một hình chữ nhật có kích thước hai cạnh là $y=-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4$ và $h(x)=\\dfrac{1}{4}x+1$. <br>\n Diện tích của mặt cắt hình chữ nhật là\n \\[S(x)=y \\cdot h(x)=\\left(-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4 \\right) \\left(\\dfrac{1}{4}x+1\\right).\\]\n Thể tích nước tối đa mà hồ bơi có thể chứa là\n \\allowdisplaybreaks\n <br> \\[\n V &= \\int\\limits_0^{12} S(x) \\mathrm{ d}x \\\\\n &= \\int\\limits_0^{12} \\left(-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4 \\right) \\left(\\dfrac{1}{4}x+1\\right) \\mathrm{d}x \\\\\n &= 160.\n \\] <br>\n Vậy thể tích nước tối đa mà hồ bơi có thể chứa là $160$ m$^3$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.6, font=\\footnotesize, line join=round, line cap=round, >=stealth, x={(1cm,0cm)}, y={(0.4cm,0.4cm)}, z={(0cm,-0.8cm)}, declare function={f(\\x)=-1/18*(\\x)^2 + 2/3*\\x + 4; h(\\x)=1/4*\\x + 1; a=7.5;}]\n    \n\t\t\t\\draw[fill=cyan!15] (0,0,0) -- (12,0,0) -- (12,0,{h(12)}) -- (0,0,{h(0)}) -- cycle;\n\t\t\t\\draw[fill=cyan!25] (12,0,0) -- (12,{f(12)},0) -- (12,{f(12)},{h(12)}) -- (12,0,{h(12)}) -- cycle;\n\t\t\t\\draw[fill=cyan!15] (0,0,0) -- plot[domain=0:12, samples=50] (\\x, {f(\\x)}, 0) -- (12,0,0) -- cycle;\n\t\t\t\\draw[dashed,fill=cyan!25] (a,0,0) -- (a,{f(a)},0) -- (a,{f(a)},{h(a)}) -- (a,0,{h(a)}) -- cycle;\n\t\t\t\\draw[] (a,0,{h(a)})--(a,0,0) -- (a,{f(a)},0);\n\t\t\t\\draw[->] (0,0,0) -- (14.5,0,0) node[below] {$x$};\n\t\t\t\\draw[->] (0,0,0) -- (0,7,0) node[above] {$y$};\n\t\t\t\\node[shift=(180:2mm)] at (0,0,0) {$O$};\n\t\t\t\\draw[] plot[domain=0:12, samples=50] (\\x, {f(\\x)}, 0);\n\t\t\t\\path (12,0,0) node[below left=-2pt] {$12$} -- (12,{f(12)},0);\n\t\t\t\\node[above, rotate=4] at (4.2, {f(6.5)-0.3}, 0) {$y=-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4$};\n\t\t\t\\node[left] at (a,0,0.5) {$a$};\n\t\t\t\\node[above left] at (a,{f(a)/1.3},0.3) {$b$};\n\t\t\t\\draw[<->] (a, {f(a)+1}, 0) -- (a, {f(a)+1}, {h(a)}) node[midway, right] {$h(a)$};\n\t\t\t\\draw[dash pattern=on 2pt off 1.pt] (a, {f(a)}, 0) -- (a, {f(a)+0.8}, 0);\n\t\t\t\\draw[dash pattern=on 2pt off 1.pt] (a, {f(a)}, {h(a)}) -- (a, {f(a)+0.8}, {h(a)});\n\t\t\t\\draw[dashed] plot[domain=0:12, samples=50] (\\x, {f(\\x)}, {h(\\x)})\n\t\t\t\t(0,{f(0)},0) -- (0,{f(0)},{h(0)})--(0,0,{h(0)})\n\t\t\t\t;\n    \\node at (0,0){\\href{3WRUJF}{\\tiny \\phantom{3WRUJF}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.6, font=\\footnotesize, line join=round, line cap=round, >=stealth, x={(1cm,0cm)}, y={(0.4cm,0.4cm)}, z={(0cm,-0.8cm)}, declare function={f(\\x)=-1/18*(\\x)^2 + 2/3*\\x + 4; h(\\x)=1/4*\\x + 1; a=7.5;}]\n    \n\t\t\t\\draw[fill=cyan!15] (0,0,0) -- (12,0,0) -- (12,0,{h(12)}) -- (0,0,{h(0)}) -- cycle;\n\t\t\t\\draw[fill=cyan!25] (12,0,0) -- (12,{f(12)},0) -- (12,{f(12)},{h(12)}) -- (12,0,{h(12)}) -- cycle;\n\t\t\t\\draw[fill=cyan!15] (0,0,0) -- plot[domain=0:12, samples=50] (\\x, {f(\\x)}, 0) -- (12,0,0) -- cycle;\n\t\t\t\\draw[dashed,fill=cyan!25] (a,0,0) -- (a,{f(a)},0) -- (a,{f(a)},{h(a)}) -- (a,0,{h(a)}) -- cycle;\n\t\t\t\\draw[] (a,0,{h(a)})--(a,0,0) -- (a,{f(a)},0);\n\t\t\t\\draw[->] (0,0,0) -- (14.5,0,0) node[below] {$x$};\n\t\t\t\\draw[->] (0,0,0) -- (0,7,0) node[above] {$y$};\n\t\t\t\\node[shift=(180:2mm)] at (0,0,0) {$O$};\n\t\t\t\\draw[] plot[domain=0:12, samples=50] (\\x, {f(\\x)}, 0);\n\t\t\t\\path (12,0,0) node[below left=-2pt] {$12$} -- (12,{f(12)},0);\n\t\t\t\\node[above, rotate=4] at (4.2, {f(6.5)-0.3}, 0) {$y=-\\dfrac{1}{18}x^2+\\dfrac{2}{3}x+4$};\n\t\t\t\\node[left] at (a,0,0.5) {$a$};\n\t\t\t\\node[above left] at (a,{f(a)/1.3},0.3) {$b$};\n\t\t\t\\draw[<->] (a, {f(a)+1}, 0) -- (a, {f(a)+1}, {h(a)}) node[midway, right] {$h(a)$};\n\t\t\t\\draw[dash pattern=on 2pt off 1.pt] (a, {f(a)}, 0) -- (a, {f(a)+0.8}, 0);\n\t\t\t\\draw[dash pattern=on 2pt off 1.pt] (a, {f(a)}, {h(a)}) -- (a, {f(a)+0.8}, {h(a)});\n\t\t\t\\draw[dashed] plot[domain=0:12, samples=50] (\\x, {f(\\x)}, {h(\\x)})\n\t\t\t\t(0,{f(0)},0) -- (0,{f(0)},{h(0)})--(0,0,{h(0)})\n\t\t\t\t;\n    \\node at (0,0){\\href{3WRUJF}{\\tiny \\phantom{3WRUJF}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/2-KS-12/q17.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "short",
+      "question": "Một nhân viên cứu hộ đứng ở mặt đất, điều khiển một drone chở vật tư y tế, dự kiến bay thẳng từ đỉnh $A$ của tháp thứ nhất đến đỉnh $B$ của tháp thứ hai. Tuy nhiên, do gặp một khu vực nhiễu sóng an ninh nên drone phải bay thẳng từ $A$ đến một điểm $P$ trên mặt đất để hạ cánh. Nhân viên đó mang drone từ điểm $P$ dọc theo hướng Tây $40$ m đến điểm $Q$ và sau đó drone bay thẳng từ điểm $Q$ lên đỉnh $B$ của tháp thứ hai (hình vẽ). Biết đỉnh $A$ cao $100$ m và có hình chiếu lên mặt đất cách vị trí người đứng ban đầu $200$ m về phía Đông và $100$ m về phía Nam. Đỉnh $B$ cao $300$ m và có hình chiếu lên mặt đất cách vị trí người đứng ban đầu $140$ m về phía Tây và $200$ m về phía Nam.\n\n Chọn hệ trục tọa độ $Oxyz$ có gốc tại vị trí người đứng ban đầu, mặt phẳng $(Oxy)$ là mặt đất, trục $Ox$ hướng Đông, trục $Oy$ hướng Nam và trục $Oz$ hướng thẳng đứng lên trên (đơn vị trên các trục là $100$ m). Để hoàn thành nhiệm vụ, người đó chọn vị trí điểm $P(a;b;c)$ trên mặt đất sao cho tổng quãng đường bay là ngắn nhất. Giá trị của biểu thức $S=2a+4b+c$ bằng bao nhiêu?\n <br>",
+      "answer": "7{,}5",
+      "id": 18,
+      "solution": "Đổi các đơn vị khoảng cách theo hệ trục đã chọn (1 đơn vị $= 100$ m). <br>\n Khi đó $A(2;1;1)$ và $B(-1{,}4;2;3)$. <br>\n Điểm $P$ nằm trên mặt đất $(Oxy)$ nên có cao độ $c=0$. Do đó, toạ độ điểm $P$ có dạng $(a;b;0)$. <br>\n Điểm $Q$ có được bằng cách dịch chuyển $P$ theo hướng Tây $40$ m tương ứng với $0{,}4$ đơn vị nên $Q(a-0{,}4;b;0)$. <br>\n Tổng quãng đường bay của drone là $d = AP + QB$. Ta cần tìm $a$, $b$ để $d$ đạt giá trị nhỏ nhất.\n <br> [\\bf Cách 1:]\n <br> • Ta có $AP=\\sqrt{(a-2)^2+(b-1)^2+(0-1)^2} = \\sqrt{(2-a)^2+(1-b)^2+1}$ và \n \\allowdisplaybreaks\n <br> \\[\n QB &= \\sqrt{\\big(-1{,}4-(a-0{,}4)\\big)^2 + (2-b)^2 + (3-0)^2} \\\\\n &= \\sqrt{(-1-a)^2+(2-b)^2+9} \\\\\n &= \\sqrt{(a+1)^2+(b-2)^2+3^2}.\n \\] <br>\n Khi đó \\[d =\\sqrt{(2-a)^2+(1-b)^2+1^2} + \\sqrt{(a+1)^2+(b-2)^2+3^2}.\\]\n Xét hai vectơ $\\vec{u}=(2-a;1-b;1)$ và $\\vec{v}=(a+1;b-2;3)$. <br>\n Ta có $\\vec{u}+\\vec{v}=(3;-1;4)$. <br>\n Áp dụng bất đẳng thức, ta có độ dài vectơ $\\left|\\vec{u}\\right|+ \\left|\\vec{v}\\right| \\ge \\left|\\vec{u} + \\vec{v}\\right|$, ta có\n \\[d=\\left|\\vec{u}\\right| + \\left|\\vec{v}\\right| \\ge \\sqrt{3^2 + (-1)^2 + 4^2} = \\sqrt{26}.\\] \n Dấu “$=$” xảy ra khi và chỉ khi $\\vec{u}$ và $\\vec{v}$ cùng hướng, tức là tồn tại $k\\ge 0$ sao cho $\\vec{u}=k\\vec{v}$. Khi đó\n \\[\\begin{cases}2-a=k(a+1)\\\\1-b=k(b-2)\\\\1=3k\\end{cases} \\Leftrightarrow \\begin{cases}k=\\dfrac{1}{3}\\\\2-a=\\dfrac{1}{3}(a+1)\\\\1-b=\\dfrac{1}{3}(b-2)\\end{cases} \\Leftrightarrow \\begin{cases}k=\\dfrac{1}{3}\\\\a=1{,}25\\\\b=1{,}25.\\end{cases}\\]\n Vậy $S=2a+4b+c=2\\cdot 1{,}25+4\\cdot 1{,}25+0 =7{,}5$.\n <br> • Ta có $AP=\\sqrt{(a-2)^2+(b-1)^2+(0-1)^2}$ và \n \\allowdisplaybreaks\n <br> \\[\n QB &= \\sqrt{(-1{,}4-(a-0{,}4))^2 + (2-b)^2 + (3-0)^2} \\\\\n &=\\sqrt{(-1-a)^2+(2-b)^2+(3-0)^2}.\n \\] <br>\n Khi đó\n \\allowdisplaybreaks\n <br> \\[\n d&=AP+QB\\\\\n &=\\sqrt{(a-2)^2+(b-1)^2+(0-1)^2}+\\sqrt{(-1-a)^2+(2-b)^2+(3-0)^2}\\\\\n &=AP+PK,\n \\] <br>\n trong đó $A(2;1;1)$; $P(a;b;0)$ và $K(-1;2;3)$. <br>\n Nhận thấy $z_A&gt;0$ và $z_K&gt;0$ nên $A$ và $K$ nằm cùng phía so với mặt phẳng $(Oxy)$. <br>\n Lấy đối xứng điểm $K$ qua mặt phẳng $(Oxy)$, ta được $K'(-1;2;-3)$.\n\n Do $(Oxy)$ là mặt phẳng trung trực của đoạn $KK'$ nên với $P \\in (Oxy)$ thì $PK=PK'$. <br>\n Suy ra $d=AP+PK' \\ge AK'$. <br>\n Dấu “ $=$” xảy ra khi $P=AK' \\cap (Oxy)$. <br>\n Ta có $\\overrightarrow{AK'}=(-3;1;-4)$. <br>\n Đường thẳng $AK'$ đi qua $A(2;1;1)$ và nhận vectơ $\\overrightarrow{AK'}=(-3;1;-4)$ là một vectơ chỉ phương nên $AK'$ có phương trình\n \\[\\begin{cases}x=2-3t\\\\y=1+t\\\\z=1-4t.\\end{cases}\\]\n Giao điểm $P(x;y;z)$ của $AK'$ và $(Oxy)$ thỏa \n \\[z=0 \\Leftrightarrow 1-4t=0 \\Leftrightarrow t=0{,}25.\\]\n Suy ra tổng quãng đường bay ngắn nhất thì $P(1{,}25;1{,}25;0)$. <br>\n Do đó $a=1{,}25$; $b=1{,}25$ và $c=0$. <br>\n Vậy $S=2a+4b+c=2\\cdot 1{,}25+4\\cdot 1{,}25+0 =7{,}5$.\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.6, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\dx{1.2} \\def\\dy{0.6} \n\t\t\t\\def\\tx{0.9} \\def\\ty{0.45} \n\t\t\t\\def\\h{1.2}              \n\t\t\t\n\t\t\t\\newcommand{\\tower}[7]{\n\t\t\t\\def\\x{#1} \\def\\y{#2} \\def\\lh{#3} \\def\\uh{#4}\n\t\t\t\\def\\by{\\y+\\lh} \\def\\py{\\by+\\uh}\n\t\t\t\\pgfmathsetmacro{\\H}{\\lh + \\uh + \\h-0.85}\n\t\t\t\\pgfmathsetmacro{\\Hu}{\\lh + \\uh-0.5}\n\t\t\t\\fill[black!20] (\\x+\\dx, \\y+\\dy)\n\t\t\t\t-- (\\x, \\y)\n\t\t\t\t-- (\\x - 0.85*\\lh, \\y - 0.25*\\lh)\n\t\t\t\t--++(150:0.1)\n\t\t\t\t-- (\\x - 0.85*\\Hu, \\y - 0.25*\\Hu+0.1)\n\t\t\t\t-- (\\x - 0.85*\\H, \\y+\\ty - 0.25*\\H)\n\t\t\t\t-- (\\x - 0.85*\\Hu-\\ty+0.1, \\y - 0.25*\\Hu+\\tx-0.2)\n\t\t\t\t-- (\\x - 0.85*\\lh-\\ty, \\y - 0.25*\\lh+\\tx-0.2)\n\t\t\t\t--++(120:0.1)\n\t\t\t\t-- (\\x, \\y+2*\\dy-0.2) -- cycle;\n\t\t\t\\draw[fill=black!25] (\\x-\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- (\\x+\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+2*\\dy+\\lh) -- cycle;\n\t\t\t\\draw[fill=black!40] (\\x, \\y) -- (\\x-\\dx, \\y+\\dy) -- (\\x-\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- cycle;\n\t\t\t\\draw[fill=black!15] (\\x, \\y) -- (\\x+\\dx, \\y+\\dy) -- (\\x+\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- cycle;\n\t\t\t\\foreach \\i in {1,...,#5} {\n\t\t\t\\pgfmathsetmacro{\\cY}{\\y + \\lh*\\i/(#5+1)}\n\t\t\t\\draw[] (\\x-\\dx, \\cY+\\dy) -- (\\x, \\cY) -- (\\x+\\dx, \\cY+\\dy);\n\t\t\t}\n\t\t\t\\begin{scope}[shift={(0,0.125)}]\n\t\t\t\t\\draw[fill=black!25] (\\x-\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- (\\x+\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+2*\\ty+\\uh) -- cycle;\n\t\t\t\t\\draw[fill=black!40] (\\x, \\by) -- (\\x-\\tx, \\by+\\ty) -- (\\x-\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- cycle;\n\t\t\t\t\\draw[fill=black!15] (\\x, \\by) -- (\\x+\\tx, \\by+\\ty) -- (\\x+\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- cycle;\n\t\t\t\t\\foreach \\i in {1,...,#6} {\n\t\t\t\t\\pgfmathsetmacro{\\cY}{\\by + \\uh*\\i/(#6+1)}\n\t\t\t\t\\draw[] (\\x-\\tx, \\cY+\\ty) -- (\\x, \\cY) -- (\\x+\\tx, \\cY+\\ty);\n\t\t\t\t}\n\t\t\t\t\\coordinate (#7) at (\\x, \\py+\\h);\n\t\t\t\t\\draw[fill=cyan!40!gray!60] (\\x-\\tx, \\py+\\ty) -- (\\x, \\py) -- (#7) -- cycle;\n\t\t\t\t\\draw[fill=cyan!20!gray!30] (\\x+\\tx, \\py+\\ty) -- (\\x, \\py) -- (#7) -- cycle;\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\tower{0}{0}{2.8}{1.8}{4}{2}{A}\n\t\t\t\\tower{12.5}{1.5}{4.2}{2.8}{5}{3}{B}\n\t\t\t\n\t\t\t\\begin{scope}[shift={(4, -2.5)}, scale=0.45]\n\t\t\t\t\\begin{scope}[cm={1.2, 0, -1, -0.5, (0,0)}]\n\t\t\t\t\t\\fill[black!20, rounded corners=0.5pt] (-0.25,0)--(-0.15,0)--(-0.05,1.2)--(-0.35,1.2)--cycle;\n\t\t\t\t\t\\fill[black!20, rounded corners=0.5pt] (0.25,0)--(0.15,0)--(0.05,1.2)--(0.35,1.2)--cycle;   \n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (-0.45,1.2)--(0.45,1.2)--(0.35,2.6)--(-0.35,2.6)--cycle; \n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (-0.35,2.5)--(-0.55,2.3)--(-0.5,1.3)--(-0.3,1.5)--cycle;\n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (0.35,2.5)--(0.55,2.3)--(0.5,1.3)--(0.3,1.5)--cycle;    \n\t\t\t\t\t\\fill[black!20] (0,3.0) ellipse (0.25 and 0.35); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\fill[black!75, rounded corners=0.5pt] (-0.25,0)--(-0.15,0)--(-0.05,1.2)--(-0.35,1.2)--cycle; \n\t\t\t\t\\fill[black!75, rounded corners=0.5pt] (0.25,0)--(0.15,0)--(0.05,1.2)--(0.35,1.2)--cycle;   \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (-0.45,1.2)--(0.45,1.2)--(0.35,2.6)--(-0.35,2.6)--cycle; \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (-0.35,2.5)--(-0.55,2.3)--(-0.5,1.3)--(-0.3,1.5)--cycle; \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (0.35,2.5)--(0.55,2.3)--(0.5,1.3)--(0.3,1.5)--cycle;   \n\t\t\t\t\\fill[black!80] (0,3.0) ellipse (0.25 and 0.35); \n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\path (3.2, -0.3) coordinate (P) (4.8, -0.45) coordinate (Q);\n\t\t\t\\foreach \\x/\\y in {A/P,P/Q,Q/B}{\\draw[red,->] (\\x) -- (\\y);}\n\t\t\t\\foreach \\t/\\g in {A/90,B/90,P/-90,Q/-90}{\n\t\t\t\\fill (\\t) circle (1.5pt) node[shift={(\\g:8pt)}]{$\\t$};}\n\t\t\t\\foreach \\d/\\t in {(0.3,-0.5)/Tháp $1$, (12.75,.9)/Tháp $2$,(6, -2)/Người đứng}{\\node[] at  \\d {\\t};}\n    \\node at (0,0){\\href{68N7FV}{\\tiny \\phantom{68N7FV}}};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.6, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\dx{1.2} \\def\\dy{0.6} \n\t\t\t\\def\\tx{0.9} \\def\\ty{0.45} \n\t\t\t\\def\\h{1.2}              \n\t\t\t\n\t\t\t\\newcommand{\\tower}[7]{\n\t\t\t\\def\\x{#1} \\def\\y{#2} \\def\\lh{#3} \\def\\uh{#4}\n\t\t\t\\def\\by{\\y+\\lh} \\def\\py{\\by+\\uh}\n\t\t\t\\pgfmathsetmacro{\\H}{\\lh + \\uh + \\h-0.85}\n\t\t\t\\pgfmathsetmacro{\\Hu}{\\lh + \\uh-0.5}\n\t\t\t\\fill[black!20] (\\x+\\dx, \\y+\\dy)\n\t\t\t\t-- (\\x, \\y)\n\t\t\t\t-- (\\x - 0.85*\\lh, \\y - 0.25*\\lh)\n\t\t\t\t--++(150:0.1)\n\t\t\t\t-- (\\x - 0.85*\\Hu, \\y - 0.25*\\Hu+0.1)\n\t\t\t\t-- (\\x - 0.85*\\H, \\y+\\ty - 0.25*\\H)\n\t\t\t\t-- (\\x - 0.85*\\Hu-\\ty+0.1, \\y - 0.25*\\Hu+\\tx-0.2)\n\t\t\t\t-- (\\x - 0.85*\\lh-\\ty, \\y - 0.25*\\lh+\\tx-0.2)\n\t\t\t\t--++(120:0.1)\n\t\t\t\t-- (\\x, \\y+2*\\dy-0.2) -- cycle;\n\t\t\t\\draw[fill=black!25] (\\x-\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- (\\x+\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+2*\\dy+\\lh) -- cycle;\n\t\t\t\\draw[fill=black!40] (\\x, \\y) -- (\\x-\\dx, \\y+\\dy) -- (\\x-\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- cycle;\n\t\t\t\\draw[fill=black!15] (\\x, \\y) -- (\\x+\\dx, \\y+\\dy) -- (\\x+\\dx, \\y+\\dy+\\lh) -- (\\x, \\y+\\lh) -- cycle;\n\t\t\t\\foreach \\i in {1,...,#5} {\n\t\t\t\\pgfmathsetmacro{\\cY}{\\y + \\lh*\\i/(#5+1)}\n\t\t\t\\draw[] (\\x-\\dx, \\cY+\\dy) -- (\\x, \\cY) -- (\\x+\\dx, \\cY+\\dy);\n\t\t\t}\n\t\t\t\\begin{scope}[shift={(0,0.125)}]\n\t\t\t\t\\draw[fill=black!25] (\\x-\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- (\\x+\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+2*\\ty+\\uh) -- cycle;\n\t\t\t\t\\draw[fill=black!40] (\\x, \\by) -- (\\x-\\tx, \\by+\\ty) -- (\\x-\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- cycle;\n\t\t\t\t\\draw[fill=black!15] (\\x, \\by) -- (\\x+\\tx, \\by+\\ty) -- (\\x+\\tx, \\by+\\ty+\\uh) -- (\\x, \\by+\\uh) -- cycle;\n\t\t\t\t\\foreach \\i in {1,...,#6} {\n\t\t\t\t\\pgfmathsetmacro{\\cY}{\\by + \\uh*\\i/(#6+1)}\n\t\t\t\t\\draw[] (\\x-\\tx, \\cY+\\ty) -- (\\x, \\cY) -- (\\x+\\tx, \\cY+\\ty);\n\t\t\t\t}\n\t\t\t\t\\coordinate (#7) at (\\x, \\py+\\h);\n\t\t\t\t\\draw[fill=cyan!40!gray!60] (\\x-\\tx, \\py+\\ty) -- (\\x, \\py) -- (#7) -- cycle;\n\t\t\t\t\\draw[fill=cyan!20!gray!30] (\\x+\\tx, \\py+\\ty) -- (\\x, \\py) -- (#7) -- cycle;\n\t\t\t\\end{scope}\n\t\t\t}\n\t\t\t\\tower{0}{0}{2.8}{1.8}{4}{2}{A}\n\t\t\t\\tower{12.5}{1.5}{4.2}{2.8}{5}{3}{B}\n\t\t\t\n\t\t\t\\begin{scope}[shift={(4, -2.5)}, scale=0.45]\n\t\t\t\t\\begin{scope}[cm={1.2, 0, -1, -0.5, (0,0)}]\n\t\t\t\t\t\\fill[black!20, rounded corners=0.5pt] (-0.25,0)--(-0.15,0)--(-0.05,1.2)--(-0.35,1.2)--cycle;\n\t\t\t\t\t\\fill[black!20, rounded corners=0.5pt] (0.25,0)--(0.15,0)--(0.05,1.2)--(0.35,1.2)--cycle;   \n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (-0.45,1.2)--(0.45,1.2)--(0.35,2.6)--(-0.35,2.6)--cycle; \n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (-0.35,2.5)--(-0.55,2.3)--(-0.5,1.3)--(-0.3,1.5)--cycle;\n\t\t\t\t\t\\fill[black!20, rounded corners=1pt] (0.35,2.5)--(0.55,2.3)--(0.5,1.3)--(0.3,1.5)--cycle;    \n\t\t\t\t\t\\fill[black!20] (0,3.0) ellipse (0.25 and 0.35); \n\t\t\t\t\\end{scope}\n\t\t\t\t\\fill[black!75, rounded corners=0.5pt] (-0.25,0)--(-0.15,0)--(-0.05,1.2)--(-0.35,1.2)--cycle; \n\t\t\t\t\\fill[black!75, rounded corners=0.5pt] (0.25,0)--(0.15,0)--(0.05,1.2)--(0.35,1.2)--cycle;   \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (-0.45,1.2)--(0.45,1.2)--(0.35,2.6)--(-0.35,2.6)--cycle; \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (-0.35,2.5)--(-0.55,2.3)--(-0.5,1.3)--(-0.3,1.5)--cycle; \n\t\t\t\t\\fill[black!85, rounded corners=1pt] (0.35,2.5)--(0.55,2.3)--(0.5,1.3)--(0.3,1.5)--cycle;   \n\t\t\t\t\\fill[black!80] (0,3.0) ellipse (0.25 and 0.35); \n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\path (3.2, -0.3) coordinate (P) (4.8, -0.45) coordinate (Q);\n\t\t\t\\foreach \\x/\\y in {A/P,P/Q,Q/B}{\\draw[red,->] (\\x) -- (\\y);}\n\t\t\t\\foreach \\t/\\g in {A/90,B/90,P/-90,Q/-90}{\n\t\t\t\\fill (\\t) circle (1.5pt) node[shift={(\\g:8pt)}]{$\\t$};}\n\t\t\t\\foreach \\d/\\t in {(0.3,-0.5)/Tháp $1$, (12.75,.9)/Tháp $2$,(6, -2)/Người đứng}{\\node[] at  \\d {\\t};}\n    \\node at (0,0){\\href{68N7FV}{\\tiny \\phantom{68N7FV}}};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/2-KS-12/q18.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "short",
+      "question": "Một doanh nghiệp phân bổ ngân sách quảng cáo trên Facebook và Google với tổng số tiền không vượt quá $80$ triệu đồng. Chi phí cho Facebook nằm trong khoảng từ $20$ đến $50$ triệu đồng. Chi phí cho Google tối thiểu là $15$ triệu đồng. Số tiền chi cho chạy quảng cáo trên Google không được vượt quá chi phí chi cho quảng cáo trên Facebook. Biết rằng số khách tiếp cận là $4$ nghìn khách cho mỗi triệu tiền chi quảng cáo trên Facebook và $6$ nghìn khách cho mỗi triệu quảng cáo trên Google. Hỏi số lượng khách tiếp cận lớn nhất bằng bao nhiêu nghìn?\n <br>",
+      "answer": "400",
+      "id": 19,
+      "solution": "Gọi $x$ (triệu đồng) là số tiền chi phí cho Facebook; $y$ (triệu đồng) là số tiền chi phí cho Google. <br>\n Theo đề bài, ta có hệ điều kiện: $\\begin{cases}x+y\\le 80\\\\20\\le x\\le 50\\\\y\\ge 15\\\\y\\le x.\\end{cases} (I)$ <br>\n Dễ thấy điểm $M(40;20)$ thuộc miền nghiệm của hệ bất phương trình $(I)$. <br>\n Miền nghiệm của hệ bất phương trình $(I)$ là miền ngũ giác $ABCDE$ (được tô đậm), với $A(20;15)$, $B(50;15)$, $C(50;30)$, $D(40;40)$, $E(20;20)$ như hình vẽ sau:\n\n Số khách tiếp cận là $P(x;y)=4x+6y$ (nghìn khách). <br>\n Ta cần tìm giá trị lớn nhất của $P(x;y)=4x+6y$ trên miền nghiệm đã cho. <br>\n Ta có $P(20;15)=170$, $P(50;15)=290$, $P(50;30)=380$, $P(40;40)=400$, $P(20;20)=200$. <br>\n Do đó $P(x;y)_{\\max}=P(40;40)=400$ (nghìn khách). <br>\n Vậy lượng khách tiếp cận lớn nhất là $400$ nghìn khách.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Cho hình chóp $S.ABCD$ có $ABCD$ là hình vuông cạnh bằng $4$. Tam giác $SAB$ cân tại $S$, có diện tích bằng $6$ và nằm trong mặt phẳng vuông góc với mặt phẳng đáy. Côsin của góc phẳng nhị diện $[S,AC,D]$ bằng bao nhiêu (làm tròn kết quả đến hàng phần mười)?\n <br>",
+      "answer": "-0{,}4",
+      "id": 20,
+      "solution": "Gọi $O$ là tâm của hình vuông $ABCD$. <br>\n Gọi $H$ là trung điểm của cạnh $AB$. <br>\n Vì tam giác $SAB$ cân tại $S$ nên $SH\\perp AB$. <br>\n Ta có $\\begin{cases}(SAB)\\perp(ABCD)\\\\(SAB)\\cap(ABCD)=AB\\\\SH\\subset(SAB)\\\\SH\\perp AB\\end{cases}$ suy ra $SH\\perp(ABCD)$. <br>\n Gọi $K$ là trung điểm của cạnh $AD$ và $I$ là giao điểm của $HK$ với $AC$. <br>\n Khi đó, $HK$ là đường trung bình của tam giác $ABD$ nên $HK\\parallel BD$ và $I$ là trung điểm của đoạn thẳng $HK$. <br>\n Hơn nữa, $ABCD$ là hình vuông nên $AC\\perp BD$. <br>\n Do đó, $AC\\perp HK$. <br>\n Ta lại có $AC\\perp SH$ (do $SH\\perp(ABCD)$) nên $AC\\perp (SHK)$. <br>\n Suy ra $AC\\perp SI$. <br>\n Vì $\\begin{cases}SI\\subset(SAC)\\\\IK\\subset(DAC)\\\\AC\\perp SI\\\\AC\\perp IK\\end{cases}$ nên một góc phẳng của nhị diện $[S,AC,D]$ là góc $\\widehat{SIK}$. <br>\n Ta có $IH=\\dfrac{1}{2}HK=\\dfrac{1}{4}BD=\\dfrac{AB\\sqrt{2}}{4}=\\dfrac{4\\sqrt{2}}{4}=\\sqrt{2}$. <br>\n Diện tích tam giác $SAB$ bằng $6$ nên $\\dfrac{AB\\cdot SH}{2}=6\\Rightarrow SH=\\dfrac{6\\cdot 2}{AB}=\\dfrac{12}{4}=3$. <br>\n Tam giác $SHI$ vuông tại $H$ nên $SI=\\sqrt{SH^2+IH^2}=\\sqrt{3^2+2}=\\sqrt{11}$. <br>\n Ta có $\\cos\\widehat{SIH}=\\dfrac{IH}{SI}=\\dfrac{\\sqrt{2}}{\\sqrt{11}}=\\dfrac{\\sqrt{22}}{11}$. <br>\n Vậy côsin của góc phẳng nhị diện $[S,AC,D]$ là\n \\[\\cos\\widehat{SIK}=-\\cos\\widehat{SIH}=-\\dfrac{\\sqrt{22}}{11}\\approx -0{,}4.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Nồng độ thuốc $C$ (mg/ml) trong máu của một bệnh nhân sau $t$ giờ tiêm vào tĩnh mạch được xác định bởi công thức $C(t) = \\dfrac{at}{t^2 + 4}$, với $a$ là hằng số dương. Đạo hàm của $C(t)$ được gọi là tốc độ thay đổi tức thời của nồng độ thuốc tại thời điểm $t$. Biết rằng nồng độ thuốc đạt giá trị lớn nhất là $0{,}5$ mg/ml. Một bác sĩ muốn tính tốc độ thay đổi tức thời của nồng độ thuốc tại thời điểm $t = 4$ giờ để quyết định liều tiêm tiếp theo. Giá trị tuyệt đối của tốc độ này bằng bao nhiêu mg/ml/h?\n <br>",
+      "answer": "0{,}06",
+      "id": 21,
+      "solution": "Xét hàm số $C(t) = \\dfrac{at}{t^2 + 4}$ với $t &gt; 0$. <br>\n Ta có $C'(t) = \\dfrac{a(t^2 + 4) - 2t\\cdot at}{(t^2 + 4)^2} = \\dfrac{a(4 - t^2)}{(t^2 + 4)^2}$. <br>\n Cho $C'(t) = 0 \\Leftrightarrow4-t^2=0\\Leftrightarrow t = 2$ (vì $t &gt; 0$). <br>\n Bảng biến thiên \n\n Suy ra $\\max\\limits_{(0;+\\infty)} C(t)=\\dfrac{a}{4}$ tại $t=2$. <br>\n Theo đề bài, nồng độ thuốc đạt giá trị lớn nhất là $0{,}5$ mg/ml nên $\\dfrac{a}{4} = 0{,}5 \\Rightarrow a = 2$. <br>\n Tốc độ thay đổi tức thời của nồng độ thuốc tại $t = 4$ giờ là $C'(4)$. <br>\n Với $a = 2$, ta có $C'(4) = \\dfrac{2(4 - 4^2)}{(4^2 + 4)^2} = -0{,}06$ (mg/ml/h). <br>\n Vậy $\\left|C'(4)\\right| = 0{,}06$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một khóa mã số sử dụng mật khẩu là một dãy gồm $5$ chữ số phân biệt từ $1$ đến $9$. Một mật khẩu được gọi là mạnh nếu nó thỏa mãn đồng thời hai điều kiện:\n <br> [i)]\n <br> • Không có hai chữ số lẻ nào đứng cạnh nhau.\n <br> • Chữ số đứng sau luôn lớn hơn chữ số đứng trước hoặc luôn nhỏ hơn chữ số đứng trước.\n <br>\n Chọn ngẫu nhiên một mật khẩu. Xác suất để chọn được mật khẩu mạnh bằng $a \\cdot 10^{-3}$. Giá trị của $a$ bằng bao nhiêu (làm tròn kết quả đến hàng phần mười)?\n <br>",
+      "answer": "8{,}2",
+      "id": 22,
+      "solution": "Số phần tử của không gian mẫu là $n(\\Omega) = \\mathrm{A}_9^5 = 15 120$. <br>\n Gọi $A$ là biến cố “ chọn được mật khẩu mạnh”. <br>\n Do tính đối xứng, số mật khẩu tăng dần và giảm dần thỏa mãn yêu cầu là bằng nhau. <br>\n Ta xét các bộ $5$ số phân biệt $x_1 &lt; x_2 &lt; x_3 &lt; x_4 &lt; x_5$ (tăng dần) từ tập $\\{1; 2; 3; 4; 5; 6; 7; 8; 9\\}$. <br>\n Để không có hai số lẻ đứng cạnh nhau, bộ số chỉ có thể chứa tối đa $3$ số lẻ.\n <br> [\\it TH 1: ]\n <br> • Chọn $1$ lẻ và $4$ chẵn. <br>\n Ta có $\\mathrm{C}_5^1\\cdot \\mathrm{C}_4^4= 5$ bộ. <br>\n Vì chỉ có $1$ số lẻ nên hiển nhiên không có hai số lẻ đứng cạnh nhau.\n <br> • Chọn $2$ lẻ và $3$ chẵn. <br>\n Ta có $\\mathrm{C}_5^2 \\cdot \\mathrm{C}_4^3 = 40$ bộ. <br>\n Xét $3$ số chẵn $C_1 &lt; C_2 &lt; C_3$ tạo ra $4$ vách ngăn dạng\n \\[\\square C_1 \\square C_2 \\square C_3 \\square\\]\n Ta xét các bộ vi phạm tức là có $2$ số lẻ đứng cạnh nhau. Khi đó, hai số lẻ này phải cùng nằm trong $1$ vách ngăn.\n <br>\n <br> • Hai số lẻ lớn hơn $ C_3$. Ta có bộ $\\{2; 4; 6; 7; 9\\}$ (ứng với cặp lẻ $\\{7; 9\\}$).\n <br> • Hai số lẻ nằm giữa $C_2$ và $C_3$. Ta có bộ $\\{2; 4; 5; 7; 8\\}$ (ứng với cặp lẻ $\\{5; 7\\}$).\n <br> • Hai số lẻ nằm giữa $C_1$ và $C_2$. Ta có bộ $\\{2; 3; 5; 6; 8\\}$ (ứng với cặp lẻ $\\{3; 5\\}$).\n <br> • Hai số lẻ nhỏ hơn $ C_1$. Ta có bộ $\\{1; 3; 4; 6; 8\\}$ (ứng với cặp lẻ $\\{1; 3\\}$).\n <br>\n Suy ra số bộ thỏa mãn ở TH 2 là $40 - 4 = 36$ bộ.\n <br> • Chọn $3$ lẻ và $2$ chẵn. <br>\n Gọi $2$ số chẵn được chọn là $C_1 &lt; C_2$. Ba vách ngăn V$_1$, V$_2$, V$_3$ được tạo ra dạng\n \\[V_1 \\mid C_1 \\mid V_2 \\mid C_2 \\mid V_3\\]\n Để không có $2$ lẻ cạnh nhau, mỗi vách ngăn phải chứa đúng $1$ số lẻ.\n\n Suy ra số bộ thỏa mãn ở TH 1 là $3+4+3+4+4+3 = 21$ bộ. \n <br>\n Số mật khẩu mạnh là $n(A) = (5 + 36 + 21) \\cdot 2 = 124$. <br>\n Xác suất để chọn được mật khẩu mạnh là $\\mathrm{P}(A) = \\dfrac{124}{15 120} \\approx 8{,}2 \\cdot 10^{-3}$. <br>\n Vậy $a =8{,}2$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 1,
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "truefalseMode": "progressive"
+    }
+  }
+}

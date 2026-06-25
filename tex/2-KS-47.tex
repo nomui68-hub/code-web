@@ -1,0 +1,749 @@
+\begin{name}
+	{Biên soạn \& Phản biện: Nhóm 5}
+	{Sở GD \& ĐT Ninh Bình (Lần 4)}
+\end{name}
+\vspace*{1cm}
+\Opensolutionfile{ansbook}[ans/ansb\currfilebase]
+\caulc
+\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-I]
+\begin{ex}%[Dự án 4DV87N-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[0D8H2-4]
+	Có bao nhiêu cách chọn $2$ học sinh từ một tổ gồm $8$ học sinh nam và $10$ học sinh nữ để một học sinh làm tổ trưởng và một học sinh làm tổ phó?
+	\choice
+		{$\mathrm{C}_8^1 \cdot \mathrm{C}_{10}^1$}
+		{$18!$}
+		{$\mathrm{C}_{18}^2$}
+		{\True $\mathrm{A}_{18}^2$}
+	\loigiai{
+		Tổng số học sinh trong tổ là $8+10=18$ học sinh.\\
+		Mỗi cách chọn $2$ học sinh từ $18$ học sinh để phân công vào $2$ chức vụ khác nhau (tổ trưởng và tổ phó) là một chỉnh hợp chập $2$ của $18$ phần tử.\\
+		Vậy số cách chọn là $\mathrm{A}_{18}^2$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1VMAW4-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2D1H4-1]
+	\immini[thm]{Cho hàm số $y = \dfrac{ax^2 + bx + c}{mx + n}$ (với $a \neq 0$; $\,m \neq 0$) có đồ thị như hình vẽ bên. Phương trình đường tiệm cận xiên của đồ thị hàm số đã cho là
+		\choice[2]
+			{$y=x+1$}
+			{\True $y=-x-1$}
+			{$x=-1$}
+			{$y=x-1$}
+		}
+			{
+			\begin{tikzpicture}[scale=0.65, font=\footnotesize, line join=round, line cap=round, >=stealth]
+    %hidden: VM005
+				\draw[->] (-5,0)--(3,0) node[shift={(-90:7pt)}]{$x$};
+				\draw[->] (0,-4)--(0,4)	node[shift={(180:7pt)}]{$y$};
+				\fill (0,0) node{\href{1VMAW4}{\tiny \phantom{1VMAW4}}} circle (1pt) node[shift={(135:8pt)}]{$O$};
+				\fill (-1,0) circle (1pt) node[shift={(-135:10pt)}]{$-1$};
+				\fill (1,0) circle (1pt) node[shift={(-90:8pt)}]{$1$};
+				\fill (0,-1) circle (1pt) node[shift={(-160:8pt)}]{$-1$};
+				\tikzset{declare function={f(\x) = -(\x)-1-1/((\x)+1); tcx(\x) = -(\x)-1;}}
+				\draw (-1,-4) -- (-1,4);
+				\begin{scope}
+					\clip (-5.25,-4) rectangle (3.25,4);
+					\draw[domain=-6:4] plot (\x, {tcx(\x)});
+					\draw[samples=100, smooth] plot[domain=-7:-1.1] (\x,{f(\x)});
+					\draw[samples=100, smooth] plot[domain=-0.9:4] (\x,{f(\x)});
+				\end{scope}
+    \node at (0,0){\href{1VMAW4}{\tiny \phantom{1VMAW4}}};
+			\end{tikzpicture}
+			}	
+	\loigiai{
+		Tiệm cân xiên của đồ thị hàm số đã cho là đường thẳng có dạng $\Delta \colon y=ax+b$.\\
+		Dựa vào đồ thị hàm số, ta thấy đường thẳng $\Delta$ đi qua các điểm có tọa độ $(-1;0)$ và $(0;-1)$ nên ta có hệ phương trình
+		$\heva{&0=-a+b \\ &-1=b} \Leftrightarrow \heva{&a=-1\\ &b=-1.}$\\
+		Vậy phương trình đường tiệm cận xiên của đồ thị hàm số đã cho là $y=-x-1$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 4GFVZI-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2H2H2-2]
+	Trong không gian với hệ trục tọa độ $Oxyz$, cho hình hộp $ABCD.A'B'C'D'$ có $A(1;2;-1)$, $B(3;1;-2)$, $C(4;-2;1)$ và $D'(2;1;5)$. Tọa độ của điểm $A'$ là
+	\choice
+		{$(1;0;-4)$}
+		{\True $(1;4;2)$}
+		{$(-3;6;4)$}
+		{$(4;0;4)$}
+	\loigiai{
+		\begin{center}
+			\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth, declare function={a=2.5; b=0.6*a; h=1.1*a;}]
+    %hidden: VM005
+				\path 
+					(0,0) coordinate (A)
+					+(-135:b) coordinate (B)
+					+(0:a) coordinate (D)
+					($(B)+(D)-(A)$) coordinate (C)				
+					\foreach \x in {A, B, C, D}{(\x)++(80:h) coordinate (\x')};
+				\draw[dashed] (A')--(A)--(B)
+					(A)--(D);
+				\draw (B')--(A')--(D')--(C')
+					(D')--(D)--(C)
+					(B)--(C)--(C')--(B')--cycle;
+				\foreach \d/\g in {A/160, B/-135, C/-60, D/0, A'/120, B'/180, C'/-20, D'/30}
+				\fill (\d) circle (1pt) node [shift={(\g:7pt)}]{$\d$};
+    \node at (0,0){\href{4GFVZI}{\tiny \phantom{4GFVZI}}};
+			\end{tikzpicture}
+		\end{center}
+		Gọi $A'(x;y;z)$, khi đó $\overrightarrow{A'D'} = (2-x;1-y;5-z)$.\\
+		Vì $ABCD.A'B'C'D'$ là hình hộp nên $\overrightarrow{A'D'} = \overrightarrow{AD} = \overrightarrow{BC}$.\\
+		Ta có $\overrightarrow{BC} = (1;-3;3)$.\\
+		Vì $\overrightarrow{A'D'} = \overrightarrow{BC}$ nên ta có hệ phương trình
+		$\heva{&2-x = 1 \\ &1-y = -3 \\ &5-z = 3} \Leftrightarrow \heva{&x = 1\\ &y = 4 \\ &z = 2.}$\\
+		Vậy $A'(1;4;2)$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1MJQYH-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[1D2N3-2]
+	Cho cấp số nhân $(u_n)$ với $u_1 = 8$ và $u_2 = 2$. Công bội của cấp số nhân đã cho là
+	\choice
+		{$q = 4$}
+		{\True $q = \dfrac{1}{4}$}
+		{$q = 2$}
+		{$q = \dfrac{1}{2}$}
+	\loigiai{
+		Công bội của cấp số nhân đã cho là $q = \dfrac{u_2}{u_1} = \dfrac{2}{8} = \dfrac{1}{4}$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1FMZ0B-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2H5N3-2]
+	Trong không gian  với hệ trục tọa độ $Oxyz$, tâm của mặt cầu $(S) \colon x^2 + y^2 + z^2 - 2x + 4y + 2z - 3 = 0$ có tọa độ là
+	\choice
+		{$(-2;4;2)$}
+		{\True $(1;-2;-1)$}
+		{$(-1;2;1)$}
+		{$(2;-4;-2)$}
+	\loigiai{
+		Mặt cầu $(S) \colon x^2 + y^2 + z^2 - 2x + 4y + 2z - 3 = 0$.\\
+		Từ phương trình mặt cầu $(S)$, tọa độ tâm $I(a;b;c)$ được xác định bởi
+		\[\heva{&a = \dfrac{-2}{-2} = 1\\&b = \dfrac{4}{-2} = -2\\&c = \dfrac{2}{-2} = -1.}\]
+		Vậy tâm mặt cầu là $I(1;-2;-1)$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 5HVWPJ-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2D4N2-1]
+	Biết $\displaystyle \int\limits_{-1}^3 f(x) \mathrm{\,d}x = -2$ và $\displaystyle \int\limits_{-1}^3 g(x) \mathrm{\,d}x = 1$. Khi đó $\displaystyle \int\limits_{-1}^3 \big[f(x) - g(x)\big] \mathrm{d}x$ bằng
+	\choice
+		{$3$}
+		{$-1$}
+		{$1$}
+		{\True $-3$}
+	\loigiai{
+		Áp dụng tính chất của tích phân, ta có
+		\[\displaystyle \int\limits_{-1}^3 \big[f(x) - g(x)\big] \mathrm{d}x = \displaystyle \int\limits_{-1}^3 f(x) \mathrm{\,d}x - \displaystyle \int\limits_{-1}^3 g(x) \mathrm{\,d}x = -2 - 1 = -3.\]
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 47JVE4-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2H5N1-3]
+	Trong không gian với hệ trục tọa độ $Oxyz$, phương trình của mặt phẳng đi qua $M(1;3;-2)$ và có một vectơ pháp tuyến $\vec{n} = (2;-1;3)$ là
+	\choice
+		{$2(x+1) - (y+3) + 3(z-2) = 0$}
+		{\True $2(x-1) - (y-3) + 3(z+2) = 0$}
+		{$(x+2) + 3(y-1) - 2(z+3) = 0$}
+		{$(x-2) + 3(y+1) - 2(z-3) = 0$}
+	\loigiai{
+		Phương trình của mặt phẳng đi qua điểm $M(1;3;-2)$ và nhận $\vec{n} = (2;-1;3)$ làm một vectơ pháp tuyến là
+		\allowdisplaybreaks
+		\begin{eqnarray*}
+			&& 2(x - 1) - 1(y - 3) + 3\big[z - (-2)\big] = 0\\
+			&\Leftrightarrow& 2(x-1) - (y-3) + 3(z+2) = 0.
+		\end{eqnarray*}
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1CD1F1-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2D4N1-3]
+	Họ tất cả các nguyên hàm của hàm số $y = \sin x$ là
+	\choice
+		{$\cos x + C$}
+		{$-\sin x + C$}
+		{$\sin x + C$}
+		{\True $-\cos x + C$}
+	\loigiai{
+		Ta có $\displaystyle \int \sin x \mathrm{\,d}x = -\cos x + C$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 3MXAMN-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[1D6N4-3]
+	Tập nghiệm của bất phương trình $\log_{0{,}5} x > \log_{0{,}5} 9$ là
+	\choice
+		{$(-\infty;9)$}
+		{\True $(0;9)$}
+		{$(0;+\infty)$}
+		{$(9;+\infty)$}
+	\loigiai{
+		Điều kiện $x > 0$.\\
+		Ta có $\log_{0{,}5} x > \log_{0{,}5} 9 \Leftrightarrow x < 9$.\\
+		Kết hợp với điều kiện, ta được tập nghiệm của bất phương trình là $S=(0;9)$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1M7UTW-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2D3H2-2]
+	Một bác tài xế thống kê độ dài quãng đường (đơn vị: km) bác đã lái xe mỗi ngày trong một tháng ($30$ ngày) ở bảng số liệu ghép nhóm sau:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Độ dài quãng đường & $[50;100)$ & $[100;150)$ & $[150;200)$ & $[200;250)$ & $[250;300)$ \\
+			\hline
+			Số ngày & $5$ & $10$ & $9$ & $4$ & $2$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+	Độ lệch chuẩn của mẫu số liệu ghép nhóm trên ({\it làm tròn kết quả đến hàng phần trăm}) bằng
+	\choice
+		{$3\,206{,}90$}
+		{$56{,}63$}
+		{\True $55{,}68$}
+		{$55{,}67$}
+	\loigiai{
+		Ta có bảng giá trị đại diện của mẫu số liệu ghép nhóm như sau:
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Độ dài quãng đường & $[50;100)$ & $[100;150)$ & $[150;200)$ & $[200;250)$ & $[250;300)$ \\
+				\hline
+				Giá trị đại diện & $75$ & $125$ & $175$ & $225$ & $275$ \\
+				\hline
+				Số ngày & $5$ & $10$ & $9$ & $4$ & $2$ \\
+				\hline
+			\end{tabular}
+		\end{center}
+		Cỡ mẫu là $n = 5 + 10 + 9 + 4 + 2 = 30$.\\
+		Số trung bình của mẫu số liệu ghép nhóm trên là
+		\[\overline{x} = \dfrac{5 \cdot 75 + 10 \cdot 125 + 9 \cdot 175 + 4 \cdot 225 + 2 \cdot 275}{30} = \dfrac{4\,650}{30} = 155.\]
+		Phương sai của mẫu số liệu ghép nhóm trên là
+		\allowdisplaybreaks
+		\begin{align*}
+			s^2 & = \dfrac{1}{30} \left[ 5\cdot (75-155)^2 + 10\cdot (125-155)^2 + 9\cdot (175-155)^2 + 4\cdot (225-155)^2 + 2\cdot (275-155)^2 \right] \\
+			&= \dfrac{1}{30} \left[5\cdot (-80)^2 + 10\cdot (-30)^2 + 9\cdot 20^2 + 4\cdot 70^2 + 2\cdot 120^2 \right] \\
+			&= \dfrac{1}{30} (32\,000 + 9\,000 + 3\,600 + 19\,600 + 28\,800) = \dfrac{93\,000}{30} = 3\,100.
+		\end{align*}
+		Độ lệch chuẩn của mẫu số liệu ghép nhóm trên là $\,s = \sqrt{3\,100} \approx 55{,}68$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 4AZMZH-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[2D1N2-2]
+	\immini[thm]{Cho hàm số $y = f(x)$ có đồ thị như hình vẽ bên. Điểm cực tiểu của hàm số đã cho là
+		\choice [2]
+			{\True $1$}
+			{$2$}
+			{$-1$}
+			{$-4$}
+		}
+			{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+    %hidden: VM005
+				\draw[->] (-3,0)--(3,0) node[shift={(-90:7pt)}] {$x$};
+				\draw[->] (0,-4.8)--(0,1.5) node[shift={(180:7pt)}] {$y$};
+				\fill (0,0) node{\href{4AZMZH}{\tiny \phantom{4AZMZH}}} circle (1pt) node[shift={(-135:8pt)}] {$O$};
+				\draw[dashed] (1,0) -- (1,-4) -- (0,-4);
+				\tikzset{declare function={f(\x)=(\x)^3-3*(\x)-2;}}
+				\begin{scope}
+					\draw[samples=100, smooth] plot[domain=-2.05:2.15] (\x,{f(\x)});
+				\end{scope}
+				\fill (-2,0) circle (1pt) node[shift={(-90:9pt)}]{$-2$};
+				\fill (-1,0) circle (1pt) node[shift={(-90:9pt)}]{$-1$};
+				\fill (1,0) circle (1pt) node[shift={(-45:9pt)}]{$1$};
+				\fill (2,0) circle (1pt) node[shift={(-45:9pt)}]{$2$};
+				\fill (0,-2) circle (1pt) node[shift={(180:9pt)}]{$-2$};
+				\fill (0,-4) circle (1pt) node[shift={(180:9pt)}]{$-4$};
+				\fill (1,-4) circle (1pt);
+    \node at (0,0){\href{4AZMZH}{\tiny \phantom{4AZMZH}}};
+			\end{tikzpicture}
+			}
+	\loigiai{
+		Quan sát đồ thị hàm số, ta thấy điểm cực tiểu của đồ thị hàm số là $(1;-4)$.\\
+		Do đó, điểm cực tiểu của hàm số đã cho là $x = 1$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 5LV8ZO-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV013]%[1H8H7-2]
+	Nếu khối lăng trụ $ABC.A'B'C'$ có thể tích bằng $60$ thì khối chóp $A'.ABC$ có thể tích bằng
+	\choice
+		{$60$}
+		{$40$}
+		{$180$}
+		{\True $20$}
+	\loigiai{
+		\begin{center}
+			\begin{tikzpicture}[scale=1,font=\footnotesize,line join=round,line cap=round,>=stealth,declare function={a=3.5; b=0.6*a; h=0.9*a;}]
+    %hidden: VM005
+				\path 
+					(0:0) coordinate (A)
+					(-30:b) coordinate (B)
+					(a,0) coordinate (C)
+					\foreach \x in {A, B, C}{(\x)++(80:h) coordinate (\x')};
+				\draw[dashed] (A)--(C)--(A');
+				\draw (B')--(A')--(C')--cycle
+					(A')--(A)--(B)--(B') (A')--(B)
+					(C')--(C)--(B);
+				\foreach \d/\g in {A/180, B/-90/B, C/0, A'/135, B'/80, C'/45}
+				\fill (\d) circle (1pt) node [shift={(\g:8pt)}]{$\d$};
+    \node at (0,0){\href{5LV8ZO}{\tiny \phantom{5LV8ZO}}};
+			\end{tikzpicture}
+		\end{center}
+		Thể tích khối lăng trụ $ABC.A'B'C'$ là $V = S_{ABC} \cdot \mathrm{d}\left(A', (ABC)\right) = 60$.\\
+		Thể tích khối chóp $A'.ABC$ là
+		\[V_{A'.ABC} = \dfrac{1}{3} S_{ABC} \cdot \mathrm{d}\left(A', (ABC)\right) = \dfrac{1}{3} V = \dfrac{1}{3} \cdot 60 = 20.\]
+	}
+\end{ex}
+
+\Closesolutionfile{ans}
+%================================PHẦN II
+\cauds
+\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-II]
+\begin{ex}%[Dự án TIK73A-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV002]%[2D1H5-6]
+	Cho hàm số $f(x) = \dfrac{2x + 3}{x - 1}$ có đồ thị là $(C)$.
+	\choiceTF
+		{\True $f'(x) = \dfrac{-5}{(x - 1)^2}$, $\forall x \neq 1$}
+		{Hàm số $y = f(x)$ nghịch biến trên $\mathbb{R} \setminus \{1\}$}
+		{Đồ thị hàm số $y = f(x)$ có tiệm cận đứng là $x = 2$ và tiệm cận ngang là $y = 1$}
+		{Có $2$ tiếp tuyến của $(C)$ song song với đường thẳng $d \colon y = -5x - 3$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch Tập xác định $\mathscr{D} = \mathbb{R} \setminus \{1\}$.\\
+			Ta có $f'(x) = \dfrac{-5}{(x - 1)^2}$, $\forall x \neq 1$.	
+			\itemch Ta có $f'(x) = \dfrac{-5}{(x - 1)^2} <0$, $\forall x\in \mathscr{D}$.\\
+			Do đó hàm số $y=f(x)$ nghịch biến các khoảng $(-\infty;1)$ và $(1;+\infty)$.
+			\itemch Ta có $\lim\limits_{x \to 1^+} f(x) = \lim\limits_{x \to 1^+} \dfrac{2x+3}{x-1} = +\infty$ và $\lim\limits_{x \to 1^-} f(x) = \lim\limits_{x \to 1^-} \dfrac{2x+3}{x-1} = -\infty$ nên $x=1$ là tiệm cận đứng của đồ thị hàm số $(C)$.\\
+			Ta lại có $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} \dfrac{2x+3}{x-1} = 2$ và $\lim\limits_{x \to -\infty} f(x) = \lim\limits_{x \to -\infty} \dfrac{2x+3}{x-1} = 2$ nên $y=2$ là tiệm cận ngang của đồ thị hàm số $(C)$.
+			\itemch Gọi $\Delta$ là tiếp tuyến của $(C)$ song song với đường thẳng $d$ và $M(x_0;y_0)$ là tiếp điểm của $\Delta$ và $(C)$.\\
+			Ta có hệ số góc của $\Delta$ là $f'(x_0)=\dfrac{-5}{\left(x_0 -1 \right)^2}$.\\
+			Vì $\Delta \parallel d\colon y=-5x-3$ nên
+			\[f'(x_0) = -5 \Leftrightarrow \dfrac{-5}{\left(x_0 -1\right)^2} = -5 \Leftrightarrow (x_0-1)^2 = 1\\
+			\Leftrightarrow \hoac{&x_0=2\\&x_0=0.}\]
+			\begin{itemize}
+				\item Với $x_0=0$, ta có $y_0=-3$. Khi đó
+				\[\Delta \colon y=-5(x-0)-3 \Leftrightarrow y=-5x-3\ (\text{loại vì trùng với }d).\]
+				\item Với $x_0=2$, ta có $y_0=7$. Khi đó
+				\[\Delta \colon y=-5(x-2)+7 \Leftrightarrow y=-5x+17\ (\text{nhận}).\]
+			\end{itemize}
+			Vậy có $1$ tiếp tuyến của $(C)$ song song với đường thẳng $d \colon y = -5x - 3$.
+		\end{itemchoice}}
+\end{ex}
+
+\begin{ex}%[Dự án 3AB3YW-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV002]%[2D6V2-4]
+	Sói đồng cỏ Bắc Mỹ (coyote) là một loài động vật hoang dã phân bố chủ yếu ở Bắc Mỹ. Tại bang Oklahoma, Hoa Kỳ, $70\%$ số coyote bị mắc một căn bệnh gọi là Ehrlichiosis. Người ta thực hiện xét nghiệm giúp phát hiện căn bệnh này. Kết quả xét nghiệm có thể là dương tính hoặc âm tính. Biết rằng nếu coyote bị bệnh, xác suất để xét nghiệm cho kết quả dương tính là $97\%$; nếu coyote không bị bệnh, xác suất để xét nghiệm cho kết quả âm tính là $95\%$. Các bác sĩ thú y bắt ngẫu nhiên $1$ con coyote ở Oklahoma và tiến hành xét nghiệm cho nó.
+	\choiceTF
+		{Xác suất để con coyote bị bắt không bị bệnh và có kết quả xét nghiệm dương tính là $0{,}05$}
+		{\True Xác suất để con coyote bị bắt có kết quả xét nghiệm âm tính là $30{,}6\%$}
+		{Giá trị dự đoán âm của xét nghiệm được định nghĩa là xác suất con coyote thực sự không bị bệnh biết rằng kết quả xét nghiệm của nó là âm tính. Giá trị dự đoán âm của xét nghiệm này lớn hơn $95\%$}
+		{\True Các bác sĩ thú y bắt ngẫu nhiên $3$ con coyote ở Oklahoma. Xác suất để có đúng 2 con có kết quả xét nghiệm dương tính bằng $44{,}2\%$ ({\it kết quả đã được làm tròn đến hàng phần mười})}
+	\loigiai{
+		Gọi $A$ là biến cố \lq\lq Con coyote bị bệnh\rq\rq.\\
+		Ta có $\mathrm{P}(A)=70\%=0{,}7$, suy ra $\mathrm{P}\left(\overline{A}\right)=0{,}3$.\\
+		Gọi $B$ là biến cố \lq\lq Con coyote có kết quả xét nghiệm dương tính\rq\rq.\\
+		Ta có $\mathrm{P}\left(B \mid A \right) = 97\%=0{,}97$ và $\mathrm{P}\left(\overline{B}\mid \overline{A} \right)=95\%=0{,}95$.\\
+		Ta có sơ đồ cây như sau:
+		\begin{center}
+			\begin{tikzpicture}[grow=right, sloped, level 1/.style={sibling distance=3cm, level distance=3.5cm}, level 2/.style={sibling distance=1.5cm, level distance=4cm}, scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+    %hidden: VM005
+				\node {}
+				child {
+				node {$\overline{A}$}
+				child {
+				node {$\overline{B}$}
+				edge from parent node[below] {$0{,}95$}
+			}
+				child {
+				node {$B$}
+				edge from parent node[above] {$0{,}05$}
+			}
+				edge from parent node[below] {$0{,}3$}
+			}
+				child {
+				node {$A$}
+				child {
+				node {$\overline{B}$}
+				edge from parent node[below] {$0{,}03$}
+			}
+				child {
+				node {$B$}
+				edge from parent node[above] {$0{,}97$}
+			}
+				edge from parent node[above] {$0{,}7$}
+				};
+    \node at (0,0){\href{3AB3YW}{\tiny \phantom{3AB3YW}}};
+			\end{tikzpicture}
+		\end{center}
+		\begin{itemchoice}
+			\itemch Xác suất để con coyote bị bắt không bị bệnh và có kết quả xét nghiệm dương tính là
+			\[\mathrm{P} \left(\overline{A}B\right) = \mathrm{P}\left(\overline{A}\right) \cdot \mathrm{P}\left(B\mid \overline{A}\right) = 0{,}3 \cdot 0{,}05 = 0{,}015. \]
+			\itemch Xác suất để con coyote bị bắt có kết quả xét nghiệm âm tính là
+			\[ \mathrm{P}\left(\overline{B} \right) = \mathrm{P}(A)\cdot\mathrm{P}\left(\overline{B}\mid A\right) + \mathrm{P}\left(\overline{A}\right) \cdot\mathrm{P}\left(\overline{B}\mid \overline{A} \right) = 0{,}7\cdot 0{,}03 + 0{,}3\cdot 0{,}95 = 0{,}306=30{,}6\%. \]
+			\itemch Giá trị dự đoán âm của xét nghiệm là
+			\[\mathrm{P}\left(\overline{A} \mid\overline{B}\right) = \dfrac{\mathrm{P}\left(\overline{A}\right)\cdot \mathrm{P}\left(\overline{B}\mid \overline{A} \right) }{\mathrm{P}(A) \cdot \mathrm{P}\left(\overline{B}\mid A \right) + \mathrm{P}\left(\overline{A}\right)\cdot \mathrm{P}\left(\overline{B}\mid \overline{A} \right)} = \dfrac{0{,}3\cdot 0{,}95}{0{,}7\cdot 0{,}03 + 0{,}3\cdot 0{,}95}=\dfrac{95}{102}\approx 93{,}1\%. \]
+			Vậy giá trị dự đoán âm của xét nghiệm bé hơn $95\%$.
+			\itemch Xác suất để con coyote bị bắt có kết quả xét nghiệm dương tính là
+			\[\mathrm{P}(B)=1-\mathrm{P}\left(\overline{B}\right) = 1 - 0{,}306 = 0{,}694. \]
+			Chọn ngẫu nhiên $3$ con coyote, xác suất có đúng $2$ con có kết quả dương tính là
+			\[\mathrm{C}_3^2\cdot \big[\mathrm{P}(B)\big]^2 \cdot \mathrm{P}\left(\overline{B} \right) = \mathrm{C}_3^2 \cdot 0{,}694^2 \cdot 0{,}306 \approx 0{,}442 = 44{,}2\%. \]
+		\end{itemchoice}}
+\end{ex}
+
+\begin{ex}%[Dự án 5DOCJE-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV002]%[2H5V3-4]
+	Trong một dự án khảo sát địa chất thăm dò tài nguyên, các nhà khoa học phát hiện một túi khí tự nhiên trong lòng đất được xác định có dạng khối cầu $(S)$, một lớp đá móng ngăn cách các địa tầng là mặt phẳng $(P)$. Với hệ trục tọa độ $Oxyz$ phù hợp (mặt đất nằm trên mặt phẳng $Oxy$, chiều dương trục $Oz$ hướng lên trên), đơn vị trên mỗi trục là $10$\,m, mặt cầu $(S)$ có phương trình $(x - 1)^2 + (y - 2)^2 + (z + 11)^2 = 25$, lớp đá móng $(P)$ được coi là một mặt phẳng có phương trình $2x - y + 2z + 22 = 0$. Để thực hiện việc thăm dò, các nhà khoa học đặt mũi khoan được định hướng bắt đầu từ vị trí $A(-3;8;0)$ và tiến tới liên tục theo phương của vectơ $\vec{u} = (4;-3;-7)$.
+	\choiceTF
+		{Quỹ đạo của mũi khoan được mô tả bởi một phần đường thẳng $d$ có phương trình chính tắc là $\dfrac{x - 3}{4} = \dfrac{y + 8}{-3} = \dfrac{z}{-7}$}
+		{\True Túi khí $(S)$ bị lớp đá móng $(P)$ chia thành hai phần có thể tích bằng nhau}
+		{Theo quỹ đạo chuyển động, mũi khoan sẽ đi xuyên qua túi khí $(S)$ tạo thành một đoạn đường ống có độ dài là $100$\,m ngay trong lòng túi khí}
+		{\True Để tránh nguy cơ làm nứt gãy lớp đá móng $(P)$ dẫn đến rò rỉ khí áp suất cao, tiêu chuẩn kỹ thuật yêu cầu: Trong suốt thời gian mũi khoan di chuyển bên trong túi khí $(S)$, khoảng cách từ mũi khoan đến lớp đá móng $(P)$ không được nhỏ hơn $5$\,m. Quá trình khoan theo phương án này đã đáp ứng được tiêu chuẩn kỹ thuật đó}
+	\loigiai{
+		Mặt cầu $(S)$ có tâm $I(1;2;-11)$ và bán kính $R = 5$.\\
+		Đường thẳng chứa mũi khoan $d$ đi qua điểm $A(-3;8;0)$ và nhận vectơ $\vec{u} = (4;-3;-7)$ làm một vectơ chỉ phương nên có phương trình tham số là \[d\colon \heva{&x=-3+4t \\ &y=8-3t\\ &z=-7t.}\]
+		\begin{itemchoice}
+			\itemch Phương trình chính tắc của $d$ là $\dfrac{x + 3}{4} = \dfrac{y - 8}{-3} = \dfrac{z}{-7}$.
+			\itemch Khoảng cách từ tâm $I$ đến mặt phẳng $(P)$ là
+			\[\mathrm{d}\big(I, (P)\big) = \dfrac{\big|2\cdot 1 - 2 + 2\cdot (-11) + 22\big|}{\sqrt{2^2 + (-1)^2 + 2^2}} = 0.\]
+			Do đó $I\in (P)$, suy ra $(P)$ là mặt phẳng đi qua tâm $I$ của mặt cầu $(S)$ nên túi khí $(S)$ bị lớp đá móng $(P)$ chia thành hai phần có thể tích bằng nhau.
+			\itemch Gọi giao điểm của đường thẳng $d$ và mặt cầu $(S)$ là $M$.\\
+			Vì $M\in d$ nên $M(-3+4t; 8-3t;-7t)$.\\
+			Mặt khác $M\in (S)$ nên
+			\allowdisplaybreaks
+			\begin{eqnarray*}
+				&&(-3+4t-1)^2+(8-3t-2)^2+(-7t+11)^2=25\\
+				&\Leftrightarrow& 74t^2 - 222t + 148 = 0\\
+				&\Leftrightarrow&\hoac{&t=1 \\ &t=2.}
+			\end{eqnarray*}
+			\begin{itemize}
+				\item Với $t=1$, ta có giao điểm thứ nhất của $d$ và $(S)$ là $M_1(1;5;-7)$.
+				\item Với $t=2$, ta có giao điểm thứ hai của $d$ và $(S)$ là $M_2(5;2;-14)$.
+			\end{itemize}
+			Đoạn đường ống có độ dài là
+			\[ 10M_1M_2 = 10\sqrt{(5-1)^2 + (2-5)^2 + (-14+7)^2} = 10\sqrt{74}\approx 86{,}02 \ (\text{m}). \]
+			\itemch 
+			\begin{center}
+				\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+    %hidden: VM005
+					\path
+						(0,0) coordinate (I)
+						(-4,0.8) coordinate (A)
+						(3,2) coordinate (B);
+					\draw[name path=circleI] (I) circle(2);
+					\path[name path=lineAB] (A)--(B);
+					\path[name intersections={of=lineAB and circleI, by={M2, M1}}];
+					\path ($(M1)!0.4!(M2)$) coordinate (M);
+					\draw[dashed] 
+						(180:2) arc (180:0:{2} and {0.3*2});
+					\draw (180:2) arc (180:360:{2} and {0.3*2});
+					\foreach \x/\g in {A/90,I/-90,M/90}
+					\fill (\x) circle(1pt) ($(\x)+(\g:3mm)$) node{$\x$};
+					\fill (M1) circle(1pt) node[shift=(135:3mm)] {$M_1$}
+						(M2) circle(1pt) node[shift=(60:3mm)] {$M_2$};
+					\draw[dashed] (M1)--(M2);
+					\draw (A)--(M1) (M2)--(B);
+					\node[above] at (B) {$d$};
+    \node at (0,0){\href{5DOCJE}{\tiny \phantom{5DOCJE}}};
+				\end{tikzpicture}
+			\end{center}
+			Vì đường thẳng $d$ cắt mặt cầu $(S)$ tại $M_1$, $M_2$ tương ứng với tham số $t=1$, $t=2$ nên tọa độ của điểm $M$ thuộc đường thẳng $d$ và nằm trong mặt cầu $(S)$ là $M(-3+4t; 8-3t; -7t)$ với $1\leq t\leq 2$.\\
+			Khi đó 
+			\[\mathrm{d}\big(M, (P)\big) = \dfrac{\big|2\cdot (-3+4t) - (8-3t) + 2\cdot(-7t) + 22\big|}{3} = \dfrac{|8 - 3t|}{3}.\]
+			Vì $1\leq t\leq 2$ nên $8-3t>0$, khi đó
+			\[\mathrm{d}\big(M, (P) \big)= \dfrac{8-3t}{3}=\dfrac{8}{3} - t \geq \dfrac{8}{3} - 2 =\dfrac{2}{3}.\]
+			Dấu \lq\lq$=$\rq\rq\ xảy ra khi và chỉ khi $t=2$.\\
+			Vậy khoảng cách nhỏ nhất từ mũi khoan đến lớp đá móng $(P)$ là
+			\[10\cdot \dfrac{2}{3}=\dfrac{20}{3}\approx 6{,}67 \ (\text{m}).  \]
+			Vì $6{,}67 > 5$ nên quá trình khoan theo phương án này đã đáp ứng được tiêu chuẩn kỹ thuật.
+		\end{itemchoice}}
+\end{ex}
+
+\begin{ex}%[Dự án 3G1GBP-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,TV002]%[2D4V2-6]
+	Trên một đoạn đường thẳng, hai xe ô tô đang chạy ngược chiều nhau. Khi hai xe cách nhau $110$\,m, hai người lái xe phát hiện ra nguy hiểm phía trước nên quyết định xử lý bằng cách đạp phanh để tránh va chạm. Kể từ lúc đạp phanh, xe 1 chuyển động chậm dần với gia tốc $a_1(t) = -4t$ (m/s$^2$) và xe 2 chuyển động chậm dần với gia tốc $a_2(t) = -3t$ (m/s$^2$) (trong đó $t$ là thời gian tính bằng giây kể từ lúc người lái xe đó bắt đầu đạp phanh). Biết vận tốc của xe 1 và xe 2 ngay lúc phát hiện nguy hiểm lần lượt là $18$\,m/s và $24$\,m/s.
+	\choiceTF
+		{\True Giả sử người lái xe 1 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm, công thức tính vận tốc của xe 1 kể từ lúc đạp phanh là $v_1(t) = 18 - 2t^2$ (m/s)}
+		{Giả sử người lái xe 1 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm, quãng đường xe 1 đi được kể từ lúc đạp phanh đến khi dừng hẳn là $40$\,m}
+		{\True Giả sử người lái xe 2 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm, kể từ lúc đạp phanh, xe 2 cần $4$ giây để dừng hẳn}
+		{\True Giả sử khi phát hiện ra nguy hiểm, người lái xe 1 đạp phanh ngay lập tức nhưng người lái xe 2 do lúng túng nên mất $0{,}5$ giây mới bắt đầu đạp phanh. Trong khoảng thời gian $0{,}5$ giây này, xe 2 tiếp tục chuyển động thẳng đều với vận tốc ban đầu $24$ (m/s), sau đó mới bắt đầu đạp phanh với quy luật gia tốc như đã cho. Khi đó, hai xe sẽ xảy ra va chạm}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch Giả sử người lái xe 1 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm. Khi đó vận tốc của xe 1 sau $t$ (giây) kể từ lúc đạp phanh là
+			\[v_1(t) = \displaystyle\int a_1 (t) \mathrm{\,d}t = \displaystyle\int -4t \mathrm{\,d}t = -2t^2 + C_1\ (\text{m/s}). \]
+			Ta có $v_1 (0) = 18 \Leftrightarrow C_1 = 18$, khi đó
+			\[v_1 (t) = -2t^2 + 18\ (\text{m/s}).\]
+			\itemch Giả sử người lái xe 1 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm, xe 1 dừng hẳn khi và chỉ khi 
+			\[v_1 (t) = 0 \Leftrightarrow -2t^2 + 18 = 0 \Leftrightarrow \hoac{&t=3 &&(\text{nhận})\\ &t=-3 &&(\text{loại}).}\]
+			Quãng đường xe 1 đi được kể từ lúc đạp phanh đến khi dừng hẳn là
+			\[S_1 = \displaystyle \int\limits_0^3\left(- 2t^2 + 18 \right)\mathrm{d}t
+			= \left(- \dfrac{2}{3}t^3 +18t \right)\Bigg|_0^3 = -18+54  = 36\ (\text{m}). \]
+			\itemch Giả sử người lái xe 2 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm. Khi đó, vận tốc của xe 2 sau $t$ (giây) kể từ lúc đạp phanh là
+			\[v_2 (t) = \displaystyle \int (-3t) \mathrm{\,d}t = -1{,}5t^2 + C_2 \ (\text{m/s}). \]
+			Ta có $v_2(0) = 24 \Leftrightarrow C_2 = 24$, khi đó
+			\[v_2(t) = -1{,}5t^2 + 24\ (\text{m/s}).\]
+			Xe $2$ dừng hẳn khi và chỉ khi
+			\[ v_2(t) = 0 \Leftrightarrow 1{,}5t^2 = 24 \Leftrightarrow t^2 = 16 \Leftrightarrow \hoac{&t=4 &&(\text{nhận})\\ &t=-4 && (\text{loại}).} \]
+			Vậy kể từ lúc đạp phanh, xe 2 cần $4$ giây để dừng hẳn.
+			\itemch Quãng đường xe 2 đi được kể từ lúc đạp phanh đến khi dừng hẳn là
+			\[\displaystyle \int\limits_0^4\left(-1{,}5t^2 + 24 \right)\mathrm{d}t =  \left(- \dfrac{1}{2}t^3 + 24t \right)\bigg|_0^4 = -32 + 96 = 64 \ \text{(m)}. \]
+			Vì người lái xe 2 mất $0{,}5$ giây mới bắt đầu đạp phanh nên tổng quãng đường di chuyển của người lái xe 2 từ lúc phát hiện nguy hiểm đến khi dừng lại là
+			\[S_2 = 0{,}5\cdot 24 + 64 = 76\ \text{(m)}.\]
+			Vì người lái xe 1 đạp phanh ngay lập tức khi phát hiện ra nguy hiểm nên quãng đường xe 1 đi được kể từ lúc đạp phanh đến khi dừng hẳn là $S_1 = 36$ (m).\\
+			Tổng quãng đường hai xe cần di chuyển cho đến khi dừng lại là
+			\[S = S_1 + S_2 = 36 + 76 = 112\ (\text{m}).\]
+			Vì khoảng cách ban đầu giữa hai xe là $110$\,m và $112>110$, nên hai xe sẽ xảy ra va chạm.
+		\end{itemchoice}}
+\end{ex}
+
+\Closesolutionfile{ans}
+\caukq
+\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-III]
+\begin{ex}%[Dự án 28RMVE-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM006]%[0D0C2-5]
+	Giáo viên chuẩn bị hai hộp thăm chứa các câu hỏi ôn tập. Hộp thứ nhất gồm $7$ thăm câu hỏi Giải tích và $3$ thăm câu hỏi Hình học. Hộp thứ hai gồm $6$ thăm câu hỏi Giải tích và $4$ thăm câu hỏi Hình học. Giáo viên rút ngẫu nhiên $2$ thăm từ hộp thứ nhất và $4$ thăm từ hộp thứ hai để tạo thành một tổ hợp đề gồm $6$ câu hỏi. Một học sinh bốc ngẫu nhiên $2$ thăm từ tổ hợp $6$ câu hỏi đó. Hỏi xác suất để học sinh này bốc được ít nhất một câu hỏi Giải tích bằng bao nhiêu ({\it làm tròn kết quả đến hàng phần trăm})?
+	\par
+	\shortans{$0{,}88$}
+	\loigiai{
+		Rút ngẫu nhiên $2$ thăm từ $10$ thăm trong hộp thứ nhất có $\mathrm{C}_{10}^2$ cách.\\
+		Rút ngẫu nhiên $4$ thăm từ $10$ thăm trong hộp thứ hai có $\mathrm{C}_{10}^4$ cách.\\
+		Bốc ngẫu nhiên $2$ thăm từ tổ hợp $6$ câu hỏi đã chọn có $\mathrm{C}_6^2$ cách.\\
+		Suy ra số phần tử của không gian mẫu là $n(\Omega)=\mathrm{C}_{10}^2\cdot\mathrm{C}_{10}^4\cdot\mathrm{C}_6^2=141\,750$.\\
+		Gọi $A$ là biến cố \lq\lq Học sinh bốc được ít nhất một câu hỏi Giải tích\rq\rq.\\
+		Suy ra $\overline{A}$ là biến cố \lq\lq Học sinh bốc được hai câu Hình học\rq\rq.\\
+		Để học sinh bốc được hai câu Hình học thì tổng số câu Hình học trong $6$ câu hỏi của tổ hợp đề phải là $2$, $3$, $4$, $5$ hoặc $6$ câu.\\
+		Gọi $i$, $j$ lần lượt là số câu Hình học cô giáo bốc được ở hộp thứ nhất và hộp thứ hai.\\
+		Ta có bảng sau:
+		\begin{center}
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{|c|c|l|c|}
+				\hline
+				Số câu & Trường hợp & \multicolumn{1}{c|}{Số cách bốc của cô giáo} & Số cách bốc \\
+				Hình học & $(i;j)$ & & của học sinh \\
+				\hline
+				$2$ & $(2;0), (1;1), (0;2)$ & $\mathrm{C}_3^2\cdot\mathrm{C}_6^4+\mathrm{C}_3^1\cdot\mathrm{C}_7^1\cdot\mathrm{C}_4^1\cdot\mathrm{C}_6^3+\mathrm{C}_7^2\cdot\mathrm{C}_4^2\cdot\mathrm{C}_6^2=3\,615$ & $\mathrm{C}_2^2=1$\\
+				\hline
+				$3$ & $(2;1), (1;2), (0;3)$ & $\mathrm{C}_3^2\cdot\mathrm{C}_4^1\cdot\mathrm{C}_6^3+\mathrm{C}_3^1\cdot\mathrm{C}_7^1\cdot\mathrm{C}_4^2\cdot\mathrm{C}_6^2+\mathrm{C}_7^2\cdot\mathrm{C}_4^3\cdot\mathrm{C}_6^1=2\,634$ & $\mathrm{C}_3^2=3$\\
+				\hline
+				$4$ & $(2;2), (1;3), (0;4)$ & $\mathrm{C}_3^2\cdot\mathrm{C}_4^2\cdot\mathrm{C}_6^2+\mathrm{C}_3^1\cdot\mathrm{C}_7^1\cdot\mathrm{C}_4^3\cdot\mathrm{C}_6^1+\mathrm{C}_7^2\cdot\mathrm{C}_4^4=795$ & $\mathrm{C}_4^2=6$\\
+				\hline
+				$5$ & $(2;3), (1;4)$ & $\mathrm{C}_3^2\cdot\mathrm{C}_4^3\cdot\mathrm{C}_6^1+\mathrm{C}_3^1\cdot\mathrm{C}_7^1\cdot\mathrm{C}_4^4=93$ & $\mathrm{C}_5^2=10$\\
+				\hline
+				$6$ & $(2;4)$ & $\mathrm{C}_3^2\cdot\mathrm{C}_4^4=3$ & $\mathrm{C}_6^2=15$\\
+				\hline
+			\end{tabular}
+		\end{center}
+		Số kết quả thuận lợi cho biến cố $\overline{A}$ là 
+		\[
+		n\left(\overline{A}\right)=3\,615 \cdot 1 + 2\,634 \cdot 3 + 795 \cdot 6 + 93 \cdot 10 + 3 \cdot 15 = 17\,262.
+		\]
+		Xác suất của biến cố $\overline{A}$ là $\mathrm{P}\left(\overline{A}\right) = \dfrac{17\,262}{141\,750}$.\\
+		Vậy xác suất của biến cố $A$ là $\mathrm{P}(A) = 1 - \mathrm{P}\left(\overline{A}\right)=1 - \dfrac{17\,262}{141\,750} = \dfrac{124\,488}{141\,750} \approx 0{,}88$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 1AF1J2-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM006]%[1D6V3-5]
+	Độ cao $h$ (tính bằng ki-lô-mét) so với mặt nước biển của một vị trí trong không trung tính theo áp suất không khí $P$ tại điểm đó và áp suất $P_0$ của không khí tại mặt nước biển được cho bởi công thức $h=-19{,}4 \log \dfrac{P}{P_0}$ (trong đó $P$ và $P_0$ cùng đơn vị đo áp suất). Một chiếc máy bay đang bay ngang ở độ cao $10$\,km thì bắt đầu hạ độ cao. Khi hạ xuống đến vị trí có độ cao $h_1$, áp suất không khí bên ngoài máy bay đo được tăng lên gấp đôi so với lúc máy bay đang ở độ cao $10$\,km. Hỏi máy bay đã hạ xuống một khoảng cách là bao nhiêu ki-lô-mét so với vị trí ban đầu (ở độ cao $10$\,km) theo phương thẳng đứng ({\it làm tròn kết quả cuối cùng đến hàng phần mười})?
+	\par
+	\shortans{$5{,}8$}
+	\loigiai{
+		Tại độ cao $10$\,km, áp suất là $P_{10}$, ta có $10 = -19{,}4 \log \dfrac{P_{10}}{P_0}$.\\
+		Tại độ cao $h_1$, áp suất đo được là $P_{h_1} = 2P_{10}$, do đó
+		\begin{align*} 
+			h_1&=-19{,}4 \log \dfrac{2P_{10}}{P_0}  \\ 
+			&=-19{,}4 \left(\log 2+\log\dfrac{P_{10}}{P_0} \right)  \\ 
+			&=-19{,}4\log 2-19{,}4 \log\dfrac{P_{10}}{P_0}  \\ 
+			&=-19{,}4\log 2 + 10\ \text{(km)}.
+		\end{align*}
+		Khoảng cách theo phương thẳng đứng máy bay đã hạ xuống là 
+		\[
+		\Delta h=10 - h_1 = 19{,}4 \log 2  \approx 5{,}8\ \text{(km)}.
+		\]
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 4MK4WK-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM006]%[2H2V2-6]
+	Trạm kiểm soát không lưu của một sân bay đang theo dõi hai chuyến bay thương mại thông qua hệ thống radar. Xét trong không gian  với hệ trục tọa độ $Oxyz$ (mặt phẳng $(Oxy)$ biểu diễn mặt đất, chiều dương trục $Oz$ hướng lên trên, đơn vị trên các trục tính bằng km), tại thời điểm hệ thống bắt đầu theo dõi:
+	\begin{itemize} 
+		\item Máy bay thứ nhất đang ở vị trí $A_0(0;0;10)$ và di chuyển thẳng đều với vectơ vận tốc \break $\vec{v}_{1} = (15;0;0)$.
+		\item Máy bay thứ hai đang ở vị trí $B_0(10;-5;10)$ và di chuyển thẳng đều với vectơ vận tốc \break $\vec{v}_{2} = (13;5;0)$.
+	\end{itemize}
+	Biết vận tốc của hai máy bay tính bằng km/phút và trong khoảng thời gian theo dõi, hai máy bay đều giữ nguyên hướng và tốc độ bay. Giả sử quy định an toàn hàng không yêu cầu phải luôn duy trì khoảng cách giữa hai máy bay tối thiểu là $10$\,km. Hệ thống cảnh báo va chạm tự động (TCAS) của trạm sẽ kích hoạt còi báo động ngay khi khoảng cách giữa hai máy bay chạm mốc vi phạm này. Hỏi kể từ lúc bắt đầu theo dõi ($t = 0$), sau bao nhiêu giây thì còi báo động tại trạm kiểm soát không lưu bắt đầu kêu ({\it làm tròn kết quả đến hàng phần mười})?
+	\par
+	\shortans{$18{,}5$}
+	\loigiai{
+		Gọi $A$ là vị trí của máy bay thứ nhất sau $t$ phút, ta có $\heva{&x_A = 0+15t\\&y_A = 0+0t\\&z_A = 10+0t}\Rightarrow A(15t;0;10)$.\\
+		Gọi $B$ là vị trí của máy bay thứ hai sau $t$ phút, ta có $\heva{&x_B = 10+13t\\&y_B = -5+5t\\&z_B = 10+0t}\Rightarrow B(10+13t;-5+5t;10)$.\\
+		Khoảng cách giữa hai máy bay tại thời điểm $t$ là
+		\[
+		BA=\sqrt{(2t-10)^2 + (5-5t)^2} = \sqrt{29t^2-90t+125}\ \text{(km)}.
+		\]
+		Còi báo động kêu khi $BA=10$, ta có phương trình
+		\allowdisplaybreaks
+		\begin{eqnarray*}
+			&&\sqrt{29t^2 - 90t + 125} = 10\\
+			&\Rightarrow& 29t^2 - 90t + 25 = 0\\
+			&\Leftrightarrow& \hoac{&t_1=\dfrac{45-10\sqrt{13}}{29}\\ &t_2=\dfrac{45+10\sqrt{13}}{29}.}
+		\end{eqnarray*}
+		Do đó, thời điểm đầu tiên khoảng cách chạm mốc $10$\,km là $t_1=\dfrac{45-10\sqrt{13}}{29}$ (phút) $\approx 18{,}5$ (giây).\\
+		Vậy sau khoảng $18{,}5$ giây từ lúc bắt đầu theo dõi thì còi báo động tại trạm kiểm soát không lưu bắt đầu kêu.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 47WV7E-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM032]%[2D1V3-6]
+	Khi xây dựng một căn nhà, chủ đầu tư dự định thi công thêm một lớp tường rỗng cách ẩm. Lớp tường này có tuổi thọ sử dụng là $10$ năm. Chi phí thi công là $5$ triệu đồng cho mỗi cm độ dày của lớp tường rỗng. Chi phí điện năng tiêu thụ trung bình mỗi năm cho hệ thống máy hút ẩm của toàn bộ căn nhà là $C$ (đơn vị: triệu đồng) phụ thuộc vào độ dày lớp tường rỗng $x$ (đơn vị: cm) theo công thức $C(x) = \dfrac{k}{2x+2}$ (với $0 \leq x \leq 10$), $k$ là hằng số. Biết rằng, nếu không thi công lớp tường rỗng cách ẩm, chi phí điện năng cho máy hút ẩm mỗi năm sẽ lên tới $18$ triệu đồng. Gọi $f(x)$ là tổng chi phí thi công lớp cách ẩm và chi phí vận hành máy hút ẩm trong $10$ năm. Hỏi cần thiết kế lớp tường rỗng dày bao nhiêu cm để tổng chi phí $f(x)$ nhỏ nhất?
+	\par
+	\shortans{$5$}
+	\loigiai{
+		Khi không thi công lớp tường rỗng cách ẩm ($x = 0$), chi phí điện năng mỗi năm là $18$ triệu đồng. Do đó $C(0) = \dfrac{k}{2\cdot 0 + 2} = 18 \Leftrightarrow \dfrac{k}{2} = 18 \Leftrightarrow k = 36$.
+		\\
+		Chi phí điện năng trong $10$ năm là $10 \cdot C(x) = 10 \cdot \dfrac{36}{2x + 2} = \dfrac{180}{x + 1}$ (triệu đồng).
+		\\
+		Chi phí thi công cho lớp tường rỗng dày $x$\,cm là $5x$ (triệu đồng).
+		\\
+		Tổng chi phí trong $10$ năm là $f(x) = 5x + \dfrac{180}{x + 1}$ (triệu đồng), với $x \in [0;10]$.
+		\\
+		Ta có $f'(x) = 5 - \dfrac{180}{(x + 1)^2}$.
+		\\
+		Cho $f'(x) = 0 \Leftrightarrow (x + 1)^2 = 36 \Leftrightarrow x + 1 = 6 \Leftrightarrow x = 5$ (vì $x \geq 0$).
+		\\
+		Bảng biến thiên
+		\begin{center}
+			\begin{tikzpicture}
+    %hidden: VM005
+				\tkzTabInit[nocadre=true, lgt=1.2, espcl=4, deltacl=0.5]
+				{$x$/0.7,$f'(x)$/0.7,$f(x)$/2}
+				{$0$,$5$,$10$}
+				\tkzTabLine{,-,0,+,}
+				\tkzTabVar{+/$180$,-/$55$,+/$\dfrac{730}{11}$}
+    \node at (T11){\href{47WV7E}{\tiny \phantom{47WV7E}}};
+			\end{tikzpicture}
+		\end{center}
+		Từ bảng biến thiên, ta có $\min\limits_{[0;10]} f(x)=f(5)=55$.
+		\\
+		Vậy cần thiết kế lớp tường rỗng dày $5$\,cm thì tổng chi phí thi công lớp cách ẩm và chi phí vận hành máy hút ẩm trong $10$ năm là nhỏ nhất.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 3WADBV-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM032]%[1H8V6-2]
+	Cho hình lăng trụ đứng $ABCD.A'B'C'D'$ có đáy là hình vuông cạnh $2a$, $AA' = 3a$. Gọi $I$ là tâm hình chữ nhật $ABB'A'$. Tang của góc nhị diện $[I, AC, D]$ bằng bao nhiêu ({\it làm tròn kết quả cuối cùng đến hàng phần mười})?
+	\par
+	\shortans{$-2{,}1$}
+	\loigiai{
+		\begin{center}
+			\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round, >=stealth]
+    %hidden: VM005
+				\path
+					(0,0) coordinate (A)
+					++(-140:2) coordinate (B)
+					++(0:3) coordinate (C)
+					($(A)+(C)-(B)$) coordinate (D)
+					($(A)!1/2!(C)$) coordinate (O)
+					;
+				\foreach \i in {A,B,C,D}{
+				\coordinate (\i') at ($(\i)+(0,3.5)$);
+			}
+				\path
+					($(A)!.5!(B')$) coordinate (I)
+					($(A)!.5!(O)$) coordinate (K)
+					($(A)!.5!(B)$) coordinate (H);
+				\draw
+					(A')--(B')--(C')--(D')--cycle
+					(B)--(B') (C)--(C') (D)--(D')  (B)--(C)--(D);
+				\draw[dashed,thin]
+					(B)--(A)--(A') (I)--(H)--(K)--cycle
+					(C)--(A)--(D)--(B);
+				\pic[draw,angle eccentricity=1.8,angle radius=2mm]{right angle=A'--A--D}
+				pic[draw,angle eccentricity=1.8,angle radius=2mm]{right angle=A--O--B}
+				pic[draw,angle eccentricity=1.8,angle radius=2mm]{right angle=A--H--I}
+				pic[draw,fill=cyan,opacity=.5,angle eccentricity=1.8,angle radius=4mm]{angle=I--K--H};
+				\foreach \i/\g in {A'/120, B'/180, C'/-20, D'/30, A/160, B/-135, C/-45, D/0, I/120, O/-100, H/160, K/30}
+				\fill (\i) circle(1pt)+(\g:2.5mm)node{$\i$};
+    \node at (0,0){\href{3WADBV}{\tiny \phantom{3WADBV}}};
+			\end{tikzpicture}
+		\end{center}
+		Gọi $H$ và $K$ lần lượt là trung điểm của $AB$ và $AO$.
+		Ta thấy
+		\begin{itemize}
+			\item $B$ và $D$ nằm khác phía so với $AC$ nên $[I,AC,D]=180^\circ-[I,AC,B]$.
+			\item $B$ và $H$ nằm cùng phía so với $AC$ nên $[I,AC,B]=[I,AC,H]$.
+		\end{itemize}
+		Ta có
+		\begin{itemize}
+			\item $IH\parallel AA'$, mà $AA'\perp (ABCD)$ nên $IH\perp (ABCD)\Rightarrow IH\perp AC$.
+			\item $HK\parallel BD$, mà $AC\perp BD$ nên $HK\perp AC$.
+		\end{itemize}
+		Ta có $\heva{&IH\perp AC \\&HK\perp AC}\Rightarrow AC\perp (IHK)\Rightarrow AC\perp IK$.
+		\\
+		Hai đường thẳng $IK$ và $HK$ cùng vuông góc với $AC$ tại $K$ nên  $[I,AC,H]=\widehat{IKH}$.
+		\\
+		Tính được
+		\begin{itemize}
+			\item $IH=\dfrac{AA'}{2}=\dfrac{3a}{2}$.
+			\item $BD=2a\sqrt{2}$ nên $HK=\dfrac{BO}{2}=\dfrac{BD}{4}=\dfrac{2a\sqrt{2}}{4}=\dfrac{a\sqrt{2}}{2}$.
+		\end{itemize}
+		Xét $\triangle IHK$ vuông tại $H$, ta có
+		$\tan\widehat{IKH}=\dfrac{IH}{HK}=\dfrac{\dfrac{3a}{2}}{\dfrac{a\sqrt{2}}{2}}=\dfrac{3\sqrt{2}}{2}$.
+		\\
+		Suy ra $\tan\left(180^\circ-\widehat{IKH}\right)=-\dfrac{3\sqrt{2}}{2}$.
+		\\
+		Vậy tang của góc nhị diện $[I, AC, D]$ bằng $-\dfrac{3\sqrt{2}}{2}\approx -2{,}1$.
+	}
+\end{ex}
+
+\begin{ex}%[Dự án 5EROVB-VN-MT-15]%[2-KS-47-SoNinhBinh-L4-2026,VM032]%[2D4V3-5]
+	Một cơ sở sản xuất làm những chiếc bể cá bằng thủy tinh có dạng một phần hình cầu (như hình vẽ). Biết mặt trong của bể là một phần mặt cầu có bán kính $2$\,dm, khoảng cách từ tâm mặt cầu mặt trong đến mặt phẳng miệng bể là $1$\,dm. Giả sử phần thành thủy tinh của bể có độ dày không đổi là $0{,}3$\,cm và mặt cắt ở miệng bể được mài bằng phẳng. Thể tích thủy tinh cần sử dụng để làm một chiếc bể cá như vậy bằng bao nhiêu cm$^3$ ({\it không làm tròn các kết quả trung gian, chỉ làm tròn kết quả cuối cùng đến hàng đơn vị})?
+	\begin{center}
+		\begin{tikzpicture}[scale=1, >=stealth, font=\footnotesize, line join=round, line cap=round]
+    %hidden: VM005
+			\def\R{3}
+			\def\d{1.5}
+			\pgfmathsetmacro{\r}{\R*sqrt(3)/2}
+			\draw
+				(0,\d) ellipse ({\r} and {\r/6})
+				(30:\R) arc (30:-210:\R);
+			\fill (0,0) node{\href{5EROVB}{\tiny \phantom{5EROVB}}} circle (1pt)
+				(0,\d) circle (1pt);
+			\draw[dashed]
+				(0,0) -- (0,\d)
+				(0,0) -- (-150:\R)node[pos=0.5,above,sloped] {$2$\,dm}
+				(0,\d) -- (\r,\d)
+				(0,0) -- (0.5,0)
+				;
+			\draw[<->] (0.3,0) -- (0.3,\d)node[pos=0.5, right] {$1$\,dm};
+    \node at (0,0){\href{5EROVB}{\tiny \phantom{5EROVB}}};
+		\end{tikzpicture}
+	\end{center}
+	\par
+	\shortans{$1\,145$}
+	\loigiai{
+		Cắt bể cá bởi mặt phẳng đi qua đường kính của mặt cầu chứa bể cá (phần gạch chéo).
+		\\
+		Gắn hệ trục $Oxy$ như hình vẽ, đơn vị trên mỗi trục là $1$\,cm.
+		\begin{center}
+			\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round, declare function={R=3; f(\x) = sqrt((R+0.27)^2-\x*\x); }]
+    %hidden: VM005
+				\pgfmathsetmacro{\r}{R*sqrt(3)/2}
+				\filldraw[dashed,pattern=north east lines, opacity=0.5] (60:R) arc (60:300:R)--cycle;
+				\draw plot[domain=-R-0.27:R/2, samples=100] (\x,{f(\x)});
+				\draw plot[domain=-R-0.27:R/2, samples=100] (\x,{-f(\x)});
+				\draw
+					(R/2,0) ellipse ({\r/6} and {\r});
+				\draw
+					(R/2,0) ellipse ({\r/4} and {\r+0.3});
+				%Hệ trục
+				\draw[->] (-4,0)--(3,0) node [below] {$x$};
+				\draw[->] (0,-4)--(0,4) node [left] {$y$};
+				\fill (0,0) node{\href{5EROVB}{\tiny \phantom{5EROVB}}} circle (1pt)node[below left]{$O$}
+					(R/2,0) circle (1pt) node[shift=(-45:8pt)]{$10$}
+					(-R,0) circle (1pt) node[shift=(-35:12pt)]{$-20$}
+					(-R-0.27,0) circle (1pt) node[below left]{$-20{,}3$};
+    \node at (0,0){\href{5EROVB}{\tiny \phantom{5EROVB}}};
+			\end{tikzpicture}
+		\end{center}
+		Đổi $2$\,dm$=20$\,cm và $1$\,dm$=10$\,cm.\\
+		Mặt trong của bể là một phần mặt cầu có bán kính là $R_1 = 20$\,cm.\\
+		Phương trình đường tròn của mặt cắt mặt trong của bể là $x^2 + y^2 = 20^2 \Rightarrow y = \sqrt{20^2 - x^2}$.\\
+		Thể tích khối tròn xoay giới hạn bởi mặt trong của bể là
+		\[V_1 = \pi\displaystyle\int\limits_{-20}^{10} y^2 \mathrm{\,d}x
+		= \pi\int\limits_{-20}^{10} \left(\sqrt{20^2-x^2}\right)^2\mathrm{d}x
+		= 9\,000\pi\, \left(\text{cm}^3\right).\]
+		Mặt ngoài của bể là một phần mặt cầu có bán kính là $R_2 = 20 + 0{,}3 = 20{,}3$ (cm).
+		\\
+		Phương trình đường tròn của mặt cắt mặt ngoài của bể là $x^2 + y^2 = 20{,}3^2 \Rightarrow y = \sqrt{20{,}3^2 - x^2}$.
+		\\
+		Thể tích khối tròn xoay giới hạn bởi mặt ngoài của bể là
+		\[V_2=\pi\displaystyle\int\limits_{-20{,}3}^{10} y^2\mathrm{\,d}x=\pi\int\limits_{-20{,}3}^{10} \left(\sqrt{20{,}3^2-x^2}\right)^2\mathrm{d}x=9\,364{,}518\pi\, \left(\text{cm}^3\right).\]
+		Thể tích thủy tinh cần sử dụng để làm bể cá như vậy là \[V_{\text{thủy tinh}} = V_2 - V_1 = 9\,364{,}518\pi - 9\,000\pi \approx 1\,145\, \left(\text{cm}^3\right).\]
+	}
+\end{ex}
+
+\Closesolutionfile{ans}
+\Closesolutionfile{ansbook}
+\begin{indapan}
+	{ans/ans\currfilebase}
+\end{indapan}
