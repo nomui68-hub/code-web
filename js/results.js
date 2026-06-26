@@ -6,6 +6,35 @@ function fmtTime(s){ if(!s) return ''; try{return new Date(s).toLocaleString('vi
 function fmt(n){ const x=Number(n||0); return Number.isInteger(x)?String(x):x.toFixed(2).replace(/0+$/,'').replace(/\.$/,''); }
 function parseMaybeJson(x){ if(Array.isArray(x) || typeof x==='object') return x; try{return JSON.parse(x||'[]')}catch(e){return []} }
 function norm(s){ return String(s||'').toLowerCase().trim(); }
+
+function rowKey(r){return [r.examId||'',r.studentId||'',r.submitTime||''].join('|');}
+function gradeStore(){try{return JSON.parse(localStorage.getItem('manualEssayGrades')||'{}')}catch(e){return {}}}
+function setGradeStore(x){localStorage.setItem('manualEssayGrades', JSON.stringify(x));}
+function gradeKey(r, qid, idx=''){return rowKey(r)+'|q'+qid+(idx!==''?'|r'+idx:'');}
+function getManualPoint(r,d){const gs=gradeStore(); const k=gradeKey(r,d.id); if(gs[k]!==undefined) return Number(gs[k]||0); return Number(d.point||0);}
+function manualTotal(r){return parseMaybeJson(r.detail).filter(d=>d.type==='essay' && d.needsManual).reduce((a,d)=>a+getManualPoint(r,d),0);}
+function displayScore(r){
+  const base=Number(r.score||0);
+  const oldEssay=Number(r.partScores?.essay||0);
+  const manual=manualTotal(r);
+  return base-oldEssay+manual;
+}
+function saveManualPoint(rowIndex,qid,val){
+  const r=filteredRows()[rowIndex]; if(!r) return;
+  const gs=gradeStore(); gs[gradeKey(r,qid)] = Math.max(0, Number(val||0)); setGradeStore(gs); render();
+}
+window.saveManualPoint=saveManualPoint;
+function imageThumbs(d){
+  const imgs=Array.isArray(d.images)?d.images:[];
+  if(!imgs.length) return '';
+  return '<div><b>Ảnh bài làm:</b><div class="essay-images">'+imgs.map((img,i)=>{
+    if(img.error) return `<div class="bad">${img.name||'Ảnh'}: ${img.error}</div>`;
+    if(img.url) return `<a class="btn" href="${img.url}" target="_blank">Mở ảnh ${i+1}</a>`;
+    if(!img.dataUrl) return `<span class="muted">${img.name||'Ảnh '+(i+1)}</span>`;
+    return `<a href="${img.dataUrl}" target="_blank"><img src="${img.dataUrl}" alt="Ảnh bài làm ${i+1}" style="max-width:160px;max-height:160px;border:1px solid #ccc;border-radius:8px;margin:6px"></a>`;
+  }).join('')+'</div></div>';
+}
+
 function filteredRows(){
   const exam=document.getElementById('examFilter').value;
   const cls=norm(document.getElementById('classFilter').value);
@@ -18,20 +47,20 @@ function filteredRows(){
   });
 }
 function csv(rows){
-  const header=['Ma HS','Ho ten','Lop','Ma de','Ten de','Diem','TN','DungSai','TLN','Tu luan','Dung/Tong','Thoi gian nop','Bai lam JSON'];
+  const header=['Ma HS','Ho ten','Lop','Ma de','Ten de','Diem','TN','DungSai','TLN','Tu luan','Dung/Tong','Thoi gian nop','Bai lam JSON','Chi tiet tu luan JSON'];
   const lines=[header.join(',')].concat(rows.map(r=>[
-    r.studentId,r.studentName,r.className,r.examId,r.examTitle,r.score,r.partScores?.choice,r.partScores?.truefalse,r.partScores?.short,r.partScores?.essay,`${r.correct}/${r.total}`,fmtTime(r.submitTime),JSON.stringify(r.answers||'')
+    r.studentId,r.studentName,r.className,r.examId,r.examTitle,displayScore(r),r.partScores?.choice,r.partScores?.truefalse,r.partScores?.short,manualTotal(r)||r.partScores?.essay,`${r.correct}/${r.total}`,fmtTime(r.submitTime),JSON.stringify(r.answers||''), JSON.stringify(parseMaybeJson(r.detail).filter(d=>d.type==='essay').map(d=>({id:d.id,given:d.given,images:(d.images||[]).map(x=>({name:x.name,size:x.size,error:x.error||''})),manualPoint:getManualPoint(r,d)})))
   ].map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')));
   const blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv;charset=utf-8'});
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='ket_qua_thi.csv'; a.click();
 }
 function renderStats(rows){
   const n=rows.length;
-  const scores=rows.map(r=>Number(r.score||0));
+  const scores=rows.map(r=>Number(displayScore(r)||0));
   const avg=n? scores.reduce((a,b)=>a+b,0)/n:0;
   const max=n? Math.max(...scores):0;
   const min=n? Math.min(...scores):0;
-  const pass=n? rows.filter(r=>Number(r.score||0)>=5).length:0;
+  const pass=n? rows.filter(r=>Number(displayScore(r)||0)>=5).length:0;
   document.getElementById('statsBox').innerHTML=`
     <div class="stat"><b>${n}</b><span>Lượt nộp</span></div>
     <div class="stat"><b>${fmt(avg)}</b><span>Điểm TB</span></div>
@@ -39,16 +68,23 @@ function renderStats(rows){
     <div class="stat"><b>${fmt(min)}</b><span>Thấp nhất</span></div>
     <div class="stat"><b>${n?Math.round(pass*100/n):0}%</b><span>Đạt từ 5 điểm</span></div>`;
 }
-function detailHtml(r){
+function detailHtml(r,rowIndex){
   const detail=parseMaybeJson(r.detail);
   if(!detail.length) return '<em>Không có chi tiết</em>';
-  return '<details><summary>Xem</summary><div class="detail-list">'+detail.map(d=>`<div><b>Câu ${d.id}</b> (${d.typeLabel||d.type}): ${fmt(d.point)}/${fmt(d.maxPoint)} điểm</div>`).join('')+'</div></details>';
+  return '<details><summary>Xem / chấm tự luận</summary><div class="detail-list">'+detail.map(d=>{
+    if(d.type==='essay' && d.needsManual){
+      const val=getManualPoint(r,d);
+      const rub=(Array.isArray(d.rubric)&&d.rubric.length)?'<ul>'+d.rubric.map(x=>`<li>${fmt(x.point)} điểm: ${x.desc||''}</li>`).join('')+'</ul>':'';
+      return `<div class="essay-grade"><b>Câu ${d.id}</b> (Tự luận): <input type="number" step="0.25" min="0" max="${fmt(d.maxPoint)}" value="${fmt(val)}" onchange="saveManualPoint(${rowIndex},${d.id},this.value)"> / ${fmt(d.maxPoint)} điểm ${rub}<div><b>Bài làm:</b><pre>${String(d.given||'').replace(/[&<>]/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]))}</pre></div>${imageThumbs(d)}</div>`;
+    }
+    return `<div><b>Câu ${d.id}</b> (${d.typeLabel||d.type}): ${fmt(d.point)}/${fmt(d.maxPoint)} điểm</div>`;
+  }).join('')+'</div></details>';
 }
 function renderTable(rows){
   document.querySelector('#resultTable tbody').innerHTML=rows.map((r,i)=>`<tr>
     <td><input type="checkbox" class="rowCheck" value="${r._localIndex ?? ''}" ${r._source==='local'?'':'disabled title="Chỉ xóa được dữ liệu cục bộ"'}></td><td>${i+1}</td><td>${r.studentId||''}</td><td>${r.studentName||''}</td><td>${r.className||''}</td><td>${r.examTitle||r.examId||''}</td>
-    <td><b>${fmt(r.score)}</b></td><td>${fmt(r.partScores?.choice)}</td><td>${fmt(r.partScores?.truefalse)}</td><td>${fmt(r.partScores?.short)}</td><td>${fmt(r.partScores?.essay)}</td>
-    <td>${r.correct??''}/${r.total??''}</td><td>${fmtTime(r.submitTime)}</td><td>${detailHtml(r)}</td></tr>`).join('');
+    <td><b>${fmt(displayScore(r))}</b></td><td>${fmt(r.partScores?.choice)}</td><td>${fmt(r.partScores?.truefalse)}</td><td>${fmt(r.partScores?.short)}</td><td>${fmt(manualTotal(r)||r.partScores?.essay)}</td>
+    <td>${r.correct??''}/${r.total??''}</td><td>${fmtTime(r.submitTime)}</td><td>${detailHtml(r,i)}</td></tr>`).join('');
 }
 function renderQuestionStats(rows){
   const map=new Map();

@@ -16,12 +16,12 @@ def main():
         print('Khong co file .tex trong thu muc tex')
         return
     for f in files:
-        if f.name.lower()=='de.tex':
-            exam_id='DE_MAU'
-            title='Đề mẫu'
-        else:
-            exam_id=safe_id(f.stem)
-            title=f.stem.replace('_',' ').replace('-',' ')
+        # V14: bỏ qua de.tex/DE_MAU khi quét hàng loạt để học sinh không luôn thấy đề mẫu.
+        if f.name.lower() in ('de.tex','de_mau.tex','de-mau.tex'):
+            print('Bo qua file de mau:', f.name)
+            continue
+        exam_id=safe_id(f.stem)
+        title=f.stem.replace('_',' ').replace('-',' ')
         print('\n=== Build', exam_id, '===')
         subprocess.run([sys.executable, str(root/'parser'/'build_one.py'), str(f), exam_id, title], check=False)
     print('\nDa build xong tat ca de trong thu muc tex/')

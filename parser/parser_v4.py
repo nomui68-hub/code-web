@@ -62,20 +62,73 @@ def solution(block):
     if p<0: return '',block
     s,e=brace(block,p); return s.strip(), block[:p]+block[e:]
 
+def read_optional_number_after(text, pos, default=None):
+    pos = skip_opt(text, pos)
+    # skip_opt above already eats optional args, so parse directly here instead
+    return default
+
+def extract_optional_bracket(text, pos):
+    i = pos
+    while i < len(text) and text[i].isspace(): i += 1
+    if i < len(text) and text[i] == '[':
+        lev = 1; j = i + 1; buf=[]
+        while j < len(text) and lev:
+            if text[j] == '[': lev += 1
+            elif text[j] == ']':
+                lev -= 1
+                if lev == 0: return ''.join(buf), j + 1
+            if lev: buf.append(text[j])
+            j += 1
+    return None, pos
+
+def parse_float_vn(x, default=0):
+    try: return float(str(x).strip().replace(',', '.'))
+    except Exception: return default
+
+def parse_rubric_body(body):
+    items=[]; cur=0
+    while cur < len(body):
+        while cur < len(body) and body[cur].isspace(): cur+=1
+        if cur>=len(body): break
+        pt, cur2 = brace(body, cur)
+        if cur2 == cur or pt == '': break
+        desc, cur3 = brace(body, cur2)
+        if cur3 == cur2: break
+        items.append({'point': parse_float_vn(pt, 0), 'desc': clean(desc)})
+        cur = cur3
+    return items
+
 def extract_essay_answer(block):
-    keys=['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer']
-    first=None; key_used=''
-    for key in keys:
-        p=block.find(key)
-        if p>=0 and (first is None or p<first):
-            first=p; key_used=key
-    if first is None:
-        return '', block
-    ans,end=brace(block, first+len(key_used))
-    ans=ans.strip()
-    if ans.startswith('$') and ans.endswith('$'):
-        ans=ans[1:-1].strip()
-    return ans, block[:first]+block[end:]
+    # Hỗ trợ 3 kiểu:
+    #   \essayans{2|2,0}       : tự chấm theo kết quả
+    #   \essaymanual[2]         : học sinh nhập lời giải, giáo viên chấm tay
+    #   \essayrubric{{0.5}{Ý 1}{0.5}{Ý 2}} : GV chấm theo thang điểm
+    auto_keys=['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer']
+    meta={'gradingMode':'manual','answer':'','rubric':[], 'manualMaxPoint': None}
+    found=[]
+    for key in auto_keys + ['\\essaymanual','\\tuluanmanual','\\essayrubric','\\tuluanrubric']:
+        pp=block.find(key)
+        if pp>=0: found.append((pp,key))
+    if not found:
+        return meta, block
+    first,key_used=min(found, key=lambda x:x[0])
+    if key_used in auto_keys:
+        ans,end=brace(block, first+len(key_used))
+        ans=ans.strip()
+        if ans.startswith('$') and ans.endswith('$'): ans=ans[1:-1].strip()
+        meta.update({'gradingMode':'auto','answer':ans})
+        return meta, block[:first]+block[end:]
+    if key_used in ['\\essaymanual','\\tuluanmanual']:
+        opt, after = extract_optional_bracket(block, first+len(key_used))
+        if opt is not None: meta['manualMaxPoint']=parse_float_vn(opt, None)
+        meta['gradingMode']='manual'
+        return meta, block[:first]+block[after:]
+    if key_used in ['\\essayrubric','\\tuluanrubric']:
+        body,end=brace(block, first+len(key_used))
+        rub=parse_rubric_body(body)
+        meta.update({'gradingMode':'rubric','rubric':rub,'manualMaxPoint': sum(float(x.get('point') or 0) for x in rub) or None})
+        return meta, block[:first]+block[end:]
+    return meta, block
 
 def envs(text, env):
     """Tách môi trường LaTeX bằng bộ đếm begin/end thay vì regex.
@@ -403,7 +456,7 @@ def qtype(block):
     if '\\choiceTF' in block: return 'truefalse'
     if '\\choice' in block: return 'choice'
     if '\\shortans' in block: return 'short'
-    if any(k in block for k in ['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer']): return 'essay'
+    if any(k in block for k in ['\\essayans','\\tuluanans','\\tlans','\\dapso','\\answer','\\essaymanual','\\tuluanmanual','\\essayrubric','\\tuluanrubric']): return 'essay'
     return 'essay'
 
 def parse_choice(block):
@@ -428,8 +481,11 @@ def parse_short(block):
     return {'type':'short','question':clean(block[:p]),'answer':a}
 
 def parse_essay(block):
-    ans,b=extract_essay_answer(block)
-    return {'type':'essay','question':clean(b),'answer':ans}
+    meta,b=extract_essay_answer(block)
+    item={'type':'essay','question':clean(b),'answer':meta.get('answer',''), 'gradingMode': meta.get('gradingMode','manual')}
+    if meta.get('manualMaxPoint') is not None: item['manualMaxPoint']=meta.get('manualMaxPoint')
+    if meta.get('rubric'): item['rubric']=meta.get('rubric')
+    return item
 
 def parse(tex, exam_id='DE_MAU'):
     tex=flatten_immini(rm_comments(tex)); qs=[]; errs=[]

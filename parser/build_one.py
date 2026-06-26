@@ -37,12 +37,20 @@ def build(tex_file, exam_id, title, settings=None):
         index=json.loads(index_path.read_text(encoding='utf-8'))
     else:
         index={'defaultExamId':exam_id,'exams':[]}
+    # Cập nhật danh sách đề. Từ V14, học sinh chỉ thấy các đề giáo viên tạo,
+    # không ưu tiên DE_MAU. DE_MAU vẫn có thể tồn tại làm dữ liệu mẫu nhưng được ẩn khỏi danh sách học sinh.
     exams=[e for e in index.get('exams',[]) if e.get('id')!=exam_id]
-    item={'id':exam_id,'title':title or exam_id,'file':f'exams/{exam_id}/questions.json','active':True}
+    item={'id':exam_id,'title':title or exam_id,'file':f'exams/{exam_id}/questions.json','active':True,'isGenerated':True}
     if settings: item['settings']=settings
     exams.append(item)
+    # Giữ DE_MAU nếu có để giáo viên tham khảo, nhưng đánh dấu sample.
+    for e in exams:
+        if e.get('id') == 'DE_MAU':
+            e['sample'] = True
+            e['active'] = False
     index['exams']=exams
-    if not index.get('defaultExamId'): index['defaultExamId']=exam_id
+    generated=[e for e in exams if e.get('id')!='DE_MAU' and e.get('active') is not False]
+    index['defaultExamId']=(generated[-1]['id'] if generated else (exams[0]['id'] if exams else exam_id))
     index_path.write_text(json.dumps(index,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Da tao de:', exam_id)
     print('JSON:', out_json)

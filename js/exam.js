@@ -169,6 +169,7 @@ async function loadQuestions(){
   durationSeconds = Math.max(1, Number(settings.durationMinutes || 90)) * 60;
   minSubmitSeconds = Math.max(0, Number(settings.submitAfterMinutes || 0)) * 60;
   localStorage.setItem('examTitle', examData.title || localStorage.getItem('examTitle') || examId);
+  prepareStudentVariant();
   return questions;
 }
 function studentLabel(){
@@ -187,7 +188,8 @@ function visualBlock(q){
   return '';
 }
 function renderChoice(q){
-  const opts=(q.options||[]).map((opt,i)=>`<label class="option"><input type="radio" name="q${q.id}" value="${i}"><span>${String.fromCharCode(65+i)}. ${normalizeLatexResidue(opt)}</span></label>`).join('');
+  const order=q._optionOrder || (q.options||[]).map((_,i)=>i);
+  const opts=order.map((orig,displayIndex)=>`<label class="option"><input type="radio" name="q${q.id}" value="${orig}"><span>${String.fromCharCode(65+displayIndex)}. ${normalizeLatexResidue(q.options[orig])}</span></label>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${opts}`;
 }
 function renderTrueFalse(q){
@@ -195,7 +197,17 @@ function renderTrueFalse(q){
   return `${renderLatex(q.question)}${visualBlock(q)}${rows}`;
 }
 function renderShort(q){return `${renderLatex(q.question)}${visualBlock(q)}<input class="short-input" id="q${q.id}" placeholder="Nhập đáp án">`;}
-function renderEssay(q){return `${renderLatex(q.question)}${visualBlock(q)}<textarea class="short-input essay-input" id="q${q.id}" rows=4 placeholder="Nhập bài làm tự luận"></textarea>`;}
+function renderEssay(q){
+  let note='';
+  if(q.gradingMode==='rubric' && Array.isArray(q.rubric) && q.rubric.length){
+    note = `<div class="muted"><b>Câu tự luận giáo viên chấm theo thang điểm.</b></div>`;
+  }else if(q.gradingMode==='manual'){
+    note = `<div class="muted"><b>Câu tự luận giáo viên chấm tay.</b></div>`;
+  }else if(q.gradingMode==='auto'){
+    note = `<div class="muted"><b>Câu tự luận tự chấm theo đáp án cuối.</b></div>`;
+  }
+  return `${renderLatex(q.question)}${visualBlock(q)}${note}<textarea class="short-input essay-input" id="q${q.id}" rows=6 placeholder="Nhập bài làm tự luận hoặc ghi chú bài làm trên giấy"></textarea><div class="essay-upload"><label><b>Nộp ảnh bài làm trên giấy</b> <span class="muted">(tối đa 3 ảnh, mỗi ảnh dưới 1.6MB)</span></label><input type="file" id="q${q.id}_files" accept="image/*" multiple></div>`;
+}
 function renderExam(){
   document.getElementById('studentBox').textContent = studentLabel();
   document.getElementById('examTitle').textContent = examData?.title || localStorage.getItem('examTitle') || 'Đề thi trực tuyến';
@@ -204,13 +216,13 @@ function renderExam(){
     info.innerHTML = `Thời gian: <b>${settings.durationMinutes}</b> phút. ${settings.submitAfterMinutes?`Chỉ được nộp sau <b>${settings.submitAfterMinutes}</b> phút. `:''}Số lần được làm: <b>${settings.maxAttempts}</b>.`;
   }
   const box=document.getElementById('questions');
-  box.innerHTML=questions.map(q=>{
+  box.innerHTML=questions.map((q,idx)=>{
     let body='', typeText='';
     if(q.type==='choice'){body=renderChoice(q); typeText='Trắc nghiệm';}
     else if(q.type==='truefalse'){body=renderTrueFalse(q); typeText='Đúng/Sai';}
     else if(q.type==='short'){body=renderShort(q); typeText='Trả lời ngắn';}
     else if(q.type==='essay'){body=renderEssay(q); typeText='Tự luận';}
-    return `<article class="question-card" data-id="${q.id}"><div class="question-head"><h3>Câu ${q.id}</h3><span class="badge">${typeText}</span></div>${body}</article>`;
+    return `<article class="question-card" data-id="${q.id}"><div class="question-head"><h3>Câu ${idx+1}</h3><span class="badge">${typeText}</span></div>${body}</article>`;
   }).join('');
   if(window.MathJax) MathJax.typesetPromise?.();
 }
@@ -227,7 +239,11 @@ function getPerQuestionMax(type, essayOrder=1){
   if(type==='choice') return Number(sc.choiceTotal || 0) / Math.max(1, Number(sc.choiceCount || questions.filter(q=>q.type==='choice').length || 1));
   if(type==='truefalse') return Number(sc.truefalseTotal || 0) / Math.max(1, Number(sc.truefalseCount || questions.filter(q=>q.type==='truefalse').length || 1));
   if(type==='short') return Number(sc.shortTotal || 0) / Math.max(1, Number(sc.shortCount || questions.filter(q=>q.type==='short').length || 1));
-  if(type==='essay') return getEssayPointByOrder(essayOrder);
+  if(type==='essay'){
+    const essayQs=questions.filter(q=>q.type==='essay'); const q=essayQs[essayOrder-1];
+    if(q && q.manualMaxPoint!==undefined && !isNaN(Number(q.manualMaxPoint))) return Number(q.manualMaxPoint);
+    return getEssayPointByOrder(essayOrder);
+  }
   return 0;
 }
 function scoreTrueFalse(correctItems, maxPoint){
@@ -236,7 +252,7 @@ function scoreTrueFalse(correctItems, maxPoint){
   const pct={0:0,1:0.10,2:0.25,3:0.50,4:1};
   return maxPoint * (pct[correctItems] ?? 0);
 }
-function getAnswersAndScore(){
+async function getAnswersAndScore(){
   let fullCorrect=0, score=0;
   const partScores={choice:0,truefalse:0,short:0,essay:0}, maxScores={choice:0,truefalse:0,short:0,essay:0}, counts={choice:0,truefalse:0,short:0,essay:0};
   const detail=[], answers={};
@@ -253,13 +269,16 @@ function getAnswersAndScore(){
       counts.short++; const input=document.getElementById(`q${q.id}`); given=(input?.value||'').trim(); answers[q.id]=given; isCorrect=normalizeShortAnswer(given)===normalizeShortAnswer(q.answer); point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0;
     }
     if(q.type==='essay'){
-      counts.essay++; const input=document.getElementById(`q${q.id}`); given=(input?.value||'').trim(); answers[q.id]=given;
+      counts.essay++; const input=document.getElementById(`q${q.id}`); given=(input?.value||'').trim();
+      const essayImages=await readEssayImages(q.id);
+      answers[q.id]={text:given, images:essayImages.map(x=>({name:x.name,size:x.size,error:x.error||''}))};
       const key=String(q.answer||'').trim();
-      if(key){ const keys=key.split('|').map(normalizeShortAnswer); isCorrect=keys.includes(normalizeShortAnswer(given)); point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0; }
+      if(q.gradingMode==='auto' && key){ const keys=key.split('|').map(normalizeShortAnswer); isCorrect=keys.includes(normalizeShortAnswer(given)); point=isCorrect?maxPoint:0; correctItems=isCorrect?1:0; }
       else { isCorrect=false; point=0; correctItems=0; }
+      q._submittedImages=essayImages;
     }
     if(isCorrect) fullCorrect++; score+=point; if(partScores[q.type]!==undefined) partScores[q.type]+=point; if(maxScores[q.type]!==undefined) maxScores[q.type]+=maxPoint;
-    detail.push({id:q.id,type:q.type,typeLabel:typeLabel(q.type),given,correctAnswer:q.answer ?? q.statements?.map(s=>s.answer),correctItems,isCorrect,point:Number(point.toFixed(2)),maxPoint:Number(maxPoint.toFixed(2))});
+    detail.push({id:q.id,type:q.type,typeLabel:typeLabel(q.type),given,images:q._submittedImages||[],correctAnswer:q.answer ?? q.statements?.map(s=>s.answer),correctItems,isCorrect,point:Number(point.toFixed(2)),maxPoint:Number(maxPoint.toFixed(2)),gradingMode:q.gradingMode||'',rubric:q.rubric||[],needsManual:q.type==='essay' && q.gradingMode!=='auto'});
   }
   const maxScore=Number((maxScores.choice+maxScores.truefalse+maxScores.short+maxScores.essay).toFixed(2));
   return {correct:fullCorrect,total:questions.length,score10:Number(score.toFixed(2)),maxScore,partScores:{choice:Number(partScores.choice.toFixed(2)),truefalse:Number(partScores.truefalse.toFixed(2)),short:Number(partScores.short.toFixed(2)),essay:Number(partScores.essay.toFixed(2))},maxScores:{choice:Number(maxScores.choice.toFixed(2)),truefalse:Number(maxScores.truefalse.toFixed(2)),short:Number(maxScores.short.toFixed(2)),essay:Number(maxScores.essay.toFixed(2))},counts,answers,detail};
@@ -268,7 +287,7 @@ async function submitExam(auto=false){
   if(examLocked) return;
   if(!auto && elapsedSeconds < minSubmitSeconds){alert(`Chưa được nộp bài. Em chỉ được nộp sau ${settings.submitAfterMinutes} phút.`); return;}
   examLocked=true; if(timerHandle) clearInterval(timerHandle);
-  const result=getAnswersAndScore(); addAttempt();
+  const result=await getAnswersAndScore(); addAttempt();
   const payload={studentId:localStorage.getItem('studentId')||'',studentName:localStorage.getItem('studentName')||'',className:localStorage.getItem('className')||'',examId:localStorage.getItem('examId')||examData?.examId||'DE_MAU',examTitle:examData?.title||localStorage.getItem('examTitle')||'',score:result.score10,maxScore:result.maxScore,correct:result.correct,total:result.total,partScores:result.partScores,maxScores:result.maxScores,counts:result.counts,answers:result.answers,detail:result.detail,startTime:localStorage.getItem('startTime')||'',submitTime:new Date().toISOString(),scoringRule:JSON.stringify(settings.scoring||{})};
   saveResultLocal(payload); const onlineStatus=await saveResultOnline(payload); payload.onlineStatus=onlineStatus; localStorage.setItem('lastResult',JSON.stringify(payload)); window.location.href='result.html';
 }
@@ -286,6 +305,35 @@ function startTimer(){
   }
   tick(); timerHandle=setInterval(tick,1000);
 }
+
+function hashString(str){let h=2166136261; for(let i=0;i<String(str).length;i++){h^=String(str).charCodeAt(i); h=Math.imul(h,16777619);} return h>>>0;}
+function mulberry32(a){return function(){let t=a+=0x6D2B79F5; t=Math.imul(t^t>>>15,t|1); t^=t+Math.imul(t^t>>>7,t|61); return ((t^t>>>14)>>>0)/4294967296;}}
+function shuffleArrayWithRand(arr, rand){for(let i=arr.length-1;i>0;i--){const j=Math.floor(rand()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]];}}
+function prepareStudentVariant(){
+  // V14: trộn riêng phần trắc nghiệm cho từng học sinh, giữ nguyên Đ/S, TLN, tự luận.
+  // Radio vẫn lưu chỉ số đáp án gốc nên chấm điểm không sai dù đảo phương án.
+  const seedText=[localStorage.getItem('examId')||'',localStorage.getItem('studentId')||'',localStorage.getItem('className')||'',localStorage.getItem('startTime')||''].join('|');
+  const rand=mulberry32(hashString(seedText));
+  const choiceQs=questions.filter(q=>q.type==='choice').map(q=>JSON.parse(JSON.stringify(q)));
+  choiceQs.forEach(q=>{q._optionOrder=(q.options||[]).map((_,i)=>i); shuffleArrayWithRand(q._optionOrder, rand);});
+  shuffleArrayWithRand(choiceQs, rand);
+  let k=0;
+  questions=questions.map(q=>q.type==='choice'?choiceQs[k++]:q);
+}
+function fileToDataUrl(file){return new Promise((resolve,reject)=>{const r=new FileReader(); r.onload=()=>resolve({name:file.name,type:file.type,size:file.size,dataUrl:r.result}); r.onerror=reject; r.readAsDataURL(file);});}
+async function readEssayImages(qid){
+  const input=document.getElementById(`q${qid}_files`);
+  const files=[...(input?.files||[])].slice(0,3); // giới hạn 3 ảnh/câu để tránh quá nặng Google Sheets
+  const maxBytes=1600*1024;
+  const out=[];
+  for(const f of files){
+    if(!f.type.startsWith('image/')) continue;
+    if(f.size>maxBytes){out.push({name:f.name,type:f.type,size:f.size,error:'Ảnh lớn hơn 1.6MB, vui lòng nén/chụp lại nhẹ hơn.'}); continue;}
+    out.push(await fileToDataUrl(f));
+  }
+  return out;
+}
+
 function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}}
 async function init(){
   if(!localStorage.getItem('studentId') || !localStorage.getItem('className')) console.warn('Chưa có thông tin học sinh.');
