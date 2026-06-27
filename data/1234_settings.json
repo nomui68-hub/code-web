@@ -1,0 +1,17 @@
+{
+  "durationMinutes": 90.0,
+  "submitAfterMinutes": 0.0,
+  "maxAttempts": 2,
+  "scoring": {
+    "choiceTotal": 3.0,
+    "choiceCount": 12,
+    "truefalseTotal": 2.0,
+    "truefalseCount": 2,
+    "shortTotal": 4.0,
+    "shortCount": 4,
+    "essayTotal": 3.0,
+    "essayCount": 3,
+    "essayPoints": [],
+    "truefalseMode": "progressive"
+  }
+}
