@@ -1,5 +1,5 @@
 {
-  "defaultExamId": "1235",
+  "defaultExamId": "NG_C_QU_",
   "exams": [
     {
       "id": "1234",
@@ -44,6 +44,30 @@
           "shortCount": 4,
           "essayTotal": 3.0,
           "essayCount": 3,
+          "essayPoints": [],
+          "truefalseMode": "progressive"
+        }
+      }
+    },
+    {
+      "id": "NG_C_QU_",
+      "title": "GK2",
+      "file": "exams/NG_C_QU_/questions.json",
+      "active": true,
+      "isGenerated": true,
+      "settings": {
+        "durationMinutes": 90.0,
+        "submitAfterMinutes": 0.0,
+        "maxAttempts": 2,
+        "scoring": {
+          "choiceTotal": 3.0,
+          "choiceCount": 12,
+          "truefalseTotal": 4.0,
+          "truefalseCount": 4,
+          "shortTotal": 3.0,
+          "shortCount": 6,
+          "essayTotal": 0.0,
+          "essayCount": 0,
           "essayPoints": [],
           "truefalseMode": "progressive"
         }
