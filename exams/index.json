@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "0101",
+  "defaultExamId": "0103",
   "exams": [
     {
-      "id": "0101",
-      "title": "Lớp 10",
-      "file": "exams/0101/questions.json",
+      "id": "0103",
+      "title": "lớp 11",
+      "file": "exams/0103/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
-        "durationMinutes": 10.0,
+        "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
         "maxAttempts": 2,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1783346149",
-        "buildAt": "2026-07-06T20:55:49",
+        "attemptToken": "1783347416",
+        "buildAt": "2026-07-06T21:16:56",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
