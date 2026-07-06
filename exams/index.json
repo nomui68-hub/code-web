@@ -1,4 +1,33 @@
 {
-  "defaultExamId": "",
-  "exams": []
+  "defaultExamId": "0101",
+  "exams": [
+    {
+      "id": "0101",
+      "title": "lớp 10",
+      "file": "exams/0101/questions.json",
+      "active": true,
+      "isGenerated": true,
+      "settings": {
+        "durationMinutes": 90.0,
+        "submitAfterMinutes": 0.0,
+        "maxAttempts": 2,
+        "openAt": "",
+        "closeAt": "",
+        "attemptToken": "1783349559",
+        "buildAt": "2026-07-06T21:52:39",
+        "scoring": {
+          "choiceTotal": 3.0,
+          "choiceCount": 12,
+          "truefalseTotal": 4.0,
+          "truefalseCount": 4,
+          "shortTotal": 3.0,
+          "shortCount": 6,
+          "essayTotal": 3.0,
+          "essayCount": 2,
+          "essayPoints": [],
+          "truefalseMode": "progressive"
+        }
+      }
+    }
+  ]
 }
