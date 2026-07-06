@@ -30,15 +30,18 @@ async function loadExamList(){
   try{
     const res=await fetch('exams/index.json?_='+Date.now());
     const data=await res.json();
-    // V14: học sinh chỉ thấy đề giáo viên tạo. Ẩn DE_MAU nếu còn tồn tại trong index.json.
-    let exams=(data.exams||[]).filter(e=>e.active!==false && e.id!=='DE_MAU' && !e.sample);
-    if(!exams.length) exams=(data.exams||[]).filter(e=>e.active!==false);
+    // V17: học sinh chỉ thấy các đề giáo viên đã giao trong exams/index.json.
+    // Không bao giờ hiện DE_MAU hoặc đề mẫu trên trang học sinh.
+    let exams=(data.exams||[]).filter(e=>e && e.active!==false && e.id!=='DE_MAU' && !e.sample);
+    const btn=document.querySelector('#loginForm button[type="submit"]');
     if(!exams.length){
       select.innerHTML='<option value="">Chưa có đề nào được giao</option>';
       hidden.value='';
+      if(btn) btn.disabled=true;
       status.textContent='Chưa có đề mới. Giáo viên cần tạo/giao đề trước.';
       return;
     }
+    if(btn) btn.disabled=false;
     select.innerHTML=exams.map(e=>`<option value="${e.id}" ${canOpenExam(e)?'':'disabled'}>${e.title||e.id}${examStatusLabel(e)}</option>`).join('');
     const available=exams.filter(canOpenExam);
     const def=(data.defaultExamId && available.some(e=>e.id===data.defaultExamId)) ? data.defaultExamId : (available[0]&&available[0].id) || (exams[0]&&exams[0].id);
@@ -46,7 +49,7 @@ async function loadExamList(){
     localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || def);
     status.textContent=`Đã tải ${exams.length} đề mới, hiện mở ${exams.filter(canOpenExam).length} đề.`;
   }catch(err){
-    select.innerHTML='<option value="DE_MAU">Đề mẫu</option>'; hidden.value='DE_MAU'; status.textContent='Không tải được danh sách đề, dùng DE_MAU.';
+    select.innerHTML='<option value="">Không tải được danh sách đề</option>'; hidden.value=''; const btn=document.querySelector('#loginForm button[type="submit"]'); if(btn) btn.disabled=true; status.textContent='Không tải được exams/index.json. Giáo viên cần upload thư mục exams lên GitHub.';
   }
 }
 document.addEventListener('DOMContentLoaded',()=>{
@@ -65,8 +68,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     localStorage.setItem('studentId', document.getElementById('studentId').value.trim());
     localStorage.setItem('studentName', document.getElementById('studentName').value.trim());
     localStorage.setItem('className', document.getElementById('className').value.trim());
-    localStorage.setItem('examId', select.value || 'DE_MAU');
-    localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || select.value || 'DE_MAU');
+    localStorage.setItem('examId', select.value);
+    localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || select.value);
     localStorage.setItem('startTime', new Date().toISOString());
     window.location.href='exam.html';
   });

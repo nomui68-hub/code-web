@@ -1,0 +1,21 @@
+{
+  "durationMinutes": 10.0,
+  "submitAfterMinutes": 0.0,
+  "maxAttempts": 2,
+  "openAt": "",
+  "closeAt": "",
+  "attemptToken": "1783346149",
+  "buildAt": "2026-07-06T20:55:49",
+  "scoring": {
+    "choiceTotal": 3.0,
+    "choiceCount": 12,
+    "truefalseTotal": 4.0,
+    "truefalseCount": 4,
+    "shortTotal": 3.0,
+    "shortCount": 6,
+    "essayTotal": 3.0,
+    "essayCount": 2,
+    "essayPoints": [],
+    "truefalseMode": "progressive"
+  }
+}

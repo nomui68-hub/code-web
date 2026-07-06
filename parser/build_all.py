@@ -1,7 +1,7 @@
 # build_all.py
 # Quét tất cả file .tex trong thư mục tex/ và sinh thành nhiều đề online.
 from pathlib import Path
-import subprocess, sys, re
+import subprocess, sys, re, json
 
 def safe_id(name):
     s=name.upper()
@@ -15,6 +15,9 @@ def main():
     if not files:
         print('Khong co file .tex trong thu muc tex')
         return
+    # V17: mỗi lần quét toàn bộ thư mục tex/ thì tạo danh sách đề mới hoàn toàn.
+    (root/'exams').mkdir(exist_ok=True)
+    (root/'exams'/'index.json').write_text(json.dumps({'defaultExamId':'','exams':[]}, ensure_ascii=False, indent=2), encoding='utf-8')
     for f in files:
         # V14: bỏ qua de.tex/DE_MAU khi quét hàng loạt để học sinh không luôn thấy đề mẫu.
         if f.name.lower() in ('de.tex','de_mau.tex','de-mau.tex'):

@@ -9,7 +9,7 @@ def safe_id(s):
     s=re.sub(r'[^A-Z0-9_-]+','_',s)
     return s or 'DE_MOI'
 
-def build(tex_file, exam_id, title, settings=None):
+def build(tex_file, exam_id, title, settings=None, clear_index=False):
     root=Path(__file__).resolve().parents[1]
     tex_file=Path(tex_file)
     if not tex_file.is_absolute(): tex_file=root/tex_file
@@ -33,23 +33,19 @@ def build(tex_file, exam_id, title, settings=None):
     subprocess.run([sys.executable,str(rv),str(out_json),str(img_dir),f'images/{exam_id}'],check=False)
     # Cập nhật danh sách đề
     index_path=root/'exams'/'index.json'
-    if index_path.exists():
+    if clear_index:
+        index={'defaultExamId':exam_id,'exams':[]}
+    elif index_path.exists():
         index=json.loads(index_path.read_text(encoding='utf-8'))
     else:
         index={'defaultExamId':exam_id,'exams':[]}
-    # Cập nhật danh sách đề. Từ V14, học sinh chỉ thấy các đề giáo viên tạo,
-    # không ưu tiên DE_MAU. DE_MAU vẫn có thể tồn tại làm dữ liệu mẫu nhưng được ẩn khỏi danh sách học sinh.
-    exams=[e for e in index.get('exams',[]) if e.get('id')!=exam_id]
+    # V17: danh sách học sinh chỉ dựa vào exams/index.json; DE_MAU luôn bị loại khỏi danh sách giao.
+    exams=[e for e in index.get('exams',[]) if e.get('id') not in (exam_id,'DE_MAU') and not e.get('sample')]
     item={'id':exam_id,'title':title or exam_id,'file':f'exams/{exam_id}/questions.json','active':True,'isGenerated':True}
     if settings: item['settings']=settings
     exams.append(item)
-    # Giữ DE_MAU nếu có để giáo viên tham khảo, nhưng đánh dấu sample.
-    for e in exams:
-        if e.get('id') == 'DE_MAU':
-            e['sample'] = True
-            e['active'] = False
     index['exams']=exams
-    generated=[e for e in exams if e.get('id')!='DE_MAU' and e.get('active') is not False]
+    generated=[e for e in exams if e.get('active') is not False]
     index['defaultExamId']=(generated[-1]['id'] if generated else (exams[0]['id'] if exams else exam_id))
     index_path.write_text(json.dumps(index,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Da tao de:', exam_id)
@@ -64,9 +60,10 @@ def main():
         return
     tex=sys.argv[1]; exam_id=sys.argv[2]; title=sys.argv[3] if len(sys.argv)>3 and not sys.argv[3].startswith('--') else exam_id
     settings=None
+    clear_index='--clear-index' in sys.argv
     if '--config' in sys.argv:
         import json
         cfg=sys.argv[sys.argv.index('--config')+1]
         settings=json.loads(Path(cfg).read_text(encoding='utf-8'))
-    build(tex,exam_id,title,settings)
+    build(tex,exam_id,title,settings,clear_index=clear_index)
 if __name__=='__main__': main()

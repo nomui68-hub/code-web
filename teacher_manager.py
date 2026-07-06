@@ -17,6 +17,7 @@ import subprocess
 import sys
 import tempfile
 import traceback
+import time
 import webbrowser
 
 ROOT = Path(__file__).resolve().parent
@@ -29,7 +30,7 @@ def safe_id(s):
 
 def page(msg=''):
     return f'''<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V15 - Quản lý đề thi Toán</title><style>
+<title>V17 - Quản lý đề thi Toán</title><style>
 body{{font-family:Arial, sans-serif;background:#f3f6fb;margin:0;color:#07142b}} .wrap{{max-width:1100px;margin:30px auto;padding:0 18px}}
 .card{{background:white;border:1px solid #dbe5f3;border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 8px 24px #0001}}
 h1{{margin-top:0}} label{{font-weight:700;display:block;margin:12px 0 6px}} input,textarea,select{{width:100%;box-sizing:border-box;padding:12px;border:1px solid #cbd7ea;border-radius:10px;font-size:16px}} textarea{{min-height:260px;font-family:Consolas,monospace}}
@@ -39,7 +40,7 @@ h1{{margin-top:0}} label{{font-weight:700;display:block;margin:12px 0 6px}} inpu
 .panel{{display:none}} .panel.active{{display:block}}
 @media(max-width:800px){{.grid,.grid2{{grid-template-columns:1fr}}}}
 </style></head><body><div class="wrap">
-<div class="card"><h1>V15 - Quản lý đề thi Toán Toán</h1><p class="muted">Công cụ này chạy trên máy giáo viên. V15 kế thừa V12/V15, ẩn đề mẫu với học sinh, trộn phần trắc nghiệm theo từng học sinh và cho học sinh nộp ảnh bài tự luận để giáo viên chấm.</p></div>
+<div class="card"><h1>V17 - Quản lý đề thi Toán Toán</h1><p class="muted">Công cụ này chạy trên máy giáo viên. V17 tổ chức lại danh sách đề: học sinh chỉ thấy các đề active trong exams/index.json, không hiện đề mẫu và không hiện trang giáo viên.</p></div>
 {msg}
 <form class="card" method="post" action="/build" enctype="multipart/form-data">
 <h2>1. Chọn file đề hoặc dán code LaTeX</h2>
@@ -61,7 +62,7 @@ h1{{margin-top:0}} label{{font-weight:700;display:block;margin:12px 0 6px}} inpu
 1) Tự chấm kết quả: <code>\essayans{{2|2,0}}</code><br>
 2) Giáo viên chấm tay: <code>\essaymanual[2]</code><br>
 3) Chấm theo thang điểm: <code>\essayrubric{{{{0.5}}{{Lập đúng phương trình}}{{0.5}}{{Tính đúng kết quả}}}}</code></p>
-<p><button class="btn" type="submit">Lưu bài và giao bài</button></p>
+<label style="display:flex;gap:8px;align-items:center;font-weight:600"><input type="checkbox" name="clear_old" value="1" checked style="width:auto"> Xóa danh sách đề cũ, chỉ giao đề này sau khi tạo</label><p class="muted">Nếu muốn giao 2–3 đề cùng lúc, đặt các file .tex vào thư mục tex/ rồi dùng mục 5: Quét toàn bộ đề trong thư mục tex.</p><p><button class="btn" type="submit">Lưu bài và giao bài</button></p>
 </form>
 <form class="card" method="post" action="/upload_image" enctype="multipart/form-data">
 <h2>4. Sửa hình nhanh cho câu bị lỗi</h2>
@@ -174,6 +175,8 @@ def build_exam(fields, files):
     cfg_path = cfg_dir/f'{exam_id}_settings.json'
     cfg_path.write_text(json.dumps(settings,ensure_ascii=False,indent=2),encoding='utf-8')
     cmd = [sys.executable, str(ROOT/'parser'/'build_one.py'), str(tex_path), exam_id, title, '--config', str(cfg_path)]
+    if read_field(fields,'clear_old','') == '1':
+        cmd.append('--clear-index')
     proc = subprocess.run(cmd, cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace')
     if proc.returncode not in (0,):
         raise RuntimeError(proc.stdout)
@@ -239,7 +242,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     url=f'http://localhost:{PORT}'
-    print('Cong cu quan ly de V15 dang chay tai:', url)
+    print('Cong cu quan ly de V17 dang chay tai:', url)
     try:
         webbrowser.open(url)
     except Exception:
