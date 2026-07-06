@@ -182,7 +182,8 @@ function examWindowText(){
   return a.length ? a.join('. ') + '.' : '';
 }
 
-function attemptKey(){return `attempts_${localStorage.getItem('examId') || 'DE_MAU'}_${localStorage.getItem('studentId') || 'NOID'}`;}
+function attemptKey(){const token=(settings && (settings.attemptToken || settings.buildAt)) || 'v0'; return `attempts_${localStorage.getItem('examId') || 'DE_MAU'}_${localStorage.getItem('studentId') || 'NOID'}_${token}`;}
+function clearOldAttemptKeysForExam(){try{const examId=localStorage.getItem('examId')||'DE_MAU'; const sid=localStorage.getItem('studentId')||'NOID'; const prefix=`attempts_${examId}_${sid}_`; Object.keys(localStorage).forEach(k=>{if(k.startsWith(prefix) && k!==attemptKey()) localStorage.removeItem(k);});}catch(e){}}
 function getAttemptCount(){return Number(localStorage.getItem(attemptKey()) || '0');}
 function addAttempt(){localStorage.setItem(attemptKey(), String(getAttemptCount()+1));}
 
@@ -194,6 +195,7 @@ async function loadQuestions(){
   examData = await res.json();
   questions = examData.questions || examData;
   settings = deepMerge(DEFAULT_SETTINGS, examData.settings || {});
+  clearOldAttemptKeysForExam();
   durationSeconds = Math.max(1, Number(settings.durationMinutes || 90)) * 60;
   minSubmitSeconds = Math.max(0, Number(settings.submitAfterMinutes || 0)) * 60;
   localStorage.setItem('examTitle', examData.title || localStorage.getItem('examTitle') || examId);
@@ -398,7 +400,7 @@ async function init(){
   const maxAttempts=Number(settings.maxAttempts || 1);
   const openStatus=examOpenStatus();
   if(!openStatus.ok){document.getElementById('questions').innerHTML=`<section class="card"><h2>Chưa thể làm bài</h2><p>${openStatus.reason}</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
-  if(getAttemptCount() >= maxAttempts){document.getElementById('questions').innerHTML=`<section class="card"><h2>Đã hết số lần làm bài</h2><p>Em đã làm đủ ${maxAttempts} lần cho đề này trên thiết bị này.</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
+  if(getAttemptCount() >= maxAttempts){document.getElementById('questions').innerHTML=`<section class="card"><h2>Đã hết số lần làm bài</h2><p>Em đã làm đủ ${maxAttempts} lần cho đề này trên thiết bị này.</p><p class="muted">Nếu giáo viên tạo lại/giao lại đề, hệ thống sẽ tự mở lượt làm mới.</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
   renderExam(); attachEssayFileListeners(); startTimer();
   document.getElementById('submitBtn').addEventListener('click',()=>{if(confirm('Em chắc chắn muốn nộp bài?')) submitExam(false);});
   document.getElementById('shuffleBtn').addEventListener('click',()=>{shuffleArray(questions); renderExam();});

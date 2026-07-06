@@ -104,9 +104,17 @@ async function fillExamFilter(){
 }
 async function loadLocal(){ allRows=getLocalRows(); document.getElementById('sourceNote').textContent='Dữ liệu cục bộ trên trình duyệt này.'; render(); }
 async function loadOnline(){
+  const API_URL=(typeof getApiUrl==='function'?getApiUrl():'');
+  if(!API_URL){
+    document.getElementById('sourceNote').innerHTML='<span class="bad">Chưa cấu hình Google Sheets trong js/config.js. Bảng này chỉ xem được dữ liệu cục bộ trên máy giáo viên.</span>';
+    return false;
+  }
+  document.getElementById('sourceNote').textContent='Đang lấy dữ liệu từ Google Sheets...';
   const rows=await loadOnlineResults();
-  if(rows.length){ allRows=rows; document.getElementById('sourceNote').textContent='Dữ liệu lấy từ Google Sheets.'; render(); }
-  else { alert('Chưa lấy được dữ liệu Google Sheets. Kiểm tra js/config.js đã dán Web App URL chưa.'); }
+  allRows=rows;
+  document.getElementById('sourceNote').textContent=rows.length ? 'Dữ liệu lấy từ Google Sheets.' : 'Google Sheets chưa có lượt nộp nào hoặc Web App chưa trả dữ liệu.';
+  render();
+  return true;
 }
 
 function deleteLocalByIndices(indices){
@@ -132,13 +140,13 @@ function deleteFilteredRows(){
 }
 
 document.addEventListener('DOMContentLoaded', async()=>{
-  await fillExamFilter(); await loadLocal();
+  await fillExamFilter(); if(typeof getApiUrl==='function' && getApiUrl()){ await loadOnline(); } else { await loadLocal(); }
   ['examFilter','classFilter','studentFilter'].forEach(id=>document.getElementById(id).addEventListener('input', render));
   document.getElementById('reloadBtn').onclick=loadLocal;
   document.getElementById('onlineBtn').onclick=loadOnline;
   document.getElementById('csvBtn').onclick=()=>csv(filteredRows());
   document.getElementById('deleteSelectedBtn').onclick=deleteSelectedRows;
   document.getElementById('deleteFilteredBtn').onclick=deleteFilteredRows;
-  document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa TOÀN BỘ kết quả cục bộ trên trình duyệt này? Thao tác này không xóa Google Sheets.')){localStorage.removeItem('examResults'); loadLocal();}};
+  document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa TOÀN BỘ kết quả cục bộ trên trình duyệt giáo viên này? Thao tác này KHÔNG xóa Google Sheets và KHÔNG mở lại lượt làm trên điện thoại học sinh.')){localStorage.removeItem('examResults'); loadLocal();}};
   document.getElementById('checkAllRows')?.addEventListener('change',e=>document.querySelectorAll('.rowCheck:not(:disabled)').forEach(x=>x.checked=e.target.checked));
 });
