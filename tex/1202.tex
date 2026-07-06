@@ -1,629 +1,380 @@
-\begin{name}
-	{Biên soạn \& Phản biện: Nhóm 3}
-	{Sở GD \& ĐT Huế (Lần 1)}
-\end{name}
-\Opensolutionfile{ansbook}[ans/ansb\currfilebase]
-\caulc
-\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-I]
-\begin{ex}%[Dự án 2J60HW-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2D1N1-2]
-	Cho hàm số $y = f(x)$ có bảng biến thiên như hình sau:
-	\begin{center}
-		\begin{tikzpicture}
-    %hidden: VM005
-			\tkzTabInit[nocadre=true,lgt=1,espcl=3,deltacl=0.5]
-			{$x$ / 0.7, $y'$ / 0.7, $y$ / 2}
-			{$-\infty$, $1$, $3$, $+\infty$}
-			\tkzTabLine{ , +, d, +, 0, -, }
-			\tkzTabVar{-/ $-1$ , +D-/ $+\infty$ / $-\infty$ , +/ $2$ , -/ $-\infty$}
-    \node at (T11){\href{2J60HW}{\tiny \phantom{2J60HW}}};
-		\end{tikzpicture}
-	\end{center}
-	Hàm số đồng biến trên khoảng nào trong các khoảng dưới đây?
+\def\thoigian{90}%--Thời gian
+\de{ĐỀ THI HỌC KỲ II NĂM HỌC 2025-2026}{THPT Mạc Đĩnh Chi - Tp HCM}
+\begin{center}
+	\textbf{PHẦN 1 - TRẮC NGHIỆM}
+\end{center}
+\Opensolutionfile{ans}[ans/nlc]
+%Câu 1
+\begin{ex}%[0D8N1-2]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Một quán trà sữa phục vụ thực đơn gồm $4$ loại trà sữa khác nhau và $6$ loại topping khác nhau. Một khách hàng muốn chọn một combo gồm $1$ loại trà sữa và $1$ loại topping. Hỏi khách hàng đó có bao nhiều cách chọn một combo như vậy?
 	\choice
-		{$(-1;2)$}
-		{$(3;4)$}
-		{$(0;3)$}
-		{\True $(2;3)$}
-	\loigiai{
-		Dựa vào bảng biến thiên, ta thấy $y'>0$ trên các khoảng $(-\infty;1)$ và $(1;3)$.\\
-		Suy ra hàm số đồng biến trên các khoảng $(-\infty;1)$ và $(1;3)$.\\
-		Vì $(2;3)\subset (1;3)$ nên hàm số cũng đồng biến trên khoảng $(2;3)$.
+	{$10$}	
+	{\True $24$}	
+	{$120$}	
+	{$720$}	
+	\loigiai{Chọn một trong $4$ loại trà sữa khác nhau có $4$ cách.\\
+		Chọn một trong $6$ loại topping có $6$ cách.\\
+		Vậy số cách chọn một combo gồm $1$ loại trà sữa và $1$ loại topping là $6 \cdot 4=24$ cách.
 	}
 \end{ex}
-
-\begin{ex}%[Dự án 616BSW-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[1D6H4-5]
-	Tập nghiệm của bất phương trình $\log_2(x-2)>2$ là
+%Câu 2
+\begin{ex}%[0H9H3-4]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng tọa độ $Oxy$, góc giữa hai đường thẳng $d \colon \sqrt{3}x-y+2025=0$ và $\Delta \colon \sqrt{3}x+y+2026=0$ bằng
 	\choice
-		{$(4;+\infty)$}
-		{\True $(6;+\infty)$}
-		{$(2;4)$}
-		{$(2;+\infty)$}
-	\loigiai{
-		Điều kiện xác định: $x-2>0\Leftrightarrow x>2$.\\
-		Ta có
-		\allowdisplaybreaks
-		\begin{eqnarray*}
-			\log_2(x-2)>2 &\Leftrightarrow& x-2>2^2\\
-			&\Leftrightarrow& x-2>4\\
-			&\Leftrightarrow& x>6.
-		\end{eqnarray*}
-		Kết hợp điều kiện, ta được tập nghiệm của bất phương trình là $S=(6;+\infty)$.
-	}
+	{\True $60^\circ$}	
+	{$30^\circ$}	
+	{$45^\circ$}	
+	{$90^\circ$}
+	\loigiai{Ta có $\cos \left(d,\Delta\right)=\dfrac{\left| \sqrt{3} \cdot\sqrt{3} -1 \cdot 1 \right|}{\sqrt{\left(\sqrt{3}\right)^2+(-1)^2} \cdot \sqrt{\left(\sqrt{3}\right)^2+1^2}}=\dfrac{1}{2}$ nên $\left(d,\Delta\right)=60^\circ$.}	
 \end{ex}
-
-\begin{ex}%[Dự án 20XVSB-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2D3N1-2]
-	Mỗi ngày bác Bình đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: km) của bác Bình trong $20$ ngày được thống kê ở bảng sau:
-	\begin{center}
-		\begin{tabular}{|l|c|c|c|c|c|}
-			\hline
-			Quãng đường & $[2;3)$ & $[3;4)$ & $[4;5)$ & $[5;6)$ & $[6;7)$ \\
-			\hline
-			Số ngày & $3$ & $6$ & $5$ & $4$ & $2$ \\
-			\hline
-		\end{tabular}
-	\end{center}
-	Khoảng biến thiên của mẫu số liệu ghép nhóm trên bằng
+%Câu 3
+\begin{ex}%[0D7H3-1]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Tích các nghiệm thực của phương trình $\sqrt{2x^2+1}=\sqrt{x^2+5}$ bằng
 	\choice
-		{\True $5$}
-		{$6$}
-		{$7$}
-		{$1$}
-	\loigiai{
-		Khoảng biến thiên của mẫu số liệu ghép nhóm trên là $R=7-2=5$.
-	}
+	{$0$}	
+	{$-1$}	
+	{$1$}	
+	{\True $-4$}	
+	\loigiai{Xét phương trình $\sqrt{2x^2+1}=\sqrt{x^2+5}$ (*).\\
+		Bình phương hai vế của phương trình, ta được
+		$2x^2+1=x^2+5$ hay $x^2-4=0$.\\ Suy ra $\hoac{&x=2\\&x=-2.}$\\
+		Thay lần lượt hai giá trị trị $x=2$, $x=-2$ vào phương trình (*), ta thấy hai giá trị này đều thỏa mãn.\\
+		Vậy phương trình (*) có hai nghiệm là $x=2$, $x=-2$ và tích hai nghiệm là $2 \cdot (-2) =-4$.}
 \end{ex}
-
-\begin{ex}%[Dự án 6BLREY-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[1D1N5-1]
-	Xác định tập nghiệm của phương trình $\cos x=1$.
+%Câu 4
+\begin{ex}%[0H9H3-2]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ với $A(1;3)$, $B(4;6)$, $C(0;4)$. Gọi $M$ là
+	trung điểm của đoạn thẳng $BC$. Phương trình tổng quát của đường thắng $AM$ có dạng
+	$ax-y+c=0$. Tính $P=a^2-c^2$.
 	\choice
-		{$S=\{\pi+k2\pi\mid k\in\mathbb{Z}\}$}
-		{$S=\{\pi+k\pi\mid k\in\mathbb{Z}\}$}
-		{\True $S=\{k2\pi\mid k\in\mathbb{Z}\}$}
-		{$S=\{k\pi\mid k\in\mathbb{Z}\}$}
-	\loigiai{
-		Ta có $\cos x=1\Leftrightarrow x=k2\pi$ ($k\in \mathbb{Z}$).\\
-		Vậy tập nghiệm của phương trình là $S=\{k2\pi\mid k\in\mathbb{Z}\}$.
-	}
+	{$P=4$}	
+	{$P=1$}	
+	{\True $P=3$}	
+	{$P=8$}	
+	\loigiai{$M$ là
+		trung điểm của đoạn thẳng $BC$ nên 
+		$$\heva{&x_M=\dfrac{x_B+x_C}{2}=\dfrac{4+0}{2}=2\\&y_M=\dfrac{y_B+y_C}{2}=\dfrac{6+4}{2}=5.}$$
+		Vậy $M(2;5)$.\\
+		Ta có $\overrightarrow{AM}=(1;2)$ nên đường thẳng $AM$ có một vectơ pháp tuyến là $\overrightarrow{n}=(2;-1)$.\\
+		Phương trình tổng quát của đường thẳng $AM$ là
+		$$2(x-1)-1(y-3) = 0 \Leftrightarrow 2x-y+1=0.$$
+		Do đó $a=2$, $c=1$ nên $P=a^2-c^2=2^2-1^2=3$.}
 \end{ex}
-
-\begin{ex}%[Dự án 4Z8EZP-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2H5N1-2]
-	Trong không gian $Oxyz$, cho mặt phẳng $(P)$ có phương trình $x-3y+5=0$. Xác định một vectơ pháp tuyến của mặt phẳng $(P)$.
+%Câu 5
+\begin{ex}%[0D7N1-1]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Biểu thức nào sau đây là tam thức bậc hai?
 	\choice
-		{$\overrightarrow{n}=(1;0;5)$}
-		{$\overrightarrow{n}=(1;0;-3)$}
-		{\True $\overrightarrow{n}=(1;-3;0)$}
-		{$\overrightarrow{n}=(1;-3;5)$}
-	\loigiai{
-		Mặt phẳng $(P)\colon x-3y+5=0$ có một vectơ pháp tuyến là $\overrightarrow{n}=(1;-3;0)$.
-	}
+	{$f(x)=x+\dfrac{1}{x}$}	
+	{$g(x)=2x-5$}	
+	{\True $h(x)=x^2-2$}	
+	{$t(x)=x^3+x-2$}	
+	\loigiai{Biểu thức $h(x)=x^2-2$ là tam thức bậc hai.}
 \end{ex}
-
-\begin{ex}%[Dự án 4080E1-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[1D2N3-2]
-	Cho cấp số nhân $\left(u_n\right)$ có $u_3=4$ và $u_4=2$. Tìm công bội $q$ của cấp số nhân đó.
+%Câu 6
+\begin{ex}%[0H9N5-1]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng tọa độ $Oxy$, cho elip $(E) \colon \dfrac{x^2}{25}+\dfrac{y^2}{16}=1$. Độ dài trục lớn elip bằng
 	\choice
-		{\True $q=\dfrac{1}{2}$}
-		{$q=2$}
-		{$q=\sqrt{2}$}
-		{$q=4$}
-	\loigiai{
-		Vì $\left(u_n\right)$ là một cấp số nhân có công bội $q$ nên ta có $u_{4}=u_{3}\cdot q$.\\ 			
-		Suy ra $q=\dfrac{u_4}{u_3}=\dfrac{2}{4}=\dfrac{1}{2}$.
-	}
+	{$8$}	
+	{\True $10$}	
+	{$50$}	
+	{$32$}	
+	\loigiai{Elip $(E) \colon \dfrac{x^2}{25}+\dfrac{y^2}{16}=1$ có $a^2=25$ nên $a=5$.\\
+		Độ dài trục lớn elip $A_1A_2=2a=2 \cdot 5=10$.}
 \end{ex}
-
-\begin{ex}%[Dự án 4Z41NS-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2D1N3-1]
-	\immini[thm]{Cho hàm số $y=f(x)$ liên tục trên $\mathbb{R}$ và có đồ thị là đường cong như hình vẽ bên. Xác định giá trị nhỏ nhất trên đoạn $[-1;1]$ của hàm số $y=f(x)$.
-		\choice[2]
-			{$-2$}
-			{$-1$}
-			{\True $-4$}
-			{$0$}
-		}{
-		\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
-    %hidden: VM005
-			\def \xmin{-3.5}\def \xmax{3}\def \ymin{-5}\def \ymax{1.2} 
-			\draw[->] (\xmin,0)--(\xmax,0) node[shift=(-110:0.2)] {$x$};
-			\draw[->] (0,\ymin)--(0,\ymax) node[shift=(-150:0.2)] {$y$};
-			\fill (0,0) node{\href{4Z41NS}{\tiny \phantom{4Z41NS}}} circle(1pt) node[shift=(-135:0.25)]{$O$};
-			\fill (-2,0) circle(1pt) node[shift=(-150:0.35)]{$-2$};
-			\fill (-1,0) circle(1pt) node[shift=(90:0.2)]{$-1$};
-			\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$};
-			\fill (0,-4) circle(1pt) node[shift=(0:0.25)]{$-4$};
-			\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$};
-			\fill (-1,-4) circle (1pt) (0,-4) circle (1pt) (-1,0) circle (1pt);
-			\draw[dashed] (-1,0)-- (-1,-4) -- (0,-4);
-			\clip (\xmin,\ymin) rectangle (\xmax,\ymax); 
-			\draw[smooth,samples=100,domain=\xmin:\xmax] plot({\x}, {-\x*\x*\x + 3*\x - 2});
-    \node at (0,0){\href{4Z41NS}{\tiny \phantom{4Z41NS}}};
-		\end{tikzpicture}
-		}
-	\loigiai{
-		Dựa vào đồ thị hàm số, ta thấy giá trị nhỏ nhất của hàm số trên đoạn $[-1;1]$ bằng $-4$ và đạt được khi $x=-1$.
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 4430CC-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2H2N2-2]
-	Trong không gian $Oxyz$, cho điểm $A(2;1;-2)$ và điểm $B(-4;3;4)$. Tọa độ trung điểm $M$ của đoạn $AB$ là
+%Câu 7
+\begin{ex}%[0D8H3-6]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong tiệm còn $5$ cái bánh khác nhau. Một khách hàng có bao nhiêu cách lựa chọn mua một số bánh trong số $5$ cái bánh đó (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào)?
 	\choice
-		{$(3;2;3)$}
-		{$(-2;2;2)$}
-		{$(-2;-2;2)$}
-		{\True $(-1;2;1)$}
-	\loigiai{
-		Vì $M$ là trung điểm của đoạn thẳng $AB$ nên tọa độ của điểm $M$ là $\left(\dfrac{2+(-4)}{2}; \dfrac{1+3}{2};\dfrac{-2+4}{2}\right)$, suy ra $M(-1;2;1)$.
-	}
+	{\True $32$}	
+	{$5$}	
+	{$21$}	
+	{$10$}
+	\loigiai{Số cách lựa chọn mua
+		một số bánh trong số $5$ cái bánh (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào) là
+		$$\mathrm{C}_5^0+\mathrm{C}_5^1+\mathrm{C}_5^2+\mathrm{C}_5^3+\mathrm{C}_5^4+\mathrm{C}_5^5=(1+1)^5=32.$$}	
 \end{ex}
-
-\begin{ex}%[Dự án 51UG5W-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[0D0H2-2]
-	Gieo một con xúc xắc cân đối và đồng chất một lần. Tính xác suất để xúc xắc xuất hiện mặt có số chấm là một số chia hết cho $3$.
+%Câu 8
+\begin{ex}%[0D0H1-3]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong một hộp có $10$ viên bi khác nhau, gồm $6$ viên bi màu đỏ và $4$ viên bi màu xanh. Lấy ngẫu nhiên đồng thời $3$ viên bi từ hộp. Gọi A là biến cố: \lq \lq Lấy được ít nhất $2$ viên bi màu
+	đỏ\rq \rq. Có bao nhiều kết quả thuận lợi cho biến cố $A$?
 	\choice
-		{$\dfrac{1}{4}$}
-		{$\dfrac{1}{2}$}
-		{\True $\dfrac{1}{3}$}
-		{$\dfrac{1}{6}$}
+	{$60$}	
+	{$20$}	
+	{$100$}	
+	{\True $80$}	
 	\loigiai{
-		Không gian mẫu của phép thử gieo xúc xắc một lần là $\Omega=\{1;2;3;4;5;6\}$.\\
-		Suy ra $n(\Omega)=6$.\\
-		Gọi $A$ là biến cố: \lq\lq Xúc xắc xuất hiện mặt có số chấm chia hết cho $3$\rq\rq.\\
-		Các kết quả thuận lợi cho $A$ là $A=\{3;6\}$.\\
-		Suy ra $n(A)=2$.\\
-		Vậy xác suất của biến cố $A$ là $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{2}{6}=\dfrac{1}{3}$.
+		Chọn $3$ viên bi gồm $2$ bi đỏ, $1$ bi xanh có $\mathrm{C}_{6}^{2} \cdot \mathrm{C}_{4}^{1}$ cách.\\
+		Chọn $3$ viên bi gồm $3$ bi đỏ có $\mathrm{C}_{6}^{3}$ cách.\\
+		Vậy $n(A)=\mathrm{C}_{6}^{2} \cdot \mathrm{C}_{4}^{1}+\mathrm{C}_{6}^{3}=80$.
 	}
 \end{ex}
-
-\begin{ex}%[Dự án 4AWZ7D-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2D4N1-2]
-	Xác định họ các nguyên hàm của hàm số $f(x)=2x^2$.
+%Câu 9
+\begin{ex}%[0H9N1-3]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng toa độ $ Oxy$, cho hai điểm $A(1;3)$ và $B(5;9)$. Toa độ trung điểm $M$ của đoạn thẳng $AB$ là
 	\choice
-		{$6x^3+C$}
-		{$\dfrac{x^3}{3}+C$}
-		{$x^3+C$}
-		{\True $\dfrac{2x^3}{3}+C$}
-	\loigiai{
-		Họ các nguyên hàm của hàm số $f(x)=2x^2$ là
-		\[\displaystyle\int f(x) \mathrm{\,d}x=\displaystyle\int 2x^2\mathrm{\,d}x=2\cdot \dfrac{x^3}{3}+C=\dfrac{2x^3}{3}+C.\]
-	}
+	{\True $(3;6)$}	
+	{$(2;3)$}	
+	{$(2;6)$}	
+	{$(2;4)$}
+	\loigiai{$M$ là
+		trung điểm của đoạn thẳng $AB$ nên 
+		$$\heva{&x_M=\dfrac{x_A+x_B}{2}=\dfrac{1+5}{2}=3\\&y_M=\dfrac{y_A+y_B}{2}=\dfrac{3+9}{2}=6.}$$
+		Vậy $M(3;6)$.\\}	
 \end{ex}
-
-\begin{ex}%[Dự án 37M4HT-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[1H8N1-2]
-	\immini[thm]{Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật và $SA \perp (ABCD)$. Đường thẳng $SA$ \textbf{không} vuông góc với đường thẳng nào trong các đường thẳng dưới đây?
-		\choice[2]
-			{$AC$}
-			{$AB$}
-			{$BD$}
-			{\True $SC$}}{
-		\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
-    %hidden: VM005
-			\tikzset{declare function={a=3; b=1.8; h=3;}}
-			\path (0,0) coordinate (A)
-				(a,0) coordinate (D)
-				(-150:b) coordinate (B)
-				($(B)+(D)$) coordinate (C)
-				(0,h) coordinate (S);
-			\path pic[draw,angle radius=5pt]{right angle=B--A--S};
-			\path pic[draw,angle radius=5pt]{right angle=D--A--S};
-			\draw[dashed] (B)--(A)--(D)
-				(A)--(C)
-				(A)--(S);
-			\draw (S)--(B)--(C)--(D)--cycle (S)--(C);
-			\foreach \t/\g in {A/145,B/-90,C/-90,D/90,S/90}{
-			\fill (\t) circle (1pt) node[shift={(\g:9pt)},font=\scriptsize]{$\t$};
-			}
-    \node at (0,0){\href{37M4HT}{\tiny \phantom{37M4HT}}};
-		\end{tikzpicture}}
-	\loigiai{
-		Vì $SA\perp (ABCD)$ và $AC$, $AB$, $BD$ đều nằm trong $(ABCD)$ nên $SA \perp AC$, $SA\perp AB$, $SA \perp BD$.\\
-		Vì $\triangle SAC$ vuông tại $A$ nên $\widehat{ASC}$ là góc nhọn.\\
-		Suy ra $SA$ không vuông góc với $SC$.
-	}
+%Câu 10
+\begin{ex}%[0D0N1-2]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Một hộp chứa $3$ quả cầu trắng được đánh số từ $1$ đến $3$. Lấy ngẫu nhiên đồng thời hai quả cầu từ hộp đó. Không gian mẫu $\Omega$ của phép thử là
+	\choice
+	{$\Omega =\left\{1;2;3\right\}$}	
+	{$\Omega =\left\{\left(1;2\right);\left(2;1\right);\left(1;3\right);\left(3;1\right);\left(2;3\right);\left(3;2\right)\right\}$}	
+	{\True $\Omega =\left\{\left(1;2\right);\left(1;3\right);\left(2;3\right)\right\}$}	
+	{$\Omega =\left\{\left(1;1\right);\left(2;2\right);\left(3;3\right)\right\}$}
+	\loigiai{Lấy ngẫu nhiên đồng thời hai trong $3$ quả cầu được đánh số từ $1$ đến $3$ nên không gian mẫu $\Omega$ của phép thử là $\Omega =\left\{\left(1;2\right);\left(1;3\right);\left(2;3\right)\right\}$.
+	}	
 \end{ex}
-
-\begin{ex}%[Dự án 1LTN51-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM036,TV013]%[2D1N4-1]
-	\immini[thm]{Cho hàm số $y=\dfrac{ax+b}{cx+d}$ có đồ thị như hình vẽ bên. Xác định tiệm cận đứng của đồ thị hàm số hàm số đã cho.
-		\choice[2]
-			{$x = 1$}
-			{$y = -1$}
-			{\True $x = -1$}
-			{$y = 1$}
-		}{\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
-    %hidden: VM005
-			\def \xmin{-5.5}\def \xmax{3.5}\def \ymin{-5}\def \ymax{3} 
-			\draw[->] (\xmin,0)--(\xmax,0) node[shift=(110:0.2)] {$x$};
-			\draw[->] (0,\ymin)--(0,\ymax) node[shift=(-30:0.2)] {$y$};
-			\fill (0,0) node{\href{1LTN51}{\tiny \phantom{1LTN51}}} circle(1pt) node[shift=(-45:0.25)]{$O$}; 
-			\fill (-3,0) circle(1pt) node[shift=(90:0.2)]{$-3$}; 
-			\fill (-1,0) circle(1pt) node[shift=(150:0.35)]{$-1$}; 
-			\fill (1,0) circle(1pt) node[shift=(90:0.2)]{$1$}; 
-			\fill (0,-2) circle(1pt) node[shift=(0:0.25)]{$-2$}; 
-			\fill (0,-1) circle(1pt) node[shift=(-30:0.35)]{$-1$}; 
-			\fill (0,1) circle(1pt) node[shift=(0:0.2)]{$1$}; 
-			\fill (-3,-2) circle (1pt);
-			\draw[dashed] (-3,0) -- (-3,-2) -- (0,-2);
-			\clip (\xmin,\ymin) rectangle (\xmax,\ymax);
-			\draw[smooth,samples=100,domain=\xmin:-1.1] plot (\x, {(-\x+1)/(\x+1)});
-			\draw[smooth,samples=100,domain=-0.9:\xmax] plot(\x, {(-\x+1)/(\x+1)});
-			\draw[smooth,samples=100,domain=\xmin:\xmax] plot(\x,{-1}); 
-			\draw[smooth,samples=100,domain=\ymin:\ymax] plot({-1},\x);  
-    \node at (0,0){\href{1LTN51}{\tiny \phantom{1LTN51}}};
-		\end{tikzpicture}
-		}
-	\loigiai{
-		Dựa vào đồ thị hàm số, ta có $\lim\limits_{x\to-1^+}y=+\infty$ và $\lim\limits_{x\to-1^-}y=-\infty$.\\
-		Do đó, đồ thị hàm số có tiệm cận đứng là đường thẳng $x=-1$.
-	}
+%Câu 11
+\begin{ex}%[0D8N2-4]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Một tổ có $10$ học sinh. Hỏi có bao nhiêu cách chọn ra $2$ học sinh từ tổ đó để đi trực nhật?
+	\choice
+	{$5$}
+	{$90$}
+	{\True $45$}
+	{$4$}
+	\loigiai{Chọn ra $2$ học sinh trong $10$ học sinh từ tổ đó để đi trực nhật có $\mathrm{C}_{10}^2=45$ cách.}
+\end{ex}
+%Câu 12
+\begin{ex}%[0H9H4-3]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Xuan Vy Pham]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng tọa độ $Oxy$, cho đường tròn $(C) \colon (x-2)^2+(y-3)^2=25$. Tiếp tuyến của đường tròn $(C)$ tại điểm $A(6;0)$ đi qua điểm nào sau đây? 
+	\choice
+	{\True $M(3;-4)$}
+	{$N(4;-3)$}
+	{$P(4;3)$}
+	{$Q(3;4)$}
+	\loigiai{Đường tròn $(C) \colon (x-2)^2+(y-3)^2=25$ có tâm $I(2;3)$.\\
+		Tiếp tuyến $d$ của đường tròn $(C)$ tại điểm $A(6;0)$ có phương trình là
+		$$(2-6)(x-6)+(3-0)(y-0)=0 \Leftrightarrow -4(x-6)+3y=0 \Leftrightarrow 4x-3y-24=0.$$
+		Vậy $d \colon 4x-3y-24=0$.\\
+		Vì $4 \cdot 3 -3 \cdot (-4) -24=0$ nên $d$ đi qua $M(3;-4)$.}
 \end{ex}
 
 \Closesolutionfile{ans}
-\cauds
-\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-II]
-\begin{ex}%[Dự án 4RCOGW-VN-MT-15]%[2-KS-15-SoHue-L1-2026,TV035]%[2D4H2-6]
-	\immini[thm]{Người ta muốn tạo một giá đỡ bằng sắt bên cạnh một bức tường có hình dạng là đoạn cong $BDN$ như hình vẽ bên, giá đỡ được gắn với tường bằng ba thanh sắt $AB$, $CD$, $MN$ cùng vuông góc với tường ($A$, $C$, $M$ thẳng hàng). Giá đỡ được xem như một phần của đồ thị hàm số $y=\log x$ trong mặt phẳng tọa độ $(Oxy)$ với trục tung trùng với hình chiếu vuông góc của giá đỡ lên mặt tường (đơn vị trên trục tính bằng mét). Biết $AB=10$\,cm, $AM=1{,}4$\,m và độ dài phần đồ thị của hàm số $y=f(x)$ liên tục trên đoạn $[a; b]$ được tính theo công thức $L = \displaystyle \int\limits_{a}^{b} \sqrt{1 + [f'(x)]^2} \mathrm{\,d}x$. 
-		}{
-		\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round, >=stealth,scale=0.65]
-    %hidden: VM005
-			% Vẽ tường bên trái (tô đậm)
-			% \fill[pattern=north east lines] (-0.5,0) rectangle (0,5);
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\coordinate (A) at (0,0);
-			\coordinate (B) at (0.4,0);
-			\coordinate (C) at (0,3);
-			\coordinate (M) at (0,6);
-			\coordinate (D) at (1.6,3);
-			\coordinate (N) at (5,6);
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\fill[pattern=north east lines,opacity=.5] (A)--(M)--($(M)-(1,0)$)--($(A)-(1,0)$)--cycle;
-			\draw (A)--(C) -- (M) (M) -- (N) (C) -- (D) (A) -- (B);
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\foreach \x/\pos in {A/-90,M/90,C/45,B/0,D/0,N/0} \fill (\x) circle(1pt) node[{shift=(\pos:0.25)}]{$\x$}; 
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			% Vẽ đường cong từ B đến N
-			\draw (B) .. controls (0.61,1.29) and (1.29,2.45) .. (D);
-			\draw (D) .. controls (2.61,4.31) and (3.77,5.49) .. (N);
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \node at (0,0){\href{4RCOGW}{\tiny \phantom{4RCOGW}}};
-		\end{tikzpicture}
-		}
-		\choiceTF
-			{\True Đạo hàm của hàm số $y=\log x$ là $y' = \dfrac{1}{x \ln 10}$}
-	{\True Trong mặt phẳng tọa độ $(Oxy)$, điểm $B$ có hoành độ bằng $0{,}1$}
-	{Trong mặt phẳng tọa độ $(Oxy)$, điểm $N$ có tung độ bằng $1{,}4$}
-	{\True Độ dài giá đỡ bằng $2{,}97$ mét (kết quả được làm tròn đến hàng phần trăm)}
-	\loigiai{
-		\begin{itemchoice}
-			\itemch Ta có $y' = (\log x)' = \dfrac{1}{x \ln 10}$. 
-			\itemch Do $AB=10$\,cm $=0{,}1$\,m nên hoành độ của điểm $B$ là $0{,}1$. 
-			\itemch Do $B$ thuộc đồ thị hàm số $y=\log x$ nên ta có 
-			\[
-			y_B = \log 0{,}1 \Leftrightarrow y_B =-1. 
-			\]
-			Suy ra, điểm $A$ cách gốc tọa độ $O$ một khoảng bằng $1$\,m. \\
-			Do $AM=1{,}4$\,m nên tung độ của điểm $M$ bằng $0{,}4$. \\
-			Suy ra tung độ của điểm $N$ là $0{,}4$.  
-			\itemch Do điểm $N$ thuộc đồ thị hàm số $y=\log x$ và tung độ của $N$ bằng $0{,}4$ nên ta có 
-			\[
-			\log x_N = 0{,}4 \Leftrightarrow x_N = 10^{0{,}4}. 
-			\]
-			Vậy độ dài $L$ của giá đỡ là 
-			\[
-			L = \displaystyle \int\limits_{0{,}1}^{10^{0{,}4}} \sqrt{1 + \left(\dfrac{1}{x \ln 10}\right)^2} \mathrm{d}x \approx 2{,}97 \text{ (m)}. 
-			\]
-		\end{itemchoice}
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 2C5C4B-VN-MT-15]%[2-KS-15-SoHue-L1-2026, VM006]%[2D6V2-2]
-	Một hộp có $12$ viên bi gồm $5$ bi xanh, $6$ bi đỏ và $1$ bi vàng. Hai bạn tên Xanh và Đỏ được trọng tài mời chơi trò chơi bốc bi ngẫu nhiên từ hộp (bi đã lấy ra không bỏ lại vào hộp). Đầu tiên trọng tài bốc một viên bi, nếu là bi xanh hoặc bi đỏ thì dừng bốc, nếu là bi vàng thì trọng tài bốc thêm một viên nữa rồi dừng bốc. Sau khi trọng tài dừng bốc, viên bi trọng tài bốc màu nào thì bạn có tên màu đó sẽ được bốc một viên và ngay sau đó trò chơi dừng lại. Người chơi bốc được viên bi có màu trùng với tên của mình sẽ là người thắng cuộc, còn nếu bốc được viên bi có màu khác với tên mình sẽ bị thua cuộc.
-	\choiceTF 
-		{\True Xác suất để trọng tài bốc được bi vàng trong lần bốc đầu tiên là $\dfrac{1}{12}$} 
-		{Giả sử rằng ở lần bốc đầu tiên trọng tài bốc được bi xanh. Khi đó xác suất để bạn Xanh thắng là $\dfrac{5}{11}$} 
-		{\True Giả sử rằng ở lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ. Khi đó xác suất để bạn Xanh thắng là $\dfrac{1}{2}$} 
-		{Xác suất để bạn Đỏ thắng là $\dfrac{6}{11}$} 
-	\loigiai{
-		\begin{itemchoice} 
-			\itemch Xác suất để trọng tài bốc được bi vàng trong lần đầu tiên là $\dfrac{1}{12}$.
-			\itemch Nếu lần bốc đầu tiên trọng tài bốc được bi xanh. Khi đó trong hộp còn $4$ bi xanh, $6$ bi đỏ và $1$ bi vàng xác suất để bạn Xanh thắng (bốc được bi xanh) là $\dfrac{4}{11}$.
-			\itemch Nếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ. Khi đó trong hộp còn $5$ bi xanh, $5$ bi đỏ xác suất để bạn Xanh thắng (bạn Đỏ bốc được bi xanh) là $\dfrac{5}{10}=\dfrac{1}{2}$.
-			\itemch Theo luật chơi như trên, sẽ luôn có bạn thắng, bạn còn lại thua và không có kết quả cả hai cùng thua hoặc hòa.\\
-			Để tính xác suất của Đỏ thắng, ta tính xác suất của Xanh thắng và xét các trường hợp sau:
-			\begin{enumerate}[\it TH 1:]
-				\item Lần đầu tiên trọng tài bốc được bi xanh, xác suất là $\dfrac{5}{12}$.\\
-				Nếu lần bốc đầu tiên trọng tài bốc được bi xanh, xác suất để bạn Xanh thắng là $\dfrac{4}{11}$.\\
-				Suy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi xanh và bạn Xanh thắng là $\dfrac{5}{12}\cdot\dfrac{4}{11}=\dfrac{5}{33}$.
-				\item Lần đầu tiên trọng tài bốc được bi đỏ, xác suất là $\dfrac{6}{12}=\dfrac{1}{2}$.\\
-				Nếu lần bốc đầu tiên trọng tài bốc được bi đỏ, xác suất để bạn Xanh thắng là $\dfrac{6}{11}$.\\
-				Suy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi đỏ và bạn Xanh thắng là \[\dfrac{1}{2}\cdot\dfrac{6}{11}=\dfrac{3}{11}.\]
-				\item Lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ, xác suất là \[\dfrac{1}{12}\cdot\dfrac{6}{11}=\dfrac{1}{22}.\]
-				Nếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi đỏ, xác suất để bạn Xanh thắng là $\dfrac{5}{10}=\dfrac{1}{2}$.\\
-				Suy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi vàng, bốc tiếp được bi đỏ và Xanh thắng là $\dfrac{1}{22}\cdot\dfrac{1}{2}=\dfrac{1}{44}$.
-				\item Lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi xanh, xác suất là $\dfrac{1}{12}\cdot\dfrac{5}{11}=\dfrac{5}{132}$.\\
-				Nếu lần bốc đầu tiên trọng tài bốc được bi vàng và bốc tiếp được bi xanh, xác suất để bạn Xanh thắng là $\dfrac{4}{10}=\dfrac{2}{5}$.\\
-				Suy ra xác xuất lần bốc đầu tiên trọng tài bốc được bi vàng, bốc tiếp được bi xanh và Xanh thắng là $\dfrac{5}{132}\cdot\dfrac{2}{5}=\dfrac{1}{66}$.
-			\end{enumerate}
-			Do đó xác xuất để Xanh thắng là $\dfrac{5}{33}+\dfrac{3}{11}+\dfrac{1}{44}+\dfrac{1}{66}=\dfrac{61}{132}$.\\
-			Vậy xác suất để Đỏ thắng (Xanh thua) là $1-\dfrac{61}{132}=\dfrac{71}{132}$.
-		\end{itemchoice} 
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 1JP07M-VN-MT-15]%[2-KS-15-SoHue-L1-2026, VM006]%[2D1H5-4]
-	Cho hàm số $y=f(x)=\dfrac{x^2-5x+4}{x-5}$ với $x\neq 5$.
-	\choiceTF 
-		{\True $f'(x)=1-\dfrac{4}{(x-5)^2}$ với mọi $x\neq 5$} 
-		{\True Đồ thị hàm số cắt trục hoành tại hai điểm phân biệt} 
-		{\True Hàm số đạt cực đại tại $x=3$} 
-		{Giá trị cực tiểu bằng $3$} 
-	\loigiai{
-		\begin{itemchoice} 
-			\itemch Với $x\neq 5$, ta có $y=f(x)=x+\dfrac{4}{x-5}\Rightarrow f'(x)=1-\dfrac{4}{(x-5)^2}$.
-			\itemch Với $x\neq 5$, xét phương trình hoành độ giao điểm của đồ thị hàm số với trục hoành, ta được
-			\[
-			\dfrac{x^2-5x+4}{x-5}=0\Leftrightarrow x^2-5x+4=0\Leftrightarrow\hoac{&x=1\\&x=4.}
-			\]
-			Cả hai giá trị $x=1$; $x=4$ đều thỏa điều kiện.\\
-			Vì phương trình có $2$ nghiệm phân biệt nên đồ thị hàm số cắt trục hoành tại hai điểm phân biệt.
-			\itemch Ta có $y'=f'(x)=1-\dfrac{4}{(x-5)^2}=\dfrac{x^2-10x+21}{(x-5)^2}$.\\
-			Xét $f'(x)=0\Leftrightarrow \dfrac{x^2-10x+21}{(x-5)^2}=0\Leftrightarrow\hoac{&x=7 \\&x=3.}$\\
-			Bảng biến thiên của hàm số $y=f(x)$ như sau:
-			\begin{center}
-				\begin{tikzpicture}
-    %hidden: VM005
-					\tkzTabInit[nocadre=true,lgt=1.2,espcl=2.5,deltacl=0.5]
-					{$x$/0.7,$f’(x)$/0.7,$f(x)$/2}
-					{$-\infty$,$3$,$5$,$7$,$+\infty$}
-					\tkzTabLine{,+,0,-,d,-,0,+,}
-					\tkzTabVar{-/$-\infty$,+/$1$,-D+/$-\infty$/$+\infty$,-/$9$,+/$+\infty$}
-    \node at (T11){\href{1JP07M}{\tiny \phantom{1JP07M}}};
-				\end{tikzpicture}
-			\end{center}
-			Dựa vào bảng biến thiên, hàm số đạt cực đại tại $x=3$.
-			\itemch Dựa vào bảng biến thiên, giá trị cực tiểu của hàm số là $9$.
-		\end{itemchoice} 
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 29NBVX-VN-MT-15]%[2-KS-15-SoHue-L1-2026,TV035]%[2H5H2-5]
-	Trong không gian $Oxyz$, cho điểm $A (1; 2; 3)$ và điểm $B (2; 3; 4)$. Gọi $M$ là giao điểm của đường thẳng đi qua hai điểm $A$, $B$ với mặt phẳng $(Oxy)$, $N$ thuộc trục $Oz$ sao cho $AN$ vuông góc với $AB$. 
+\begin{center}
+	\textbf{PHẦN 2 - CÂU TRẮC NGHIỆM ĐÚNG SAI}
+\end{center}
+\Opensolutionfile{ans}[ans/ds]
+\setcounter{ex}{0}
+%%Câu 1
+\begin{ex}%[0D0H2-4]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Hoàng Tuấn]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Lớp $10$A có $10$ học sinh đăng kí tham gia thi kéo co, gồm có $6$ học sinh nam và $4$ học sinh nữ. Giáo viên chọn ngẫu nhiên $5$ học sinh để lập một đội thi. Xét tính đúng sai của các khẳng định sau
 	\choiceTF
-		{\True $\overrightarrow{AB} = (1; 1; 1)$}
-		{Hoành độ của điểm $M$ bằng $-1$}
-		{$MA = - 3 AB$}
-		{\True $\tan \widehat{NMB} = \dfrac{\sqrt{42}}{9}$}
+	{\True Số các chọn $5$ học sinh từ $10$ học sinh là $252$}
+	{Số cách chọn đội mà không có học sinh nữ là $720$}
+	{\True Số cách chọn đội có đúng $2$ học sinh nữ là $120$}
+	{Xác suất để đội được chọn có số học sinh nam nhiều hơn số học sinh nữ là $\dfrac{5}{7}$}
 	\loigiai{
 		\begin{itemchoice}
-			\itemch Ta có $\overrightarrow{AB} = (1; 1; 1)$. 
-			\itemch Đường thẳng $AB$ đi qua điểm $A (1; 2; 3)$, nhận $\overrightarrow{AB}$ làm một vectơ chỉ phương có phương trình tham số là $\heva{& x = 1 + t \\ & y = 2 + t \\ & z = 3 + t}$ với $t \in \mathbb{R}$. \\
-			Phương trình mặt phẳng $(Oxy)$ là $z=0$. \\ 
-			Gọi $M$ là giao điểm của $AB$ và mặt phẳng $(Oxy)$. \\ 
-			Do $M \in AB$ nên $M (1+t; 2+t; 3+t)$. \\ 
-			Do $M \in (Oxy)$ nên $t+3=0 \Leftrightarrow t=-3$. \\
-			Suy ra, $M (-2; -1; 0)$. \\
-			Vậy hoành độ của điểm $M$ bằng $-2$. 
-			\itemch $\overrightarrow{MA} = (3; 3; 3) \Rightarrow MA = 3 \sqrt{3}$. \\
-			$\overrightarrow{AB} = (1; 1; 1) \Rightarrow AB = \sqrt{3}$. \\
-			Vậy suy ra $MA = 3 AB$. 
-			\itemch Do $N \in Oz \Rightarrow N (0; 0; z)$. \\
-			Ta có $\overrightarrow{AN} = (-1; -2; z-3)$. \\
-			Do $AN \perp AB \Rightarrow \overrightarrow{AN} \cdot \overrightarrow{AB} = 0 \Leftrightarrow -1 -2 + (z-3) =0 \Leftrightarrow z = 6$. \\
-			Vậy $N (0; 0; 6)$. \\
-			Ta có $\overrightarrow{MN} = (2; 1; 6)$, $\overrightarrow{MB} = (4; 4; 4)$. \\
-			Suy ra $\cos \widehat{NMB} = \cos \left(\overrightarrow{MN}, \overrightarrow{MB}\right) = \dfrac{2 \cdot 4 + 1 \cdot 4 + 6 \cdot 4}{\sqrt{2^2 + 1^2 + 6^2} \cdot \sqrt{4^2 + 4^2 + 4^2}} = \dfrac{3 \sqrt{123}}{41}$. \\
-			Do $\cos \widehat{NMB} >0$ nên $\widehat{NMB}$ là góc nhọn và $\tan \widehat{NMB} >0$. \\
-			Ta có 
-			\[
-			1 + \tan^2 \widehat{NMB} = \dfrac{1}{\cos^2 \widehat{NMB}} \Rightarrow \tan^2 \widehat{NMB} = \dfrac{1}{\cos^2 \widehat{NMB}} - 1 = \dfrac{14}{27} \Rightarrow \tan \widehat{NMB} = \dfrac{\sqrt{42}}{9}. 
-			\]
+			\itemch Số cách chọn $5$ học sinh từ $10$ học sinh là tổ hợp chập $5$ của $10$.\\
+			Do đó, ta có
+			$$\mathrm{C}_{10}^5=\dfrac{10!}{5!\cdot 5!}=252.$$
+			\itemch Số cách chọn đội trong đó không có học sinh nữ là tổ hợp chập $5$ của $6$.\\
+			Do đó, ta có
+			$$\mathrm{C}_{6}^5=\dfrac{6!}{5!\cdot 1!}=6.$$
+			\itemch Số cách chọn đội để có đúng $2$ học sinh nữ là
+			$$\mathrm{C}_{6}^3\cdot \mathrm{C}_{4}^2=20\cdot 6=120.$$
+			\itemch Gọi $A$ là biến cố đội được chọn có số học sinh nam nhiều hơn số học sinh nữ.\\
+			Ta xét các trường hợp sau
+			\begin{itemize}
+				\item Trường hợp 1: $3$ học sinh nam, $2$ học sinh nữ.\\
+				Khi đó số cách chọn là 
+				$$\mathrm{C}_6^3\cdot\mathrm{C}_4^2=20\cdot 6=120.$$
+				\item Trường hợp 2: $4$ học sinh nam, $1$ học sinh nữ.\\
+				Khi đó số cách chọn là 
+				$$\mathrm{C}_6^4\cdot\mathrm{C}_4^1=15\cdot 4=60.$$
+				\item Trường hợp 3: $5$ học sinh nam, $0$ học sinh nữ.\\
+				Khi đó số cách chọn là 
+				$$\mathrm{C}_6^5\cdot\mathrm{C}_4^0=6\cdot 1=6.$$
+			\end{itemize}
+			Suy ra tổng số cách chọn thoả mãn đề bài là 
+			$$n\left(A\right)=120+60+6=186.$$
+			Lại có $n\left(\Omega\right)=252$.\\
+			Suy ra xác suất cần tìm là 
+			$$\mathrm{P}(A)=\dfrac{186}{252}=\dfrac{31}{42}.$$
 		\end{itemchoice}
 	}
 \end{ex}
 
+%%Câu 2
+\begin{ex}%[0H9H5-7]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Hoàng Tuấn]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]	
+	Trong mặt phẳng tọa độ $Oxy$, cho parabol $(P)$ có phương trình $y^2 = 8x$. Gọi $F$ là tiêu điểm và $\Delta$ là đường chuẩn của $(P)$. Gọi $d$ là đường thẳng đi qua $F$ và vuông góc với trục đối xứng của $(P)$. Đường thẳng $d$ cắt $(P)$ tại $2$ điểm phân biệt $A$ và $B$. Xét tính đúng sai của các khẳng định sau:
+	\choiceTF
+	{\True $(P)$ có tiêu điểm là $F\left(2;0\right)$}
+	{Phương trình đường chuẩn của $(P)$ là $\Delta\colon x - 2 = 0$}
+	{\True $AB = 8$}
+	{Đường tròn $(C)$ có đường kính $AB$ tiếp xúc với đường chuẩn $\Delta$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch Ta có $y^2=2px=8x\Rightarrow x=4$.\\
+			Suy ra tiêu điểm của $(P)$ là $F\left(2;0\right)$.
+			\itemch Phương trình đường chuẩn của $(P)$ là $x=-\dfrac{p}{2}=-2$, hay $x+2=0$.
+			\itemch Đường thẳng $d$ đi qua $F\left(2;0\right)$ và vuông góc với trục $Ox$ nên có phương trình $x=2$.\\
+			Thay vào $(P)$ ta có
+			$$y^2 = 8 \cdot 2 = 16 \Rightarrow y = \pm 4.$$
+			Khi đó $A(2; 4)$ và $B(2; -4)$, suy ra độ dài đoạn $AB$ là
+			$$AB=\sqrt{\left(2-2\right)^2+\left(-4-4\right)^2}=8.$$
+			\itemch Đường tròn $(C)$ đường kính $AB$ có tâm là $F\left(2;0\right)$ và bán kính $R = \dfrac{AB}{2} = 4$.\\
+			Khoảng cách từ tâm $F\left(2;0\right)$ đến đường chuẩn $\Delta\colon x + 2 = 0$ là
+			$$d\left(F, \Delta\right) = |2 + 2| = 4.$$
+			Vì $d\left(F, \Delta\right) = R$ nên đường tròn tiếp xúc với đường chuẩn.
+		\end{itemchoice}
+		
+	}
+	
+\end{ex}
+
+
 \Closesolutionfile{ans}
-\caukq
-\Opensolutionfile{ans}[ans/ans\currfilebase-Phan-III]
-\begin{ex}%[Dự án 5M9QY0-VN-MT-15]%[2-KS-15-SoHue-L1-2026,TV015]%[0D7V3-6]
-	Một hộ sản xuất và kinh doanh một mặt hàng A, biết rằng chi phí để sản xuất $x$ kg ($x > 0$) mặt hàng A là $\dfrac{2x^2+x}{x+1}$ (đơn vị triệu đồng), trong lúc đó bán ra mỗi kg là $3$ triệu đồng. Hỏi cần sản xuất bao nhiêu kg mặt hàng A để lợi nhuận đạt $15$ triệu đồng {\it(kết quả làm tròn đến hàng phần chục)}.
-	\par\shortans{$14{,}1$}
-	\loigiai{
-		Giá bán mỗi kg là $3$ triệu đồng, nên doanh thu khi bán $x$ kg là $R(x) = 3x$ (triệu đồng). \\
-		Chi phí để sản xuất $x$ kg mặt hàng A là $C(x) = \dfrac{2x^2+x}{x+1}$ (triệu đồng). \\
-		Lợi nhuận thu được khi sản xuất và kinh doanh $x$ kg mặt hàng A là
-		\begin{align*}
-			P(x) &= R(x) - C(x) \\
-			&= 3x - \dfrac{2x^2+x}{x+1}\\
-			&= \dfrac{x^2+2x}{x+1}.
-		\end{align*}
-		Để lợi nhuận đạt $15$ triệu đồng, thì
-		\begin{eqnarray*}
-			&&P(x)=15\\
-			&\Leftrightarrow&\dfrac{x^2+2x}{x+1} = 15\\
-			&\Rightarrow&x^2 - 13x - 15 = 0\\
-			&\Rightarrow&\hoac{&x=\dfrac{13 + \sqrt{229}}{2}\\&x=\dfrac{13 - \sqrt{229}}{2}.}
-		\end{eqnarray*}
-		Vì $x > 0$, ta chọn $x = \dfrac{13 + \sqrt{229}}{2}\approx 14{,}1$\,(kg). \\
-		Vậy cần sản xuất khoảng $14{,}1$ kg mặt hàng A để lợi nhuận đạt $15$ triệu đồng.
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 5B4FXE-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM021]%[1H8V5-4]
-	Cho hình chóp cụt tam giác đều $ABC.MNP$ có đáy lớn là tam giác $ABC$ với độ dài cạnh bằng $6$, chiều cao của hình chóp cụt bằng $8$. Gọi $G$ là trọng tâm tam giác $MNP$. Tính khoảng cách giữa hai đường thẳng $AG$ và $BC$ \textit{(kết quả làm tròn đến hàng phần trăm)}.
-	\par\shortans{$4{,}77$}
+\begin{center}
+	\textbf{PHẦN 3 - CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\end{center}
+\setcounter{ex}{0}
+\Opensolutionfile{ans}[ans/kq]
+%-----Câu 1
+\begin{ex}%[0H9V3-8]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng tọa độ $Oxy$ đơn vị trên các trục là kilômét, một trạm viễn thông được đặt tại vị trí $M\left(-\dfrac{15}{4};30\right)$. Một chiếc xe bus chuyển động thẳng đều với vectơ vận tốc $\overrightarrow{v}=(30;40)$. Biết tốc độ của xe bus chính là độ lớn của vectơ vận tốc $\overrightarrow{v}$. Lộ trình của xe bus đi qua điểm $K(10;15)$. Trạm viễn thông có phạm vi phủ sóng là hình tròn tâm $M$, bán kính $R$. Hành khách trên xe nhận được tín hiệu từ trạm trong khoảng thời gian liên tục $1$ giờ, sau đó mất tín hiệu. Hãy tính bán kính phủ sóng của trạm viễn thông này, làm tròn kết quả đến hàng đơn vị của kilômét.
+	\shortans{32}
 	\loigiai{
 		\begin{center}
-			\begin{tikzpicture}[scale=1.5, font=\footnotesize, line join=round, line cap=round,>=stealth]
-    %hidden: VM005
-				\pgfresetboundingbox
-				\def \k{0.6};
-				\path (0,0)coordinate (A) (4.5,0) coordinate (C) (3.5,-2) coordinate (B) ($(B)!0.5!(C)$) coordinate (I) ($(A)!2/3!(I)$) coordinate (O) (0,3) coordinate (h) ($(O)+(h)$) coordinate (S)
-					($(A)!\k!(S)$) coordinate (M)
-					($(B)!\k!(S)$) coordinate (N)
-					($(C)!\k!(S)$) coordinate (P)
-					;
-				\path ($(N)!0.5!(P)$) coordinate (I');
-				\path ($(M)!2/3!(I')$) coordinate (G)
-					($(A)!0.7!(G)$) coordinate (H);
-				\draw (M)--(A)--(B)--(C)--(P)--cycle (N)--(P) (M)--(N)--(B)  (M)--(I')--(I);
-				\draw[dashed] (I)--(A)--(C) (O)--(G) (I)--(H) (A)--(G) (G)--(I);
-				\foreach \p/\g in {A/150,B/-60,C/30, M/150, N/-30, P/30, I/0,O/-90, I'/0, G/20,H/120} \fill (\p) circle(1pt)+(\g:0.3) node{$\p$};
-				\path pic[angle radius=3mm,draw=black,angle eccentricity=1] {right angle = G--O--A};
-    \node at (0,0){\href{5B4FXE}{\tiny \phantom{5B4FXE}}};
-			\end{tikzpicture}
-		\end{center}
-		Gọi $I$ và $I'$ lần lượt là trung điểm của $BC$ và $NP$. \\
-		Khi đó $\heva{&BC \perp AI\\ &BC \perp II'} \Rightarrow BC \perp (AMI'I)$.\\
-		Gọi $H$ thuộc $AG$ sao cho $IH \perp AG$.\\
-		Khi đó $\heva{&IH \perp AG, IH \cap AG = H \\
-		&IH \perp BC, IH \cap BC = I.}$\\
-		Suy ra $IH$ là đoạn vuông góc chung của $AG$ và $BC$. \\
-		Vậy $\mathrm{d}(AG,BC)=IH$.\\
-		Gọi $O$ là trọng tâm tam giác $ABC$, khi đó $GO \perp (ABC)$, suy ra $GO=8$.\\
-		Lại có $AI=\dfrac{AB\sqrt{3}}{2}=\dfrac{6\sqrt{3}}{2}=3\sqrt{3}$ và $AO=\dfrac{2}{3}\cdot AI=2\sqrt{3}$.\\
-		Ta có $AG=\sqrt{GO^2+AO^2}=\sqrt{8^2+\left(2\sqrt{3}\right)^2}=2\sqrt{19}$.\\
-		Xét tam giác $AGI$ ta có
-		\allowdisplaybreaks
-		\begin{eqnarray*}
-			S_{AGI}&=&\dfrac{1}{2}\cdot IH \cdot AG = \dfrac{1}{2}\cdot GO \cdot AI \\
-			&\Leftrightarrow& IH=\dfrac{GO \cdot AI}{AG}=\dfrac{8 \cdot 3\sqrt{3}}{2\sqrt{19}}=\dfrac{12\sqrt{57}}{19}\approx 4{,}77.
-		\end{eqnarray*}
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 525W4N-VN-MT-15]%[2-KS-15-SoHue-L1-2026,TV015]%[2D4V2-6]
-	An và Bình rất giỏi Toán, cùng tham gia một trò chơi, đầu tiên An bốc ngẫu nhiên một thẻ từ hộp thứ nhất chứa sáu thẻ giống nhau được đánh số từ $1$ đến $6$, tiếp theo Bình bốc ngẫu nhiên một thẻ từ hộp thứ hai chứa bốn thẻ giống nhau được đánh số từ $1$ đến $4$. Gọi số An bốc được là $a$ và số của Bình là $b$, sau đó hai người cùng tính giá trị của tích phân $I = \displaystyle\int\limits_{0}^{a} x^b \mathrm{\,d}x$. Nếu kết quả $I$ là một số nguyên thì An thắng, ngược lại Bình thắng. Tính xác suất An thắng cuộc {\it (kết quả làm tròn đến hàng phần trăm)}.
-	\par\shortans{$0{,}38$}
-	\loigiai{
-		An bốc một thẻ từ hộp thứ nhất có các số $a \in \{1, 2, 3, 4, 5, 6\}$. Có $6$ khả năng. \\
-		Bình bốc một thẻ từ hộp thứ hai có các số $b \in \{1, 2, 3, 4\}$. Có $4$ khả năng. \\
-		Tổng số cặp $(a,b)$ có thể xảy ra là $n\left(\Omega\right)=6 \cdot 4 = 24$.\\
-		Vì $b \ge 1$, ta có
-		\[I = \displaystyle\int\limits_{0}^{a} x^b \mathrm{\,d}x=\dfrac{a^{b+1}}{b+1}.\]
-		Gọi $A$ là biến cố bạn An thắng cuộc.\\
-		Ta cần tìm các cặp $(a,b)$ sao cho $I=\dfrac{a^{b+1}}{b+1}$ là một số nguyên.\\
-		Liệt kê tất cả các khả năng có thể xảy ra
-		\begin{center}
-			\renewcommand{\arraystretch}{2} % Điều chỉnh số này để vừa ý
-			\begin{tabular}{|c|c|c|c|c|}
-				\hline
-				& $b=1$ & $b=2$ & $b=3$ & $b=4$ \\
-				\hline
-				$a=1$ & $I=\dfrac{1}{2}$ & $I=\dfrac{1}{3}$ & $I=\dfrac{1}{4}$ & $I=\dfrac{1}{5}$ \\
-				\hline
-				$a=2$ & $I=2$ & $I=\dfrac{8}{3}$ & $I=4$ & $I=\dfrac{32}{5}$ \\
-				\hline
-				$a=3$ & $I=\dfrac{9}{2}$ & $I=9$ & $I=\dfrac{81}{4}$ & $I=\dfrac{243}{5}$ \\
-				\hline
-				$a=4$ & $I=8$ & $I=\dfrac{64}{3}$ & $I=64$ & $I=\dfrac{1\,024}{5}$ \\
-				\hline
-				$a=5$ & $I=\dfrac{25}{2}$ & $I=\dfrac{125}{3}$ & $I=\dfrac{625}{4}$ & $I=625$ \\
-				\hline
-				$a=6$ & $I=18$ & $I=72$ & $I=324$ & $I=\dfrac{7\,776}{5}$ \\
-				\hline
-			\end{tabular}
-		\end{center}
-		Các cặp $(a,b)$ thỏa mãn $I\in\mathbb{Z}$ là $(2,1)$, $(2,3)$, $(3,2)$, $(4,1)$, $(4,3)$, $(5,4)$, $(6,1)$, $(6,2)$, $(6,3)$.\\ Suy ra $n(A)=9$.\\
-		Vậy $\mathrm{P}(A)=\dfrac{n(A)}{n\left(\Omega\right)}=\dfrac{9}{24}\approx 0{,}38$.
-	}
-\end{ex}
-
-\begin{ex}%[Dự án 20Y0IT-VN-MT-15]%[2-KS-15-SoHue-L1-2026,TV015]%[0H4V3-2]
-	Dòng Hương hiền hòa trong xanh, lững lờ trôi giữa lòng thành phố Huế cổ kính và mộng mơ. Nhìn từ trên cao, hai bờ sông trải dài như hai đường thẳng song song. Cột cờ Phu Văn Lâu sừng sững cao $54{,}5$\,mét như là một chứng tích hào hùng của lịch sử. Biết rằng hai bờ sông cách nhau $400$\,mét và chân cột cờ (hình chiếu vuông góc của đỉnh cột cờ xuống mặt đất) nằm cách mép sông gần nhất một khoảng $200$\,mét. Có hai bạn học sinh đứng ở hai bờ sông, bạn học sinh A ở cùng bờ với cột cờ nhìn đỉnh cột cờ so với mặt đất một góc $\alpha$ với $\tan \alpha = 0{,}1$ và bạn học sinh B đứng ở bờ bên kia nhìn đỉnh cột cờ so với mặt đất một góc $\beta$ với $\tan \beta = 0{,}07$. Hỏi hai bạn học sinh cách nhau xa nhất là bao nhiêu mét? {\it (Giả sử rằng mặt đất là bằng phẳng và tầm mắt hai bạn học sinh ngang với mặt đất, kết quả làm tròn đến hàng đơn vị)}.
-	\begin{center}
-		\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
-    %hidden: VM005
-			\tikzset{declare function={h=3;goca=-10;gocb=-25;ds=-3*h;}}
-			\path
-				(0,0) coordinate (H)
-				(0,h) coordinate (S)
-				(goca:2*h) coordinate (A)++(-goca+10:ds)coordinate (bA)
-				(gocb:3*h) coordinate (B)++(-goca+10:ds)coordinate (bB)
-				($(bA)!1.2!(A)$)coordinate (Aa) ($(bB)!1.2!(B)$)coordinate (Bb);
-			\pic[angle eccentricity=1.3,draw,angle radius=15pt]{angle= S--A--H}
-			pic[angle eccentricity=1.2,draw,angle radius=28pt]{angle= S--B--H}
-			pic[angle eccentricity=1.2,draw,angle radius=30pt]{angle= S--B--H};
-			\fill[cyan!30,opacity=0.5] (bA)--(Aa)--(Bb)--(bB)--cycle;
-			\draw[dashed] (A)--(H)--(B);
-			\draw (H)--(S)node[left,midway]{Cột cờ}--(A) (S)--(B) (bA)--(Aa) (bB)--(Bb);
-			\foreach \x/\pos in {A/90,B/-60,S/90,H/180} \fill (\x) circle(1pt) node[{shift=(\pos:0.25)}]{$\x$}; 
-			\node[shift=(156:0.7)] at (A) {$\alpha$};
-			\node[shift=(146.8:1.5)] at (B) {$\beta$};
-    \node at (0,0){\href{20Y0IT}{\tiny \phantom{20Y0IT}}};
-		\end{tikzpicture}
-	\end{center}
-	\par\shortans{$1\,080$}
-	\loigiai{
-		Tam giác $SHA$ vuông tại $H$ có $HA = \dfrac{HK}{\tan \alpha} = \dfrac{54{,}5}{0{,}1} = 545$\,mét.\\
-		Tam giác $SHB$ vuông tại $H$ có $HB = \dfrac{HK}{\tan \beta} = \dfrac{54{,}5}{0{,}07} \approx 778{,}57$\,mét.\\
-		Trên bờ sông có cột cờ, tồn tại hai điểm $A$ và $A'$ sao cho $HA=HA'$.\\ Gọi $M$ là trung điểm của $AA'$ suy ra $HM=200$\,mét.\\
-		Trên bờ sông còn lại, tồn tại hai điểm $B$ và $B'$ sao cho $HB=HB'$.\\ Gọi $N$ là trung điểm của $BB'$ suy ra $MN=400$\,mét.\\
-		Tham khảo hình vẽ
-		\begin{center}
-			\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
-    %hidden: VM005
-				\tikzset{declare function={r=3;R=5;}}
+			\begin{tikzpicture}[scale=0.1, >=stealth, font=\footnotesize]
+				% PHẦN 1: KHAI BÁO THAM SỐ VÀ TỌA ĐỘ
+				% M(-15/4; 30), d: 4x - 3y + 5 = 0, R = sqrt(1025) approx 32,0156
+				\def\mx{-3.75} 
+				\def\my{30} 
+				\def\radius{32.0156}
 				\path
-					(0,0) coordinate (M)++(0,r-1)coordinate (H)
-					(-R,0)coordinate (A') (R,0)coordinate (A)
-					(0,-R+2) coordinate (N)++(r,0)coordinate (B)
-					(N)++(-r,0)coordinate (B')
-					($(B')!(A')!(B)$)coordinate (K);
-				\foreach\x/\y/\z in {H/M/A,M/N/B,A'/K/N}{
-				\path pic[draw,angle radius=5pt]{right angle=\x--\y--\z};}
-				\draw[dashed] (A')--(H)--(A) (H)--(N) (B')--(H)--(B) (A')--(K)--(B');
-				\draw (A)--(A') (B)--(B');
-				\draw[red] (A')--(B);
-				\foreach \x/\g in {A/0,B/0,A'/180,H/90,B'/-90,M/140,N/-90,K/-90}
-				\fill (\x) circle (1pt)+(\g:12pt) node {$\x$};
-    \node at (0,0){\href{20Y0IT}{\tiny \phantom{20Y0IT}}};
+				(\mx,\my)coordinate (M)
+				(12.25,18)coordinate (H) % Hình chiếu của M lên d
+				(-2.75,-2)coordinate (A)% Giao điểm 1
+				(27.25,38)coordinate (B) % Giao điểm 2
+				(0,0) coordinate (O)
+				(1,0) coordinate (O1)
+				(0,1) coordinate (O2);
+				\draw[->, line width=0.7pt] (-40,0) -- (45,0) node[below] {$x$};
+				\draw[->, line width=0.7pt] (0,-15) -- (0,70) node[left] {$y$};
+				\draw[orange!80!black, line width=0.6pt, dashed, name path=circle] (M) circle (\radius);
+				\node[orange!80!black, font=\bfseries] at ($(M)+(55:35)$) {$(C)$};
+				\draw[blue!60!black, line width=0.8pt] ($(A)!-0.4!(B)$) -- ($(A)!1.4!(B)$) node[right] {$d$};
+				\draw[line width=0.5pt, dashed] (M) -- (A) node[midway, above left] {$R$};
+				\draw[line width=0.5pt, dashed] (M) -- (B)(M)--(H);
+				\pic[draw, angle radius=3mm,fill=pink]{right angle =B--H--M};
+				\pic[draw, angle radius=3mm,fill=pink]{right angle =O1--O--O2};
+				\foreach \p/\g in {M/150, H/-20, A/-80, B/-20,O/-55} {
+					\draw [fill=black](\p) circle (2pt)node[shift={(\g:7pt)}]{$\p$};
+				}
 			\end{tikzpicture}
 		\end{center}
-		Như vậy, hai bạn học sinh A và B cách xa nhau nhất khi học sinh A ở điểm $A'$ và học sinh B ở điểm $B$ hoặc ngược lại.\\
-		Gọi $K$ là hình chiếu vuông góc của điểm $A'$ trên đường thẳng $BB'$.\\
-		Tam giác $HMA'$ vuông tại $M$ có $KN=MA'=\sqrt{HA'^2-HM^2}=\sqrt{545^2-200^2}\approx 507$\,m.\\
-		Tam giác $HNB$ vuông tại $N$ có $NB=\sqrt{HB^2-HN^2}=\sqrt{(778{,}57)^2-(200+400)^2}\approx 496{,}2$\,mét
-		Tam giác $A'KB$ vuông tại $K$ có
-		\[A'B=\sqrt{A'K^2+KB^2}=\sqrt{400^2+(507+496{,}2)^2}\approx 1\,080\text{( mét)}.\]
+		Ta có tốc độ của xe bus là $\left|\overrightarrow{v}\right|=\sqrt{30^2+40^2}=50$ (km/h).\\
+		Quỹ đạo chuyển động của xe bus là đường thẳng $d$ đi qua $K(10;15)$ và có vectơ chỉ phương $\overrightarrow{u}=(30;40)$, hay $\overrightarrow{u}=(3;4)$.\\
+		Do đó đường thẳng này có vectơ pháp tuyến $\overrightarrow{n}=(4;-3)$.\\
+		Phương trình quỹ đạo xe bus là $4(x-10)-3(y-15)=0$, hay $4x-3y+5=0$.\\
+		Gọi $H$ là hình chiếu vuông góc của $M$ lên đường thẳng $d$.\\
+		Khoảng cách từ trạm $M\left(-\dfrac{15}{4};30\right)$ đến quỹ đạo xe bus là
+		$$MH= \mathrm{d}=\dfrac{\left|4\cdot\left(-\dfrac{15}{4}\right)-3\cdot30+5\right|}{\sqrt{4^2+(-3)^2}}=\dfrac{100}{5}=20 \text{ (km)}.$$
+		Trong $1$ giờ, xe đi được quãng đường $50$ km.\\
+		Đây chính là độ dài dây cung $AB$ mà quỹ đạo xe cắt đường tròn phủ sóng. Nửa dây cung $AH=25$ km.\\
+		Suy ra $R^2=20^2+25^2=1\,025$ (theo định lý Phythagore trong tam giác vuông $OAB$), nên $R=5\sqrt{41}\approx 32$.\\
+		Vậy bán kính phủ sóng của trạm viễn thông là $32$ km.
 	}
 \end{ex}
-
-\begin{ex}%[Dự án 16DSGO-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM021]%[1D2C3-8]
-	Đất sét là một dạng vật chất đặc và mềm, có thể tạo thành nhiều hình dạng khác nhau nhưng thể tích không đổi. Đầu tiên ta có một cục đất sét với thể tích $1\,000$\,cm$^3$, người ta nặn thành một khối lập phương đặc, sau đó khoét phần đất sét ở giữa để tạo thành một chậu không nắp (phần trong của chậu có dạng hình hộp chữ nhật) có độ dày bốn mặt bên và độ dày đáy bằng nhau và bằng $\dfrac{1}{10}$ độ dài cạnh của khối lập phương. Phần đất sét còn dư cũng được nặn thành một khối lập phương đặc và cũng khoét phần đất sét ở giữa để tạo thành một chậu không nắp với tỉ lệ giữa độ dày của các mặt và cạnh khối lập phương như trên. Cứ tiếp tục như vậy cho đến khi được $5$ cái chậu. Tính tổng thể tích nước mà $5$ chậu đó có thể chứa \textit{(đơn vị là cm$^3$, kết quả làm tròn đến hàng đơn vị)}.
-	\par\shortans{$1\,272$}
+%-----Câu 2
+\begin{ex}%[0D0H2-7]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Một hộp có $8$ tấm thẻ được đánh số từ $1$ đến $8$. Lấy đồng thời $2$ tấm thẻ từ hộp đó. Tính xác suất để tích của hai số ghi trên $2$ tấm thẻ lấy ra là một số chẵn (\textit{làm tròn kết quả đến hàng phần trăm}).
+	\shortans{0,79}
 	\loigiai{
-		Gọi $V_n$ là thể tích của khối đất sét đặc (khối lập phương) ở bước thứ $n$. Ban đầu ta có $V_1 = 1\,000$.\\
-		Giả sử khối lập phương ở bước $n$ có cạnh là $a$, khi đó $V_n = a^3$.\\
-		Chậu không nắp được khoét ra có độ dày các mặt bên và đáy bằng $\dfrac{a}{10}$.\\
-		Phần rỗng bên trong chậu (chính là lượng nước mà chậu chứa được) có dạng hình hộp chữ nhật với
-		\begin{itemize}
-			\item Độ dài cạnh đáy: $a - 2 \cdot \dfrac{a}{10} = \dfrac{4a}{5}$
-			\item Chiều cao: $a - \dfrac{a}{10} = \dfrac{9a}{10}$
-		\end{itemize}
-		Thể tích phần rỗng (thể tích nước chậu thứ $n$ chứa được) là
-		$W_n = \left(\dfrac{4a}{5}\right)^2 \cdot \dfrac{9a}{10} = \dfrac{72a^3}{125} = \dfrac{72}{125}V_n$.\\
-		Phần đất sét được khoét ra (có thể tích đúng bằng phần rỗng) sẽ là lượng đất sét dư để nặn thành khối lập phương cho bước tiếp theo. Do đó, ta có
-		$V_{n+1} = W_n = \dfrac{72}{125}V_n$.\\
-		Với $V_1 = 1\,000$, thể tích nước chậu đầu tiên chứa được là
-		$W_1 = \dfrac{72}{125} \cdot 1000 = 576$.\\
-		Thể tích nước chậu thứ $n+1$ chứa được là
-		$W_{n+1} = \dfrac{72}{125}V_{n+1} = \dfrac{72}{125}W_n$.\\
-		Như vậy, dãy các thể tích nước $W_1$, $W_2$, $W_3$, $\dots$, $W_5$ lập thành một cấp số nhân có số hạng đầu $u_1 = W_1 = 576$ và công bội $q = \dfrac{72}{125}$.\\
-		Tổng thể tích nước mà $5$ chậu có thể chứa chính là tổng $5$ số hạng đầu tiên của cấp số nhân này, khi đó
-		\[
-		W = 576 \cdot \dfrac{1 - \left(\dfrac{72}{125}\right)^5}{1 - \dfrac{72}{125}} \approx 1\,272 \text{ (cm}^3\text{)}.
-		\]
+		Số cách lấy đồng thời $2$ tấm thẻ từ $8$ tấm thẻ là $\mathrm{C}_8^2=28$.\\
+		Tích của hai số là số lẻ khi cả hai số đều là số lẻ. Trong các số từ $1$ đến $8$ có $4$ số lẻ là $1$, $3$, $5$, $7$.\\
+		Số cách lấy được hai thẻ đều ghi số lẻ là $\mathrm{C}_4^2=6$.\\
+		Vậy số cách lấy để tích hai số là số chẵn là $28-6=22$.\\
+		Xác suất cần tìm là $P=\dfrac{22}{28}=\dfrac{11}{14}\approx 0{,}79$.\\
+		Vậy xác suất cần tìm là $0{,}79$.
 	}
 \end{ex}
-
-\begin{ex}%[Dự án 57KY07-VN-MT-15]%[2-KS-15-SoHue-L1-2026,VM021]%[0D8V2-7]
-	Hằng năm trước ngày Khai giảng năm học mới. Ủy ban nhân dân thành phố Huế giao Sở Giáo dục và Đào tạo tổ chức Lễ Tuyên dương học sinh dạt danh hiệu \lq\lq Học sinh danh dự toàn trường\rq\rq\ dành cho những học sinh xuất sắc nhất của mỗi trường phổ thông trên địa bàn thành phố. Trong Lễ Tuyên dương. Ban tổ chức vinh danh các học sinh theo lượt nhận, mỗi lượt có $10$ học sinh, với những lượt có $5$ học sinh nam và $5$ học sinh nữ thì Ban tổ chức muốn các học sinh này đứng thành một hàng mà nam nữ xen kẽ. Tuy nhiên khi xếp hàng với lượt có $5$ học sinh nam và $5$ học sinh nữ thì Ban tổ chức nhận thấy các học sinh này không đứng xen kẽ nhưng chỉ cần đổi chỗ hai học sinh nào đó thì được hàng có nam nữ đứng xen kẽ, cách xếp này gọi là \lq\lq cách xếp lỗi\rq\rq. Gọi $D$ là số \lq\lq cách xếp lỗi\rq\rq\ như trên, xác định giá trị của $\dfrac{D}{100}$.
-	\par\shortans{$7\,200$}
+%-----Câu3
+\begin{ex}%[0D7H1-2]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Có bao nhiêu giá trị nguyên của tham số $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm?
+	\shortans{4}
 	\loigiai{
-		Số cách xếp $5$ nam và $5$ nữ đứng xen kẽ (gọi là cách xếp chuẩn) là: $2 \cdot 5! \cdot 5!$ cách (do có $2$ trường hợp nam hoặc nữ đứng đầu hàng).\\
-		Một \lq\lq cách xếp lỗi\rq\rq\ là hàng có đúng $2$ vị trí sai giới tính. Để tạo ra một cách xếp lỗi, ta lấy một hàng chuẩn và đổi chỗ đúng $1$ học sinh nam với $1$ học sinh nữ. Khi đó, số cách chọn $1$ nam và $1$ nữ từ hàng chuẩn để đổi chỗ là $\mathrm{C}_5^1 \cdot \mathrm{C}_5^1 = 25$ cách.\\
-		Vì mỗi \lq\lq cách xếp lỗi\rq\rq\ chỉ được tạo ra từ duy nhất một hàng chuẩn và một cặp đổi chỗ, áp dụng quy tắc nhân, ta có số cách xếp lỗi là
-		\[ D = (2 \cdot 5! \cdot 5!) \cdot 25 = 720\,000. \]
-		Vậy $\dfrac{D}{100} = 7\,200$.
+		Xét phương trình $(m-1)x^2+2(m-1)x+4=0$.\\	
+		Nếu $m=1$, phương trình trở thành $4=0$, nên phương trình vô nghiệm.\\
+		Nếu $m\ne 1$, phương trình là phương trình bậc hai với $a=m-1$, $b=2(m-1)$, $c=4$.\\
+		Khi đó biệt thức là $\Delta=\left[2(m-1)\right]^2-4(m-1)\cdot4=4(m-1)(m-5)$.\\
+		Phương trình bậc hai vô nghiệm khi $\Delta<0$, tức là $4(m-1)(m-5)<0$.
+		Suy ra $1<m<5$.\\
+		Vì $m$ là số nguyên nên $m\in\{2;3;4\}$.\\
+		Kết hợp với trường hợp $m=1$, ta có $m\in\{1;2;3;4\}$.\\
+		Vậy có $4$ giá trị nguyên của $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm.
+	}
+\end{ex}
+%-----Câu 4
+\begin{ex}%[0D8H2-4]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Để thành lập một đội tình nguyện từ nhóm $10$ học sinh, giáo viên chọn ra $2$ học sinh để phân công làm Trưởng đoàn và Phó đoàn, sau đó chọn thêm $3$ học sinh khác từ số học sinh còn lại để làm thành viên. Hỏi giáo viên có tất cả bao nhiêu cách thực hiện?
+	\shortans{5040}
+	\loigiai{
+		Chọn $2$ học sinh làm Trưởng đoàn và Phó đoàn là chọn có thứ tự, nên có $\mathrm{A}_{10}^{2}=10\cdot9=90$ cách.\\
+		Sau khi chọn Trưởng đoàn và Phó đoàn, còn lại $8$ học sinh. Chọn thêm $3$ học sinh làm thành viên có $\mathrm{C}_8^3=56$ cách.\\
+		Theo quy tắc nhân, số cách thực hiện là $90\cdot56=5\,040$.\\
+		Vậy giáo viên có tất cả $5\,040$ cách thực hiện.
+	}
+\end{ex}
+\Closesolutionfile{ans}
+\begin{center}
+	\textbf{PHẦN 4 - Phần tự luận}
+\end{center}
+\setcounter{ex}{0}
+\Opensolutionfile{ans}[ans/tl]
+%%-----Câu 1
+\begin{ex}%[0D3H1-2]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Tìm tập xác định của hàm số $y=\dfrac{\sqrt{-x^2+2x}}{x-1}$.
+	\loigiai{
+		Hàm số xác định khi biểu thức dưới căn không âm và mẫu số khác $0$.\\
+		Ta có điều kiện $-x^2+2x\ge 0$ và $x-1\ne 0$.\\
+		Điều kiện $-x^2+2x\ge 0$ tương đương với $x(2-x)\ge 0$, suy ra $0\le x\le 2$.\\
+		Mặt khác, $x-1\ne 0$ nên $x\ne 1$.\\
+		Vậy tập xác định của hàm số là $\mathscr{D}=[0;1)\cup(1;2]$.
+	}
+\end{ex}
+%%-----Câu 2
+\begin{ex}%[0D8H3-4]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Tìm hệ số của số hạng chứa $x^3$ trong khai triển $(2x-1)^5$.
+	\loigiai{
+		Số hạng tổng quát trong khai triển $(2x-1)^5$ là $T_{k+1}=\mathrm{C}_5^k(2x)^k(-1)^{5-k}$ với $0\le k\le 5$.\\
+		Số hạng chứa $x^3$ ứng với $k=3$.\\
+		Khi đó hệ số của $x^3$ là $\mathrm{C}_5^3\cdot2^3\cdot(-1)^2=10\cdot8=80$.\\
+		Vậy hệ số cần tìm là $80$.
+	}
+\end{ex}
+%%-----Câu 3
+\begin{ex}%[0H9V5-6]%[Dự án đề KTTT Môn Toán HKII NH25-26 - Dot 9- Lien Nguyen]%[THPT Mạc Đĩnh Chi - Tp HCM]%[GVPB - Ngô Tất Thành]
+	Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ với $A(2;6)$, $B(5;2)$ và $C(0;-3)$.
+	\begin{enumerate}
+		\item Viết phương trình tổng quát của đường trung trực của đoạn thẳng $BC$.
+		\item Viết phương trình chính tắc của hypebol $(H)$ biết $(H)$ có độ dài trục thực bằng $2AB$, tiêu cự bằng $4BC$.
+	\end{enumerate}
+	\loigiai{
+		\begin{enumerate}
+			\item Ta có $B(5;2)$ và $C(0;-3)$ nên $\overrightarrow{BC}=(-5;-5)=-5\cdot (1;1)$.\\
+			Trung điểm của đoạn thẳng $BC$ là $I\left(\dfrac{5}{2};-\dfrac{1}{2}\right)$.\\
+			Vì đường trung trực của đoạn thẳng $BC$ vuông góc với $BC$, nên có vectơ pháp tuyến là $\overrightarrow{n}=(1;1)$.\\
+			Phương trình đường trung trực của đoạn thẳng $BC$ là 
+			Suy ra phương trình tổng quát là $1\cdot \left(x-\dfrac{5}{2}\right)+1\cdot\left(y+\dfrac{1}{2}\right)-2=0$, hay $x+y-2=0$.
+			\item Ta có $AB=\sqrt{(5-2)^2+(2-6)^2}=\sqrt{3^2+(-4)^2}=5$.\\
+			Lại có $BC=\sqrt{(5-0)^2+(2+3)^2}=\sqrt{25+25}=5\sqrt{2}$.\\
+			Độ dài trục thực bằng $2AB$, nên $2a=2AB=10$, suy ra $a=5$.\\
+			Tiêu cự bằng $4BC$, nên $2c=4BC=20\sqrt{2}$, suy ra $c=10\sqrt{2}$.\\
+			Với hypebol chính tắc $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$, ta có $c^2=a^2+b^2$.\\
+			Do đó $b^2=c^2-a^2=(10\sqrt{2})^2-5^2=200-25=175$.\\
+			Vậy phương trình chính tắc của hypebol là $\dfrac{x^2}{25}-\dfrac{y^2}{175}=1$.
+		\end{enumerate}
 	}
 \end{ex}
 
 \Closesolutionfile{ans}
-\Closesolutionfile{ansbook}
-\begin{indapan}
-	{ans/ans\currfilebase}
-\end{indapan}
