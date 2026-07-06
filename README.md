@@ -1,3 +1,19 @@
+# Math Exam V16
+
+Bản này kế thừa V15 và vá các lỗi giáo viên/học sinh.
+
+- Trang học sinh không còn liên kết vào trang giáo viên.
+- Tạo lại đề sẽ tự reset lượt làm bằng token mới.
+- Dashboard giáo viên tự lấy Google Sheets nếu đã cấu hình.
+
+# Math Exam V15
+
+Bản V15 bổ sung nút chụp ảnh tự luận trên điện thoại và thời gian mở/đóng đề thi theo ngày giờ.
+
+# Math Exam V11.3 Stable
+
+Bản V11.3 vá lỗi parser V11.2 sinh `questions: []`, đồng thời xử lý tốt hơn các lệnh LaTeX văn bản như `\textbf`, `\textit`, `{\it ...}`, `center`, `itemize`, `itemchoice`.
+
 # Hệ thống thi trực tuyến môn Toán - V10
 
 ## 1. Điểm mới của V10
@@ -150,3 +166,17 @@ python -m http.server 8000
 ```
 
 Mở `http://localhost:8000`.
+
+
+## V11.5
+
+Sửa lỗi render TikZ dài, đặc biệt lỗi `Paragraph ended before \tikz@picture was complete`. Nếu hình vẫn lỗi, kiểm tra file `images/<mã đề>/qN_debug.tex` và `qN_error.log`.
+
+
+## V12 - An toàn hình ảnh
+Xem README-V12.md.
+
+
+## V13
+
+Bổ sung phần tự luận tự chấm bằng `\essayans{...}` hoặc `\tuluanans{...}`; hỗ trợ điểm từng câu tự luận.

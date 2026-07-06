@@ -13,11 +13,24 @@ function getApiUrl(){
 function getLocalResults(){
   try{return JSON.parse(localStorage.getItem('examResults') || '[]');}catch(e){return []}
 }
+function lightenForLocalStorage(payload){
+  try{
+    const copy = JSON.parse(JSON.stringify(payload));
+    if(Array.isArray(copy.detail)){
+      copy.detail.forEach(d=>{
+        if(Array.isArray(d.images)) d.images = d.images.map(img=>({name:img.name||'', type:img.type||'', size:img.size||0, error:img.error||'', url:img.url||''}));
+      });
+    }
+    return copy;
+  }catch(e){return payload;}
+}
 function saveResultLocal(payload){
   const list = getLocalResults();
-  list.push(payload);
-  localStorage.setItem('examResults', JSON.stringify(list));
+  list.push(lightenForLocalStorage(payload));
+  try{ localStorage.setItem('examResults', JSON.stringify(list)); }
+  catch(e){ console.warn('localStorage đầy, chỉ giữ kết quả mới nhất.'); localStorage.setItem('examResults', JSON.stringify([lightenForLocalStorage(payload)])); }
 }
+
 function clearLocalResults(){ localStorage.removeItem('examResults'); }
 
 async function saveResultOnline(payload){

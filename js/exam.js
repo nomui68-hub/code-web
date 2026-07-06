@@ -314,13 +314,49 @@ async function getAnswersAndScore(){
   const maxScore=Number((maxScores.choice+maxScores.truefalse+maxScores.short+maxScores.essay).toFixed(2));
   return {correct:fullCorrect,total:questions.length,score10:Number(score.toFixed(2)),maxScore,partScores:{choice:Number(partScores.choice.toFixed(2)),truefalse:Number(partScores.truefalse.toFixed(2)),short:Number(partScores.short.toFixed(2)),essay:Number(partScores.essay.toFixed(2))},maxScores:{choice:Number(maxScores.choice.toFixed(2)),truefalse:Number(maxScores.truefalse.toFixed(2)),short:Number(maxScores.short.toFixed(2)),essay:Number(maxScores.essay.toFixed(2))},counts,answers,detail};
 }
+function stripImageDataForLocal(payload){
+  const copy = JSON.parse(JSON.stringify(payload));
+  if(Array.isArray(copy.detail)){
+    copy.detail.forEach(d=>{
+      if(Array.isArray(d.images)) d.images = d.images.map(img=>({name:img.name||'', type:img.type||'', size:img.size||0, error:img.error||'', url:img.url||''}));
+    });
+  }
+  return copy;
+}
+function setSubmitStatus(msg){
+  const btn=document.getElementById('submitBtn');
+  if(btn) btn.textContent=msg;
+  let el=document.getElementById('submitStatus');
+  if(!el){
+    el=document.createElement('div'); el.id='submitStatus'; el.className='muted'; el.style.marginTop='10px';
+    const parent=btn?.parentElement || document.querySelector('main') || document.body;
+    parent.appendChild(el);
+  }
+  el.textContent=msg;
+}
 async function submitExam(auto=false){
   if(examLocked) return;
   if(!auto && elapsedSeconds < minSubmitSeconds){alert(`Chưa được nộp bài. Em chỉ được nộp sau ${settings.submitAfterMinutes} phút.`); return;}
-  examLocked=true; if(timerHandle) clearInterval(timerHandle);
-  const result=await getAnswersAndScore(); addAttempt();
-  const payload={studentId:localStorage.getItem('studentId')||'',studentName:localStorage.getItem('studentName')||'',className:localStorage.getItem('className')||'',examId:localStorage.getItem('examId')||examData?.examId||'DE_MAU',examTitle:examData?.title||localStorage.getItem('examTitle')||'',score:result.score10,maxScore:result.maxScore,correct:result.correct,total:result.total,partScores:result.partScores,maxScores:result.maxScores,counts:result.counts,answers:result.answers,detail:result.detail,startTime:localStorage.getItem('startTime')||'',submitTime:new Date().toISOString(),scoringRule:JSON.stringify(settings.scoring||{})};
-  saveResultLocal(payload); const onlineStatus=await saveResultOnline(payload); payload.onlineStatus=onlineStatus; localStorage.setItem('lastResult',JSON.stringify(payload)); window.location.href='result.html';
+  examLocked=true;
+  const btn=document.getElementById('submitBtn'); if(btn) btn.disabled=true;
+  if(timerHandle) clearInterval(timerHandle);
+  try{
+    setSubmitStatus('Đang xử lý bài làm và ảnh tự luận...');
+    const result=await getAnswersAndScore(); addAttempt();
+    const payload={studentId:localStorage.getItem('studentId')||'',studentName:localStorage.getItem('studentName')||'',className:localStorage.getItem('className')||'',examId:localStorage.getItem('examId')||examData?.examId||'DE_MAU',examTitle:examData?.title||localStorage.getItem('examTitle')||'',score:result.score10,maxScore:result.maxScore,correct:result.correct,total:result.total,partScores:result.partScores,maxScores:result.maxScores,counts:result.counts,answers:result.answers,detail:result.detail,startTime:localStorage.getItem('startTime')||'',submitTime:new Date().toISOString(),scoringRule:JSON.stringify(settings.scoring||{})};
+    // Lưu cục bộ bản nhẹ, tránh localStorage bị đầy khi có ảnh chụp.
+    try{ saveResultLocal(stripImageDataForLocal(payload)); }catch(e){ console.warn('Không lưu cục bộ được:', e); }
+    setSubmitStatus('Đang gửi bài lên hệ thống...');
+    const onlineStatus=await saveResultOnline(payload);
+    const finalPayload=stripImageDataForLocal(payload); finalPayload.onlineStatus=onlineStatus;
+    try{ localStorage.setItem('lastResult',JSON.stringify(finalPayload)); }catch(e){ localStorage.removeItem('lastResult'); }
+    window.location.href='result.html';
+  }catch(err){
+    console.error(err);
+    alert('Có lỗi khi nộp bài: '+String(err && err.message || err)+'\nEm hãy chụp màn hình báo giáo viên, sau đó thử nộp lại với ảnh nhẹ hơn.');
+    examLocked=false; if(btn){btn.disabled=false; btn.textContent='Nộp bài';}
+    startTimer();
+  }
 }
 function updateSubmitButton(){
   const btn=document.getElementById('submitBtn'); if(!btn) return;
@@ -379,16 +415,43 @@ function attachEssayFileListeners(){
 }
 
 function fileToDataUrl(file){return new Promise((resolve,reject)=>{const r=new FileReader(); r.onload=()=>resolve({name:file.name,type:file.type,size:file.size,dataUrl:r.result}); r.onerror=reject; r.readAsDataURL(file);});}
+function imageToCompressedDataUrl(file, maxSide=1200, quality=0.72){
+  return new Promise((resolve)=>{
+    const img=new Image();
+    const url=URL.createObjectURL(file);
+    img.onload=()=>{
+      try{
+        let w=img.width||1, h=img.height||1;
+        const scale=Math.min(1, maxSide/Math.max(w,h));
+        w=Math.max(1, Math.round(w*scale)); h=Math.max(1, Math.round(h*scale));
+        const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h;
+        const ctx=canvas.getContext('2d'); ctx.drawImage(img,0,0,w,h);
+        const dataUrl=canvas.toDataURL('image/jpeg', quality);
+        URL.revokeObjectURL(url);
+        resolve({name:(file.name||'anh_bai_lam')+'.jpg', type:'image/jpeg', size:Math.round((dataUrl.length*3)/4), dataUrl});
+      }catch(e){
+        URL.revokeObjectURL(url);
+        resolve({name:file.name||'image', type:file.type, size:file.size, error:'Không nén được ảnh: '+String(e.message||e)});
+      }
+    };
+    img.onerror=()=>{URL.revokeObjectURL(url); resolve({name:file.name||'image', type:file.type, size:file.size, error:'Không đọc được ảnh.'});};
+    img.src=url;
+  });
+}
 async function readEssayImages(qid){
   const input=document.getElementById(`q${qid}_files`);
   const camera=document.getElementById(`q${qid}_camera`);
-  const files=[...(camera?.files||[]), ...(input?.files||[])].slice(0,3); // giới hạn 3 ảnh/câu để tránh quá nặng Google Sheets
-  const maxBytes=1600*1024;
+  const files=[...(camera?.files||[]), ...(input?.files||[])].filter(f=>f && f.type && f.type.startsWith('image/')).slice(0,3);
   const out=[];
   for(const f of files){
-    if(!f.type.startsWith('image/')) continue;
-    if(f.size>maxBytes){out.push({name:f.name,type:f.type,size:f.size,error:'Ảnh lớn hơn 1.6MB, vui lòng nén/chụp lại nhẹ hơn.'}); continue;}
-    out.push(await fileToDataUrl(f));
+    // V17.1: luôn nén ảnh trước khi gửi để điện thoại không bị đứng màn hình.
+    const compressed = await imageToCompressedDataUrl(f, 1200, 0.70);
+    if(compressed.dataUrl && compressed.size > 550*1024){
+      const smaller = await imageToCompressedDataUrl(f, 900, 0.60);
+      out.push(smaller);
+    }else{
+      out.push(compressed);
+    }
   }
   return out;
 }
