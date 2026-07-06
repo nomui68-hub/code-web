@@ -1,3 +1,28 @@
+function parseLocalDateTime(value){
+  if(!value) return null;
+  const d=new Date(value);
+  return isNaN(d.getTime()) ? null : d;
+}
+function formatDateTimeVN(value){
+  const d=parseLocalDateTime(value);
+  return d ? d.toLocaleString('vi-VN') : '';
+}
+function examStatusLabel(e){
+  const now=new Date();
+  const st=e.settings || {};
+  const open=parseLocalDateTime(st.openAt || '');
+  const close=parseLocalDateTime(st.closeAt || '');
+  if(open && now<open) return ` — chưa mở (${formatDateTimeVN(st.openAt)})`;
+  if(close && now>close) return ` — đã đóng (${formatDateTimeVN(st.closeAt)})`;
+  return '';
+}
+function canOpenExam(e){
+  const now=new Date(); const st=e.settings || {};
+  const open=parseLocalDateTime(st.openAt || ''); const close=parseLocalDateTime(st.closeAt || '');
+  if(open && now<open) return false;
+  if(close && now>close) return false;
+  return true;
+}
 async function loadExamList(){
   const select=document.getElementById('examSelect');
   const hidden=document.getElementById('examId');
@@ -14,11 +39,12 @@ async function loadExamList(){
       status.textContent='Chưa có đề mới. Giáo viên cần tạo/giao đề trước.';
       return;
     }
-    select.innerHTML=exams.map(e=>`<option value="${e.id}">${e.title||e.id}</option>`).join('');
-    const def=(data.defaultExamId && exams.some(e=>e.id===data.defaultExamId)) ? data.defaultExamId : (exams[0]&&exams[0].id);
+    select.innerHTML=exams.map(e=>`<option value="${e.id}" ${canOpenExam(e)?'':'disabled'}>${e.title||e.id}${examStatusLabel(e)}</option>`).join('');
+    const available=exams.filter(canOpenExam);
+    const def=(data.defaultExamId && available.some(e=>e.id===data.defaultExamId)) ? data.defaultExamId : (available[0]&&available[0].id) || (exams[0]&&exams[0].id);
     select.value=def; hidden.value=select.value;
     localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || def);
-    status.textContent=`Đã tải ${exams.length} đề mới.`;
+    status.textContent=`Đã tải ${exams.length} đề mới, hiện mở ${exams.filter(canOpenExam).length} đề.`;
   }catch(err){
     select.innerHTML='<option value="DE_MAU">Đề mẫu</option>'; hidden.value='DE_MAU'; status.textContent='Không tải được danh sách đề, dùng DE_MAU.';
   }
@@ -35,6 +61,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     localStorage.removeItem('currentResult');
     if(oldApi) localStorage.setItem('EXAM_API_URL', oldApi);
     if(!select.value){ alert('Hiện chưa có đề nào được giao.'); return; }
+    if(select.selectedOptions[0] && select.selectedOptions[0].disabled){ alert('Đề này chưa đến thời gian mở hoặc đã đóng.'); return; }
     localStorage.setItem('studentId', document.getElementById('studentId').value.trim());
     localStorage.setItem('studentName', document.getElementById('studentName').value.trim());
     localStorage.setItem('className', document.getElementById('className').value.trim());

@@ -11,6 +11,8 @@ const DEFAULT_SETTINGS = {
   durationMinutes: 90,
   submitAfterMinutes: 0,
   maxAttempts: 1,
+  openAt: '',
+  closeAt: '',
   scoring: {
     choiceTotal: 3,
     choiceCount: 12,
@@ -154,6 +156,32 @@ function normalizeLatexResidue(str){
   t = escapeAnglesInsideMathJS(t);
   return t;
 }
+
+function parseLocalDateTime(value){
+  if(!value) return null;
+  const d = new Date(value);
+  if(isNaN(d.getTime())) return null;
+  return d;
+}
+function formatDateTimeVN(value){
+  const d=parseLocalDateTime(value);
+  return d ? d.toLocaleString('vi-VN') : '';
+}
+function examOpenStatus(){
+  const now=new Date();
+  const open=parseLocalDateTime(settings.openAt || '');
+  const close=parseLocalDateTime(settings.closeAt || '');
+  if(open && now < open) return {ok:false, reason:`Đề thi chưa mở. Thời gian mở: ${formatDateTimeVN(settings.openAt)}.`};
+  if(close && now > close) return {ok:false, reason:`Đề thi đã đóng. Thời gian đóng: ${formatDateTimeVN(settings.closeAt)}.`};
+  return {ok:true, reason:''};
+}
+function examWindowText(){
+  const a=[];
+  if(settings.openAt) a.push(`Mở từ <b>${formatDateTimeVN(settings.openAt)}</b>`);
+  if(settings.closeAt) a.push(`Đóng vào <b>${formatDateTimeVN(settings.closeAt)}</b>`);
+  return a.length ? a.join('. ') + '.' : '';
+}
+
 function attemptKey(){return `attempts_${localStorage.getItem('examId') || 'DE_MAU'}_${localStorage.getItem('studentId') || 'NOID'}`;}
 function getAttemptCount(){return Number(localStorage.getItem(attemptKey()) || '0');}
 function addAttempt(){localStorage.setItem(attemptKey(), String(getAttemptCount()+1));}
@@ -206,14 +234,15 @@ function renderEssay(q){
   }else if(q.gradingMode==='auto'){
     note = `<div class="muted"><b>Câu tự luận tự chấm theo đáp án cuối.</b></div>`;
   }
-  return `${renderLatex(q.question)}${visualBlock(q)}${note}<textarea class="short-input essay-input" id="q${q.id}" rows=6 placeholder="Nhập bài làm tự luận hoặc ghi chú bài làm trên giấy"></textarea><div class="essay-upload"><label><b>Nộp ảnh bài làm trên giấy</b> <span class="muted">(tối đa 3 ảnh, mỗi ảnh dưới 1.6MB)</span></label><input type="file" id="q${q.id}_files" accept="image/*" multiple></div>`;
+  return `${renderLatex(q.question)}${visualBlock(q)}${note}<textarea class="short-input essay-input" id="q${q.id}" rows=6 placeholder="Nhập bài làm tự luận hoặc ghi chú bài làm trên giấy"></textarea><div class="essay-upload"><label><b>Nộp ảnh bài làm trên giấy</b> <span class="muted">(tối đa 3 ảnh, mỗi ảnh dưới 1.6MB)</span></label><div class="essay-photo-actions"><button type="button" class="btn" onclick="openEssayCamera(${q.id})">📷 Chụp ảnh</button><button type="button" class="btn" onclick="openEssayUpload(${q.id})">⬆️ Tải ảnh lên</button></div><input type="file" id="q${q.id}_camera" accept="image/*" capture="environment" class="essay-hidden-file"><input type="file" id="q${q.id}_files" accept="image/*" multiple class="essay-hidden-file"><div id="q${q.id}_preview" class="essay-preview muted">Chưa chọn ảnh.</div></div>`;
 }
 function renderExam(){
   document.getElementById('studentBox').textContent = studentLabel();
   document.getElementById('examTitle').textContent = examData?.title || localStorage.getItem('examTitle') || 'Đề thi trực tuyến';
   const info=document.getElementById('examInfo');
   if(info){
-    info.innerHTML = `Thời gian: <b>${settings.durationMinutes}</b> phút. ${settings.submitAfterMinutes?`Chỉ được nộp sau <b>${settings.submitAfterMinutes}</b> phút. `:''}Số lần được làm: <b>${settings.maxAttempts}</b>.`;
+    const wText = examWindowText();
+    info.innerHTML = `Thời gian: <b>${settings.durationMinutes}</b> phút. ${settings.submitAfterMinutes?`Chỉ được nộp sau <b>${settings.submitAfterMinutes}</b> phút. `:''}Số lần được làm: <b>${settings.maxAttempts}</b>. ${wText}`;
   }
   const box=document.getElementById('questions');
   box.innerHTML=questions.map((q,idx)=>{
@@ -320,10 +349,38 @@ function prepareStudentVariant(){
   let k=0;
   questions=questions.map(q=>q.type==='choice'?choiceQs[k++]:q);
 }
+
+window.openEssayCamera=function(qid){
+  const el=document.getElementById(`q${qid}_camera`);
+  if(el) el.click();
+};
+window.openEssayUpload=function(qid){
+  const el=document.getElementById(`q${qid}_files`);
+  if(el) el.click();
+};
+function updateEssayPreview(qid){
+  const c=[...(document.getElementById(`q${qid}_camera`)?.files||[])];
+  const u=[...(document.getElementById(`q${qid}_files`)?.files||[])];
+  const files=[...c,...u].filter(f=>f.type && f.type.startsWith('image/')).slice(0,3);
+  const box=document.getElementById(`q${qid}_preview`);
+  if(!box) return;
+  if(!files.length){box.textContent='Chưa chọn ảnh.'; return;}
+  box.innerHTML = files.map((f,i)=>`Ảnh ${i+1}: ${f.name || 'ảnh chụp'} (${Math.round(f.size/1024)} KB)`).join('<br>');
+}
+function attachEssayFileListeners(){
+  document.querySelectorAll('input[id$="_camera"], input[id$="_files"]').forEach(inp=>{
+    inp.addEventListener('change',()=>{
+      const m=inp.id.match(/^q(\d+)_(camera|files)$/);
+      if(m) updateEssayPreview(m[1]);
+    });
+  });
+}
+
 function fileToDataUrl(file){return new Promise((resolve,reject)=>{const r=new FileReader(); r.onload=()=>resolve({name:file.name,type:file.type,size:file.size,dataUrl:r.result}); r.onerror=reject; r.readAsDataURL(file);});}
 async function readEssayImages(qid){
   const input=document.getElementById(`q${qid}_files`);
-  const files=[...(input?.files||[])].slice(0,3); // giới hạn 3 ảnh/câu để tránh quá nặng Google Sheets
+  const camera=document.getElementById(`q${qid}_camera`);
+  const files=[...(camera?.files||[]), ...(input?.files||[])].slice(0,3); // giới hạn 3 ảnh/câu để tránh quá nặng Google Sheets
   const maxBytes=1600*1024;
   const out=[];
   for(const f of files){
@@ -339,8 +396,10 @@ async function init(){
   if(!localStorage.getItem('studentId') || !localStorage.getItem('className')) console.warn('Chưa có thông tin học sinh.');
   await loadQuestions();
   const maxAttempts=Number(settings.maxAttempts || 1);
+  const openStatus=examOpenStatus();
+  if(!openStatus.ok){document.getElementById('questions').innerHTML=`<section class="card"><h2>Chưa thể làm bài</h2><p>${openStatus.reason}</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
   if(getAttemptCount() >= maxAttempts){document.getElementById('questions').innerHTML=`<section class="card"><h2>Đã hết số lần làm bài</h2><p>Em đã làm đủ ${maxAttempts} lần cho đề này trên thiết bị này.</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
-  renderExam(); startTimer();
+  renderExam(); attachEssayFileListeners(); startTimer();
   document.getElementById('submitBtn').addEventListener('click',()=>{if(confirm('Em chắc chắn muốn nộp bài?')) submitExam(false);});
   document.getElementById('shuffleBtn').addEventListener('click',()=>{shuffleArray(questions); renderExam();});
 }

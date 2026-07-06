@@ -45,3 +45,7 @@ button.secondary{background:#fff;color:var(--danger);border-color:#f3b7b7;width:
 @media(max-width:800px){.filters,.stat-grid{grid-template-columns:1fr}.result-table{font-size:12px}}
 .essay-upload{margin-top:12px;padding:12px;background:#f7fbff;border:1px dashed #b9cbe8;border-radius:10px}
 .essay-images{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;margin-top:6px}
+/* V15: nút chụp ảnh tự luận */
+.essay-photo-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.essay-hidden-file{display:none}
+.essay-preview{margin-top:8px;line-height:1.5}
