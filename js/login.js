@@ -28,7 +28,8 @@ async function loadExamList(){
   const hidden=document.getElementById('examId');
   const status=document.getElementById('examLoadStatus');
   try{
-    const res=await fetch('exams/index.json?_='+Date.now());
+    const res=await fetch('exams/index.json?v='+Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status+' khi tải exams/index.json');
     const data=await res.json();
     // V17: học sinh chỉ thấy các đề giáo viên đã giao trong exams/index.json.
     // Không bao giờ hiện DE_MAU hoặc đề mẫu trên trang học sinh.
@@ -38,7 +39,7 @@ async function loadExamList(){
       select.innerHTML='<option value="">Chưa có đề nào được giao</option>';
       hidden.value='';
       if(btn) btn.disabled=true;
-      status.textContent='Chưa có đề mới. Giáo viên cần tạo/giao đề trước.';
+      status.textContent='Chưa có đề mới trong exams/index.json. Giáo viên cần tạo/giao đề và upload thư mục deploy lên GitHub.';
       return;
     }
     if(btn) btn.disabled=false;
@@ -49,7 +50,7 @@ async function loadExamList(){
     localStorage.setItem('examTitle', select.options[select.selectedIndex]?.textContent || def);
     status.textContent=`Đã tải ${exams.length} đề mới, hiện mở ${exams.filter(canOpenExam).length} đề.`;
   }catch(err){
-    select.innerHTML='<option value="">Không tải được danh sách đề</option>'; hidden.value=''; const btn=document.querySelector('#loginForm button[type="submit"]'); if(btn) btn.disabled=true; status.textContent='Không tải được exams/index.json. Giáo viên cần upload thư mục exams lên GitHub.';
+    select.innerHTML='<option value="">Không tải được danh sách đề</option>'; hidden.value=''; const btn=document.querySelector('#loginForm button[type="submit"]'); if(btn) btn.disabled=true; status.textContent='Không tải được exams/index.json: '+(err&&err.message?err.message:err)+'. Hãy upload nguyên thư mục deploy lên GitHub.';
   }
 }
 document.addEventListener('DOMContentLoaded',()=>{
