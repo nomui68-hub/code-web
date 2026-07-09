@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "555",
+  "defaultExamId": "1007",
   "exams": [
     {
-      "id": "555",
-      "title": "Kiemtre",
-      "file": "exams/555/questions.json",
+      "id": "1007",
+      "title": "Đề thi thử",
+      "file": "exams/1007/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
         "maxAttempts": 2,
-        "openAt": "",
-        "closeAt": "",
-        "attemptToken": "1783429095",
-        "buildAt": "2026-07-07T19:58:15",
+        "openAt": "2026-07-10T11:40",
+        "closeAt": "2026-07-10T00:15",
+        "attemptToken": "1783640530",
+        "buildAt": "2026-07-10T06:42:10",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
