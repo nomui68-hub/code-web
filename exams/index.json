@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "5566",
+  "defaultExamId": "99",
   "exams": [
     {
-      "id": "5566",
-      "title": "Đề test",
-      "file": "exams/5566/questions.json",
+      "id": "99",
+      "title": "Đề test-2",
+      "file": "exams/99/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
         "maxAttempts": 4,
-        "openAt": "2026-07-10T13:16",
-        "closeAt": "2026-07-11T13:13",
-        "attemptToken": "1783664051",
-        "buildAt": "2026-07-10T13:14:11",
+        "openAt": "2026-07-10T13:25",
+        "closeAt": "2026-07-11T15:17",
+        "attemptToken": "1783664300",
+        "buildAt": "2026-07-10T13:18:20",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
