@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "1007",
+  "defaultExamId": "1111",
   "exams": [
     {
-      "id": "1007",
+      "id": "1111",
       "title": "Đề thi thử",
-      "file": "exams/1007/questions.json",
+      "file": "exams/1111/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
         "maxAttempts": 2,
-        "openAt": "2026-07-10T11:40",
-        "closeAt": "2026-07-10T00:15",
-        "attemptToken": "1783640530",
-        "buildAt": "2026-07-10T06:42:10",
+        "openAt": "2026-07-10T12:40",
+        "closeAt": "2026-07-10T12:57",
+        "attemptToken": "1783661707",
+        "buildAt": "2026-07-10T12:35:07",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
@@ -22,13 +22,9 @@
           "truefalseCount": 4,
           "shortTotal": 3.0,
           "shortCount": 6,
-          "essayTotal": 3.0,
-          "essayCount": 3,
-          "essayPoints": [
-            1.0,
-            1.0,
-            1.0
-          ],
+          "essayTotal": 0.0,
+          "essayCount": 0,
+          "essayPoints": [],
           "truefalseMode": "progressive"
         }
       }
