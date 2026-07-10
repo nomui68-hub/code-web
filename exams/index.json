@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "1111",
+  "defaultExamId": "5566",
   "exams": [
     {
-      "id": "1111",
-      "title": "Đề thi thử",
-      "file": "exams/1111/questions.json",
+      "id": "5566",
+      "title": "Đề test",
+      "file": "exams/5566/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 2,
-        "openAt": "2026-07-10T12:40",
-        "closeAt": "2026-07-10T12:57",
-        "attemptToken": "1783661707",
-        "buildAt": "2026-07-10T12:35:07",
+        "maxAttempts": 4,
+        "openAt": "2026-07-10T13:16",
+        "closeAt": "2026-07-11T13:13",
+        "attemptToken": "1783664051",
+        "buildAt": "2026-07-10T13:14:11",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
