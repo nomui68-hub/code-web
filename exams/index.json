@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "99",
+  "defaultExamId": "11",
   "exams": [
     {
-      "id": "99",
-      "title": "Đề test-2",
-      "file": "exams/99/questions.json",
+      "id": "11",
+      "title": "KiemTra",
+      "file": "exams/11/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
         "maxAttempts": 4,
-        "openAt": "2026-07-10T13:25",
-        "closeAt": "2026-07-11T15:17",
-        "attemptToken": "1783664300",
-        "buildAt": "2026-07-10T13:18:20",
+        "openAt": "2026-07-11T06:19",
+        "closeAt": "2026-07-11T00:15",
+        "attemptToken": "1783725344",
+        "buildAt": "2026-07-11T06:15:44",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
