@@ -36,29 +36,46 @@ function clearLocalResults(){ localStorage.removeItem('examResults'); }
 async function saveResultOnline(payload){
   const API_URL = getApiUrl();
   if(!API_URL){
-    console.warn('Chưa cấu hình Google Sheets API_URL, chỉ lưu cục bộ.');
-    return {success:false, localOnly:true, message:'Chưa cấu hình Google Sheets'};
+    throw new Error('Chưa cấu hình URL Apps Script trong js/config.js.');
   }
-  try{
-    const body = JSON.stringify({
-      action:'save',
-      ...payload,
-      userAgent: navigator.userAgent || ''
-    });
 
-    // Dùng text/plain để tránh lỗi CORS preflight với Google Apps Script.
-    const res = await fetch(API_URL, {
+  const body = JSON.stringify({
+    action:'save',
+    ...payload,
+    userAgent: navigator.userAgent || ''
+  });
+
+  let res;
+  try{
+    // Dùng text/plain để tránh CORS preflight với Google Apps Script.
+    res = await fetch(API_URL, {
       method:'POST',
       headers:{'Content-Type':'text/plain;charset=utf-8'},
-      body
+      body,
+      cache:'no-store',
+      redirect:'follow'
     });
-
-    const text = await res.text();
-    try{return JSON.parse(text);}catch(e){return {success:true, message:text || 'Đã gửi Google Sheets'};}
   }catch(err){
-    console.error(err);
-    return {success:false, error:String(err), message:'Không gửi được Google Sheets'};
+    throw new Error('Không kết nối được Apps Script. Kiểm tra Internet, URL và quyền "Bất cứ ai". Chi tiết: '+String(err && err.message || err));
   }
+
+  if(!res.ok){
+    throw new Error(`Apps Script trả về HTTP ${res.status} ${res.statusText || ''}`.trim());
+  }
+
+  const text = await res.text();
+  let data;
+  try{
+    data = JSON.parse(text);
+  }catch(e){
+    const shortText = String(text || '').replace(/\s+/g,' ').slice(0,180);
+    throw new Error('Apps Script không trả về JSON hợp lệ. Có thể URL đang yêu cầu đăng nhập hoặc trỏ nhầm bản triển khai. Phản hồi: '+shortText);
+  }
+
+  if(!data || data.success !== true){
+    throw new Error((data && (data.message || data.error)) || 'Google Sheets không xác nhận đã lưu bài.');
+  }
+  return data;
 }
 
 function normalizeOnlineRow(r){

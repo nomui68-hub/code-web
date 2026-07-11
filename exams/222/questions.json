@@ -1,0 +1,473 @@
+{
+  "examId": "222",
+  "title": "Giữa Kỳ 2",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Một quán trà sữa phục vụ thực đơn gồm $4$ loại trà sữa khác nhau và $6$ loại topping khác nhau. Một khách hàng muốn chọn một combo gồm $1$ loại trà sữa và $1$ loại topping. Hỏi khách hàng đó có bao nhiều cách chọn một combo như vậy?",
+      "options": [
+        "$10$",
+        "$24$",
+        "$120$",
+        "$720$"
+      ],
+      "answer": 1,
+      "id": 1,
+      "solution": "Chọn một trong $4$ loại trà sữa khác nhau có $4$ cách. <br>\n Chọn một trong $6$ loại topping có $6$ cách. <br>\n Vậy số cách chọn một combo gồm $1$ loại trà sữa và $1$ loại topping là $6 \\cdot 4=24$ cách.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, góc giữa hai đường thẳng $d \\colon \\sqrt{3}x-y+2025=0$ và $\\Delta \\colon \\sqrt{3}x+y+2026=0$ bằng",
+      "options": [
+        "$60^\\circ$",
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$90^\\circ$"
+      ],
+      "answer": 0,
+      "id": 2,
+      "solution": "Ta có $\\cos \\left(d,\\Delta\\right)=\\dfrac{\\left| \\sqrt{3} \\cdot\\sqrt{3} -1 \\cdot 1 \\right|}{\\sqrt{\\left(\\sqrt{3}\\right)^2+(-1)^2} \\cdot \\sqrt{\\left(\\sqrt{3}\\right)^2+1^2}}=\\dfrac{1}{2}$ nên $\\left(d,\\Delta\\right)=60^\\circ$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Tích các nghiệm thực của phương trình $\\sqrt{2x^2+1}=\\sqrt{x^2+5}$ bằng",
+      "options": [
+        "$0$",
+        "$-1$",
+        "$1$",
+        "$-4$"
+      ],
+      "answer": 3,
+      "id": 3,
+      "solution": "Xét phương trình $\\sqrt{2x^2+1}=\\sqrt{x^2+5}$ (*). <br>\n Bình phương hai vế của phương trình, ta được\n $2x^2+1=x^2+5$ hay $x^2-4=0$. <br> Suy ra $\\begin{cases}x=2\\\\x=-2.\\end{cases}$ <br>\n Thay lần lượt hai giá trị trị $x=2$, $x=-2$ vào phương trình (*), ta thấy hai giá trị này đều thỏa mãn. <br>\n Vậy phương trình (*) có hai nghiệm là $x=2$, $x=-2$ và tích hai nghiệm là $2 \\cdot (-2) =-4$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ với $A(1;3)$, $B(4;6)$, $C(0;4)$. Gọi $M$ là\n trung điểm của đoạn thẳng $BC$. Phương trình tổng quát của đường thắng $AM$ có dạng\n $ax-y+c=0$. Tính $P=a^2-c^2$.",
+      "options": [
+        "$P=4$",
+        "$P=1$",
+        "$P=3$",
+        "$P=8$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "$M$ là\n trung điểm của đoạn thẳng $BC$ nên \n \\[\\begin{cases}x_M=\\dfrac{x_B+x_C}{2}=\\dfrac{4+0}{2}=2\\\\y_M=\\dfrac{y_B+y_C}{2}=\\dfrac{6+4}{2}=5.\\end{cases}\\]\n Vậy $M(2;5)$. <br>\n Ta có $\\overrightarrow{AM}=(1;2)$ nên đường thẳng $AM$ có một vectơ pháp tuyến là $\\overrightarrow{n}=(2;-1)$. <br>\n Phương trình tổng quát của đường thẳng $AM$ là\n \\[2(x-1)-1(y-3) = 0 \\Leftrightarrow 2x-y+1=0.\\]\n Do đó $a=2$, $c=1$ nên $P=a^2-c^2=2^2-1^2=3$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Biểu thức nào sau đây là tam thức bậc hai?",
+      "options": [
+        "$f(x)=x+\\dfrac{1}{x}$",
+        "$g(x)=2x-5$",
+        "$h(x)=x^2-2$",
+        "$t(x)=x^3+x-2$"
+      ],
+      "answer": 2,
+      "id": 5,
+      "solution": "Biểu thức $h(x)=x^2-2$ là tam thức bậc hai.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho elip $(E) \\colon \\dfrac{x^2}{25}+\\dfrac{y^2}{16}=1$. Độ dài trục lớn elip bằng",
+      "options": [
+        "$8$",
+        "$10$",
+        "$50$",
+        "$32$"
+      ],
+      "answer": 1,
+      "id": 6,
+      "solution": "Elip $(E) \\colon \\dfrac{x^2}{25}+\\dfrac{y^2}{16}=1$ có $a^2=25$ nên $a=5$. <br>\n Độ dài trục lớn elip $A_1A_2=2a=2 \\cdot 5=10$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong tiệm còn $5$ cái bánh khác nhau. Một khách hàng có bao nhiêu cách lựa chọn mua một số bánh trong số $5$ cái bánh đó (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào)?",
+      "options": [
+        "$32$",
+        "$5$",
+        "$21$",
+        "$10$"
+      ],
+      "answer": 0,
+      "id": 7,
+      "solution": "Số cách lựa chọn mua\n một số bánh trong số $5$ cái bánh (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào) là\n \\[\\mathrm{C}_5^0+\\mathrm{C}_5^1+\\mathrm{C}_5^2+\\mathrm{C}_5^3+\\mathrm{C}_5^4+\\mathrm{C}_5^5=(1+1)^5=32.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong một hộp có $10$ viên bi khác nhau, gồm $6$ viên bi màu đỏ và $4$ viên bi màu xanh. Lấy ngẫu nhiên đồng thời $3$ viên bi từ hộp. Gọi A là biến cố: ‘ ‘ Lấy được ít nhất $2$ viên bi màu\n đỏ’ ’. Có bao nhiều kết quả thuận lợi cho biến cố $A$?",
+      "options": [
+        "$60$",
+        "$20$",
+        "$100$",
+        "$80$"
+      ],
+      "answer": 3,
+      "id": 8,
+      "solution": "Chọn $3$ viên bi gồm $2$ bi đỏ, $1$ bi xanh có $\\mathrm{C}_{6}^{2} \\cdot \\mathrm{C}_{4}^{1}$ cách. <br>\n Chọn $3$ viên bi gồm $3$ bi đỏ có $\\mathrm{C}_{6}^{3}$ cách. <br>\n Vậy $n(A)=\\mathrm{C}_{6}^{2} \\cdot \\mathrm{C}_{4}^{1}+\\mathrm{C}_{6}^{3}=80$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng toa độ $ Oxy$, cho hai điểm $A(1;3)$ và $B(5;9)$. Toa độ trung điểm $M$ của đoạn thẳng $AB$ là",
+      "options": [
+        "$(3;6)$",
+        "$(2;3)$",
+        "$(2;6)$",
+        "$(2;4)$"
+      ],
+      "answer": 0,
+      "id": 9,
+      "solution": "$M$ là\n trung điểm của đoạn thẳng $AB$ nên \n \\[\\begin{cases}x_M=\\dfrac{x_A+x_B}{2}=\\dfrac{1+5}{2}=3\\\\y_M=\\dfrac{y_A+y_B}{2}=\\dfrac{3+9}{2}=6.\\end{cases}\\]\n Vậy $M(3;6)$. <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Một hộp chứa $3$ quả cầu trắng được đánh số từ $1$ đến $3$. Lấy ngẫu nhiên đồng thời hai quả cầu từ hộp đó. Không gian mẫu $\\Omega$ của phép thử là",
+      "options": [
+        "$\\Omega =\\left\\{1;2;3\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;2\\right);\\left(2;1\\right);\\left(1;3\\right);\\left(3;1\\right);\\left(2;3\\right);\\left(3;2\\right)\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;2\\right);\\left(1;3\\right);\\left(2;3\\right)\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;1\\right);\\left(2;2\\right);\\left(3;3\\right)\\right\\}$"
+      ],
+      "answer": 2,
+      "id": 10,
+      "solution": "Lấy ngẫu nhiên đồng thời hai trong $3$ quả cầu được đánh số từ $1$ đến $3$ nên không gian mẫu $\\Omega$ của phép thử là $\\Omega =\\left\\{\\left(1;2\\right);\\left(1;3\\right);\\left(2;3\\right)\\right\\}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Một tổ có $10$ học sinh. Hỏi có bao nhiêu cách chọn ra $2$ học sinh từ tổ đó để đi trực nhật?",
+      "options": [
+        "$5$",
+        "$90$",
+        "$45$",
+        "$4$"
+      ],
+      "answer": 2,
+      "id": 11,
+      "solution": "Chọn ra $2$ học sinh trong $10$ học sinh từ tổ đó để đi trực nhật có $\\mathrm{C}_{10}^2=45$ cách.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho đường tròn $(C) \\colon (x-2)^2+(y-3)^2=25$. Tiếp tuyến của đường tròn $(C)$ tại điểm $A(6;0)$ đi qua điểm nào sau đây?",
+      "options": [
+        "$M(3;-4)$",
+        "$N(4;-3)$",
+        "$P(4;3)$",
+        "$Q(3;4)$"
+      ],
+      "answer": 0,
+      "id": 12,
+      "solution": "Đường tròn $(C) \\colon (x-2)^2+(y-3)^2=25$ có tâm $I(2;3)$. <br>\n Tiếp tuyến $d$ của đường tròn $(C)$ tại điểm $A(6;0)$ có phương trình là\n \\[(2-6)(x-6)+(3-0)(y-0)=0 \\Leftrightarrow -4(x-6)+3y=0 \\Leftrightarrow 4x-3y-24=0.\\]\n Vậy $d \\colon 4x-3y-24=0$. <br>\n Vì $4 \\cdot 3 -3 \\cdot (-4) -24=0$ nên $d$ đi qua $M(3;-4)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Lớp $10$A có $10$ học sinh đăng kí tham gia thi kéo co, gồm có $6$ học sinh nam và $4$ học sinh nữ. Giáo viên chọn ngẫu nhiên $5$ học sinh để lập một đội thi. Xét tính đúng sai của các khẳng định sau",
+      "statements": [
+        {
+          "text": "Số các chọn $5$ học sinh từ $10$ học sinh là $252$",
+          "answer": true
+        },
+        {
+          "text": "Số cách chọn đội mà không có học sinh nữ là $720$",
+          "answer": false
+        },
+        {
+          "text": "Số cách chọn đội có đúng $2$ học sinh nữ là $120$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất để đội được chọn có số học sinh nam nhiều hơn số học sinh nữ là $\\dfrac{5}{7}$",
+          "answer": false
+        }
+      ],
+      "id": 13,
+      "solution": "<br>\n <br> • Số cách chọn $5$ học sinh từ $10$ học sinh là tổ hợp chập $5$ của $10$. <br>\n Do đó, ta có\n \\[\\mathrm{C}_{10}^5=\\dfrac{10!}{5!\\cdot 5!}=252.\\]\n <br> • Số cách chọn đội trong đó không có học sinh nữ là tổ hợp chập $5$ của $6$. <br>\n Do đó, ta có\n \\[\\mathrm{C}_{6}^5=\\dfrac{6!}{5!\\cdot 1!}=6.\\]\n <br> • Số cách chọn đội để có đúng $2$ học sinh nữ là\n \\[\\mathrm{C}_{6}^3\\cdot \\mathrm{C}_{4}^2=20\\cdot 6=120.\\]\n <br> • Gọi $A$ là biến cố đội được chọn có số học sinh nam nhiều hơn số học sinh nữ. <br>\n Ta xét các trường hợp sau\n <br>\n <br> • Trường hợp 1: $3$ học sinh nam, $2$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^3\\cdot\\mathrm{C}_4^2=20\\cdot 6=120.\\]\n <br> • Trường hợp 2: $4$ học sinh nam, $1$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^4\\cdot\\mathrm{C}_4^1=15\\cdot 4=60.\\]\n <br> • Trường hợp 3: $5$ học sinh nam, $0$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^5\\cdot\\mathrm{C}_4^0=6\\cdot 1=6.\\]\n <br>\n Suy ra tổng số cách chọn thoả mãn đề bài là \n \\[n\\left(A\\right)=120+60+6=186.\\]\n Lại có $n\\left(\\Omega\\right)=252$. <br>\n Suy ra xác suất cần tìm là \n \\[\\mathrm{P}(A)=\\dfrac{186}{252}=\\dfrac{31}{42}.\\]\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho parabol $(P)$ có phương trình $y^2 = 8x$. Gọi $F$ là tiêu điểm và $\\Delta$ là đường chuẩn của $(P)$. Gọi $d$ là đường thẳng đi qua $F$ và vuông góc với trục đối xứng của $(P)$. Đường thẳng $d$ cắt $(P)$ tại $2$ điểm phân biệt $A$ và $B$. Xét tính đúng sai của các khẳng định sau:",
+      "statements": [
+        {
+          "text": "$(P)$ có tiêu điểm là $F\\left(2;0\\right)$",
+          "answer": true
+        },
+        {
+          "text": "Phương trình đường chuẩn của $(P)$ là $\\Delta\\colon x - 2 = 0$",
+          "answer": false
+        },
+        {
+          "text": "$AB = 8$",
+          "answer": true
+        },
+        {
+          "text": "Đường tròn $(C)$ có đường kính $AB$ tiếp xúc với đường chuẩn $\\Delta$",
+          "answer": false
+        }
+      ],
+      "id": 14,
+      "solution": "<br>\n <br> • Ta có $y^2=2px=8x\\Rightarrow x=4$. <br>\n Suy ra tiêu điểm của $(P)$ là $F\\left(2;0\\right)$.\n <br> • Phương trình đường chuẩn của $(P)$ là $x=-\\dfrac{p}{2}=-2$, hay $x+2=0$.\n <br> • Đường thẳng $d$ đi qua $F\\left(2;0\\right)$ và vuông góc với trục $Ox$ nên có phương trình $x=2$. <br>\n Thay vào $(P)$ ta có\n \\[y^2 = 8 \\cdot 2 = 16 \\Rightarrow y = \\pm 4.\\]\n Khi đó $A(2; 4)$ và $B(2; -4)$, suy ra độ dài đoạn $AB$ là\n \\[AB=\\sqrt{\\left(2-2\\right)^2+\\left(-4-4\\right)^2}=8.\\]\n <br> • Đường tròn $(C)$ đường kính $AB$ có tâm là $F\\left(2;0\\right)$ và bán kính $R = \\dfrac{AB}{2} = 4$. <br>\n Khoảng cách từ tâm $F\\left(2;0\\right)$ đến đường chuẩn $\\Delta\\colon x + 2 = 0$ là\n \\[d\\left(F, \\Delta\\right) = |2 + 2| = 4.\\]\n Vì $d\\left(F, \\Delta\\right) = R$ nên đường tròn tiếp xúc với đường chuẩn.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Trong mặt phẳng tọa độ $Oxy$ đơn vị trên các trục là kilômét, một trạm viễn thông được đặt tại vị trí $M\\left(-\\dfrac{15}{4};30\\right)$. Một chiếc xe bus chuyển động thẳng đều với vectơ vận tốc $\\overrightarrow{v}=(30;40)$. Biết tốc độ của xe bus chính là độ lớn của vectơ vận tốc $\\overrightarrow{v}$. Lộ trình của xe bus đi qua điểm $K(10;15)$. Trạm viễn thông có phạm vi phủ sóng là hình tròn tâm $M$, bán kính $R$. Hành khách trên xe nhận được tín hiệu từ trạm trong khoảng thời gian liên tục $1$ giờ, sau đó mất tín hiệu. Hãy tính bán kính phủ sóng của trạm viễn thông này, làm tròn kết quả đến hàng đơn vị của kilômét.",
+      "answer": "32",
+      "id": 15,
+      "solution": "Ta có tốc độ của xe bus là $\\left|\\overrightarrow{v}\\right|=\\sqrt{30^2+40^2}=50$ (km/h). <br>\n Quỹ đạo chuyển động của xe bus là đường thẳng $d$ đi qua $K(10;15)$ và có vectơ chỉ phương $\\overrightarrow{u}=(30;40)$, hay $\\overrightarrow{u}=(3;4)$. <br>\n Do đó đường thẳng này có vectơ pháp tuyến $\\overrightarrow{n}=(4;-3)$. <br>\n Phương trình quỹ đạo xe bus là $4(x-10)-3(y-15)=0$, hay $4x-3y+5=0$. <br>\n Gọi $H$ là hình chiếu vuông góc của $M$ lên đường thẳng $d$. <br>\n Khoảng cách từ trạm $M\\left(-\\dfrac{15}{4};30\\right)$ đến quỹ đạo xe bus là\n \\[MH= \\mathrm{d}=\\dfrac{\\left|4\\cdot\\left(-\\dfrac{15}{4}\\right)-3\\cdot30+5\\right|}{\\sqrt{4^2+(-3)^2}}=\\dfrac{100}{5}=20 (km).\\]\n Trong $1$ giờ, xe đi được quãng đường $50$ km. <br>\n Đây chính là độ dài dây cung $AB$ mà quỹ đạo xe cắt đường tròn phủ sóng. Nửa dây cung $AH=25$ km. <br>\n Suy ra $R^2=20^2+25^2=1 025$ (theo định lý Phythagore trong tam giác vuông $OAB$), nên $R=5\\sqrt{41}\\approx 32$. <br>\n Vậy bán kính phủ sóng của trạm viễn thông là $32$ km.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một hộp có $8$ tấm thẻ được đánh số từ $1$ đến $8$. Lấy đồng thời $2$ tấm thẻ từ hộp đó. Tính xác suất để tích của hai số ghi trên $2$ tấm thẻ lấy ra là một số chẵn ( <em> làm tròn kết quả đến hàng phần trăm </em> ).",
+      "answer": "0,79",
+      "id": 16,
+      "solution": "Số cách lấy đồng thời $2$ tấm thẻ từ $8$ tấm thẻ là $\\mathrm{C}_8^2=28$. <br>\n Tích của hai số là số lẻ khi cả hai số đều là số lẻ. Trong các số từ $1$ đến $8$ có $4$ số lẻ là $1$, $3$, $5$, $7$. <br>\n Số cách lấy được hai thẻ đều ghi số lẻ là $\\mathrm{C}_4^2=6$. <br>\n Vậy số cách lấy để tích hai số là số chẵn là $28-6=22$. <br>\n Xác suất cần tìm là $P=\\dfrac{22}{28}=\\dfrac{11}{14}\\approx 0{,}79$. <br>\n Vậy xác suất cần tìm là $0{,}79$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Có bao nhiêu giá trị nguyên của tham số $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm?",
+      "answer": "4",
+      "id": 17,
+      "solution": "Xét phương trình $(m-1)x^2+2(m-1)x+4=0$. <br> \n Nếu $m=1$, phương trình trở thành $4=0$, nên phương trình vô nghiệm. <br>\n Nếu $m\\ne 1$, phương trình là phương trình bậc hai với $a=m-1$, $b=2(m-1)$, $c=4$. <br>\n Khi đó biệt thức là $\\Delta=\\left[2(m-1)\\right]^2-4(m-1)\\cdot4=4(m-1)(m-5)$. <br>\n Phương trình bậc hai vô nghiệm khi $\\Delta&lt;0$, tức là $4(m-1)(m-5)&lt;0$.\n Suy ra $1&lt;m&lt;5$. <br>\n Vì $m$ là số nguyên nên $m\\in\\{2;3;4\\}$. <br>\n Kết hợp với trường hợp $m=1$, ta có $m\\in\\{1;2;3;4\\}$. <br>\n Vậy có $4$ giá trị nguyên của $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Để thành lập một đội tình nguyện từ nhóm $10$ học sinh, giáo viên chọn ra $2$ học sinh để phân công làm Trưởng đoàn và Phó đoàn, sau đó chọn thêm $3$ học sinh khác từ số học sinh còn lại để làm thành viên. Hỏi giáo viên có tất cả bao nhiêu cách thực hiện?",
+      "answer": "5040",
+      "id": 18,
+      "solution": "Chọn $2$ học sinh làm Trưởng đoàn và Phó đoàn là chọn có thứ tự, nên có $\\mathrm{A}_{10}^{2}=10\\cdot9=90$ cách. <br>\n Sau khi chọn Trưởng đoàn và Phó đoàn, còn lại $8$ học sinh. Chọn thêm $3$ học sinh làm thành viên có $\\mathrm{C}_8^3=56$ cách. <br>\n Theo quy tắc nhân, số cách thực hiện là $90\\cdot56=5 040$. <br>\n Vậy giáo viên có tất cả $5 040$ cách thực hiện.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Tìm tập xác định của hàm số $y=\\dfrac{\\sqrt{-x^2+2x}}{x-1}$.",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 19,
+      "solution": "Hàm số xác định khi biểu thức dưới căn không âm và mẫu số khác $0$. <br>\n Ta có điều kiện $-x^2+2x\\ge 0$ và $x-1\\ne 0$. <br>\n Điều kiện $-x^2+2x\\ge 0$ tương đương với $x(2-x)\\ge 0$, suy ra $0\\le x\\le 2$. <br>\n Mặt khác, $x-1\\ne 0$ nên $x\\ne 1$. <br>\n Vậy tập xác định của hàm số là $\\mathscr{D}=[0;1)\\cup(1;2]$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển $(2x-1)^5$.",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 20,
+      "solution": "Số hạng tổng quát trong khai triển $(2x-1)^5$ là $T_{k+1}=\\mathrm{C}_5^k(2x)^k(-1)^{5-k}$ với $0\\le k\\le 5$. <br>\n Số hạng chứa $x^3$ ứng với $k=3$. <br>\n Khi đó hệ số của $x^3$ là $\\mathrm{C}_5^3\\cdot2^3\\cdot(-1)^2=10\\cdot8=80$. <br>\n Vậy hệ số cần tìm là $80$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ với $A(2;6)$, $B(5;2)$ và $C(0;-3)$.\n <br>\n <br> • Viết phương trình tổng quát của đường trung trực của đoạn thẳng $BC$.\n <br> • Viết phương trình chính tắc của hypebol $(H)$ biết $(H)$ có độ dài trục thực bằng $2AB$, tiêu cự bằng $4BC$.\n <br>",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 21,
+      "solution": "<br>\n <br> • Ta có $B(5;2)$ và $C(0;-3)$ nên $\\overrightarrow{BC}=(-5;-5)=-5\\cdot (1;1)$. <br>\n Trung điểm của đoạn thẳng $BC$ là $I\\left(\\dfrac{5}{2};-\\dfrac{1}{2}\\right)$. <br>\n Vì đường trung trực của đoạn thẳng $BC$ vuông góc với $BC$, nên có vectơ pháp tuyến là $\\overrightarrow{n}=(1;1)$. <br>\n Phương trình đường trung trực của đoạn thẳng $BC$ là \n Suy ra phương trình tổng quát là $1\\cdot \\left(x-\\dfrac{5}{2}\\right)+1\\cdot\\left(y+\\dfrac{1}{2}\\right)-2=0$, hay $x+y-2=0$.\n <br> • Ta có $AB=\\sqrt{(5-2)^2+(2-6)^2}=\\sqrt{3^2+(-4)^2}=5$. <br>\n Lại có $BC=\\sqrt{(5-0)^2+(2+3)^2}=\\sqrt{25+25}=5\\sqrt{2}$. <br>\n Độ dài trục thực bằng $2AB$, nên $2a=2AB=10$, suy ra $a=5$. <br>\n Tiêu cự bằng $4BC$, nên $2c=4BC=20\\sqrt{2}$, suy ra $c=10\\sqrt{2}$. <br>\n Với hypebol chính tắc $\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1$, ta có $c^2=a^2+b^2$. <br>\n Do đó $b^2=c^2-a^2=(10\\sqrt{2})^2-5^2=200-25=175$. <br>\n Vậy phương trình chính tắc của hypebol là $\\dfrac{x^2}{25}-\\dfrac{y^2}{175}=1$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 3,
+    "openAt": "",
+    "closeAt": "",
+    "attemptToken": "1783754337",
+    "buildAt": "2026-07-11T14:18:57",
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "essayTotal": 0.0,
+      "essayCount": 0,
+      "essayPoints": [],
+      "truefalseMode": "progressive"
+    }
+  }
+}

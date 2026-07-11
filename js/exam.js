@@ -342,18 +342,23 @@ async function submitExam(auto=false){
   if(timerHandle) clearInterval(timerHandle);
   try{
     setSubmitStatus('Đang xử lý bài làm và ảnh tự luận...');
-    const result=await getAnswersAndScore(); addAttempt();
+    const result=await getAnswersAndScore();
     const payload={studentId:localStorage.getItem('studentId')||'',studentName:localStorage.getItem('studentName')||'',className:localStorage.getItem('className')||'',examId:localStorage.getItem('examId')||examData?.examId||'DE_MAU',examTitle:examData?.title||localStorage.getItem('examTitle')||'',score:result.score10,maxScore:result.maxScore,correct:result.correct,total:result.total,partScores:result.partScores,maxScores:result.maxScores,counts:result.counts,answers:result.answers,detail:result.detail,startTime:localStorage.getItem('startTime')||'',submitTime:new Date().toISOString(),scoringRule:JSON.stringify(settings.scoring||{})};
-    // Lưu cục bộ bản nhẹ, tránh localStorage bị đầy khi có ảnh chụp.
-    try{ saveResultLocal(stripImageDataForLocal(payload)); }catch(e){ console.warn('Không lưu cục bộ được:', e); }
-    setSubmitStatus('Đang gửi bài lên hệ thống...');
+    setSubmitStatus('Đang gửi bài lên Google Sheets...');
     const onlineStatus=await saveResultOnline(payload);
+    if(!onlineStatus || onlineStatus.success !== true) throw new Error(onlineStatus?.message || onlineStatus?.error || 'Máy chủ chưa xác nhận đã lưu bài.');
+
+    // Chỉ tính lượt làm và chuyển trang sau khi máy chủ xác nhận đã lưu thành công.
+    addAttempt();
     const finalPayload=stripImageDataForLocal(payload); finalPayload.onlineStatus=onlineStatus;
+    try{ saveResultLocal(finalPayload); }catch(e){ console.warn('Không lưu cục bộ được:', e); }
     try{ localStorage.setItem('lastResult',JSON.stringify(finalPayload)); }catch(e){ localStorage.removeItem('lastResult'); }
-    window.location.href='result.html';
+    setSubmitStatus('Đã lưu bài thành công. Đang mở kết quả...');
+    setTimeout(()=>{ window.location.href='result.html'; }, 350);
   }catch(err){
     console.error(err);
-    alert('Có lỗi khi nộp bài: '+String(err && err.message || err)+'\nEm hãy chụp màn hình báo giáo viên, sau đó thử nộp lại với ảnh nhẹ hơn.');
+    setSubmitStatus('Nộp bài chưa thành công. Hãy kiểm tra kết nối rồi bấm nộp lại.');
+    alert('NỘP BÀI CHƯA THÀNH CÔNG\n\n'+String(err && err.message || err)+'\n\nBài chưa bị tính lượt. Em hãy kiểm tra Internet rồi bấm Nộp bài lại.');
     examLocked=false; if(btn){btn.disabled=false; btn.textContent='Nộp bài';}
     startTimer();
   }
