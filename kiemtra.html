@@ -4,9 +4,9 @@
 (async()=>{
  const out=document.getElementById('out');
  try{
-  const res=await fetch('exams/index.json?v=20260711141915',{cache:'no-store'});
+  const res=await fetch('exams/index.json?v=20260711150153',{cache:'no-store'});
   const data=await res.json();
-  out.textContent='VERSION: 20260711141915\nSố đề trong index: '+((data.exams||[]).length)+'\n\n'+JSON.stringify(data,null,2);
+  out.textContent='VERSION: 20260711150153\nSố đề trong index: '+((data.exams||[]).length)+'\n\n'+JSON.stringify(data,null,2);
  }catch(e){out.textContent='Lỗi: '+e;}
 })();
 </script></body>

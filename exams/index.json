@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "222",
+  "defaultExamId": "1212",
   "exams": [
     {
-      "id": "222",
-      "title": "Giữa Kỳ 2",
-      "file": "exams/222/questions.json",
+      "id": "1212",
+      "title": "Giữa kỳ 2",
+      "file": "exams/1212/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 3,
+        "maxAttempts": 1,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1783754337",
-        "buildAt": "2026-07-11T14:18:57",
+        "attemptToken": "1783756898",
+        "buildAt": "2026-07-11T15:01:38",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
