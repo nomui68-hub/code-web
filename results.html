@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danh sách kết quả</title>
-  <link rel="stylesheet" href="css/style.css?v=20260711150153" />
+  <link rel="stylesheet" href="css/style.css?v=20260711202655" />
 </head>
 <body>
-  <header class="site-header"><div><h1>Danh sách kết quả V13</h1><p>Chỉ dành cho giáo viên</p></div></header>
+  <header class="site-header"><div><h1>Danh sách kết quả V19</h1><p>Chỉ dành cho giáo viên</p></div></header>
   <main class="container wide">
     <section class="card" id="loginBox">
       <h2>Đăng nhập giáo viên</h2>
@@ -21,12 +21,13 @@
         <button class="btn" id="reloadBtn">Tải lại</button>
         <button class="btn" id="csvBtn">Tải CSV</button>
         <button class="btn" id="onlineBtn">Lấy từ Google Sheets</button>
+        <label class="live-status"><input type="checkbox" id="autoRefresh" checked style="width:auto"> <span class="live-dot"></span> Tự cập nhật 15 giây</label>
         <button class="btn danger" id="deleteSelectedBtn">Xóa dòng đã chọn</button>
         <button class="btn danger" id="deleteFilteredBtn">Xóa theo bộ lọc</button>
         <button class="btn danger" id="clearBtn">Xóa toàn bộ</button>
-        <a class="btn" href="teacher.html?v=20260711150153">Trang giáo viên</a>
+        <a class="btn" href="teacher.html?v=20260711202655">Trang giáo viên</a>
       </div>
-      <p class="muted" id="sourceNote"></p>
+      <p class="muted" id="sourceNote"></p><p class="muted" id="lastRefresh"></p>
       <div class="filters">
         <label>Đề thi<select id="examFilter"><option value="">Tất cả đề</option></select></label>
         <label>Lớp<input id="classFilter" placeholder="Ví dụ: 12A3"></label>
@@ -47,9 +48,9 @@
     </section>
     </div>
   </main>
-  <script src="js/config.js?v=20260711150153"></script>
-  <script src="js/api.js?v=20260711150153"></script>
-  <script src="js/teacher.js?v=20260711150153"></script>
-  <script src="js/results.js?v=20260711150153"></script>
+  <script src="js/config.js?v=20260711202655"></script>
+  <script src="js/api.js?v=20260711202655"></script>
+  <script src="js/teacher.js?v=20260711202655"></script>
+  <script src="js/results.js?v=20260711202655"></script>
 </body>
 </html>

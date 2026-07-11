@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "1212",
+  "defaultExamId": "1122",
   "exams": [
     {
-      "id": "1212",
-      "title": "Giữa kỳ 2",
-      "file": "exams/1212/questions.json",
+      "id": "1122",
+      "title": "GK2-V19",
+      "file": "exams/1122/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 1,
-        "openAt": "",
-        "closeAt": "",
-        "attemptToken": "1783756898",
-        "buildAt": "2026-07-11T15:01:38",
+        "maxAttempts": 4,
+        "openAt": "2026-07-11T20:29",
+        "closeAt": "2026-07-11T21:35",
+        "attemptToken": "1783776401",
+        "buildAt": "2026-07-11T20:26:41",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,

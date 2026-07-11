@@ -113,6 +113,7 @@ async function loadOnline(){
   const rows=await loadOnlineResults();
   allRows=rows;
   document.getElementById('sourceNote').textContent=rows.length ? 'Dữ liệu lấy từ Google Sheets.' : 'Google Sheets chưa có lượt nộp nào hoặc Web App chưa trả dữ liệu.';
+  const lr=document.getElementById('lastRefresh'); if(lr) lr.textContent='Cập nhật lúc '+new Date().toLocaleTimeString('vi-VN');
   render();
   return true;
 }
@@ -149,4 +150,5 @@ document.addEventListener('DOMContentLoaded', async()=>{
   document.getElementById('deleteFilteredBtn').onclick=deleteFilteredRows;
   document.getElementById('clearBtn').onclick=()=>{if(confirm('Xóa TOÀN BỘ kết quả cục bộ trên trình duyệt giáo viên này? Thao tác này KHÔNG xóa Google Sheets và KHÔNG mở lại lượt làm trên điện thoại học sinh.')){localStorage.removeItem('examResults'); loadLocal();}};
   document.getElementById('checkAllRows')?.addEventListener('change',e=>document.querySelectorAll('.rowCheck:not(:disabled)').forEach(x=>x.checked=e.target.checked));
+  setInterval(()=>{const cb=document.getElementById('autoRefresh'); if(cb?.checked && typeof getApiUrl==='function' && getApiUrl()) loadOnline();},15000);
 });

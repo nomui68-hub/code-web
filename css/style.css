@@ -53,3 +53,75 @@ button.secondary{background:#fff;color:var(--danger);border-color:#f3b7b7;width:
 .essay-photo-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
 .essay-hidden-file{display:none}
 .essay-preview{margin-top:8px;line-height:1.5}
+
+/* ==========================================================
+   V19 - Căn giữa điều khiển trắc nghiệm và Đúng/Sai
+   ========================================================== */
+.option{
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr);
+  align-items:center;
+  column-gap:12px;
+  min-height:56px;
+  padding:12px 14px;
+}
+.option input[type="radio"]{
+  appearance:auto;
+  width:20px;
+  height:20px;
+  margin:0;
+  align-self:center;
+  justify-self:center;
+  vertical-align:middle;
+  transform:none;
+}
+.option span{
+  align-self:center;
+  line-height:1.55;
+  padding:0;
+}
+.tf-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto auto;
+  align-items:center;
+  gap:12px;
+  min-height:62px;
+  padding:12px 14px;
+}
+.tf-row > div{
+  align-self:center;
+  line-height:1.55;
+}
+.tf-row label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:40px;
+  margin:0;
+  padding:6px 10px;
+  border:1px solid #d9e2ef;
+  border-radius:10px;
+  background:#fff;
+  cursor:pointer;
+  white-space:nowrap;
+  line-height:1;
+}
+.tf-row input[type="radio"]{
+  width:20px;
+  height:20px;
+  margin:0;
+  vertical-align:middle;
+  flex:0 0 auto;
+  transform:none;
+}
+.option:hover,.tf-row label:hover{background:#eef6ff;border-color:#9fc2ee}
+.option:has(input:checked),.tf-row label:has(input:checked){background:#e8f2ff;border-color:#4b8bd4}
+.live-status{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:14px}
+.live-dot{width:9px;height:9px;border-radius:50%;background:#12b76a;display:inline-block}
+@media(max-width:700px){
+  .option{grid-template-columns:24px minmax(0,1fr);min-height:58px;padding:12px}
+  .tf-row{grid-template-columns:minmax(0,1fr) 1fr 1fr;gap:8px}
+  .tf-row > div{grid-column:1/-1}
+  .tf-row label{width:100%;min-height:44px}
+}
