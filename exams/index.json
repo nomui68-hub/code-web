@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "11",
+  "defaultExamId": "124",
   "exams": [
     {
-      "id": "11",
-      "title": "Kiểm-Tra",
-      "file": "exams/11/questions.json",
+      "id": "124",
+      "title": "Thi GK2",
+      "file": "exams/124/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 4,
+        "maxAttempts": 2,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1783725867",
-        "buildAt": "2026-07-11T06:24:27",
+        "attemptToken": "1783749466",
+        "buildAt": "2026-07-11T12:57:46",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
@@ -22,7 +22,7 @@
           "truefalseCount": 4,
           "shortTotal": 3.0,
           "shortCount": 6,
-          "essayTotal": 0.0,
+          "essayTotal": 3.0,
           "essayCount": 0,
           "essayPoints": [],
           "truefalseMode": "progressive"
