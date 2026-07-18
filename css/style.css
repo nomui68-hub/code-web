@@ -125,3 +125,94 @@ button.secondary{background:#fff;color:var(--danger);border-color:#f3b7b7;width:
   .tf-row > div{grid-column:1/-1}
   .tf-row label{width:100%;min-height:44px}
 }
+
+
+/* ==========================================================
+   V19 PRO - căn giữa tuyệt đối radio + giao diện làm bài
+   ========================================================== */
+.option,
+.tf-row label{
+  box-sizing:border-box;
+}
+.option{
+  display:grid !important;
+  grid-template-columns:24px minmax(0,1fr) !important;
+  align-items:center !important;
+  gap:12px !important;
+}
+.option input[type="radio"],
+.tf-row input[type="radio"]{
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  width:20px !important;
+  height:20px !important;
+  min-width:20px !important;
+  min-height:20px !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:2px solid #7b8ba1 !important;
+  border-radius:50% !important;
+  background:#fff !important;
+  display:grid !important;
+  place-content:center !important;
+  align-self:center !important;
+  justify-self:center !important;
+  vertical-align:middle !important;
+  position:relative !important;
+  top:0 !important;
+  transform:none !important;
+  box-shadow:none !important;
+}
+.option input[type="radio"]::before,
+.tf-row input[type="radio"]::before{
+  content:"";
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--primary);
+  transform:scale(0);
+  transition:transform .12s ease-in-out;
+}
+.option input[type="radio"]:checked::before,
+.tf-row input[type="radio"]:checked::before{transform:scale(1)}
+.option span{
+  display:flex !important;
+  align-items:center !important;
+  min-height:28px !important;
+  line-height:1.55 !important;
+}
+.tf-row{
+  align-items:center !important;
+}
+.tf-row label{
+  display:grid !important;
+  grid-template-columns:22px auto !important;
+  align-items:center !important;
+  justify-content:center !important;
+  column-gap:8px !important;
+  line-height:1.2 !important;
+}
+.tf-row label > *{align-self:center !important}
+
+.exam-progress-card{position:sticky;top:61px;z-index:9;padding:12px 16px;margin-top:12px}
+.exam-progress-line{height:10px;border-radius:999px;background:#e8eef6;overflow:hidden}
+.exam-progress-fill{height:100%;width:0;background:var(--primary);transition:width .2s ease}
+.exam-progress-meta{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:14px;color:var(--muted)}
+.question-nav{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.question-nav button{width:38px;height:38px;border-radius:10px;border:1px solid var(--border);background:#f7f9fc;cursor:pointer;font-weight:700}
+.question-nav button.answered{background:#e8f7ee;border-color:#6dc58a;color:#137a3d}
+.question-nav button.current{outline:2px solid var(--primary);outline-offset:1px}
+.question-nav button.review{background:#fff3e0;border-color:#f5a623;color:#8a4d00}
+.question-card{scroll-margin-top:190px}
+.review-toggle{margin-left:auto;font-size:13px;display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:#8a4d00}
+.review-toggle input{width:17px;height:17px}
+
+.pro-stat-bars{display:grid;gap:10px;margin-top:12px}
+.pro-stat-row{display:grid;grid-template-columns:90px 1fr 56px;gap:10px;align-items:center}
+.pro-stat-track{height:12px;background:#e9eef5;border-radius:999px;overflow:hidden}
+.pro-stat-fill{height:100%;background:var(--primary);border-radius:999px}
+@media(max-width:700px){
+  .exam-progress-card{top:57px;padding:10px 12px}
+  .question-nav button{width:34px;height:34px}
+  .tf-row label{grid-template-columns:22px auto !important;min-height:48px !important}
+}

@@ -97,7 +97,15 @@ function renderQuestionStats(rows){
   const arr=[...map.values()].sort((a,b)=>Number(a.id)-Number(b.id));
   document.querySelector('#questionTable tbody').innerHTML=arr.map(x=>`<tr><td>${x.id}</td><td>${x.type}</td><td>${x.correct}/${x.n}</td><td>${x.n?Math.round(x.correct*100/x.n):0}%</td><td>${fmt(x.n?x.totalPoint/x.n:0)}</td></tr>`).join('');
 }
-function render(){ const rows=filteredRows(); document.getElementById('sourceNote').textContent=`Đang hiển thị ${rows.length}/${allRows.length} lượt nộp.`; renderStats(rows); renderTable(rows); renderQuestionStats(rows); const ca=document.getElementById('checkAllRows'); if(ca) ca.checked=false; }
+
+function renderDistribution(rows){
+  const bins=[{label:'0–<5',a:0,b:5},{label:'5–<6.5',a:5,b:6.5},{label:'6.5–<8',a:6.5,b:8},{label:'8–10',a:8,b:10.0001}];
+  const n=Math.max(1,rows.length);
+  const box=document.getElementById('scoreDistribution'); if(!box) return;
+  box.innerHTML=bins.map(x=>{const c=rows.filter(r=>{const s=Number(displayScore(r)||0); return s>=x.a&&s<x.b}).length; const p=Math.round(c*100/n); return `<div class="pro-stat-row"><span>${x.label}</span><div class="pro-stat-track"><div class="pro-stat-fill" style="width:${p}%"></div></div><b>${c} (${p}%)</b></div>`}).join('');
+}
+
+function render(){ const rows=filteredRows(); document.getElementById('sourceNote').textContent=`Đang hiển thị ${rows.length}/${allRows.length} lượt nộp.`; renderStats(rows); renderDistribution(rows); renderTable(rows); renderQuestionStats(rows); const ca=document.getElementById('checkAllRows'); if(ca) ca.checked=false; }
 async function fillExamFilter(){
   const sel=document.getElementById('examFilter');
   try{ const res=await fetch('exams/index.json?_='+Date.now()); const idx=await res.json(); sel.innerHTML='<option value="">Tất cả đề</option>'+(idx.exams||[]).map(e=>`<option value="${e.id}">${e.title||e.id}</option>`).join(''); }catch(e){}

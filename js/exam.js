@@ -253,7 +253,7 @@ function renderExam(){
     else if(q.type==='truefalse'){body=renderTrueFalse(q); typeText='Đúng/Sai';}
     else if(q.type==='short'){body=renderShort(q); typeText='Trả lời ngắn';}
     else if(q.type==='essay'){body=renderEssay(q); typeText='Tự luận';}
-    return `<article class="question-card" data-id="${q.id}"><div class="question-head"><h3>Câu ${idx+1}</h3><span class="badge">${typeText}</span></div>${body}</article>`;
+    return `<article class="question-card" data-id="${q.id}" data-index="${idx}"><div class="question-head"><h3>Câu ${idx+1}</h3><span class="badge">${typeText}</span><label class="review-toggle"><input type="checkbox" class="reviewCheck" data-qid="${q.id}"> Xem lại</label></div>${body}</article>`;
   }).join('');
   if(window.MathJax) MathJax.typesetPromise?.();
 }
@@ -462,6 +462,76 @@ async function readEssayImages(qid){
 }
 
 function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}}
+
+function answerStorageKey(){
+  return `draft_${localStorage.getItem('examId')||'DE'}_${localStorage.getItem('studentId')||'NOID'}`;
+}
+function collectDraftAnswers(){
+  const draft={};
+  questions.forEach(q=>{
+    if(q.type==='choice'){
+      const x=document.querySelector(`input[name="q${q.id}"]:checked`); draft[q.id]=x?x.value:null;
+    }else if(q.type==='truefalse'){
+      draft[q.id]=(q.statements||[]).map((_,i)=>document.querySelector(`input[name="q${q.id}_${i}"]:checked`)?.value ?? null);
+    }else{
+      draft[q.id]=document.getElementById(`q${q.id}`)?.value ?? '';
+    }
+  });
+  draft._review=[...document.querySelectorAll('.reviewCheck:checked')].map(x=>x.dataset.qid);
+  draft._savedAt=new Date().toISOString();
+  return draft;
+}
+function saveDraft(){
+  try{
+    localStorage.setItem(answerStorageKey(),JSON.stringify(collectDraftAnswers()));
+    const el=document.getElementById('examAutosaveText'); if(el) el.textContent='Đã lưu lúc '+new Date().toLocaleTimeString('vi-VN');
+  }catch(e){console.warn('Không lưu nháp được',e)}
+}
+function restoreDraft(){
+  let d={}; try{d=JSON.parse(localStorage.getItem(answerStorageKey())||'{}')}catch(e){}
+  questions.forEach(q=>{
+    const v=d[q.id];
+    if(q.type==='choice' && v!==null && v!==undefined){const x=document.querySelector(`input[name="q${q.id}"][value="${v}"]`); if(x) x.checked=true;}
+    else if(q.type==='truefalse' && Array.isArray(v)){v.forEach((z,i)=>{if(z!==null){const x=document.querySelector(`input[name="q${q.id}_${i}"][value="${z}"]`); if(x) x.checked=true;}})}
+    else if((q.type==='short'||q.type==='essay') && v!==undefined){const x=document.getElementById(`q${q.id}`); if(x) x.value=v;}
+  });
+  (d._review||[]).forEach(id=>{const x=document.querySelector(`.reviewCheck[data-qid="${id}"]`); if(x) x.checked=true;});
+}
+function questionAnswered(q){
+  if(q.type==='choice') return !!document.querySelector(`input[name="q${q.id}"]:checked`);
+  if(q.type==='truefalse') return (q.statements||[]).every((_,i)=>!!document.querySelector(`input[name="q${q.id}_${i}"]:checked`));
+  const x=document.getElementById(`q${q.id}`); return !!String(x?.value||'').trim() || !!document.querySelector(`#q${q.id}_preview:not(:empty)`);
+}
+function updateProgress(){
+  const done=questions.filter(questionAnswered).length, total=questions.length;
+  const pct=total?Math.round(done*100/total):0;
+  const fill=document.getElementById('examProgressFill'); if(fill) fill.style.width=pct+'%';
+  const text=document.getElementById('examProgressText'); if(text) text.textContent=`Đã làm ${done}/${total} câu (${pct}%)`;
+  questions.forEach((q,i)=>{
+    const b=document.querySelector(`.question-nav button[data-index="${i}"]`); if(!b) return;
+    b.classList.toggle('answered',questionAnswered(q));
+    b.classList.toggle('review',!!document.querySelector(`.reviewCheck[data-qid="${q.id}"]:checked`));
+  });
+}
+function buildQuestionNav(){
+  const nav=document.getElementById('questionNav'); if(!nav) return;
+  nav.innerHTML=questions.map((q,i)=>`<button type="button" data-index="${i}" title="Đến câu ${i+1}">${i+1}</button>`).join('');
+  nav.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    document.querySelector(`.question-card[data-index="${b.dataset.index}"]`)?.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+function attachProListeners(){
+  document.getElementById('questions')?.addEventListener('change',()=>{saveDraft();updateProgress();});
+  document.getElementById('questions')?.addEventListener('input',()=>{saveDraft();updateProgress();});
+  window.addEventListener('beforeunload',saveDraft);
+  let t=null; window.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>{
+    const cards=[...document.querySelectorAll('.question-card')]; let best=null,bestDist=1e9;
+    cards.forEach(c=>{const d=Math.abs(c.getBoundingClientRect().top-180); if(d<bestDist){bestDist=d;best=c}});
+    document.querySelectorAll('.question-nav button').forEach(x=>x.classList.remove('current'));
+    if(best) document.querySelector(`.question-nav button[data-index="${best.dataset.index}"]`)?.classList.add('current');
+  },60)});
+}
+
 async function init(){
   if(!localStorage.getItem('studentId') || !localStorage.getItem('className')) console.warn('Chưa có thông tin học sinh.');
   await loadQuestions();
@@ -469,7 +539,7 @@ async function init(){
   const openStatus=examOpenStatus();
   if(!openStatus.ok){document.getElementById('questions').innerHTML=`<section class="card"><h2>Chưa thể làm bài</h2><p>${openStatus.reason}</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
   if(getAttemptCount() >= maxAttempts){document.getElementById('questions').innerHTML=`<section class="card"><h2>Đã hết số lần làm bài</h2><p>Em đã làm đủ ${maxAttempts} lần cho đề này trên thiết bị này.</p><p class="muted">Nếu giáo viên tạo lại/giao lại đề, hệ thống sẽ tự mở lượt làm mới.</p><a class="btn" href="index.html">Về trang chủ</a></section>`; document.getElementById('submitBtn').disabled=true; return;}
-  renderExam(); attachEssayFileListeners(); startTimer();
+  renderExam(); attachEssayFileListeners(); buildQuestionNav(); restoreDraft(); attachProListeners(); updateProgress(); startTimer();
   document.getElementById('submitBtn').addEventListener('click',()=>{if(confirm('Em chắc chắn muốn nộp bài?')) submitExam(false);});
   document.getElementById('shuffleBtn').addEventListener('click',()=>{shuffleArray(questions); renderExam();});
 }

@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "1122",
+  "defaultExamId": "002",
   "exams": [
     {
-      "id": "1122",
-      "title": "GK2-V19",
-      "file": "exams/1122/questions.json",
+      "id": "002",
+      "title": "Thi thử",
+      "file": "exams/002/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 4,
-        "openAt": "2026-07-11T20:29",
-        "closeAt": "2026-07-11T21:35",
-        "attemptToken": "1783776401",
-        "buildAt": "2026-07-11T20:26:41",
+        "maxAttempts": 3,
+        "openAt": "",
+        "closeAt": "",
+        "attemptToken": "1784388084",
+        "buildAt": "2026-07-18T22:21:24",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,

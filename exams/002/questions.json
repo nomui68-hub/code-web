@@ -1,0 +1,541 @@
+{
+  "examId": "002",
+  "title": "Thi thử",
+  "questions": [
+    {
+      "type": "choice",
+      "question": "Cho cấp số nhân $(u_n)$ với $u_1=2$ và công bội $q=\\dfrac12$. Giá trị của $u_3$ bằng",
+      "options": [
+        "$\\dfrac14$",
+        "$\\dfrac12$",
+        "$3$",
+        "$4$"
+      ],
+      "answer": 1,
+      "id": 1,
+      "solution": "Ta có $u_n=u_1q^{n-1}$. <br>\n Suy ra $u_3=2\\cdot\\left(\\dfrac12\\right)^2\n =2\\cdot\\dfrac14\n =\\dfrac12$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho tứ diện $ABCD$ có $G$ là trọng tâm tam giác $ABC$. Vectơ $\\overrightarrow{DA}+\\overrightarrow{DB}+\\overrightarrow{DC}$ bằng",
+      "options": [
+        "$\\overrightarrow{DG}$",
+        "$2\\overrightarrow{DG}$",
+        "$3\\overrightarrow{AG}$",
+        "$3\\overrightarrow{DG}$"
+      ],
+      "answer": 3,
+      "id": 2,
+      "solution": "Vì $G$ là trọng tâm tam giác $ABC$ nên\n $\\overrightarrow{GA}+\\overrightarrow{GB}+\\overrightarrow{GC}=\\overrightarrow0$. <br>\n Mặt khác\n \\[\\overrightarrow{DA}\n =\\overrightarrow{DG}+\\overrightarrow{GA},\\]\n \\[\\overrightarrow{DB}\n =\\overrightarrow{DG}+\\overrightarrow{GB},\\]\n \\[\\overrightarrow{DC}\n =\\overrightarrow{DG}+\\overrightarrow{GC}.\\]\n Do đó\n \\[\\overrightarrow{DA}+\\overrightarrow{DB}+\\overrightarrow{DC}\n =3\\overrightarrow{DG}\n +\\left(\\overrightarrow{GA}\n +\\overrightarrow{GB}\n +\\overrightarrow{GC}\\right)\n =3\\overrightarrow{DG}.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hàm số $y=f(x)$ có bảng biến thiên như hình dưới đây.\n\n Hàm số đã cho đồng biến trên khoảng nào dưới đây?",
+      "options": [
+        "$(-2;+\\infty)$",
+        "$(-2;3)$",
+        "$(3;+\\infty)$",
+        "$(-\\infty;-2)$"
+      ],
+      "answer": 1,
+      "id": 3,
+      "solution": "Từ bảng biến thiên ta có hàm số đồng biến trên khoảng $(-2;3)$.",
+      "visualLatex": "\\begin{tikzpicture}\n\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=3, deltacl=0.5]\n\t\t{$x$/0.7,$f’(x)$/0.7,$f(x)$/2}\n\t\t{$-\\infty$,$-2$,$3$,$+\\infty$}\n\t\t\\tkzTabLine{,-,$0$,+,$0$,-,}\n\t\t\\tkzTabVar{+/$+\\infty$,-/$1$,+/$4$,-/$-\\infty$}\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}\n\t\t\\tkzTabInit[nocadre=true,lgt=1.2,espcl=3, deltacl=0.5]\n\t\t{$x$/0.7,$f’(x)$/0.7,$f(x)$/2}\n\t\t{$-\\infty$,$-2$,$3$,$+\\infty$}\n\t\t\\tkzTabLine{,-,$0$,+,$0$,-,}\n\t\t\\tkzTabVar{+/$+\\infty$,-/$1$,+/$4$,-/$-\\infty$}\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/002/q3.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho\n $\\overrightarrow{u}_1=(1;-2;1)$ và $\\overrightarrow{u}_2=(1;-1;-1)$.\n Vectơ $\\vec u_1+2\\vec u_2$ có tọa độ là",
+      "options": [
+        "$(3;-4;1)$",
+        "$(3;0;-1)$",
+        "$(3;-4;-1)$",
+        "$(3;0;1)$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "Ta có $2\\vec u_2=(2;-2;-2)$. <br>\n Do đó $\\vec u_1+2\\vec u_2\n =(1;-2;1)+(2;-2;-2)\n =(3;-4;-1)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho các biến cố $A$ và $B$ thỏa mãn $\\mathrm{P}(B) = 0{,}8$ và $\\mathrm{P}(AB) = 0{,}5$. Tính $\\mathrm{P}(A\\mid B)$.",
+      "options": [
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{1}{5}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{5}{8}$"
+      ],
+      "answer": 3,
+      "id": 5,
+      "solution": "Ta có công thức xác suất có điều kiện: $\\mathrm{P}(A\\mid B) = \\dfrac{\\mathrm{P}(AB)}{\\mathrm{P}(B)}$. <br>\n Thay số vào ta được $\\mathrm{P}(A\\mid B) = \\dfrac{0{,}5}{0{,}8} = \\dfrac{5}{8}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho elip $(E) \\colon \\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$. Hãy tìm tiêu cự của elip đã cho?",
+      "options": [
+        "$4$",
+        "$9$",
+        "$3$",
+        "$6$"
+      ],
+      "answer": 3,
+      "id": 6,
+      "solution": "Từ phương trình chính tắc của elip $(E)$, ta có $a^2 = 25$ và $b^2 = 16$. <br>\n Mặt khác ta có hệ thức $c^2 = a^2 - b^2 = 25 - 16 = 9 \\Rightarrow c = 3$. <br>\n Vậy tiêu cự của elip là $2c = 2 \\cdot 3 = 6$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho $\\int \\dfrac{1}{x} dx = F(x) + C$. Khẳng định nào dưới đây đúng?",
+      "options": [
+        "$F'(x) = \\dfrac{2}{x^2}$",
+        "$F'(x) = \\ln x$",
+        "$F'(x) = \\dfrac{1}{x}$",
+        "$F'(x) = -\\dfrac{1}{x^2}$"
+      ],
+      "answer": 2,
+      "id": 7,
+      "solution": "Theo định nghĩa của nguyên hàm, đạo hàm của nguyên hàm bằng biểu thức dưới dấu tích phân. <br>\n Do đó ta có $F'(x) = \\dfrac{1}{x}$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật. Biết $SA = AB = a$ và $AD = a\\sqrt{3}$. Cạnh bên $SA \\perp (ABCD)$. Số đo góc giữa hai đường thẳng $SD$ và $BC$ bằng",
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$"
+      ],
+      "answer": 0,
+      "id": 8,
+      "solution": "Vì $ABCD$ là hình chữ nhật nên $BC \\parallel AD$. <br>\n Suy ra góc giữa hai đường thẳng $SD$ và $BC$ bằng góc giữa hai đường thẳng $SD$ và $AD$. <br>\n Do $SA \\perp (ABCD) \\Rightarrow SA \\perp AD$, suy ra tam giác $SAD$ vuông tại $A$. <br>\n Góc giữa $SD$ và $AD$ chính là góc $\\widehat{SDA}$. <br>\n Xét tam giác $SAD$ vuông tại $A$, ta có\n $\\tan \\widehat{SDA} = \\dfrac{SA}{AD} = \\dfrac{a}{a\\sqrt{3}} = \\dfrac{1}{\\sqrt{3}} \\Rightarrow \\widehat{SDA} = 30^\\circ$. <br>\n Vậy góc giữa hai đường thẳng $SD$ và $BC$ bằng $30^\\circ$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Tập nghiệm của bất phương trình $\\log(x-2)\\le 1$ có chứa bao nhiêu số nguyên?",
+      "options": [
+        "$10$",
+        "$11$",
+        "Vô số",
+        "$12$"
+      ],
+      "answer": 0,
+      "id": 9,
+      "solution": "Điều kiện $x-2&gt;0 \\Leftrightarrow x&gt;2$. <br>\n Ta có $\\log(x-2)\\le 1 \\Leftrightarrow x-2\\le 10\\Leftrightarrow x\\leq 12$. <br>\n Kết hợp với điều kiện, ta được $ 2&lt;x\\le 12$. <br>\n Vì $x$ la số nguyên nên $x\\in\\{3;4;5;\\ldots;12\\}$. <br>\n Vậy có tất cả $10$ số nguyên.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Bảng dưới đây ghi lại tốc độ của một số chiếc xe ô tô khi đi qua một điểm đo tốc độ:\n\n Độ lệch chuẩn của mẫu số liệu ghép nhóm trên (kết quả làm tròn đến hàng phần nghìn) là",
+      "options": [
+        "$6{,}329$",
+        "$6{,}328$",
+        "$2{,}515$",
+        "$2{,}516$"
+      ],
+      "answer": 3,
+      "id": 10,
+      "solution": "Cỡ mẫu $n=40+32+25+20+8=125$. <br>\n Giá trị trung bình $\\overline{x}=\\dfrac{40\\cdot 51+32\\cdot 53+25\\cdot 55+20\\cdot 57+8\\cdot 59}{125}=\\dfrac{6 723}{125}$. <br>\n Phương sai $s^2=\\dfrac{40\\cdot 51^2+32\\cdot 53^2+25\\cdot 55^2+20\\cdot 57^2+8\\cdot 59^2}{125}-\\left(\\dfrac{6 723}{125}\\right)^2\\approx 6{,}329$. <br>\n Độ lệch chuẩn $s=\\sqrt{s^2}\\approx 2{,}516$.",
+      "visualLatex": "\\begin{tabular}{|>{\\centering\\arraybackslash}m{3.8cm}|*{5}{>{\\centering\\arraybackslash}m{2cm}|}}\n\t\t\t\\hline\n\t\t\t\\bfseries Tốc độ (km/h) & $[50;52)$ & $[52;54)$ & $[54;56)$ & $[56;58)$ & $[58;60)$\\\\\n\t\t\t\\hline\n\t\t\t\\bfseries Số xe ô tô & $40$ & $32$ & $25$ & $20$ & $8$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{|>{\\centering\\arraybackslash}m{3.8cm}|*{5}{>{\\centering\\arraybackslash}m{2cm}|}}\n\t\t\t\\hline\n\t\t\t\\bfseries Tốc độ (km/h) & $[50;52)$ & $[52;54)$ & $[54;56)$ & $[56;58)$ & $[58;60)$\\\\\n\t\t\t\\hline\n\t\t\t\\bfseries Số xe ô tô & $40$ & $32$ & $25$ & $20$ & $8$\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/002/q10.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "choice",
+      "question": "Trong không gian $Oxyz$, cho mặt cầu $(S)\\colon x^2+y^2+z^2+4x-6y-2z+13=0$ tiếp xúc với mặt phẳng $(Oxy)$ tại điểm nào dưới đây?",
+      "options": [
+        "$A(0;3;1)$",
+        "$B(-2;0;1)$",
+        "$C(-2;3;0)$",
+        "$D(0;0;1)$"
+      ],
+      "answer": 2,
+      "id": 11,
+      "solution": "Ta có $a=-2$; $b=3$; $c=1$; $d=13$. <br>\n $(S)$ có tâm $I(-2;3;1)$, bán kính $R=\\sqrt{4+9+1-13}=1$. <br>\n $(Oxy)\\colon z=0$. <br>\n Vì $\\mathrm{d}\\left(I,(Oxy)\\right)=1$ và $C\\in (S)$ nên $(S)$ tiếp xúc với mặt phẳng $(Oxy)$ tại $C(-2;3;0)$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Cho đồ thị hàm số $y=f(x)$ trên đoạn $[1;4]$ được cho như hình vẽ bên dưới.\n\n Biết diện tích phần gạch chéo bằng $7$. Tính tích phân\n $\\mathscr{D}=\\int\\limits_1^4\\left[2f(x)-3\\right]\\mathrm{ d}x$.",
+      "options": [
+        "$15$",
+        "$13$",
+        "$11$",
+        "$12$"
+      ],
+      "answer": 1,
+      "id": 12,
+      "solution": "Theo giả thiết ta có \n <br> \\[\n &&1\\cdot (5-2)+\\int\\limits_1^4\\left(5-f(x)\\right)\\mathrm{ d}x=7\n \\\\\n &\\Leftrightarrow&\\int\\limits_1^4\\left(5-f(x)\\right)\\mathrm{ d}x=4\n \\\\\n &\\Leftrightarrow& \\int\\limits_1^4 5\\mathrm{ d}x-\\int\\limits_1^4 f(x)\\mathrm{ d}x=4\n \\\\\n &\\Leftrightarrow& \\int\\limits_1^4 f(x)\\mathrm{ d}x=11.\n \\] <br>\n Ta có $\\mathscr{D}=\\int\\limits_1^4\\left[2f(x)-3\\right]\\mathrm{ d}x=2\\int\\limits_1^4 f(x)\\mathrm{ d}x-\\int\\limits_1^4 3\\mathrm{ d}x=2\\cdot 11-9=13$.",
+      "visualLatex": "\\begin{tikzpicture}[>=stealth, line join=round, every node/.style={font=\\normalsize}, declare function={ f(\\x) = -1/3*(\\x-4)^2 + 5; xmin = -1.5; xmax = 5.5; ymin = -1; ymax = 6; }]\t\t\n\t\t\\draw[->] (xmin, 0) -- (xmax, 0) node[below] {$x$};\n\t\t\\draw[->] (0, ymin) -- (0, ymax) node[below left] {$y$};\t\t\n\t\t\\fill (0,0) circle (1pt) node[below left] {$O$};\t\t\n\t\t\\begin{scope}\n\t\t\\clip (xmin, ymin) rectangle (xmax, ymax);\t\t\t\n\t\t\\fill[\n\t\t pattern color=gray!30]\n\t\t(0,5) -- (4,5) -- plot[domain=4:1, smooth, samples=150] (\\x, {f(\\x)}) -- (1,2) -- (0,2) -- cycle;\t\t\t\n\t\t\\draw[smooth, samples=150, domain=1:4] \n\t\tplot (\\x, {f(\\x)});\n\t\t\\end{scope}\t\t\n\t\t\\draw[dashed] (1,0) -- (1,2) -- (0,2);\n\t\t\\draw[dashed] (4,0) -- (4,5) -- (0,5);\t\t\n\t\t\\fill (1,0) circle (1pt) node[below] {$1$};\n\t\t\\fill (4,0) circle (1pt) node[below] {$4$};\n\t\t\\fill (0,2) circle (1pt) node[left] {$2$};\n\t\t\\fill (0,5) circle (1pt) node[left] {$5$};\t\t\n\t\t\\fill (1,2) circle (1pt);\n\t\t\\fill (4,5) circle (1pt);\n\t\t\\node at (2.2,3)[]{$f(x)$};\t\t\t\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[>=stealth, line join=round, every node/.style={font=\\normalsize}, declare function={ f(\\x) = -1/3*(\\x-4)^2 + 5; xmin = -1.5; xmax = 5.5; ymin = -1; ymax = 6; }]\t\t\n\t\t\\draw[->] (xmin, 0) -- (xmax, 0) node[below] {$x$};\n\t\t\\draw[->] (0, ymin) -- (0, ymax) node[below left] {$y$};\t\t\n\t\t\\fill (0,0) circle (1pt) node[below left] {$O$};\t\t\n\t\t\\begin{scope}\n\t\t\\clip (xmin, ymin) rectangle (xmax, ymax);\t\t\t\n\t\t\\fill[\n\t\t pattern color=gray!30]\n\t\t(0,5) -- (4,5) -- plot[domain=4:1, smooth, samples=150] (\\x, {f(\\x)}) -- (1,2) -- (0,2) -- cycle;\t\t\t\n\t\t\\draw[smooth, samples=150, domain=1:4] \n\t\tplot (\\x, {f(\\x)});\n\t\t\\end{scope}\t\t\n\t\t\\draw[dashed] (1,0) -- (1,2) -- (0,2);\n\t\t\\draw[dashed] (4,0) -- (4,5) -- (0,5);\t\t\n\t\t\\fill (1,0) circle (1pt) node[below] {$1$};\n\t\t\\fill (4,0) circle (1pt) node[below] {$4$};\n\t\t\\fill (0,2) circle (1pt) node[left] {$2$};\n\t\t\\fill (0,5) circle (1pt) node[left] {$5$};\t\t\n\t\t\\fill (1,2) circle (1pt);\n\t\t\\fill (4,5) circle (1pt);\n\t\t\\node at (2.2,3)[]{$f(x)$};\t\t\t\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": true,
+      "image": "images/002/q12.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "truefalse",
+      "question": "Biết hàm số $f(x) = x^3 + ax^2 - 24x + b$, $(a, b \\in \\mathbb{R})$ đạt cực trị bằng $-10$ tại điểm $x = 2$.",
+      "statements": [
+        {
+          "text": "Giá trị của $a + b = 21$",
+          "answer": false
+        },
+        {
+          "text": "Hàm số đã cho đạt cực đại tại điểm $x = -4$",
+          "answer": true
+        },
+        {
+          "text": "Hàm số đã cho đồng biến trên khoảng $(-4;2)$",
+          "answer": false
+        },
+        {
+          "text": "Giá trị lớn nhất của hàm số đã cho trên đoạn $[0;3]$ bằng $15$",
+          "answer": false
+        }
+      ],
+      "id": 13,
+      "solution": "<br>\n <br> • Hàm số $f(x) = x^3 + ax^2 - 24x + b \\Rightarrow f'(x) = 3x^2 + 2ax - 24$. <br>\n Vì hàm số đạt cực trị tại điểm $x = 2$ nên ta có\n <br> \\[\n f'(2) = 0 &\\Leftrightarrow& 3\\cdot2^2 + 2a\\cdot2 - 24 = 0 \\\\&\\Leftrightarrow& 12 + 4a - 24 = 0 \\\\&\\Leftrightarrow& 4a = 12 \\\\&\\Leftrightarrow& a = 3.\n \\] <br>\n Với $a = 3$, ta có $f'(x) = 3x^2 + 6x - 24$. Cho $f'(x) = 0 \\Leftrightarrow \\begin{cases}x = 2\\\\x = -4.\\end{cases}$ <br> Mặt khác, hàm số đạt cực trị bằng $-10$ tại $x = 2$, tức là $f(2) = -10$\n \\[\\Rightarrow f(2) = 2^3 + 3(2)^2 - 24(2) + b = -10 \\Leftrightarrow 8 + 12 - 48 + b = -10 \\Leftrightarrow -28 + b = -10 \\Leftrightarrow b = 18.\\]\n Vậy hàm số là $f(x) = x^3 + 3x^2 - 24x + 18$. <br>\n Ta có $a = 3, b = 18 \\Rightarrow a + b = 3 + 18 = 21$.\n <br> • Lập bảng biến thiên\n\n Hàm số đã cho đạt cực đại tại điểm $x = -4$.\n <br> • Trên khoảng $(-4;2)$, $f'(x) &lt; 0$ nên hàm số nghịch biến.\n <br> • Xét trên đoạn $[0;3]$; $f(0) = 18$; $f(2) = -10$; $f(3) = 3^3 + 3\\cdot3^2 - 24\\cdot3 + 18 = 0$. <br>\n Do đó giá trị lớn nhất của hàm số đã cho trên đoạn $[0;3]$ phải bằng $18$ (tại $x=0$).\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Một nhà máy tiến hành thống kê nhân sự của $500$ công nhân viên. Kết quả cho thấy có $400$ người thuộc khối Sản xuất và $100$ người thuộc khối Văn phòng. Qua thống kê chi tiết, trong khối Sản xuất có $60\\%$ là nam giới; trong khối Văn phòng có $70\\%$ là nữ giới. Biết rằng mỗi công nhân viên chỉ làm việc ở duy nhất một khối. Chọn ngẫu nhiên một người trong nhà máy.",
+      "statements": [
+        {
+          "text": "Xác suất người được chọn thuộc khối Sản xuất bằng $0{,}8$",
+          "answer": true
+        },
+        {
+          "text": "Xác suất người được chọn là nữ, biết rằng người đó thuộc khối Sản xuất bằng $0{,}32$",
+          "answer": false
+        },
+        {
+          "text": "Xác suất người được chọn là nam và không thuộc khối Văn phòng bằng $0{,}06$",
+          "answer": false
+        },
+        {
+          "text": "Tổng số nhân viên nam của nhà máy là $270$ người",
+          "answer": true
+        }
+      ],
+      "id": 14,
+      "solution": "<br>\n <br> • Số cách chọn ngẫu nhiên $1$ người từ nhà máy là $n(\\Omega) = 500$. <br>\n Gọi $A$ là biến cố “ Người được chọn thuộc khối Sản xuất”. <br>\n Ta có $n(A) = 400$. <br>\n Xác suất người được chọn thuộc khối Sản xuất là $\\mathrm{P}(A) = \\dfrac{400}{500} = 0{,}8$.\n <br> • Gọi $B$ là biến cố “ Người được chọn là nữ”. <br>\n Vì khối Sản xuất có $60\\%$ là nam $\\Rightarrow$ Có $100\\% - 60\\% = 40\\%$ là nữ. <br>\n Do đó, $\\mathrm{P}\\left(B\\mid A\\right)= 40\\% = 0{,}4$.\n <br> • Gọi $C$ là biến cố “ Người được chọn là nam và không thuộc khối Văn phòng”. <br>\n Vì mỗi người chỉ làm ở duy nhất một khối, nên “ không thuộc khối Văn phòng” đồng nghĩa với “ thuộc khối Sản xuất”. <br>\n Vậy biến cố $C$ trở thành “ Người được chọn là nam và thuộc khối Sản xuất”. <br>\n Số lượng công nhân nam thuộc khối Sản xuất là $400 \\cdot 60\\% = 240$ người. <br>\n Xác suất của biến cố $C$ là $\\mathrm{P}(C) = \\dfrac{240}{500} = 0{,}48$.\n <br> • Số nhân viên nam ở khối Sản xuất là $400 \\cdot 60\\% = 240$ người. <br>\n Số nhân viên nam ở khối Văn phòng là $100 \\cdot (100\\% - 70\\%) = 100 \\cdot 30\\% = 30$ người. <br>\n Tổng số nhân viên nam của toàn nhà máy là $240 + 30 = 270 (người)$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "truefalse",
+      "question": "Một chất điểm $M$ di chuyển trên đường thẳng trong thời gian $60$ phút, vận tốc của chất điểm là một hàm đa thức bậc ba $v_M(t)$ (đơn vị mét/phút). Bảng sau cho biết một số giá trị của vận tốc tại các thời điểm khác nhau",
+      "statements": [
+        {
+          "text": "Hàm vận tốc của chất điểm có dạng $v_M(t)=-\\dfrac{1}{40}\\left(t^3-60t^2\\right)$",
+          "answer": true
+        },
+        {
+          "text": "Trong quá trình di chuyển, tốc độ lớn nhất chất điểm đạt được là $800$ (mét/phút)",
+          "answer": true
+        },
+        {
+          "text": "Tổng quãng đường chất điểm $M$ đi được trong $60$ phút là $24 000$ (mét)",
+          "answer": false
+        },
+        {
+          "text": "Một chất điểm $N$ xuất phát cùng lúc, cùng vị trí với $M$ và chuyển động với vận tốc $v_N(t)=0{,}5t^2$ (mét/phút). Hai chất điểm sẽ gặp lại nhau tại thời điểm kết thúc chuyển động (tức lúc $t=60$ phút)",
+          "answer": false
+        }
+      ],
+      "id": 15,
+      "solution": "Hàm đa thức bậc ba có dạng tổng quát $v_M(t) = at^3 + bt^2 + ct + d$ ($a \\neq 0$). <br>\n Dựa vào bảng giá trị, ta có hệ phương trình\n \\[\\begin{cases}d = 0\\\\a \\cdot 20^3 + b \\cdot 20^2 + c \\cdot 20 = 400\\\\a \\cdot 40^3 + b \\cdot 40^2 + c \\cdot 40 = 800\\\\a \\cdot 60^3 + b \\cdot 60^2 + c \\cdot 60 = 0\\end{cases}\n \\Leftrightarrow \n \\begin{cases}d = 0\\\\8 000a + 400b + 20c = 400\\\\64 000a + 1 600b + 40c = 800\\\\216 000a + 3 600b + 60c = 0\\end{cases}\n \\Leftrightarrow\n \\begin{cases}a = -\\dfrac{1}{40}\\\\b = \\dfrac{3}{2}\\\\c = 0\\\\d = 0\\end{cases}\\]\n Suy ra hàm vận tốc của chất điểm $M$ là $v_M(t) = -\\dfrac{1}{40}t^3 + \\dfrac{3}{2}t^2 = -\\dfrac{1}{40}\\left(t^3 - 60t^2\\right)$.\n <br>\n <br> • Vì hàm số tìm được là $v_M(t) = -\\dfrac{1}{40}\\left(t^3 - 60t^2\\right)$.\n <br> • Xét hàm số $v_M(t) = -\\dfrac{1}{40}t^3 + \\dfrac{3}{2}t^2$ trên đoạn $[0; 60]$. <br>\n Ta có $v_M'(t) = -\\dfrac{3}{40}t^2 + 3t$. <br>\n Cho $v_M'(t) = 0 \\Leftrightarrow \\begin{cases}t = 0\\\\t = 40.\\end{cases}$ <br>\n Tính các giá trị $v_M(0) = 0$, $v_M(40) = 800$, $v_M(60) = 0$. <br>\n Vậy trong quá trình di chuyển, tốc độ lớn nhất chất điểm $M$ đạt được là $800$ (mét/phút) tại thời điểm $t = 40$ phút.\n <br> • Do $v_M(t) = -\\dfrac{1}{40}t^2(t - 60) \\geq 0$ với mọi $t \\in [0; 60]$, tổng quãng đường chất điểm $M$ đi được là\n \\[S_M = \\int\\limits_{0}^{60} \\left(-\\dfrac{1}{40}t^3 + \\dfrac{3}{2}t^2\\right) \\mathrm{ d}t = \\left(-\\dfrac{1}{160}t^4 + \\dfrac{1}{2}t^3\\right)\\Bigg|_{0}^{60} = -81 000 + 108 000 = 27 000 (mét).\\]\n <br> • Quãng đường chất điểm $N$ đi được trong $60$ phút đầu là\n \\[S_N = \\int\\limits_{0}^{60} 0{,}5t^2 \\mathrm{ d}t = \\left(\\dfrac{1}{6}t^3\\right)\\Bigg|_{0}^{60} = \\dfrac{216 000}{6} = 36 000 (mét).\\]\n Vì hai chất điểm xuất phát cùng lúc, cùng vị trí nhưng đến thời điểm $t = 60$ phút thì $S_M \\neq S_N$ ($27 000 \\neq 36 000$), do đó chúng không thể gặp lại nhau tại thời điểm này.\n <br>",
+      "visualLatex": "\\begin{tabular}{c|c|c|c|c}\n\t\t\t$t$ (\\textit{phút}) & $0$ & $20$ & $40$ & $60$ \\\\\n\t\t\t\\hline\n\t\t\t$v_M(t)$ (\\textit{mét/phút}) & $0$ & $400$ & $800$ & $0$\n\t\t\\end{tabular}",
+      "visualBlocks": [
+        "\\begin{tabular}{c|c|c|c|c}\n\t\t\t$t$ (\\textit{phút}) & $0$ & $20$ & $40$ & $60$ \\\\\n\t\t\t\\hline\n\t\t\t$v_M(t)$ (\\textit{mét/phút}) & $0$ & $400$ & $800$ & $0$\n\t\t\\end{tabular}"
+      ],
+      "hasTikz": false,
+      "hasTable": true,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/002/q15.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "truefalse",
+      "question": "Trên mặt đất bằng phẳng có ba chiếc cọc thẳng đứng, với ba chân cọc $A$, $B$, $C$ có $AB=AC=8$ (dm). Ba đỉnh cọc $A'$, $B'$, $C'$ có độ cao lần lượt là $5$ (dm), $5$ (dm) và $11$ (dm). Người ta đặt một quả cầu trang trí có tâm $I$ lên trên sao cho vỏ quả cầu tựa lên ba đỉnh cọc (tức ba đỉnh $A'$, $B'$, $C'$ cùng chạm vào mặt cầu). Chọn hệ trục tọa độ $Oxyz$ sao cho $A \\equiv O$, $AB \\in$ tia $Ox$, $AC \\in$ tia $Oy$ và $AA' \\in$ tia $Oz$ (đơn vị trên mỗi trục là dm). Biết tâm $I$ của quả cầu nằm phía trên mặt phẳng $(Oxy)$.",
+      "statements": [
+        {
+          "text": "Tọa độ đỉnh cột $C'$ là $(8;0;11)$",
+          "answer": false
+        },
+        {
+          "text": "Mặt phẳng $(A'BC)$ có phương trình là $5x+5y+8z-40=0$",
+          "answer": true
+        },
+        {
+          "text": "Gọi $\\varphi$ là góc tạo bởi đường thẳng $A'C'$ và mặt đất $(Oxy)$, khi đó $\\sin \\varphi = 0{,}8$",
+          "answer": false
+        },
+        {
+          "text": "Nếu bán kính của quả cầu bằng $\\sqrt{141}$ (dm) thì $\\mathrm{d}(I,(Oxy)) = 16$ (dm)",
+          "answer": true
+        }
+      ],
+      "id": 16,
+      "solution": "Dựa vào hệ trục tọa độ $Oxyz$ đã cho, ta xác định được tọa độ các điểm:\n <br>\n <br> • Gốc tọa độ $A(0;0;0)$.\n <br> • $B \\in Ox$ và $AB=8 \\Rightarrow B(8;0;0)$.\n <br> • $C \\in Oy$ và $AC=8 \\Rightarrow C(0;8;0)$.\n <br> • Các cọc thẳng đứng nên $A'$, $B'$, $C'$ có cùng hoành độ và tung độ với $A$, $B$, $C$. Từ độ cao của các đỉnh cọc, ta có $A'(0;0;5)$, $B'(8;0;5)$ và $C'(0;8;11)$.\n <br>\n <br>\n <br> • Tọa độ đỉnh cột $C'$ là $(0;8;11)$.\n <br> • Mặt phẳng $(A'BC)$ đi qua ba điểm $A'(0;0;5)$, $B(8;0;0)$ và $C(0;8;0)$. <br>\n Phương trình theo đoạn chắn của mặt phẳng $(A'BC)$ là \n \\[ \\dfrac{x}{8} + \\dfrac{y}{8} + \\dfrac{z}{5} = 1 \\Leftrightarrow 5x+5y+8z-40=0. \\]\n <br> • Ta có véc-tơ chỉ phương của đường thẳng $A'C'$ là $\\overrightarrow{A'C'}=(0;8;6)$. <br>\n Mặt đất $(Oxy)$ có véc-tơ pháp tuyến là $\\vec{k}=(0;0;1)$. <br>\n Khi đó\n \\[ \\sin \\varphi = \\dfrac{\\left|\\overrightarrow{A'C'}\\cdot\\vec{k}\\right|}{\\left|\\overrightarrow{A'C'}\\right|\\cdot\\left|\\vec{k}\\right|} = \\dfrac{|0\\cdot 0 + 8\\cdot 0 + 6\\cdot 1|}{\\sqrt{0^2+8^2+6^2}\\cdot 1} = \\dfrac{6}{10} = 0{,}6. \\]\n <br> • Gọi tọa độ tâm quả cầu là $I(x;y;z)$. Vì vỏ quả cầu tựa lên ba đỉnh cọc nên $IA' = IB' = IC' = R = \\sqrt{141}$. <br>\n Ta có\n <br> \\[\n \\begin{cases}IA'^2 = IB'^2\\\\IA'^2 = IC'^2\\end{cases} \n &\\Leftrightarrow& \\begin{cases}x^2+y^2+(z-5)^2 = (x-8)^2+y^2+(z-5)^2\\\\x^2+y^2+(z-5)^2 = x^2+(y-8)^2+(z-11)^2\\end{cases}\\\\\n &\\Leftrightarrow& \\begin{cases}x^2 = x^2-16x+64\\\\y^2+z^2-10z+25 = y^2-16y+64+z^2-22z+121\\end{cases}\\\\\n &\\Leftrightarrow& \\begin{cases}16x = 64\\\\16y+12z = 160\\end{cases} \\Leftrightarrow \\begin{cases}x = 4\\\\y = 10 - \\dfrac{3}{4}z.\\end{cases}\n \\] <br>\n Thay $x$ và $y$ vào phương trình $IA'^2 = 141$, ta được\n <br> \\[\n && 4^2 + \\left(10 - \\dfrac{3}{4}z\\right)^2 + (z-5)^2 = 141\\\\\n &\\Leftrightarrow& 16 + 100 - 15z + \\dfrac{9}{16}z^2 + z^2 - 10z + 25 = 141\\\\\n &\\Leftrightarrow& \\dfrac{25}{16}z^2 - 25z = 0 \\Leftrightarrow \\begin{cases}z=0\\\\z=16.\\end{cases}\n \\] <br>\n Do tâm $I$ nằm phía trên mặt phẳng $(Oxy)$ nên $z&gt;0$, suy ra $z=16$. <br>\n Vậy khoảng cách từ $I$ đến mặt phẳng $(Oxy)$ là $\\mathrm{d}(I,(Oxy)) = |z| = 16 $dm.\n <br>",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.4, line join=round, line cap=round]\n\t\t\\definecolor{copperdark}{RGB}{100, 40, 10}\n\t\t\\definecolor{copperlight}{RGB}{250, 170, 90}\n\t\t\\definecolor{mygold}{RGB}{245, 205, 50}\n\t\t\n\t\t\n\t\t\\fill[left color=gray!60, right color=gray!25, middle color=gray!10]\n\t\t(-6, -0.7) -- (-6, 0) arc (180:360:6cm and 2.2cm) -- (6, -0.7) arc (360:180:6cm and 2.2cm);\n\t\t\n\t\t\\fill[gray!15] (0, 0) ellipse (6cm and 2.2cm);\n\t\t\\draw[gray!60!black, thick] (0, 0) ellipse (6cm and 2.2cm);\n\t\t\\draw[gray!60!black, thick] (-6, 0) -- (-6, -0.7) arc (180:360:6cm and 2.2cm) -- (6, -0.7);\n\t\t\n\t\t\n\t\t\\draw[gray!40, thick] (0,0) ellipse (5.4cm and 1.9cm);\n\t\t\\draw[gray!30, thick] (0,0) ellipse (4.8cm and 1.65cm);\n\t\t\n\t\t\n\t\t\\fill[black, opacity=0.15] (-0.3, 0.2) ellipse (4.2cm and 1.2cm);\n\t\t\\fill[black, opacity=0.08] (-0.3, 0.2) ellipse (3.2cm and 0.9cm);\n\t\t\n\t\t\n\t\t\\coordinate (A) at (0, -0.5);\n\t\t\\coordinate (B) at (-3.8, 0.2);\n\t\t\\coordinate (C) at (3.8, 0.6);\n\t\t\n\t\t\\coordinate (A') at (0, 3.5);\n\t\t\n\t\t\n\t\t\\draw[dashed, thick, black!70] (A) -- (B) -- (C) -- cycle;\n\t\t\n\t\t\n\t\t\\draw[->, thick, >=stealth] (B) -- ($ (A)!1.4!(B) $) node[left] {$x$};\n\t\t\\draw[->, thick, >=stealth] (C) -- ($ (A)!1.4!(C) $) node[right] {$y$};\n\t\t\n\t\t\n\t\t\\coordinate (I) at (-0.5, 7.4);\n\t\t\\shade[ball color=mygold] (I) circle (4.7cm);\n\t\t\n\t\t\n\t\t\n\t\t\\draw[dashed, thick, black!80] (A') -- (0, 12.07);\n\t\t\\draw[->, thick, >=stealth] (0, 12.07) -- (0, 13.5) node[right] {$z$};\n\t\t\n\t\t\n\t\t\\newcommand{\\drawpole}[4]{\n\t\t\t\\begin{scope}[shift={(#1,#2)}]\n\t\t\t\\def\\pw{0.15} \\def\\ph{0.06} \n\t\t\t\\def\\bw{0.35} \\def\\bh{0.14} \n\t\t\t\n\t\t\t\n\t\t\t\\fill[black!30] (0.1, -0.05) ellipse ({\\bw*1.15} and {\\bh*1.15});\n\t\t\t\n\t\t\t\n\t\t\t\\fill[copperdark] (0,0) ellipse ({\\bw} and {\\bh});\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\bw,0) rectangle (\\bw, 0.12);\n\t\t\t\\fill[copperdark] (0,0.12) ellipse ({\\bw} and {\\bh});\n\t\t\t\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\bw*0.7,0.12) rectangle (\\bw*0.7, 0.25);\n\t\t\t\\fill[copperdark] (0,0.25) ellipse ({\\bw*0.7} and {\\bh*0.7});\n\t\t\t\n\t\t\t\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\pw, 0.25) rectangle (\\pw, #3);\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\def\\sw{0.22} \\def\\sh{0.08}\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\sw, #3-0.15) arc (180:360:{\\sw} and {\\sh}) -- (\\sw, #3) arc (0:-180:{\\sw} and {\\sh}) -- cycle;\n\t\t\t\n\t\t\t\\draw[copperlight, thick] (-\\sw, #3) arc (180:360:{\\sw} and {\\sh});\n\t\t\t\n\t\t\t\\node[below] at (0, -0.2) {$#4$};\n\t\t\t\\end{scope}\n\t\t}\n\t\t\n\t\t\n\t\t\\drawpole{-3.8}{0.2}{4.0}{B}\n\t\t\\drawpole{0}{-0.5}{4.0}{} \n\t\t\\drawpole{3.8}{0.6}{8.8}{C}\n\t\t\n\t\t\n\t\t\\node[below right=2pt] at (0, -0.5) {$A$};\n\t\t\\node[below left=2pt] at (0, -0.5) {$O$};\n\t\t\n\t\t\\node[right] at (0.2, 3.7) {$A'$};\n\t\t\\node[left] at (-4.0, 4.4) {$B'$};\n\t\t\\node[right] at (4.0, 9.6) {$C'$};\n\t\t\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.4, line join=round, line cap=round]\n\t\t\\definecolor{copperdark}{RGB}{100, 40, 10}\n\t\t\\definecolor{copperlight}{RGB}{250, 170, 90}\n\t\t\\definecolor{mygold}{RGB}{245, 205, 50}\n\t\t\n\t\t\n\t\t\\fill[left color=gray!60, right color=gray!25, middle color=gray!10]\n\t\t(-6, -0.7) -- (-6, 0) arc (180:360:6cm and 2.2cm) -- (6, -0.7) arc (360:180:6cm and 2.2cm);\n\t\t\n\t\t\\fill[gray!15] (0, 0) ellipse (6cm and 2.2cm);\n\t\t\\draw[gray!60!black, thick] (0, 0) ellipse (6cm and 2.2cm);\n\t\t\\draw[gray!60!black, thick] (-6, 0) -- (-6, -0.7) arc (180:360:6cm and 2.2cm) -- (6, -0.7);\n\t\t\n\t\t\n\t\t\\draw[gray!40, thick] (0,0) ellipse (5.4cm and 1.9cm);\n\t\t\\draw[gray!30, thick] (0,0) ellipse (4.8cm and 1.65cm);\n\t\t\n\t\t\n\t\t\\fill[black, opacity=0.15] (-0.3, 0.2) ellipse (4.2cm and 1.2cm);\n\t\t\\fill[black, opacity=0.08] (-0.3, 0.2) ellipse (3.2cm and 0.9cm);\n\t\t\n\t\t\n\t\t\\coordinate (A) at (0, -0.5);\n\t\t\\coordinate (B) at (-3.8, 0.2);\n\t\t\\coordinate (C) at (3.8, 0.6);\n\t\t\n\t\t\\coordinate (A') at (0, 3.5);\n\t\t\n\t\t\n\t\t\\draw[dashed, thick, black!70] (A) -- (B) -- (C) -- cycle;\n\t\t\n\t\t\n\t\t\\draw[->, thick, >=stealth] (B) -- ($ (A)!1.4!(B) $) node[left] {$x$};\n\t\t\\draw[->, thick, >=stealth] (C) -- ($ (A)!1.4!(C) $) node[right] {$y$};\n\t\t\n\t\t\n\t\t\\coordinate (I) at (-0.5, 7.4);\n\t\t\\shade[ball color=mygold] (I) circle (4.7cm);\n\t\t\n\t\t\n\t\t\n\t\t\\draw[dashed, thick, black!80] (A') -- (0, 12.07);\n\t\t\\draw[->, thick, >=stealth] (0, 12.07) -- (0, 13.5) node[right] {$z$};\n\t\t\n\t\t\n\t\t\\newcommand{\\drawpole}[4]{\n\t\t\t\\begin{scope}[shift={(#1,#2)}]\n\t\t\t\\def\\pw{0.15} \\def\\ph{0.06} \n\t\t\t\\def\\bw{0.35} \\def\\bh{0.14} \n\t\t\t\n\t\t\t\n\t\t\t\\fill[black!30] (0.1, -0.05) ellipse ({\\bw*1.15} and {\\bh*1.15});\n\t\t\t\n\t\t\t\n\t\t\t\\fill[copperdark] (0,0) ellipse ({\\bw} and {\\bh});\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\bw,0) rectangle (\\bw, 0.12);\n\t\t\t\\fill[copperdark] (0,0.12) ellipse ({\\bw} and {\\bh});\n\t\t\t\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\bw*0.7,0.12) rectangle (\\bw*0.7, 0.25);\n\t\t\t\\fill[copperdark] (0,0.25) ellipse ({\\bw*0.7} and {\\bh*0.7});\n\t\t\t\n\t\t\t\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\pw, 0.25) rectangle (\\pw, #3);\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\def\\sw{0.22} \\def\\sh{0.08}\n\t\t\t\\fill[left color=copperdark, right color=copperdark, middle color=copperlight] \n\t\t\t(-\\sw, #3-0.15) arc (180:360:{\\sw} and {\\sh}) -- (\\sw, #3) arc (0:-180:{\\sw} and {\\sh}) -- cycle;\n\t\t\t\n\t\t\t\\draw[copperlight, thick] (-\\sw, #3) arc (180:360:{\\sw} and {\\sh});\n\t\t\t\n\t\t\t\\node[below] at (0, -0.2) {$#4$};\n\t\t\t\\end{scope}\n\t\t}\n\t\t\n\t\t\n\t\t\\drawpole{-3.8}{0.2}{4.0}{B}\n\t\t\\drawpole{0}{-0.5}{4.0}{} \n\t\t\\drawpole{3.8}{0.6}{8.8}{C}\n\t\t\n\t\t\n\t\t\\node[below right=2pt] at (0, -0.5) {$A$};\n\t\t\\node[below left=2pt] at (0, -0.5) {$O$};\n\t\t\n\t\t\\node[right] at (0.2, 3.7) {$A'$};\n\t\t\\node[left] at (-4.0, 4.4) {$B'$};\n\t\t\\node[right] at (4.0, 9.6) {$C'$};\n\t\t\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "truefalse",
+      "needsImage": true,
+      "image": "images/002/q16.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "short",
+      "question": "Chị Thủy có số vốn tự có là $1{,}5$ tỷ đồng. Để mua một mặt bằng kinh doanh đầy tiềm năng, chị vay thêm ngân hàng $2{,}5$ tỷ đồng với lãi suất $9{,}2\\%$/năm theo thể thức lãi kép, kì hạn $1$ năm. Chị dùng toàn bộ số tiền $4$ tỷ đồng để mua mặt bằng với đơn giá $50$ triệu đồng/$m^2$. Sau đúng $3$ năm đầu tư, giá mặt bằng khu vực đó tăng lên, chị bán lại với giá $65$ triệu đồng/$m^2$. Ngay sau khi nhận tiền bán, chị thực hiện tất toán toàn bộ khoản nợ (gốc và lãi) cho ngân hàng. Hỏi sau khi trừ đi các chi phí nợ vay, chị Thủy còn lại số tiền lãi là bao nhiêu triệu đồng so với số vốn $1{,}5$ tỷ đồng ban đầu? ( <em> làm tròn đến hàng đơn vị </em> ).\n <br>",
+      "answer": "445",
+      "id": 17,
+      "solution": "Đổi $2{,}5$ tỷ đồng $= 2 500$ triệu đồng; $1{,}5$ tỷ đồng $= 1 500$ triệu đồng. <br>\n Số tiền chị Thủy nợ ngân hàng (cả gốc lẫn lãi) sau $3$ năm là\n \\[2 500 \\cdot (1 + 0{,}092)^3 \\approx 3 255{,}43 168 (triệu đồng).\\]\n Diện tích mặt bằng chị Thủy đã mua là\n $\\dfrac{4000}{50} = 80 \\left(m^2\\right)$. <br>\n Số tiền chị Thủy thu được sau khi bán mặt bằng đó sau $3$ năm là\n \\[ 80 \\cdot 65 = 5 200 (triệu đồng).\\]\n Số tiền chị Thủy còn lại sau khi tất toán khoản nợ cho ngân hàng là\n \\[5 200 - 3 255{,}43 168 = 1 944{,}56 832 (triệu đồng).\\]\n Số tiền lãi chị Thủy nhận được so với số vốn ban đầu là\n \\[1 944{,}56 832 - 1 500 = 444{,}56 832 \\approx 445 (triệu đồng).\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một trung tâm phân loại hàng hóa có ca làm việc tiêu chuẩn là $8$ giờ/ngày. Khi đó, trung tâm vận hành $200$ trạm, mỗi trạm xử lý $100$ đơn hàng/giờ. Nếu tăng tổng thời gian làm việc mỗi ngày thêm $1$ giờ thì số trạm hoạt động giảm đi $4$ trạm, đồng thời năng suất xử lý của mỗi trạm giảm đi $5$ đơn hàng/giờ (giả sử sự thay đổi về số trạm và năng suất là liên tục). Ngoài ra, số lượng đơn hàng bị lỗi trong một ngày được ước tính bởi hàm số $P(x) = 80x^2 + 2 480x$, với $x$ (giờ) là tổng thời gian làm việc trong ngày ($x \\ge 8$). Hỏi trung tâm cần thiết lập thời gian làm việc mỗi ngày là bao nhiêu giờ để số lượng đơn hàng đạt chuẩn (bằng tổng đơn hàng xử lý trừ đi đơn hàng lỗi) đạt lớn nhất?\n <br>",
+      "answer": "10",
+      "id": 18,
+      "solution": "Gọi $x$ (giờ) là tổng thời gian làm việc trong ngày của trung tâm ($x \\ge 8$). <br>\n Số giờ làm việc tăng thêm so với tiêu chuẩn là $x - 8$ (giờ). <br>\n Số trạm hoạt động khi đó là $200 - 4(x - 8) = 232 - 4x$ (trạm). <br>\n Năng suất xử lý của mỗi trạm trong $1$ giờ là $100 - 5(x - 8) = 140 - 5x$ (đơn hàng). <br>\n Điều kiện để trung tâm hoạt động và có năng suất là\n \\[\\begin{cases}232 - 4x &gt; 0\\\\140 - 5x &gt; 0\\end{cases} \\Leftrightarrow \\begin{cases}x &lt; 58\\\\x &lt; 28\\end{cases} \\Leftrightarrow x &lt; 28.\\]\n Tổng số đơn hàng xử lý được trong một ngày là\n \\[f(x) = x(232 - 4x)(140 - 5x) = 20x^3 - 1 720x^2 + 32 480x.\\]\n Số lượng đơn hàng đạt chuẩn trong một ngày là\n <br> \\[\n g(x) &=& f(x) - P(x) \\\\\n &=& 20x^3 - 1 720x^2 + 32 480x - (80x^2 + 2 480x) \\\\\n &=& 20x^3 - 1 800x^2 + 30 000x.\n \\] <br>\n Xét hàm số $g(x) = 20x^3 - 1 800x^2 + 30 000x$ trên nửa khoảng $[8;28)$.\n \\[g'(x) = 60x^2 - 3 600x + 30 000.\\]\n Cho $g'(x) = 0 \\Leftrightarrow 60x^2 - 3 600x + 30 000 = 0 \\Leftrightarrow \\begin{cases}x = 10 (nhận)\\\\x = 50 (loại).\\end{cases} $ <br>\n Ta có $g(8) = 135 040$, $g(10) = 140 000$. <br>\n Bảng biến thiên \n\n Ta thấy hàm số $g(x)$ đạt giá trị lớn nhất tại $x = 10$. <br>\n Vậy trung tâm cần thiết lập thời gian làm việc mỗi ngày là $10$ giờ để số lượng đơn hàng đạt chuẩn là lớn nhất.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Một khu đất hình chữ nhật $ABCD$ có chiều dài $AD = 120$ (m) và chiều rộng $AB = 100$ (m). Đường biên $AD$ nằm dọc theo một bờ sông thẳng. Trong khu đất có một trạm quan sát $I$ cách bờ sông $20$ (m) và cách đều hai đường biên $AB$, $CD$. Người ta quy hoạch một phân khu cảnh quan sao cho mọi điểm trong phân khu này đều có khoảng cách đến trạm $I$ ngắn hơn hoặc bằng khoảng cách đến bờ sông. Tính diện tích của phân khu cảnh quan đó (đơn vị: m$^2$).\n\n <br>",
+      "answer": "7200",
+      "id": 19,
+      "solution": "Chọn hệ trục toạ độ $Oxy$ sao cho đường biên $AD$ nằm trên trục $Ox$ (với $A$ trùng với gốc toạ độ $O$), tia $Oy$ chứa đoạn thẳng $AB$. <br>\n Dựa vào kích thước của hình chữ nhật $ABCD$, ta có toạ độ các đỉnh là $A(0;0)$, $D(120;0)$, $B(0;100)$ và $C(120;100)$. <br>\n Trạm quan sát $I$ cách đều $AB$, $CD$ nên hoành độ của $I$ là $x_I = \\dfrac{120}{2} = 60$. <br>\n Khoảng cách từ $I$ đến bờ sông (trục $Ox$) bằng $20$ m nên tung độ của $I$ là $y_I = 20$. Suy ra $I(60;20)$. <br>\n Gọi $M(x;y)$ là một điểm bất kì nằm trong phân khu cảnh quan. Vì $M$ nằm trong khu đất $ABCD$ nên điều kiện là $0 \\le x \\le 120$ và $0 \\le y \\le 100$. <br>\n Theo giả thiết, khoảng cách từ $M$ đến trạm $I$ ngắn hơn hoặc bằng khoảng cách từ $M$ đến bờ sông (chính là $y$, do $y \\ge 0$), tức là\n \\allowdisplaybreaks\n <br> \\[\n IM &\\le& \\mathrm{ d}\\left( M, Ox\\right) \\\\\n \\Leftrightarrow \\sqrt{(x - 60)^2 + (y - 20)^2} &\\le& y \\\\\n \\Leftrightarrow (x - 60)^2 + y^2 - 40y + 400 &\\le& y^2 \\\\\n \\Leftrightarrow 40y &\\ge& (x - 60)^2 + 400 \\\\\n \\Leftrightarrow y &\\ge& \\dfrac{1}{40}(x - 60)^2 + 10 \\\\\n \\Leftrightarrow y &\\ge& \\dfrac{1}{40}x^2 - 3x + 100.\n \\] <br>\n Vậy phân khu cảnh quan là phần diện tích giới hạn bởi parabol $y = \\dfrac{1}{40}x^2 - 3x + 100$ và đường thẳng $y = 100$ (tương ứng với biên $BC$). <br>\n Nhận thấy tại $x = 0 \\Rightarrow y = 100$ và tại $x = 120 \\Rightarrow y = 100$, nên parabol đi qua đúng hai đỉnh $B$ và $C$ của khu đất. <br>\n Diện tích của phân khu cảnh quan đó là\n \\allowdisplaybreaks\n <br> \\[\n S &=& \\int\\limits_{0}^{120} \\left[ 100 - \\left( \\dfrac{1}{40}x^2 - 3x + 100\\right) \\right] \\mathrm{ d}x \\\\\n &=& \\int\\limits_{0}^{120} \\left( -\\dfrac{1}{40}x^2 + 3x\\right) \\mathrm{ d}x \\\\\n &=& \\left( -\\dfrac{x^3}{120} + \\dfrac{3x^2}{2}\\right) \\Bigg|_0^{120} \\\\\n &=& -\\dfrac{120^3}{120} + \\dfrac{3 \\cdot 120^2}{2} - 0 \\\\\n &=& -14 400 + 21 600 = 7 200.\n \\] <br>\n Vậy diện tích của phân khu cảnh quan đó là $7 200$ m$^2$.",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.4, line join=round, line cap=round, >=stealth, every node/.style={scale=0.8}]\t\t\t\n\t\t\\def\\W{12}       \n\t\t\\def\\H{10}       \n\t\t\\def\\yI{2}       \n\t\t\\def\\para{0.25*(\\x - \\W/2)^2 + \\yI/2}\n\t\t\\path \n\t\t(0,0) coordinate (A)\n\t\t(0,\\H) coordinate (B)\n\t\t(\\W,\\H) coordinate (C)\n\t\t(\\W,0) coordinate (D)\n\t\t(\\W/2, \\yI) coordinate (I)\n\t\t(\\W/2, 0) coordinate (H); \t\t\t\t\n\t\t\n\t\t\\fill[cyan!10] (0,0) rectangle (\\W, -1.8);\n\t\t\\draw[cyan!80!blue] (0,-0.6) .. controls (2,-0.3) and (4,-0.9) .. (6,-0.6) .. controls (8,-0.3) and (10,-0.9) .. (\\W,-0.6);\n\t\t\\draw[cyan!80!blue] (0,-1.2) .. controls (3,-0.9) and (5,-1.5) .. (8,-1.2) .. controls (10,-0.9) and (11,-1.4) .. (\\W,-1.2);\n\t\t\\node[cyan!60!black] at (\\W/2, -0.9) {\\textbf{\\textit{Bờ sông}}};\n\t\t\\draw (A) rectangle (C);\t\t\t\n\t\t\\path (A)--(B)node[pos=0.5,sloped,above] {$100$ m}\n\t\t(B)--(C)node[pos=0.5,sloped,above] {$120$ m}\n\t\t;\t\n\t\t\\foreach \\p/\\g in {A/-135, B/135, C/45, D/-45, I/90} {\n\t\t\t\\fill (\\p) circle (1pt)+(\\g:0.3) node {$\\p$};\n\t\t}\t\t\t\t\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.4, line join=round, line cap=round, >=stealth, every node/.style={scale=0.8}]\t\t\t\n\t\t\\def\\W{12}       \n\t\t\\def\\H{10}       \n\t\t\\def\\yI{2}       \n\t\t\\def\\para{0.25*(\\x - \\W/2)^2 + \\yI/2}\n\t\t\\path \n\t\t(0,0) coordinate (A)\n\t\t(0,\\H) coordinate (B)\n\t\t(\\W,\\H) coordinate (C)\n\t\t(\\W,0) coordinate (D)\n\t\t(\\W/2, \\yI) coordinate (I)\n\t\t(\\W/2, 0) coordinate (H); \t\t\t\t\n\t\t\n\t\t\\fill[cyan!10] (0,0) rectangle (\\W, -1.8);\n\t\t\\draw[cyan!80!blue] (0,-0.6) .. controls (2,-0.3) and (4,-0.9) .. (6,-0.6) .. controls (8,-0.3) and (10,-0.9) .. (\\W,-0.6);\n\t\t\\draw[cyan!80!blue] (0,-1.2) .. controls (3,-0.9) and (5,-1.5) .. (8,-1.2) .. controls (10,-0.9) and (11,-1.4) .. (\\W,-1.2);\n\t\t\\node[cyan!60!black] at (\\W/2, -0.9) {\\textbf{\\textit{Bờ sông}}};\n\t\t\\draw (A) rectangle (C);\t\t\t\n\t\t\\path (A)--(B)node[pos=0.5,sloped,above] {$100$ m}\n\t\t(B)--(C)node[pos=0.5,sloped,above] {$120$ m}\n\t\t;\t\n\t\t\\foreach \\p/\\g in {A/-135, B/135, C/45, D/-45, I/90} {\n\t\t\t\\fill (\\p) circle (1pt)+(\\g:0.3) node {$\\p$};\n\t\t}\t\t\t\t\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/002/q19.png",
+      "renderStatus": "ok"
+    },
+    {
+      "type": "short",
+      "question": "Cho hình chóp $S.ABCD$ có đáy là hình thang vuông tại $A$ và $D$, với $AB = AD = 6$ (dm), $CD = 12$ (dm). Hình chiếu vuông góc của đỉnh $S$ lên mặt phẳng $(ABCD)$ trùng với trung điểm $H$ của đoạn $BD$. Biết khoảng cách từ đỉnh $A$ đến mặt phẳng $(SBC)$ bằng $4$ (dm). Tính thể tích khối chóp $S.ABCD$ theo đơn vị dm$^3$ ?\n <br>",
+      "answer": "216",
+      "id": 20,
+      "solution": "Ta có diện tích hình thang $ABCD$ là\n \\[ S_{ABCD} = \\dfrac{AB + CD}{2} \\cdot AD = \\dfrac{6 + 12}{2} \\cdot 6 = 54 dm$^2$. \\] \n Ta có $\\overrightarrow{AH} = \\overrightarrow{AD} + \\overrightarrow{DH} = \\overrightarrow{AD} + \\dfrac{1}{2}\\overrightarrow{DB} = \\overrightarrow{AD} + \\dfrac{1}{2}\\left( \\overrightarrow{AB} - \\overrightarrow{AD}\\right) = \\dfrac{1}{2}\\overrightarrow{AB} + \\dfrac{1}{2}\\overrightarrow{AD}$. <br>\n Mặt khác, $\\overrightarrow{BC} = \\overrightarrow{AC} - \\overrightarrow{AB} = \\left( \\overrightarrow{AD} + \\overrightarrow{DC}\\right) - \\overrightarrow{AB}$. <br>\n Vì $ABCD$ là hình thang vuông tại $A$ và $D$ nên $AB \\parallel CD$, do $CD = 12$ và $AB = 6$ nên $\\overrightarrow{DC} = 2\\overrightarrow{AB}$. <br>\n Suy ra $\\overrightarrow{BC} = \\overrightarrow{AD} + 2\\overrightarrow{AB} - \\overrightarrow{AB} = \\overrightarrow{AB} + \\overrightarrow{AD}$. <br>\n Từ đó ta thấy $\\overrightarrow{BC} = 2\\overrightarrow{AH}$, suy ra $AH \\parallel BC$. <br>\n Vì $AH \\parallel BC$ và $BC \\subset (SBC)$ nên $AH \\parallel (SBC)$. <br>\n Do đó, khoảng cách từ $H$ đến mặt phẳng $(SBC)$ bằng khoảng cách từ $A$ đến mặt phẳng $(SBC)$, suy ra\n \\[ \\mathrm{ d}\\left( H,(SBC)\\right) = \\mathrm{ d}\\left( A,(SBC)\\right) = 4 dm. \\]\n Trong mặt phẳng đáy, kẻ $HK \\perp BC$ tại $K$. <br> \n Trong mặt phẳng $(SHK)$, kẻ $HE \\perp SK$ tại $E$. <br>\n Ta có $BC \\perp HK$ và $BC \\perp SH$ (do $SH \\perp (ABCD)$), suy ra $BC \\perp (SHK) \\Rightarrow BC \\perp HE$. <br>\n Từ $HE \\perp SK$ và $HE \\perp BC$, ta được $HE \\perp (SBC)$. <br>\n Suy ra $\\mathrm{ d}\\left( H,(SBC)\\right) = HE = 4$ dm. <br>\n Vì $AH \\parallel BC$ nên $HK$ chính là khoảng cách từ $A$ đến đường thẳng $BC$. <br>\n Xét tam giác $ABC$, ta có diện tích $\\Delta ABC$ là $S_{ABC} = \\dfrac{1}{2} \\cdot AB \\cdot AD = \\dfrac{1}{2} \\cdot 6 \\cdot 6 = 18$ dm$^2$. <br>\n Ta có $BC = \\sqrt{(DC - AB)^2 + AD^2} = \\sqrt{(12 - 6)^2 + 6^2} = 6\\sqrt{2}$ dm. <br>\n Suy ra chiều cao hạ từ $A$ xuống $BC$ là\n \\[ \\mathrm{ d}\\left( A,BC\\right) = \\dfrac{2S_{ABC}}{BC} = \\dfrac{2 \\cdot 18}{6\\sqrt{2}} = 3\\sqrt{2} dm. \\]\n Do đó, $HK = 3\\sqrt{2}$ dm. <br>\n Xét tam giác $SHK$ vuông tại $H$ có đường cao $HE$, áp dụng hệ thức lượng ta có\n \\allowdisplaybreaks\n <br> \\[\n \\dfrac{1}{HE^2} = \\dfrac{1}{SH^2} + \\dfrac{1}{HK^2} &\\Leftrightarrow& \\dfrac{1}{SH^2} = \\dfrac{1}{HE^2} - \\dfrac{1}{HK^2} \\\\\n &\\Leftrightarrow& \\dfrac{1}{SH^2} = \\dfrac{1}{4^2} - \\dfrac{1}{\\left( 3\\sqrt{2}\\right)^2 } \\\\\n &\\Leftrightarrow& \\dfrac{1}{SH^2} = \\dfrac{1}{16} - \\dfrac{1}{18} = \\dfrac{1}{144}.\n \\] <br>\n Suy ra $SH = 12$ dm. <br>\n Thể tích của khối chóp $S.ABCD$ là\n \\[ V = \\dfrac{1}{3} \\cdot S_{ABCD} \\cdot SH = \\dfrac{1}{3} \\cdot 54 \\cdot 12 = 216 dm$^3$. \\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": true,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Trong không gian tọa độ $Oxyz$, xét tập hợp $S$ gồm các điểm có tọa độ $(x;y;z)$ với $x$, $y$, $z$ là các số nguyên dương không vượt quá $10$. Chọn ngẫu nhiên $2$ điểm phân biệt $A, B$ từ tập $S$. Gọi $C$ là trung điểm của đoạn thẳng $AB$. Gọi $p$ là xác suất để điểm $C$ có tọa độ đều là các số nguyên. Tính giá trị của $999p$.\n <br>",
+      "answer": "124",
+      "id": 21,
+      "solution": "Tập hợp $S$ gồm các điểm $(x;y;z)$ với $x,y,z \\in \\{1;2;\\dots;10\\}$. <br>\n Do đó số phần tử của $S$ là $10 \\cdot 10 \\cdot 10 = 1 000$ điểm. <br>\n Không gian mẫu là chọn bất kì $2$ điểm phân biệt từ $1 000$ điểm của tập $S$:\n \\[n(\\Omega) = \\mathrm{C}_{1 000}^2 = 499 500.\\]\n Gọi $A(x_1;y_1;z_1)$ và $B(x_2;y_2;z_2)$ là hai điểm được chọn. Trung điểm $C$ của $AB$ có tọa độ là:\n \\[C\\left(\\dfrac{x_1+x_2}{2}; \\dfrac{y_1+y_2}{2}; \\dfrac{z_1+z_2}{2}\\right).\\]\n Để $C$ có tọa độ đều là các số nguyên thì $x_1$, $x_2$ cùng tính chẵn lẻ; $y_1$, $y_2$ cùng tính chẵn lẻ; $z_1$, $z_2$ cùng tính chẵn lẻ. <br>\n Trong tập $\\{1;2;\\dots;10\\}$ có $5$ số chẵn và $5$ số lẻ. Ta chia các điểm trong $S$ thành $8$ loại dựa theo tính chẵn lẻ của tọa độ: (Chẵn, Chẵn, Chẵn), (Chẵn, Chẵn, Lẻ), \\dots, (Lẻ, Lẻ, Lẻ). <br>\n Mỗi loại như vậy sẽ có $5 \\cdot 5 \\cdot 5 = 125$ điểm. <br>\n Để $A$ và $B$ có tọa độ tương ứng cùng tính chẵn lẻ thì $A$ và $B$ phải được chọn từ cùng một loại trong $8$ loại trên. Số cách chọn là\n \\[n(A) = 8 \\cdot \\mathrm{C}_{125}^2 = 62 000.\\]\n Xác suất cần tìm là\n \\[p = \\dfrac{62 000}{499 500} = \\dfrac{124}{999}.\\]\n Vậy $999p = 124$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "short",
+      "question": "Trong một nhà xưởng, mặt sàn được coi là mặt phẳng $(Oxy)$, xét trong hệ trục tọa độ $Oxyz$ với đơn vị mét. Trên sàn có một cột mốc cố định $A(-2;6;0)$. Một thiết bị bay (robot) kiểm tra đang ở vị trí $M(4;-2;3)$. Người ta lắp một thanh ray dẫn được mô hình hóa là đường thẳng $d$ nằm trên mặt sàn $(Oxy)$ và luôn đi qua mốc $A$ (thanh ray có thể xoay theo nhiều hướng khác nhau trên sàn).\n\n Từ thiết bị $M$, hệ thống hạ một tia vuông góc xuống thanh ray $d$; chân đường vuông góc là $H$. Trong xưởng có một vách an toàn $(\\alpha)$ được mô hình hóa bởi mặt phẳng có phương trình $(\\alpha)\\colon 3x + 4y + 89 = 0$. Hỏi khi thay đổi hướng đặt thanh ray $d$, khoảng cách nhỏ nhất từ điểm $H$ đến vách $(\\alpha)$ bằng bao nhiêu mét?\n <br>",
+      "answer": "15",
+      "id": 22,
+      "solution": "Gọi $M'$ là hình chiếu vuông góc của điểm $M(4;-2;3)$ lên mặt phẳng sàn $(Oxy) \\Rightarrow M'(4;-2;0)$. <br>\n Vì $MM' \\perp (Oxy)$ nên $MM' \\perp d$. <br>\n Theo giả thiết $MH \\perp d$, suy ra $M'H \\perp d$ (định lý ba đường vuông góc). <br>\n Do đó, tam giác $AM'H$ vuông tại $H$, suy ra điểm $H$ luôn thuộc đường tròn $(C)$ đường kính $AM'$ nằm trong mặt phẳng $(Oxy)$. <br>\n Gọi $I$ là trung điểm của $AM'$, tọa độ của $I$ là\n \\[I(1;2;0).\\]\n Bán kính của đường tròn $(C)$ là\n \\[R = \\dfrac{AM'}{2} = \\dfrac{\\sqrt{(4+2)^2 + (-2-6)^2}}{2} = 5.\\]\n Khoảng cách từ tâm $I$ đến mặt phẳng vách an toàn $(\\alpha)$ là\n \\[\\mathrm{d}(I, (\\alpha)) = \\dfrac{|3 \\cdot 1 + 4 \\cdot 2 + 89|}{\\sqrt{3^2 + 4^2}} = \\dfrac{100}{5} = 20.\\]\n Vì $\\mathrm{d}(I, (\\alpha)) = 20 &gt; R = 5$ nên khoảng cách nhỏ nhất từ điểm $H$ đến vách $(\\alpha)$ là:\n \\[\\mathrm{d}_{\\min} = \\mathrm{d}(I, (\\alpha)) - R = 20 - 5 = 15 (m).\\]",
+      "visualLatex": "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\n\t\t\\coordinate (O) at (0,0);\n\t\t\\coordinate (Ux) at (-0.65,-0.35);\n\t\t\\coordinate (Uy) at (0.95,-0.08);\n\t\t\\coordinate (Uz) at (0,1.0);\n\t\t\n\t\t\n\t\t\\coordinate (Xmax) at ($(O) + 3.8*(Ux)$);\n\t\t\\coordinate (Ymax) at ($(O) + 10.5*(Uy)$);\n\t\t\\coordinate (Zmax) at ($(O) + 6*(Uz)$);\n\t\t\\coordinate (WallTopRight) at ($(O) + 10.5*(Uy) + 6*(Uz)$);\n\t\t\\coordinate (FloorFarRight) at ($(O) + 3.8*(Ux) + 10.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (A) at ($(O) + 5.2*(Ux) + 1.8*(Uy)$);\n\t\t\\coordinate (M) at ($(O) + 0.7*(Ux) + 2.4*(Uy) + 3.5*(Uz)$);\n\t\t\\coordinate (Mprime) at ($(O) + 0.7*(Ux) + 2.4*(Uy)$);\n\t\t\\coordinate (H) at ($(O) + 1.9*(Ux) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (d_end) at ($(O) + 0.5*(Ux) + 7.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (ProjH_Wall) at ($(O) + 5.5*(Uy) + 0*(Uz)$);\n\t\t\\coordinate (ProjH_FloorWall) at ($(O) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\fill[gray!40, opacity=0.7] (O) -- (Zmax) -- (WallTopRight) -- (Ymax) -- cycle;\n\t\t\\draw[black!70, thick] (Zmax) -- (WallTopRight) -- (Ymax);\n\t\t\n\t\t\n\t\t\\fill[gray!60, opacity=0.8] (Ymax) -- (WallTopRight) -- ($(WallTopRight) + 0.2*(Ux)$) -- ($(Ymax) + 0.2*(Ux)$) -- cycle;\n\t\t\\draw[black!70] (WallTopRight) -- ($(WallTopRight) + 0.2*(Ux)$) -- ($(Ymax) + 0.2*(Ux)$) -- (Ymax);\n\t\t\n\t\t\n\t\t\\fill[gray!12, opacity=0.5] (O) -- (Xmax) -- (FloorFarRight) -- (Ymax) -- cycle;\n\t\t\n\t\t\n\t\t\\foreach \\t in {-25,-10,10,25,40} {\n\t\t\t\\draw[black!20, dashed] (A) -- ($(A) + (\\t:4.0)$);\n\t\t}\n\t\t\n\t\t\n\t\t\\draw[->, thick] (O) -- ($(Xmax) + 0.6*(Ux)$) node[left] {$x$};\n\t\t\\draw[->, thick] (O) -- ($(Ymax) + 1.0*(Uy)$) node[below right] {$y$};\n\t\t\\draw[->, thick] (O) -- ($(Zmax) + 0.6*(Uz)$) node[left] {$z$};\n\t\t\\node at (O) [above left] {$O$};\n\t\t\n\t\t\n\t\t\n\t\t\\draw[double, double distance=4pt, darkgray, thick] (A) -- (d_end);\n\t\t\\node at ($(d_end) + (-0.2, 0.3)$) {$d$};\n\t\t\\draw[->, black!40, thick] ($(A) + (0.5, 0.2)$) arc (20:340:0.6 and 0.25);\n\t\t\n\t\t\n\t\t\\fill[gray!60] ($(A) + (-0.15,0)$) -- ($(A) + (-0.15,0.8)$) \n\t\tarc (180:360:0.15 and 0.07) -- ($(A) + (0.15,0)$) arc (360:180:0.15 and 0.07);\n\t\t\\fill[gray!30] ($(A) + (0,0.8)$) circle (0.15 and 0.07);\n\t\t\\draw[thick, black!80] ($(A) + (-0.15,0)$) -- ($(A) + (-0.15,0.8)$);\n\t\t\\draw[thick, black!80] ($(A) + (0.15,0)$) -- ($(A) + (0.15,0.8)$);\n\t\t\\draw[thick, black!80] ($(A) + (0,0.8)$) circle (0.15 and 0.07);\n\t\t\\draw[thick, black!80] ($(A) + (-0.15,0)$) arc (180:360:0.15 and 0.07);\n\t\t\\node at ($(A) + (-0.5,-0.3)$) {$A(-2; 6; 0)$};\n\t\t\n\t\t\n\t\t\\fill[black!15] (Mprime) circle (0.5 and 0.25); \n\t\t\n\t\t\\draw[red, ultra thick] (H)--(M);\n\t\t\n\t\t\n\t\t\n\t\t\\fill[lightgray, draw=black, thick] (M) circle (0.4 and 0.25); \n\t\t\\fill[darkgray] ($(M) + (0,0.07)$) circle (0.2 and 0.12); \n\t\t\\draw[thick] ($(M) + (-0.4,0)$) -- ($(M) + (-0.6, 0.2)$);  \n\t\t\\draw[thick] ($(M) + (0.4,0)$) -- ($(M) + (0.6, 0.2)$);   \n\t\t\\draw[thick] ($(M) + (-0.2,-0.1)$) -- ($(M) + (-0.4, -0.25)$); \n\t\t\\draw[thick] ($(M) + (0.2,-0.1)$) -- ($(M) + (0.4, -0.25)$);  \n\t\t\\fill[gray] ($(M) + (-0.6, 0.2)$) circle (0.2 and 0.06);   \n\t\t\\fill[gray] ($(M) + (0.6, 0.2)$) circle (0.2 and 0.06);    \n\t\t\\node at ($(M) + (0.5, 0.4)$) [anchor=west] {$M(4; -2; 3)$};\n\t\t\n\t\t\n\t\t\\draw[dashed, yellow!80!black, ultra thick] (H) -- (ProjH_Wall);\n\t\t\\draw[dashed, yellow!80!black, thick] (ProjH_Wall) -- (ProjH_FloorWall);\n\t\t\\draw[dashed, black!40] (ProjH_FloorWall) -- ($(O) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\draw[black!80] ($(ProjH_FloorWall) + (0, 0.25)$) -- ($(ProjH_FloorWall) + (-0.25, 0.25)$) -- ($(ProjH_FloorWall) + (-0.25, 0)$);\n\t\t\n\t\t\\fill[red] (H) circle (3pt) node[below right, xshift=2pt] {$H$};\n\t\t\\fill[yellow!90!black, draw=black] (ProjH_Wall) circle (2.5pt);\n\t\t\n\t\t\n\t\t\\node at ($(O) + 6.8*(Uy) + 4.8*(Uz)$) [white!10!black, scale=1.1] {$(\\alpha): 3x + 4y + 89 = 0$};\n\t\t\n\t\t\\draw[white!40!black, thin] ($(O) + 7.5*(Uy) + 1.5*(Uz)$) -- ($(O) + 7.5*(Uy) + 3.8*(Uz)$);\n\t\t\\draw[white!40!black, thin] ($(O) + 6.5*(Uy) + 2.5*(Uz)$) -- ($(O) + 8.8*(Uy) + 2.5*(Uz)$);\n\t\t\\node at ($(O) + 6.3*(Uy) + 2.5*(Uz)$) [scale=0.8, white!30!black] {$o$};\n\t\t\\node at ($(O) + 7.5*(Uy) + 4.0*(Uz)$) [scale=0.8, white!30!black] {$z$};\n\t\t\\node at ($(O) + 9.0*(Uy) + 2.3*(Uz)$) [scale=0.8, white!30!black] {$y$};\n\t\t\n\t\t\n\t\t\\coordinate (ScaleStart) at ($(O) + 8.2*(Uy) - 0.5*(Uz)$);\n\t\t\\draw[ultra thick, black] (ScaleStart) -- ($(ScaleStart) + 1.5*(Uy)$);\n\t\t\\draw[ultra thick, white] (ScaleStart) -- ($(ScaleStart) + 0.75*(Uy)$);\n\t\t\\draw[thick] (ScaleStart) -- ($(ScaleStart) + (0,0.15)$);\n\t\t\\draw[thick] ($(ScaleStart) + 0.75*(Uy)$) -- ($(ScaleStart) + 0.75*(Uy) + (0,0.15)$);\n\t\t\\draw[thick] ($(ScaleStart) + 1.5*(Uy)$) -- ($(ScaleStart) + 1.5*(Uy) + (0,0.15)$);\n\t\t\\node at ($(ScaleStart) + (0, 0.3)$) [scale=0.7] {$0$};\n\t\t\\node at ($(ScaleStart) + 1.5*(Uy) + (0.3, 0.2)$) [scale=0.7] {$1\\text{ m}$};\n\t\t\\end{tikzpicture}",
+      "visualBlocks": [
+        "\\begin{tikzpicture}[scale=0.8, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n\t\t\n\t\t\\coordinate (O) at (0,0);\n\t\t\\coordinate (Ux) at (-0.65,-0.35);\n\t\t\\coordinate (Uy) at (0.95,-0.08);\n\t\t\\coordinate (Uz) at (0,1.0);\n\t\t\n\t\t\n\t\t\\coordinate (Xmax) at ($(O) + 3.8*(Ux)$);\n\t\t\\coordinate (Ymax) at ($(O) + 10.5*(Uy)$);\n\t\t\\coordinate (Zmax) at ($(O) + 6*(Uz)$);\n\t\t\\coordinate (WallTopRight) at ($(O) + 10.5*(Uy) + 6*(Uz)$);\n\t\t\\coordinate (FloorFarRight) at ($(O) + 3.8*(Ux) + 10.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (A) at ($(O) + 5.2*(Ux) + 1.8*(Uy)$);\n\t\t\\coordinate (M) at ($(O) + 0.7*(Ux) + 2.4*(Uy) + 3.5*(Uz)$);\n\t\t\\coordinate (Mprime) at ($(O) + 0.7*(Ux) + 2.4*(Uy)$);\n\t\t\\coordinate (H) at ($(O) + 1.9*(Ux) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (d_end) at ($(O) + 0.5*(Ux) + 7.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\coordinate (ProjH_Wall) at ($(O) + 5.5*(Uy) + 0*(Uz)$);\n\t\t\\coordinate (ProjH_FloorWall) at ($(O) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\fill[gray!40, opacity=0.7] (O) -- (Zmax) -- (WallTopRight) -- (Ymax) -- cycle;\n\t\t\\draw[black!70, thick] (Zmax) -- (WallTopRight) -- (Ymax);\n\t\t\n\t\t\n\t\t\\fill[gray!60, opacity=0.8] (Ymax) -- (WallTopRight) -- ($(WallTopRight) + 0.2*(Ux)$) -- ($(Ymax) + 0.2*(Ux)$) -- cycle;\n\t\t\\draw[black!70] (WallTopRight) -- ($(WallTopRight) + 0.2*(Ux)$) -- ($(Ymax) + 0.2*(Ux)$) -- (Ymax);\n\t\t\n\t\t\n\t\t\\fill[gray!12, opacity=0.5] (O) -- (Xmax) -- (FloorFarRight) -- (Ymax) -- cycle;\n\t\t\n\t\t\n\t\t\\foreach \\t in {-25,-10,10,25,40} {\n\t\t\t\\draw[black!20, dashed] (A) -- ($(A) + (\\t:4.0)$);\n\t\t}\n\t\t\n\t\t\n\t\t\\draw[->, thick] (O) -- ($(Xmax) + 0.6*(Ux)$) node[left] {$x$};\n\t\t\\draw[->, thick] (O) -- ($(Ymax) + 1.0*(Uy)$) node[below right] {$y$};\n\t\t\\draw[->, thick] (O) -- ($(Zmax) + 0.6*(Uz)$) node[left] {$z$};\n\t\t\\node at (O) [above left] {$O$};\n\t\t\n\t\t\n\t\t\n\t\t\\draw[double, double distance=4pt, darkgray, thick] (A) -- (d_end);\n\t\t\\node at ($(d_end) + (-0.2, 0.3)$) {$d$};\n\t\t\\draw[->, black!40, thick] ($(A) + (0.5, 0.2)$) arc (20:340:0.6 and 0.25);\n\t\t\n\t\t\n\t\t\\fill[gray!60] ($(A) + (-0.15,0)$) -- ($(A) + (-0.15,0.8)$) \n\t\tarc (180:360:0.15 and 0.07) -- ($(A) + (0.15,0)$) arc (360:180:0.15 and 0.07);\n\t\t\\fill[gray!30] ($(A) + (0,0.8)$) circle (0.15 and 0.07);\n\t\t\\draw[thick, black!80] ($(A) + (-0.15,0)$) -- ($(A) + (-0.15,0.8)$);\n\t\t\\draw[thick, black!80] ($(A) + (0.15,0)$) -- ($(A) + (0.15,0.8)$);\n\t\t\\draw[thick, black!80] ($(A) + (0,0.8)$) circle (0.15 and 0.07);\n\t\t\\draw[thick, black!80] ($(A) + (-0.15,0)$) arc (180:360:0.15 and 0.07);\n\t\t\\node at ($(A) + (-0.5,-0.3)$) {$A(-2; 6; 0)$};\n\t\t\n\t\t\n\t\t\\fill[black!15] (Mprime) circle (0.5 and 0.25); \n\t\t\n\t\t\\draw[red, ultra thick] (H)--(M);\n\t\t\n\t\t\n\t\t\n\t\t\\fill[lightgray, draw=black, thick] (M) circle (0.4 and 0.25); \n\t\t\\fill[darkgray] ($(M) + (0,0.07)$) circle (0.2 and 0.12); \n\t\t\\draw[thick] ($(M) + (-0.4,0)$) -- ($(M) + (-0.6, 0.2)$);  \n\t\t\\draw[thick] ($(M) + (0.4,0)$) -- ($(M) + (0.6, 0.2)$);   \n\t\t\\draw[thick] ($(M) + (-0.2,-0.1)$) -- ($(M) + (-0.4, -0.25)$); \n\t\t\\draw[thick] ($(M) + (0.2,-0.1)$) -- ($(M) + (0.4, -0.25)$);  \n\t\t\\fill[gray] ($(M) + (-0.6, 0.2)$) circle (0.2 and 0.06);   \n\t\t\\fill[gray] ($(M) + (0.6, 0.2)$) circle (0.2 and 0.06);    \n\t\t\\node at ($(M) + (0.5, 0.4)$) [anchor=west] {$M(4; -2; 3)$};\n\t\t\n\t\t\n\t\t\\draw[dashed, yellow!80!black, ultra thick] (H) -- (ProjH_Wall);\n\t\t\\draw[dashed, yellow!80!black, thick] (ProjH_Wall) -- (ProjH_FloorWall);\n\t\t\\draw[dashed, black!40] (ProjH_FloorWall) -- ($(O) + 5.5*(Uy)$);\n\t\t\n\t\t\n\t\t\\draw[black!80] ($(ProjH_FloorWall) + (0, 0.25)$) -- ($(ProjH_FloorWall) + (-0.25, 0.25)$) -- ($(ProjH_FloorWall) + (-0.25, 0)$);\n\t\t\n\t\t\\fill[red] (H) circle (3pt) node[below right, xshift=2pt] {$H$};\n\t\t\\fill[yellow!90!black, draw=black] (ProjH_Wall) circle (2.5pt);\n\t\t\n\t\t\n\t\t\\node at ($(O) + 6.8*(Uy) + 4.8*(Uz)$) [white!10!black, scale=1.1] {$(\\alpha): 3x + 4y + 89 = 0$};\n\t\t\n\t\t\\draw[white!40!black, thin] ($(O) + 7.5*(Uy) + 1.5*(Uz)$) -- ($(O) + 7.5*(Uy) + 3.8*(Uz)$);\n\t\t\\draw[white!40!black, thin] ($(O) + 6.5*(Uy) + 2.5*(Uz)$) -- ($(O) + 8.8*(Uy) + 2.5*(Uz)$);\n\t\t\\node at ($(O) + 6.3*(Uy) + 2.5*(Uz)$) [scale=0.8, white!30!black] {$o$};\n\t\t\\node at ($(O) + 7.5*(Uy) + 4.0*(Uz)$) [scale=0.8, white!30!black] {$z$};\n\t\t\\node at ($(O) + 9.0*(Uy) + 2.3*(Uz)$) [scale=0.8, white!30!black] {$y$};\n\t\t\n\t\t\n\t\t\\coordinate (ScaleStart) at ($(O) + 8.2*(Uy) - 0.5*(Uz)$);\n\t\t\\draw[ultra thick, black] (ScaleStart) -- ($(ScaleStart) + 1.5*(Uy)$);\n\t\t\\draw[ultra thick, white] (ScaleStart) -- ($(ScaleStart) + 0.75*(Uy)$);\n\t\t\\draw[thick] (ScaleStart) -- ($(ScaleStart) + (0,0.15)$);\n\t\t\\draw[thick] ($(ScaleStart) + 0.75*(Uy)$) -- ($(ScaleStart) + 0.75*(Uy) + (0,0.15)$);\n\t\t\\draw[thick] ($(ScaleStart) + 1.5*(Uy)$) -- ($(ScaleStart) + 1.5*(Uy) + (0,0.15)$);\n\t\t\\node at ($(ScaleStart) + (0, 0.3)$) [scale=0.7] {$0$};\n\t\t\\node at ($(ScaleStart) + 1.5*(Uy) + (0.3, 0.2)$) [scale=0.7] {$1\\text{ m}$};\n\t\t\\end{tikzpicture}"
+      ],
+      "hasTikz": true,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "short",
+      "needsImage": true,
+      "image": "images/002/q22.png",
+      "renderStatus": "ok"
+    }
+  ],
+  "errors": [],
+  "settings": {
+    "durationMinutes": 90.0,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 3,
+    "openAt": "",
+    "closeAt": "",
+    "attemptToken": "1784388084",
+    "buildAt": "2026-07-18T22:21:24",
+    "scoring": {
+      "choiceTotal": 3.0,
+      "choiceCount": 12,
+      "truefalseTotal": 4.0,
+      "truefalseCount": 4,
+      "shortTotal": 3.0,
+      "shortCount": 6,
+      "essayTotal": 0.0,
+      "essayCount": 0,
+      "essayPoints": [],
+      "truefalseMode": "progressive"
+    }
+  }
+}
