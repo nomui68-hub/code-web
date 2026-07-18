@@ -1,87 +1,41 @@
 {
   "examId": "123",
-  "title": "Thi thu TNTHPT",
+  "title": "GK2-MDC",
   "questions": [
     {
       "type": "choice",
-      "question": "Doanh thu bán hàng trong $20$ ngày được lựa chọn ngẫu nhiên của một cửa hàng được ghi lại ở bảng sau (đơn vị: triệu đồng):<br>\n\t\\centerline{\n}<br>\n\tSố trung bình của mẫu số liệu trên thuộc nhóm nào trong các nhóm dưới đây?",
+      "question": "Một quán trà sữa phục vụ thực đơn gồm $4$ loại trà sữa khác nhau và $6$ loại topping khác nhau. Một khách hàng muốn chọn một combo gồm $1$ loại trà sữa và $1$ loại topping. Hỏi khách hàng đó có bao nhiều cách chọn một combo như vậy?",
       "options": [
-        "$[7;9)$",
-        "$[9;11)$",
-        "$[11;13)$",
-        "$[13;15)$"
+        "$10$",
+        "$24$",
+        "$120$",
+        "$720$"
       ],
       "answer": 1,
       "id": 1,
-      "solution": "<br>\n\t\tBảng giá trị đại diện là<br>\n\t\t\\centerline{\n}<br>\n\t\tSố trung bình của mẫu số liệu là\n\t\t\\[\\overline{x}=\\dfrac{6\\cdot2+8\\cdot7+10\\cdot7+12\\cdot3+14\\cdot1}{20}=\\dfrac{188}{20}=9{,}4.\\]",
-      "visualLatex": "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\\hline\n\t\tDoanh thu & $[5;7)$ & $[7;9)$ & $[9;11)$ & $[11;13)$ & $[13;15)$\\\\\n\t\t\\hline\n\t\tSố ngày & 2 & 7 & 7 & 3 & 1\\\\\n\t\t\\hline\n\t\\end{tabular}",
-      "visualBlocks": [
-        "\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\\hline\n\t\tDoanh thu & $[5;7)$ & $[7;9)$ & $[9;11)$ & $[11;13)$ & $[13;15)$\\\\\n\t\t\\hline\n\t\tSố ngày & 2 & 7 & 7 & 3 & 1\\\\\n\t\t\\hline\n\t\\end{tabular}"
-      ],
+      "solution": "Chọn một trong $4$ loại trà sữa khác nhau có $4$ cách. <br>\n Chọn một trong $6$ loại topping có $6$ cách. <br>\n Vậy số cách chọn một combo gồm $1$ loại trà sữa và $1$ loại topping là $6 \\cdot 4=24$ cách.",
+      "visualLatex": "",
+      "visualBlocks": [],
       "hasTikz": false,
-      "hasTable": true,
+      "hasTable": false,
       "hasImmini": false,
       "hasSolutionTikz": false,
       "rawType": "choice",
-      "needsImage": true,
-      "image": "images/123/q1.png"
+      "needsImage": false,
+      "image": null
     },
     {
       "type": "choice",
-      "question": "Cho hình chóp đều $S.ABCD$ có cạnh đáy bằng $a\\sqrt{2}$, cạnh bên bằng $2a$. Thể tích khối chóp $S.ABCD$ là",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, góc giữa hai đường thẳng $d \\colon \\sqrt{3}x-y+2025=0$ và $\\Delta \\colon \\sqrt{3}x+y+2026=0$ bằng",
       "options": [
-        "$\\dfrac{4a^3}{3}$",
-        "$\\dfrac{a^3}{3}$",
-        "$\\dfrac{2a^3\\sqrt{3}}{3}$",
-        "$\\dfrac{2a^3}{3}$"
+        "$60^\\circ$",
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$90^\\circ$"
       ],
-      "answer": 2,
+      "answer": 0,
       "id": 2,
-      "solution": "Diện tích đáy $ABCD$ là $S=\\left( a\\sqrt{2}\\right)^2=2a^2$.<br>\n\t\tGọi $O$ là tâm hình vuông $ABCD$. Khi đó $SO\\perp (ABCD)$ và $OA=\\dfrac{1}{2}AC=\\dfrac{a\\sqrt{2}\\cdot\\sqrt{2}}{2}=a$.<br>\n\t\tSuy ra $SO=\\sqrt{SA^2-OA^2}=\\sqrt{(2a)^2-a^2}=a\\sqrt{3}$.<br>\n\t\tThể tích khối chóp đều $S.ABCD$ là\n\t\t\\[V=\\dfrac{1}{3}S\\cdot SO=\\dfrac{1}{3}\\cdot2a^2\\cdot a\\sqrt{3}=\\dfrac{2a^3\\sqrt{3}}{3}.\\]",
-      "visualLatex": "",
-      "visualBlocks": [],
-      "hasTikz": false,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": true,
-      "rawType": "choice",
-      "needsImage": false,
-      "image": null
-    },
-    {
-      "type": "choice",
-      "question": "Cho hình chóp $S.ABCD$ có đáy là hình bình hành tâm $O$, $SA=SC$, $SB=SD$. Trong các khẳng định sau khẳng định nào đúng?",
-      "options": [
-        "$SO\\perp (ABCD)$",
-        "$SC\\perp (ABCD)$",
-        "$SB\\perp (ABCD)$",
-        "$SA\\perp (ABCD)$"
-      ],
-      "answer": 0,
-      "id": 3,
-      "solution": "Vì $ABCD$ là hình bình hành tâm $O$ nên $OA=OC$, $OB=OD$.<br>\n\t\tTheo giả thiết $SA=SC$, $SB=SD$ nên $SO$ là đường trung trực của các đoạn thẳng $AC$ và $BD$.<br>\n\t\tSuy ra $SO\\perp AC$ và $SO\\perp BD$.<br>\n\t\tDo đó $SO\\perp(ABCD)$.<br>\n\t\tQua $S$ có duy nhất một đường thẳng vuông góc với mặt phẳng $(ABCD)$ nên các khẳng định $SC\\perp(ABCD)$, $SB\\perp(ABCD)$, $SA\\perp(ABCD)$ là sai.",
-      "visualLatex": "",
-      "visualBlocks": [],
-      "hasTikz": false,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": true,
-      "rawType": "choice",
-      "needsImage": false,
-      "image": null
-    },
-    {
-      "type": "choice",
-      "question": "Trong không gian $Oxyz$, vectơ nào sau đây là một vectơ pháp tuyến của mặt phẳng $(P)\\colon 2x-y+z+3=0$?",
-      "options": [
-        "$\\overrightarrow n_1=(2;-1;1)$",
-        "$\\overrightarrow n_3=(2;-1;3)$",
-        "$\\overrightarrow n_2=(2;1;1)$",
-        "$\\overrightarrow n_4=(-1;1;3)$"
-      ],
-      "answer": 0,
-      "id": 4,
-      "solution": "Mặt phẳng $(P)\\colon 2x-y+z+3=0$ có một vectơ pháp tuyến là $\\overrightarrow n=(2;-1;1)$.",
+      "solution": "Ta có $\\cos \\left(d,\\Delta\\right)=\\dfrac{\\left| \\sqrt{3} \\cdot\\sqrt{3} -1 \\cdot 1 \\right|}{\\sqrt{\\left(\\sqrt{3}\\right)^2+(-1)^2} \\cdot \\sqrt{\\left(\\sqrt{3}\\right)^2+1^2}}=\\dfrac{1}{2}$ nên $\\left(d,\\Delta\\right)=60^\\circ$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -94,16 +48,16 @@
     },
     {
       "type": "choice",
-      "question": "Cho $\\displaystyle\\int\\limits_0^1 f(x)\\mathrm{\\,d} x=1$ và $\\displaystyle\\int\\limits_0^2 f(x)\\mathrm{\\,d} x=-4$. Tích phân $\\displaystyle\\int\\limits_1^2 f(x)\\mathrm{\\,d} x$ bằng",
+      "question": "Tích các nghiệm thực của phương trình $\\sqrt{2x^2+1}=\\sqrt{x^2+5}$ bằng",
       "options": [
-        "$3$",
-        "$5$",
-        "$-3$",
-        "$-5$"
+        "$0$",
+        "$-1$",
+        "$1$",
+        "$-4$"
       ],
       "answer": 3,
-      "id": 5,
-      "solution": "Ta có\n\t\t$\\displaystyle\\int\\limits_1^2 f(x)\\mathrm{\\,d} x=\\displaystyle\\int\\limits_0^2 f(x)\\mathrm{\\,d} x-\\displaystyle\\int\\limits_0^1 f(x)\\mathrm{\\,d} x=-4-1=-5$.",
+      "id": 3,
+      "solution": "Xét phương trình $\\sqrt{2x^2+1}=\\sqrt{x^2+5}$ (*). <br>\n Bình phương hai vế của phương trình, ta được\n $2x^2+1=x^2+5$ hay $x^2-4=0$. <br> Suy ra $\\begin{cases}x=2\\\\x=-2.\\end{cases}$ <br>\n Thay lần lượt hai giá trị trị $x=2$, $x=-2$ vào phương trình (*), ta thấy hai giá trị này đều thỏa mãn. <br>\n Vậy phương trình (*) có hai nghiệm là $x=2$, $x=-2$ và tích hai nghiệm là $2 \\cdot (-2) =-4$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -116,40 +70,60 @@
     },
     {
       "type": "choice",
-      "question": "Cho hàm số $y=f(x)$ có đồ thị như hình vẽ. Điểm cực tiểu của hàm số đó là",
+      "question": "Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ với $A(1;3)$, $B(4;6)$, $C(0;4)$. Gọi $M$ là\n trung điểm của đoạn thẳng $BC$. Phương trình tổng quát của đường thắng $AM$ có dạng\n $ax-y+c=0$. Tính $P=a^2-c^2$.",
       "options": [
-        "$x=-2$",
-        "$x=2$",
-        "$x=0$",
-        "$y=-2$"
+        "$P=4$",
+        "$P=1$",
+        "$P=3$",
+        "$P=8$"
+      ],
+      "answer": 2,
+      "id": 4,
+      "solution": "$M$ là\n trung điểm của đoạn thẳng $BC$ nên \n \\[\\begin{cases}x_M=\\dfrac{x_B+x_C}{2}=\\dfrac{4+0}{2}=2\\\\y_M=\\dfrac{y_B+y_C}{2}=\\dfrac{6+4}{2}=5.\\end{cases}\\]\n Vậy $M(2;5)$. <br>\n Ta có $\\overrightarrow{AM}=(1;2)$ nên đường thẳng $AM$ có một vectơ pháp tuyến là $\\overrightarrow{n}=(2;-1)$. <br>\n Phương trình tổng quát của đường thẳng $AM$ là\n \\[2(x-1)-1(y-3) = 0 \\Leftrightarrow 2x-y+1=0.\\]\n Do đó $a=2$, $c=1$ nên $P=a^2-c^2=2^2-1^2=3$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Biểu thức nào sau đây là tam thức bậc hai?",
+      "options": [
+        "$f(x)=x+\\dfrac{1}{x}$",
+        "$g(x)=2x-5$",
+        "$h(x)=x^2-2$",
+        "$t(x)=x^3+x-2$"
+      ],
+      "answer": 2,
+      "id": 5,
+      "solution": "Biểu thức $h(x)=x^2-2$ là tam thức bậc hai.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho elip $(E) \\colon \\dfrac{x^2}{25}+\\dfrac{y^2}{16}=1$. Độ dài trục lớn elip bằng",
+      "options": [
+        "$8$",
+        "$10$",
+        "$50$",
+        "$32$"
       ],
       "answer": 1,
       "id": 6,
-      "solution": "Từ đồ thị, điểm cực tiểu của hàm số là $x=2$.",
-      "visualLatex": "\\begin{tikzpicture}[scale=0.7,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n    \n\t\t\t\t\\draw[->] (-1.6,0)--(3.6,0)node[shift={(-110:.23)}]{$x$};\n\t\t\t\t\\draw[->] (0,-3)--(0,3.2)node[shift={(220:.23)}]{$y$};\n\t\t\t\t\\path(0,0)node[shift={(-45:.3)}]{$O$} (0,2)node[shift={(150:.25)}]{$2$};\n\t\t\t\t\\clip (-1.5,-3) rectangle (3.5,3);\n\t\t\t\t\\draw[smooth,samples=300,domain=-2:3.5] plot(\\x,{(\\x)^3-3*(\\x)^2+2});\n\t\t\t\t\\draw[dashed] \n\t\t\t\t\t(2,0) node[shift={(90:.35)}]{$2$}|-(0,-2)node[shift={(180:.3)}]{$-2$}\n\t\t\t\t\t;\n\t\t\t\t\\foreach \\x/\\y in{0/0,2/-2,1/0,2/0,0/2,0/-2}\n\t\t\t\t\\fill (\\x,\\y) circle (1pt);\n    \\node at (0,0){\\href{26A0Y2}{\\tiny \\phantom{26A0Y2}}};\n\t\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=0.7,>=stealth, font=\\footnotesize, line join=round, line cap=round]\n    \n\t\t\t\t\\draw[->] (-1.6,0)--(3.6,0)node[shift={(-110:.23)}]{$x$};\n\t\t\t\t\\draw[->] (0,-3)--(0,3.2)node[shift={(220:.23)}]{$y$};\n\t\t\t\t\\path(0,0)node[shift={(-45:.3)}]{$O$} (0,2)node[shift={(150:.25)}]{$2$};\n\t\t\t\t\\clip (-1.5,-3) rectangle (3.5,3);\n\t\t\t\t\\draw[smooth,samples=300,domain=-2:3.5] plot(\\x,{(\\x)^3-3*(\\x)^2+2});\n\t\t\t\t\\draw[dashed] \n\t\t\t\t\t(2,0) node[shift={(90:.35)}]{$2$}|-(0,-2)node[shift={(180:.3)}]{$-2$}\n\t\t\t\t\t;\n\t\t\t\t\\foreach \\x/\\y in{0/0,2/-2,1/0,2/0,0/2,0/-2}\n\t\t\t\t\\fill (\\x,\\y) circle (1pt);\n    \\node at (0,0){\\href{26A0Y2}{\\tiny \\phantom{26A0Y2}}};\n\t\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": false,
-      "rawType": "choice",
-      "needsImage": true,
-      "image": "images/123/q6.png"
-    },
-    {
-      "type": "choice",
-      "question": "Họ tất cả các nguyên hàm của hàm số $f(x)=\\sin x$ là",
-      "options": [
-        "$-\\sin x+C$",
-        "$\\sin x+C$",
-        "$-\\cos x+C$",
-        "$\\cos x+C$"
-      ],
-      "answer": 2,
-      "id": 7,
-      "solution": "Ta có $\\displaystyle\\int\\sin x\\mathrm{\\,d}x=-\\cos x+C$.",
+      "solution": "Elip $(E) \\colon \\dfrac{x^2}{25}+\\dfrac{y^2}{16}=1$ có $a^2=25$ nên $a=5$. <br>\n Độ dài trục lớn elip $A_1A_2=2a=2 \\cdot 5=10$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -162,16 +136,38 @@
     },
     {
       "type": "choice",
-      "question": "Trong không gian $Oxyz$, cho mặt cầu $(S)\\colon (x-2)^2+(y+1)^2+(z-3)^2=4$. Tâm của $(S)$ có tọa độ là",
+      "question": "Trong tiệm còn $5$ cái bánh khác nhau. Một khách hàng có bao nhiêu cách lựa chọn mua một số bánh trong số $5$ cái bánh đó (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào)?",
       "options": [
-        "$(-2;1;-3)$",
-        "$(-4;2;-6)$",
-        "$(4;-2;6)$",
-        "$(2;-1;3)$"
+        "$32$",
+        "$5$",
+        "$21$",
+        "$10$"
+      ],
+      "answer": 0,
+      "id": 7,
+      "solution": "Số cách lựa chọn mua\n một số bánh trong số $5$ cái bánh (tính cả trường hợp khách hàng mua hết cả $5$ cái bánh và không mua cái bánh nào) là\n \\[\\mathrm{C}_5^0+\\mathrm{C}_5^1+\\mathrm{C}_5^2+\\mathrm{C}_5^3+\\mathrm{C}_5^4+\\mathrm{C}_5^5=(1+1)^5=32.\\]",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "choice",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "choice",
+      "question": "Trong một hộp có $10$ viên bi khác nhau, gồm $6$ viên bi màu đỏ và $4$ viên bi màu xanh. Lấy ngẫu nhiên đồng thời $3$ viên bi từ hộp. Gọi A là biến cố: ‘ ‘ Lấy được ít nhất $2$ viên bi màu\n đỏ’ ’. Có bao nhiều kết quả thuận lợi cho biến cố $A$?",
+      "options": [
+        "$60$",
+        "$20$",
+        "$100$",
+        "$80$"
       ],
       "answer": 3,
       "id": 8,
-      "solution": "Tâm mặt cầu $(S)$ có tọa độ là $(2;-1;3)$.",
+      "solution": "Chọn $3$ viên bi gồm $2$ bi đỏ, $1$ bi xanh có $\\mathrm{C}_{6}^{2} \\cdot \\mathrm{C}_{4}^{1}$ cách. <br>\n Chọn $3$ viên bi gồm $3$ bi đỏ có $\\mathrm{C}_{6}^{3}$ cách. <br>\n Vậy $n(A)=\\mathrm{C}_{6}^{2} \\cdot \\mathrm{C}_{4}^{1}+\\mathrm{C}_{6}^{3}=80$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -184,16 +180,16 @@
     },
     {
       "type": "choice",
-      "question": "Giá trị lớn nhất của hàm số $f(x)=x^4-2x^2+5$ trên đoạn $[-2;2]$ là",
+      "question": "Trong mặt phẳng toa độ $ Oxy$, cho hai điểm $A(1;3)$ và $B(5;9)$. Toa độ trung điểm $M$ của đoạn thẳng $AB$ là",
       "options": [
-        "$\\max\\limits_{[-2;2]}f(x)=13$",
-        "$\\max\\limits_{[-2;2]}f(x)=14$",
-        "$\\max\\limits_{[-2;2]}f(x)=-4$",
-        "$\\max\\limits_{[-2;2]}f(x)=23$"
+        "$(3;6)$",
+        "$(2;3)$",
+        "$(2;6)$",
+        "$(2;4)$"
       ],
       "answer": 0,
       "id": 9,
-      "solution": "Ta có $f'(x)=4x^3-4x=4x\\left(x^2-1\\right)$. Suy ra<br>\n\t\t\\[ f'(x)=0\\Leftrightarrow \\hoac{&x=0 \\in [-2;2] <br> &x=\\pm 1 \\in [-2;2].}\\]\n\t\tLại có\n\t\t\\[f(-2)=13, f(2)=13, f(0)=5, f(1)=4, f(-1)=4.\\]\n\t\tVậy $\\max\\limits_{[-2;2]} f(x)=13$.",
+      "solution": "$M$ là\n trung điểm của đoạn thẳng $AB$ nên \n \\[\\begin{cases}x_M=\\dfrac{x_A+x_B}{2}=\\dfrac{1+5}{2}=3\\\\y_M=\\dfrac{y_A+y_B}{2}=\\dfrac{3+9}{2}=6.\\end{cases}\\]\n Vậy $M(3;6)$. <br>",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -206,16 +202,16 @@
     },
     {
       "type": "choice",
-      "question": "Tiệm cận ngang của đồ thị hàm số $y=\\dfrac{4x+1}{x-1}$ có phương trình là",
+      "question": "Một hộp chứa $3$ quả cầu trắng được đánh số từ $1$ đến $3$. Lấy ngẫu nhiên đồng thời hai quả cầu từ hộp đó. Không gian mẫu $\\Omega$ của phép thử là",
       "options": [
-        "$y=2$",
-        "$x=1$",
-        "$y=4$",
-        "$x=4$"
+        "$\\Omega =\\left\\{1;2;3\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;2\\right);\\left(2;1\\right);\\left(1;3\\right);\\left(3;1\\right);\\left(2;3\\right);\\left(3;2\\right)\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;2\\right);\\left(1;3\\right);\\left(2;3\\right)\\right\\}$",
+        "$\\Omega =\\left\\{\\left(1;1\\right);\\left(2;2\\right);\\left(3;3\\right)\\right\\}$"
       ],
       "answer": 2,
       "id": 10,
-      "solution": "Vì $\\lim\\limits_{x\\rightarrow +\\infty} y=\\lim\\limits_{x\\rightarrow +\\infty}\\dfrac{4x+1}{x-1}=4$\n\t\tnên tiệm cận ngang đồ thị hàm số $y=\\dfrac{4x+1}{x-1}$ là $y=4$.",
+      "solution": "Lấy ngẫu nhiên đồng thời hai trong $3$ quả cầu được đánh số từ $1$ đến $3$ nên không gian mẫu $\\Omega$ của phép thử là $\\Omega =\\left\\{\\left(1;2\\right);\\left(1;3\\right);\\left(2;3\\right)\\right\\}$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -228,16 +224,16 @@
     },
     {
       "type": "choice",
-      "question": "Cho hai biến cố độc lập $A$, $B$. Biết $\\mathrm{P}(A)=\\dfrac{1}{5}$, $\\mathrm{P}(B)=\\dfrac{2}{3}$. Khi đó $\\mathrm{P}(AB)$ bằng",
+      "question": "Một tổ có $10$ học sinh. Hỏi có bao nhiêu cách chọn ra $2$ học sinh từ tổ đó để đi trực nhật?",
       "options": [
-        "$\\dfrac{13}{15}$",
-        "$\\dfrac{2}{15}$",
-        "$\\dfrac{3}{5}$",
-        "$\\dfrac{11}{15}$"
+        "$5$",
+        "$90$",
+        "$45$",
+        "$4$"
       ],
-      "answer": 1,
+      "answer": 2,
       "id": 11,
-      "solution": "Vì $A$, $B$ độc lập nên\n\t\t$\\mathrm{P}(AB)=\\mathrm{P}(A)\\cdot \\mathrm{P}(B)=\\dfrac{1}{5}\\cdot\\dfrac{2}{3}=\\dfrac{2}{15}$.",
+      "solution": "Chọn ra $2$ học sinh trong $10$ học sinh từ tổ đó để đi trực nhật có $\\mathrm{C}_{10}^2=45$ cách.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -250,16 +246,16 @@
     },
     {
       "type": "choice",
-      "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1=2$ và công sai $d=5$. Giá trị của $u_4$ bằng",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho đường tròn $(C) \\colon (x-2)^2+(y-3)^2=25$. Tiếp tuyến của đường tròn $(C)$ tại điểm $A(6;0)$ đi qua điểm nào sau đây?",
       "options": [
-        "$12$",
-        "$22$",
-        "$250$",
-        "$17$"
+        "$M(3;-4)$",
+        "$N(4;-3)$",
+        "$P(4;3)$",
+        "$Q(3;4)$"
       ],
-      "answer": 3,
+      "answer": 0,
       "id": 12,
-      "solution": "Cấp số cộng có $u_n=u_1+(n-1)d$.<br>\n\t\tSuy ra $u_4=2+3\\cdot5=17$.",
+      "solution": "Đường tròn $(C) \\colon (x-2)^2+(y-3)^2=25$ có tâm $I(2;3)$. <br>\n Tiếp tuyến $d$ của đường tròn $(C)$ tại điểm $A(6;0)$ có phương trình là\n \\[(2-6)(x-6)+(3-0)(y-0)=0 \\Leftrightarrow -4(x-6)+3y=0 \\Leftrightarrow 4x-3y-24=0.\\]\n Vậy $d \\colon 4x-3y-24=0$. <br>\n Vì $4 \\cdot 3 -3 \\cdot (-4) -24=0$ nên $d$ đi qua $M(3;-4)$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -272,62 +268,60 @@
     },
     {
       "type": "truefalse",
-      "question": "Cho hàm số $y=f(x)=\\dfrac{ax^2+bx+c}{x+d}$ có đồ thị như hình vẽ bên.",
+      "question": "Lớp $10$A có $10$ học sinh đăng kí tham gia thi kéo co, gồm có $6$ học sinh nam và $4$ học sinh nữ. Giáo viên chọn ngẫu nhiên $5$ học sinh để lập một đội thi. Xét tính đúng sai của các khẳng định sau",
       "statements": [
         {
-          "text": "Đạo hàm của hàm số $y=f(x)$ luôn dương với mọi $x\\in \\mathbb{R}\\setminus\\{2\\}$",
+          "text": "Số các chọn $5$ học sinh từ $10$ học sinh là $252$",
+          "answer": true
+        },
+        {
+          "text": "Số cách chọn đội mà không có học sinh nữ là $720$",
           "answer": false
         },
         {
-          "text": "Tổng hai hệ số $c$ và $d$ bằng $1$",
+          "text": "Số cách chọn đội có đúng $2$ học sinh nữ là $120$",
           "answer": true
         },
         {
-          "text": "Đồ thị hàm số $y=f(x)$ có tiệm cận xiên là đường thẳng $y=-x$",
-          "answer": true
-        },
-        {
-          "text": "Để đường thẳng $y=m$ cắt đồ thị hàm số $y=f(x)$ tại hai điểm phân biệt $A$ và $B$ sao cho $OA \\perp OB$ thì $m$ là nghiệm của phương trình $m^2-2m-3=0$",
-          "answer": true
+          "text": "Xác suất để đội được chọn có số học sinh nam nhiều hơn số học sinh nữ là $\\dfrac{5}{7}$",
+          "answer": false
         }
       ],
       "id": 13,
-      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Từ đồ thị, ta thấy hàm số nghịch biến trên các khoảng $(-\\infty;2)$, $(2;+\\infty)$.<br>\n\t\t\tDo vậy $f'(x)$ không thể luôn dương với mọi $x\\in \\mathbb{R}\\setminus\\{2\\}$. Vì nếu $f'(x) > 0$, $\\forall x \\in  \\mathbb{R}\\setminus\\{2\\}$ thì $f(x)$ sẽ đồng biến trên các khoảng $(-\\infty;2)$, $(2;+\\infty)$.\n\t\t\t<br>• ch Từ đồ thị, ta thấy đồ thị hàm số có tiệm cận đứng là đường thẳng $x=2$.<br> Suy ra $f(x)=\\dfrac{ax^2+bx+c}{x-2}$.<br>\n\t\t\tĐồ thị cắt trục $Oy$ tại điểm $\\left(0;-\\dfrac{3}{2}\\right)$ nên $\\dfrac{c}{d} = -\\dfrac{3}{2}$. Do đó $y=f(x)=\\dfrac{ax^2+bx+3}{x-2}$.<br>\n\t\t\tVới $c=3$ và $d=-2$, ta có $c+d = 3 + (-2) = 1$.\n\t\t\t<br>• ch Đồ thị hàm số đi qua điểm $(-1;0)$ nên $\\dfrac{a(-1)^2+b(-1)+3}{-1-2}=0\\Rightarrow a-b=-3$.<br>\n\t\t\tĐồ thị hàm số đi qua điểm $(3;0)$ nên $\\dfrac{a(3)^2+b(3)+3}{3-2}=0\\Rightarrow 3a+b=-1$.<br>\n\t\t\tTừ đó ta có hệ phương trình\n\t\t\t\\[\\heva{&a-b=-3<br>&3a+b=-1} \\Leftrightarrow \\heva{&a=-1<br>&b=2.}\\]\n\t\t\tTa có hàm số $y=f(x) = \\dfrac{-x^2+2x+3}{x-2} = -x + \\dfrac{3}{x-2}$.<br>\n\t\t\tDo $\\lim\\limits_{x\\to +\\infty} \\left[f(x)-(-x)\\right] = \\lim\\limits_{x\\to +\\infty} \\dfrac{3}{x-2} = 0$ và $\\lim\\limits_{x\\to -\\infty} \\left[f(x)-(-x)\\right] = \\lim\\limits_{x\\to -\\infty} \\dfrac{3}{x-2} = 0$ nên đồ thị có đúng một đường tiệm cận xiên là đường thẳng $y=-x$.\n\t\t\t<br>• ch Phương trình hoành độ giao điểm của đồ thị và đường thẳng $y=m$ là\n\t\t\t\\begin{eqnarray*}\n\t\t\t\t\\dfrac{-x^2+2x+3}{x-2} = m &\\Rightarrow& -x^2+2x+3 = m(x-2) <br> \n\t\t\t\t&\\Leftrightarrow& x^2+(m-2)x-2m-3=0. \\quad (1)\n\t\t\t\\end{eqnarray*}\n\t\t\tĐể đường thẳng cắt đồ thị tại hai điểm phân biệt $A$, $B$ thì phương trình $(1)$ phải có hai nghiệm phân biệt khác $2$, tức là\n\t\t\t\\[\\heva{&\\Delta = (m-2)^2-4\\cdot 1\\cdot (-2m-3) > 0 <br> &2^2+(m-2)\\cdot 2-2m-3 \\neq 0} \\Leftrightarrow \\heva{&m^2+4m+16 > 0~\\text{(luôn đúng)} <br> &-3 \\neq 0 ~\\text{(luôn đúng)}.}\\]\n\t\t\tGiả sử $A(x_1;m)$, $B(x_2;m)$ với $x_1$, $x_2$ là nghiệm của $(1)$.<br>\n\t\t\tTheo định lí Viète, ta có $x_1 x_2 = -2m-3$.<br>\n\t\t\tĐể $OA \\perp OB \\Leftrightarrow \\overrightarrow{OA} \\cdot \\overrightarrow{OB} = 0 \\Leftrightarrow x_1 x_2 + m^2 = 0$.<br>\n\t\t\tThay $x_1 x_2 = -2m-3$ vào ta được $-2m-3+m^2=0 \\Leftrightarrow m^2-2m-3=0$.\n\t\t\\end{itemchoice}",
-      "visualLatex": "\\begin{tikzpicture}[scale=.7,font=\\footnotesize,samples=200,>=stealth]\n    \n\t\t\t\t\\tikzset{declare function={\n\t\t\t\ta=-1;b=2;c=3;m=1;n=-2; i=4.5;j=4.5;\n\t\t\t\tg(\\x)=a/m*(\\x)+b/m-a*n/(m)^2;x0=-n/m; y0=g(x0);\n\t\t\t\txmin=-2.5;xmax=6.5;ymin=-6.5;ymax=2.5;}}\n\t\t\t\t\\draw[->] (xmin,0)--(xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\t\\draw[->] (0,ymin)--(0,ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\\node at (0,0) [below left=-3pt]{$O$};\n\t\t\t\t\\node at (-1,0) [below left]{$-1$};\n\t\t\t\t\\node at (2,0) [below right]{$2$};\n\t\t\t\t\\node at (3,0) [above right]{$3$};\n\t\t\t\t\\node at (0,-1.5) [below left]{$-\\dfrac{3}{2}$};\n\t\t\t\t\\fill (0,-1.5)circle(1pt)\n\t\t\t\t\t(-1,0)circle(1pt)\n\t\t\t\t\t(0,0)circle(1pt)\n\t\t\t\t\t(2,0)circle(1pt)\n\t\t\t\t\t(3,0)circle(1pt)\n\t\t\t\t\t;\n\t\t\t\t\\clip (xmin+0.1,ymin+0.1) rectangle (xmax-0.1,ymax-0.1);\n\t\t\t\t\\draw  plot[domain=xmin:(x0-0.1)](\\x,{(a*(\\x)^2+b*(\\x)+c)/(m*(\\x)+n)});\n\t\t\t\t\\draw plot[domain=(x0+0.1):xmax](\\x,{(a*(\\x)^2+b*(\\x)+c)/(m*(\\x)+n)});\n\t\t\t\t\n\t\t\t\t\\draw[solid] (x0,ymin)--(x0,ymax);\n\t\t\t\t\\draw[solid] plot[domain=xmin+0.1:xmax-0.1](\\x,{g(\\x)});\n    \\node at (0,0){\\href{2Q1942}{\\tiny \\phantom{2Q1942}}};\n\t\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=.7,font=\\footnotesize,samples=200,>=stealth]\n    \n\t\t\t\t\\tikzset{declare function={\n\t\t\t\ta=-1;b=2;c=3;m=1;n=-2; i=4.5;j=4.5;\n\t\t\t\tg(\\x)=a/m*(\\x)+b/m-a*n/(m)^2;x0=-n/m; y0=g(x0);\n\t\t\t\txmin=-2.5;xmax=6.5;ymin=-6.5;ymax=2.5;}}\n\t\t\t\t\\draw[->] (xmin,0)--(xmax,0) node[shift=(-110:0.2)] {$x$};\n\t\t\t\t\\draw[->] (0,ymin)--(0,ymax) node[shift=(-150:0.2)] {$y$};\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\\node at (0,0) [below left=-3pt]{$O$};\n\t\t\t\t\\node at (-1,0) [below left]{$-1$};\n\t\t\t\t\\node at (2,0) [below right]{$2$};\n\t\t\t\t\\node at (3,0) [above right]{$3$};\n\t\t\t\t\\node at (0,-1.5) [below left]{$-\\dfrac{3}{2}$};\n\t\t\t\t\\fill (0,-1.5)circle(1pt)\n\t\t\t\t\t(-1,0)circle(1pt)\n\t\t\t\t\t(0,0)circle(1pt)\n\t\t\t\t\t(2,0)circle(1pt)\n\t\t\t\t\t(3,0)circle(1pt)\n\t\t\t\t\t;\n\t\t\t\t\\clip (xmin+0.1,ymin+0.1) rectangle (xmax-0.1,ymax-0.1);\n\t\t\t\t\\draw  plot[domain=xmin:(x0-0.1)](\\x,{(a*(\\x)^2+b*(\\x)+c)/(m*(\\x)+n)});\n\t\t\t\t\\draw plot[domain=(x0+0.1):xmax](\\x,{(a*(\\x)^2+b*(\\x)+c)/(m*(\\x)+n)});\n\t\t\t\t\n\t\t\t\t\\draw[solid] (x0,ymin)--(x0,ymax);\n\t\t\t\t\\draw[solid] plot[domain=xmin+0.1:xmax-0.1](\\x,{g(\\x)});\n    \\node at (0,0){\\href{2Q1942}{\\tiny \\phantom{2Q1942}}};\n\t\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
+      "solution": "<br>\n <br> • Số cách chọn $5$ học sinh từ $10$ học sinh là tổ hợp chập $5$ của $10$. <br>\n Do đó, ta có\n \\[\\mathrm{C}_{10}^5=\\dfrac{10!}{5!\\cdot 5!}=252.\\]\n <br> • Số cách chọn đội trong đó không có học sinh nữ là tổ hợp chập $5$ của $6$. <br>\n Do đó, ta có\n \\[\\mathrm{C}_{6}^5=\\dfrac{6!}{5!\\cdot 1!}=6.\\]\n <br> • Số cách chọn đội để có đúng $2$ học sinh nữ là\n \\[\\mathrm{C}_{6}^3\\cdot \\mathrm{C}_{4}^2=20\\cdot 6=120.\\]\n <br> • Gọi $A$ là biến cố đội được chọn có số học sinh nam nhiều hơn số học sinh nữ. <br>\n Ta xét các trường hợp sau\n <br>\n <br> • Trường hợp 1: $3$ học sinh nam, $2$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^3\\cdot\\mathrm{C}_4^2=20\\cdot 6=120.\\]\n <br> • Trường hợp 2: $4$ học sinh nam, $1$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^4\\cdot\\mathrm{C}_4^1=15\\cdot 4=60.\\]\n <br> • Trường hợp 3: $5$ học sinh nam, $0$ học sinh nữ. <br>\n Khi đó số cách chọn là \n \\[\\mathrm{C}_6^5\\cdot\\mathrm{C}_4^0=6\\cdot 1=6.\\]\n <br>\n Suy ra tổng số cách chọn thoả mãn đề bài là \n \\[n\\left(A\\right)=120+60+6=186.\\]\n Lại có $n\\left(\\Omega\\right)=252$. <br>\n Suy ra xác suất cần tìm là \n \\[\\mathrm{P}(A)=\\dfrac{186}{252}=\\dfrac{31}{42}.\\]\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
       "hasTable": false,
       "hasImmini": false,
       "hasSolutionTikz": false,
       "rawType": "truefalse",
-      "needsImage": true,
-      "image": "images/123/q13.png"
+      "needsImage": false,
+      "image": null
     },
     {
       "type": "truefalse",
-      "question": "Trước thềm cuộc bầu cử đại biểu Hội đồng nhân dân ở tỉnh X, một cuộc trưng cầu dân ý online đã được tổ chức. Kết quả cho thấy có $40\\%$ cử tri tham gia trả lời sẽ bầu cho ứng cử viên A. Sau cuộc bầu cử, tất cả cử tri từng tham gia cuộc trưng cầu dân ý online đều phản hồi lại kết quả mình đã bầu chọn. Các phản hồi cho thấy trong số các cử tri từng trả lời sẽ bầu cho ứng cử viên A có $90\\%$ đã thực sự bầu, trong số các cử tri từng trả lời sẽ không bầu cho ứng cử viên A có $20\\%$ đã bầu cho ứng cử viên A. Chọn ngẫu nhiên một cử tri trong số những người đã tham gia trưng cầu dân ý online.",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho parabol $(P)$ có phương trình $y^2 = 8x$. Gọi $F$ là tiêu điểm và $\\Delta$ là đường chuẩn của $(P)$. Gọi $d$ là đường thẳng đi qua $F$ và vuông góc với trục đối xứng của $(P)$. Đường thẳng $d$ cắt $(P)$ tại $2$ điểm phân biệt $A$ và $B$. Xét tính đúng sai của các khẳng định sau:",
       "statements": [
         {
-          "text": "Xác suất cử tri đó bầu ứng cử viên A biết rằng trước bầu cử người đó trả lời sẽ bầu ứng cử viên A là $0{,}9$",
+          "text": "$(P)$ có tiêu điểm là $F\\left(2;0\\right)$",
           "answer": true
         },
         {
-          "text": "Xác suất cử tri đó không bầu ứng cử viên A biết rằng trước bầu cử người đó trả lời sẽ không bầu ứng cử viên A là $0{,}2$",
+          "text": "Phương trình đường chuẩn của $(P)$ là $\\Delta\\colon x - 2 = 0$",
           "answer": false
         },
         {
-          "text": "Tỉ lệ cử tri bầu cho ứng cử viên A là $48\\%$",
+          "text": "$AB = 8$",
           "answer": true
         },
         {
-          "text": "Biết rằng cử tri được chọn đã bầu cho ứng cử viên A, xác suất để người đó đã nói sẽ không bầu ứng cử viên A trước bầu cử là $0{,}2$",
+          "text": "Đường tròn $(C)$ có đường kính $AB$ tiếp xúc với đường chuẩn $\\Delta$",
           "answer": false
         }
       ],
       "id": 14,
-      "solution": "Gọi $M$ là biến cố “ Cử tri được chọn trả lời sẽ bầu cho ứng cử viên A”.<br>\n\t\tTa có $\\mathrm{P}(M) = 40\\% = 0{,}4$.<br>\n\t\tSuy ra $\\mathrm{P}\\left( \\overline{M}\\right)  = 1 - 0{,}4 = 0{,}6$.<br>\n\t\tGọi $N$ là biến cố “ Cử tri được chọn thực sự bầu cho ứng cử viên A”.<br>\n\t\tSuy ra $\\overline{N}$ là biến cố “ Cử tri được chọn không bầu cho ứng cử viên A”.<br>\n\t\tTheo giả thiết, ta có\n\t\t$\\mathrm{P}(N \\mid M) = 90\\% = 0{,}9$ và $P\\left( N \\mid \\overline{M}\\right)  = 20\\% = 0{,}2$.\n\t\t\\begin{itemchoice}\n\t\t\t<br>• ch \n\t\t\tXác suất cử tri đó bầu ứng cử viên A biết rằng trước bầu cử người đó trả lời sẽ bầu ứng cử viên A là $\\mathrm{P}(N \\mid M) = 0{,}9$.\n\t\t\t<br>• ch Xác suất cử tri đó không bầu ứng cử viên A biết rằng trước bầu cử người đó trả lời sẽ không bầu ứng cử viên A là $\\mathrm{P}\\left( \\overline{N} \\mid \\overline{M}\\right) $.<br>\n\t\t\tTa có $\\mathrm{P}\\left( \\overline{N} \\mid \\overline{M}\\right)  = 1 - \\mathrm{P}\\left( N \\mid \\overline{M}\\right)  = 1 - 0{,}2 = 0{,}8 \\neq 0{,}2$.\n\t\t\t<br>• ch Tỉ lệ cử tri bầu cho ứng cử viên A là xác suất của biến cố $N$.<br>\n\t\t\tÁp dụng công thức xác suất toàn phần, ta có\n\t\t\t\\begin{align*}\n\t\t\t\t\\mathrm{P}(N) &= \\mathrm{P}(M) \\cdot \\mathrm{P}(N \\mid M) + \\mathrm{P}\\left( \\overline{M}\\right)  \\cdot \\mathrm{P}\\left( N \\mid \\overline{M}\\right)  <br>\n\t\t\t\t&= 0{,}4 \\cdot 0{,}9 + 0{,}6 \\cdot 0{,}2 = 0{,}36 + 0{,}12 = 0{,}48 = 48\\%.\n\t\t\t\\end{align*}\n\t\t\t<br>• ch Biết rằng cử tri được chọn đã bầu cho ứng cử viên A, xác suất để người đó đã nói sẽ không bầu ứng cử viên A trước bầu cử là $\\mathrm{P}\\left( \\overline{M} \\mid N\\right)$.<br>\n\t\t\tÁp dụng công thức Bayes, ta có\n\t\t\t\\[\\mathrm{P}\\left(\\overline{M} \\mid N\\right)  = \\dfrac{\\mathrm{P}\\left( \\overline{M}\\right) \\cdot \\mathrm{P}\\left(N \\mid \\overline{M}\\right) }{\\mathrm{P}(N)} = \\dfrac{0{,}6 \\cdot 0{,}2}{0{,}48} = \\dfrac{0{,}12}{0{,}48} = 0{,}25 \\neq 0{,}2.\\]\n\t\t\\end{itemchoice}",
+      "solution": "<br>\n <br> • Ta có $y^2=2px=8x\\Rightarrow x=4$. <br>\n Suy ra tiêu điểm của $(P)$ là $F\\left(2;0\\right)$.\n <br> • Phương trình đường chuẩn của $(P)$ là $x=-\\dfrac{p}{2}=-2$, hay $x+2=0$.\n <br> • Đường thẳng $d$ đi qua $F\\left(2;0\\right)$ và vuông góc với trục $Ox$ nên có phương trình $x=2$. <br>\n Thay vào $(P)$ ta có\n \\[y^2 = 8 \\cdot 2 = 16 \\Rightarrow y = \\pm 4.\\]\n Khi đó $A(2; 4)$ và $B(2; -4)$, suy ra độ dài đoạn $AB$ là\n \\[AB=\\sqrt{\\left(2-2\\right)^2+\\left(-4-4\\right)^2}=8.\\]\n <br> • Đường tròn $(C)$ đường kính $AB$ có tâm là $F\\left(2;0\\right)$ và bán kính $R = \\dfrac{AB}{2} = 4$. <br>\n Khoảng cách từ tâm $F\\left(2;0\\right)$ đến đường chuẩn $\\Delta\\colon x + 2 = 0$ là\n \\[d\\left(F, \\Delta\\right) = |2 + 2| = 4.\\]\n Vì $d\\left(F, \\Delta\\right) = R$ nên đường tròn tiếp xúc với đường chuẩn.\n <br>",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -339,79 +333,43 @@
       "image": null
     },
     {
-      "type": "truefalse",
-      "question": "Trong không gian $Oxyz$, cho mặt cầu $(S) \\colon x^2+(y-2)^2+(z+1)^2=29$, hai điểm $A(0;0;4)$, $B(6;-2;6)$ và đường thẳng $d \\colon \\dfrac{x-4}{1} = \\dfrac{y+8}{-1} = \\dfrac{z-4}{2}$. Gọi $M$ là điểm thuộc mặt cầu $(S)$ sao cho $\\widehat{AMB}=90^\\circ$.",
-      "statements": [
-        {
-          "text": "Điểm $A$ nằm trên mặt cầu $(S)$ và điểm $B$ nằm ngoài mặt cầu $(S)$",
-          "answer": true
-        },
-        {
-          "text": "Đường thẳng $d$ cắt mặt cầu $(S)$ tại đúng một điểm",
-          "answer": false
-        },
-        {
-          "text": "Điểm $M$ nằm trên mặt phẳng $(P) \\colon x-y+2z-8=0$",
-          "answer": true
-        },
-        {
-          "text": "Gọi $(a;b;c)$ là tọa độ của điểm $M$ khi khoảng cách từ điểm $M$ đến đường thẳng $d$ ngắn nhất. Giá trị của biểu thức $T=a^2+b^2+c^2$ bằng $10$",
-          "answer": false
-        }
-      ],
+      "type": "short",
+      "question": "Trong mặt phẳng tọa độ $Oxy$ đơn vị trên các trục là kilômét, một trạm viễn thông được đặt tại vị trí $M\\left(-\\dfrac{15}{4};30\\right)$. Một chiếc xe bus chuyển động thẳng đều với vectơ vận tốc $\\overrightarrow{v}=(30;40)$. Biết tốc độ của xe bus chính là độ lớn của vectơ vận tốc $\\overrightarrow{v}$. Lộ trình của xe bus đi qua điểm $K(10;15)$. Trạm viễn thông có phạm vi phủ sóng là hình tròn tâm $M$, bán kính $R$. Hành khách trên xe nhận được tín hiệu từ trạm trong khoảng thời gian liên tục $1$ giờ, sau đó mất tín hiệu. Hãy tính bán kính phủ sóng của trạm viễn thông này, làm tròn kết quả đến hàng đơn vị của kilômét.",
+      "answer": "32",
       "id": 15,
-      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Mặt cầu $(S)$ có tâm $I(0; 2; -1)$ và bán kính $R=\\sqrt{29}$.<br>\n\t\t\tThay tọa độ $A(0;0;4)$ vào vế trái phương trình $(S)$, ta thấy \n\t\t\t\\[0^2 + (0-2)^2 + (4+1)^2 = 4 + 25 = 29.\\]\n\t\t\tSuy ra điểm $A \\in (S)$.<br>\n\t\t\tMặt khác $\\overrightarrow{IB}=(6;-4;7)\\Rightarrow IB=\\sqrt{6^2+(-4)^2+7^2}=\\sqrt{101}$.<br>\n\t\t\tVì $IB = \\sqrt{101} > R = \\sqrt{29}$ nên điểm $B$ nằm ngoài mặt cầu $(S)$.\n\t\t\t<br>• ch Đường thẳng $d$ có phương trình tham số là $\\heva{&x=4+t<br>&y=-8-t<br>&z=4+2t.}$<br>\n\t\t\tXét hệ $\\heva{&x=4+t<br>&y=-8-t<br>&z=4+2t<br>&x^2+(y-2)^2+(z+1)^2=29.}$<br>\n\t\t\tSuy ra $(4+t)^2+(-10-t)^2+(5+2t)^2=29\\Leftrightarrow 6t^2+48t+112=0$ (vô nghiệm).<br>\n\t\t\tVậy đường thẳng $d$ và mặt cầu $(S)$ không có điểm chung.\t\n\t\t\t<br>• ch Vì $M \\in (S)$ nên tọa độ điểm $M$ thỏa mãn\n\t\t\t\\[x^2+y^2+z^2-4y+2z-24=0. \\tag*{$(1)$}\\]\n\t\t\tMặt khác, $\\widehat{AMB} = 90^\\circ $ nên $M$ thuộc mặt cầu $(S_1)$ đường kính $AB$.<br>\n\t\t\tTa có $\\overrightarrow{AB}=(6;-2;2)\\Rightarrow AB=2\\sqrt{11}$.<br>\n\t\t\tTâm của $(S_1)$ là trung điểm $K(3; -1; 5)$ của $AB$ và  bán kính $R_1= \\dfrac{AB}{2} =\\dfrac{2\\sqrt{11}}{2} = \\sqrt{11}$.<br>\n\t\t\tPhương trình mặt cầu \n\t\t\t$(S_1)\\colon (x-3)^2 + (y+1)^2 + (z-5)^2 = 11$<br>\n\t\t\thay $(S_1)\\colon x^2+y^2+z^2 - 6x + 2y - 10z + 24 = 0$. \\hfill $(2)$<br>\n\t\t\tLấy $(1)$ trừ $(2)$ vế theo vế, ta được\n\t\t\t\\[6x - 6y + 12z - 48 = 0 \\Leftrightarrow x - y + 2z - 8 = 0.\\]\n\t\t\tVậy điểm $M$ luôn nằm trên mặt phẳng $(P) \\colon x-y+2z-8=0$.\n\t\t\t<br>• ch \n\n\t\t\tTập hợp điểm $M$ là đường tròn $(C)$ giao tuyến của mặt cầu $(S)$ và mặt phẳng $(P)$.<br>\n\t\t\tTâm $H$ của đường tròn $(C)$ là hình chiếu vuông góc của $I(0; 2; -1)$ lên $(P)$.<br>\n\t\t\tMặt phẳng $(P)$ có một vectơ pháp tuyến là $\\overrightarrow{n}_P = (1; -1; 2)$.<br>\n\t\t\tĐường thẳng $IH$ đi qua $I$ và nhận $\\overrightarrow{n}_P = (1; -1; 2)$ làm vectơ chỉ phương có phương trình tham số là $\\heva{&x=t<br>&y=2-t<br>&z=-1+2t.}$<br>\n\t\t\tVì $H\\in IH$ nên tọa độ $H(t; 2-t; -1+2t)$.<br>\n\t\t\tVì $H \\in (P)$ nên\n\t\t\t$t - (2-t) + 2(-1+2t) - 8 = 0 \\Leftrightarrow 6t - 12 = 0 \\Leftrightarrow t = 2$.<br>\n\t\t\tSuy ra $H(2; 0; 3).$<br>\n\t\t\tTa có $\\overrightarrow{IH}=(2;-2;4)\\Rightarrow IH=2\\sqrt{6}$.<br>\n\t\t\tBán kính đường tròn $(C)$ là $r = \\sqrt{R^2 - IH^2} =\\sqrt{29 - 24} = \\sqrt{5}$.<br>\n\t\t\tTa thấy đường thẳng $d$ có vectơ chỉ phương $\\overrightarrow{u} = (1; -1; 2)$ cùng phương với $\\overrightarrow{n}_P$ nên $d \\perp (P)$.<br>\n\t\t\tGọi $D = d \\cap (P)$.<br>\n\t\t\tXét hệ $\\heva{&x=4+t<br>&y=-8-t<br>&z=4+2t<br>&x-y+2z-8=0}\\Rightarrow (4+t)-(-8-t)+2(4+2t)-8=0\\Leftrightarrow t=-2$<br>\n\t\t\t$\\Rightarrow D(2;-6;0)$.<br>\n\t\t\tVì $d \\perp (P)$ và $M \\in (P)$ nên $\\mathrm{d}(M, d) = MD$. Ta tìm $M \\in (C)$ sao cho $MD$ ngắn nhất.<br>\n\t\t\tVì $\\overrightarrow{HD}=(0;-6;-3)$ nên $HD=3\\sqrt{5}$.<br>\n\t\t\tDo $HD = 3\\sqrt{5} > r = \\sqrt{5}$ nên $D$ nằm ngoài đường tròn $(C)$ trong mặt phẳng $(P)$.<br>\n\t\t\tĐoạn $MD$ ngắn nhất khi $M$ là giao điểm của đoạn thẳng $HD$ với đường tròn $(C)$.<br>\n\t\t\tKhi đó $\\overrightarrow{HM} = \\dfrac{r}{HD}\\cdot\\overrightarrow{HD} = \\dfrac{\\sqrt{5}}{3\\sqrt{5}}\\cdot\\overrightarrow{HD} = \\dfrac{1}{3}\\overrightarrow{HD}$.<br>\n\t\t\tVới $\\overrightarrow{HD} = (0; -6; -3) \\Rightarrow \\overrightarrow{HM} = (0; -2; -1)$. Suy ra $M(2; -2; 2)$.<br>\n\t\t\tTa có $a=2$, $b=-2$, $c=2$.<br>\n\t\t\tVậy $T = 2^2 + (-2)^2 + 2^2 = 12$.\n\t\t\\end{itemchoice}",
+      "solution": "Ta có tốc độ của xe bus là $\\left|\\overrightarrow{v}\\right|=\\sqrt{30^2+40^2}=50$ (km/h). <br>\n Quỹ đạo chuyển động của xe bus là đường thẳng $d$ đi qua $K(10;15)$ và có vectơ chỉ phương $\\overrightarrow{u}=(30;40)$, hay $\\overrightarrow{u}=(3;4)$. <br>\n Do đó đường thẳng này có vectơ pháp tuyến $\\overrightarrow{n}=(4;-3)$. <br>\n Phương trình quỹ đạo xe bus là $4(x-10)-3(y-15)=0$, hay $4x-3y+5=0$. <br>\n Gọi $H$ là hình chiếu vuông góc của $M$ lên đường thẳng $d$. <br>\n Khoảng cách từ trạm $M\\left(-\\dfrac{15}{4};30\\right)$ đến quỹ đạo xe bus là\n \\[MH= \\mathrm{d}=\\dfrac{\\left|4\\cdot\\left(-\\dfrac{15}{4}\\right)-3\\cdot30+5\\right|}{\\sqrt{4^2+(-3)^2}}=\\dfrac{100}{5}=20 (km).\\]\n Trong $1$ giờ, xe đi được quãng đường $50$ km. <br>\n Đây chính là độ dài dây cung $AB$ mà quỹ đạo xe cắt đường tròn phủ sóng. Nửa dây cung $AH=25$ km. <br>\n Suy ra $R^2=20^2+25^2=1 025$ (theo định lý Phythagore trong tam giác vuông $OAB$), nên $R=5\\sqrt{41}\\approx 32$. <br>\n Vậy bán kính phủ sóng của trạm viễn thông là $32$ km.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
       "hasTable": false,
       "hasImmini": false,
       "hasSolutionTikz": true,
-      "rawType": "truefalse",
+      "rawType": "short",
       "needsImage": false,
       "image": null
     },
     {
-      "type": "truefalse",
-      "question": "Một chất điểm chuyển động trên đường thẳng với vận tốc $v(t)$, $0 \\le t \\le 5$ ($t$ có đơn vị là giây và $v(t)$ có đơn vị mét/giây). Hàm số $v(t)$ có đồ thị gồm hai đoạn thẳng $OB$, $BC$ và đường cong $CD$ là một phần parabol $v(t)=at^2+bt+c$, ($a$, $b$, $c \\in \\mathbb{R}$) có đỉnh $C$ (như hình vẽ).",
-      "statements": [
-        {
-          "text": "Trong một giây đầu tiên, vận tốc của chất điểm là $v(t)=2t$, $0 \\le t \\le 1$",
-          "answer": true
-        },
-        {
-          "text": "Quãng đường chất điểm đi được trong hai giây đầu tiên là $3$ (m)",
-          "answer": true
-        },
-        {
-          "text": "Giá trị của $a$ là $a=-\\dfrac{5}{2}$",
-          "answer": false
-        },
-        {
-          "text": "Quãng đường chất điểm đi được trong khoảng thời gian $4$ giây đầu tiên là $7{,}7$ (m) (làm tròn đến hàng phần mười)",
-          "answer": false
-        }
-      ],
+      "type": "short",
+      "question": "Một hộp có $8$ tấm thẻ được đánh số từ $1$ đến $8$. Lấy đồng thời $2$ tấm thẻ từ hộp đó. Tính xác suất để tích của hai số ghi trên $2$ tấm thẻ lấy ra là một số chẵn ( <em> làm tròn kết quả đến hàng phần trăm </em> ).",
+      "answer": "0,79",
       "id": 16,
-      "solution": "\\begin{itemchoice}\n\t\t\t<br>• ch Trong $1$ giây đầu tiên, đồ thị hàm số $v(t)$ là đoạn thẳng $OB$ đi qua gốc tọa độ $O(0;0)$ và điểm $B(1;2)$.<br>\n\t\t\tĐường thẳng $OB$ có phương trình dạng $v(t) = kt$, $k$ là hằng số.<br>\n\t\t\tThay tọa độ $B(1;2)$ vào ta được $2 = k \\cdot 1 \\Rightarrow k = 2$.<br>\n\t\t\tVậy $v(t) = 2t$ với $0 \\le t \\le 1$.\n\t\t\t<br>• ch Quãng đường chất điểm đi được trong $2$ giây đầu tiên là\n\t\t\t\\[s= \\displaystyle\\int\\limits_0^2 v(t) \\mathrm{\\, d}t = \\displaystyle\\int\\limits_0^1 (2t) \\mathrm{\\, d}t +\\displaystyle\\int\\limits_1^2 2 \\mathrm{\\, d}t=1+2=3.\\]\t\n\t\t\t<br>• ch\tTrên đoạn $[3;5]$, đồ thị là một phần của parabol có đỉnh $C(3;2)$ nên phương trình có dạng $v(t) = a(t-3)^2 + 2.$<br>\n\t\t\tĐồ thị parabol đi qua điểm $D(5;0)$ nên $$0 = a(5-3)^2 + 2 \\Leftrightarrow 4a = -2 \\Leftrightarrow a = -\\dfrac{1}{2}.$$\n\t\t\t<br>• ch Quãng đường chất điểm đi được trong $4$ giây đầu tiên là\n\t\t\t\\[S_4 = \\displaystyle\\int\\limits_0^4 v(t) \\mathrm{\\, d}t = \\displaystyle\\int\\limits_0^1 2t \\mathrm{\\, d}t + \\displaystyle\\int\\limits_1^3 2 \\mathrm{\\, d}t + \\displaystyle\\int\\limits_3^4 \\left[ -\\dfrac{1}{2}(t-3)^2 + 2 \\right] \\mathrm{d}t.\\]\n\t\t\tTa có\n\t\t\t<br>\n\t\t\t\t<br>• $\\displaystyle\\int\\limits_0^1 2t \\mathrm{\\, d}t = 1$\\, (m).\n\t\t\t\t<br>• $\\displaystyle\\int\\limits_1^3 2 \\mathrm{\\, d}t = 2 \\cdot 2 = 4$ (m).\n\t\t\t\t<br>• $\\displaystyle\\int\\limits_3^4 \\left[ -\\dfrac{1}{2}(t-3)^2 + 2 \\right] \\mathrm{d}t = \\left[ -\\dfrac{1}{6}(t-3)^3 + 2t \\right]_{3}^{4} = \\left(-\\dfrac{1}{6} + 8\\right) - 6 = \\dfrac{11}{6}$ (m).\n\t\t\t<br>\t\t\t\n\t\t\tVậy $S_4 = 1 + 4 + \\dfrac{11}{6} = \\dfrac{41}{6} \\approx 6{,}8$ (m). \n\t\t\\end{itemchoice}",
-      "visualLatex": "\\begin{tikzpicture}[scale=1, line join=round, line cap=round, >=stealth, font=\\footnotesize]\n    \n\t\t\t\n\t\t\t\\draw[->, thick] (-0.5,0) -- (6.5,0) node[below] {$t$};\n\t\t\t\\draw[->, thick] (0,-0.5) -- (0,3.5) node[left] {$v$};\n\t\t\t\\foreach \\x in {1,2,3,4,5} \\draw (\\x,0.05) -- (\\x,-0.05) node[below] {$\\x$};\n\t\t\t\\foreach \\y in {1,2} \\draw (0.05,\\y) -- (-0.05,\\y) node[left] {$\\y$};\n\t\t\t\\coordinate (O) at (0,0);\n\t\t\t\\coordinate (B) at (1,2);\n\t\t\t\\coordinate (C) at (3,2);\n\t\t\t\\coordinate (D) at (5,0);\n\t\t\t\\fill (O) circle (1pt) node[below left] {$O$};\n\t\t\t\\fill (B) circle (1pt) node[above left] {$B$};\n\t\t\t\\fill (C) circle (1pt) node[above] {$C$};\n\t\t\t\\fill (D) circle (1pt) node[above right] {$D$};\n\t\t\t\\draw[thick] (O) -- (B) -- (C);\n\t\t\t\\draw[thick, domain=3:5, samples=100] plot (\\x, {-0.5*(\\x-3)^2 + 2});\n\t\t\t\\draw[dashed] (0,2)--(B)--(1,0) (C)--(3,0);\n    \\node at (0,0){\\href{4VG9WS}{\\tiny \\phantom{4VG9WS}}};\n\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=1, line join=round, line cap=round, >=stealth, font=\\footnotesize]\n    \n\t\t\t\n\t\t\t\\draw[->, thick] (-0.5,0) -- (6.5,0) node[below] {$t$};\n\t\t\t\\draw[->, thick] (0,-0.5) -- (0,3.5) node[left] {$v$};\n\t\t\t\\foreach \\x in {1,2,3,4,5} \\draw (\\x,0.05) -- (\\x,-0.05) node[below] {$\\x$};\n\t\t\t\\foreach \\y in {1,2} \\draw (0.05,\\y) -- (-0.05,\\y) node[left] {$\\y$};\n\t\t\t\\coordinate (O) at (0,0);\n\t\t\t\\coordinate (B) at (1,2);\n\t\t\t\\coordinate (C) at (3,2);\n\t\t\t\\coordinate (D) at (5,0);\n\t\t\t\\fill (O) circle (1pt) node[below left] {$O$};\n\t\t\t\\fill (B) circle (1pt) node[above left] {$B$};\n\t\t\t\\fill (C) circle (1pt) node[above] {$C$};\n\t\t\t\\fill (D) circle (1pt) node[above right] {$D$};\n\t\t\t\\draw[thick] (O) -- (B) -- (C);\n\t\t\t\\draw[thick, domain=3:5, samples=100] plot (\\x, {-0.5*(\\x-3)^2 + 2});\n\t\t\t\\draw[dashed] (0,2)--(B)--(1,0) (C)--(3,0);\n    \\node at (0,0){\\href{4VG9WS}{\\tiny \\phantom{4VG9WS}}};\n\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
+      "solution": "Số cách lấy đồng thời $2$ tấm thẻ từ $8$ tấm thẻ là $\\mathrm{C}_8^2=28$. <br>\n Tích của hai số là số lẻ khi cả hai số đều là số lẻ. Trong các số từ $1$ đến $8$ có $4$ số lẻ là $1$, $3$, $5$, $7$. <br>\n Số cách lấy được hai thẻ đều ghi số lẻ là $\\mathrm{C}_4^2=6$. <br>\n Vậy số cách lấy để tích hai số là số chẵn là $28-6=22$. <br>\n Xác suất cần tìm là $P=\\dfrac{22}{28}=\\dfrac{11}{14}\\approx 0{,}79$. <br>\n Vậy xác suất cần tìm là $0{,}79$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
       "hasTable": false,
       "hasImmini": false,
       "hasSolutionTikz": false,
-      "rawType": "truefalse",
-      "needsImage": true,
-      "image": "images/123/q16.png"
+      "rawType": "short",
+      "needsImage": false,
+      "image": null
     },
     {
       "type": "short",
-      "question": "Trong kế hoạch khai thác tuyến ca nô cao tốc phục vụ du lịch sinh thái trên vùng lòng hồ Thủy điện Sơn La (từ bến Mường La đi Quỳnh Nhai) có chiều dài $100$\\,km. Ban quản lý cần xác định vận tốc khai thác $v$ (km/h) cho ca nô ($30 \\le v \\le 70$) để đạt lợi nhuận kinh tế cao nhất. Các dữ kiện của bài toán được xác định như sau: công suất tiêu thụ điện của động cơ ca nô là $P(v)=10v^3$ (W); giá điện kinh doanh tại bến sạc là $2\\,000$ đồng/kWh; chi phí vận hành cố định bao gồm nhân lực lái tàu, khấu hao và bến bãi là $2\\,500\\,000$ đồng cho mỗi giờ ca nô chạy; số lượng khách mua vé cho mỗi chuyến phụ thuộc vào vận tốc khai thác theo hàm số $N(v)=\\dfrac{v}{5}+20$ (hành khách); giá vé bình quân cho tuyến này là $500\\,000$ đồng/khách. Biết rằng điện năng tiêu thụ của ca nô trong mỗi chuyến là $A=P(v) \\cdot t$ (Wh), trong đó $t$ là thời gian ca nô di chuyển hết quãng đường $100$\\,km với vận tốc $v$.\tĐể lợi nhuận ròng (phần tiền còn lại sau khi đã trừ hết mọi chi phí) của mỗi chuyến ca nô trên tuyến này lớn nhất thì vận tốc khai thác $v$ (km/h) bằng bao nhiêu?\n\t<br>",
-      "answer": "50",
+      "question": "Có bao nhiêu giá trị nguyên của tham số $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm?",
+      "answer": "4",
       "id": 17,
-      "solution": "Thời gian ca nô chạy hết quãng đường $100$\\,km là $t=\\dfrac{100}{v}$ (giờ).<br>\n\t\tĐiện năng tiêu thụ cho một chuyến đi là\n\t\t\\[A=P(v) \\cdot t=10v^3 \\cdot \\dfrac{100}{v}=1\\,000v^2 \\text{ (Wh)}=v^2 \\text{ (kWh)}.\n\t\t\\]\n\t\tChi phí tiền điện là $C_1(v)=2\\,000 \\cdot v^2$.<br>\n\t\tChi phí vận hành cố định là $C_2(v)=2\\,500\\,000 \\cdot \\dfrac{100}{v}=\\dfrac{250\\,000\\,000}{v}$.<br>\n\t\tTổng doanh thu từ bán vé là $R(v)=500\\,000 \\cdot \\left(\\dfrac{v}{5}+20\\right)=100\\,000v+10\\,000\\,000$.<br>\n\t\tHàm lợi nhuận ròng của mỗi chuyến là\n\t\t\\begin{align*}\n\t\t\tL(v)&=R(v)-\\big[C_1(v)+C_2(v)\\big]<br>\n\t\t\t&=-2\\,000v^2+100\\,000v+10\\,000\\,000-\\dfrac{250\\,000\\,000}{v} \\text{ (đồng)}<br>\n\t\t\t&=-2v^2+100v+10\\,000-\\dfrac{250\\,000}{v} \\text{ (nghìn đồng)}.\n\t\t\\end{align*}\n\t\tXét hàm $L(v)$ trên đoạn $[30; 70]$, ta có\n\t\t\\[L'(v)=-4v+100+\\dfrac{250\\,000}{v^2}.\n\t\t\\]\n\t\t\\begin{eqnarray*}\n\t\t\tL'(v)=0 &\\Leftrightarrow &\\dfrac{-4v^3+100v^2+250\\,000}{v^2}=0<br>\n\t\t\t&\\Leftrightarrow &v^3-25v^2-62\\,500=0<br>\n\t\t\t&\\Leftrightarrow &(v-50)(v^2+25v+1\\,250)=0<br>\n\t\t\t&\\Leftrightarrow &\\hoac{&v=50<br>&v^2+25v+1\\,250=0 \\text{ (vô nghiệm)}.}\n\t\t\\end{eqnarray*}\n\t\tTa có\n\t\t<br>\n\t\t\t<br>• $L(30)=-2\\cdot 30^2+100\\cdot30+10\\,000-\\dfrac{250\\,000}{30} \\approx 2\\,866{,}667$.\n\t\t\t<br>• $L(50)=-2\\cdot 50^2+100\\cdot50+10\\,000-\\dfrac{250\\,000}{50}=5\\,000$.\n\t\t\t<br>• $L(70)=-2\\cdot 70^2+100\\cdot70+10\\,000-\\dfrac{250\\,000}{70} \\approx 3\\,628{,}571$.\n\t\t<br>\n\t\tSuy ra $\\max\\limits_{[30;70]}L(v)=5\\,000$ (nghìn đồng).<br>\n\t\tVậy lợi nhuận ròng lớn nhất (bằng $5$ triệu đồng) khi vận tốc khai thác là $v=50$ (km/h).",
+      "solution": "Xét phương trình $(m-1)x^2+2(m-1)x+4=0$. <br> \n Nếu $m=1$, phương trình trở thành $4=0$, nên phương trình vô nghiệm. <br>\n Nếu $m\\ne 1$, phương trình là phương trình bậc hai với $a=m-1$, $b=2(m-1)$, $c=4$. <br>\n Khi đó biệt thức là $\\Delta=\\left[2(m-1)\\right]^2-4(m-1)\\cdot4=4(m-1)(m-5)$. <br>\n Phương trình bậc hai vô nghiệm khi $\\Delta&lt;0$, tức là $4(m-1)(m-5)&lt;0$.\n Suy ra $1&lt;m&lt;5$. <br>\n Vì $m$ là số nguyên nên $m\\in\\{2;3;4\\}$. <br>\n Kết hợp với trường hợp $m=1$, ta có $m\\in\\{1;2;3;4\\}$. <br>\n Vậy có $4$ giá trị nguyên của $m$ để phương trình $(m-1)x^2+2(m-1)x+4=0$ vô nghiệm.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -424,28 +382,10 @@
     },
     {
       "type": "short",
-      "question": "Một xưởng mộc tại Mai Sơn sản xuất những chiếc bàn cờ Ô ăn quan bằng gỗ nguyên khối. Mặt trên của bàn cờ là một mặt phẳng được thiết kế và có kích thước như hình vẽ gồm ba phần: phần chính giữa là một hình chữ nhật có chiều dài $100$\\,cm và chiều rộng $40$\\,cm; hai \"ô quan\" ở hai đầu trái và phải là hai hình phẳng bằng nhau được ghép nối liền mạch với hai cạnh chiều rộng của hình chữ nhật. Biết rằng đường bao ngoài của mỗi \"ô quan\" là một cung tròn. Xưởng mộc tiến hành phủ một lớp keo bảo vệ bóng lên toàn bộ bề mặt trên của chiếc bàn cờ này. Biết chi phí vật tư và nhân công để phủ keo là $100\\,000$ đồng/m$^2$. Tổng chi phí $x$ (nghìn đồng) để hoàn thiện việc phủ keo cho mặt bàn cờ bằng bao nhiêu \\textit{(làm tròn kết quả đến hàng đơn vị)}?\n\n\t<br>",
-      "answer": "46",
+      "question": "Để thành lập một đội tình nguyện từ nhóm $10$ học sinh, giáo viên chọn ra $2$ học sinh để phân công làm Trưởng đoàn và Phó đoàn, sau đó chọn thêm $3$ học sinh khác từ số học sinh còn lại để làm thành viên. Hỏi giáo viên có tất cả bao nhiêu cách thực hiện?",
+      "answer": "5040",
       "id": 18,
-      "solution": "Mặt bàn cờ gồm một hình chữ nhật ở chính giữa và hai \"ô quan\" nằm tại hai đầu. Mỗi ô quan là một hình viên phân được giới hạn bởi một cung tròn và dây cung tương ứng, trong đó dây cung có độ dài $40$\\,cm và chiều cao của hình viên phân là $10$\\,cm (xem hình $1$).<br>\n\t\tHình chữ nhật có diện tích là $S_1=100 \\cdot 40=4\\,000$ (cm$^2$).<br>\n\t\tXét hình tròn tâm $O$ bán kính $R$ với dây cung $AB=40$. Gọi $I$ là trung điểm của $AB$ và $M$ là điểm chính giữa cung nhỏ $\\wideparen{AB}$ thì $IM=10$ (xem hình $2$).<br>\n\t\tTrong $\\triangle OBI$ vuông tại $I$ ta có\n\t\t\\[OB^2=IB^2+OI^2 \\Rightarrow R^2=20^2+(R-10)^2 \\Rightarrow R=25.\n\t\t\\]\n\t\tGọi $\\alpha=\\widehat {BOM}$ (đơn vị Radian), ta có $\\sin\\alpha=\\dfrac{IB}{OB}=\\dfrac{20}{25}=0{,}8$.<br>\n\t\tHình quạt tròn $OAB$ có số đo là $2\\alpha$ và bán kính $R=25$ nên có diện tích là\n\t\t\\[ S_{\\text{quạt}}=\\dfrac{2\\alpha}{2\\pi}\\cdot\\pi R^2=\\alpha\\cdot 25^2=625\\alpha.\n\t\t\\]\n\t\t$\\triangle OAB$ với chiều cao $OI=25-10=15$ có diện tích là\n\t\t\\[ S_{\\triangle OAB}=\\dfrac{1}{2} \\cdot AB \\cdot OI=\\dfrac{1}{2} \\cdot 40 \\cdot 15=300. \\]\n\t\tDiện tích hình viên phân là\n\t\t\\[ S_{vp}=S_{\\text{quạt}}-S_{\\triangle OAB}=625\\alpha-300.\\]\n\t\tTổng diện tích bề mặt cần phủ keo là\n\t\t\\[S=S_1+2S_{vp}=4\\,000+2(625\\alpha-300)=3\\,400+1\\,250\\alpha.\n\t\t\\]\n\t\tVì chi phí phủ keo là $100\\,000$ đồng/m$^2$, tức là $10$ đồng/cm$^2$ nên tổng chi phí phủ keo là\n\t\t\\[C=S \\cdot 10=(3\\,400+1\\,250\\alpha)\\cdot 10=34\\,000+12\\,500\\alpha \\text{ (đồng)}=34+12{,}5\\alpha \\text{ (nghìn đồng)}.\n\t\t\\]\n\t\tDo $\\sin\\alpha=0{,}8\\Rightarrow \\alpha \\approx 0{,}927$ nên $C\\approx46$ (nghìn đồng).<br>\n\t\tVậy $x=46$.<br>\n\t\t\\textit{Cách khác:} Để tính diện tích hình viên phân ta có thể sử dụng tích phân như sau:<br>\n\t\tTừ $\\triangle OBI$ vuông tại $I$, $R=OM=25$, $OI=15$ ta chọn hệ trục tọa độ $Oxy$ với gốc $O(0;0)$ là tâm đường tròn, trục $Ox$ đi qua trung điểm $I$ của dây cung $AB$ (xem hình dưới đây). \n\n\t\tKhi đó<br>\n\t\tPhương trình đường tròn $x^2+y^2=25^2 \\Rightarrow y=\\pm \\sqrt{625-x^2}$.<br>\n\t\tTọa độ các điểm $I(15;0)$, $M(25;0)$, dây cung $AB$ nằm trên đường thẳng $x=15$.<br>\n\t\tHình viên phân giới hạn bởi cung tròn $AMB$ và đoạn thẳng $AB$ có diện tích là\n\t\t\\[S_{vp}=2 \\displaystyle\\int\\limits_{15}^{25} \\sqrt{625-x^2}\\mathrm{\\,d}x.\n\t\t\\]\n\t\tSử dụng máy tính cầm tay, tính được $S_{vp} \\approx279{,}56$ (cm$^2$).",
-      "visualLatex": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth,x=0.1cm,y=0.1cm]\n    \n\t\t\t\\draw (0,0) rectangle (100,40);\n\t\t\t\\foreach \\x in {20,40,60,80} \\draw (\\x,0)--(\\x,40);\n\t\t\t\\draw (0,20)--(100,20);\n\t\t\t\\draw (100,40) arc (53.13:-53.13:25);\n\t\t\t\\draw (0,0) arc (233.13:126.87:25);\n\t\t\t\\draw[<->] (0,50)--(100,50) node[midway, fill=white, inner sep=1.5pt] {$100$\\,cm};\n\t\t\t\\draw[dashed] (0,42)--(0,52) (100,42)--(100,52);\n\t\t\t\\draw[<->] (120,0)--(120,40) node[midway, fill=white, inner sep=1.5pt,rotate=-90] {$40$\\,cm};\n\t\t\t\\draw[dashed] (103,0)--(123,0) (103,40)--(123,40);\n\t\t\t\\draw[<->] (100,-7)--(110,-7) node[midway, below] {$10$\\,cm};\n\t\t\t\\draw[dashed] (110,14)--(110,-8) (100,-2)--(100,-8);\n    \\node at (0,0){\\href{4DUOJZ}{\\tiny \\phantom{4DUOJZ}}};\n\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round,font=\\footnotesize,>=stealth,x=0.1cm,y=0.1cm]\n    \n\t\t\t\\draw (0,0) rectangle (100,40);\n\t\t\t\\foreach \\x in {20,40,60,80} \\draw (\\x,0)--(\\x,40);\n\t\t\t\\draw (0,20)--(100,20);\n\t\t\t\\draw (100,40) arc (53.13:-53.13:25);\n\t\t\t\\draw (0,0) arc (233.13:126.87:25);\n\t\t\t\\draw[<->] (0,50)--(100,50) node[midway, fill=white, inner sep=1.5pt] {$100$\\,cm};\n\t\t\t\\draw[dashed] (0,42)--(0,52) (100,42)--(100,52);\n\t\t\t\\draw[<->] (120,0)--(120,40) node[midway, fill=white, inner sep=1.5pt,rotate=-90] {$40$\\,cm};\n\t\t\t\\draw[dashed] (103,0)--(123,0) (103,40)--(123,40);\n\t\t\t\\draw[<->] (100,-7)--(110,-7) node[midway, below] {$10$\\,cm};\n\t\t\t\\draw[dashed] (110,14)--(110,-8) (100,-2)--(100,-8);\n    \\node at (0,0){\\href{4DUOJZ}{\\tiny \\phantom{4DUOJZ}}};\n\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": true,
-      "rawType": "short",
-      "needsImage": true,
-      "image": "images/123/q18.png"
-    },
-    {
-      "type": "short",
-      "question": "Một cá nhân gây thiệt hại cho tài sản nhà nước với tổng số tiền là $450$ triệu đồng. Để được giảm nhẹ trách nhiệm hình sự, người này được yêu cầu phải hoàn thành việc bồi thường ít nhất $60\\%$ tổng số tiền gốc trong vòng $6$ tháng đầu tiên. Phương thức bồi thường được thỏa thuận như sau: Tháng thứ nhất người đó nộp $m$ (triệu đồng); kể từ tháng thứ hai, mỗi tháng số tiền nộp bằng $90\\%$ số tiền đã nộp ở tháng liền trước đó. Để được giảm nhẹ trách nhiệm hình sự, người này phải nộp tháng đầu tiên với số tiền $m$ nhỏ nhất là bao nhiêu \\textit{(không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng đơn vị)}?\n\t<br>",
-      "answer": "58",
-      "id": 19,
-      "solution": "Số tiền người đó cần phải bồi thường trong $6$ tháng đầu tiên là\n\t\t\\[450 \\cdot 60\\%=270 \\text{ (triệu đồng).}\n\t\t\\]\n\t\tTháng thứ nhất người đó nộp $m$ (triệu đồng).<br>\n\t\tVì kể từ tháng thứ hai, mỗi tháng số tiền nộp bằng $90\\%$ số tiền đã nộp ở tháng liền trước đó nên số tiền nộp mỗi tháng lập thành một cấp số nhân có số hạng đầu là $u_1=m$ và công bội $q=90\\%=0{,}9$.<br>\n\t\tTổng số tiền nộp sau $6$ tháng là tổng của $6$ số hạng đầu của cấp số nhân\n\t\t\\[S_6=u_1 \\cdot \\dfrac{1-q^6}{1-q}=m \\cdot \\dfrac{1-(0{,}9)^6}{1-0{,}9}=m \\cdot 4{,}68559.\n\t\t\\]\n\t\tĐể được giảm nhẹ trách nhiệm hình sự thì phải có\n\t\t\\[S_6 \\ge 270 \\Leftrightarrow m \\cdot 4{,}68559 \\ge 270 \\Leftrightarrow m \\ge \\dfrac{270}{4{,}68559} \\approx 57{,}6235.\n\t\t\\]\n\t\tVì $m$ là số tiền nộp và đề bài yêu cầu làm tròn đến hàng đơn vị, đồng thời $m$ phải thỏa mãn điều kiện bồi thường ít nhất $60\\%$, nên ta chọn giá trị nguyên nhỏ nhất thỏa mãn điều kiện trên là $m=58$.<br>\n\t\tVậy số tiền $m$ nhỏ nhất nộp trong tháng đầu tiên là $58$ triệu đồng.",
+      "solution": "Chọn $2$ học sinh làm Trưởng đoàn và Phó đoàn là chọn có thứ tự, nên có $\\mathrm{A}_{10}^{2}=10\\cdot9=90$ cách. <br>\n Sau khi chọn Trưởng đoàn và Phó đoàn, còn lại $8$ học sinh. Chọn thêm $3$ học sinh làm thành viên có $\\mathrm{C}_8^3=56$ cách. <br>\n Theo quy tắc nhân, số cách thực hiện là $90\\cdot56=5 040$. <br>\n Vậy giáo viên có tất cả $5 040$ cách thực hiện.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
@@ -457,54 +397,53 @@
       "image": null
     },
     {
-      "type": "short",
-      "question": "Cho hình chóp $S.ABCD$ có đáy là hình thang, $AB = 2a$, $AD = DC = CB = a$, $SA$ vuông góc với mặt phẳng đáy và $SA = 3a$. Gọi $M$ là trung điểm của $AB$. Khoảng cách giữa hai đường thẳng $SB$ và $DM$ bằng $\\dfrac{xa}{y}$ (với $x$, $y \\in \\mathbb{N}^*$, $\\dfrac{x}{y}$ tối giản). Giá trị của $T = x + y + xy$  bằng bao nhiêu?\n\n\t<br>",
-      "answer": "19",
-      "id": 20,
-      "solution": "Vì $M$ là trung điểm của $AB$ nên $AM = MB = \\dfrac{1}{2}AB = a$.<br>\n\t\tTứ giác $AMCD$ có $AM <br>allel DC$ ($AB <br>allel DC$) và $AM = DC = a$ nên $AMCD$ là hình bình hành.<br>\n\t\tLại có $AD = AM = a$ nên $AMCD$ là hình thoi. Suy ra $CM = a$.<br>\n\t\tTrong tam giác $ABC$ có trung tuyến $CM = \\dfrac{1}{2}AB = a$, do đó tam giác $ABC$ vuông tại $C$, hay $AC \\perp BC$.<br>\n\t\tMặt khác, xét tứ giác $MBCD$ có $MB <br>allel DC$ và $MB = DC = a$ nên $MBCD$ là hình bình hành.<br>\n\t\tSuy ra $DM <br>allel BC$. Mà $BC \\subset (SBC)$ nên $DM <br>allel (SBC)$.<br>\n\t\tKhi đó $\\mathrm{d}(DM, SB) = \\mathrm{d}\\big(DM, (SBC)\\big) = \\mathrm{d}\\big(M, (SBC)\\big)$.<br>\n\t\tVì $AB \\cap (SBC) = B$ và $M$ là trung điểm $AB$ nên $\\mathrm{d}\\big(M, (SBC)\\big) = \\dfrac{1}{2}\\mathrm{d}\\big(A, (SBC)\\big)$.<br>\t\t\n\t\tTa có $\\heva{&BC \\perp AC <br> &BC \\perp SA ~\\text{(do } SA \\perp (ABCD)\\text{)}} \\Rightarrow BC \\perp (SAC)$.<br>\n\t\tKẻ $AH \\perp SC$ ($H \\in SC$). Vì $BC \\perp (SAC) \\Rightarrow BC \\perp AH$.<br>\n\t\tSuy ra $AH \\perp (SBC) \\Rightarrow \\mathrm{d}\\big(A, (SBC)\\big) = AH$.<br>\n\t\tTrong tam giác vuông $ABC$ có $AC = \\sqrt{AB^2 - BC^2} = \\sqrt{(2a)^2 - a^2} = a\\sqrt{3}$.<br>\n\t\tTrong tam giác vuông $SAC$ có  \n\t\t\\[ \\dfrac{1}{AH^2} = \\dfrac{1}{SA^2} + \\dfrac{1}{AC^2} = \\dfrac{1}{(3a)^2} + \\dfrac{1}{(a\\sqrt{3})^2} = \\dfrac{1}{9a^2} + \\dfrac{1}{3a^2} = \\dfrac{4}{9a^2} \\Rightarrow AH = \\dfrac{3a}{2}. \\]\n\t\tVậy $\\mathrm{d}(DM, SB) = \\dfrac{1}{2} \\cdot \\dfrac{3a}{2} = \\dfrac{3a}{4}$.<br>\n\t\tĐối chiếu $\\mathrm{d} = \\dfrac{xa}{y}$ ta được $x = 3$, $y = 4$ (thỏa mãn $\\dfrac{3}{4}$ tối giản).<br>\n\t\tGiá trị $T = x + y + xy = 3 + 4 + 3 \\cdot 4 = 19$.",
-      "visualLatex": "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\a{5}\n\t\t\t\\def\\h{4}\n\t\t\t\\path \t(0:0) coordinate (A)\n\t\t\t\t++(0:\\a) coordinate (B)\n\t\t\t\t($(A)+(-120:\\a/2)$) coordinate (D)\n\t\t\t\t($(B)+(D)-(A)$) coordinate (Ct)\n\t\t\t\t($(D)!1/2!(Ct)$) coordinate (C)\n\t\t\t\t($(A)+(90:\\h)$) coordinate (S)\n\t\t\t\t($(A)!0.5!(B)$) coordinate (M)\n\t\t\t\t($(S)!0.6!(C)$) coordinate (H)\n\t\t\t\t(intersection of A--C and B--D) coordinate (O);\n\t\t\t\\draw[dashed] \t(B)--(A)--(D)--(M)--(C)\t(A)--(S) (C)--(A)--(H);\n\t\t\t\\draw \t\t\t(B)--(C)--(D)\n\t\t\t\t(B)--(S)\t(C)--(S)\t(D)--(S);\n\t\t\t\\foreach \\x/\\g in {A/135,B/45,C/-45,D/-135,S/90, M/90, H/30}\n\t\t\t\\fill (\\x) circle (1pt)\n\t\t\t\t($(\\g:3mm)+(\\x)$) node {$\\x$};\t\n\t\t\t\\draw pic[draw,angle radius=2mm]{right angle=B--A--S};\n\t\t\t\\draw pic[draw,angle radius=2mm]{right angle=S--H--A};\n    \\node at (0,0){\\href{50XS9J}{\\tiny \\phantom{50XS9J}}};\n\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=1, font=\\footnotesize, line join=round, line cap=round, >=stealth]\n    \n\t\t\t\\def\\a{5}\n\t\t\t\\def\\h{4}\n\t\t\t\\path \t(0:0) coordinate (A)\n\t\t\t\t++(0:\\a) coordinate (B)\n\t\t\t\t($(A)+(-120:\\a/2)$) coordinate (D)\n\t\t\t\t($(B)+(D)-(A)$) coordinate (Ct)\n\t\t\t\t($(D)!1/2!(Ct)$) coordinate (C)\n\t\t\t\t($(A)+(90:\\h)$) coordinate (S)\n\t\t\t\t($(A)!0.5!(B)$) coordinate (M)\n\t\t\t\t($(S)!0.6!(C)$) coordinate (H)\n\t\t\t\t(intersection of A--C and B--D) coordinate (O);\n\t\t\t\\draw[dashed] \t(B)--(A)--(D)--(M)--(C)\t(A)--(S) (C)--(A)--(H);\n\t\t\t\\draw \t\t\t(B)--(C)--(D)\n\t\t\t\t(B)--(S)\t(C)--(S)\t(D)--(S);\n\t\t\t\\foreach \\x/\\g in {A/135,B/45,C/-45,D/-135,S/90, M/90, H/30}\n\t\t\t\\fill (\\x) circle (1pt)\n\t\t\t\t($(\\g:3mm)+(\\x)$) node {$\\x$};\t\n\t\t\t\\draw pic[draw,angle radius=2mm]{right angle=B--A--S};\n\t\t\t\\draw pic[draw,angle radius=2mm]{right angle=S--H--A};\n    \\node at (0,0){\\href{50XS9J}{\\tiny \\phantom{50XS9J}}};\n\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": false,
-      "rawType": "short",
-      "needsImage": true,
-      "image": "images/123/q20.png"
-    },
-    {
-      "type": "short",
-      "question": "Trong một trò chơi thám hiểm, anh Sơn phải vượt qua một mê cung gồm các phòng thông nhau như sơ đồ dưới đây. Tại mỗi phòng, anh Sơn sẽ chọn ngẫu nhiên một trong các cửa thông với phòng hiện tại (với xác suất như nhau) để đi tiếp. Quá trình di chuyển diễn ra liên tục và trò chơi sẽ kết thúc ngay khi anh bước vào phòng chứa Kho báu hoặc phòng có Bẫy. Biết anh Sơn bắt đầu từ Phòng 1, xác suất để anh tìm được kho báu bằng bao nhiêu (kết quả làm tròn đến hàng phần trăm)?\n\n\t<br>",
-      "answer": "0{,}67",
-      "id": 21,
-      "solution": "Gọi $P_i$ là xác suất để anh Sơn tìm được kho báu nếu đang đứng ở Phòng $i$ ($i=1, 2, 3, 4$). \n\t\tDựa vào sơ đồ kết nối và quy tắc chọn cửa ngẫu nhiên, ta có hệ phương trình sau:\n\t\t<br>\n\t\t\t<br>• Tại Phòng 1 có $3$ cửa (Kho báu, Phòng 2, Phòng 3):\n\t\t\t\\[ P_1 = \\dfrac{1}{3} \\cdot 1 + \\dfrac{1}{3} P_2 + \\dfrac{1}{3} P_3. \\tag*{$(1)$} \\]\n\t\t\t<br>• Tại Phòng 2 có $2$ cửa (Phòng 1, Phòng 4):\n\t\t\t\\[ P_2 = \\dfrac{1}{2} P_1 + \\dfrac{1}{2} P_4. \\tag*{$(2)$} \\]\n\t\t\t<br>• Tại Phòng 3 có $2$ cửa (Phòng 1, Phòng 4):\n\t\t\t\\[ P_3 = \\dfrac{1}{2} P_1 + \\dfrac{1}{2} P_4. \\quad \\tag*{$(3)$} \\]\n\t\t\t<br>• Tại Phòng 4 có $3$ cửa (Phòng 2, Phòng 3, Bẫy):\n\t\t\t\\[ P_4 = \\dfrac{1}{3} P_2 + \\dfrac{1}{3} P_3 + \\dfrac{1}{3} \\cdot 0. \\tag*{$(4)$} \\]\n\t\t<br>\n\t\tTừ $(2)$ và $(3)$ ta thấy $P_2 = P_3$. Thay vào $(4)$ ta được\n\t\t$P_4 = \\dfrac{2}{3} P_2$.<br>\n\t\tTa được hệ phương trình\n\t\t\\[ \\heva{& P_1 = \\dfrac{1}{3} + \\dfrac{2}{3} P_2 <br> & P_2 = \\dfrac{1}{2} P_1 + \\dfrac{1}{2} \\left( \\dfrac{2}{3} P_2 \\right)} \n\t\t\\Leftrightarrow \\heva{& 3P_1 - 2P_2 = 1 <br> & \\dfrac{2}{3} P_2 = \\dfrac{1}{2} P_1} \n\t\t\\Leftrightarrow \\heva{& 3P_1 - 2P_2 = 1 <br> & P_2 = \\dfrac{3}{4} P_1}\\Rightarrow P_1 = \\dfrac{2}{3}. \\]\n\t\tLàm tròn đến hàng phần trăm, xác suất để anh Sơn tìm được kho báu là $0{,}67$.",
-      "visualLatex": "\\begin{tikzpicture}[scale=1, line join=round, line cap=round, transform shape]\n    \n\t\t\t\n\t\t\t\\definecolor{wood}{HTML}{5D2906}\n\t\t\t\\definecolor{gold}{HTML}{FFD700}\n\t\t\t\\definecolor{sand}{HTML}{C2B280}\n\t\t\t\\def\\w{3}\n\t\t\t\\def\\h{2.5}\n\t\t\t\\tikzset{ruong/.pic = {\n\t\t\t\\def\\g{-130}\n\t\t\t\\path (0,0) coordinate (A)\n\t\t\t\t(\\g:2) coordinate (B)\n\t\t\t\t++(0:4) coordinate (C)\n\t\t\t\t($(A)+(C)-(B)$) coordinate(D);\n\t\t\t\\foreach \\i in {A,B,C,D} \\path ($(\\i)+(90:2.3)$) coordinate(\\i');\n\t\t\t\\path (D')--++(120:2) coordinate(E) --++(-4,0) coordinate(F);\n\t\t\t\\fill[draw, wood!70] (A)--(B)--(B')--(A') (A)--(D)--(D')--(A');\n\t\t\t\\draw[wood] (A)--(A');\n\t\t\t\\fill[line width=2pt,draw=wood, fill=wood!50] (A')--(B')--(B)--(C)--(D)--(D')--(C')--(B') (A')--(D') (C)--(C');\n\t\t\t\\def\\NP{(E) .. controls ++(25:0.7) and ++(80:1.5) .. (D') coordinate[pos=0.19](e)}\n\t\t\t\\def\\NT{(F) .. controls ++(25:0.7) and ++(80:1.5) .. (A')coordinate[pos=0.19](f)};\n\t\t\t\\fill[draw, top color=wood!90, middle color=wood!80, bottom color=wood!50] (E)--(F)--\\NT -- (D') ..controls ++(80:1.5) and ++(25:0.7) .. (E);\n\t\t\t\\fill[draw=wood, fill=gold] (D')--\\NP;\n\t\t\t\\fill[draw=wood, fill=wood!95] (D')++(105:0.3) coordinate(d') --++(120:1.55) .. controls ++ (25:0.5) and ++(80:1) .. (d');\n\t\t\t\\fill[draw=wood, fill=wood!95] (A')--\\NT;\t\n\t\t\t\\fill[draw=wood,wood] ($(A')+(180:1pt)$) -- ++(120:2)--++(0:2pt)--++(-60:2)--cycle ($(D')+(180:2pt)$) -- ++(120:2)--++(0:2pt)--(D')--cycle\n\t\t\t\t($(E)+(180:2pt)$)--++(180:3.9)--++(-60:2pt)--++(0:3.9)--cycle\n\t\t\t\t($(D')+(180:2pt)$)--++(180:3.97)--++(-60:2pt)--++(0:3.97)--cycle;\n\t\t\t\\fill[draw=gold, gold] (E) .. controls ++(25:0.15)..(e)--(f)..controls ++(170:0.2) and +(70:0.05)..($(F)+(180:1pt)$)--(E);\n\t\t\t\\shade[left color=gold!60!brown, right color=gold, middle color=gold!70!white] ($(B)+(-1pt,-1pt)$)--($(C)+(1pt,-1pt)$)--($(C')+(1pt,-1pt)$)--($(B')+(-1pt,-1pt)$)--cycle;\n\t\t\t\\shade[left color=gold!40!brown, right color=gold, middle color=gold!70!white] ($(C)+(1pt,-1pt)$)--($(C')+(1pt,-1pt)$)--($(D')+(1pt,-1pt)$)--($(D)+(1pt,-1pt)$)--cycle;\n\t\t\t\\fill[wood, rounded corners] ($(B)+(0.24,0.24)$) coordinate(l1) rectangle ++(0.76,1.8) ($(B)+(1.25,0.24)$) coordinate(l2) rectangle ++(1.5,1.8) ($(C)+(-0.24,0.24)$) coordinate(l3) rectangle ++(-0.76,1.8)\n\t\t\t\t($(C)+(50:0.28)$)++(90:0.24) coordinate(r) --++(50:1.5)--++(90:1.8)--++(\\g:1.5)--cycle;\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l1) rectangle ++(0.76,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l1)+(90:0.45*\\i)$) --++(0:0.75);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l1)--++(90:1.8)--++(0:0.74);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l2) rectangle ++(1.5,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l2)+(90:0.45*\\i)$) --++(0:2);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l2)--++(90:1.8)--++(0:2);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l3) rectangle ++(-0.76,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l3)+(90:0.45*\\i)$) --++(180:1);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l3)++(180:0.76)--++(90:1.8)--++(0:1);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (r) --++(50:1.5)--++(90:1.8)--++(\\g:1.5)--cycle;\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(r)+(90:0.45*\\i)$) --++(50:2);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (r)--++(50:1.5)--++(90:1.8);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (A')--(B')--(C')--(D')--(A');\n\t\t\t\t\\foreach \\i in {1,...,500} {\n\t\t\t\t\\shade[ball color=gold] ({random(-10,45)/10}, {random(9,21)/10}) ellipse (0.2 and 0.14);\n\t\t\t\t}\n\t\t\t\\end{scope}\n\t\t\t\\fill[draw=gold!80!black, fill=gold, rounded corners] ($(B')!0.43!(C')$)++(-90:0.15) coordinate(k1) rectangle ++(0.6,-0.6);\n\t\t\t\\fill (k1)++(0.25,-0.3) arc(-120:300:{0.1}) --++(-90:0.22)--++(180:0.1)--cycle;\n\t\t\t\\fill[draw=gold!80!black, fill=gold, rounded corners=0.01] ($(F)!0.43!(E)$) coordinate(k2)--++(\\g:0.5)--++(0:0.5)--++(50:0.5)--cycle;\n\t\t\t\\fill[black,rotate=-50] (k2)++(0.2,-0.1) ellipse(0.08 and 0.12);}}\n\t\t\t\n\t\t\t\n\t\t\t\\draw (0,\\h) -- (0,2*\\h) -- (3*\\w,2*\\h) -- (3*\\w,\\h);\n\t\t\t\n\t\t\t\\draw (1*\\w,0) -- (3*\\w,0);\n\t\t\t\\draw (3*\\w,0) rectangle (4*\\w,\\h);\n\t\t\t\n\t\t\t\\draw (0, \\h) -- (1.5*\\w, \\h); \n\t\t\t\\draw (1.7*\\w, \\h) -- (3*\\w, \\h);\n\t\t\t\\draw (1*\\w, 0) -- (1*\\w, 2*\\h);\n\t\t\t\\draw (2*\\w, 0) -- (2*\\w, 2*\\h); \n\t\t\t\n\t\t\t\\begin{scope}[white, line width=4pt]\n\t\t\t\t\\draw (\\w, 1.3*\\h) -- (\\w, 1.7*\\h); \n\t\t\t\t\\draw (2*\\w, 1.3*\\h) -- (2*\\w, 1.7*\\h); \n\t\t\t\t\\draw (1.3*\\w, \\h) -- (1.7*\\w, \\h); \n\t\t\t\t\\draw (2.3*\\w, \\h) -- (2.7*\\w, \\h); \n\t\t\t\t\\draw (2*\\w, 0.3*\\h) -- (2*\\w, 0.7*\\h); \n\t\t\t\t\\draw (3*\\w, 0.3*\\h) -- (3*\\w, 0.7*\\h); \n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\n\t\t\t\\begin{scope}[shift={(0.4*\\w, 1.6*\\h)}]\n\t\t\t\t\\path (0,0) pic[scale=0.2]{ruong};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[shift={(3.5*\\w, 0.5*\\h)}, scale=0.5]\n\t\t\t\t\n\t\t\t\t\\fill[black!80] (-1,-0.5) rectangle (1,0.5);\n\t\t\t\t\n\t\t\t\t\\foreach \\x in {-0.8,-0.4,0,0.4,0.8}\n\t\t\t\t\\fill[gray!60, draw=black, line width=0.2pt] (\\x,-0.3) -- (\\x-0.15,-0.8) -- (\\x+0.15,-0.8) -- cycle;\n\t\t\t\t\\foreach \\x in {-0.6,-0.2,0.2,0.6}\n\t\t\t\t\\fill[gray!40, draw=black, line width=0.2pt] (\\x,0.1) -- (\\x-0.15,-0.4) -- (\\x+0.15,-0.4) -- cycle;\n\t\t\t\t\n\t\t\t\t\\draw[red, line width=1pt] (0,0.8) -- (-0.6,0) -- (0.6,0) -- cycle;\n\t\t\t\t\\node[red, scale=0.8, font=\\boldmath] at (0,0.3) {!};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\node[below] at (0.5*\\w, 1.4*\\h) {\\textbf{Kho báu}};\n\t\t\t\\node at (1.5*\\w, 1.5*\\h) {Phòng 1};\n\t\t\t\\node at (2.5*\\w, 1.5*\\h) {Phòng 2};\n\t\t\t\\node at (1.5*\\w, 0.5*\\h) {Phòng 3};\n\t\t\t\\node at (2.5*\\w, 0.5*\\h) {Phòng 4};\n\t\t\t\\node[below] at (3.5*\\w, 0.35*\\h) {\\textbf{Bẫy}};\n    \\node at (0,0){\\href{5NIPB6}{\\tiny \\phantom{5NIPB6}}};\n\t\t\\end{tikzpicture}",
-      "visualBlocks": [
-        "\\begin{tikzpicture}[scale=1, line join=round, line cap=round, transform shape]\n    \n\t\t\t\n\t\t\t\\definecolor{wood}{HTML}{5D2906}\n\t\t\t\\definecolor{gold}{HTML}{FFD700}\n\t\t\t\\definecolor{sand}{HTML}{C2B280}\n\t\t\t\\def\\w{3}\n\t\t\t\\def\\h{2.5}\n\t\t\t\\tikzset{ruong/.pic = {\n\t\t\t\\def\\g{-130}\n\t\t\t\\path (0,0) coordinate (A)\n\t\t\t\t(\\g:2) coordinate (B)\n\t\t\t\t++(0:4) coordinate (C)\n\t\t\t\t($(A)+(C)-(B)$) coordinate(D);\n\t\t\t\\foreach \\i in {A,B,C,D} \\path ($(\\i)+(90:2.3)$) coordinate(\\i');\n\t\t\t\\path (D')--++(120:2) coordinate(E) --++(-4,0) coordinate(F);\n\t\t\t\\fill[draw, wood!70] (A)--(B)--(B')--(A') (A)--(D)--(D')--(A');\n\t\t\t\\draw[wood] (A)--(A');\n\t\t\t\\fill[line width=2pt,draw=wood, fill=wood!50] (A')--(B')--(B)--(C)--(D)--(D')--(C')--(B') (A')--(D') (C)--(C');\n\t\t\t\\def\\NP{(E) .. controls ++(25:0.7) and ++(80:1.5) .. (D') coordinate[pos=0.19](e)}\n\t\t\t\\def\\NT{(F) .. controls ++(25:0.7) and ++(80:1.5) .. (A')coordinate[pos=0.19](f)};\n\t\t\t\\fill[draw, top color=wood!90, middle color=wood!80, bottom color=wood!50] (E)--(F)--\\NT -- (D') ..controls ++(80:1.5) and ++(25:0.7) .. (E);\n\t\t\t\\fill[draw=wood, fill=gold] (D')--\\NP;\n\t\t\t\\fill[draw=wood, fill=wood!95] (D')++(105:0.3) coordinate(d') --++(120:1.55) .. controls ++ (25:0.5) and ++(80:1) .. (d');\n\t\t\t\\fill[draw=wood, fill=wood!95] (A')--\\NT;\t\n\t\t\t\\fill[draw=wood,wood] ($(A')+(180:1pt)$) -- ++(120:2)--++(0:2pt)--++(-60:2)--cycle ($(D')+(180:2pt)$) -- ++(120:2)--++(0:2pt)--(D')--cycle\n\t\t\t\t($(E)+(180:2pt)$)--++(180:3.9)--++(-60:2pt)--++(0:3.9)--cycle\n\t\t\t\t($(D')+(180:2pt)$)--++(180:3.97)--++(-60:2pt)--++(0:3.97)--cycle;\n\t\t\t\\fill[draw=gold, gold] (E) .. controls ++(25:0.15)..(e)--(f)..controls ++(170:0.2) and +(70:0.05)..($(F)+(180:1pt)$)--(E);\n\t\t\t\\shade[left color=gold!60!brown, right color=gold, middle color=gold!70!white] ($(B)+(-1pt,-1pt)$)--($(C)+(1pt,-1pt)$)--($(C')+(1pt,-1pt)$)--($(B')+(-1pt,-1pt)$)--cycle;\n\t\t\t\\shade[left color=gold!40!brown, right color=gold, middle color=gold!70!white] ($(C)+(1pt,-1pt)$)--($(C')+(1pt,-1pt)$)--($(D')+(1pt,-1pt)$)--($(D)+(1pt,-1pt)$)--cycle;\n\t\t\t\\fill[wood, rounded corners] ($(B)+(0.24,0.24)$) coordinate(l1) rectangle ++(0.76,1.8) ($(B)+(1.25,0.24)$) coordinate(l2) rectangle ++(1.5,1.8) ($(C)+(-0.24,0.24)$) coordinate(l3) rectangle ++(-0.76,1.8)\n\t\t\t\t($(C)+(50:0.28)$)++(90:0.24) coordinate(r) --++(50:1.5)--++(90:1.8)--++(\\g:1.5)--cycle;\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l1) rectangle ++(0.76,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l1)+(90:0.45*\\i)$) --++(0:0.75);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l1)--++(90:1.8)--++(0:0.74);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l2) rectangle ++(1.5,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l2)+(90:0.45*\\i)$) --++(0:2);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l2)--++(90:1.8)--++(0:2);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (l3) rectangle ++(-0.76,1.8);\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(l3)+(90:0.45*\\i)$) --++(180:1);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (l3)++(180:0.76)--++(90:1.8)--++(0:1);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip[rounded corners] (r) --++(50:1.5)--++(90:1.8)--++(\\g:1.5)--cycle;\n\t\t\t\t\\foreach \\i in {1,2,3} {\\draw[thick, wood!50!black] ($(r)+(90:0.45*\\i)$) --++(50:2);}\n\t\t\t\t\\draw[wood!50!black, thick, rounded corners] (r)--++(50:1.5)--++(90:1.8);\n\t\t\t\\end{scope}\n\t\t\t\\begin{scope}\n\t\t\t\t\\clip (A')--(B')--(C')--(D')--(A');\n\t\t\t\t\\foreach \\i in {1,...,500} {\n\t\t\t\t\\shade[ball color=gold] ({random(-10,45)/10}, {random(9,21)/10}) ellipse (0.2 and 0.14);\n\t\t\t\t}\n\t\t\t\\end{scope}\n\t\t\t\\fill[draw=gold!80!black, fill=gold, rounded corners] ($(B')!0.43!(C')$)++(-90:0.15) coordinate(k1) rectangle ++(0.6,-0.6);\n\t\t\t\\fill (k1)++(0.25,-0.3) arc(-120:300:{0.1}) --++(-90:0.22)--++(180:0.1)--cycle;\n\t\t\t\\fill[draw=gold!80!black, fill=gold, rounded corners=0.01] ($(F)!0.43!(E)$) coordinate(k2)--++(\\g:0.5)--++(0:0.5)--++(50:0.5)--cycle;\n\t\t\t\\fill[black,rotate=-50] (k2)++(0.2,-0.1) ellipse(0.08 and 0.12);}}\n\t\t\t\n\t\t\t\n\t\t\t\\draw (0,\\h) -- (0,2*\\h) -- (3*\\w,2*\\h) -- (3*\\w,\\h);\n\t\t\t\n\t\t\t\\draw (1*\\w,0) -- (3*\\w,0);\n\t\t\t\\draw (3*\\w,0) rectangle (4*\\w,\\h);\n\t\t\t\n\t\t\t\\draw (0, \\h) -- (1.5*\\w, \\h); \n\t\t\t\\draw (1.7*\\w, \\h) -- (3*\\w, \\h);\n\t\t\t\\draw (1*\\w, 0) -- (1*\\w, 2*\\h);\n\t\t\t\\draw (2*\\w, 0) -- (2*\\w, 2*\\h); \n\t\t\t\n\t\t\t\\begin{scope}[white, line width=4pt]\n\t\t\t\t\\draw (\\w, 1.3*\\h) -- (\\w, 1.7*\\h); \n\t\t\t\t\\draw (2*\\w, 1.3*\\h) -- (2*\\w, 1.7*\\h); \n\t\t\t\t\\draw (1.3*\\w, \\h) -- (1.7*\\w, \\h); \n\t\t\t\t\\draw (2.3*\\w, \\h) -- (2.7*\\w, \\h); \n\t\t\t\t\\draw (2*\\w, 0.3*\\h) -- (2*\\w, 0.7*\\h); \n\t\t\t\t\\draw (3*\\w, 0.3*\\h) -- (3*\\w, 0.7*\\h); \n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\n\t\t\t\\begin{scope}[shift={(0.4*\\w, 1.6*\\h)}]\n\t\t\t\t\\path (0,0) pic[scale=0.2]{ruong};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\begin{scope}[shift={(3.5*\\w, 0.5*\\h)}, scale=0.5]\n\t\t\t\t\n\t\t\t\t\\fill[black!80] (-1,-0.5) rectangle (1,0.5);\n\t\t\t\t\n\t\t\t\t\\foreach \\x in {-0.8,-0.4,0,0.4,0.8}\n\t\t\t\t\\fill[gray!60, draw=black, line width=0.2pt] (\\x,-0.3) -- (\\x-0.15,-0.8) -- (\\x+0.15,-0.8) -- cycle;\n\t\t\t\t\\foreach \\x in {-0.6,-0.2,0.2,0.6}\n\t\t\t\t\\fill[gray!40, draw=black, line width=0.2pt] (\\x,0.1) -- (\\x-0.15,-0.4) -- (\\x+0.15,-0.4) -- cycle;\n\t\t\t\t\n\t\t\t\t\\draw[red, line width=1pt] (0,0.8) -- (-0.6,0) -- (0.6,0) -- cycle;\n\t\t\t\t\\node[red, scale=0.8, font=\\boldmath] at (0,0.3) {!};\n\t\t\t\\end{scope}\n\t\t\t\n\t\t\t\\node[below] at (0.5*\\w, 1.4*\\h) {\\textbf{Kho báu}};\n\t\t\t\\node at (1.5*\\w, 1.5*\\h) {Phòng 1};\n\t\t\t\\node at (2.5*\\w, 1.5*\\h) {Phòng 2};\n\t\t\t\\node at (1.5*\\w, 0.5*\\h) {Phòng 3};\n\t\t\t\\node at (2.5*\\w, 0.5*\\h) {Phòng 4};\n\t\t\t\\node[below] at (3.5*\\w, 0.35*\\h) {\\textbf{Bẫy}};\n    \\node at (0,0){\\href{5NIPB6}{\\tiny \\phantom{5NIPB6}}};\n\t\t\\end{tikzpicture}"
-      ],
-      "hasTikz": true,
-      "hasTable": false,
-      "hasImmini": false,
-      "hasSolutionTikz": false,
-      "rawType": "short",
-      "needsImage": true,
-      "image": "images/123/q21.png"
-    },
-    {
-      "type": "short",
-      "question": "Nhân dịp nghỉ lễ 30/4, siêu thị X in ra $100$ phiếu thưởng được đánh số thứ tự từ $1$ đến $100$, mỗi phiếu ghi $1$ số, các phiếu khác nhau ghi số khác nhau. Mỗi khách hàng trong $100$ khách hàng đầu tiên đến siêu thị trong ngày 30/4 sẽ được nhận $1$ phiếu thưởng. Những người được nhận phiếu thưởng có thể tìm thêm $2$ người khác để ghép thành $1$ nhóm có $3$ người. Nếu tổng các số ghi trên $3$ thẻ của $3$ người trong nhóm bằng $100$ thì mỗi người trong nhóm được nhận $50\\,000$đ. Siêu thị quy định:\n\t<br>\n\t\t<br>• Một người có thể ghép vào nhiều nhóm nên có thể nhận thưởng nhiều lần.\n\t\t<br>• Mỗi nhóm $3$ người chỉ được nhận thưởng $1$ lần.\n\t<br>\n\tHỏi ban quản lý siêu thị phải chuẩn bị số tiền thưởng lớn nhất là bao nhiêu triệu đồng (kết quả làm tròn đến hàng đơn vị)?\t\n\t<br>",
-      "answer": "118",
-      "id": 22,
-      "solution": "Để số tiền thưởng lớn nhất thì cả $100$ phiếu phải được phát ra và mỗi người nhận được phiếu đều tìm được tất cả các bộ ba của mình, tức là tất cả các bộ ba phiếu thỏa mãn yêu cầu bài toán đều được hình thành.<br>\n\t\tGiả sử số ghi trên phiếu của ba người trong một nhóm là $x$, $y$, $z$. Khi đó $x$, $y$, $z$ là các số tự nhiên đôi một khác nhau và thỏa mãn $x + y + z = 100$.<br>\n\t\tTrước hết ta cần tìm số nghiệm nguyên dương đôi một khác nhau của phương trình \n\t\t\\[ x + y + z = 100.\\]\n\t\tĐể giải bài toán này, ta thực hiện qua các bước sau:\n\t\t<br>\n\t\t\t<br>• [B1:] Tìm số nghiệm nguyên dương của phương trình $x + y + z = 100$.<br>\n\t\t\tTheo bài toán chia kẹo Euler, số nghiệm nguyên dương của phương trình $x + y + z = 100$ là\n\t\t\t\\[ \\mathrm{C}_{100-1}^{3-1} = \\mathrm{C}_{99}^2 = \\dfrac{99 \\cdot 98}{2} = 4\\,851.\\]\n\t\t\t<br>• [B2:] Loại bỏ các trường hợp có các số bằng nhau.\n\t\t\t<br>\n\t\t\t\t<br>• Trường hợp $3$ số $x$, $y$, $z$ bằng nhau. Lúc này ta được phương trình $3x = 100$.<br>\n\t\t\t\tPhương trình này không có nghiệm nguyên dương. <br>\n\t\t\t\tVậy không có bộ nào cả $3$ số bằng nhau.\n\t\t\t\t<br>• Trường hợp $2$ số bằng nhau.<br>\n\t\t\t\tKhông mất tính tổng quát, giả sử $x = y \\neq z$. Khi đó ta được phương trình $2x + z = 100$.<br>\n\t\t\t\tVì $z \\ge 1$ nên $2x < 100 \\Rightarrow x < 50$.<br>\n\t\t\t\tVì $x$ nguyên dương nên $x \\in \\{1, 2, 3, \\dots, 49\\}$.<br>\n\t\t\t\tNhư vậy có $49$ giá trị của $x$, với mỗi giá trị $x$ có đúng một giá trị $z$. Do đó ta có $49$ bộ $x$, $z$.<br>\n\t\t\t\tMỗi bộ giá trị $\\{x, x, z\\}$ có $3$ cách hoán vị ($xxz, xzx, zxx$).<br>\n\t\t\t\tVậy số nghiệm có ít nhất $2$ số bằng nhau là $49 \\cdot 3 = 147$.\n\t\t\t<br>\n\t\t<br>\n\t\tSuy ra số nghiệm nguyên dương đôi một khác nhau của phương trình trên là $4\\,851 - 147 = 4\\,704$.<br>\n\t\tVì mỗi bộ ba số được phát thưởng có tổng cộng $6$ hoán vị tương ứng với $3!=6$ nghiệm của phương trình trên nên số bộ được phát thưởng là $\\dfrac{4\\,704}{3!} = 784$.<br>\n\t\tVậy số tiền thưởng lớn nhất mà siêu thị cần chuẩn bị là\n\t\t\\[ 784 \\cdot 50\\,000\\cdot 3 = 117\\,600\\,000 ~\\text{(đồng)} \\approx 118~\\text{(triệu đồng)}.\\]",
+      "type": "essay",
+      "question": "Tìm tập xác định của hàm số $y=\\dfrac{\\sqrt{-x^2+2x}}{x-1}$.",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 19,
+      "solution": "Hàm số xác định khi biểu thức dưới căn không âm và mẫu số khác $0$. <br>\n Ta có điều kiện $-x^2+2x\\ge 0$ và $x-1\\ne 0$. <br>\n Điều kiện $-x^2+2x\\ge 0$ tương đương với $x(2-x)\\ge 0$, suy ra $0\\le x\\le 2$. <br>\n Mặt khác, $x-1\\ne 0$ nên $x\\ne 1$. <br>\n Vậy tập xác định của hàm số là $\\mathscr{D}=[0;1)\\cup(1;2]$.",
       "visualLatex": "",
       "visualBlocks": [],
       "hasTikz": false,
       "hasTable": false,
       "hasImmini": false,
-      "hasSolutionTikz": true,
-      "rawType": "short",
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển $(2x-1)^5$.",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 20,
+      "solution": "Số hạng tổng quát trong khai triển $(2x-1)^5$ là $T_{k+1}=\\mathrm{C}_5^k(2x)^k(-1)^{5-k}$ với $0\\le k\\le 5$. <br>\n Số hạng chứa $x^3$ ứng với $k=3$. <br>\n Khi đó hệ số của $x^3$ là $\\mathrm{C}_5^3\\cdot2^3\\cdot(-1)^2=10\\cdot8=80$. <br>\n Vậy hệ số cần tìm là $80$.",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
+      "needsImage": false,
+      "image": null
+    },
+    {
+      "type": "essay",
+      "question": "Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ với $A(2;6)$, $B(5;2)$ và $C(0;-3)$.\n <br>\n <br> • Viết phương trình tổng quát của đường trung trực của đoạn thẳng $BC$.\n <br> • Viết phương trình chính tắc của hypebol $(H)$ biết $(H)$ có độ dài trục thực bằng $2AB$, tiêu cự bằng $4BC$.\n <br>",
+      "answer": "",
+      "gradingMode": "manual",
+      "id": 21,
+      "solution": "<br>\n <br> • Ta có $B(5;2)$ và $C(0;-3)$ nên $\\overrightarrow{BC}=(-5;-5)=-5\\cdot (1;1)$. <br>\n Trung điểm của đoạn thẳng $BC$ là $I\\left(\\dfrac{5}{2};-\\dfrac{1}{2}\\right)$. <br>\n Vì đường trung trực của đoạn thẳng $BC$ vuông góc với $BC$, nên có vectơ pháp tuyến là $\\overrightarrow{n}=(1;1)$. <br>\n Phương trình đường trung trực của đoạn thẳng $BC$ là \n Suy ra phương trình tổng quát là $1\\cdot \\left(x-\\dfrac{5}{2}\\right)+1\\cdot\\left(y+\\dfrac{1}{2}\\right)-2=0$, hay $x+y-2=0$.\n <br> • Ta có $AB=\\sqrt{(5-2)^2+(2-6)^2}=\\sqrt{3^2+(-4)^2}=5$. <br>\n Lại có $BC=\\sqrt{(5-0)^2+(2+3)^2}=\\sqrt{25+25}=5\\sqrt{2}$. <br>\n Độ dài trục thực bằng $2AB$, nên $2a=2AB=10$, suy ra $a=5$. <br>\n Tiêu cự bằng $4BC$, nên $2c=4BC=20\\sqrt{2}$, suy ra $c=10\\sqrt{2}$. <br>\n Với hypebol chính tắc $\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1$, ta có $c^2=a^2+b^2$. <br>\n Do đó $b^2=c^2-a^2=(10\\sqrt{2})^2-5^2=200-25=175$. <br>\n Vậy phương trình chính tắc của hypebol là $\\dfrac{x^2}{25}-\\dfrac{y^2}{175}=1$.\n <br>",
+      "visualLatex": "",
+      "visualBlocks": [],
+      "hasTikz": false,
+      "hasTable": false,
+      "hasImmini": false,
+      "hasSolutionTikz": false,
+      "rawType": "essay",
       "needsImage": false,
       "image": null
     }
@@ -512,8 +451,12 @@
   "errors": [],
   "settings": {
     "durationMinutes": 90.0,
-    "submitAfterMinutes": 30.0,
-    "maxAttempts": 2,
+    "submitAfterMinutes": 0.0,
+    "maxAttempts": 3,
+    "openAt": "2026-07-19T06:46",
+    "closeAt": "2026-07-19T11:42",
+    "attemptToken": "1784418210",
+    "buildAt": "2026-07-19T06:43:30",
     "scoring": {
       "choiceTotal": 3.0,
       "choiceCount": 12,
@@ -521,6 +464,9 @@
       "truefalseCount": 4,
       "shortTotal": 3.0,
       "shortCount": 6,
+      "essayTotal": 0.0,
+      "essayCount": 0,
+      "essayPoints": [],
       "truefalseMode": "progressive"
     }
   }
