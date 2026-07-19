@@ -1,12 +1,12 @@
-<!doctype html><meta charset='utf-8'><title>Kiểm tra V22 Pro</title>
-<body style='font-family:Arial;padding:24px'><h1>Kiểm tra website V22 Pro</h1><pre id='out'>Đang kiểm tra...</pre>
+<!doctype html><meta charset='utf-8'><title>Kiểm tra V23 Stable</title>
+<body style='font-family:Arial;padding:24px'><h1>Kiểm tra website V23 Stable</h1><pre id='out'>Đang kiểm tra...</pre>
 <script>
 (async()=>{
  const out=document.getElementById('out');
  try{
-  const res=await fetch('exams/index.json?v=20260719151623',{cache:'no-store'});
+  const res=await fetch('exams/index.json?v=20260719153815',{cache:'no-store'});
   const data=await res.json();
-  out.textContent='VERSION: 20260719151623\nSố đề trong index: '+((data.exams||[]).length)+'\n\n'+JSON.stringify(data,null,2);
+  out.textContent='VERSION: 20260719153815\nSố đề trong index: '+((data.exams||[]).length)+'\n\n'+JSON.stringify(data,null,2);
  }catch(e){out.textContent='Lỗi: '+e;}
 })();
 </script></body>
