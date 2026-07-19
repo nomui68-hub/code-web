@@ -4,10 +4,16 @@
 // Cách cấu hình chính thức: mở js/config.js và dán Web App URL vào EXAM_API_URL.
 // Cách thử nhanh cho giáo viên: vào admin.html, dán URL rồi bấm lưu trên trình duyệt này.
 
+const DEFAULT_EXAM_API_URL = 'https://script.google.com/macros/s/AKfycbzZSLHoLn4maS56NRozYge0CWhkX7Sd6X_FwiiXzLBCopZTQao7JafxtWZ-AMlJikx6/exec';
+
 function getApiUrl(){
-  const fromConfig = (window.EXAM_API_URL || '').trim();
-  const fromLocal = (localStorage.getItem('EXAM_API_URL') || '').trim();
-  return fromConfig || fromLocal;
+  const fromConfig = String(globalThis.EXAM_API_URL || '').trim();
+  const fromLocal = String(localStorage.getItem('EXAM_API_URL') || '').trim();
+  const apiUrl = fromConfig || fromLocal || DEFAULT_EXAM_API_URL;
+  if(apiUrl && !/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(apiUrl)){
+    console.warn('URL Apps Script có định dạng bất thường:', apiUrl);
+  }
+  return apiUrl;
 }
 
 function getLocalResults(){
@@ -36,7 +42,7 @@ function clearLocalResults(){ localStorage.removeItem('examResults'); }
 async function saveResultOnline(payload){
   const API_URL = getApiUrl();
   if(!API_URL){
-    throw new Error('Chưa cấu hình URL Apps Script trong js/config.js.');
+    throw new Error('Không tìm thấy URL Apps Script. Hãy mở admin.html và bấm Kiểm tra kết nối.');
   }
 
   const body = JSON.stringify({

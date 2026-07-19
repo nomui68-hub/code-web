@@ -1,6 +1,6 @@
 {
   "examId": "11",
-  "title": "Kiểm-Tra",
+  "title": "GK-MDC",
   "questions": [
     {
       "type": "choice",
@@ -452,11 +452,11 @@
   "settings": {
     "durationMinutes": 90.0,
     "submitAfterMinutes": 0.0,
-    "maxAttempts": 4,
+    "maxAttempts": 3,
     "openAt": "",
     "closeAt": "",
-    "attemptToken": "1783725867",
-    "buildAt": "2026-07-11T06:24:27",
+    "attemptToken": "1784434669",
+    "buildAt": "2026-07-19T11:17:49",
     "scoring": {
       "choiceTotal": 3.0,
       "choiceCount": 12,

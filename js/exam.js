@@ -223,7 +223,7 @@ function renderChoice(q){
   return `${renderLatex(q.question)}${visualBlock(q)}${opts}`;
 }
 function renderTrueFalse(q){
-  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${normalizeLatexResidue(st.text)}</div><label><input type="radio" name="q${q.id}_${i}" value="true"> Đúng</label><label><input type="radio" name="q${q.id}_${i}" value="false"> Sai</label></div>`).join('');
+  const rows=(q.statements||[]).map((st,i)=>`<div class="tf-row"><div><strong>${String.fromCharCode(65+i)}.</strong> ${normalizeLatexResidue(st.text)}</div><label><input type="radio" name="q${q.id}_${i}" value="true"><span class="tf-choice-text">Đúng</span></label><label><input type="radio" name="q${q.id}_${i}" value="false"><span class="tf-choice-text">Sai</span></label></div>`).join('');
   return `${renderLatex(q.question)}${visualBlock(q)}${rows}`;
 }
 function renderShort(q){return `${renderLatex(q.question)}${visualBlock(q)}<input class="short-input" id="q${q.id}" placeholder="Nhập đáp án">`;}

@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "111",
+  "defaultExamId": "11",
   "exams": [
     {
-      "id": "111",
+      "id": "11",
       "title": "GK-MDC",
-      "file": "exams/111/questions.json",
+      "file": "exams/11/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 2,
+        "maxAttempts": 3,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1784433621",
-        "buildAt": "2026-07-19T11:00:21",
+        "attemptToken": "1784434669",
+        "buildAt": "2026-07-19T11:17:49",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
