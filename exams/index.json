@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "123",
+  "defaultExamId": "111",
   "exams": [
     {
-      "id": "123",
-      "title": "GK2-MDC",
-      "file": "exams/123/questions.json",
+      "id": "111",
+      "title": "GK-MDC",
+      "file": "exams/111/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 3,
-        "openAt": "2026-07-19T06:46",
-        "closeAt": "2026-07-19T11:42",
-        "attemptToken": "1784418210",
-        "buildAt": "2026-07-19T06:43:30",
+        "maxAttempts": 2,
+        "openAt": "",
+        "closeAt": "",
+        "attemptToken": "1784433621",
+        "buildAt": "2026-07-19T11:00:21",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
