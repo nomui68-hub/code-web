@@ -1,10 +1,10 @@
 {
-  "defaultExamId": "112",
+  "defaultExamId": "11",
   "exams": [
     {
-      "id": "112",
-      "title": "GK-MDC",
-      "file": "exams/112/questions.json",
+      "id": "11",
+      "title": "GK-TT",
+      "file": "exams/11/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
@@ -13,8 +13,8 @@
         "maxAttempts": 2,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1784444244",
-        "buildAt": "2026-07-19T13:57:24",
+        "attemptToken": "1784445765",
+        "buildAt": "2026-07-19T14:22:45",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
