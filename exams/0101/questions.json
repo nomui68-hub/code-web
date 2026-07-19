@@ -1,6 +1,6 @@
 {
   "examId": "0101",
-  "title": "lớp 10",
+  "title": "GK-MDC",
   "questions": [
     {
       "type": "choice",
@@ -455,8 +455,8 @@
     "maxAttempts": 2,
     "openAt": "",
     "closeAt": "",
-    "attemptToken": "1783349559",
-    "buildAt": "2026-07-06T21:52:39",
+    "attemptToken": "1784448956",
+    "buildAt": "2026-07-19T15:15:56",
     "scoring": {
       "choiceTotal": 3.0,
       "choiceCount": 12,
@@ -464,8 +464,8 @@
       "truefalseCount": 4,
       "shortTotal": 3.0,
       "shortCount": 6,
-      "essayTotal": 3.0,
-      "essayCount": 2,
+      "essayTotal": 0.0,
+      "essayCount": 0,
       "essayPoints": [],
       "truefalseMode": "progressive"
     }

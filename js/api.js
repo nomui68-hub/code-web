@@ -1,12 +1,14 @@
 // ============================================================
-// V21 Pro - API Google Sheets ổn định
-// URL được nhúng trực tiếp để không phụ thuộc cache/config.js.
+// API lưu kết quả Google Sheets
 // ============================================================
-
-const V21_EXAM_API_URL = 'https://script.google.com/macros/s/AKfycbzZSLHoLn4maS56NRozYge0CWhkX7Sd6X_FwiiXzLBCopZTQao7JafxtWZ-AMlJikx6/exec';
+// Cách cấu hình chính thức: mở js/config.js và dán Web App URL vào EXAM_API_URL.
+// Cách thử nhanh cho giáo viên: vào admin.html, dán URL rồi bấm lưu trên trình duyệt này.
 
 function getApiUrl(){
-  return V21_EXAM_API_URL;
+  const fromConfig = String(globalThis.EXAM_API_URL || '').trim();
+  const fromLocal = String(localStorage.getItem('EXAM_API_URL') || '').trim();
+  const fallback = 'https://script.google.com/macros/s/AKfycbzZSLHoLn4maS56NRozYge0CWhkX7Sd6X_FwiiXzLBCopZTQao7JafxtWZ-AMlJikx6/exec';
+  return fromConfig || fromLocal || fallback;
 }
 
 function getLocalResults(){
@@ -35,7 +37,7 @@ function clearLocalResults(){ localStorage.removeItem('examResults'); }
 async function saveResultOnline(payload){
   const API_URL = getApiUrl();
   if(!API_URL){
-    throw new Error('Không tìm thấy URL Apps Script. Hãy mở admin.html và bấm Kiểm tra kết nối.');
+    throw new Error('Chưa cấu hình URL Apps Script trong js/config.js.');
   }
 
   const body = JSON.stringify({

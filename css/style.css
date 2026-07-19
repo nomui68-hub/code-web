@@ -311,3 +311,50 @@ button.secondary{background:#fff;color:var(--danger);border-color:#f3b7b7;width:
   transform: none !important;
   vertical-align: middle !important;
 }
+
+
+/* V22 Pro: căn radio chính giữa tuyệt đối theo chiều dọc */
+.option {
+  display: grid !important;
+  grid-template-columns: 24px minmax(0,1fr) !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+  min-height: 48px;
+}
+.option > input[type="radio"] {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center !important;
+  justify-self: center !important;
+  vertical-align: middle !important;
+}
+.option > span {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 28px;
+  line-height: 1.45;
+}
+.tf-row {
+  align-items: center !important;
+}
+.tf-row > label {
+  display: grid !important;
+  grid-template-columns: 22px auto !important;
+  align-items: center !important;
+  column-gap: 7px !important;
+  min-height: 42px;
+  line-height: 1.2 !important;
+}
+.tf-row > label > input[type="radio"] {
+  width: 19px !important;
+  height: 19px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center !important;
+  justify-self: center !important;
+  vertical-align: middle !important;
+}
+.tf-choice-text { display:flex; align-items:center; min-height:24px; }
+.version-badge {display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;background:#e7f1ff;color:#1457a6;font-weight:700;font-size:12px;vertical-align:middle}
