@@ -1,20 +1,20 @@
 {
-  "defaultExamId": "11",
+  "defaultExamId": "1122",
   "exams": [
     {
-      "id": "11",
+      "id": "1122",
       "title": "GK2",
-      "file": "exams/11/questions.json",
+      "file": "exams/1122/questions.json",
       "active": true,
       "isGenerated": true,
       "settings": {
         "durationMinutes": 90.0,
         "submitAfterMinutes": 0.0,
-        "maxAttempts": 2,
+        "maxAttempts": 1,
         "openAt": "",
         "closeAt": "",
-        "attemptToken": "1784450281",
-        "buildAt": "2026-07-19T15:38:01",
+        "attemptToken": "1784451777",
+        "buildAt": "2026-07-19T16:02:57",
         "scoring": {
           "choiceTotal": 3.0,
           "choiceCount": 12,
